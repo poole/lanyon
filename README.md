@@ -2,7 +2,7 @@
 
 [Did](http://mdo.github.io/did) is a [Jekyll](http://jekyllrb.com) theme, designed and built by [@mdo](https://twitter.com/mdo). It's based on another theme, [Hyde](http://andhyde.com). Did is designed to showcase your content first and foremost. Navigation and extraneous information remains offscreen until the reader requests it.
 
-![Hyde screenshot](https://f.cloud.github.com/assets/98681/1330948/de10196c-353f-11e3-86d0-8e967dd95722.png)
+![Did screenshot](https://f.cloud.github.com/assets/98681/1817392/308428d0-6f99-11e3-9d2c-e15e212ba291.png)
 
 The name originates from a rather well-known, and unsurprisingly relevant, psychiatric condition, [dissociative identity disorder](http://en.wikipedia.org/wiki/Dissociative_identity_disorder). (Protip: It's just like Dr. Jekyll & Mr. Hyde.)
 
