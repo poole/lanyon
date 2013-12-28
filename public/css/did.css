@@ -1,0 +1,538 @@
+/*
+ *   __          __
+ *  /\ \  __    /\ \
+ *  \_\ \/\_\   \_\ \
+ *  /'_` \/\ \  /'_` \
+ * /\ \_\ \ \ \/\ \_\ \
+ * \ \___,_\ \_\ \___,_\
+ *  \/__,_ /\/_/\/__,_ /
+ *
+ * Did is a Jekyll theme featuring a hidden drawer for out of sight navigation.
+ * It's based on Hyde, another Jekyll theme. It's open source, mobile first,
+ * and ships with placeholder content to get you up and running in no time.
+ *
+ * Designed, built, and released under MIT license by @mdo.
+ *
+ * Learn more at https://github.com/mdo/did.
+ */
+
+
+/*
+ * Contents
+ *
+ * Body resets
+ * Custom type
+ * Container
+ * Masthead
+ * Sidebar
+ * Posts
+ * Error page
+ * Pagination
+ */
+
+
+/*
+ * Body resets
+ *
+ * Update the foundational and global aspects of the page.
+ */
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+
+body {
+  font-family: "PT Serif", Georgia, "Times New Roman", serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #515151;
+  background-color: #fff;
+}
+@media (min-width: 990px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+/* No `:visited` state is required by default (browsers will use `a`) */
+a {
+  color: #268bd2;
+  text-decoration: none;
+}
+/* `:focus` is linked to `:hover` for basic accessibility */
+a:hover,
+a:focus {
+  color: #1e71ac;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 10px;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #313131;
+  text-rendering: optimizeLegibility;
+}
+h1 {
+  font-size: 40px;
+}
+h2 {
+  margin-top: 20px;
+  font-size: 32px;
+}
+h3 {
+  margin-top: 24px;
+  font-size: 24px;
+}
+h4, h5, h6 {
+  margin-top: 16px;
+  font-size: 16px;
+}
+
+p {
+  margin: 0 0 15px;
+}
+
+ul, ol {
+  margin-bottom: 15px;
+}
+
+hr {
+  position: relative;
+  margin: 40px 0;
+  border: 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #fff;
+}
+
+strong {
+  color: #303030;
+}
+
+abbr {
+  background-color: #eee;
+  display: inline-block;
+  padding: 3px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #555;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+
+code,
+pre {
+  font-family: Menlo, Monaco, "Courier New", monospace;
+}
+code {
+  padding: .25em .5em;
+  font-size: 85%;
+  color: #bf616a;
+  background-color: #f9f9f9;
+  border-radius: 3px;
+}
+pre {
+  display: block;
+  margin: 0 0 14px;
+  padding: 15px 20px;
+  font-size: 16px;
+  line-height: 1.4;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: #f9f9f9;
+}
+pre code {
+  padding: 0;
+  font-size: 100%;
+  color: inherit;
+  background-color: transparent;
+}
+.highlight {
+  margin-bottom: 15px;
+  border-radius: 4px;
+}
+.highlight pre {
+  margin-bottom: 0;
+}
+
+/* Quotes */
+blockquote {
+  padding: 5px 30px 5px 25px;
+  margin: 15px 0;
+  color: #7a7a7a;
+  border-left: 5px solid #eee;
+}
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+img {
+  display: block;
+  margin: 0 0 15px;
+  border-radius: 5px;
+}
+
+
+/*
+ * Custom type
+ *
+ * Extend paragraphs with `.lead` for larger introductory text.
+ */
+
+.lead {
+  font-size: 20px;
+  font-weight: 300;
+}
+@media (min-width: 990px) {
+  .lead {
+    font-size: 24px;
+  }
+}
+
+
+/*
+ * Containers
+ *
+ * The wrapper and container are used to position site content.
+ */
+
+/* Use an outter wrap free of most styles for positioning of sidebar */
+.wrap {
+  position: relative;
+  width: 100%;
+  transition: left 0.3s ease;
+}
+
+/* Center the content */
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media (min-width: 860px) {
+  .container {
+    max-width: 720px;
+    margin-left:  auto;
+    margin-right: auto;
+  }
+}
+
+
+/*
+ * Masthead
+ *
+ * Super small header above the content for site name and short description.
+ */
+
+.masthead {
+  max-width: 720px;
+  padding: 20px;
+  margin-left:  auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+.masthead-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #505050;
+}
+.masthead-title small {
+  font-weight: 400;
+  color: #c0c0c0;
+}
+@media (min-width: 860px) {
+  .masthead {
+    max-width: 680px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+
+/*
+ * Sidebar
+ *
+ * The sidebar is the drawer, the item we are toggling with our handy hamburger
+ * button in the corner of the page.
+ */
+
+/* Style and "hide" the sidebar */
+.sidebar {
+  padding: 20px;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #9a9a9a;
+  background-color: #202020;
+}
+@media (min-width: 860px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -280px;
+    overflow-y: auto;
+    width: 280px;
+    padding: 30px;
+    transition: left 0.3s ease;
+  }
+}
+
+/* Sidebar content */
+.sidebar a {
+  font-weight: normal;
+  color: #fff;
+}
+
+/* Sidebar nav */
+.sidebar-nav {
+  margin: 20px -20px;
+  border-bottom: 1px solid #303030;
+}
+.sidebar-nav-item {
+  display: block;
+  padding: 10px 20px;
+  border-top: 1px solid #303030;
+}
+a.sidebar-nav-item:hover,
+a.sidebar-nav-item:focus {
+  text-decoration: none;
+  background-color: #303030;
+}
+@media (min-width: 860px) {
+  .sidebar-nav {
+    margin: 30px -30px;
+  }
+  .sidebar-nav-item {
+    padding-left:  30px;
+    padding-right: 30px;
+  }
+}
+
+/* Sidebar toggles */
+/* Note: the toggles cannot share a base class. */
+.sidebar-show,
+.sidebar-hide {
+  display: none;
+}
+
+@media (min-width: 860px) {
+  .sidebar-show,
+  .sidebar-hide {
+    position: fixed;
+    top:  15px;
+    left: 15px;
+    display: block;
+    padding: 3px 12px;
+    font-family: Arial, sans-serif; /* Ensure vertical alignment */
+    color: #505050;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    transition: left 0.3s ease;
+  }
+  .sidebar-show:hover,
+  .sidebar-show:focus {
+    color: #505050;
+  }
+  .sidebar-hide {
+    visibility: hidden;
+    color: #fff;
+    background-color: #505050;
+  }
+  .sidebar-hide:hover,
+  .sidebar-hide:focus {
+    color: #fff;
+  }
+
+  /* Do the fancy CSS toggle magic */
+  #sidebar:target {
+    left: 0;
+  }
+  #sidebar:target + .wrap {
+    left: 280px;
+  }
+  #sidebar:target + .wrap .sidebar-show,
+  #sidebar:target + .wrap .sidebar-hide {
+    left: 295px;
+  }
+  #sidebar:target + .wrap .sidebar-show { visibility: hidden; }
+  #sidebar:target + .wrap .sidebar-hide { visibility: visible; }
+}
+
+
+/* Footer area of masthead */
+.colophon {
+  margin-top: 20px;
+  color: #fff;
+  color: rgba(255,255,255,.5);
+}
+.colophon-links {
+  padding-left: 0;
+  list-style: none;
+}
+.colophon-links li {
+  color: inherit;
+}
+
+
+/*
+ * Posts
+ *
+ * Each post is wrapped in `.post`. Used on default and post layouts.
+ */
+
+/* Single post */
+.post {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+@media (min-width: 990px) {
+  /* Increase space between posts */
+  .post {
+    margin: 60px 0; /* Increase top/bottom, remove from sides */
+  }
+}
+
+/* Blog post or page title */
+.post-title,
+.post-title a {
+  color: #303030;
+}
+
+/* Meta data line below post title */
+.post-date {
+  display: block;
+  margin: -10px 0 10px;
+  color: #9a9a9a;
+}
+
+/* Related posts */
+.related {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-top: 1px solid #eee;
+}
+.related-posts {
+  padding-left: 0;
+  list-style: none;
+}
+.related-posts h3 {
+  margin-top: 0;
+}
+.related-posts li small {
+  font-size: 75%;
+  color: #999;
+}
+.related-posts li a:hover {
+  color: #000;
+  text-decoration: none;
+}
+.related-posts li a:hover small {
+  color: inherit;
+}
+
+
+/*
+ * Error page
+ *
+ * For now, just the 404 (supported by Jekyll with the custom 404.html view).
+ */
+
+.fourohfour {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+
+/*
+ * Pagination
+ *
+ * Super lightweight (HTML-wise) blog pagination. `span`s are provide for when
+ * there are no more previous or next posts to show.
+ */
+
+.pagination {
+  overflow: hidden; /* clearfix */
+  margin-top: 40px;
+  font-weight: bold;
+  color: #ccc;
+  text-align: center;
+}
+
+/* Pagination items can be `span`s or `a`s */
+.pagination-item {
+  float: left;
+  width: 50%;
+  padding: 20px;
+  border: 1px solid #eee;
+}
+.pagination-item:last-child {
+  margin-left: -1px;
+}
+
+/* Only provide a hover state for linked pagination items */
+a.pagination-item:hover {
+  text-decoration: none;
+  background-color: #f5f5f5;
+}
+
+/* Pagination should float when space is plentiful */
+@media (min-width: 990px) {
+  .pagination {
+    margin-bottom: 60px;
+  }
+}
+
+
+
+
+/*
+ * Reverse layout
+ *
+ * Flip the orientation of the page by placing the `.sidebar` and sidebar toggle
+ * on the right side.
+ */
+
+@media (min-width: 860px) {
+  .layout-reverse .sidebar {
+    left: auto;
+    right: -280px;
+    transition-property: right;
+  }
+  .layout-reverse .sidebar-show,
+  .layout-reverse .sidebar-hide {
+    position: fixed;
+    top:  15px;
+    left: auto;
+    right: 15px;
+    transition-property: right;
+  }
+  .layout-reverse .wrap {
+    transition-property: right;
+  }
+  .layout-reverse #sidebar:target {
+    left: auto;
+    right: 0;
+  }
+  .layout-reverse #sidebar:target + .wrap {
+    left: auto;
+    right: 280px;
+  }
+  .layout-reverse #sidebar:target + .wrap .sidebar-show,
+  .layout-reverse #sidebar:target + .wrap .sidebar-hide {
+    left: auto;
+    right: 295px;
+  }
+}

@@ -1,0 +1,12 @@
+title:        Did
+tagline:      'A Jekyll theme, with personalities'
+description:  'Did is a <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme with multiple personalities: the content, and the chrome. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+url:          http://andhyde.com
+version:      1.0.0
+author:
+  name:       ''
+  email:      ''
+markdown:     rdiscount
+permalink:    pretty
+pygments:     true
+paginate:     5
