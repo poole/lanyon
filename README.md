@@ -44,6 +44,17 @@ Open <http://localhost:4000> in your browser, and voilà. You're done.
 
 Did includes a some customizable options, typically applied via classes on the `<body>` element.
 
+### Sidebar menu
+
+Create a list of nav links in the sidebar by assigning each Jekyll page the correct layout in the page's front matter.
+
+```
+---
+layout: page
+title: About
+---
+```
+
 ### Reverse layout
 
 Reverse the page orientation with a single class.
