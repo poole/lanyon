@@ -502,15 +502,15 @@ a.pagination-item:hover {
   .layout-reverse .wrap {
     transition-property: right;
   }
-  #sidebar-checkbox:checked + .sidebar {
+  .layout-reverse #sidebar-checkbox:checked + .sidebar {
     left: auto;
     right: 0;
   }
-  #sidebar-checkbox:checked ~ .wrap {
+  .layout-reverse #sidebar-checkbox:checked ~ .wrap {
     left: auto;
     right: 14rem;
   }
-  #sidebar-checkbox:checked ~ .wrap .sidebar-toggle {
+  .layout-reverse #sidebar-checkbox:checked ~ .wrap .sidebar-toggle {
     left: auto;
     right: 15rem;
   }
