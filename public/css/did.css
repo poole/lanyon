@@ -178,13 +178,19 @@ pre code {
 
 /* Quotes */
 blockquote {
-  padding: .25rem 5rem .25rem 1.5rem;
+  padding: .5rem 1rem;
   margin: .8rem 0;
   color: #7a7a7a;
   border-left: .25rem solid #eee;
 }
 blockquote p:last-child {
   margin-bottom: 0;
+}
+@media (min-width: 480px) {
+  blockquote {
+    padding-right: 5rem;
+    padding-left: 1.25rem;
+  }
 }
 
 img {
