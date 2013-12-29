@@ -2,7 +2,8 @@
 
 [Did](http://mdo.github.io/did) is a [Jekyll](http://jekyllrb.com) theme, designed and built by [@mdo](https://twitter.com/mdo). It's based on another theme, [Hyde](http://andhyde.com). Did is designed to showcase your content first and foremost. Navigation and extraneous information remains offscreen until the reader requests it.
 
-![Did screenshot](https://f.cloud.github.com/assets/98681/1817392/308428d0-6f99-11e3-9d2c-e15e212ba291.png)
+![Did](https://f.cloud.github.com/assets/98681/1819955/697ac4c8-70c0-11e3-8d34-403dac775329.png)
+![Did with open sidebar](https://f.cloud.github.com/assets/98681/1819956/697b6e5a-70c0-11e3-8fe9-b8098f9c61e5.png)
 
 The name originates from a rather well-known, and unsurprisingly relevant, psychiatric condition, [dissociative identity disorder](http://en.wikipedia.org/wiki/Dissociative_identity_disorder). (Protip: It's just like Dr. Jekyll & Mr. Hyde.)
 
@@ -63,7 +64,8 @@ title: About
 
 Just like [Hyde](https://github.com/mdo/hyde), Did ships with eight optional themes based on the [base16 color scheme](https://github.com/chriskempson/base16). Apply a theme to change the color scheme (mostly applies to sidebar and links).
 
-![Did in red](https://f.cloud.github.com/assets/98681/1818326/da64f56c-6ff5-11e3-9643-7d0c18157dec.png)
+![Did with red theme](https://f.cloud.github.com/assets/98681/1819959/6999645a-70c0-11e3-9086-c451f597ee70.png)
+![Did with red theme and open sidebar](https://f.cloud.github.com/assets/98681/1819960/699a181e-70c0-11e3-8696-a6a8f258824e.png)
 
 There are eight themes available at this time.
 
@@ -81,6 +83,9 @@ To create your own theme, look to the Themes section of [Did's CSS](https://gith
 
 
 ### Reverse layout
+
+![Did with reverse layout](https://f.cloud.github.com/assets/98681/1819958/698cbe1c-70c0-11e3-861d-a7a2fdc34823.png)
+![Did with reverse layout and open sidebar](https://f.cloud.github.com/assets/98681/1819957/698c2d08-70c0-11e3-88c7-6b8e1618b363.png)
 
 Reverse the page orientation with a single class.
 
