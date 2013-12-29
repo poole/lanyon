@@ -15,7 +15,7 @@ The name *Did* originates from a rather well-known, and unsurprisingly relevant,
 
 > Dissociative identity disorder (<strong>DID</strong>), also known as multiple personality disorder (MPD), is an extremely rare mental disorder characterized by at least two distinct and relatively enduring identities or dissociated personality states that alternately control a person's behavior.
 >
-> Source: http://en.wikipedia.org/wiki/Dissociative_identity_disorder.
+> [Wikipedia](http://en.wikipedia.org/wiki/Dissociative_identity_disorder)
 
 If it wasn't obvious by now, the reference is the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*. Jekyll is the platform, Hyde the sister (and original) theme, and now Did the split personality theme (sidebar and content). Is it a stretch? Probably, but I love it.
 
