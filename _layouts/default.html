@@ -3,7 +3,7 @@
 
   {% include head.html %}
 
-  <body>
+  <body class="theme-base-08">
 
     <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
          styles, `#sidebar-checkbox` for behavior. -->
@@ -17,7 +17,7 @@
       </div>
 
       <nav class="sidebar-nav">
-        <a class="sidebar-nav-item" href="/">Home</a>
+        <a class="sidebar-nav-item{% if page.title == "Home" %} active{% endif %}" href="/">Home</a>
 
         {% comment %}
           The code below dynamically generates a sidebar nav of pages with

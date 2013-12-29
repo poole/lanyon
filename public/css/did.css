@@ -28,6 +28,8 @@
  * Sidebar
  * Posts and pages
  * Pagination
+ * Reverse layout
+ * Themes
  */
 
 
@@ -74,7 +76,7 @@ a {
 /* `:focus` is linked to `:hover` for basic accessibility */
 a:hover,
 a:focus {
-  color: #1e71ac;
+  text-decoration: underline;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -272,8 +274,10 @@ img {
   color: #505050;
 }
 .masthead-title small {
+  font-size: 75%;
   font-weight: 400;
   color: #c0c0c0;
+  letter-spacing: 0;
 }
 @media (min-width: 860px) {
   .masthead {
@@ -304,7 +308,7 @@ img {
   padding: 1rem;
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-size: .875rem; /* 14px */
-  color: #9a9a9a;
+  color: rgba(255,255,255,.6);
   background-color: #202020;
 }
 @media (min-width: 860px) {
@@ -330,18 +334,19 @@ img {
 /* Sidebar nav */
 .sidebar-nav {
   margin: 1rem -1rem;
-  border-bottom: 1px solid #303030;
+  border-bottom: 1px solid rgba(255,255,255,.1);
 }
 .sidebar-nav-item {
   display: block;
   padding: .5rem 1rem;
-  border-top: 1px solid #303030;
+  border-top: 1px solid rgba(255,255,255,.1);
 }
 .sidebar-nav-item.active,
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
   text-decoration: none;
-  background-color: #303030;
+  background-color: rgba(255,255,255,.1);
+  border-color: transparent;
 }
 @media (min-width: 860px) {
   .sidebar-nav {
@@ -441,7 +446,7 @@ a.sidebar-nav-item:focus {
   color: #999;
 }
 .related-posts li a:hover {
-  color: #1e71ac;
+  color: #268bd2;
   text-decoration: none;
 }
 .related-posts li a:hover small {
@@ -514,4 +519,108 @@ a.pagination-item:hover {
     left: auto;
     right: 15rem;
   }
+}
+
+
+/*
+ * Themes
+ *
+ * Apply custom color schemes by adding the appropriate class to the `body`.
+ * Based on colors from Base16: http://chriskempson.github.io/base16/#default.
+ */
+
+/* Red */
+.theme-base-08 .sidebar,
+.theme-base-08 .sidebar-toggle:active,
+.theme-base-08 #sidebar-checkbox:checked ~ .wrap .sidebar-toggle {
+  background-color: #ac4142;
+}
+.theme-base-08 .container a,
+.theme-base-08 .sidebar-toggle,
+.theme-base-08 .related-posts li a:hover {
+  color: #ac4142;
+}
+
+/* Orange */
+.theme-base-09 .sidebar,
+.theme-base-09 .sidebar-toggle:active,
+.theme-base-09 #sidebar-checkbox:checked ~ .wrap .sidebar-toggle {
+  background-color: #d28445;
+}
+.theme-base-09 .container a,
+.theme-base-09 .sidebar-toggle,
+.theme-base-09 .related-posts li a:hover {
+  color: #d28445;
+}
+
+/* Yellow */
+.theme-base-0a .sidebar,
+.theme-base-0a .sidebar-toggle:active,
+.theme-base-0a #sidebar-checkbox:checked ~ .wrap .sidebar-toggle {
+  background-color: #f4bf75;
+}
+.theme-base-0a .container a,
+.theme-base-0a .sidebar-toggle,
+.theme-base-0a .related-posts li a:hover {
+  color: #f4bf75;
+}
+
+/* Green */
+.theme-base-0b .sidebar,
+.theme-base-0b .sidebar-toggle:active,
+.theme-base-0b #sidebar-checkbox:checked ~ .wrap .sidebar-toggle {
+  background-color: #90a959;
+}
+.theme-base-0b .container a,
+.theme-base-0b .sidebar-toggle,
+.theme-base-0b .related-posts li a:hover {
+  color: #90a959;
+}
+
+/* Cyan */
+.theme-base-0c .sidebar,
+.theme-base-0c .sidebar-toggle:active,
+.theme-base-0c #sidebar-checkbox:checked ~ .wrap .sidebar-toggle {
+  background-color: #75b5aa;
+}
+.theme-base-0c .container a,
+.theme-base-0c .sidebar-toggle,
+.theme-base-0c .related-posts li a:hover {
+  color: #75b5aa;
+}
+
+/* Blue */
+.theme-base-0d .sidebar,
+.theme-base-0d .sidebar-toggle:active,
+.theme-base-0d #sidebar-checkbox:checked ~ .wrap .sidebar-toggle {
+  background-color: #6a9fb5;
+}
+.theme-base-0d .container a,
+.theme-base-0d .sidebar-toggle,
+.theme-base-0d .related-posts li a:hover {
+  color: #6a9fb5;
+}
+
+/* Magenta */
+.theme-base-0e .sidebar,
+.theme-base-0e .sidebar-toggle:active,
+.theme-base-0e #sidebar-checkbox:checked ~ .wrap .sidebar-toggle {
+  background-color: #aa759f;
+}
+.theme-base-0e .container a,
+.theme-base-0e .sidebar-toggle,
+.theme-base-0e .related-posts li a:hover {
+  color: #aa759f;
+}
+
+/* Brown */
+.theme-base-0f .sidebar,
+.theme-base-0f .sidebar-toggle:active,
+.theme-base-0f #sidebar-checkbox:checked ~ .wrap .sidebar-toggle {
+  background-color: #8f5536;
+}
+.theme-base-0f .container a,
+.theme-base-0f .sidebar-toggle,
+.theme-base-0f .related-posts li a:hover {
+  color: #8f5536;
 }
