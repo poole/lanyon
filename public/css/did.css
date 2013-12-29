@@ -372,8 +372,7 @@ a.sidebar-nav-item:focus {
     cursor: pointer;
     transition: all 0.3s ease;
   }
-  .sidebar-toggle:hover,
-  .sidebar-toggle:focus,
+  .sidebar-toggle:active,
   #sidebar-checkbox:checked ~ .wrap .sidebar-toggle {
     color: #fff;
     background-color: #505050;
