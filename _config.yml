@@ -1,12 +1,24 @@
-title:        Did
-tagline:      'A Jekyll theme, with personalities'
-description:  'Did is a <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme with multiple personalities: the content, and the chrome. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:          http://andhyde.com
-version:      1.0.0
+# Dependencies
+markdown:         rdiscount
+pygments:         true
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            Did
+tagline:          'A Jekyll theme, with personalities'
+description:      'Did is a <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme with multiple personalities: the content, and the chrome. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+url:              http://did.andhyde.com
+
 author:
-  name:       ''
-  email:      ''
-markdown:     rdiscount
-permalink:    pretty
-pygments:     true
-paginate:     5
+  name:           'Mark Otto'
+  url:            https://twitter.com/mdo
+
+paginate:         5
+
+# Custom vars
+version:          1.0.0
+
+github:
+  repo:           https://github.com/mdo/did
