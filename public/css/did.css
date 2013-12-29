@@ -50,17 +50,20 @@ body {
   overflow-x: hidden; /* Prevent scroll on narrow devices */
 }
 
-body {
+html {
   font-family: "PT Serif", Georgia, "Times New Roman", serif;
   font-size: 16px;
   line-height: 1.5;
-  color: #515151;
-  background-color: #fff;
 }
 @media (min-width: 990px) {
-  body {
+  html {
     font-size: 20px;
   }
+}
+
+body {
+  color: #515151;
+  background-color: #fff;
 }
 
 /* No `:visited` state is required by default (browsers will use `a`) */
@@ -75,40 +78,43 @@ a:focus {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 0 0 10px;
+  margin-bottom: .5rem;
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.25;
   color: #313131;
+  letter-spacing: -.025rem;
   text-rendering: optimizeLegibility;
 }
 h1 {
-  font-size: 40px;
+  font-size: 2rem;
 }
 h2 {
-  margin-top: 20px;
-  font-size: 32px;
+  margin-top: 1rem;
+  font-size: 1.5rem;
 }
 h3 {
-  margin-top: 24px;
-  font-size: 24px;
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
 }
 h4, h5, h6 {
-  margin-top: 16px;
-  font-size: 16px;
+  margin-top: 1rem;
+  font-size: 1rem;
 }
 
 p {
-  margin: 0 0 15px;
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 ul, ol {
-  margin-bottom: 15px;
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 hr {
   position: relative;
-  margin: 40px 0;
+  margin: 1.5rem 0;
   border: 0;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #fff;
@@ -121,8 +127,8 @@ strong {
 abbr {
   background-color: #eee;
   display: inline-block;
-  padding: 3px;
-  font-size: 13px;
+  padding: .25em;
+  font-size: 85%;
   font-weight: bold;
   color: #555;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
@@ -143,9 +149,10 @@ code {
 }
 pre {
   display: block;
-  margin: 0 0 14px;
-  padding: 15px 20px;
-  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: .8rem;
   line-height: 1.4;
   white-space: pre;
   white-space: pre-wrap;
@@ -160,7 +167,7 @@ pre code {
   background-color: transparent;
 }
 .highlight {
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
   border-radius: 4px;
 }
 .highlight pre {
@@ -169,10 +176,10 @@ pre code {
 
 /* Quotes */
 blockquote {
-  padding: 5px 30px 5px 25px;
-  margin: 15px 0;
+  padding: .25rem 5rem .25rem 1.5rem;
+  margin: .8rem 0;
   color: #7a7a7a;
-  border-left: 5px solid #eee;
+  border-left: .25rem solid #eee;
 }
 blockquote p:last-child {
   margin-bottom: 0;
@@ -180,7 +187,7 @@ blockquote p:last-child {
 
 img {
   display: block;
-  margin: 0 0 15px;
+  margin: 0 0 1rem;
   border-radius: 5px;
 }
 
@@ -192,13 +199,8 @@ img {
  */
 
 .lead {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 300;
-}
-@media (min-width: 990px) {
-  .lead {
-    font-size: 24px;
-  }
 }
 
 
@@ -215,14 +217,19 @@ img {
   transition: left 0.3s ease;
 }
 
-/* Center the content */
-.container {
-  padding-left: 20px;
-  padding-right: 20px;
+/* Specificy which container to pad */
+.content {
+  padding: 3rem 20px;
 }
-@media (min-width: 860px) {
+
+/* Center container in available real estate */
+@media (min-width: 990px) {
+  .content {
+    padding-left: 0;
+    padding-right: 0;
+  }
   .container {
-    max-width: 720px;
+    max-width: 36em;
     margin-left:  auto;
     margin-right: auto;
   }
@@ -236,11 +243,9 @@ img {
  */
 
 .masthead {
-  max-width: 720px;
-  padding: 20px;
+  padding: 1rem 20px;
   margin-left:  auto;
   margin-right: auto;
-  margin-bottom: 20px;
   border-bottom: 1px solid #eee;
 }
 .masthead-title {
@@ -254,7 +259,7 @@ img {
 }
 @media (min-width: 860px) {
   .masthead {
-    max-width: 680px;
+    max-width: 36em;
     padding-left: 0;
     padding-right: 0;
   }
@@ -270,9 +275,9 @@ img {
 
 /* Style and "hide" the sidebar */
 .sidebar {
-  padding: 20px;
+  padding: 1rem;
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: .875rem; /* 14px */
   color: #9a9a9a;
   background-color: #202020;
 }
@@ -281,10 +286,11 @@ img {
     position: fixed;
     top: 0;
     bottom: 0;
-    left: -280px;
+    left: -14rem;
     overflow-y: auto;
-    width: 280px;
-    padding: 30px;
+    width: 14rem;
+    padding: 1.5rem;
+    font-size: .75rem; /* 15px */
     transition: left 0.3s ease;
   }
 }
@@ -297,12 +303,12 @@ img {
 
 /* Sidebar nav */
 .sidebar-nav {
-  margin: 20px -20px;
+  margin: 1rem -1rem;
   border-bottom: 1px solid #303030;
 }
 .sidebar-nav-item {
   display: block;
-  padding: 10px 20px;
+  padding: .5rem 1rem;
   border-top: 1px solid #303030;
 }
 a.sidebar-nav-item:hover,
@@ -312,11 +318,11 @@ a.sidebar-nav-item:focus {
 }
 @media (min-width: 860px) {
   .sidebar-nav {
-    margin: 30px -30px;
+    margin: 1.5rem -1.5rem;
   }
   .sidebar-nav-item {
-    padding-left:  30px;
-    padding-right: 30px;
+    padding-left:  1.5rem;
+    padding-right: 1.5rem;
   }
 }
 
@@ -331,14 +337,13 @@ a.sidebar-nav-item:focus {
   .sidebar-show,
   .sidebar-hide {
     position: fixed;
-    top:  15px;
-    left: 15px;
+    top:  .85rem;
+    left: 1rem;
     display: block;
-    padding: 3px 12px;
+    padding: .15rem .65rem;
     font-family: Arial, sans-serif; /* Ensure vertical alignment */
     color: #505050;
     background-color: #fff;
-    border: 1px solid #fff;
     border-radius: 4px;
     transition: left 0.3s ease;
   }
@@ -361,29 +366,14 @@ a.sidebar-nav-item:focus {
     left: 0;
   }
   #sidebar:target + .wrap {
-    left: 280px;
+    left: 14rem;
   }
   #sidebar:target + .wrap .sidebar-show,
   #sidebar:target + .wrap .sidebar-hide {
-    left: 295px;
+    left: 15rem;
   }
   #sidebar:target + .wrap .sidebar-show { visibility: hidden; }
   #sidebar:target + .wrap .sidebar-hide { visibility: visible; }
-}
-
-
-/* Footer area of masthead */
-.colophon {
-  margin-top: 20px;
-  color: #fff;
-  color: rgba(255,255,255,.5);
-}
-.colophon-links {
-  padding-left: 0;
-  list-style: none;
-}
-.colophon-links li {
-  color: inherit;
 }
 
 
@@ -395,14 +385,7 @@ a.sidebar-nav-item:focus {
 
 /* Single post */
 .post {
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-@media (min-width: 990px) {
-  /* Increase space between posts */
-  .post {
-    margin: 60px 0; /* Increase top/bottom, remove from sides */
-  }
+  margin-bottom: 4em;
 }
 
 /* Blog post or page title */
@@ -410,18 +393,22 @@ a.sidebar-nav-item:focus {
 .post-title a {
   color: #303030;
 }
+.post-title {
+  margin-top: 0;
+}
 
 /* Meta data line below post title */
 .post-date {
   display: block;
-  margin: -10px 0 10px;
+  margin-top: -.5rem;
+  margin-bottom: 1rem;
   color: #9a9a9a;
 }
 
 /* Related posts */
 .related {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   border-top: 1px solid #eee;
 }
 .related-posts {
@@ -436,23 +423,11 @@ a.sidebar-nav-item:focus {
   color: #999;
 }
 .related-posts li a:hover {
-  color: #000;
+  color: #1e71ac;
   text-decoration: none;
 }
 .related-posts li a:hover small {
   color: inherit;
-}
-
-
-/*
- * Error page
- *
- * For now, just the 404 (supported by Jekyll with the custom 404.html view).
- */
-
-.fourohfour {
-  margin-top: 40px;
-  margin-bottom: 40px;
 }
 
 
@@ -465,7 +440,8 @@ a.sidebar-nav-item:focus {
 
 .pagination {
   overflow: hidden; /* clearfix */
-  margin-top: 40px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   font-weight: bold;
   color: #ccc;
   text-align: center;
@@ -475,7 +451,7 @@ a.sidebar-nav-item:focus {
 .pagination-item {
   float: left;
   width: 50%;
-  padding: 20px;
+  padding: 1rem;
   border: 1px solid #eee;
 }
 .pagination-item:last-child {
@@ -485,13 +461,6 @@ a.sidebar-nav-item:focus {
 /* Only provide a hover state for linked pagination items */
 a.pagination-item:hover {
   background-color: #f5f5f5;
-}
-
-/* Pagination should float when space is plentiful */
-@media (min-width: 990px) {
-  .pagination {
-    margin-bottom: 60px;
-  }
 }
 
 
@@ -505,15 +474,14 @@ a.pagination-item:hover {
 @media (min-width: 860px) {
   .layout-reverse .sidebar {
     left: auto;
-    right: -280px;
+    right: -14rem;
     transition-property: right;
   }
   .layout-reverse .sidebar-show,
   .layout-reverse .sidebar-hide {
     position: fixed;
-    top:  15px;
     left: auto;
-    right: 15px;
+    right: 1rem;
     transition-property: right;
   }
   .layout-reverse .wrap {
@@ -525,11 +493,11 @@ a.pagination-item:hover {
   }
   .layout-reverse #sidebar:target + .wrap {
     left: auto;
-    right: 280px;
+    right: 14rem;
   }
   .layout-reverse #sidebar:target + .wrap .sidebar-show,
   .layout-reverse #sidebar:target + .wrap .sidebar-hide {
     left: auto;
-    right: 295px;
+    right: 15rem;
   }
 }
