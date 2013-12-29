@@ -484,7 +484,6 @@ a.sidebar-nav-item:focus {
 
 /* Only provide a hover state for linked pagination items */
 a.pagination-item:hover {
-  text-decoration: none;
   background-color: #f5f5f5;
 }
 
@@ -494,8 +493,6 @@ a.pagination-item:hover {
     margin-bottom: 60px;
   }
 }
-
-
 
 
 /*
