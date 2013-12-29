@@ -57,13 +57,15 @@ html {
   font-size: 16px;
   line-height: 1.5;
 }
-@media (min-width: 990px) {
+@media (min-width: 768px) {
   html {
     font-size: 20px;
   }
 }
 
 body {
+  padding-right: 1rem;
+  padding-left:  1rem;
   color: #515151;
   background-color: #fff;
 }
@@ -234,21 +236,28 @@ img {
   transition: left 0.3s ease;
 }
 
-/* Specificy which container to pad */
-.content {
-  padding: 3rem 20px;
+/* Center page content */
+.container {
+  max-width: 30rem;
+  margin-left:  auto;
+  margin-right: auto;
+}
+@media (min-width: 800px) {
+  .container {
+    max-width: 36rem;
+  }
 }
 
-/* Center container in available real estate */
-@media (min-width: 990px) {
+
+/* Specificy which container to pad */
+.content {
+  padding-top:    2rem;
+  padding-bottom: 2rem;
+}
+@media (min-width: 480px) {
   .content {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .container {
-    max-width: 36em;
-    margin-left:  auto;
-    margin-right: auto;
+    padding-top:    3rem;
+    padding-bottom: 3rem;
   }
 }
 
@@ -260,9 +269,8 @@ img {
  */
 
 .masthead {
-  padding: 1rem 20px;
-  margin-left:  auto;
-  margin-right: auto;
+  padding-top:    1rem;
+  padding-bottom: 1rem;
   border-bottom: 1px solid #eee;
 }
 .masthead-title {
@@ -279,11 +287,18 @@ img {
   color: #c0c0c0;
   letter-spacing: 0;
 }
-@media (min-width: 860px) {
+@media (max-width: 480px) {
   .masthead {
-    max-width: 36em;
-    padding-left: 0;
-    padding-right: 0;
+    padding-top:    .9rem;
+    padding-bottom: .9rem;
+    margin-right: -1rem;
+    margin-left:  -1rem;
+  }
+  .masthead-title {
+    text-align: center;
+  }
+  .masthead-title small {
+    display: none;
   }
 }
 
@@ -305,13 +320,27 @@ img {
 
 /* Style and "hide" the sidebar */
 .sidebar {
-  padding: 1rem;
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-size: .875rem; /* 14px */
   color: rgba(255,255,255,.6);
   background-color: #202020;
+  -webkit-transform: translate3d(0,0,0);
+     -moz-transform: translate3d(0,0,0);
+      -ms-transform: translate3d(0,0,0);
+          transform: translate3d(0,0,0);
 }
-@media (min-width: 860px) {
+@media (max-width: 480px) {
+  .sidebar {
+    max-height: 0;
+    margin-left:  -1rem;
+    margin-right: -1rem;
+  }
+  #sidebar-checkbox:checked + .sidebar {
+    max-height: 1000px;
+    transition: max-height 0.3s ease;
+  }
+}
+@media (min-width: 768px) {
   .sidebar {
     position: fixed;
     top: 0;
@@ -319,7 +348,6 @@ img {
     left: -14rem;
     overflow-y: auto;
     width: 14rem;
-    padding: 1.5rem;
     font-size: .75rem; /* 15px */
     transition: left 0.3s ease;
   }
@@ -330,10 +358,15 @@ img {
   font-weight: normal;
   color: #fff;
 }
+.sidebar-item {
+  padding: 1rem;
+}
+.sidebar-item p:last-child {
+  margin-bottom: 0;
+}
 
 /* Sidebar nav */
 .sidebar-nav {
-  margin: 1rem -1rem;
   border-bottom: 1px solid rgba(255,255,255,.1);
 }
 .sidebar-nav-item {
@@ -348,9 +381,10 @@ a.sidebar-nav-item:focus {
   background-color: rgba(255,255,255,.1);
   border-color: transparent;
 }
-@media (min-width: 860px) {
-  .sidebar-nav {
-    margin: 1.5rem -1.5rem;
+
+@media (min-width: 768px) {
+  .sidebar-item {
+    padding: 1.5rem;
   }
   .sidebar-nav-item {
     padding-left:  1.5rem;
@@ -358,33 +392,36 @@ a.sidebar-nav-item:focus {
   }
 }
 
-/* Sidebar toggles */
-/* Note: the toggles cannot share a base class. */
+/* Hide the sidebar checkbox that we toggle with `.sidebar-toggle` */
 .sidebar-checkbox {
   display: none;
 }
 
-@media (min-width: 860px) {
+/* Style the `label` that we use to target the `.sidebar-checkbox` */
+.sidebar-toggle {
+  position: absolute;
+  top:  .8rem;
+  left: 0;
+  padding: .4rem .65rem;
+  font-family: Arial, sans-serif; /* Ensure vertical alignment */
+  line-height: 1;
+  color: #505050;
+  background-color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.sidebar-toggle:active,
+#sidebar-checkbox:checked ~ .wrap .sidebar-toggle {
+  color: #fff;
+  background-color: #505050;
+}
+
+@media (min-width: 768px) {
   .sidebar-toggle {
     position: fixed;
-    top:  .85rem;
     left: 1rem;
-    display: block;
-    padding: .15rem .65rem;
-    font-family: Arial, sans-serif; /* Ensure vertical alignment */
-    color: #505050;
-    background-color: #fff;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s ease;
   }
-  .sidebar-toggle:active,
-  #sidebar-checkbox:checked ~ .wrap .sidebar-toggle {
-    color: #fff;
-    background-color: #505050;
-  }
-
-  /* Do the fancy CSS toggle magic */
   #sidebar-checkbox:checked + .sidebar {
     left: 0;
   }
@@ -494,7 +531,7 @@ a.pagination-item:hover {
  * on the right side.
  */
 
-@media (min-width: 860px) {
+@media (min-width: 768px) {
   .layout-reverse .sidebar {
     left: auto;
     right: -14rem;

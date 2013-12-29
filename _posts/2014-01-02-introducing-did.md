@@ -6,8 +6,6 @@ title: Introducing Did
 [Did](http://mdo.github.io/did) is a [Jekyll](http://jekyllrb.com) theme, designed and built by [@mdo](https://twitter.com/mdo). It's based on another theme, [Hyde](http://andhyde.com). The name originates from a rather well-known, and unsurprisingly relevant, psychiatric condition.
 
 > Dissociative identity disorder (<strong>DID</strong>), also known as multiple personality disorder (MPD), is an extremely rare mental disorder characterized by at least two distinct and relatively enduring identities or dissociated personality states that alternately control a person's behavior.
->
-> Source: http://en.wikipedia.org/wiki/Dissociative_identity_disorder.
 
 Did is designed to showcase your content first and foremost. Navigation and extraneous information remains offscreen until the reader requests it. Did is built mobile first, meaning it looks and behaves great on devices from phones to desktops. It ships with everything you need to start a new Jekyll project. Feel free to snag whatever you need to shoehorn Did into an existing Jekyll site, too.
 
