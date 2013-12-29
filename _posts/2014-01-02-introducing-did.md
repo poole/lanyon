@@ -14,7 +14,7 @@ Did is designed to showcase your content first and foremost. Navigation and extr
 * Complete Jekyll setup included (layouts, config, [404](/404), [RSS feed](/atom.xml), posts, and [example page](/about))
 * Mobile friendly design and development
 * Easily scalable text and component sizing with `rem` units in the CSS
-* Sliding sidebar (built with only CSS)
+* Toggleable sliding sidebar (built with only CSS) via **☰** link in top corner
 * Sidebar includes support for textual modules and a basic navigation
 * Two orientations for content and sidebar, default (left sidebar) and reverse (right sidebar)
 * Support for a wide gamut of HTML elements
