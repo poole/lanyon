@@ -22,11 +22,11 @@
  *
  * Body resets
  * Custom type
+ * Messages
  * Container
  * Masthead
  * Sidebar
- * Posts
- * Error page
+ * Posts and pages
  * Pagination
  */
 
@@ -205,6 +205,21 @@ img {
 
 
 /*
+ * Messages
+ *
+ * Show alert messages to users. You may add it to single elements like a `<p>`,
+ * or to a parent if there are multiple elements to show.
+ */
+
+.message {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  color: #717171;
+  background-color: #f9f9f9;
+}
+
+
+/*
  * Containers
  *
  * The wrapper and container are used to position site content.
@@ -251,6 +266,9 @@ img {
 .masthead-title {
   margin-top: 0;
   margin-bottom: 0;
+  color: #505050;
+}
+.masthead-title a {
   color: #505050;
 }
 .masthead-title small {
@@ -378,21 +396,24 @@ a.sidebar-nav-item:focus {
 
 
 /*
- * Posts
+ * Posts and pages
  *
- * Each post is wrapped in `.post`. Used on default and post layouts.
+ * Each post is wrapped in `.post` and is used on default and post layouts. Each
+ * page is wrapped in `.page` and is only used on the page layout.
  */
 
-/* Single post */
+.page,
 .post {
   margin-bottom: 4em;
 }
 
 /* Blog post or page title */
+.page-title,
 .post-title,
 .post-title a {
   color: #303030;
 }
+.page-title,
 .post-title {
   margin-top: 0;
 }

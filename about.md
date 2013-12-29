@@ -1,28 +1,34 @@
 ---
-layout: default
+layout: page
 title: About
 ---
 
-<div class="page">
+<p class="message">
+  Hey there! This page is included in Did as an example. Feel free to customize it for your own use upon downloading. Carry on!
+</p>
 
-  <h1 class="page-title">About</h1>
+[Did](http://mdo.github.io/did) is a [Jekyll](http://jekyllrb.com) theme, designed and built by [@mdo](https://twitter.com/mdo). It started off as an optional layout for another theme, [Hyde](http://andhyde.com). The code for both layouts added too much overhead, so a new theme was created.
 
-  <p>Mark Otto is a designer living and working in San Francisco. Originally from Wisconsin, he freelanced his way through high school and college before moving to California to work at a design firm, <a href="http://zurb.com">ZURB</a>, in 2007. There he designed and developed dozens of projects with clients large and small, including Photobucket, Britney Spears, SafetyWeb, and Zazzle. In early 2010, after a two-and-a-half year stint at ZURB, he left to become a product designer at Twitter.</p>
-  <p>Since joining Twitter, Otto has worked on numerous projects including the Promoted Products suite, <a href="http://twitter.com">Twitter.com</a>, the <a href="http://support.twitter.com">Twitter Help Center</a>, several internal tools, and most recently the popular open-source front-end toolkit <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>.</p>
+## Name
 
-  <hr>
+The name *Did* originates from a rather well-known, and unsurprisingly relevant, psychiatric condition.
 
-  <h2>About the site</h2>
-  <p>This URL has been my online home for many years, manifesting at times as a blog or a portfolio until landing on this current single-column blog. Today it is an outlet for my design- and development-related ramblings.</p>
-  <p>Some fun facts about the site include:</p>
-  <ul>
-    <li>Designed and coded on a Mac in California</li>
-    <li>Coded with <a href="http://sublimetext.org/2">Sublime Text 2</a></li>
-    <li>Built on <a href="http://jekyllrb.com/">Jekyll</a>, the open source site generator</li>
-    <li>Hosted on <a href="http://pages.github.com">GitHub Pages</a></li>
-    <li>Font-face, <a href="http://www.google.com/webfonts/specimen/Open+Sans">Open Sans</a>, is served via <a href="http://www.google.com/webfonts">Google Web Fonts</a></li>
-    <li>Tagline pays homage to the <a href="http://www.youtube.com/watch?v=hVPHXo6Jnt8">Deep Thoughts by Jack Handy</a> skits on SNL</li>
-  </ul>
-  <p>For comments or questions, feel free to <a href="http://twitter.com/mdo">ask me on Twitter</a> or shoot me an email at markdotto at gmail dot com.</p>
+> Dissociative identity disorder (<strong>DID</strong>), also known as multiple personality disorder (MPD), is an extremely rare mental disorder characterized by at least two distinct and relatively enduring identities or dissociated personality states that alternately control a person's behavior.
+>
+> Source: http://en.wikipedia.org/wiki/Dissociative_identity_disorder.
 
-</div>
+If it wasn't obvious by now, the reference is the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*. Jekyll is the platform, Hyde the sister (and original) theme, and now Did the split personality theme (sidebar and content). Is it a stretch? Probably, but I love it.
+
+## Setup
+
+Some fun facts about the setup of this project include:
+
+* Built for [Jekyll](http://jekyllrb.com)
+* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
+* Fonts PT Sans (headings) and PT Serif (body), and are served by [Google Web Fonts](http://www.google.com/webfonts)
+* Coded with [Sublime Text 2](http://sublimetext.org), an amazing code editor
+* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
+
+Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/mdo/did/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
+
+Thanks for reading!
