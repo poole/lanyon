@@ -5,8 +5,13 @@
 
   <body>
 
-    <div class="sidebar" id="sidebar">
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+         styles, `#sidebar-checkbox` for behavior. -->
+    <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
 
+    <!-- Sidebar that gets toggled. `.sidebar` is for regular styles, `#sidebar`
+         for behavior. -->
+    <div class="sidebar" id="sidebar">
       <div class="sidebar-item">
         <p>{{ site.description }}</p>
       </div>
@@ -24,10 +29,14 @@
       </div>
     </div>
 
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
     <div class="wrap">
-      <a href="#sidebar" class="sidebar-show">☰</a>
-      <a href="#" class="sidebar-hide">☰</a>
 
+      <!-- Sidebar toggler -->
+      <label for="sidebar-checkbox" class="sidebar-toggle">☰</label>
+
+      <!-- Site name and tagling at the top -->
       <div class="masthead">
         <h3 class="masthead-title">
           <a href="/" title="Home">{{ site.title }}</a>
@@ -35,6 +44,7 @@
         </h3>
       </div>
 
+      <!-- Post and page content -->
       <div class="content container">
         {{ content }}
       </div>

@@ -289,6 +289,14 @@ img {
  *
  * The sidebar is the drawer, the item we are toggling with our handy hamburger
  * button in the corner of the page.
+ *
+ * This particular sidebar implementation was inspired by Chris Coyier's
+ * "Offcanvas Menu with CSS Target" article, and the checkbox variation from the
+ * comments by a reader. It modifies both implementations to continue using the
+ * checkbox (no change in URL means no polluted browser history), but this uses
+ * `position` for the menu to avoid some potential content reflow issues.
+ *
+ * Source: http://css-tricks.com/off-canvas-menu-with-css-target/#comment-207504
  */
 
 /* Style and "hide" the sidebar */
@@ -346,14 +354,12 @@ a.sidebar-nav-item:focus {
 
 /* Sidebar toggles */
 /* Note: the toggles cannot share a base class. */
-.sidebar-show,
-.sidebar-hide {
+.sidebar-checkbox {
   display: none;
 }
 
 @media (min-width: 860px) {
-  .sidebar-show,
-  .sidebar-hide {
+  .sidebar-toggle {
     position: fixed;
     top:  .85rem;
     left: 1rem;
@@ -363,35 +369,26 @@ a.sidebar-nav-item:focus {
     color: #505050;
     background-color: #fff;
     border-radius: 4px;
-    transition: left 0.3s ease;
+    cursor: pointer;
+    transition: all 0.3s ease;
   }
-  .sidebar-show:hover,
-  .sidebar-show:focus {
-    color: #505050;
-  }
-  .sidebar-hide {
-    visibility: hidden;
+  .sidebar-toggle:hover,
+  .sidebar-toggle:focus,
+  #sidebar-checkbox:checked ~ .wrap .sidebar-toggle {
     color: #fff;
     background-color: #505050;
   }
-  .sidebar-hide:hover,
-  .sidebar-hide:focus {
-    color: #fff;
-  }
 
   /* Do the fancy CSS toggle magic */
-  #sidebar:target {
+  #sidebar-checkbox:checked + .sidebar {
     left: 0;
   }
-  #sidebar:target + .wrap {
+  #sidebar-checkbox:checked ~ .wrap {
     left: 14rem;
   }
-  #sidebar:target + .wrap .sidebar-show,
-  #sidebar:target + .wrap .sidebar-hide {
+  #sidebar-checkbox:checked ~ .wrap .sidebar-toggle {
     left: 15rem;
   }
-  #sidebar:target + .wrap .sidebar-show { visibility: hidden; }
-  #sidebar:target + .wrap .sidebar-hide { visibility: visible; }
 }
 
 
@@ -498,26 +495,22 @@ a.pagination-item:hover {
     right: -14rem;
     transition-property: right;
   }
-  .layout-reverse .sidebar-show,
-  .layout-reverse .sidebar-hide {
-    position: fixed;
+  .layout-reverse .sidebar-toggle {
     left: auto;
     right: 1rem;
-    transition-property: right;
   }
   .layout-reverse .wrap {
     transition-property: right;
   }
-  .layout-reverse #sidebar:target {
+  #sidebar-checkbox:checked + .sidebar {
     left: auto;
     right: 0;
   }
-  .layout-reverse #sidebar:target + .wrap {
+  #sidebar-checkbox:checked ~ .wrap {
     left: auto;
     right: 14rem;
   }
-  .layout-reverse #sidebar:target + .wrap .sidebar-show,
-  .layout-reverse #sidebar:target + .wrap .sidebar-hide {
+  #sidebar-checkbox:checked ~ .wrap .sidebar-toggle {
     left: auto;
     right: 15rem;
   }
