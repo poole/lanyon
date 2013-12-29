@@ -46,6 +46,28 @@ Open <http://localhost:4000> in your browser, and voilà. You're done.
 Did includes a some customizable options, typically applied via classes on the `<body>` element.
 
 
+### Rems, `font-size`, and scaling
+
+Did is built with almost entirely with `rem`s (instead of pixels like Hyde 1.1.x). `rem`s are like `em`s, but instead of building on the immediate parent's `font-size`, they build on the root element, `<html>`.
+
+By default, we use the following:
+
+```css
+html {
+  font-size: 16px;
+  line-height: 1.5;
+}
+@media (min-width: 48rem) { /* ~768px */
+  html {
+    font-size: 20px;
+  }
+}
+
+```
+
+To easily scale your site's typography and components, simply customize the base `font-size`s here.
+
+
 ### Sidebar menu
 
 Create a list of nav links in the sidebar by assigning each Jekyll page the correct layout in the page's [front-matter](http://jekyllrb.com/docs/frontmatter/).
