@@ -337,6 +337,7 @@ img {
   padding: .5rem 1rem;
   border-top: 1px solid #303030;
 }
+.sidebar-nav-item.active,
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
   text-decoration: none;

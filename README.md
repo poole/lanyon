@@ -55,6 +55,8 @@ title: About
 ---
 ```
 
+**Why require a specific layout?** Jekyll will return *all* pages, including the `atom.xml`, and with an alphabetical sort order. To ensure the first link is *Home*, we exclude the `index.html` page from this list by specifying the `page` layout.
+
 ### Reverse layout
 
 Reverse the page orientation with a single class.
