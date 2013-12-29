@@ -49,19 +49,16 @@
          content to avoid any CSS collisions with our real content. -->
     <div class="wrap">
 
-      <!-- Sidebar toggler -->
-      <label for="sidebar-checkbox" class="sidebar-toggle">☰</label>
-
-      <!-- Site name and tagling at the top -->
-      <div class="container masthead">
-        <h3 class="masthead-title">
-          <a href="/" title="Home">{{ site.title }}</a>
-          <small>{{ site.tagline }}</small>
-        </h3>
-      </div>
-
-      <!-- Post and page content -->
       <div class="container content">
+        <div class="masthead">
+          <label for="sidebar-checkbox" class="sidebar-toggle">☰</label>
+
+          <h3 class="masthead-title">
+            <a href="/" title="Home">{{ site.title }}</a>
+            <small>{{ site.tagline }}</small>
+          </h3>
+        </div>
+
         {{ content }}
       </div>
     </div>
