@@ -531,6 +531,11 @@ a.pagination-item:hover {
  * on the right side.
  */
 
+.layout-reverse .sidebar-toggle {
+  left: auto;
+  right: 0;
+}
+
 @media (min-width: 768px) {
   .layout-reverse .sidebar {
     left: auto;
