@@ -1,29 +1,28 @@
 /*
- *   __          __
- *  /\ \  __    /\ \
- *  \_\ \/\_\   \_\ \
- *  /'_` \/\ \  /'_` \
- * /\ \_\ \ \ \/\ \_\ \
- * \ \___,_\ \_\ \___,_\
- *  \/__,_ /\/_/\/__,_ /
+ *  ___
+ * /\_ \
+ * \//\ \      __      ___   __  __    ___     ___
+ *   \ \ \   /'__`\  /' _ `\/\ \/\ \  / __`\ /' _ `\
+ *    \_\ \_/\ \_\.\_/\ \/\ \ \ \_\ \/\ \_\ \/\ \/\ \
+ *    /\____\ \__/.\_\ \_\ \_\/`____ \ \____/\ \_\ \_\
+ *    \/____/\/__/\/_/\/_/\/_/`/___/> \/___/  \/_/\/_/
+ *                               /\___/
+ *                               \/__/
  *
- * Did is a Jekyll theme featuring a hidden drawer for out of sight navigation.
- * It's based on Hyde, another Jekyll theme. It's open source, mobile first,
- * and ships with placeholder content to get you up and running in no time.
+ * Lanyon is a Jekyl ltheme built with a featuring a toggleable sidebar drawer
+ * for out of sight navigation. It's based on Poole, the Jekyll butler. See the
+ * project readme for usage information.
  *
  * Designed, built, and released under MIT license by @mdo.
  *
- * Learn more at https://github.com/mdo/did.
+ * Learn more at https://github.com/poole/lanyon.
  */
 
 
 /*
  * Contents
  *
- * Body resets
- * Custom type
- * Messages
- * Container
+ * Global resets
  * Masthead
  * Sidebar
  * Posts and pages
@@ -34,224 +33,41 @@
 
 
 /*
- * Body resets
+ * Global resets
  *
  * Update the foundational and global aspects of the page.
  */
 
-* {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
+/* Prevent scroll on narrow devices */
 html,
 body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden; /* Prevent scroll on narrow devices */
+  overflow-x: hidden;
 }
 
 html {
   font-family: "PT Serif", Georgia, "Times New Roman", serif;
-  font-size: 16px;
-  line-height: 1.5;
-}
-@media (min-width: 48rem) {
-  html {
-    font-size: 20px;
-  }
-}
-
-body {
-  color: #515151;
-  background-color: #fff;
-}
-
-/* No `:visited` state is required by default (browsers will use `a`) */
-a {
-  color: #268bd2;
-  text-decoration: none;
-}
-/* `:focus` is linked to `:hover` for basic accessibility */
-a:hover,
-a:focus {
-  text-decoration: underline;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin-bottom: .5rem;
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-weight: 400;
-  line-height: 1.25;
   color: #313131;
   letter-spacing: -.025rem;
-  text-rendering: optimizeLegibility;
-}
-h1 {
-  font-size: 2rem;
-}
-h2 {
-  margin-top: 1rem;
-  font-size: 1.5rem;
-}
-h3 {
-  margin-top: 1.5rem;
-  font-size: 1.25rem;
-}
-h4, h5, h6 {
-  margin-top: 1rem;
-  font-size: 1rem;
-}
-
-p {
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-
-ul, ol {
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-
-hr {
-  position: relative;
-  margin: 1.5rem 0;
-  border: 0;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #fff;
-}
-
-strong {
-  color: #303030;
-}
-
-abbr {
-  background-color: #eee;
-  display: inline-block;
-  padding: .25em;
-  font-size: 85%;
-  font-weight: bold;
-  color: #555;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
-  text-transform: uppercase;
-  border-radius: 3px;
-}
-
-code,
-pre {
-  font-family: Menlo, Monaco, "Courier New", monospace;
-}
-code {
-  padding: .25em .5em;
-  font-size: 85%;
-  color: #bf616a;
-  background-color: #f9f9f9;
-  border-radius: 3px;
-}
-pre {
-  display: block;
-  margin-top: 0;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  font-size: .8rem;
-  line-height: 1.4;
-  white-space: pre;
-  white-space: pre-wrap;
-  word-break: break-all;
-  word-wrap: break-word;
-  background-color: #f9f9f9;
-}
-pre code {
-  padding: 0;
-  font-size: 100%;
-  color: inherit;
-  background-color: transparent;
-}
-.highlight {
-  margin-bottom: 1rem;
-  border-radius: 4px;
-}
-.highlight pre {
-  margin-bottom: 0;
-}
-
-/* Quotes */
-blockquote {
-  padding: .5rem 1rem;
-  margin: .8rem 0;
-  color: #7a7a7a;
-  border-left: .25rem solid #eee;
-}
-blockquote p:last-child {
-  margin-bottom: 0;
-}
-@media (min-width: 30rem) {
-  blockquote {
-    padding-right: 5rem;
-    padding-left: 1.25rem;
-  }
-}
-
-img {
-  display: block;
-  margin: 0 0 1rem;
-  border-radius: 5px;
 }
 
 
 /*
- * Custom type
+ * Wrapper
  *
- * Extend paragraphs with `.lead` for larger introductory text.
+ * The wrapper is used to position site content when the sidebar is toggled. We
+ * use an outter wrap to position the sidebar without interferring with the
+ * regular page content.
  */
 
-.lead {
-  font-size: 1.25rem;
-  font-weight: 300;
-}
-
-
-/*
- * Messages
- *
- * Show alert messages to users. You may add it to single elements like a `<p>`,
- * or to a parent if there are multiple elements to show.
- */
-
-.message {
-  margin-bottom: 1rem;
-  padding: 1rem;
-  color: #717171;
-  background-color: #f9f9f9;
-}
-
-
-/*
- * Containers
- *
- * The wrapper and container are used to position site content.
- */
-
-/* Use an outter wrap free of most styles for positioning of sidebar */
 .wrap {
   position: relative;
   width: 100%;
   transition: left 0.3s ease-in-out;
-}
-
-/* Center page content */
-.container {
-  max-width: 32rem;
-  padding-left:  1rem;
-  padding-right: 1rem;
-  margin-left:  auto;
-  margin-right: auto;
-}
-@media (min-width: 800px) {
-  .container {
-    max-width: 38rem;
-  }
 }
 
 
@@ -263,30 +79,13 @@ img {
 
 .masthead {
   position: relative;
-  padding-top:    1rem;
-  padding-bottom: 1rem;
-  margin-bottom: 2rem;
   text-align: center;
-  border-bottom: 1px solid #eee;
-}
-.masthead-title {
-  margin-top: 0;
-  margin-bottom: 0;
-  color: #505050;
-}
-.masthead-title a {
-  color: #505050;
 }
 .masthead-title small {
   display: none;
-  font-size: 75%;
-  font-weight: 400;
-  color: #c0c0c0;
-  letter-spacing: 0;
 }
 @media (min-width: 48rem) {
   .masthead {
-    margin-bottom: 3rem;
     text-align: left;
   }
   .masthead-title small {
