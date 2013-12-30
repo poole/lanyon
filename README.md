@@ -16,7 +16,7 @@ To get started, download [Poole](https://github.com/poole/poole). See [the usage
 
 Copy over the included files to turn any vanilla Poole site into a Lanyon site.
 
-- Replace `_includes/head.html` with the included file of the same name
+- Replace `_includes/` with the included folder of the same name (will replace `_includes/head.html` and add `_includes/sidebar.html`)
 - Replace `_layouts/default.html` with the included file of the same name
 - Move `public/css/lanyon.css` to `public/css/`
 

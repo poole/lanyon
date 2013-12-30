@@ -6,10 +6,10 @@ pygments:         true
 permalink:        pretty
 
 # Setup
-title:            Did
-tagline:          'A Jekyll theme, with personalities'
-description:      'Did is a <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme with multiple personalities: the content, and the chrome. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:              http://did.andhyde.com
+title:            Lanyon
+tagline:          'A content-first, sliding sidebar theme for Jekyll'
+description:      'Lanyon is a responsive, mobile first <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme with a toggleable sidebar drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+url:              http://lanyon.getpoole.com
 
 author:
   name:           'Mark Otto'
@@ -18,7 +18,7 @@ author:
 paginate:         5
 
 # Custom vars
-version:          1.0.0
+version:          2.0.0
 
 github:
-  repo:           https://github.com/mdo/did
+  repo:           https://github.com/poole/lanyon
