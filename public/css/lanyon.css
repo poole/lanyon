@@ -79,16 +79,36 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /*
+ * Container
+ *
+ * Center the page content.
+ */
+
+.container {
+  max-width: 28rem;
+}
+@media (min-width: 38rem) {
+  .container {
+    max-width: 32rem;
+  }
+}
+@media (min-width: 56rem) {
+  .container {
+    max-width: 38rem;
+  }
+}
+
+
+/*
  * Masthead
  *
  * Super small header above the content for site name and short description.
  */
 
-@media (max-width: 30rem) {
-  .masthead {
-    margin-left: -1rem;
-    margin-right: -1rem;
-  }
+.masthead {
+  border-bottom: 1px solid #eee;
+}
+@media (max-width: 48rem) {
   .masthead-title {
     text-align: center;
   }
@@ -125,7 +145,6 @@ h1, h2, h3, h4, h5, h6 {
   font-size: .875rem; /* 15px */
   color: rgba(255,255,255,.6);
   background-color: #202020;
-
   -webkit-transform: translate3d(-14rem, 0, 0);
      -moz-transform: translate3d(-14rem, 0, 0);
       -ms-transform: translate3d(-14rem, 0, 0);
@@ -220,14 +239,6 @@ a.sidebar-nav-item:focus {
 #sidebar-checkbox:checked ~ .wrap .sidebar-toggle {
   color: #fff;
   background-color: #505050;
-}
-
-/* Janky fix for iOS which screws up the height of the toggle's bars, but *only*
- * at 480px. We correct the excess padding as we scale it up above 480px. */
-@media (min-width: 30rem) {
-  .sidebar-toggle:before {
-    padding-bottom: .2rem;
-  }
 }
 
 @media (min-width: 30.1rem) {
@@ -372,36 +383,23 @@ a.pagination-item:hover {
  * on the right side.
  */
 
-.layout-reverse .sidebar-toggle {
+.layout-reverse .sidebar {
   left: auto;
   right: 0;
+  -webkit-transform: translate3d(14rem, 0, 0);
+     -moz-transform: translate3d(14rem, 0, 0);
+      -ms-transform: translate3d(14rem, 0, 0);
+          transform: translate3d(14rem, 0, 0);
 }
-
-@media (min-width: 48rem) {
-  .layout-reverse .sidebar {
-    left: auto;
-    right: -14rem;
-    transition-property: right;
-  }
-  .layout-reverse .sidebar-toggle {
-    left: auto;
-    right: 1rem;
-  }
-  .layout-reverse .wrap {
-    transition-property: right;
-  }
-  .layout-reverse #sidebar-checkbox:checked + .sidebar {
-    left: auto;
-    right: 0;
-  }
-  .layout-reverse #sidebar-checkbox:checked ~ .wrap {
-    left: auto;
-    right: 14rem;
-  }
-  .layout-reverse #sidebar-checkbox:checked ~ .wrap .sidebar-toggle {
-    left: auto;
-    right: 15rem;
-  }
+.layout-reverse .sidebar-toggle {
+  left: auto;
+  right: 1rem;
+}
+.layout-reverse #sidebar-checkbox:checked ~ .wrap {
+  -webkit-transform: translate3d(-14rem, 0, 0);
+     -moz-transform: translate3d(-14rem, 0, 0);
+      -ms-transform: translate3d(-14rem, 0, 0);
+          transform: translate3d(-14rem, 0, 0);
 }
 
 
