@@ -68,7 +68,13 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   width: 100%;
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
+     -moz-transition: -moz-transform 0.3s ease-in-out;
+      -ms-transition: -ms-transform 0.3s ease-in-out;
           transition: transform 0.3s ease-in-out;
+    -webkit-backface-visibility: hidden;
+       -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+            backface-visibility: hidden;
 }
 
 
@@ -78,18 +84,16 @@ h1, h2, h3, h4, h5, h6 {
  * Super small header above the content for site name and short description.
  */
 
-.masthead {
-  text-align: center;
-}
-.masthead-title small {
-  display: none;
-}
-@media (min-width: 48rem) {
+@media (max-width: 30rem) {
   .masthead {
-    text-align: left;
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+  .masthead-title {
+    text-align: center;
   }
   .masthead-title small {
-    display: inline;
+    display: none;
   }
 }
 
@@ -111,38 +115,31 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Style and "hide" the sidebar */
 .sidebar {
-  max-height: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  overflow-y: auto;
+  width: 14rem;
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
-  font-size: .875rem; /* 14px */
+  font-size: .875rem; /* 15px */
   color: rgba(255,255,255,.6);
   background-color: #202020;
-  transition: max-height 0.3s ease-in-out;
+
+  -webkit-transform: translate3d(-14rem, 0, 0);
+     -moz-transform: translate3d(-14rem, 0, 0);
+      -ms-transform: translate3d(-14rem, 0, 0);
+          transform: translate3d(-14rem, 0, 0);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+     -moz-transition:    -moz-transform 0.3s ease-in-out;
+      -ms-transition:     -ms-transform 0.3s ease-in-out;
+          transition:         transform 0.3s ease-in-out;
+  -webkit-backface-visibility: hidden;
+     -moz-backface-visibility: hidden;
+      -ms-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
-@media (min-width: 48rem) {
-  .sidebar {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    overflow-y: auto;
-    width: 14rem;
-    max-height: none;
-    font-size: .75rem; /* 15px */
-    -webkit-transition: -webkit-transform 0.3s ease-in-out;
-       -moz-transition: -moz-transform 0.3s ease-in-out;
-        -ms-transition: -ms-transform 0.3s ease-in-out;
-            transition: transform 0.3s ease-in-out;
-    -webkit-transform: translate3d(-100%, 0, 0);
-       -moz-transform: translate3d(-100%, 0, 0);
-        -ms-transform: translate3d(-100%, 0, 0);
-            transform: translate3d(-100%, 0, 0);
-    -webkit-backface-visibility: hidden;
-       -moz-backface-visibility: hidden;
-        -ms-backface-visibility: hidden;
-            backface-visibility: hidden;
-  }
-}
 
 /* Sidebar content */
 .sidebar a {
@@ -191,11 +188,11 @@ a.sidebar-nav-item:focus {
 /* Style the `label` that we use to target the `.sidebar-checkbox` */
 .sidebar-toggle {
   position: absolute;
-  top:  .8rem;
+  top:  1rem;
   left: 1rem;
-  padding: .4rem .65rem;
-  font-family: Arial, sans-serif; /* Ensure vertical alignment */
-  line-height: 1;
+  display: block;
+  padding: .05rem .65rem;
+  height: 1.6rem;
   color: #505050;
   background-color: #fff;
   border-radius: 4px;
@@ -211,30 +208,23 @@ a.sidebar-nav-item:focus {
   background-color: #505050;
 }
 
-#sidebar-checkbox:checked + .sidebar {
-  max-height: 1000px;
-}
-
-@media (min-width: 48rem) {
+@media (min-width: 30rem) {
   .sidebar-toggle {
     position: fixed;
-    left: 1rem;
   }
-  #sidebar-checkbox:checked + .sidebar {
-    max-height: none;
-  }
-  #sidebar-checkbox:checked + .sidebar {
-    -webkit-transform: translate3d(0, 0, 0);
-       -moz-transform: translate3d(0, 0, 0);
-        -ms-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-  }
-  #sidebar-checkbox:checked ~ .wrap {
-    -webkit-transform: translate3d(14rem, 0, 0);
-       -moz-transform: translate3d(14rem, 0, 0);
-        -ms-transform: translate3d(14rem, 0, 0);
-            transform: translate3d(14rem, 0, 0);
-  }
+}
+
+#sidebar-checkbox:checked + .sidebar {
+  -webkit-transform: translate3d(0, 0, 0);
+     -moz-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+#sidebar-checkbox:checked ~ .wrap {
+  -webkit-transform: translate3d(14rem, 0, 0);
+     -moz-transform: translate3d(14rem, 0, 0);
+      -ms-transform: translate3d(14rem, 0, 0);
+          transform: translate3d(14rem, 0, 0);
 }
 
 
