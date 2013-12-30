@@ -191,8 +191,8 @@ a.sidebar-nav-item:focus {
   top:  1rem;
   left: 1rem;
   display: block;
-  padding: .05rem .65rem;
-  height: 1.6rem;
+  width: 2.2rem;
+  padding: .5rem .65rem;
   color: #505050;
   background-color: #fff;
   border-radius: 4px;
@@ -202,15 +202,43 @@ a.sidebar-nav-item:focus {
       -ms-transition: -ms-transform 0.3s ease-in-out;
           transition: transform 0.3s ease-in-out;
 }
+.sidebar-toggle:before {
+  display: block;
+  content: "";
+  width: 100%;
+  padding-bottom: .125rem;
+  border-top: .375rem double;
+  border-bottom: .125rem solid;
+
+  /* Make the border inside the box */
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .sidebar-toggle:active,
 #sidebar-checkbox:checked ~ .wrap .sidebar-toggle {
   color: #fff;
   background-color: #505050;
 }
 
+/* Janky fix for iOS which screws up the height of the toggle's bars, but *only*
+ * at 480px. We correct the excess padding as we scale it up above 480px. */
 @media (min-width: 30rem) {
+  .sidebar-toggle:before {
+    padding-bottom: .2rem;
+  }
+}
+
+@media (min-width: 30.1rem) {
   .sidebar-toggle {
     position: fixed;
+    width: 2.25rem;
+  }
+  .sidebar-toggle:before {
+    padding-bottom: .15rem;
+    border-top-width: .45rem;
+    border-bottom-width: .15rem;
   }
 }
 
