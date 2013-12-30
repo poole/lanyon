@@ -67,14 +67,6 @@ h1, h2, h3, h4, h5, h6 {
 .wrap {
   position: relative;
   width: 100%;
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-     -moz-transition: -moz-transform 0.3s ease-in-out;
-      -ms-transition: -ms-transform 0.3s ease-in-out;
-          transition: transform 0.3s ease-in-out;
-    -webkit-backface-visibility: hidden;
-       -moz-backface-visibility: hidden;
-        -ms-backface-visibility: hidden;
-            backface-visibility: hidden;
 }
 
 
@@ -138,25 +130,13 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   top: 0;
   bottom: 0;
-  left: 0;
-  overflow-y: auto;
+  left: -14rem;
   width: 14rem;
+  overflow-y: auto;
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-size: .875rem; /* 15px */
   color: rgba(255,255,255,.6);
   background-color: #202020;
-  -webkit-transform: translate3d(-14rem, 0, 0);
-     -moz-transform: translate3d(-14rem, 0, 0);
-      -ms-transform: translate3d(-14rem, 0, 0);
-          transform: translate3d(-14rem, 0, 0);
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-     -moz-transition:    -moz-transform 0.3s ease-in-out;
-      -ms-transition:     -ms-transform 0.3s ease-in-out;
-          transition:         transform 0.3s ease-in-out;
-  -webkit-backface-visibility: hidden;
-     -moz-backface-visibility: hidden;
-      -ms-backface-visibility: hidden;
-          backface-visibility: hidden;
 }
 
 
@@ -216,10 +196,6 @@ a.sidebar-nav-item:focus {
   background-color: #fff;
   border-radius: 4px;
   cursor: pointer;
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-     -moz-transition: -moz-transform 0.3s ease-in-out;
-      -ms-transition: -ms-transform 0.3s ease-in-out;
-          transition: transform 0.3s ease-in-out;
 }
 .sidebar-toggle:before {
   display: block;
@@ -253,17 +229,42 @@ a.sidebar-nav-item:focus {
   }
 }
 
+
+/* Slide effect
+ *
+ * Handle the sliding effects of the sidebar and content in one spot, seperate
+ * from the default styles.
+ *
+ * As an a heads up, we don't use `transform: translate3d()` here because when
+ * mixed with `position: fixed;` for the sidebar toggle, it creates a new
+ * containing block. Put simply, the fixed sidebar toggle behaves like
+ * `position: absolute;` when transformed.
+ *
+ * Read more about it at http://meyerweb.com/eric/thoughts/2011/09/12/.
+ */
+
+.wrap,
+.sidebar,
+.sidebar-toggle {
+  -webkit-transition: left 0.3s ease-in-out;
+     -moz-transition: left 0.3s ease-in-out;
+      -ms-transition: left 0.3s ease-in-out;
+          transition: left 0.3s ease-in-out;
+    -webkit-backface-visibility: hidden;
+       -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+            backface-visibility: hidden;
+  -webkit-perspective: 1000;
+     -moz-perspective: 1000;
+      -ms-perspective: 1000;
+          perspective: 1000;
+}
+
 #sidebar-checkbox:checked + .sidebar {
-  -webkit-transform: translate3d(0, 0, 0);
-     -moz-transform: translate3d(0, 0, 0);
-      -ms-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+  left: 0;
 }
 #sidebar-checkbox:checked ~ .wrap {
-  -webkit-transform: translate3d(14rem, 0, 0);
-     -moz-transform: translate3d(14rem, 0, 0);
-      -ms-transform: translate3d(14rem, 0, 0);
-          transform: translate3d(14rem, 0, 0);
+  left: 14rem;
 }
 
 
@@ -383,23 +384,31 @@ a.pagination-item:hover {
  * on the right side.
  */
 
+.layout-reverse .wrap,
+.layout-reverse .sidebar,
+.layout-reverse .sidebar-toggle {
+  -webkit-transition-property: right;
+     -moz-transition-property: right;
+      -ms-transition-property: right;
+          transition-property: right;
+}
+
 .layout-reverse .sidebar {
   left: auto;
-  right: 0;
-  -webkit-transform: translate3d(14rem, 0, 0);
-     -moz-transform: translate3d(14rem, 0, 0);
-      -ms-transform: translate3d(14rem, 0, 0);
-          transform: translate3d(14rem, 0, 0);
+  right: -14rem;
 }
 .layout-reverse .sidebar-toggle {
   left: auto;
   right: 1rem;
 }
+
+.layout-reverse #sidebar-checkbox:checked + .sidebar {
+  left: auto;
+  right: 0;
+}
 .layout-reverse #sidebar-checkbox:checked ~ .wrap {
-  -webkit-transform: translate3d(-14rem, 0, 0);
-     -moz-transform: translate3d(-14rem, 0, 0);
-      -ms-transform: translate3d(-14rem, 0, 0);
-          transform: translate3d(-14rem, 0, 0);
+  left: auto;
+  right: 14rem;
 }
 
 
