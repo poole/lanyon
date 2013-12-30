@@ -53,7 +53,7 @@ There are eight themes available at this time.
 
 ![Available theme classes](https://f.cloud.github.com/assets/98681/1817044/e5b0ec06-6f68-11e3-83d7-acd1942797a1.png)
 
-To use a theme, add anyone of the available theme classes to the `<body>` element in the `default.html` layout, like so:
+To use a theme, add any one of the available theme classes to the `<body>` element in the `default.html` layout, like so:
 
 ```html
 <body class="theme-base-08">
