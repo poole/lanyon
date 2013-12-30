@@ -78,6 +78,13 @@ Reverse the page orientation with a single class.
 ```
 
 
+## Development
+
+Lanyon's main branch is `gh-pages`, which includes a full Jekyll setup to ensure a smooth workflow. **All pull requests should be to submitted against `gh-pages`.**
+
+Lanyon also contains a `master` branch for generating distribution builds. `master` contains only the files you need to convert an existing Jekyll site, like that provided by [Poole](https://github.com/poole/poole), which Lanyon is built on top of. **No pull requests will be accepted to `master`.**
+
+
 ## Author
 
 **Mark Otto**
