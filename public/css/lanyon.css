@@ -67,7 +67,8 @@ h1, h2, h3, h4, h5, h6 {
 .wrap {
   position: relative;
   width: 100%;
-  transition: left 0.3s ease-in-out;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+          transition: transform 0.3s ease-in-out;
 }
 
 
@@ -78,7 +79,6 @@ h1, h2, h3, h4, h5, h6 {
  */
 
 .masthead {
-  position: relative;
   text-align: center;
 }
 .masthead-title small {
@@ -124,12 +124,23 @@ h1, h2, h3, h4, h5, h6 {
     position: fixed;
     top: 0;
     bottom: 0;
-    left: -14rem;
+    left: 0;
     overflow-y: auto;
     width: 14rem;
     max-height: none;
     font-size: .75rem; /* 15px */
-    transition: left 0.3s ease-in-out;
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+       -moz-transition: -moz-transform 0.3s ease-in-out;
+        -ms-transition: -ms-transform 0.3s ease-in-out;
+            transition: transform 0.3s ease-in-out;
+    -webkit-transform: translate3d(-100%, 0, 0);
+       -moz-transform: translate3d(-100%, 0, 0);
+        -ms-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+    -webkit-backface-visibility: hidden;
+       -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+            backface-visibility: hidden;
   }
 }
 
@@ -181,7 +192,7 @@ a.sidebar-nav-item:focus {
 .sidebar-toggle {
   position: absolute;
   top:  .8rem;
-  left: 0;
+  left: 1rem;
   padding: .4rem .65rem;
   font-family: Arial, sans-serif; /* Ensure vertical alignment */
   line-height: 1;
@@ -189,7 +200,10 @@ a.sidebar-nav-item:focus {
   background-color: #fff;
   border-radius: 4px;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+     -moz-transition: -moz-transform 0.3s ease-in-out;
+      -ms-transition: -ms-transform 0.3s ease-in-out;
+          transition: transform 0.3s ease-in-out;
 }
 .sidebar-toggle:active,
 #sidebar-checkbox:checked ~ .wrap .sidebar-toggle {
@@ -207,15 +221,19 @@ a.sidebar-nav-item:focus {
     left: 1rem;
   }
   #sidebar-checkbox:checked + .sidebar {
-    left: 0;
     max-height: none;
-    transition: left 0.3s ease-in-out;
+  }
+  #sidebar-checkbox:checked + .sidebar {
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
   }
   #sidebar-checkbox:checked ~ .wrap {
-    left: 14rem;
-  }
-  #sidebar-checkbox:checked ~ .wrap .sidebar-toggle {
-    left: 15rem;
+    -webkit-transform: translate3d(14rem, 0, 0);
+       -moz-transform: translate3d(14rem, 0, 0);
+        -ms-transform: translate3d(14rem, 0, 0);
+            transform: translate3d(14rem, 0, 0);
   }
 }
 
