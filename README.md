@@ -80,7 +80,7 @@ Reverse the page orientation with a single class.
 
 ## Development
 
-Poole has two branches, but only one is used for active development.
+Lanyon has two branches, but only one is used for active development.
 
 - `master` for development.  **All pull requests should be to submitted against `master`.**
 - `gh-pages` for our hosted site, which includes our analytics tracking code. **Please avoid using this branch.**
