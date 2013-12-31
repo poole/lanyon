@@ -6,21 +6,21 @@ Lanyon is an unassuming [Jekyll](http://jekyllrb.com) theme that places content 
 ![Lanyon with open sidebar](https://f.cloud.github.com/assets/98681/1825267/be04a914-71b0-11e3-966f-8afe9894c729.png)
 
 
-## Installation
+## Contents
 
-### Requires Poole
+- [Usage](#usage)
+- [Options](#options)
+  - [Sidebar menu](#sidebar-menu)
+  - [Themes](#themes)
+  - [Reverse layout](#reverse-layout)
+- [Development](#development)
+- [Author](#author)
+- [License](#license)
 
-To get started, download [Poole](https://github.com/poole/poole). See [the usage guidelines](https://github.com/poole/poole#usage) for how to install and get up and running with Jekyll and Poole.
 
-### Enabling Lanyon
+## Usage
 
-Copy over the included files to turn any vanilla Poole site into a Lanyon site.
-
-- Replace `_includes/` with the included folder of the same name (will replace `_includes/head.html` and add `_includes/sidebar.html`)
-- Replace `_layouts/default.html` with the included file of the same name
-- Move `public/css/lanyon.css` to `public/css/`
-
-Then, start up your Jekyll server and go!
+Lanyon is a theme built on top of [Poole](https://github.com/poole/poole). It includes a fully furnished Jekyll setup—just download and start the Jekyll server. See [the Poole usage guidelines](https://github.com/poole/poole#usage) for how to install and use Jekyll.
 
 
 ## Options
@@ -80,16 +80,17 @@ Reverse the page orientation with a single class.
 
 ## Development
 
-Lanyon's main branch is `gh-pages`, which includes a full Jekyll setup to ensure a smooth workflow. **All pull requests should be to submitted against `gh-pages`.**
+Poole has two branches, but only one is used for active development.
 
-Lanyon also contains a `master` branch for generating distribution builds. `master` contains only the files you need to convert an existing Jekyll site, like that provided by [Poole](https://github.com/poole/poole), which Lanyon is built on top of. **No pull requests will be accepted to `master`.**
+- `master` for development.  **All pull requests should be to submitted against `master`.**
+- `gh-pages` for our hosted site, which includes our analytics tracking code. **Please avoid using this branch.**
 
 
 ## Author
 
 **Mark Otto**
-<https://github.com/mdo>
-<https://twitter.com/mdo>
+- <https://github.com/mdo>
+- <https://twitter.com/mdo>
 
 
 ## License
