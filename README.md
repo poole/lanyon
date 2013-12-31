@@ -2,8 +2,8 @@
 
 Lanyon is a [Jekyll](http://jekyllrb.com) theme with a toggleable sidebar drawer for out of sight navigation. It's based on [Poole](https://github.com/poole/poole), the Jekyll butler.
 
-![Lanyon](https://f.cloud.github.com/assets/98681/1819955/697ac4c8-70c0-11e3-8d34-403dac775329.png)
-![Lanyon with open sidebar](https://f.cloud.github.com/assets/98681/1819956/697b6e5a-70c0-11e3-8fe9-b8098f9c61e5.png)
+![Lanyon](https://f.cloud.github.com/assets/98681/1825266/be03f014-71b0-11e3-9539-876e61530e24.png)
+![Lanyon with open sidebar](https://f.cloud.github.com/assets/98681/1825267/be04a914-71b0-11e3-966f-8afe9894c729.png)
 
 
 ## Installation
@@ -46,8 +46,8 @@ title: About
 
 Lanyon ships with eight optional themes based on the [base16 color scheme](https://github.com/chriskempson/base16). Apply a theme to change the color scheme (mostly applies to sidebar and links).
 
-![Lanyon with red theme](https://f.cloud.github.com/assets/98681/1819959/6999645a-70c0-11e3-9086-c451f597ee70.png)
-![Lanyon with red theme and open sidebar](https://f.cloud.github.com/assets/98681/1819960/699a181e-70c0-11e3-8696-a6a8f258824e.png)
+![Lanyon with red theme](https://f.cloud.github.com/assets/98681/1825270/be065110-71b0-11e3-9ed8-9b8de753a4af.png)
+![Lanyon with red theme and open sidebar](https://f.cloud.github.com/assets/98681/1825269/be05ec20-71b0-11e3-91ea-a9138ef07186.png)
 
 There are eight themes available at this time.
 
@@ -66,8 +66,8 @@ To create your own theme, look to the Themes section of [included CSS file](http
 
 ### Reverse layout
 
-![Lanyon with reverse layout](https://f.cloud.github.com/assets/98681/1819958/698cbe1c-70c0-11e3-861d-a7a2fdc34823.png)
-![Lanyon with reverse layout and open sidebar](https://f.cloud.github.com/assets/98681/1819957/698c2d08-70c0-11e3-88c7-6b8e1618b363.png)
+![Lanyon with reverse layout](https://f.cloud.github.com/assets/98681/1825265/be03f2e4-71b0-11e3-89f1-360705524495.png)
+![Lanyon with reverse layout and open sidebar](https://f.cloud.github.com/assets/98681/1825268/be056174-71b0-11e3-88c8-5055bca4307f.png)
 
 Reverse the page orientation with a single class.
 
