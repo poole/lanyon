@@ -9,13 +9,8 @@
  *                               /\___/
  *                               \/__/
  *
- * Lanyon is a responsive, mobile first Jekyll theme that features a toggleable
- * sidebar drawer for out of sight navigation. It's based on Poole, the Jekyll
- * butler. See the project readme for usage information.
- *
- * Designed, built, and released under MIT license by @mdo.
- *
- * Learn more at https://github.com/poole/lanyon.
+ * Designed, built, and released under MIT license by @mdo. Learn more at
+ * https://github.com/poole/lanyon.
  */
 
 
@@ -99,8 +94,26 @@ h1, h2, h3, h4, h5, h6 {
  */
 
 .masthead {
+  padding-top:    1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 3rem;
   border-bottom: 1px solid #eee;
 }
+.masthead-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #505050;
+}
+.masthead-title a {
+  color: #505050;
+}
+.masthead-title small {
+  font-size: 75%;
+  font-weight: 400;
+  color: #c0c0c0;
+  letter-spacing: 0;
+}
+
 @media (max-width: 48rem) {
   .masthead-title {
     text-align: center;
@@ -138,6 +151,11 @@ h1, h2, h3, h4, h5, h6 {
   font-size: .875rem; /* 15px */
   color: rgba(255,255,255,.6);
   background-color: #202020;
+}
+@media (min-width: 30rem) {
+  .sidebar {
+    font-size: .75rem; /* 14px */
+  }
 }
 
 /* Sidebar content */

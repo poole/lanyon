@@ -1,5 +1,5 @@
 # Dependencies
-markdown:         rdiscount
+markdown:         redcarpet
 pygments:         true
 
 # Permalinks
@@ -7,8 +7,8 @@ permalink:        pretty
 
 # Setup
 title:            Lanyon
-tagline:          'A content-first, sliding sidebar theme for Jekyll'
-description:      'Lanyon is a responsive, mobile first <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme with a toggleable sidebar drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+tagline:          'A Jekyll theme'
+description:      'A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
 url:              http://lanyon.getpoole.com
 
 author:

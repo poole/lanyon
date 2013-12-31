@@ -7,11 +7,10 @@
 
   <title>
     {% if page.title %}
-      {{ page.title }}
+      {{ page.title }} &middot; {{ site.title }}
     {% else %}
-      {{ site.title }}
+      {{ site.title }} &middot; {{ site.tagline }}
     {% endif %}
-    &middot; {{ site.tagline }}
   </title>
 
   <!-- CSS -->

@@ -3,7 +3,7 @@ layout: post
 title: Introducing Lanyon
 ---
 
-Lanyon is a [Jekyll](http://jekyllrb.com) theme with a toggleable sidebar drawer for out of sight navigation. It's based on [Poole](https://github.com/poole/poole), the Jekyll butler, and is designed to showcase your content first and foremost with extraneous information hidden offscreen until the reader requests it.
+Lanyon is an unassuming [Jekyll](http://jekyllrb.com) theme that places content first by tucking away navigation in a hidden drawer. It's based on [Poole](http://getpoole.com), the Jekyll butler.
 
 ### Built on Poole
 
