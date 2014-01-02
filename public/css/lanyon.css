@@ -146,6 +146,7 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   left: -14rem;
   width: 14rem;
+  visibility: hidden;
   overflow-y: auto;
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-size: .875rem; /* 15px */
@@ -264,10 +265,10 @@ a.sidebar-nav-item:focus {
 .wrap,
 .sidebar,
 .sidebar-toggle {
-  -webkit-transition: left 0.3s ease-in-out;
-     -moz-transition: left 0.3s ease-in-out;
-      -ms-transition: left 0.3s ease-in-out;
-          transition: left 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+     -moz-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
     -webkit-backface-visibility: hidden;
        -moz-backface-visibility: hidden;
         -ms-backface-visibility: hidden;
@@ -280,6 +281,7 @@ a.sidebar-nav-item:focus {
 
 #sidebar-checkbox:checked + .sidebar {
   left: 0;
+  visibility: visible;
 }
 #sidebar-checkbox:checked ~ .wrap {
   left: 14rem;
