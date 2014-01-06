@@ -61,6 +61,7 @@ h1, h2, h3, h4, h5, h6 {
  */
 
 .wrap {
+  left: 0;
   position: relative;
   width: 100%;
 }
@@ -238,7 +239,6 @@ a.sidebar-nav-item:focus {
 
 @media (min-width: 30.1rem) {
   .sidebar-toggle {
-    position: fixed;
     width: 2.25rem;
   }
   .sidebar-toggle:before {
