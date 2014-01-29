@@ -144,7 +144,10 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   top: 0;
   bottom: 0;
-  left: -14rem;
+  -webkit-transform: translateX(-14rem);
+     -moz-transform: translateX(-14rem);
+      -ms-transform: translateX(-14rem);
+          transform: translateX(-14rem);
   width: 14rem;
   visibility: hidden;
   overflow-y: auto;
@@ -282,18 +285,24 @@ a.sidebar-nav-item:focus {
 }
 .wrap,
 .sidebar-toggle {
-  -webkit-transition: left .3s ease-in-out;
-     -moz-transition: left .3s ease-in-out;
-      -ms-transition: left .3s ease-in-out;
-          transition: left .3s ease-in-out;
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+     -moz-transition: -moz-transform .3s ease-in-out;
+      -ms-transition: -ms-transform .3s ease-in-out;
+          transition: transform .3s ease-in-out;
 }
 
 #sidebar-checkbox:checked + .sidebar {
-  left: 0;
+  -webkit-transform: translateX(0);
+     -moz-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
   visibility: visible;
 }
 #sidebar-checkbox:checked ~ .wrap {
-  left: 14rem;
+  -webkit-transform: translateX(14rem);
+     -moz-transform: translateX(14rem);
+      -ms-transform: translateX(14rem);
+          transform: translateX(14rem);
 }
 
 
@@ -415,16 +424,20 @@ a.pagination-item:hover {
 
 .layout-reverse .wrap,
 .layout-reverse .sidebar-toggle {
-  -webkit-transition-property: right;
-     -moz-transition-property: right;
-      -ms-transition-property: right;
-          transition-property: right;
+  -webkit-transition-property: -webkit-transform;
+     -moz-transition-property: -moz-transform;
+      -ms-transition-property: -ms-transform;
+          transition-property: transform;
 }
 
 
 .layout-reverse .sidebar {
   left: auto;
-  right: -14rem;
+  right: 0;
+  -webkit-transform: translateX(14rem);
+     -moz-transform: translateX(14rem);
+      -ms-transform: translateX(14rem);
+          transform: translateX(14rem);
 }
 .layout-reverse .sidebar-toggle {
   left: auto;
@@ -433,11 +446,17 @@ a.pagination-item:hover {
 
 .layout-reverse #sidebar-checkbox:checked + .sidebar {
   left: auto;
-  right: 0;
+  -webkit-transform: translateX(0);
+     -moz-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
 }
 .layout-reverse #sidebar-checkbox:checked ~ .wrap {
   left: auto;
-  right: 14rem;
+  -webkit-transform: translateX(-14rem);
+     -moz-transform: translateX(-14rem);
+      -ms-transform: translateX(-14rem);
+          transform: translateX(-14rem);
 }
 
 
