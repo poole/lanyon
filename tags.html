@@ -1,0 +1,18 @@
+---
+layout: page
+title: "Tags"
+---
+<ul class="inline-list">
+{% assign tags_list = site.tags %}{% if tags_list.first[0] == null %}{% for tag in tags_list %}
+  <li><a href="#{{ tag }}" class="tag">{{ tag }}<sup>{{ site.tags[tag].size }}</sup></a></li>{% endfor %}
+  {% else %}{% for tag in tags_list %}
+  <li><a href="#{{ tag[0] }}" class="tag">{{ tag[0] }}<sup>{{ tag[1].size }}</sup></a></li>{% endfor %}
+  {% endif %}{% assign tags_list = nil %}
+</ul>
+{% for tag in site.tags %} 
+<article>
+<h2 id="{{ tag[0] }}">{{ tag[0] }}</h2>
+  <ul class="list-entry">{% assign pages_list = tag[1] %}  
+  {% for post in pages_list %}{% if post.title != null %}{% if group == null or group == post.group %}<li><a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}">{{ post.title }}</a></li>{% endif %}{% endif %}{% endfor %}{% assign pages_list = nil %}{% assign group = nil %}
+  </ul>
+</article>{% endfor %}
