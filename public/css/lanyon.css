@@ -440,6 +440,17 @@ a.pagination-item:hover {
   right: 14rem;
 }
 
+/* styles for tags page */
+
+.inline-list li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.list-entry li {
+  list-style-type: none;
+}
+
 
 /*
  * Themes
