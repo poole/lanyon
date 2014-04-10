@@ -6,14 +6,14 @@ pygments:         true
 permalink:        pretty
 
 # Setup
-title:            Lanyon
-tagline:          'A Jekyll theme'
-description:      'A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:              http://lanyon.getpoole.com
+title:            Acne Cure Zone Blog
+tagline:          'Cures, Discussion, and Acne Anectodes'
+description:      'Acne Cure Zone is a place where we discuss what has worked for us to clear and cure our acne problems. This is where admins will post their cures and any exceptional content from others who wish to have it published outside of *the zone.*'
+url:              http://acnecurezone.com/cures
 
 author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
+  name:           'Michael Aslanian'
+  url:            https://discourse.acnecurezone.com/users/mike/activity
 
 paginate:         5
 
@@ -21,4 +21,4 @@ paginate:         5
 version:          1.0.0
 
 github:
-  repo:           https://github.com/poole/lanyon
+  repo:           https://github.com/acnecurezone/cures
