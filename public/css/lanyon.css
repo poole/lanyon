@@ -123,6 +123,59 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/*
+ * Profile
+ *
+ * The profile provides a space for a Medium-esque contact information
+ * along with space for a brief bio.
+ *
+ */
+
+.profile-wrapper {
+  margin: auto auto;
+  width: 65%;
+}
+.profile {
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+.profile-avatar {
+  display: inline-block;
+  height: 140px;
+  width: 140px;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+     -moz-border-radius: 100%;
+  -webkit-box-shadow: 0 2px 0px rgba(0,0,0,0.3);
+     -moz-box-shadow: 0 2px 0px rgba(0,0,0,0.3);
+          box-shadow: 0 2px 0px rgba(0,0,0,0.3);
+}
+.profile-avatar-image {
+  height: 100%;
+  width: 100%;
+  -webkit-border-radius: 100%;
+     -moz-border-radius: 100%;
+          border-radius: 100%;
+}
+.profile-title {
+  margin-top: 0;
+  font-size: 3rem;
+  color: #505050;
+}
+.profile-title a {
+  color: #505050;
+  text-decoration: none;
+}
+.profile-bio {
+  margin-top: -10px;
+  font-size: 85%;
+  font-weight: 400;
+  color: #959595;
+  letter-spacing: 0;
+}
 
 /*
  * Sidebar
