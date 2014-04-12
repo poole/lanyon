@@ -80,7 +80,7 @@ Reverse the page orientation with a single class.
 
 ### Profile & Bio
 
-![Lanyon with profile homepage layout](http://i.imgur.com/D1PhHCH.png)
+![Lanyon with Profile Homepage Layout](https://cloud.githubusercontent.com/assets/1323467/2687316/262e9446-c24c-11e3-81b6-40467f2eb6cb.png)
 
 Swap out the default homepage with one that includes an area for an avatar, the site title and a bio.
 
