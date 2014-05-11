@@ -149,15 +149,15 @@ h1, h2, h3, h4, h5, h6 {
   visibility: hidden;
   overflow-y: auto;
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
-  font-size: .875rem; /* 15px */
+  font-size: .875rem; /* 14px */
   color: rgba(255,255,255,.6);
   background-color: #202020;
   -webkit-transition: all .3s ease-in-out;
           transition: all .3s ease-in-out;
 }
-@media (min-width: 30rem) {
+@media (min-width: 38rem) {
   .sidebar {
-    font-size: .75rem; /* 14px */
+    font-size: .75rem; /* 15px */
   }
 }
 
@@ -237,19 +237,6 @@ a.sidebar-nav-item:focus {
   color: #fff;
   background-color: #505050;
 }
-
-@media (min-width: 30.1rem) {
-  .sidebar-toggle {
-    position: fixed;
-    width: 2.25rem;
-  }
-  .sidebar-toggle:before {
-    padding-bottom: .15rem;
-    border-top-width: .45rem;
-    border-bottom-width: .15rem;
-  }
-}
-
 
 /* Slide effect
  *
