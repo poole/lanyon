@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+{% include head.html %}
+
+<body>
+
+  {% include sidebar.html %}
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+    content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="profile-wrapper">
+        <div class="profile">
+          <div class="container">
+            <div class="profile-avatar">
+            <img class="profile-avatar-image" alt="look at my mug" src="public/apple-touch-icon-144-precomposed.png" />
+            </div>
+            <h1 class="profile-title">
+              <a href="/" title="Home">{{ site.title }}</a>
+            </h1>
+            <h3 class="profile-bio">
+              {{ site.profile }}
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container content">
+      {{ content }}
+    </div>
+  </div>
+
+  <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+</body>
+</html>
