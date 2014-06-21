@@ -1,0 +1,25 @@
+.page-title {
+  float: left;
+}
+
+.search-input {
+  max-width: 65%;
+  margin: 0;
+  color: #444;
+  background: transparent;
+}
+
+.search-input input {
+  width: 60%;
+  height: 2.5em;
+  padding-left: 10px;
+  margin-left: 2%;
+  font-size: 1em;
+  border: 0;
+  border-bottom: 2px solid #e6e6e6;
+}
+
+/* Hide first list entry, which displays directly under the search input */
+.search-break {
+  display: inline-block;
+}

@@ -1,0 +1,20 @@
+---
+layout: page
+title: Search
+search_omit: true
+---
+<link rel="stylesheet" href="{{ site.baseurl }}search/search.css">
+<div ng-app="searchApp" ng-controller="PostListCtrl">
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+  <script src="{{ site.baseurl }}search/search.js"></script>
+
+  <span class="search-input">
+    <input ng-model="query">
+  </span>
+  <ul>
+    <li class="search-break"></li>
+    <li ng-repeat="post in posts | matchesQuery:query">
+      <a ng-href="{[{ post.link }]}">{[{ post.title }]}</a>
+    </li>
+  </ul>
+</div>

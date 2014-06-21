@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+search_omit: true
 ---
 
 <p class="message">
