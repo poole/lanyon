@@ -397,6 +397,34 @@ a.pagination-item:hover {
   }
 }
 
+/*
+ * Auto-Reverse layout for mobile clients only.
+ *
+ * Applies the same styles found in `.layout-reverse` on phones,
+ * making the sidebar easier to reach with the right thumb.
+ */
+
+@media (max-width: 48rem) {
+
+    .sidebar {
+        left: auto;
+        right: -14rem;
+    }
+
+    .sidebar-toggle {
+        left: auto;
+        right: 1rem;
+    }
+
+  #sidebar-checkbox:checked ~ .sidebar,
+  #sidebar-checkbox:checked ~ .wrap,
+  #sidebar-checkbox:checked ~ .sidebar-toggle {
+      -webkit-transform: translateX(-14rem);
+      -ms-transform: translateX(-14rem);
+      transform: translateX(-14rem);
+  }
+
+}
 
 /*
  * Reverse layout
