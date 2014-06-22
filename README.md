@@ -78,6 +78,27 @@ Reverse the page orientation with a single class.
 ```
 
 
+### Sidebar overlay instead of push
+
+Make the sidebar overlap the viewport content with a single class:
+
+```html
+<body class="sidebar-overlay">
+  ...
+</body>
+```
+
+This will keep the content stationary and slide in the sidebar over the side content. It also adds a `box-shadow` based outline to the toggle for contrast against backgrounds, as well as a `box-shadow` on the sidebar for depth.
+
+It's also available for a reversed layout when you add both classes:
+
+```html
+<body class="layout-reverse sidebar-overlay">
+  ...
+</body>
+```
+
+
 ## Development
 
 Lanyon has two branches, but only one is used for active development.
