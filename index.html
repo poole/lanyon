@@ -12,9 +12,21 @@ title: Home
       </a>
     </h1>
 
-    <span class="post-date">{{ post.date | date_to_string }}</span>
+    <span class="post-date">{{ post.date | date_to_string }}
+	   <ul class="tag-box inline" style="float:right">
+	{% capture tags %}
+	  {% for tag in post.tags %}
+		{{ tag }}
+	  {% endfor %}
+	{% endcapture %}
+	{% assign sortedtags = tags | split:' ' | sort %}
 
-    {{ post.content }}
+	{% for tag in sortedtags %}
+		<li><a href="/tags.html#{{ tag | cgi_escape }}">{{ tag }}</a></li>
+	{% endfor %}
+   </ul></span>
+
+    {{ post.excerpt }}
   </div>
   {% endfor %}
 </div>

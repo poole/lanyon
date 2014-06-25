@@ -1,0 +1,31 @@
+---
+layout: page
+title: Tags
+---
+
+<div id="tags">
+   <ul class="tag-box inline">
+	{% capture tags %}
+	  {% for tag in site.tags %}
+		{{ tag[0] }}
+	  {% endfor %}
+	{% endcapture %}
+	{% assign sortedtags = tags | split:' ' | sort %}
+
+	{% for tag in sortedtags %}
+		<li><a href="#{{ tag | cgi_escape }}">{{ tag }}</a></li>
+	{% endfor %}
+   </ul>
+ 
+   {% for tag in sortedtags %}
+     <h2 id="{{ tag | cgi_escape }}">{{ tag }}</h2>
+   <ul class="post-list">
+     {% for post in site.tags[tag] %}
+	   {% if post.title != null %}
+         <li itemscope><span class="date-published"><time datetime="{{ post.date | date_to_string }}" itemprop="datePublished">{{ post.date | date_to_string }}</time></span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+       {% endif %}
+	 {% endfor %}
+   </ul>
+   	 {% endfor %}
+
+ </div>
