@@ -10,7 +10,7 @@ title:            trap9.io
 tagline:          'signals uninterupted'
 description:      'The blog about cosmic radiation effects.'
 url:              http://trap9.io
-baseurl:          'http://trap9.io/'
+baseurl:          '/'
 paginate:         5
 
 author:
