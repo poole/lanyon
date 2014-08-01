@@ -1,6 +1,6 @@
 # Dependencies
 markdown:         redcarpet
-pygments:         true
+highlighter:         pygments
 
 # Permalinks
 permalink:        pretty
@@ -8,9 +8,9 @@ permalink:        pretty
 # Setup
 title:            trap9.io
 tagline:          'signals uninterupted'
-description:      'A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:              http://lanyon.getpoole.com
-baseurl:          'http://trap9.github.io'
+description:      'The blog about cosmic radiation effects.'
+url:              http://trap9.io
+baseurl:          'http://trap9.io/'
 paginate:         5
 
 author:
