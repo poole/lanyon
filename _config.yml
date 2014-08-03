@@ -1,6 +1,6 @@
 # Dependencies
-markdown:         redcarpet
-highlighter:         pygments
+markdown:         kramdown
+highlighter:      pygments
 
 # Permalinks
 permalink:        pretty
@@ -21,4 +21,4 @@ author:
 version:          1.0.0
 
 github:
-  repo:
+  repo:           https://github.com/trap9/trap9.github.io
