@@ -6,6 +6,8 @@ category: articles
 tags: [tagging, general, news]
 author: "Jiri Zoth"
 comments: true
+twitter: true
+twitteraka: jzoaka
 ---
 
 # Tags are pretty fine and we like it

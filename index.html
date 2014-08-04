@@ -7,14 +7,15 @@ title: Home
   {% for post in paginator.posts %}
   <div class="post">
     <h1 class="post-title">
-      <a href="{{ post.url }}">
+      <a href="{{ post.url}}">
         {{ post.title }}
       </a>
     </h1>
 
     <span class="post-date">{{ post.date | date_to_string }} {{post.author}}
     {% for tag in post.tags %}<a href="/tags/index.html#{{ tag | cgi_escape }}" title="Pages tagged {{ tag }}" rel="tag">{{ tag }}</a>{% unless forloop.last %} &bull; {% endunless %}{% endfor %} </span>
-
+      <a href="{{ post.url }}#disqus_thread">
+      </a>
     {{ post.content }}
   </div>
   {% endfor %}

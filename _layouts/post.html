@@ -8,7 +8,7 @@ layout: default
     {% for tag in page.tags %}<a href="/tags/index.html#{{ tag | cgi_escape }}" title="Pages tagged {{ tag }}" rel="tag">{{ tag }}</a>{% unless forloop.last %} &bull; {% endunless %}{% endfor %}</span>
   {{ content }}
 </div>
-
+{% include twitter.html %}
 <div class="related">
   <h2>Related Posts</h2>
   <ul class="related-posts">
@@ -23,4 +23,5 @@ layout: default
       </li>
     {% endfor %}
   </ul>
+  {% include comments.html %}
 </div>
