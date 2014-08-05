@@ -10,9 +10,13 @@ twitter: true
 twitteraka: jzoaka
 ---
 
-# Tags are pretty fine and we like it
-This if small step for manking but big step for trap9.io :-)
-* _a first post
-* _a first feature implemented
-* _a first text in markdown
-* _.... want more first's ... come on .. three is my favorite number ... urnotgonnagetmore :-)
+Tags are pretty fine and we like it
+
+###This is a small step for mankind but a big step for trap9.io :-)
+
+* a first post
+* a first feature implemented
+* a first text in markdown
+* .... want more firsts ... come on .. three is my favorite number ... urnotgonnagetmore[^1] :-)
+
+[^1]: Yes. This is my first joke here and there will be more ubet.
