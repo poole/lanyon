@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Example content
+author: Author name
+tags: [jekyll, lanyon]
 ---
 
 
