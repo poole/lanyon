@@ -2,7 +2,7 @@
 layout: page
 title: About
 ---
- ## About
+ 
 <p class="message">
   Hey there! 
 </p>
@@ -11,7 +11,7 @@ title: About
 
 
 
-## Setup
+
 
 </p>
 
