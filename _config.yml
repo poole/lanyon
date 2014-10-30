@@ -10,7 +10,7 @@ relative_permalinks: true
 
 # Setup
 title:               Murat Şentürk
-tagline:             'Blog'
+tagline:             ''
 description:         'Murat Şentürk'
 url:                 #
 baseurl:             /
