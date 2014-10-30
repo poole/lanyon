@@ -11,7 +11,7 @@ relative_permalinks: true
 # Setup
 title:               Murat Şentürk
 tagline:             'Blog'
-description:         ''
+description:         'Murat Şentürk's Blog'
 url:                 #
 baseurl:             /
 paginate:            5
