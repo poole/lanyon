@@ -15,15 +15,17 @@ IMAGE
 
 ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "logo")
 
+[![IMAGE ALT TEXT HERE]()](http://www.youtube.com/watch?v=GtkV2oQSxiU)
 
 
-![alt text][logo]
-![alt text][logo]
+
 
 ```python
     s= "Pythong syntax"
 print s
 ```
+
+
 
 
 
