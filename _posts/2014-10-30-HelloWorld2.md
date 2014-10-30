@@ -1,30 +1,15 @@
 
-### Hello World
-
-*test*
-**test**
-test
-
-1. first
-2. Secend
---2. third
+### Hello World 2
 
 
-
-IMAGE 
-
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "logo")
-
-[![IMAGE ALT TEXT HERE]()](http://www.youtube.com/watch?v=GtkV2oQSxiU)
-
-
-
-
-```python
-    s= "Pythong syntax"
-print s
-```
-
+Left align | Right align | Center align 
+:-----------|------------:|:------------:
+ This       |        This |     This     
+ column     |      column |    column    
+ will       |        will |     will     
+ be         |          be |      be      
+ left       |       right |    center    
+ aligned    |     aligned |   aligned 
 
 
 

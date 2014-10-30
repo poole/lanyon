@@ -2,8 +2,6 @@
 ### Hello World
 
 
-
-
 | Item     | Value | Qty   |
 | :------- | ----: | :---: |
 | Computer | $1600 |  5    |
