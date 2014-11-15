@@ -4,17 +4,12 @@
 permalink:           pretty
 relative_permalinks: true
 
-# Serving
-detach:     false
-port:       4000
-host:       0.0.0.0
-
 # Setup
 title:      misc/tech/musings
 tagline:    'notebook for projects, problems and solutions'
 description:    'A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
 url:        http://misctechmusings.com
-baseurl:    http://misctechmusings.com
+baseurl:    /
 paginate:   5
 
 # About/contact
