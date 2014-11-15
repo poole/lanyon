@@ -1,13 +1,13 @@
 # Permalinks
+#
 # Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:  /:title/
+permalink:           pretty
 relative_permalinks: true
 
 # Serving
 detach:     false
 port:       4000
 host:       0.0.0.0
-baseurl:    "" # does not include hostname
 
 # Setup
 title:      misc/tech/musings
