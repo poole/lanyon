@@ -1,6 +1,11 @@
 ---
 layout: post
 title: Linux Hardware Detection Tool Dmidecode
+permalink: linux-hardware-detection-tool-dmidecode
+redirect_from: "2009-10-26-linux-hardware-detection-tool-dmidecode/"
+tags:
+- linux
+- dmidecode
 ---
 
 Searching for a quick method of checking a systems memory type, I stumbled upon the dmidecode tool. Dmidecode was able to pull all of the memory information from my motherboard. Including open memory slots and values of the occupied ones.
