@@ -1,22 +1,21 @@
 # Permalinks
-#
 # Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:           pretty
+permalink: pretty
 relative_permalinks: true
 
 # Setup
-title:      misc/tech/musings
-tagline:    'notebook for projects, problems and solutions'
-description:    ''
-url:        http://misctechmusings.com
-baseurl:    /
-paginate:   5
+title: misc/tech/musings
+tagline: 'notebook for projects, problems and solutions'
+description: ''
+url: http://misctechmusings.com
+baseurl: /
+paginate: 5
 
 # About/contact
 author:
-  name:     Andrew Bounds
-  url:      https://twitter.com/p0rkjello
-  email:    asbounds@gmail.com
+name: Andrew Bounds
+url: https://twitter.com/p0rkjello
+email: asbounds@gmail.com
 
 # Custom vars
-version:  1.0.0
+version: 1.0.0
