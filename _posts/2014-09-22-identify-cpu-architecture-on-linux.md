@@ -1,14 +1,17 @@
 ---
 layout: post
 title: Identify CPU architecture on Linux
-tags: lscpu linux cpu
+permalink: identify-cpu-architecture-on-linux
+redirect_from: "2014-09-22-identify-cpu-architecture-on-linux/"
+tags:
+- linux
 ---
 
 Using `lscpu` is a quick and easy way to determine your CPU architecture.
 
 64bit AMD processor example:
 
-```console
+```
 $ lscpu
 Architecture:          x86_64
 CPU op-mode(s):        32-bit, 64-bit
@@ -38,7 +41,7 @@ NUMA node0 CPU(s):     0-5
 
 32bit Intel Pentium 4 example:
 
-```console
+```
 $ lscpu
 Architecture:          i686
 CPU op-mode(s):        32-bit
