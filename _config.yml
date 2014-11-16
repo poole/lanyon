@@ -16,7 +16,28 @@ author:
   name: Andrew Bounds
   url: https://twitter.com/p0rkjello
   email: asbounds@gmail.com
+
+# Site owner
+owner:
+  name: Andrew Bounds
+  avatar: bio-photo.jpg
+  email: asbounds@gmail.com
   disqus-shortname: misctechmusings
+  twitter: p0rkjello
+  facebook: #username
+  github: p0rkjello
+  stackexchange: #http://stackoverflow.com/users/123456/username
+  linkedin: #username
+  instagram: #username
+  flickr: #username
+  tumblr: #username
+  google:
+    plus: #username
+    analytics:
+    verify:
+    ad-client:
+    ad-slot: 
+  bing-verify:
 
 # Custom vars
 version: 1.0.0
