@@ -8,8 +8,8 @@ title: misc/tech/musings
 tagline: 'notebook for projects, problems and solutions'
 description: ''
 url: http://github.misctechmusings.com
-baseurl: http://github.misctechmusings.com
-paginate: 5
+baseurl: http://github.misctechmusings.com/
+paginate: 25
 
 # About/contact
 author:
