@@ -11,7 +11,7 @@ Using `lscpu` is a quick and easy way to determine your CPU architecture.
 
 64bit AMD processor example:
 
-```
+{% highlight sh %}
 $ lscpu
 Architecture:          x86_64
 CPU op-mode(s):        32-bit, 64-bit
@@ -37,11 +37,11 @@ L1i cache:             64K
 L2 cache:              512K
 L3 cache:              6144K
 NUMA node0 CPU(s):     0-5
-```
+{% endhighlight %}
 
 32bit Intel Pentium 4 example:
 
-```
+{% highlight sh %}
 $ lscpu
 Architecture:          i686
 CPU op-mode(s):        32-bit
@@ -60,4 +60,4 @@ CPU MHz:               3391.668
 BogoMIPS:              6786.97
 L1d cache:             16K
 L2 cache:              1024K
-```
+{% endhighlight %}
