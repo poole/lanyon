@@ -1,8 +1,11 @@
 ---
 layout: post
 title: Archlinux Kernel Repair
-published: true
-tags: linux kernel repair
+permalink: archlinux-kernel-repair
+redirect_from: "2014-09-15-archlinux-kernel-repair/"
+tags:
+- linux
+- archlinux
 ---
 
 ### So I managed to uninstall my kernel.
