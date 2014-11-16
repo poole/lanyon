@@ -5,14 +5,16 @@ title: Home
 
 <div class="posts">
   {% for post in paginator.posts %}
-  <div class="post">
-    <h3 class="post-title">
+  <article class="post">
+    <h1 class="post-title">
       <a href="{{ post.url }}">
         {{ post.title }}
       </a>
-    </h3>
-    <span class="post-date">{{ post.date | date_to_string }}</span>
-  </div>
+    </h1>
+
+    <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time>
+
+    {{ post.content }}
   {% endfor %}
 </div>
 
