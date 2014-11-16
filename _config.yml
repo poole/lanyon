@@ -7,15 +7,15 @@ relative_permalinks: true
 title: misc/tech/musings
 tagline: 'notebook for projects, problems and solutions'
 description: ''
-url:
+url: http://github.misctechmusings.com
 baseurl: /
 paginate: 5
 
 # About/contact
 author:
-name: Andrew Bounds
-url: https://twitter.com/p0rkjello
-email: asbounds@gmail.com
+  name: Andrew Bounds
+  url: https://twitter.com/p0rkjello
+  email: asbounds@gmail.com
 
 # Custom vars
 version: 1.0.0
