@@ -7,7 +7,7 @@ relative_permalinks: false
 title: misc/tech/musings
 tagline: 'notebook for projects, problems and solutions'
 description: ''
-url: http://misctechmusings.com
+url: http://github.misctechmusings.com
 baseurl: /
 paginate: 5
 
