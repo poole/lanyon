@@ -1,5 +1,0 @@
-- [ ] Create a task list!
-- [ ] Add Tags to posts
-- [ ] Add Tags page
-- [ ] Add Discus
-- [ ] 
