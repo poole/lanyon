@@ -2,6 +2,7 @@
 title: misc/tech/musings
 tagline: 'notebook for projects, problems and solutions'
 description: ''
+disqus-shortname: misctechmusings
 url: http://github.misctechmusings.com
 baseurl: http://github.misctechmusings.com/
 paginate: 25
@@ -11,7 +12,6 @@ owner:
   name: Andrew Bounds
   avatar: bio-photo.jpg
   email: asbounds@gmail.com
-  disqus-shortname: misctechmusings
   twitter: p0rkjello
   facebook: #username
   github: p0rkjello
@@ -20,13 +20,9 @@ owner:
   instagram: #username
   flickr: #username
   tumblr: #username
-  google:
-    plus: #username
-    analytics:
-    verify:
-    ad-client:
-    ad-slot: 
-  bing-verify:
+
+# Analytics
+google_analytics_id:
 
 # Handling Reading
 safe:         false
