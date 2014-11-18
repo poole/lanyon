@@ -4,6 +4,6 @@ layout: nil
  
 /* Add your includes. */
  
-{% include lanyon.css %}
-{% include poole.css %}
-{% include syntax.css %}
+{% include css/lanyon.css %}
+{% include css/poole.css %}
+{% include css/syntax.css %}
