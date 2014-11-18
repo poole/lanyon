@@ -1,9 +1,4 @@
-# Permalinks
-# Use of `relative_permalinks` ensures post links from the index work properly.
-permalink: pretty
-relative_permalinks: true
-
-# Setup
+# Site info
 title: misc/tech/musings
 tagline: 'notebook for projects, problems and solutions'
 description: ''
@@ -11,13 +6,7 @@ url: http://github.misctechmusings.com
 baseurl: http://github.misctechmusings.com/
 paginate: 25
 
-# About/contact
-author:
-  name: Andrew Bounds
-  url: https://twitter.com/p0rkjello
-  email: asbounds@gmail.com
-
-# Site owner
+# Owner / Contact / Social
 owner:
   name: Andrew Bounds
   avatar: bio-photo.jpg
@@ -39,17 +28,19 @@ owner:
     ad-slot: 
   bing-verify:
 
-# Custom vars
-version: 1.0.0
-
 # Handling Reading
 safe:         false
 include:      [".htaccess"]
-exclude:      []
+exclude:      ["README.md","LICENSE.md","Gemfile","Gemfile.lock"]
 keep_files:   [".git", ".svn"]
 encoding:     "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 textile_ext:  "textile"
+
+# Permalinks
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink: pretty
+relative_permalinks: false
 
 # Filtering Content
 show_drafts: null
@@ -59,7 +50,7 @@ unpublished: false
 
 # Plugins
 whitelist: []
-gems:      [ jekyll-sitemap ]
+gems:      ["jekyll-sitemap"]
 
 # Conversion
 markdown:    kramdown
@@ -68,7 +59,7 @@ lsi:         false
 excerpt_separator: "\n\n"
 
 # Outputting
-#timezone:      null
+timezone:    America/New_York
 
 quiet:    false
 defaults: []
