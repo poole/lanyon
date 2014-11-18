@@ -42,14 +42,6 @@ owner:
 # Custom vars
 version: 1.0.0
 
-# Where things are
-source:      .
-destination: ./_site
-plugins:     ./_plugins
-layouts:     ./_layouts
-data_source: ./_data
-collections: null
-
 # Handling Reading
 safe:         false
 include:      [".htaccess"]
@@ -74,9 +66,6 @@ markdown:    kramdown
 highlighter: pygments
 lsi:         false
 excerpt_separator: "\n\n"
-
-# Backwards-compatibility
-relative_permalinks: false
 
 # Outputting
 #timezone:      null
