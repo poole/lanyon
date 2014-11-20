@@ -1,9 +1,0 @@
----
-
----
- 
-/* Add your includes. */
-
-{% include css/poole.css %} 
-{% include css/syntax.css %}
-{% include css/lanyon.css %}
