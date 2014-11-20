@@ -1,0 +1,3 @@
+<ul class="post-list">{% for post in site.posts %}
+<li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}<span class="entry-date">{{ post.date | date: "%B %d, %Y" }}</span></a></li>{% endfor %}
+</ul>
