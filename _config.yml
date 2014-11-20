@@ -3,8 +3,8 @@ title: misc/tech/musings
 tagline: 'notebook for projects, problems and solutions'
 description: ''
 disqus-shortname: misctechmusings
-url: http://github.misctechmusings.com
-baseurl: http://github.misctechmusings.com/
+url: 
+baseurl: 
 paginate: 25
 
 # Owner / Contact / Social
@@ -32,6 +32,10 @@ keep_files:   [".git", ".svn"]
 encoding:     "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 textile_ext:  "textile"
+
+sass:
+  sass_dir: _sass
+#  style: compressed  
 
 # Permalinks
 # Use of `relative_permalinks` ensures post links from the index work properly.

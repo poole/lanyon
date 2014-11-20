@@ -1,9 +1,9 @@
 ---
-layout: nil
+
 ---
  
 /* Add your includes. */
 
-{% include css/poole.css %}
+{% include css/poole.css %} 
 {% include css/syntax.css %}
 {% include css/lanyon.css %}
