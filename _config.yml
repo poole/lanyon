@@ -12,8 +12,8 @@ relative_permalinks: true
 title:               The R class
 tagline:             'An introduction to programming using R'
 description:         'A course to learn how to develop reproducible and collaborative workflows using R.'
-url:                 http://fmichonneau.github.io/r-class
-baseurl:             /r-class
+url:                 http://r-bio.github.io
+baseurl:             /
 paginate:            5
 
 # About/contact
