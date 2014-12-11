@@ -250,6 +250,11 @@ a.sidebar-nav-item:focus {
   }
 }
 
+@media print {
+  .sidebar-toggle {
+    display:none;
+  }
+}
 
 /* Slide effect
  *
