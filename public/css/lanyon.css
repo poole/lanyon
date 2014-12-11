@@ -252,7 +252,7 @@ a.sidebar-nav-item:focus {
 
 @media print {
   .sidebar-toggle {
-    display:none;
+    display: none;
   }
 }
 
