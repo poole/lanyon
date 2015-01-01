@@ -8,8 +8,11 @@ layout: default
   {% endif %}
 {% endfor %}
 
+{% capture post_tagged_message %}Posts tagged <em>{{ tag_name }}</em>{% endcapture %}
+{% assign no_posts_tagged_message = 'There are no posts with this tag.' %}
+
 <div class="page">
-  <h1 class="page-title">Posts tagged <em>{{ tag_name }}</em></h1>
+  <h1 class="page-title">{{ post_tagged_message }}</h1>
     {% if site.tags[page.tag] %}
       {% for post in site.tags[page.tag] %}
         {% capture post_year %}{{ post.date | date: '%Y' }}{% endcapture %}
@@ -32,6 +35,6 @@ layout: default
         {% endif %}
       {% endfor %}
     {% else %}
-        <p>There are no posts with this tag.</p>
+        <p>{{ no_posts_tagged_message }}</p>
     {% endif %}
 </div>

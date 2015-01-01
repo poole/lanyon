@@ -6,6 +6,7 @@
 {% assign post = page %}
 {% assign tag_list = '' %}
 {% assign tag_separator = ',' %}
+{% assign no_tags_message = 'no tags' %}
 
 {% if post.tags.size > 0 %}
   {% for post_tag in post.tags %}
@@ -22,5 +23,5 @@
     {% endif %}
   {% endfor %}
 {% else %}
-  {% assign tag_list = 'no tags' %}
+  {% assign tag_list = no_tags_message %}
 {% endif %}
