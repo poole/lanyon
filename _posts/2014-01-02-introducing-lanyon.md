@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Introducing Lanyon
+tags: [jekyll, documentation]
 ---
 
 Lanyon is an unassuming [Jekyll](http://jekyllrb.com) theme that places content first by tucking away navigation in a hidden drawer. It's based on [Poole](http://getpoole.com), the Jekyll butler.
@@ -24,6 +25,7 @@ In addition to the features of Poole, Lanyon adds the following:
 * Sidebar includes support for textual modules and a dynamically generated navigation with active link support
 * Two orientations for content and sidebar, default (left sidebar) and [reverse](https://github.com/poole/lanyon#reverse-layout) (right sidebar), available via `<body>` classes
 * [Eight optional color schemes](https://github.com/poole/lanyon#themes), available via `<body>` classes
+* Tags for posts with a tag index page in the sidebar
 
 [Head to the readme](https://github.com/poole/lanyon#readme) to learn more.
 
