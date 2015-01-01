@@ -13,6 +13,7 @@ Lanyon is an unassuming [Jekyll](http://jekyllrb.com) theme that places content 
   - [Sidebar menu](#sidebar-menu)
   - [Themes](#themes)
   - [Reverse layout](#reverse-layout)
+- [Tags](#tags)
 - [Development](#development)
 - [Author](#author)
 - [License](#license)
