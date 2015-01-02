@@ -5,7 +5,6 @@
 
 {% assign post = page %}
 {% assign tag_list = '' %}
-{% assign tag_separator = ',' %}
 {% assign no_tags_message = 'no tags' %}
 
 {% if post.tags.size > 0 %}
@@ -17,7 +16,7 @@
     {% endfor %}
     {% if tag %}
       {% capture tags_content_temp %}
-        {{ tag_list }}{% include tag_link_formatter.html %}
+        {{ tag_list }}{% include tag_link_formatter.html tag=tag tag_separator=include.tag_separator %}
       {% endcapture %}
       {% assign tag_list = tags_content_temp %}
     {% endif %}
