@@ -98,6 +98,19 @@ It's also available for a reversed layout when you add both classes:
 </body>
 ```
 
+### Sidebar open on page load
+
+Show an open sidebar on page load by modifying the `<input>` to add the `checked` boolean attribute:
+
+```html
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+```
+
+Using Liquid you can also conditionally show the sidebar open on a per-page basis. For example, here's how you could have it open on the homepage only:
+
+```html
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" {% if page.title =="Home" %}checked{% end %}>
+```
 
 ## Development
 
