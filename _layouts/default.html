@@ -3,7 +3,7 @@
 
   {% include head.html %}
 
-  <body>
+  <body class="theme-base-0d">
 
     {% include sidebar.html %}
 
@@ -11,12 +11,15 @@
          content to avoid any CSS collisions with our real content. -->
     <div class="wrap">
       <div class="masthead">
+        
         <div class="container">
           <h3 class="masthead-title">
+            <img src="{{ site.baseurl }}images/logo_small.png" width=40px>
             <a href="/" title="Home">{{ site.title }}</a>
             <small>{{ site.tagline }}</small>
           </h3>
         </div>
+        <img src="{{site.baseurl}}images/banner1.jpeg">
       </div>
 
       <div class="container content">

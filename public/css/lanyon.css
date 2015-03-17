@@ -99,6 +99,11 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 3rem;
   border-bottom: 1px solid #eee;
 }
+
+.masthead img {
+  width: 100%;
+}
+
 .masthead-title {
   margin-top: 0;
   margin-bottom: 0;
@@ -106,12 +111,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 .masthead-title a {
   color: #505050;
+  margin-top: 5px;
+  margin-left: 5px;
 }
 .masthead-title small {
   font-size: 75%;
   font-weight: 400;
   color: #c0c0c0;
   letter-spacing: 0;
+}
+
+.masthead-title img {
+  width: 40px;
+  float: left;
+  margin-top: -5px;
 }
 
 @media (max-width: 48em) {
@@ -167,10 +180,15 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 .sidebar-item {
-  padding: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .sidebar-item p:last-child {
-  margin-bottom: 0;
+  padding-bottom: 1rem;
+}
+
+.sidebar-item img {
+  width: 100%;
 }
 
 /* Sidebar nav */
@@ -495,12 +513,12 @@ a.pagination-item:hover {
 .theme-base-0d .sidebar,
 .theme-base-0d .sidebar-toggle:active,
 .theme-base-0d #sidebar-checkbox:checked ~ .sidebar-toggle {
-  background-color: #6a9fb5;
+  background-color: #7EB6FF;
 }
 .theme-base-0d .container a,
 .theme-base-0d .sidebar-toggle,
 .theme-base-0d .related-posts li a:hover {
-  color: #6a9fb5;
+  color: #7EB6FF;
 }
 
 /* Magenta */
