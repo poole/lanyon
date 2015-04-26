@@ -18,5 +18,8 @@ author:
   url:               https://twitter.com/mdo
   email:             markdotto@gmail.com
 
+# Optional features
+#google_analytics_id: UA-XXXX-Y
+
 # Custom vars
 version:             1.0.0
