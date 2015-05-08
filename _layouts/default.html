@@ -1,31 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>L'alba di un tramonto</title>
-<link rel="stylesheet" href="https://stackedit.io/res-min/themes/base.css" />
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-<style>
-  p, span, em, ul, li {
-    font-size: 20px !important;
-    text-align: left !important;
-  }
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Novels by Alessio Periloso</title>
 
-  h1, h1 a {
-    font-size: 54px !important;
-    color: black;
-  }
-
-  h2 {
-    font-size: 45px !important;
-    color: black;
-  }
-</style>
-</head>
-<body>
-  <div class="container">
-    {{ content }}
-  </div>
-</body>
+    <link rel="stylesheet" href="/lanyon/css/styles.css">
+    <link rel="stylesheet" href="/lanyon/css/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+<!--[if !(lt IE 8)]><!-->
+   <script type="text/javascript">
+     (function(){var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src=document.location.protocol+"//d1agz031tafz8n.cloudfront.net/thedaywefightback.js/widget.min.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()
+   </script>
+<!--<![endif]-->
+    <div class="wrapper">
+      <header>
+        <h1><a href="/lanyon/">Alessio Periloso Novels</a></h1>
+        <p>Una collezione di racconti brevi, scritta da Alessio Periloso.</p>
+        <sidebar>
+          {% for post in site.posts %}
+            <p><small><strong>{{ post.date | date: "%B %e, %Y" }}</strong></small></p>
+            <h3><a href="/lanyon/{{ post.url }}">{{ post.title }}</a></h3>
+          {% endfor %}
+        </sidebar>
+      </header>
+      <section> {{content}} </section>
+      <footer>
+        <p><small>Hosted on GitHub Pages &mdash; Theme inspiration: <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+  </body>
 </html>
