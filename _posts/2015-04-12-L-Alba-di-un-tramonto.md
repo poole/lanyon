@@ -3,11 +3,6 @@ layout: post
 title: L'alba di un tramonto
 ---
 
----
-L’alba di un tramonto
-=====================
----
-
 Giorno. Notte. Quando si è insonni, che senso ha?
 Barricato in una cantina senza finestre illuminata unicamente da una fredda luce artificiale, quel che accade fuori, nel mondo reale, sembra essere una vecchia fotografia sbiadita abbandonata in strada per sbaglio.
 
