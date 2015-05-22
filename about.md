@@ -4,27 +4,21 @@ title: About
 ---
 
 <p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
+I just graduated with a PhD in Statistics at the University of Chicago! I've also become involved with the Chicago Data Science community through the <a href="http://dssg.io" target="_blank">Data Science for Social Good</a>.
 </p>
 
-In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+I've accepted a position as a postdoctoral researcher at the University of Michigan in the Statistical Reinforcement Lab!  I will be moving to Ann Arbor in July and beginning to work on statistical and machine learning methods in connection with mHealth.
 
-There are currently two themes built on Poole:
+I graduated from the University of Chicago with a BS with Honors in Mathematics, BS Economics, and BA Statistics (2009).  I'm from the great state of New Jersey.
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
+I have several collaborators, with whom I work closely:
 
-Learn more and contribute on [GitHub](https://github.com/poole).
+* [Peter McCullagh](http://galton.uchicago.edu/~pmcc/)
+* [Harry Crane](http://stat.rutgers.edu/home/hcrane/)
+* [Risi Kondor](http://people.cs.uchicago.edu/~risi/)
+* [Susan Murphy](http://dept.stat.lsa.umich.edu/~samurphy/)
+* [Ambuj Tewari](http://dept.stat.lsa.umich.edu/~tewaria/)
 
-## Setup
-
-Some fun facts about the setup of this project include:
-
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
+Interested in similar topics? Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/plusthemonk.github.io/issues/new) or email me(<dempsey.walter@gmail.com>).
 
 Thanks for reading!
