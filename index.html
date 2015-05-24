@@ -1,9 +1,56 @@
 ---
 layout: default
-title: Home
+title: About Me
 ---
 
-<div class="posts">
+My name is Walter Dempsey; I work in the areas of applied and theoretical statistics, and more recently on various machine learning and data science problems.
+
+<section>
+<h1> Contact </h1>
+
+<p> Email: wdempsey@galton.uchicago.edu
+
+<ul style="list-style-type:none">
+  <li> Mailing address:</li>
+  <li> University of Chicago</li>
+  <li> Department of Statistics</li>
+  <li> Eckhart Hall room 108</li>
+  <li> 5734 S University Ave</li>
+  <li> Chicago IL 60637</li>
+</ul>
+</p>
+</section>
+
+<section>
+  <h1> Research Interests </h1>
+  My research interests are in developing and analysing methods for
+  joint modeling of longitudinal and time-to-event data.  I have also
+  worked on mathematical statistics problems related to notions
+  of exchangeability for survival processes as well as network
+  modeling.  More recently, I have begun work on just-in-time
+  adaptive interventions with applications in mHealth.
+</section>
+
+<section>
+  <h1> Bio </h1>
+
+  I am a postdoctoral researcher in the
+  <a href= "http://www.lsa.umich.edu/stats"> Department of Statistics
+    at the University of Michigan </a>,
+  starting August 2015.  Before my postdoc, I received my
+  PhD in Statistics at the University of Chicago in 2015,
+  advised by <a href="http://galton.uchicago.edu/~pmcc">
+    Peter McCullagh </a>.
+  Prior to graduate school, I worked in the Financial Strategy
+  Group in the Investment Banking Division at Citi.
+  
+    
+
+</section>
+
+
+
+<!-- <div class="posts">
   {% for post in paginator.posts %}
   <div class="post">
     <h1 class="post-title">
@@ -14,10 +61,10 @@ title: Home
 
     <span class="post-date">{{ post.date | date_to_string }}</span>
 
-    {{ post.content }}
+    {{ post.excerpt }}
   </div>
   {% endfor %}
-</div>
+</div> -->
 
 <div class="pagination">
   {% if paginator.next_page %}
