@@ -1,30 +1,12 @@
 ---
 layout: page
-title: About
+title: About Me
 ---
 
-<p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
-</p>
+Hello all. I'm Joyce Lewis, though some of you may know me better as doublejay9. I spent my childhood moving around every 3 years, but now my family and I have settled in Northern Virginia.
 
-In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+I was that quiet kid who was perfectly content playing with stuffed animals by herself, creating stories for hours. When I was 12, in a moment of severe boredom, I started writing these stories down. I haven't stopped. My friends in high school introduced to fantasy and science fiction, and I quickly became addicted. Today, these are the two genres I primarily write in.
 
-There are currently two themes built on Poole:
+Aside from writing, I enjoy music, video games, astronomy, technology, ancient history, a good cup of hot chocolate, and anything else nerdy. Yeah. I'm one of those curious types who is never without something to entertain herself with.
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
-
-Learn more and contribute on [GitHub](https://github.com/poole).
-
-## Setup
-
-Some fun facts about the setup of this project include:
-
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
-
-Thanks for reading!
+Thanks for stopping by the blog. I hope you find something interesting or useful here. Come back for more -- I've got a lot of cool plans. Until then, see you around the internet.
