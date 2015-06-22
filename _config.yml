@@ -6,7 +6,7 @@ relative_permalinks: true
 
 # Setup
 title:               'Apprentice Wordsmith'
-tagline:             'A Writer's Blog'
+tagline:             "A Writer's Blog"
 description:         'You found the menu. Excellent. Here are some helpful and interesting links to check out.'
 url:                 http://lanyon.getpoole.com
 baseurl:             ''
