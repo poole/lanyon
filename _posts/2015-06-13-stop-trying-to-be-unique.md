@@ -28,5 +28,3 @@ The same applies for writing words. Don't be afraid to steal what you've seen wo
 Don't reinvent the story if you don't have to. Focus on putting your spin on the project. As all of our moms would say, you are a unique and talented person. Everything you make will have the mark of you, which no one else in the entire world can replicate.
 
 *(This daily dose of warm fuzzies was brought to you by Grandma's Chicken Soup. It's cluckin' good!)*
-
-Have you ever felt pressured to create something utterly different and one-of-a-kind? What did you do to bring yourself back to productive flow? For the experienced amongst us, what is some advice you wish you had been given when you were starting out? Share your thoughts and place your bets on the fan fic showdown in the comments below.
