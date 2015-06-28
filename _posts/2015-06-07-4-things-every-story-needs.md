@@ -25,5 +25,3 @@ As writers, we focus our attention and efforts on what makes our stories good, a
 You can tell a story. You already have. You've told hundreds if not thousands since childhood if you stop and think about it. Honestly, it's not that hard. Telling a good story is harder -- much harder -- but not impossible.
 
 So if you've received a lot of negative feedback or you're experiencing writer's block, take a moment and check your story's foundation. Does it have a beginning, a middle, and an end? Why are you telling this story? What message does it convey? If you can answer these questions, then don't worry. You're on the right track. You don't have to demolish the whole building. Try ripping out the carpet or painting the walls a different color.
-
-What do you think? Agree? Disagree? Share your thoughts in the comments below.
