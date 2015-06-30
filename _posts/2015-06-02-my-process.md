@@ -24,3 +24,5 @@ When I started this experiment with my writing workflow, I stopped making outlin
 now reads more like this:
 
 > The three heroes get up bright and early to begin their hike up the mountain. Along the way, they trade bits of stories about giants. All of them paint the race in a bad light.
+
+Every writer has their own process. What's yours? Are you a planner? Or do you write by the seat of your pants? What do you need before you write that first draft? Let me know in the comments below.
