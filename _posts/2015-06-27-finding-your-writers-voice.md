@@ -16,3 +16,5 @@ The only true way to "develop your voice" and feel more comfortable writing is s
 But I like practical advice best -- something I can do and implement right away. So here is my bit of practical advice. Once you've written something, go back and read it aloud. Do the words sound right? If not, change them. This is how I stopped using the word "frighteningly". It's hard to say. I don't ever use the word in conversation. Why should I use it in my writing?
 
 Another tip is run your piece through text-to-speech software. I use Narrator which is built into Windows. This will catch errors and awkward spots that you skimmed over while reading aloud. Plus, it can be either really funny or really annoying to hear the computer mispronounce your characters' names.
+
+For the beginners, what are difficulties and challenges you've been facing in your writing? For the most experienced, how do you practice? Are there any specific techniques or prompts that you use? Let me know in the comments.
