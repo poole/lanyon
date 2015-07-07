@@ -6,7 +6,7 @@ relative_permalinks: true
 
 # Setup
 title:               Recent thoughts.
-tagline:             'A blog'
+tagline:             'A blog.'
 description:         '"The time has come," the Walrus said, "To talk of many things."'
 url:                 #http://lanyon.getpoole.com
 baseurl:             ''
