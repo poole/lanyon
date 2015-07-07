@@ -327,6 +327,7 @@ a.sidebar-nav-item:focus {
 .post-title {
   margin-top: 0;
   font-size: 30px;
+  font-weight: 700;
 }
 
 /* Meta data line below post title */
