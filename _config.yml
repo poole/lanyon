@@ -5,8 +5,8 @@ permalink:           pretty
 relative_permalinks: false
 
 # Setup
-title:               Recent thoughts.
-tagline:             'A blog.'
+title:               Recent thoughts
+tagline:             'A blog'
 description:         '"The time has come," the Walrus said, "To talk of many things."'
 url:                 #http://lanyon.getpoole.com
 baseurl:             ''
