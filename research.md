@@ -4,7 +4,7 @@ title: Research
 ---
 
 
--  W. Dempsey, H. Crane: Atypical scaling behavior persists in real world interaction networks
+<!-- -  W. Dempsey, H. Crane: Atypical scaling behavior persists in real world interaction networks -->
 -  W. Dempsey, H. Crane: A Framework for Statistical Network Modeling
 -  W. Dempsey, P. McCullagh: [The Pilgrim's Process](http://arxiv.org/abs/1412.1490)
 -  W. Dempsey, P. McCullagh: [Markov Survival Processes and Proportional Hazards Regression](http://arxiv.org/abs/1411.5715). Code available [here](https://github.com/PlusTheMonk/markov_survival)
