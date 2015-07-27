@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Using Real Life: Antagonists
+title: Using Real Life -- Antagonists
 ---
 
 > "There are some people that are like Slinkies. They serve no useful purpose in life, but it gives you a warm feeling when you push them down the stairs." -- Unknown
