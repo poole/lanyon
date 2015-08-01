@@ -537,6 +537,18 @@ a.pagination-item:hover {
   color: #8f5536;
 }
 
+/* Custom CV color (32,127,184) #207fb8 */
+.theme-base-cv .sidebar,
+.theme-base-cv .sidebar-toggle:active,
+.theme-base-cv #sidebar-checkbox:checked ~ .sidebar-toggle {
+  background-color: #207fb8;
+}
+.theme-base-cv .container a,
+.theme-base-cv .sidebar-toggle,
+.theme-base-cv .related-posts li a:hover {
+  color: #207fb8;
+}
+
 
 /*
  * Overlay sidebar
