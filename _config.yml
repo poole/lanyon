@@ -7,7 +7,7 @@ relative_permalinks: true
 # Setup
 title:               dtsbourg
 tagline:             'Dylan Bourgeois'
-description:         'I'm a microengineering student @EPFL. Find me on Twitter <a href="https://twitter.com/dtsbourg" target="_blank">@dtsbourg</a>.'
+description:         'I\'m a microengineering student @EPFL. Find me on Twitter <a href="https://twitter.com/dtsbourg" target="_blank">@dtsbourg</a>.'
 url:                 http://dtsbourg.github.io
 baseurl:             ''
 paginate:            5
