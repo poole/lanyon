@@ -17,7 +17,10 @@ author:
   name:              Dylan Bourgeois
   url:               https://twitter.com/dtsbourg
   email:             dtsbourg@gmail.com
-  locale:            Lausanne, Switzerland   
+  locale:            Lausanne, Switzerland
+
+# Analytics
+google_analytics:    UA-65856095-1 
 
 # Custom vars
 version:             1.0.0
