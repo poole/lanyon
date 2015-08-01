@@ -9,7 +9,7 @@ title:               dtsbourg
 tagline:             'Dylan Bourgeois'
 description:         'I am a microengineering student @EPFL. Find me on Twitter <a href="https://twitter.com/dtsbourg" target="_blank">@dtsbourg</a>.'
 url:                 http://dtsbourg.github.io
-baseurl:             ''
+baseurl:             http://dtsbourg.github.io/
 paginate:            5
 
 # About/contact
@@ -20,7 +20,4 @@ author:
   locale:            Lausanne, Switzerland
 
 # Analytics
-google_analytics:    UA-65856095-1 
-
-# Custom vars
-version:             1.0.0
+google_analytics:    UA-65856095-1
