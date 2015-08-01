@@ -5,18 +5,18 @@ permalink:           pretty
 relative_permalinks: true
 
 # Setup
-title:               Lanyon
-tagline:             'A Jekyll theme'
-description:         'A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:                 http://lanyon.getpoole.com
+title:               dtsbourg
+tagline:             'Dylan Bourgeois'
+description:         'I'm a microengineering student @EPFL. Find me on Twitter <a href="https://twitter.com/dtsbourg" target="_blank">@dtsbourg</a>.'
+url:                 http://dtsbourg.github.io
 baseurl:             ''
 paginate:            5
 
 # About/contact
 author:
-  name:              Mark Otto
-  url:               https://twitter.com/mdo
-  email:             markdotto@gmail.com
+  name:              Dylan Bourgeois
+  url:               https://twitter.com/dtsbourg
+  email:             dtsbourg@gmail.com
 
 # Custom vars
 version:             1.0.0
