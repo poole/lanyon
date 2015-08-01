@@ -2,14 +2,13 @@
 
 Personal website experiments.
 
-### Theme Author
-
-**Mark Otto**
-- <https://github.com/mdo>
-- <https://twitter.com/mdo>
-
+=====
 
 ## License
+
+**Theme author : Mark Otto**
+- <https://github.com/mdo>
+- <https://twitter.com/mdo>
 
 Open sourced under the [MIT license](LICENSE.md).
 
