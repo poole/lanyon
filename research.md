@@ -5,6 +5,7 @@ title: Research
 
 
 <!-- -  W. Dempsey, H. Crane: Atypical scaling behavior persists in real world interaction networks -->
+-  W. Dempsey, P. Liao, I. Nahum-Shani, S. Murphy: Micro-randomized trials and the burgeoning field of mobile health
 -  W. Dempsey, H. Crane: A Framework for Statistical Network Modeling
 -  W. Dempsey, P. McCullagh: [The Pilgrim's Process](http://arxiv.org/abs/1412.1490)
 -  W. Dempsey, P. McCullagh: [Weak continuity of predictive distribution for Markov survival processes](http://arxiv.org/abs/1411.5715). Code available [here](https://github.com/PlusTheMonk/markov_survival)
