@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Scrabble Solver (Redux)
+category: programming
+tags: [python, scrabble-solver]
 ---
 
 I realized a few critical issues with how I structured my Scrabble Solver [the last time around](http://yinishi.github.io/2015/05/04/scrabble-solver/). In retrospect, it seems incredibly silly that I overlooked these details, but then again, all problems look obvious in retrospect.

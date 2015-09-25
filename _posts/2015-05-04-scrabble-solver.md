@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Scrabble Solver
+category: programming
+tags: [python, scrabble-solver]
 ---
 
 I was pretty excited to learn about sorting functions in Python recently, and that led me to the idea of creating a Scrabble solver. 

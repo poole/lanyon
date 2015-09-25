@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Secret Santa
+category: programming
+tags: [python, secret-santa]
 ---
 
 Last December, my friend was in charge of setting up a Secret Santa game for his small office. At the time, I was just starting to learn Python. I was working through the lessons on Codecademy, and this presented a great opportunity to try out what I was learning. In the spirit of blogging, I'll share the code here.

@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Learning Git
+category: programming
+tags: [git, github]
 ---
 
 By virtue of GitHub's sheer ubiquity, I've gotten some amount of exposure to Git in the last few months (see: this blog). However, there's only so much learning-by-fumbling that I'm willing to put myself through, and after a certain point, I prefer to know how to do things properly. Enter Udacity's free course on [How to Use Git and GitHub](https://www.udacity.com/course/how-to-use-git-and-github--ud775), which I completed this week. <sup id="a1">[1](#f1)</sup>
