@@ -10,7 +10,7 @@ tagline:             'A blog'
 description:         '"The time has come," the Walrus said, "To talk of many things."'
 url:                 #http://lanyon.getpoole.com
 baseurl:             ''
-paginate:            5
+paginate:            1
 
 # About/contact
 author:
