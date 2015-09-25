@@ -3,7 +3,7 @@ layout: post
 title: Scrabble Solver (Redux)
 ---
 
-I realized a few critical issues with how I structured my Scrabble Solver the last time around. In retrospect, it seems incredibly silly that I overlooked these details, but then again, all problems look obvious in retrospect.
+I realized a few critical issues with how I structured my Scrabble Solver [the last time around](http://yinishi.github.io/2015/05/04/scrabble-solver/). In retrospect, it seems incredibly silly that I overlooked these details, but then again, all problems look obvious in retrospect.
 
 1. When the program was checking words against the Scrabble lexicon, it was doing so against all valid words. Huge problem. Say the user entered the letters “ABCDE”. The program computed all permutations of those letters and checked each one against _every single word_ in the lexicon, even words that did not contain any of the letters A, B, C, D, or E.
 2. In a similar vein, words were being checked against the lexicon without any respect for word length. That is, two-letter permutations were being checked against not only the valid 2-letter words, but all the valid 3- to 15-letter words as well.
