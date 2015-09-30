@@ -5,6 +5,7 @@ title: Research
 
 ### In Preparation / Manuscripts
 
+-  W. Dempsey, P. Liao, A. Boruvka, D. Almirall, S. Murphy: Sample size calculations for stratified micro-randomized trials in mHealth
 -  W. Dempsey, H. Crane: [Atypical scaling behavior persists in real world interaction networks](http://arxiv.org/abs/1509.08184)
 -  W. Dempsey: [Effective Alignment of Health Measurements for Joint Modeling](http://galton.uchicago.edu/~wdempsey/research_papers/effective_timealignment.pdf). Code available [here](https://github.com/PlusTheMonk/jm_censoring)
 
