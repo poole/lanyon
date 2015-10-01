@@ -11,7 +11,7 @@ title: Research
 
 ### Submitted Papers
 
--  W. Dempsey, H. Crane: Community detection for interaction networks
+-  W. Dempsey, H. Crane: [Community detection for interaction networks](http://arxiv.org/abs/1509.09254)
 -  W. Dempsey, P. Liao, I. Nahum-Shani, S. Murphy: Micro-randomized trials and the burgeoning field of mobile health
 -  W. Dempsey, H. Crane: [A Framework for Statistical Network Modeling](http://arxiv.org/abs/1509.08185)
 -  W. Dempsey, P. McCullagh: [The Pilgrim's Process](http://arxiv.org/abs/1412.1490)
