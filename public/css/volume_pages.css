@@ -274,3 +274,7 @@ span.glyphicon.glyphicon-chevron-left {
     background: linear-gradient(to right,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.21) 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#36000000',GradientType=1 ); /* IE6-9 */
 }
+
+.margin-container {
+  right: 100px;
+}

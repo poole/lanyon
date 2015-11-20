@@ -34,6 +34,31 @@ layout: default
             </div>
         </div>
     </div>
+
+    <aside class="margin-container">
+        <ul class="annotation-list">
+        {% for annotation in site.annotations %}
+            {% if annotation.annotated_page == page.tei_id %}
+            <!-- TODO: make this an include ? -->
+            <li class="marginalia-item" data-annotation-id="{{ annotation.annotation_id }}">
+            <div class="text">{{ annotation.content }}</div> <!-- how to get markdown interpreted? -->
+            <!-- if annotation has tags:
+            <div class="annotator-tags">
+                <span class="annotator-tag">tag</span>
+            </div>
+            -->
+            <!-- show annotation author names if configured -->
+            {% if site.show_annotation_author %}
+            <div class="annotation-footer"><span class="annotation-author">{{ annotation.author }}</span></div>
+            {% endif %}
+            </li>
+            {% endif %}
+        {% endfor %}
+
+
+        </ul>
+    </aside>
+
         <div class="text-center">
             <div id="zoom-page"></div>
             <div class="page">
@@ -59,15 +84,6 @@ layout: default
     {% endif %}
 </article>
 
-
-
-
-{% for annotation in site.annotations %}
-    {% if annotation.annotated_page == page.tei_id %}
-    found an annotation!
-        <pre>{{ annotation.content }}</pre>
-    {% endif %}
-{% endfor %}
 
 <script type="text/javascript" charset="utf-8">
    $(document).ready(function () {
