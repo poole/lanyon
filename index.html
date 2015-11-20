@@ -9,9 +9,10 @@ nav_order: 1
 <p>{{ site.volume_pages|size }} pages, {{ site.annotations|size }} annotations.</p>
 
 
-<p><a href="/introduction/">Read the introduction</a></p>
+<!-- todo: use page objects for this instead of hard-coding urls -->
+<p><a href="{{ site.base_url }}/introduction/">Read the introduction</a></p>
 
-<p><a href="/pages/">Browse the pages</a></p>
+<p><a href="{{ site.base_url }}/pages/">Browse the pages</a></p>
 
 
 <!-- todo: publication informatiom from header,
