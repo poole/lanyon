@@ -30,11 +30,11 @@ readux_url: 'http://readux.library.emory.edu/books/emory:7sr72/'
 readux_pdf_url: 'http://readux.library.emory.edu/books/emory:7sr72/pdf/#page=2'
 
 collections:
+    annotations:
+        output: true
     volume_pages:
         output: true
         permalink: /pages/:path/
-    annotations:
-        output: false
 
 defaults:
   - scope:
