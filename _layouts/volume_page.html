@@ -2,10 +2,65 @@
 layout: default
 ---
 
-page + annotations
-<h1>{{ page.title }}</h1>
+<article class="carousel page">
+    <h1>{{ page.title }}</h1>
+    <div class="carousel-inner">
 
-{{ content }}
+        <div class="container in-page-controls">
+            <div id="view-toggle" class="col-sm-4 pull-right">
+                <div class="btn-group pull-right">
+                    <a id="enable-zoom" href="#" class="btn" alt="Deep Zoom Mode" title="Deep Zoom Mode"><span class="glyphicon glyphicon-fullscreen"></span></a>
+
+                    <a id="covers" href="#" class="btn active" alt="Single Page" title="Single Page"><span class="glyphicon glyphicon-file"></span></a>
+
+                    <a id="list" alt="Browse pages" title="Browse pages" href="/pages/" class="btn"><span class="glyphicon glyphicon-th"></span></a>
+                </div>
+
+                <div id="deepzoom-controls" class="hidden">
+                    <div class="btn-group">
+                        <a id="dz-zoom-in" alt="Zoom In" title="Zoom In" href="#" class="btn"><span class="glyphicon glyphicon-plus"></span></a>
+
+                        <a id="dz-zoom-out" alt="Zoom Out" title="Zoom Out" href="#" class="btn"><span class="glyphicon glyphicon-minus"></span></a>
+
+                        <a id="dz-home" alt="Back to Start Position" title="Back to Start Position" href="#" class="btn"><span class="glyphicon glyphicon-home"></span></a>
+
+                        <a id="dz-fs" alt="Fullscreen Mode" title="Fullscreen Mode" href="#" class="btn"><span class="glyphicon glyphicon-fullscreen"></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-sm-4 col-sm-offset-4 text-center">
+                <p class="text-muted">p. {{ page.page_order }}</p>
+            </div>
+        </div>
+    </div>
+        <div class="text-center">
+            <div id="zoom-page"></div>
+            <div class="page">
+                <div class="content">
+                    <section class="inner">
+                      <img class="page-image" src="{{ page.images.page }}"/>
+                      {% comment %}{{ content }}{% endcomment %}
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% if page.previous %}
+    <a class="left carousel-control" href="{{ page.previous.url }}" role="button" data-slide="prev" title="Prev: Page {{ page.previous.page_order }}">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    {% endif %}
+    {% if page.next %}
+    <a class="right carousel-control" href="{{ page.next.url }}" role="button" data-slide="next" title="Next: Page {{ page.next.page_order }}">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+    {% endif %}
+</article>
+
+
+
 
 {% for annotation in site.annotations %}
     {% if annotation.annotated_page == page.tei_id %}
@@ -14,9 +69,25 @@ page + annotations
     {% endif %}
 {% endfor %}
 
-<a href="{{ page.previous.url }}">previous</a>
+<script type="text/javascript" charset="utf-8">
+   $(document).ready(function () {
+      // set up seadragon configuration (not loaded unless triggered by user)
+      set_seadragon_opts({
+          id: "zoom-page",
+          // prefixUrl: "",
+          tileSources: "{{ page.images.json }}",
+          toolbar: 'deepzoom-controls',
+          showNavigator: true,
+          navigatorPosition: 'TOP_LEFT',
+          zoomInButton: 'dz-zoom-in',
+          zoomOutButton: 'dz-zoom-out',
+          homeButton: 'dz-home',
+          fullPageButton: 'dz-fs'
+      });
 
-<a href="{{ page.next.url }}">next</a>
+  });
+</script>
+
 
 
 <!-- todo: readux basic layout, page image, deep zoom, next/prev,
