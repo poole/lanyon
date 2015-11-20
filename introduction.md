@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Introduction
+nav_order: 2
 ---
 
 <p class="message">

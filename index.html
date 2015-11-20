@@ -1,7 +1,9 @@
 ---
 layout: default
 title: Home
+nav_order: 1
 ---
+<div class="container">
 <img src="{{ site.homepage_image }}"/>
 
 <p>{{ site.volume_pages|size }} pages, {{ site.annotations|size }} annotations.</p>
@@ -14,3 +16,10 @@ title: Home
 
 <!-- todo: publication informatiom from header,
  link to readux edition and readux pdf using links in the tei -->
+
+{% if site.readux_url and site.readux_pdf_url %}
+ <p>View the <a href="{{ site.readux_url }}">digital edition</a>
+    or download the <a href="{{ site.readux_pdf_url }}">PDF</a>
+    on <a href="http://readux.library.emory.edu/">Readux</a>.</p>
+{% endif %}
+</div>
