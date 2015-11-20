@@ -1,0 +1,18 @@
+---
+layout: page
+title: 'Browse Pages'
+permalink: /pages/
+---
+
+
+<p>basic page thumbnail browse</p>
+<hr/>
+
+{% for page in site.volume_pages %}
+<div style="float:left">
+<a href="{{ page.url }}">{{ page.title }}
+<img src="{{ page.small-thumbnail }}"/>
+</a>
+</div>
+{% endfor %}
+

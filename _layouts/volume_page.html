@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+page + annotations
+<h1>{{ page.title }}</h1>
+
+{{ content }}
+
+{% for annotation in site.annotations %}
+    {% if annotation.annotated_page == page.tei_id %}
+    found an annotation!
+        <pre>{{ annotation.content }}</pre>
+    {% endif %}
+{% endfor %}
+
+<a href="{{ page.previous.url }}">previous</a>
+
+<a href="{{ page.next.url }}">next</a>
+
+
+<!-- todo: readux basic layout, page image, deep zoom, next/prev,
+    annotation in margin -->
