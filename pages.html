@@ -2,17 +2,29 @@
 layout: page
 title: 'Browse Pages'
 permalink: /pages/
+nav_order: 3
 ---
 
 
 <p>basic page thumbnail browse</p>
+
+<p>{{ site.volume_pages|size }} pages, {{ site.annotations|size }} annotations.</p>
 <hr/>
 
 {% for page in site.volume_pages %}
-<div style="float:left">
+<div style="float:left"> <!-- preliminary display -->
 <a href="{{ page.url }}">{{ page.title }}
-<img src="{{ page.small-thumbnail }}"/>
+<img src="{{ page.images.thumbnail }}"/>
 </a>
+
+{% assign count = page.annotation_count %}
+{% if count != 0 %}
+<p class="comment-count" title="{{ count }} annotation{{ count|pluralize }}">
+    {{ count }}
+</p>
+{% endif %}
 </div>
 {% endfor %}
+
+
 
