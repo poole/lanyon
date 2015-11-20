@@ -24,6 +24,11 @@ version:             1.0.0
 
 
 # readux export specifics
+show_annotation_author: true
+
+readux_url: 'http://readux.library.emory.edu/books/emory:7sr72/'
+readux_pdf_url: 'http://readux.library.emory.edu/books/emory:7sr72/pdf/#page=2'
+
 collections:
     volume_pages:
         output: true
