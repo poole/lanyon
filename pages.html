@@ -1,7 +1,6 @@
 ---
 layout: page
 title: 'Browse Pages'
-permalink: /pages/
 nav_order: 3
 ---
 
@@ -13,7 +12,7 @@ nav_order: 3
 
 {% for page in site.volume_pages %}
 <div style="float:left"> <!-- preliminary display -->
-<a href="{{ page.url }}">{{ page.title }}
+<a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}
 <img src="{{ page.images.thumbnail }}"/>
 </a>
 
