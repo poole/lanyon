@@ -8,6 +8,13 @@ nav_order: 1
 
 <p>{{ site.volume_pages|size }} pages, {{ site.annotations|size }} annotations.</p>
 
+<!-- original publication information -->
+{% if site.publication_info %}
+<p class="text-muted">
+  <em>{{ site.publication_info.title }}</em>.
+  {{ site.publication_info.author}}, {{ site.publication_info.date }}.
+</p>
+{% endif %}
 
 <!-- todo: use page objects for this instead of hard-coding urls -->
 <p><a href="{{ site.baseurl }}/introduction/">Read the introduction</a></p>
@@ -23,4 +30,6 @@ nav_order: 1
     or download the <a href="{{ site.readux_pdf_url }}">PDF</a>
     on <a href="http://readux.library.emory.edu/">Readux</a>.</p>
 {% endif %}
+
+
 </div>
