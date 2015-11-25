@@ -240,9 +240,18 @@ $(document).ready(function () {
 
      // If the page has annotations, make sure they are visible.
     // Put the first annotation at the top of the page
-    // NOTE: could also set it to match corresponding first annotation...
+
     if ($('.marginalia-item').length) {
+        // TODO: marginalia items are NOT yet sorted by display order
+        // on the page.  Where should this happen?
         marginalia.showItem($('.page'), $('.marginalia-item').first());
+
+        // NOTE: could also set it to match corresponding first annotation...
+        // (but this isn't quite right)
+        // var $annotation_highlight =  $('.annotator-hl').first();
+        // annotation_id = $annotation_highlight.data('annotation-id');
+        // $marginalia_item = $('.marginalia-item[data-annotation-id=' + annotation_id + ']' );
+        // marginalia.showItem($annotation_highlight, $marginalia_item);
     }
 
      // Initalize on click.marginalia event for annotation highlights
