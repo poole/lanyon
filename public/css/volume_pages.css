@@ -105,6 +105,7 @@
     position: relative;
     margin: auto;
     display: inline-block;
+    min-height:100px;
  }
 .ocr-line {
     display: block;
@@ -117,7 +118,7 @@
     cursor: text;
 
     /* make text transparent */
-    color: #000;    /* Fallback for older browsers */
+    color: #000;     /* Fallback for older browsers */
     color: rgba(0, 0, 0, 0.0);
 }
 .ocr-zone {
@@ -144,10 +145,6 @@
     -webkit-user-select: none;
     -o-user-select: none;
  }
-
-.page .content{
-  min-height:100px;
-}
 
 .page .content:after {
   content: '';
@@ -278,3 +275,6 @@ span.glyphicon.glyphicon-chevron-left {
 .margin-container {
   right: 100px;
 }
+
+
+
