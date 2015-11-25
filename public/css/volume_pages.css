@@ -276,5 +276,13 @@ span.glyphicon.glyphicon-chevron-left {
   right: 100px;
 }
 
+.image-annotation-highlight {
+  display: block;
+  position: absolute;
+}
 
 
+.annotator-hl {
+    background: #FFFF0A;
+    background: rgba(255,255,10,.3);
+}

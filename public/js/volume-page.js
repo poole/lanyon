@@ -122,6 +122,103 @@ String.prototype.startswith = function(str) {
 };
 
 
+/* highlight/marginalia code adapted from annotator-marginalia code */
+
+
+// Easing Function for scroll
+// from jQuery Easing Plugin (version 1.3)
+// http://gsgd.co.uk/sandbox/jquery/easing/
+  jQuery.extend( jQuery.easing,{
+    easeInOutExpo: function (x, t, b, c, d) {
+      if (t==0) return b;
+      if (t==d) return b+c;
+      if ((t/=d/2) < 1) return c/2 * Math.pow(2, 10 * (t - 1)) + b;
+      return c/2 * (-Math.pow(2, -10 * --t) + 2) + b;
+    }
+  });
+
+
+var marginalia = {
+
+    // Custom event for when an annotation is selected
+    // Highlight the marginalia item associated with the annotation
+    annotationSelected: function(event) {
+        event.stopPropagation();
+
+        var $annotation_highlight = $(event.target),
+            annotation_id = $annotation_highlight.data('annotation-id');
+
+        marginalia.onSelected(annotation_id);
+    },
+
+    // On Marginalia item select event
+    // Highlight the annotation highlight associated with the item
+    itemSelected: function(event){
+        event.stopPropagation();
+
+        var $marginalia_item = $(event.target).parents('.marginalia-item'),
+            annotation_id = $marginalia_item.data('annotation-id');
+        marginalia.onSelected(annotation_id);
+    },
+
+    onSelected: function(annotation_id){
+        var id = annotation_id,
+            $annotation = $('.annotator-hl'+'[data-annotation-id='+id+']'),
+            $item = $('.marginalia-item[data-annotation-id=' + id + ']' );
+
+        // Return false if the id is undefined
+        if(id === undefined){
+          return false;
+        }
+
+        // Return false if the item is already selected to prevent
+        // jumping to the top when highlighting text.
+        if ($item.hasClass("marginalia-item-selected")){
+            return false;
+        }
+
+        // Highlight selected parts
+        marginalia.applyHighlights($annotation, $item);
+
+        // Scroll to the position of the item
+        marginalia.showItem($annotation, $item);
+    },
+
+    showItem: function(annotation, item) {
+        // Scroll to the position of the item
+        $margin_container = $('.margin-container');
+          var cTop = $margin_container.offset().top,
+              cScrollTop = $margin_container.scrollTop(),
+              top = item.position().top,
+              top2 = annotation.parents('.inner>div');
+
+              // If the annotation is wrapped in a child div,
+              // we want to get the postion of that parent element.
+              if( top2.length>0 ){
+                top2 = top2.position().top;
+              }
+              // Otherwise, get the top position of the element.
+              else{
+                top2 = annotation.position().top;
+              }
+
+          $margin_container.stop().animate({'scrollTop':top-top2+30},500,'easeInOutExpo');
+    },
+
+    clearHighlights: function(){
+        $('.marginalia-item-selected').removeClass('marginalia-item-selected');
+        $('.marginalia-annotation-selected').removeClass('marginalia-annotation-selected');
+      },
+
+    applyHighlights: function($annotation, $item){
+        marginalia.clearHighlights();
+
+        $annotation.addClass('marginalia-annotation-selected');
+        $item.addClass('marginalia-item-selected');
+    },
+
+};
+
 $(document).ready(function () {
       var resizeTimer; // Set resizeTimer to empty so it resets on page load
       function resizeFunction() {
@@ -140,5 +237,22 @@ $(document).ready(function () {
      $(window).load(function() {  // wait until load completes, so widths will be calculated
          resizeFunction();
      });
+
+     // If the page has annotations, make sure they are visible.
+    // Put the first annotation at the top of the page
+    // NOTE: could also set it to match corresponding first annotation...
+    if ($('.marginalia-item').length) {
+        marginalia.showItem($('.page'), $('.marginalia-item').first());
+    }
+
+     // Initalize on click.marginalia event for annotation highlights
+    $('.annotator-hl').on('click.marginalia', function(event){
+      marginalia.annotationSelected(event);
+    });
+
+    // Initalize on click.marginalia event for Marginalia items
+    $('.marginalia-item').find('.text').on('click.marginalia',function(event){
+      marginalia.itemSelected(event);
+    });
 
 });
