@@ -29,6 +29,12 @@ show_annotation_author: true
 readux_url: 'http://readux.library.emory.edu/books/emory:7sr72/'
 readux_pdf_url: 'http://readux.library.emory.edu/books/emory:7sr72/pdf/#page=2'
 
+publication_info:
+  title: '"Ladies first!"  a novel'
+  author: Verdenal, Dominique François, Mrs.
+  date: '1896'
+
+
 collections:
     annotations:
         output: true
