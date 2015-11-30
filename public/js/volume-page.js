@@ -181,7 +181,9 @@ var marginalia = {
         marginalia.applyHighlights($annotation, $item);
 
         // Scroll to the position of the item
-        marginalia.showItem($annotation, $item);
+        // (position relative to first annotation highlight, if there
+        // are multiple lines included.)
+        marginalia.showItem($annotation.first(), $item);
     },
 
     showItem: function(annotation, item) {
