@@ -103,6 +103,7 @@
  }
 .page .content {
     position: relative;
+    padding-right: 250px;  /* give space for marginalia */
     margin: auto;
     display: inline-block;
     min-height:100px;
@@ -273,7 +274,7 @@ span.glyphicon.glyphicon-chevron-left {
 }
 
 .margin-container {
-  right: 100px;
+  margin-right: 45px;  /* clear (somewhat) from the next page link */
 }
 
 .image-annotation-highlight {
