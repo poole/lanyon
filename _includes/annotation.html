@@ -1,0 +1,13 @@
+<div class="text">{{ annotation.content }}</div>
+<!-- show annotation author names if configured -->
+{% if site.show_annotation_author %}
+<div class="annotation-footer"><span class="annotation-author">{{ annotation.author }}</span></div>
+{% endif %}
+{% if annotation.tags.size != 0 %}
+<div class="annotator-tags">
+    {% for tag in annotation.tags %}
+    <a class="annotator-tag"
+        href="{{ site.baseurl }}/tags/{{ tag }}/">{{ site.data.tags[tag].name }}</a>
+    {% endfor %}
+</div>
+{% endif %}

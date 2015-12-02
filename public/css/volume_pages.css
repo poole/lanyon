@@ -287,3 +287,52 @@ span.glyphicon.glyphicon-chevron-left {
     background: #FFFF0A;
     background: rgba(255,255,10,.3);
 }
+
+/* Annotator Tags - styles from annotator.js and readux
+-------------------------------------------------------------------- */
+.annotator-tags {
+  margin-bottom: -2px;
+  position: relative;
+  padding: 0.5em 1.5em;
+  color: #B9B9BA;
+  border-top: 1px solid #e4e4e4;
+  cursor: text;
+}
+.annotator-tags::before {
+  content: "\f02c";
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+  opacity: 0.9;
+  font-family: 'FontAwesome';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.annotator-tags .annotator-tag {
+  display: inline-block;
+  padding: 0 8px;
+  margin-bottom: 2px;
+  margin-left: 2px;
+  line-height: 1.6;
+  font-weight: normal;
+  font-size: 90%;
+  background-color: #e6e6e6;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px
+}
+.annotator-tags .annotator-tag:first-child {
+  margin-left: 0;
+}
+
+.annotator-tags a {
+  color: #B9B9BA;
+}
+.annotator-tags a:hover {
+  text-decoration: none;
+}
+

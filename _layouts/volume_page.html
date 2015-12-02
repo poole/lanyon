@@ -39,22 +39,11 @@ layout: default
         <ul class="annotation-list">
         {% for annotation in site.annotations %}
             {% if annotation.annotated_page == page.tei_id %}
-            <!-- TODO: make this an include ? -->
-            <li class="marginalia-item" data-annotation-id="{{ annotation.annotation_id }}">
-            <div class="text">{{ annotation.content }}</div>
-            <!-- if annotation has tags:
-            <div class="annotator-tags">
-                <span class="annotator-tag">tag</span>
-            </div>
-            -->
-            <!-- show annotation author names if configured -->
-            {% if site.show_annotation_author %}
-            <div class="annotation-footer"><span class="annotation-author">{{ annotation.author }}</span></div>
-            {% endif %}
-            </li>
+                <li class="marginalia-item" data-annotation-id="{{ annotation.annotation_id }}">
+                {% include annotation.html %}
+                </li>
             {% endif %}
         {% endfor %}
-
 
         </ul>
     </aside>

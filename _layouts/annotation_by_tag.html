@@ -1,0 +1,37 @@
+---
+layout: default
+---
+<div class="container">
+{% comment %}Use name from data if we can, but use slug as fallback for display {% endcomment %}
+{% if site.data.tags contains page.tag %}
+    {% assign tag_name = site.data.tags[page.tag].name %}
+{% endif %}
+
+<h1>Annotations tagged with {{ tag_name }}</h1>
+
+    {% if site.data.tags[page.tag] %}
+    {% comment %} FIXME: annotations currently not sorted ... {% endcomment %}
+        {% for annotation in site.annotations %}
+        <div class="media">
+            {% for page in site.volume_pages %}
+                {% if page.tei_id == annotation.annotated_page %}
+                <div class="media-left">
+                    <a href="{{ site.baseurl }}{{ page.url }}">
+                         <img class="media-object img-thumbnail"
+                            src="{{ page.images.small-thumbnail }}"
+                            alt="{{ page.title }}" title="{{ page.title }}"/>
+                     </a>
+                </div>
+                {% endif %}
+             {% endfor %}
+             <div class="media-body" class="width:100%">
+            {% include annotation.html %}
+            </div>
+        </div>
+        {% endfor %}
+    {% else %}
+    <p>No annotations with this tag.</p>
+    {% endif %}
+
+
+</div>
