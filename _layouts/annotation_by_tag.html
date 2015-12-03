@@ -15,6 +15,7 @@ layout: default
     {% if site.data.tags[page.tag] %}
     {% comment %} FIXME: annotations currently not sorted ... {% endcomment %}
         {% for annotation in site.annotations %}
+        {% if annotation.tags contains page.tag %}
         <div class="media">
             {% for page in site.volume_pages %}
                 {% if page.tei_id == annotation.annotated_page %}
@@ -31,6 +32,7 @@ layout: default
             {% include annotation.html %}
             </div>
         </div>
+        {% endif %}
         {% endfor %}
     {% else %}
     <p>No annotations with this tag.</p>
