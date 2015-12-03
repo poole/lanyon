@@ -4,25 +4,49 @@ title: 'Browse Pages'
 nav_order: 3
 ---
 {% include base.html %}
-<p>basic page thumbnail browse</p>
 
 <p>{{ site.volume_pages|size }} pages, {{ site.annotations|size }} annotations.</p>
 <hr/>
+<noscript>
+<style type="text/css">
+  img.lazy-load {
+    display: none;
+  }
+</style>
+</noscript>
 
+
+<div class="wide-container">
+
+<div class="page-thumbnails js-masonry"
+  data-masonry-options='{ "itemSelector": ".page-thumbnail" }'>
 {% for page in site.volume_pages %}
-<div style="float:left"> <!-- preliminary display -->
-<a href="{{ baseurl }}{{ page.url }}">{{ page.title }}
-<img src="{{ page.images.thumbnail }}"/>
-</a>
-
-{% assign count = page.annotation_count %}
-{% if count != 0 %}
-<p class="comment-count" title="{{ count }} annotation{{ count|pluralize }}">
-    {{ count }}
-</p>
-{% endif %}
+<div class="page-thumbnail">
+    <a href="{{ baseurl }}{{ page.url }}" title="{{ page.title }}">
+        <p class="page-number">p. {{ page.page_order}}</p>
+        <img class="lazy-load" data-original="{{ page.images.thumbnail }}"/>
+        <noscript>
+            <img src="{{ page.images.thumbnail }}"/>
+        </noscript>
+        {% assign count = page.annotation_count %}
+        {% if count != 0 %}
+        <p class="comment-count" title="{{ count }} annotation{{ count|pluralize }}">
+            {{ count }}
+        </p>
+        {% endif %}
+    </a>
 </div>
 {% endfor %}
+</div>
 
+</div>
+
+
+
+<script>
+$(function() {
+    $("img.lazy-load").lazyload();
+});
+</script>
 
 
