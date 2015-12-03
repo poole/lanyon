@@ -178,16 +178,16 @@
   display: inline-block;
   border: none;
 
-/*  background-size: cover;
+  background-size: cover;
   background-position: center;
   margin: 0px 20px 20px 0;
   position: relative;
-  border-radius: 3px;*/
+  border-radius: 3px;
 
-  /* TEMPORARY; set in site config & pages ? */
-  width: 203px;
+  /* Default size; if set in config, should override */
+  width: 200px;
   height: 300px;
-  margin: 5px;
+  /*margin: 5px;*/
 }
 
 p.page-number {

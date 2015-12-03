@@ -37,6 +37,12 @@ publication_info:
   author: Verdenal, Dominique François, Mrs.
   date: '1896'
 
+# optional: set thumbnail page size to tune page browse display
+# image_size:
+#   thumbnail:
+#     width:
+#     height:
+
 
 collections:
     annotations:

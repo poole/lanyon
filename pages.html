@@ -7,13 +7,20 @@ nav_order: 3
 
 <p>{{ site.volume_pages|size }} pages, {{ site.annotations|size }} annotations.</p>
 <hr/>
-<noscript>
 <style type="text/css">
+{% comment %} override default page size when configured {% endcomment %}
+{% if site.image_size.thumbnail.width and site.image_size.thumbnail.height %}
+    .page-thumbnails .page-thumbnail {
+      width: {{ site.image_size.thumbnail.width }}px;
+      height: {{ site.image_size.thumbnail.height }}px;
+    }
+{% endif %}
+  <noscript>
   img.lazy-load {
     display: none;
   }
+  </noscript>
 </style>
-</noscript>
 
 
 <div class="wide-container">
