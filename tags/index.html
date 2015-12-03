@@ -2,11 +2,11 @@
 layout: page
 title: 'Annotations by Tag'
 ---
-
+{% include base.html %}
 <div class="container">
 <ul class="text-left">
     {% for tag in site.data.tags %}
     {% comment %} tag[0] is tag slug, tag[1] is tag data {% endcomment %}
-    <li><a href="{{ site.baseurl }}/tags/{{ tag[0] }}/">{{ tag[1].name }}</a></li>
+    <li><a href="{{ baseurl }}/tags/{{ tag[0] }}/">{{ tag[1].name }}</a></li>
     {% endfor %}
 </ul>

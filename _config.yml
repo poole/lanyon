@@ -10,6 +10,9 @@ tagline: 'an annotated digital edition'
 description: An annotated digital edition created with <a href="http://readux.library.emory.edu/">Readux</a>
 url:
 baseurl: ''
+# Generate static export with relative links
+# Should NOT be used with a baseurl configured
+relative_links: false
 
 homepage_image: http://readux.library.emory.edu/books/emory:7sr72/pages/emory:gmrpr/single-page/
 

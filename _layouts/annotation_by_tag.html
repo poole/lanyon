@@ -1,8 +1,11 @@
 ---
 layout: default
 ---
+{% include base.html %}
 <div class="container">
-{% comment %}Use name from data if we can, but use slug as fallback for display {% endcomment %}
+{% comment %}
+  Use tag name from data if we can, but use slug as fallback for display.
+{% endcomment %}
 {% if site.data.tags contains page.tag %}
     {% assign tag_name = site.data.tags[page.tag].name %}
 {% endif %}
@@ -16,7 +19,7 @@ layout: default
             {% for page in site.volume_pages %}
                 {% if page.tei_id == annotation.annotated_page %}
                 <div class="media-left">
-                    <a href="{{ site.baseurl }}{{ page.url }}">
+                    <a href="{{ baseurl }}{{ page.url }}">
                          <img class="media-object img-thumbnail"
                             src="{{ page.images.small-thumbnail }}"
                             alt="{{ page.title }}" title="{{ page.title }}"/>
