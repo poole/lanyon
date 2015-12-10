@@ -138,7 +138,33 @@ String.prototype.startswith = function(str) {
   });
 
 
+// NOTE: marginalia funtionality is based on code from annotator-marginalia
+// (https://github.com/emory-lits-labs/annotator-marginalia),
+// but that js can't be used directly because it currently requires
+// the inclusion of annotator.js
 var marginalia = {
+
+    sortAnnotations: function() {
+        // sort marginalia items based on position of their corresponding
+        // highlights on the page
+        var $container = $('.annotation-list');
+        var $items = $('.marginalia-item');
+        $items.sort(function(a, b){
+            var a_id = $(a).attr('data-annotation-id'),
+                b_id = $(b).attr('data-annotation-id');
+            var $a_annotation = $('.annotator-hl[data-annotation-id='+a_id+']'),
+                $b_annotation = $('.annotator-hl[data-annotation-id='+b_id+']');
+
+            var a_top = marginalia.annotationTop($a_annotation),
+                b_top = marginalia.annotationTop($b_annotation);
+            if (a_top > b_top) { return 1; }
+            else if (a_top < b_top) { return -1; }
+            else return 0;
+        });
+
+        // detach and re-append to the container in the new order
+        $items.detach().appendTo($container);
+    },
 
     // Custom event for when an annotation is selected
     // Highlight the marginalia item associated with the annotation
@@ -186,25 +212,29 @@ var marginalia = {
         marginalia.showItem($annotation.first(), $item);
     },
 
+    annotationTop: function(annotation) {
+        // calculate the top position of an annotation highlight
+        // used for annotation sorting and showing marginalia items
+        var top = annotation.first().position().top,
+           wrapped_top = annotation.first().parents('.inner>div');
+
+        // If the annotation is wrapped in a child div,
+        // we want to get the postion of that parent element.
+        if (wrapped_top.length > 0) {
+            top = wrapped_top.first().position().top;
+        }
+        return top;
+    },
+
     showItem: function(annotation, item) {
         // Scroll to the position of the item
         $margin_container = $('.margin-container');
           var cTop = $margin_container.offset().top,
               cScrollTop = $margin_container.scrollTop(),
               top = item.position().top,
-              top2 = annotation.parents('.inner>div');
+              top2 = marginalia.annotationTop(annotation);
 
-              // If the annotation is wrapped in a child div,
-              // we want to get the postion of that parent element.
-              if( top2.length>0 ){
-                top2 = top2.position().top;
-              }
-              // Otherwise, get the top position of the element.
-              else{
-                top2 = annotation.position().top;
-              }
-
-          $margin_container.stop().animate({'scrollTop':top-top2+30},500,'easeInOutExpo');
+        $margin_container.stop().animate({'scrollTop':top-top2+30},500,'easeInOutExpo');
     },
 
     clearHighlights: function(){
@@ -238,32 +268,32 @@ $(document).ready(function () {
 
      $(window).load(function() {  // wait until load completes, so widths will be calculated
          resizeFunction();
-     });
 
-     // If the page has annotations, make sure they are visible.
-    // Put the first annotation at the top of the page
+         // If the page has annotations, make sure they are sorted & visible.
+        // Put the first annotation at the top of the page
+        if ($('.marginalia-item').length) {
+            // note: has to be done after window.load so positions
+            // are set and can be used for sorting
+            marginalia.sortAnnotations();
+            marginalia.showItem($('.page'), $('.marginalia-item').first());
+            // NOTE: could also set it to match corresponding first annotation...
+            // (but this isn't quite right)
+            // var $annotation_highlight =  $('.annotator-hl').first();
+            // annotation_id = $annotation_highlight.data('annotation-id');
+            // $marginalia_item = $('.marginalia-item[data-annotation-id=' + annotation_id + ']' );
+            // marginalia.showItem($annotation_highlight, $marginalia_item);
+        }
 
-    if ($('.marginalia-item').length) {
-        // TODO: marginalia items are NOT yet sorted by display order
-        // on the page.  Where should this happen?
-        marginalia.showItem($('.page'), $('.marginalia-item').first());
+         // Initalize on click.marginalia event for annotation highlights
+        $('.annotator-hl').on('click.marginalia', function(event){
+          marginalia.annotationSelected(event);
+        });
 
-        // NOTE: could also set it to match corresponding first annotation...
-        // (but this isn't quite right)
-        // var $annotation_highlight =  $('.annotator-hl').first();
-        // annotation_id = $annotation_highlight.data('annotation-id');
-        // $marginalia_item = $('.marginalia-item[data-annotation-id=' + annotation_id + ']' );
-        // marginalia.showItem($annotation_highlight, $marginalia_item);
-    }
+        // Initalize on click.marginalia event for Marginalia items
+        $('.marginalia-item').find('.text').on('click.marginalia',function(event){
+          marginalia.itemSelected(event);
+        });
 
-     // Initalize on click.marginalia event for annotation highlights
-    $('.annotator-hl').on('click.marginalia', function(event){
-      marginalia.annotationSelected(event);
-    });
-
-    // Initalize on click.marginalia event for Marginalia items
-    $('.marginalia-item').find('.text').on('click.marginalia',function(event){
-      marginalia.itemSelected(event);
     });
 
 });
