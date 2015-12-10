@@ -272,6 +272,7 @@ article img {
     color: #000; text-shadow: 0px 0px 10px #EBEBEB;
     transition: color 0.2s;
     position: fixed;
+    width: 55px; /* make carousel links smaller to leave space for marginalia */
 }
 
 .carousel-control:hover, .carousel-control:focus {
