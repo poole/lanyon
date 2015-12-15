@@ -57,3 +57,6 @@ defaults:
       type: volume_pages
     values:
       layout: volume_page
+      short_label: 'p.'
+
+
