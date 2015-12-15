@@ -30,7 +30,7 @@ layout: default
             </div>
 
             <div class="col-xs-3 col-sm-4 col-sm-offset-4 text-center">
-                <p class="text-muted">p. {{ page.page_order }}</p>
+                <p class="text-muted">{{ page.short_label }} {{ page.number }}</p>
             </div>
         </div>
     </div>
@@ -62,12 +62,12 @@ layout: default
     </div>
 
     {% if page.previous %}
-    <a class="left carousel-control" href="{{ baseurl }}{{ page.previous.url }}" role="button" data-slide="prev" title="Prev: Page {{ page.previous.page_order }}">
+    <a class="left carousel-control" href="{{ baseurl }}{{ page.previous.url }}" role="button" data-slide="prev" title="Prev: {{ page.previous.title }}">
         <span class="glyphicon glyphicon-chevron-left"></span>
     </a>
     {% endif %}
     {% if page.next %}
-    <a class="right carousel-control" href="{{ baseurl }}{{ page.next.url }}" role="button" data-slide="next" title="Next: Page {{ page.next.page_order }}">
+    <a class="right carousel-control" href="{{ baseurl }}{{ page.next.url }}" role="button" data-slide="next" title="Next: {{ page.next.title }}">
         <span class="glyphicon glyphicon-chevron-right"></span>
     </a>
     {% endif %}
