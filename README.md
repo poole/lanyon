@@ -1,134 +1,80 @@
-# Lanyon
+# Digital Edition Jekyll Theme
 
-Lanyon is an unassuming [Jekyll](http://jekyllrb.com) theme that places content first by tucking away navigation in a hidden drawer. It's based on [Poole](http://getpoole.com), the Jekyll butler.
 
-![Lanyon](https://f.cloud.github.com/assets/98681/1825266/be03f014-71b0-11e3-9539-876e61530e24.png)
-![Lanyon with open sidebar](https://f.cloud.github.com/assets/98681/1825267/be04a914-71b0-11e3-966f-8afe9894c729.png)
-
+digitaledition-jekylltheme is a [Jekyll](http://jekyllrb.com) theme
+based on [Lanyon](https://github.com/poole/lanyon).  It is intended to be used
+with [Readux](http://readux.library.emory.edu) and
+[teifacsimile-to-jekyll](https://github.com/emory-libraries-ecds/teifacsimile-to-jekyll) to display an annotated digital edition.
 
 ## Contents
 
 - [Usage](#usage)
+- [Content](#content)
 - [Options](#options)
+  - [Lanyon](#lanyon)
   - [Sidebar menu](#sidebar-menu)
-  - [Themes](#themes)
-  - [Reverse layout](#reverse-layout)
-- [Development](#development)
-- [Author](#author)
-- [License](#license)
-
+  - [Custom Page URLs](#custom-page-urls)
 
 ## Usage
 
-Lanyon is a theme built on top of [Poole](https://github.com/poole/poole), which provides a fully furnished Jekyll setup—just download and start the Jekyll server. See [the Poole usage guidelines](https://github.com/poole/poole#usage) for how to install and use Jekyll.
+Create your annotations on [Readux](http://readux.library.emory.edu),
+export your volume as a Jekyll site, and start Jekyll to see your annotated
+digital edition.
 
+See [the Poole usage guidelines](https://github.com/poole/poole#usage)
+or the [Jekyll documentation](http://jekyllrb.com/) for instructions on
+installing and using Jekyll.
+
+## Content
+
+This digital edition Jekyll site makes use of [Jekyll Collections](http://jekyllrb.com/docs/collections/) to display non-blog content.  When you create a site via Readux
+or import annotated TEI facsimile using teifacsmile-to-jekyll, your site
+will include the following:
+
+- a *volume_pages* collection, with content in the `_volume_pages` directory
+  - one html file per page in the volume, with files numbered sequentially
+- an *annotation* collection, with content in the `_annotations` directory
+  - one markdown file per annotation; files are numbered by annotation id
+- a tag [data file](http://jekyllrb.com/docs/datafiles/) in `_data/tags.yml`
+  with the tags from your annotations
+- one markdown page per tag in the `tags` directory, for simple acess to
+  annotations by tag
+
+The base Jekyll theme also includes placeholder introduction and credits
+pages, which you can edit to content to your annotated digital
+edition.  Additional pages can be added in a similar fashion.
 
 ## Options
 
-Lanyon includes some customizable options, typically applied via classes on the `<body>` element.
+This Jekyll project includes several options for customization.
 
+### Lanyon
 
-### Sidebar menu
+All display customizations available in Lanyon are available, including
+configurable theme and various sidebar display options.  See the
+[Lanyon](https://github.com/poole/lanyon) documentation for specifics.
 
-Create a list of nav links in the sidebar by assigning each Jekyll page the correct layout in the page's [front-matter](http://jekyllrb.com/docs/frontmatter/).
+### Sidebar Menu
 
-```
----
-layout: page
-title: About
----
-```
+This Jekyll project revises the default Lanyon sidebar logic, which
+automatically displays all top-level pages alphabetically.  To include
+a page in the sidebar navigation, and to control the order, set a *nav_order*
+number in the front matter of the page you want included.
 
-**Why require a specific layout?** Jekyll will return *all* pages, including the `atom.xml`, and with an alphabetical sort order. To ensure the first link is *Home*, we exclude the `index.html` page from this list by specifying the `page` layout.
+### Custom Page URLs
 
+The Readux web export and the teifacsimile-to-jekyll script allow you to
+optionally specify which page in the Readux volume is numbered 1 in the
+original edition, as a convenience to generate a site with nicer urls.
+All of the pages before your designated page 1 will be numbered and
+displayed with the label "Front", but these can be customized.  To override
+page urls, edit the front matter for each page that you want
+customized and modify the following fields as desired:
 
-### Themes
-
-Lanyon ships with eight optional themes based on the [base16 color scheme](https://github.com/chriskempson/base16). Apply a theme to change the color scheme (mostly applies to sidebar and links).
-
-![Lanyon with red theme](https://f.cloud.github.com/assets/98681/1825270/be065110-71b0-11e3-9ed8-9b8de753a4af.png)
-![Lanyon with red theme and open sidebar](https://f.cloud.github.com/assets/98681/1825269/be05ec20-71b0-11e3-91ea-a9138ef07186.png)
-
-There are eight themes available at this time.
-
-![Available theme classes](https://f.cloud.github.com/assets/98681/1817044/e5b0ec06-6f68-11e3-83d7-acd1942797a1.png)
-
-To use a theme, add any one of the available theme classes to the `<body>` element in the `default.html` layout, like so:
-
-```html
-<body class="theme-base-08">
-  ...
-</body>
-```
-
-To create your own theme, look to the Themes section of [included CSS file](https://github.com/poole/lanyon/blob/master/public/css/lanyon.css). Copy any existing theme (they're only a few lines of CSS), rename it, and change the provided colors.
-
-
-### Reverse layout
-
-![Lanyon with reverse layout](https://f.cloud.github.com/assets/98681/1825265/be03f2e4-71b0-11e3-89f1-360705524495.png)
-![Lanyon with reverse layout and open sidebar](https://f.cloud.github.com/assets/98681/1825268/be056174-71b0-11e3-88c8-5055bca4307f.png)
-
-Reverse the page orientation with a single class.
-
-```html
-<body class="layout-reverse">
-  ...
-</body>
-```
-
-
-### Sidebar overlay instead of push
-
-Make the sidebar overlap the viewport content with a single class:
-
-```html
-<body class="sidebar-overlay">
-  ...
-</body>
-```
-
-This will keep the content stationary and slide in the sidebar over the side content. It also adds a `box-shadow` based outline to the toggle for contrast against backgrounds, as well as a `box-shadow` on the sidebar for depth.
-
-It's also available for a reversed layout when you add both classes:
-
-```html
-<body class="layout-reverse sidebar-overlay">
-  ...
-</body>
-```
-
-### Sidebar open on page load
-
-Show an open sidebar on page load by modifying the `<input>` to add the `checked` boolean attribute:
-
-```html
-<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" checked>
-```
-
-Using Liquid you can also conditionally show the sidebar open on a per-page basis. For example, here's how you could have it open on the homepage only:
-
-```html
-<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" {% if page.title =="Home" %}checked{% endif %}>
-```
-
-## Development
-
-Lanyon has two branches, but only one is used for active development.
-
-- `master` for development.  **All pull requests should be to submitted against `master`.**
-- `gh-pages` for our hosted site, which includes our analytics tracking code. **Please avoid using this branch.**
-
-
-## Author
-
-**Mark Otto**
-- <https://github.com/mdo>
-- <https://twitter.com/mdo>
-
-
-## License
-
-Open sourced under the [MIT license](LICENSE.md).
-
-<3
+- *title*: used as the label displayed on the individual page,
+  in the HTML header, and as previews for next and previous page links
+- *short_label*: customize the short label prefix used on thumbnail display
+  (default for normal pages is p.)
+- *number*: number to be displayed with the short label on thumbnail views
+- *permalink*: custom url for this page; note that these should always
+   start with `/pages/`.
