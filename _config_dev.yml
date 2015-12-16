@@ -8,7 +8,7 @@ gems: [jekyll-paginate]
 title:               dtsbourg
 tagline:             'Dylan Bourgeois'
 description:         'I am a microengineering student @EPFL. Find me on Twitter <a href="https://twitter.com/dtsbourg" target="_blank">@dtsbourg</a>.'
-url:                 http://dtsbourg.github.io
+url:                 http://localhost:4000
 baseurl:             ""
 paginate:            5
 
