@@ -18,19 +18,16 @@ layout: default
         {% for annotation in site.annotations|sort: 'sort_order' %}
         {% if annotation.tags contains page.tag %}
         <div class="media">
-            {% for page in site.volume_pages %}
-                {% if page.tei_id == annotation.annotated_page %}
-                {% ifchanged %}<h4><a href="{{ baseurl }}{{ page.url }}">{{ page.title }}</a></h4>{% endifchanged %}
-                <div class="media-left">
-                    <a href="{{ baseurl }}{{ page.url }}">
-                        <p class="page-number">{{ page.short_label}} {{ page.number }}</p>
-                         <img class="media-object img-thumbnail"
-                            src="{{ page.images.small-thumbnail }}"
-                            alt="{{ page.title }}" title="{{ page.title }}"/>
-                     </a>
-                </div>
-                {% endif %}
-             {% endfor %}
+            {% assign page=site.volume_pages[annotation.page_index] %}
+            {% ifchanged %}<h4><a href="{{ baseurl }}{{ page.url }}">{{ page.title }}</a></h4>{% endifchanged %}
+            <div class="media-left">
+                <a href="{{ baseurl }}{{ page.url }}">
+                    <p class="page-number">{{ page.short_label}} {{ page.number }}</p>
+                     <img class="media-object img-thumbnail"
+                        src="{{ page.images.small-thumbnail }}"
+                        alt="{{ page.title }}" title="{{ page.title }}"/>
+                 </a>
+            </div>
              <div class="media-body" class="width:100%">
 
             {% include annotation.html %}
