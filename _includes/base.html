@@ -4,14 +4,10 @@ Adapted from http://ricostacruz.com/til/relative-paths-in-jekyll.html
 {% endcomment %}
 {% assign baseurl = site.baseurl %}
 {% if site.relative_links %}
-<!-- ** relative links -->
     {% assign depth = page.url | split: '/' | size | minus: 1 %}
-    <!-- depth == {{ depth }} -->
     {% if    depth == -1 %}{% assign baseurl = '.' %}
     {% elsif    depth == 1 %}{% assign baseurl = '..' %}
     {% elsif depth == 2 %}{% assign baseurl = '../..' %}
     {% elsif depth == 3 %}{% assign baseurl = '../../..' %}
     {% elsif depth == 4 %}{% assign baseurl = '../../../..' %}{% endif %}
 {% endif %}
-
-<!-- *** baseurl is {{ baseurl }} -->

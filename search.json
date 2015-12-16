@@ -1,0 +1,31 @@
+---
+---
+{% comment %}Generate json to be used for site search; currently only includes
+volume pages and annotation content, but could be expanded to also include
+other pages, e.g. introduction, credits, etc.{% endcomment %}
+[  {% include base.html %}
+  {% for page in site.volume_pages %}
+    {
+      "id"       : {{forloop.index}},
+      "type"     : "volume_page",
+      "title"    : "{{ page.title | escape }}",
+      "url"      : "{{ baseurl }}{{ page.url }}",
+      "image"    : "{{ baseurl }}{{ page.images.small-thumbnail}}",
+      "content"  : {{ page.content | strip_html | strip_newlines | jsonify }},
+      "preview"  : {{ page.content | strip_html | strip_newlines | truncatewords: 50 | jsonify}}
+    }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+  {% if site.volume_pages and site.annotations %}, {% endif %}
+  {% for annotation in site.annotations %}
+    {
+      "id"      : {{forloop.index | plus: site.volume_pages.size}} ,
+      "type"    : "annotation",
+      "content" : "{{ annotation.content | strip_html | strip_newlines }}",
+      "preview" : "{{ annotation.content | strip_html | strip_newlines | truncatewords: 50 }}",
+      {% assign page=site.volume_pages[annotation.page_index] %}
+      "title"   : "Annotation of {{ page.title }}",
+      "url"     : "{{ baseurl }}{{ page.url }}",
+      "image"   : "{{ baseurl }}{{ page.images.small-thumbnail}}"
+    } {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
