@@ -80,7 +80,7 @@ customized and modify the following fields as desired:
 - *permalink*: custom url for this page; note that these should always
    start with `/pages/`.
 
-### Custom Page URLs
+### Search
 
 Currently, search is implemented using
 [Simple-Jekyll-Search](https://github.com/christian-fei/Simple-Jekyll-Search), a javascript-based search that does not require any extra Jekyll plugins.  This provides a
