@@ -2,14 +2,14 @@
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
 permalink:           pretty
-relative_permalinks: true
+gems: [jekyll-paginate]
 
 # Setup
 title:               dtsbourg
 tagline:             'Dylan Bourgeois'
 description:         'I am a microengineering student @EPFL. Find me on Twitter <a href="https://twitter.com/dtsbourg" target="_blank">@dtsbourg</a>.'
 url:                 http://dtsbourg.github.io
-baseurl:             http://dtsbourg.github.io
+baseurl:             ""
 paginate:            5
 
 # About/contact
