@@ -14,6 +14,7 @@ with [Readux](http://readux.library.emory.edu) and
   - [Lanyon](#lanyon)
   - [Sidebar menu](#sidebar-menu)
   - [Custom Page URLs](#custom-page-urls)
+  - [Search](#search)
 
 ## Usage
 
@@ -78,3 +79,10 @@ customized and modify the following fields as desired:
 - *number*: number to be displayed with the short label on thumbnail views
 - *permalink*: custom url for this page; note that these should always
    start with `/pages/`.
+
+### Custom Page URLs
+
+Currently, search is implemented using
+[Simple-Jekyll-Search](https://github.com/christian-fei/Simple-Jekyll-Search), a javascript-based search that does not require any extra Jekyll plugins.  This provides a
+simple keyword and exact phrase search on volume pages and annotation
+content.
