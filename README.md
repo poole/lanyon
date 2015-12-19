@@ -100,7 +100,7 @@ It's also available for a reversed layout when you add both classes:
 
 ### Sidebar open on page load
 
-Show an open sidebar on page load by modifying the `<input>` to add the `checked` boolean attribute:
+Show an open sidebar on page load by modifying the `<input>` tag within the `sidebar.html` layout to add the `checked` boolean attribute:
 
 ```html
 <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" checked>
