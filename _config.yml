@@ -6,13 +6,13 @@ pygments:         true
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
 permalink:           pretty
-#relative_permalinks: true
+relative_permalinks: true
 
 # Setup
 title:               Learning Java/JavaEE
 tagline:             'Blog about my Java/JavaEE experiences'
 description:         'Blog about my Java/JavaEE experiences'
-url:                 http://cchacin.github.io
+url:                 ''
 baseurl:             ''
 paginate:            10
 
