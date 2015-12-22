@@ -14,7 +14,7 @@ tagline:             'Blog about my Java/JavaEE experiences'
 description:         'Blog about my Java/JavaEE experiences'
 url:                 http://cchacin.github.io
 baseurl:             ''
-paginate:            10
+paginate:            5
 
 # About/contact
 author:
