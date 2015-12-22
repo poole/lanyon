@@ -78,7 +78,7 @@ customized and modify the following fields as desired:
   (default for normal pages is p.)
 - *number*: number to be displayed with the short label on thumbnail views
 - *permalink*: custom url for this page; note that these should always
-   start with `/pages/`.
+   start with `/pages/` and must have a unique value.
 
 ### Search
 
