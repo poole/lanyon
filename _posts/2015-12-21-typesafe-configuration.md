@@ -125,3 +125,5 @@ abstract class ConfigurationFactory {
 ## Cons
 
 * Changes in the configuration requires compile/deploy (this shouldn't be a problem in the 99% of the cases)
+
+[source code](https://github.com/cchacin/typesafe-configuration)
