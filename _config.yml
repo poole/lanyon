@@ -1,3 +1,7 @@
+# Dependencies
+markdown:         redcarpet
+pygments:         true
+
 # Permalinks
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
@@ -6,7 +10,7 @@ relative_permalinks: true
 
 # Setup
 title:               Learning Java/JavaEE
-tagline:             'A Jekyll theme'
+tagline:             'Blog about my Java/JavaEE experiences'
 description:         'Blog about my Java/JavaEE experiences'
 url:                 http://cchacin.github.io
 baseurl:             ''
