@@ -19,7 +19,7 @@ There is a common requirement in most of the Java/JavaEE projects related to how
 ## How those libraries resolve the problem
 Most of those libraries require to have an injection point(s) for the configurations and also the configurations source(s), something like this:
 
-```dev.properties```:
+`dev.properties`:
 
 ```properties
 host=localhost
@@ -27,7 +27,7 @@ port=5432
 schema=public
 ```
 
-```prod.properties```:
+`prod.properties`:
 
 ```properties
 host=production.com
@@ -35,7 +35,7 @@ port=5432
 schema=public
 ```
 
-```ConfigurationResolver.java```:
+`ConfigurationResolver.java`:
 
 ```java
 class ConfigurationResolver implements SomeLibraryInterface {
@@ -48,7 +48,7 @@ class ConfigurationResolver implements SomeLibraryInterface {
 }
 ```
 
-```MyType.java```:
+`MyType.java`:
 
 ```java
 class MyType {
@@ -66,7 +66,7 @@ Besides that, with the new Java 8 capabilities, specifically with [default metho
 
 ## With Java 8 default methods
 
-```DefaultConfiguration.java:```
+`DefaultConfiguration.java`:
 
 ```java
 interface DefaultConfiguration {
@@ -77,7 +77,7 @@ interface DefaultConfiguration {
 }
 ```
 
-```DevConfiguration.java```:
+`DevConfiguration.java`:
 
 ```java
 class DevConfiguration implements DefaultConfiguration {
@@ -85,7 +85,7 @@ class DevConfiguration implements DefaultConfiguration {
 }
 ```
 
-```ProdConfiguration```:
+`ProdConfiguration`:
 
 ```java
 class ProdConfiguration implements DefaultConfiguration {
@@ -95,7 +95,7 @@ class ProdConfiguration implements DefaultConfiguration {
 }
 ```
 
-```ConfigurationFactory.java```:
+`ConfigurationFactory.java`:
 
 ```java
 abstract class ConfigurationFactory {
