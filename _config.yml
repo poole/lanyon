@@ -12,7 +12,7 @@ relative_permalinks: true
 title:               Learning Java/JavaEE
 tagline:             'Blog about my Java/JavaEE experiences'
 description:         'Blog about my Java/JavaEE experiences'
-url:                 ''
+url:                 http://cchacin.github.io
 baseurl:             ''
 paginate:            10
 
