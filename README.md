@@ -15,6 +15,7 @@ with [Readux](http://readux.library.emory.edu) and
   - [Sidebar menu](#sidebar-menu)
   - [Custom Page URLs](#custom-page-urls)
   - [Search](#search)
+  - [Citation Information](#citation-information)
 
 ## Usage
 
@@ -86,3 +87,13 @@ Currently, search is implemented using
 [Simple-Jekyll-Search](https://github.com/christian-fei/Simple-Jekyll-Search), a javascript-based search that does not require any extra Jekyll plugins.  This provides a
 simple keyword and exact phrase search on volume pages and annotation
 content.
+
+### Citation Information
+
+By default, this site is set up to embed publication information
+on the home page to make your annotated edition easily citable by tools
+like Zotero.  To customize this, you should edit the **publication_info**
+section of your `_config.yml`.  You can also add a **publisher** or
+a **rights** statement to have them included in your citation.
+
+

@@ -9,28 +9,23 @@ nav_order: 1
 
 <p>{{ site.volume_pages|size }} pages, {{ site.annotations|size }} annotations.</p>
 
-<!-- original publication inSaformation -->
-{% if site.publication_info %}
+<!-- source publication information -->
+{% if site.source_info %}
 <p class="text-muted">
-  <em>{{ site.publication_info.title }}</em>.
-  {{ site.publication_info.author}}, {{ site.publication_info.date }}.
+  <em>{{ site.source_info.title }}</em>.
+  {{ site.source_info.author}}, {{ site.source_info.date }}.
 </p>
 {% endif %}
 
 <!-- todo: use page objects for this instead of hard-coding urls -->
 <p><a href="{{ baseurl }}/introduction/">Read the introduction</a></p>
-
 <p><a href="{{ baseurl }}/pages/">Browse the pages</a></p>
 
-
-<!-- todo: publication informatiom from header,
  link to readux edition and readux pdf using links in the tei -->
-
-{% if site.readux_url and site.readux_pdf_url %}
- <p>View the <a href="{{ site.readux_url }}">digital edition</a>
-    or download the <a href="{{ site.readux_pdf_url }}">PDF</a>
-    on <a href="http://readux.library.emory.edu/">Readux</a>.</p>
+{% comment %} link to source edition if urls are configured {% endcomment %}
+{% if site.source_info.url and site.source.pdf_url %}
+ <p>View the <a href="{{ site.source_info.url }}">source digital edition</a>
+    or download the <a href="{{ site.source_info.pdf_url }}">source PDF</a>{% if site.source_info.via_readux %} on <a href="http://readux.library.emory.edu/">Readux</a>{% endif %}.</p>
 {% endif %}
-
 
 </div>

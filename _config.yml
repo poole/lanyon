@@ -18,7 +18,7 @@ homepage_image: http://readux.library.emory.edu/books/emory:7sr72/pages/emory:gm
 
 # About/contact
 author:
-  name:
+  name: An Author
   url:
   email:
 
@@ -29,13 +29,22 @@ version:             1.0.0
 # readux export specifics
 show_annotation_author: true
 
-readux_url: 'http://readux.library.emory.edu/books/emory:7sr72/'
-readux_pdf_url: 'http://readux.library.emory.edu/books/emory:7sr72/pdf/#page=2'
-
-publication_info:
+source_info:
   title: '"Ladies first!"  a novel'
   author: Verdenal, Dominique François, Mrs.
   date: '1896'
+  url: 'http://readux.library.emory.edu/books/emory:7sr72/'
+  pdf_url: 'http://readux.library.emory.edu/books/emory:7sr72/pdf/#page=2'
+  via_readux: true
+
+publication_info:
+  title: 'Ladies first!, an annotated edition'
+  author: Verdenal, Dominique François, Mrs.
+  editors:
+    - "Tater, Anne O."
+  date: 2015
+  # publisher: "Some institute"
+  # rights: "Some rights reserved."
 
 # optional: set thumbnail page size to tune page browse display
 # image_size:
