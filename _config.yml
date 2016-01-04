@@ -21,6 +21,7 @@ author:
   name: An Author
   url:
   email:
+  twitter:
 
 # Custom vars
 version:             1.0.0
@@ -43,8 +44,8 @@ publication_info:
   editors:
     - "Tater, Anne O."
   date: 2015
-  # publisher: "Some institute"
-  # rights: "Some rights reserved."
+  # publisher:
+  # rights:
 
 # optional: set thumbnail page size to tune page browse display
 # image_size:

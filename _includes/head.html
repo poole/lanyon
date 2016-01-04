@@ -40,7 +40,7 @@
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
 
 {% comment %}Citation information; currently home page only. {% endcomment %}
-{% if page.url == '/' %}
+{% if page.url == '/' %} {% comment %} TODO: Move into separate include file? {% endcomment %}
   <link rel="schema.RDF" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
   <link rel="schema.DC" href="http://purl.org/dc/elements/1.0/" />
   <link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
@@ -59,4 +59,38 @@
   <link rel="DC.source" href="{{ site.source_info.url }}" title="{{ site.sourceb_info.title }}"/>
   <meta name="BIBO.numPages" content="{{ site.volume_pages|size }}" />
 {% endif %}
+
+<!-- FIXME: twitter/opengraph seems to be taking precedence over rdf for zotero harvest, but has less detail -->
+
+  <!-- twitter/opengraph -->  <!-- TODO: move into separate include -->
+  {% if page.title == "Home" %}
+  <!-- home page twitter/opengraph data -->
+  <meta property="og:title" content="{{ site.title }}"/>
+  <meta property="og:headline" content="{{ vol.tagline }}" />
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="{{ site.homepage_image }}"/>
+  <!-- description? -->
+
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="{{ site.title }}" />
+  <meta property="twitter:image" content="{{ site.homepage_image }}"/>
+  <meta property="twitter:description" content="{{ vol.tagline }}" />
+  {% else %}
+    <!-- secondary page twitter/opengraph data -->
+    <meta property="og:title" content="{{ page.title }} - {{ site.title }}"/>
+    <meta property="twitter:title" content="{{ page.title }} - {{ site.title }}" />
+    {% if page.excerpt %}
+    <meta property="og:description" content="{{ page.excerpt | strip_html }}" />
+    <meta property="twitter:description" content="{{ page.excerpt | strip_html }}" />
+    {% endif %}
+    {% if page.images %}
+    <meta property="og:image" content="{{ page.images.page }}"/>
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="{{ page.images.page }}"/>
+    {% else %}
+    <meta property="twitter:card" content="summary">
+    {% endif %}
+  {% endif %}
+  {% if site.author.twitter %}<meta name="twitter:site" content="@{{ site.author.twitter }}">{% endif %}
+  <!-- post/page author ? -->
 </head>
