@@ -38,6 +38,10 @@
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+  {% if page.url == '/' and site.publication_info.tei_xml %}
+    <link rel="alternate" type="application/tei+xml" title="TEI" href="/tei.xml">
+  {% endif %}
   {% include citation.html %}
   {% include opengraph.html %}
 </head>

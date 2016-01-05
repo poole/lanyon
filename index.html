@@ -35,9 +35,13 @@ could be misleading because this is also a website ... {% endcomment %}
 <p><a href="{{ baseurl }}/pages/">Browse the pages</a></p>
 
 {% comment %} link to source edition if urls are configured {% endcomment %}
-{% if site.source_info.url and site.source.pdf_url %}
+{% if site.source_info.url and site.source_info.pdf_url %}
  <p>View the <a property="schema:isBasedOnUrl" href="{{ site.source_info.url }}">source digital edition</a>
     or download the <a href="{{ site.source_info.pdf_url }}">source PDF</a>{% if site.source_info.via_readux %} on <a href="http://readux.library.emory.edu/">Readux</a>{% endif %}.</p>
+{% endif %}
+
+{% if site.publication_info.tei_xml %}
+<p>View annotated edition as <a href="{{ site.publication_info.tei_xml }}">TEI XML</a>.</p>
 {% endif %}
 
 </div>
