@@ -16,6 +16,7 @@ with [Readux](http://readux.library.emory.edu) and
   - [Custom Page URLs](#custom-page-urls)
   - [Search](#search)
   - [Citation Information](#citation-information)
+  - [OpenGraph and Twitter metadata](#opengraph-and-twitter-metadata)
 
 ## Usage
 
@@ -92,8 +93,21 @@ content.
 
 By default, this site is set up to embed publication information
 on the home page to make your annotated edition easily citable by tools
-like Zotero.  To customize this, you should edit the **publication_info**
-section of your `_config.yml`.  You can also add a **publisher** or
-a **rights** statement to have them included in your citation.
+like [Zotero](https://www.zotero.org/).  To customize the citation, you
+can edit the **publication_info** section of your `_config.yml`.
+If you add a **publisher** or a **rights** statement, they will be
+included in your citation.
+
+## OpenGraph and Twitter metadata
+
+The site includes [OpenGraph](http://ogp.me/) and
+[Twitter card](https://dev.twitter.com/cards/overview) metadata for most
+pages.  The home page uses the site title and configured home page image;
+if a page has images associated (i.e., volume page images), an image
+will be included.  An excerpt will be included if available, and you can
+set a custom excerpt by adding one to the
+[Jekyll front matter](http://jekyllrb.com/docs/frontmatter/) for any
+page (other than the home page).
+
 
 

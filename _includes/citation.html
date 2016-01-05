@@ -1,0 +1,20 @@
+{% comment %} Citation information; currently home page only. {% endcomment %}
+{% if page.url == '/' %}
+  <link rel="schema.RDF" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+  <link rel="schema.DC" href="http://purl.org/dc/elements/1.0/" />
+  <link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
+  <link rel="schema.BIBO" href="http://purl.org/ontology/bibo/" />
+  <meta name="DC.identifier" content="{{ site.url }}" />
+  <meta name="DC.title" content="{{ site.publication_info.title }}" />
+  <meta name="DC.author" content="{{ site.publication_info.author }}" />
+  {% for editor in site.publication_info.editors %}
+  <meta name="DC.contributor" content="{{ editor }}" />
+  {% endfor %}
+  <meta name="DC.date" content="{{ site.publication_info.date }}" />
+  <link rel="DC.type" href="http://purl.org/dc/terms/BibliographicResource" />
+  <meta name="DC.type" content="Book"/> <!-- needed for Zotero -->
+  {% if site.publication_info.publisher %}<meta name="DC.publisher" content="{{ site.publication_info.publisher }}" />{% endif %}
+  {% if site.publication_info.rights %}<meta name="DC.rights" content="{{ site.publication_info.rights }}" />{% endif %}
+  <link rel="DC.source" href="{{ site.source_info.url }}" title="{{ site.sourceb_info.title }}"/>
+  <meta name="BIBO.numPages" content="{{ site.volume_pages|size }}" />
+{% endif %}

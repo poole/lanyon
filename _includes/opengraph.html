@@ -1,0 +1,27 @@
+{% if page.url == '/' %} {% comment %} home page twitter/opengraph data {% endcomment %}
+  <meta property="og:title" content="{{ site.title }}"/>
+  <meta property="og:headline" content="{{ site.tagline }}" />
+  <meta property="og:image" content="{{ site.homepage_image }}"/>
+  {% comment %} site description? {% endcomment %}
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="{{ site.title }}" />
+  <meta property="twitter:image" content="{{ site.homepage_image }}"/>
+  <meta property="twitter:description" content="{{ site.tagline }}" />
+{% else %} {% comment %} secondary page twitter/opengraph data {% endcomment %}
+  <meta property="og:title" content="{{ page.title }} - {{ site.title }}"/>
+  <meta property="twitter:title" content="{{ page.title }} - {{ site.title }}" />
+  {% if page.excerpt %}
+    <meta property="og:description" content="{{ page.excerpt | strip_html }}" />
+    <meta property="twitter:description" content="{{ page.excerpt | strip_html }}" />
+  {% endif %}
+  {% if page.images %}
+    <meta property="og:image" content="{{ page.images.page }}"/>
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="{{ page.images.page }}"/>
+  {% else %}
+    <meta property="twitter:card" content="summary">
+  {% endif %}
+{% endif %}
+{% if site.author.twitter %}<meta name="twitter:site" content="@{{ site.author.twitter }}">{% endif %}
+{% comment %} post/page author ? {% endcomment %}
+
