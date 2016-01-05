@@ -1,13 +1,19 @@
-<div class="text">{{ annotation.content }}</div>
+<div rel="schema:comment">
+<div id="{{ annotation.annotation_id }}"
+    about="#{{ annotation.annotation_id }}" typeof="schema:Comment">
+<meta property="schema:about" content="{{ site.volume_pages[annotation.page_index].url }}"/>
+<div class="text" property="schema:text">{{ annotation.content }}</div>
 <!-- show annotation author names if configured -->
 {% if site.show_annotation_author %}
-<div class="annotation-footer"><span class="annotation-author">{{ annotation.author }}</span></div>
+<div class="annotation-footer"><span class="annotation-author" property="schema:author">{{ annotation.author }}</span></div>
 {% endif %}
 {% if annotation.tags.size != 0 %}
 <div class="annotator-tags">
     {% for tag in annotation.tags %}
-    <a class="annotator-tag"
+    <a class="annotator-tag" property="schema:keywords"
         href="{{ baseurl }}/tags/{{ tag }}/">{{ site.data.tags[tag].name }}</a>
     {% endfor %}
 </div>
 {% endif %}
+</div>
+</div>
