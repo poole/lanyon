@@ -61,13 +61,34 @@ layout: default
         </div>
     </div>
 
+{% comment %} Find next/previous pages for navigation.
+Use page.next and page.previous if available (jekyll 3.x),
+otherwise find pages based on index to support Jekyll 2.4 on GitHub Pages.
+{% endcomment %}
+
+    {% comment %} Generate zero-based index from 1-based page sort order {% endcomment %}
+    {% assign index = page.sort_order|minus:1 %}
+
     {% if page.previous %}
-    <a class="left carousel-control" href="{{ baseurl }}{{ page.previous.url }}" role="button" data-slide="prev" title="Prev: {{ page.previous.title }}">
+      {% assign prev_page = page.previous %}
+    {% elsif index > 0 %}
+      {% assign prev_index = index|minus:1 %}
+      {% assign prev_page = site.volume_pages[prev_index] %}
+    {% endif %}
+    {% if page.next %}
+      {% assign next_page = page.next %}
+    {% elsif index < site.volume_pages.last.sort_order|minus:1 %}
+        {% assign next_index = index|plus:1 %}
+        {% assign next_page = site.volume_pages[next_index] %}
+    {% endif %}
+
+    {% if prev_page %}
+    <a class="left carousel-control" href="{{ baseurl }}{{ prev_page.url }}" role="button" data-slide="prev" title="Prev: {{ prev_page.title }}">
         <span class="glyphicon glyphicon-chevron-left"></span>
     </a>
     {% endif %}
-    {% if page.next %}
-    <a class="right carousel-control" href="{{ baseurl }}{{ page.next.url }}" role="button" data-slide="next" title="Next: {{ page.next.title }}">
+    {% if next_page %}
+    <a class="right carousel-control" href="{{ baseurl }}{{ next_page.url }}" role="button" data-slide="next" title="Next: {{ next_page.title }}">
         <span class="glyphicon glyphicon-chevron-right"></span>
     </a>
     {% endif %}
