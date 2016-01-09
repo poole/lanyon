@@ -237,7 +237,6 @@ a.sidebar-nav-item:focus {
 #sidebar-checkbox:focus ~ .sidebar-toggle,
 #sidebar-checkbox:checked ~ .sidebar-toggle {
   color: #fff;
-  background-color: #555;
 }
 
 .sidebar-toggle:active:before,
@@ -453,6 +452,12 @@ a.pagination-item:hover {
   color: #ac4142;
 }
 
+.sidebar-toggle:active,
+#sidebar-checkbox:focus ~ .sidebar-toggle,
+#sidebar-checkbox:checked ~ .sidebar-toggle {
+  background-color: #ac4142;
+}
+
 /* Orange */
 .theme-base-09 .sidebar,
 .theme-base-09 .sidebar-toggle:active,
@@ -463,6 +468,11 @@ a.pagination-item:hover {
 .theme-base-09 .sidebar-toggle,
 .theme-base-09 .related-posts li a:hover {
   color: #d28445;
+}
+.sidebar-toggle:active,
+#sidebar-checkbox:focus ~ .sidebar-toggle,
+#sidebar-checkbox:checked ~ .sidebar-toggle {
+  background-color: #d28445;
 }
 
 /* Yellow */
@@ -476,6 +486,11 @@ a.pagination-item:hover {
 .theme-base-0a .related-posts li a:hover {
   color: #f4bf75;
 }
+.sidebar-toggle:active,
+#sidebar-checkbox:focus ~ .sidebar-toggle,
+#sidebar-checkbox:checked ~ .sidebar-toggle {
+  background-color: #f4bf75;
+}
 
 /* Green */
 .theme-base-0b .sidebar,
@@ -487,6 +502,11 @@ a.pagination-item:hover {
 .theme-base-0b .sidebar-toggle,
 .theme-base-0b .related-posts li a:hover {
   color: #90a959;
+}
+.sidebar-toggle:active,
+#sidebar-checkbox:focus ~ .sidebar-toggle,
+#sidebar-checkbox:checked ~ .sidebar-toggle {
+  background-color:#90a959;
 }
 
 /* Cyan */
@@ -500,6 +520,11 @@ a.pagination-item:hover {
 .theme-base-0c .related-posts li a:hover {
   color: #75b5aa;
 }
+.sidebar-toggle:active,
+#sidebar-checkbox:focus ~ .sidebar-toggle,
+#sidebar-checkbox:checked ~ .sidebar-toggle {
+  background-color: #75b5aa;
+}
 
 /* Blue */
 .theme-base-0d .sidebar,
@@ -511,6 +536,11 @@ a.pagination-item:hover {
 .theme-base-0d .sidebar-toggle,
 .theme-base-0d .related-posts li a:hover {
   color: #6a9fb5;
+}
+.sidebar-toggle:active,
+#sidebar-checkbox:focus ~ .sidebar-toggle,
+#sidebar-checkbox:checked ~ .sidebar-toggle {
+  background-color: #6a9fb5;
 }
 
 /* Magenta */
@@ -524,6 +554,11 @@ a.pagination-item:hover {
 .theme-base-0e .related-posts li a:hover {
   color: #aa759f;
 }
+.sidebar-toggle:active,
+#sidebar-checkbox:focus ~ .sidebar-toggle,
+#sidebar-checkbox:checked ~ .sidebar-toggle {
+  background-color: #aa759f;
+}
 
 /* Brown */
 .theme-base-0f .sidebar,
@@ -535,6 +570,11 @@ a.pagination-item:hover {
 .theme-base-0f .sidebar-toggle,
 .theme-base-0f .related-posts li a:hover {
   color: #8f5536;
+}
+.sidebar-toggle:active,
+#sidebar-checkbox:focus ~ .sidebar-toggle,
+#sidebar-checkbox:checked ~ .sidebar-toggle {
+  background-color: #8f5536;
 }
 
 
