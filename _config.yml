@@ -1,7 +1,8 @@
+---
 # Permalinks
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:           pretty
+permalink: pretty
 #relative_permalinks: true
 
 # Setup
@@ -10,11 +11,17 @@ tagline: 'an annotated digital edition'
 description: An annotated digital edition created with <a href="http://readux.library.emory.edu/">Readux</a>
 url:
 baseurl: ''
-# Generate static export with relative links
-# Should NOT be used with a baseurl configured
+
+# Turn on relative links.
+# NOTE: only needed for deploying html at an unknown non top-level location.
+# It is recommended to use baseurl instead.
 relative_links: false
 
-homepage_image: http://readux.library.emory.edu/books/emory:7sr72/pages/emory:gmrpr/single-page/
+# NOTE: jekyll-sitemap is supported by github pages;
+# may be worth looking into at some point
+#gems:
+#  - jekyll-sitemap
+
 
 # About/contact
 author:
@@ -24,54 +31,49 @@ author:
   twitter:
 
 # Custom vars
-version:             1.0.0
-
+version: 1.0.0
 
 # readux export specifics
-show_annotation_author: true
+homepage_image: http://readux.library.emory.edu/books/emory:7sr72/pages/emory:gmrpr/single-page/
 
+show_annotation_author: true
 source_info:
-  title: '"Ladies first!"  a novel'
-  author: Verdenal, Dominique François, Mrs.
+  title: '"Ladies first!" a novel'
+  author: 'Verdenal, Dominique François, Mrs.'
   date: '1896'
-  url: 'http://readux.library.emory.edu/books/emory:7sr72/'
-  pdf_url: 'http://readux.library.emory.edu/books/emory:7sr72/pdf/#page=2'
+  url: http://readux.library.emory.edu/books/emory:7sr72/
+  pdf_url: http://readux.library.emory.edu/books/emory:7sr72/pdf/#page=2
   via_readux: true
 
 publication_info:
-  title: 'Ladies first!, an annotated edition'
-  author: Verdenal, Dominique François, Mrs.
+  title: '"Ladies first!" a novel, an annotated digital edition'
+  date: '2016'
+  author: 'Verdenal, Dominique François, Mrs.'
   editors:
     - "Tater, Anne O."
-  date: 2015
-  # publisher:
-  # rights:
+  tei_xml: tei.xml
 
 # optional: set thumbnail page size to tune page browse display
-# image_size:
-#   thumbnail:
-#     width:
-#     height:
-
+image_size:
+  thumbnail:
+    width: 204
+    height: 300
 
 collections:
-    annotations:
-        output: true
-    volume_pages:
-        output: true
-        permalink: /pages/:path/
+  annotations:
+    output: true
+  volume_pages:
+    output: true
+    permalink: /pages/:path/
 
 defaults:
-  - scope:
-      path: ""
-      type: volume_pages
-    values:
-      layout: volume_page
-      short_label: 'p.'
-      extra_js:
-        - deepzoom.js
-        - openseadragon.min.js
-        - volume-page.js
-
-
-
+- scope:
+    path: ''
+    type: volume_pages
+  values:
+    layout: volume_page
+    short_label: p.
+    extra_js:
+    - deepzoom.js
+    - openseadragon.min.js
+    - volume-page.js
