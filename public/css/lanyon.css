@@ -217,7 +217,7 @@ a.sidebar-nav-item:focus {
   display: block;
   padding: .25rem .75rem;
   color: #505050;
-  background-color: #fff;
+/*  background-color: #fff; */ /* looks funny over carousel page nav links */
   border-radius: .25rem;
   cursor: pointer;
 }

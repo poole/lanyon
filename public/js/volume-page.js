@@ -215,6 +215,9 @@ var marginalia = {
     annotationTop: function(annotation) {
         // calculate the top position of an annotation highlight
         // used for annotation sorting and showing marginalia items
+        if (!annotation.first().position()) {
+            return 0;
+        }
         var top = annotation.first().position().top,
            wrapped_top = annotation.first().parents('.inner>div');
 
@@ -289,11 +292,65 @@ $(document).ready(function () {
           marginalia.annotationSelected(event);
         });
 
+
         // Initalize on click.marginalia event for Marginalia items
-        $('.marginalia-item').find('.text').on('click.marginalia',function(event){
+        $('.marginalia-item .text').on('click.marginalia', function(event){
           marginalia.itemSelected(event);
         });
 
+        // For smaller screens, marginalia items are below page image
+        // and anchor links are used between annotations and highlights.
+        // Propagate the link click to the appropriate marginalia function.
+        $('.annotator-hl a').on('click.marginalia', function(event){
+            $(event.target).parent().click();
+        });
+        $('.marginalia-item a.to-hl').on('click.marginalia', function(event) {
+            $(event.target).parents('.marginalia-item').find('.text').click();
+        });
+    });
+
+    // map swipe directions to navigation rel link attributes
+    // currently using so-called "natural" directions to map
+    // left/right to next/prev, e.g. as if turning a page or swiping
+    // through a gallery
+    var swipe_nav_rel = {
+        'right': 'prev',
+        'left': 'next',
+        'up': 'index'
+    }
+
+    function swipeNav(direction) {
+       if (direction in swipe_nav_rel) {
+            var link = $('a[rel="' + swipe_nav_rel[direction] + '"]');
+            if (link.length) {
+                window.location = link.first().attr('href');
+            }
+       }
+    }
+
+    // enable touch swipe navigation
+    $(".page .content").swipe({
+        swipeLeft: function(event, direction, distance, duration, fingerCount) {
+            swipeNav(direction);
+        },
+        swipeRight: function(event, direction, distance, duration, fingerCount) {
+            swipeNav(direction);
+        },
+        // NOTE: can't use up swipe because it is needed for scrolling
+        // on the page
+        allowPageScroll: 'auto',
+        threshold: 200,
+        // exclude ocr text from swipe so it can still be selected normally
+        excludedElements:$.fn.swipe.defaults.excludedElements+", .ocr-line",
+
+        // hack to make sure scrolling works on ios,
+        // see https://github.com/mattbryson/TouchSwipe-Jquery-Plugin/issues/275
+        preventDefaultEvents: false,
+
+        /* NOTE: touchSwipe includes other functionality; e.g., could
+         use pinchOut or double swipes for additional functionality,
+         like turning on deep zoom.  However, pinchOut does not
+         seem to work reliably on touch devices (maybe ios only?).  */
     });
 
 });
