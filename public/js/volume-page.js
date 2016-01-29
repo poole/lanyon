@@ -316,7 +316,7 @@ $(document).ready(function () {
     var swipe_nav_rel = {
         'swiperight': 'prev',
         'swipeleft': 'next',
-    }
+    };
 
     function swipeNav(direction) {
        if (direction in swipe_nav_rel) {
@@ -327,45 +327,17 @@ $(document).ready(function () {
        }
     }
     // make sure text is still selectable with swipe area
-    // delete Hammer.defaults.cssProps.userSelect;
+    delete Hammer.defaults.cssProps.userSelect;
     // make image not draggable
     $('.page .content img').on('dragstart', function(event) { event.preventDefault(); });
 
-    // note: could bind to image only, but that seems to make swipe much
+    // Could bind to image only, but that seems to make swipe much
     // harder to use on text-heavy pages...
     var touch = new Hammer($('.page .content')[0]);
-    // listen to events...
+    // navigate to next/previous page on swipe left/right
     touch.on("swiperight swipeleft", function(ev) {
-        console.log(ev.type +" gesture detected.");
         swipeNav(ev.type);
     });
-    touch.on("pinchin pinchout", function(ev) {
-        console.log(ev.type +" gesture detected.");
-    });
-/*
-    // enable touch swipe navigation
-    $(".page .content").swipe({
-        swipeLeft: function(event, direction, distance, duration, fingerCount) {
-            swipeNav(direction);
-        },
-        swipeRight: function(event, direction, distance, duration, fingerCount) {
-            swipeNav(direction);
-        },
-        // NOTE: can't use up swipe because it is needed for scrolling
-        // on the page
-        allowPageScroll: 'auto',
-        // threshold: 200,
-        // exclude ocr text from swipe so it can still be selected normally
-        excludedElements:$.fn.swipe.defaults.excludedElements+", .ocr-line",
-
-        // hack to make sure scrolling works on ios,
-        // see https://github.com/mattbryson/TouchSwipe-Jquery-Plugin/issues/275
-        preventDefaultEvents: false,
-*/
-        /* NOTE: touchSwipe includes other functionality; e.g., could
-         use pinchOut or double swipes for additional functionality,
-         like turning on deep zoom.  However, pinchOut does not
-         seem to work reliably on touch devices (maybe ios only?).  */
-  // /  });
-
+    // Could use pinch gesture to trigger zoom mode, but it makes it
+    // impossible to scroll the page on smaller screens.
 });
