@@ -74,6 +74,10 @@
   color: black;
 }
 
+.in-page-controls{
+    position: relative;
+    z-index: 300;
+}
 #deepzoom-controls.fullpage{
     z-index:100;
 }
@@ -101,6 +105,7 @@
     padding: 0;
     left: 0;
     right: 0;
+    max-width: 1640px;  /* arbitrary limit for large monitors */
  }
 .page .content {
     position: relative;
@@ -402,11 +407,15 @@ span.glyphicon.glyphicon-chevron-left {
   margin-right: 55px;  /* space for carousel nav */
   top: 100px;  /* position to line up with top of page */
   height: 90%;
+  width: 315px;
   background-color: rgb(0,0,0,.3); /* test */
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .annotator-hl a, a.to-hl {
   display: none;
+  outline: 0;  /* remove outline when target url is clicked */
 }
 
 /* for smaller width screens, display annotations below the page image instead of beside */
@@ -420,6 +429,7 @@ span.glyphicon.glyphicon-chevron-left {
     margin: 0 55px;
     width: calc(100% - 120px);
     position: relative;
+    overflow: auto;
     /* fixme: this is centered differently than the page image is */;
   }
   ul.annotation-list {
@@ -429,9 +439,6 @@ span.glyphicon.glyphicon-chevron-left {
   }
   .annotation-list .marginalia-item {
     width: 100%;
-  }
-  .annotator-hl {
-    position: relative;
   }
   .annotator-hl a {
     position: absolute;
@@ -448,6 +455,11 @@ span.glyphicon.glyphicon-chevron-left {
     display: block;
     padding: 0 5px;
   }
+ /* site wide issue (not specific to volume page) */
+ .masthead  {
+    margin-bottom: 1rem;
+ }
+
 }
 
 @media screen and (max-width: 775px) {
@@ -464,4 +476,9 @@ span.glyphicon.glyphicon-chevron-left {
   .marginalia-item {
     margin: 0 3px 10px;
   }
+
+ .masthead {
+    margin-bottom: 0;
+ }
+
 }
