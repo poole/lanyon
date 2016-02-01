@@ -50,6 +50,7 @@ layout: default
 
     <aside class="margin-container">
         <ul class="annotation-list">
+        {% if page.annotation_count != 0 %}
         {% for annotation in site.annotations %}
             {% if annotation.annotated_page == page.tei_id %}
                 <li class="marginalia-item" data-annotation-id="{{ annotation.annotation_id }}">
@@ -59,6 +60,9 @@ layout: default
                 </li>
             {% endif %}
         {% endfor %}
+        {% else %}
+          <li class="empty-item"/>
+        {% endif %}
 
         </ul>
     </aside>

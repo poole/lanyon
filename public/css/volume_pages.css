@@ -413,6 +413,12 @@ span.glyphicon.glyphicon-chevron-left {
   overflow-x: hidden;
 }
 
+/* adjust marginalia styles to make "no content" note visible */
+li.empty-item:first-child:last-child {
+  top: 125px;
+  position: absolute;
+}
+
 .annotator-hl a, a.to-hl {
   display: none;
   outline: 0;  /* remove outline when target url is clicked */
@@ -455,10 +461,16 @@ span.glyphicon.glyphicon-chevron-left {
     display: block;
     padding: 0 5px;
   }
+  li.empty-item:first-child:last-child {
+    position: relative;
+    top: auto;
+  }
+
  /* site wide issue (not specific to volume page) */
  .masthead  {
     margin-bottom: 1rem;
  }
+
 
 }
 
