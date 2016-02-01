@@ -9,6 +9,11 @@ layout: default
         <div class="container in-page-controls">
             <div id="view-toggle" class="col-sm-4 pull-right">
                 <div class="btn-group pull-right">
+                {% comment %}annotation indicator/link for smaller screen layout {% endcomment %}
+                    {% if page.annotation_count != 0 %}
+                      <a class="comment-count" title="view {{ page.annotation_count }} annotation{{ page.annotation_count|pluralize }}" href="#annotations">
+                        {{ page.annotation_count }}</a>
+                    {% endif %}
                     <a id="enable-zoom" href="#" class="btn" alt="Deep Zoom Mode" title="Deep Zoom Mode"><span class="glyphicon glyphicon-fullscreen"></span></a>
 
                     <a id="covers" href="#" class="btn active" alt="Single Page" title="Single Page"><span class="glyphicon glyphicon-file"></span></a>
@@ -49,6 +54,7 @@ layout: default
 <!--    </div> (extra? seems to affect marginalia display) -->
 
     <aside class="margin-container">
+    <a name="annotations"></a>
         <ul class="annotation-list">
         {% if page.annotation_count != 0 %}
         {% for annotation in site.annotations %}
