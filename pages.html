@@ -4,18 +4,25 @@ title: 'Browse Pages'
 nav_order: 3
 extra_js:
   - masonry.min.js
-  - jquery.lazyload.js
+  - lazysizes.min.js
 ---
 {% include base.html %}
 
 <p>{{ site.volume_pages|size }} pages, {{ site.annotations|size }} annotations.</p>
 <hr/>
 <style type="text/css">
+{% assign small_thumb_threshold = '425px' %}
 {% comment %} override default page size when configured {% endcomment %}
 {% if site.image_size.thumbnail.width and site.image_size.thumbnail.height %}
     .page-thumbnails .page-thumbnail {
       width: {{ site.image_size.thumbnail.width }}px;
       height: {{ site.image_size.thumbnail.height }}px;
+    }
+    @media screen and (max-width: {{ small_thumb_threshold }}) {
+          .page-thumbnails .page-thumbnail {
+              width: {{ site.image_size.small-thumbnail.width }}px;
+              height: {{ site.image_size.small-thumbnail.height }}px;
+          }
     }
 {% endif %}
   <noscript>
@@ -34,7 +41,15 @@ extra_js:
 <div class="page-thumbnail">
     <a href="{{ baseurl }}{{ page.url }}" title="{{ page.title }}">
         <p class="page-number">{{ page.short_label}} {{ page.number }}</p>
-        <img class="lazy-load" data-original="{{ page.images.thumbnail }}"/>
+{% comment %}<img class="lazy-load" data-original="{{ page.images.thumbnail }}"/> {% endcomment %}
+        <picture>
+          <!--[if IE 9]><video style="display: none"><![endif]-->
+          <source
+              data-srcset="{{ page.images.small-thumbnail }}"
+              media="(max-width: {{small_thumb_threshold }})" />
+        <!--[if IE 9]></video><![endif]-->
+          <img data-src="{{ page.images.thumbnail }}" class="lazyload" />
+        </picture>
         <noscript>
             <img src="{{ page.images.thumbnail }}"/>
         </noscript>
@@ -51,12 +66,5 @@ extra_js:
 
 </div>
 
-
-
-<script>
-$(function() {
-    $("img.lazy-load").lazyload();
-});
-</script>
 
 

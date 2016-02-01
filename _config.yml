@@ -55,9 +55,15 @@ publication_info:
 
 # optional: set thumbnail page size to tune page browse display
 image_size:
+  page:
+    width: 695
+    height: 1000
   thumbnail:
-    width: 204
+    width: 208
     height: 300
+  small-thumbnail:
+    width: 69
+    height: 100
 
 collections:
   annotations:
