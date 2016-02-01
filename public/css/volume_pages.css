@@ -225,6 +225,13 @@ p.page-number {
     -moz-border-radius: 3px;
     border-radius: 3px;
 }
+a.comment-count:hover {
+  text-decoration: none;
+  color: white;
+}
+.page a.comment-count {
+  display: none;
+}
 
 /* comment placement on page thumbnail */
 .page-thumbnail .comment-count {
@@ -465,6 +472,10 @@ li.empty-item:first-child:last-child {
     position: relative;
     top: auto;
   }
+  .page a.comment-count {
+    display: inline-block;
+  }
+
 
  /* site wide issue (not specific to volume page) */
  .masthead  {
@@ -493,4 +504,11 @@ li.empty-item:first-child:last-child {
     margin-bottom: 0;
  }
 
+}
+
+@media screen and (min-width: 1200px) {
+  /* give annotations more room on larger screens */
+  .margin-container {
+    width: 30%;
+  }
 }
