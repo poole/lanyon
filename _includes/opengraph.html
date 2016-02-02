@@ -21,15 +21,6 @@
     <meta property="twitter:description" content="{{ page.excerpt | strip_html }}" />
   {% endif %}
 
-  {% if page.excerpt %}
-    <meta property="og:description" content="{{ page.excerpt | strip_html }}" />
-    <meta property="twitter:description" content="{{ page.excerpt | strip_html }}" />
-  {% elsif page.annotation_count %}  {% comment %} description for volume pages; includes annotation count if non-zero {% endcomment %}
-  {% capture page_description %}{{ page.title|xml_escape }} of {{ site.publication_info.title|xml_escape }}{% if page.annotation_count != 0 %} with {{ page.annotation_count }} annotation{% if page.annotation_count != 1 %}s{%endif %}{% endif %}{% endcapture %}
-    <meta property="og:description" content="{{ page_description }}"/>
-    <meta property="twitter:description" content="{{ page_description }}"/>
-  {% endif %}
-
   {% if page.images %}
     <meta property="og:image" content="{{ page.images.thumbnail }}"/>
     <meta property="twitter:image" content="{{ page.images.thumbnail }}"/>
