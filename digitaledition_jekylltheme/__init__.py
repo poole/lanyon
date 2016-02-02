@@ -6,8 +6,6 @@
 import os
 
 PKG_DIR = os.path.dirname(__file__)
-print 'pkg dir = ', PKG_DIR
-
 
 ZIPFILE_PATH = os.path.join(PKG_DIR, 'digitaledition-jekylltheme.zip')
 'Path to the packaged zipfile of the jekyll theme'
