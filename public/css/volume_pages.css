@@ -506,6 +506,19 @@ li.empty-item:first-child:last-child {
 
 }
 
+/* browse pages switches to smaller thumbnails */
+@media screen and (max-width: 425px) {
+  .page-thumbnails .comment-count {
+    margin:5px 5px 10px;
+  }
+  .page-thumbnails p.page-number {
+    font-size: 85%;
+  }
+  .page-thumbnails .page-thumbnail {
+    margin: 0px 10px 10px 0;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   /* give annotations more room on larger screens */
   .margin-container {
