@@ -21,23 +21,20 @@ function startzoom() {
     $("#deepzoom-controls").removeClass('hidden').addClass('visible');
     // use not-visible class to set image opacity, but leave it visible
     // to the browser because we need it for the page size/layout
-    $('.page-image').addClass('not-visible');
+    $('.page .content').addClass('not-visible');
 
-    // for now, hide annotations/marginalia in deep zoom mode
-    $('#toggle-annotations').addClass('not-visible');
-    $('.margin-container').addClass('not-visible');
-
+    // NOT hiding annotations as readux does, since the space is not used
 }
 
 function endzoom() {
     // reset deepzoom viewer to home
-    viewer.viewport.goHome();
+    viewer.viewport.goHome(true);  // true = immediately  (not working?)
     // move deepzoom div behind page image
     $('#zoom-page').removeClass('active').css('z-index', -1).hide();
     // hide the deepzoom controls
     $("#deepzoom-controls").addClass('hidden').removeClass('visible');
     // restore non-zoomable page image
-    $('.page-image').removeClass('not-visible');
+    $('.page .content').removeClass('not-visible');
     // restore annotations and marginalia
     $('#toggle-annotations').removeClass('not-visible');
     $('.margin-container').removeClass('not-visible');

@@ -257,10 +257,22 @@ var marginalia = {
 $(document).ready(function () {
       var resizeTimer; // Set resizeTimer to empty so it resets on page load
       function resizeFunction() {
+          var page_img =  $(".page img");
           // adjust font sizes based on container to use viewport height
-          $(".page img").relativeFontHeight({elements: $('.ocr-line')});
+
+          page_img.relativeFontHeight({elements: $('.ocr-line')});
           // adjust ocr text on window load or resize
           $(".ocrtext").textwidth();
+
+          // adjust deep-zoom container to match page image size and placement
+          var zoompage = $('#zoom-page');
+          zoompage.height(page_img.height());
+          zoompage.width(page_img.width());
+          // resize triggers on fullscreen deep zoom, but page image has no offset
+          var pg_offset = page_img.offset();
+          if (pg_offset != undefined) {
+              zoompage.css({'left': pg_offset.left});
+          }
       };
 
       // On resize, run the function and reset the timeout with a 250ms delay

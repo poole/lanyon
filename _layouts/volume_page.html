@@ -11,7 +11,7 @@ layout: default
                 <div class="btn-group pull-right">
                 {% comment %}annotation indicator/link for smaller screen layout {% endcomment %}
                     {% if page.annotation_count != 0 %}
-                      <a class="comment-count" title="view {{ page.annotation_count }} annotation{{ page.annotation_count|pluralize }}" href="#annotations">
+                      <a class="comment-count pull-left" title="{{ page.annotation_count }} annotation{{ page.annotation_count|pluralize }}" href="#annotations">
                         {{ page.annotation_count }}</a>
                     {% endif %}
                     <a id="enable-zoom" href="#" class="btn" alt="Deep Zoom Mode" title="Deep Zoom Mode"><span class="glyphicon glyphicon-fullscreen"></span></a>

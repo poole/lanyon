@@ -64,19 +64,22 @@
 
 #zoom-page {
    position: absolute;
-   margin: 0;
+   left: 55px;
+   margin: 0 auto;
    padding: 0;
    text-align:center;
    z-index: -1;
    width: 80%;
-   left: 10%;
-   height: 1000px;
-  color: black;
+   padding-right: 355px;  /* match page image space to marginalia */
+   height: 90%;
+   color: black;
 }
+
 
 .in-page-controls{
     position: relative;
     z-index: 300;
+    height: 100px;
 }
 #deepzoom-controls.fullpage{
     z-index:100;
@@ -85,6 +88,7 @@
 #deepzoom-controls.fullpage .btn-group:before{
     display:none;
 }
+
 
 .fullpage+#zoom-page{
     left:0;
@@ -114,6 +118,9 @@
     display: inline-block;
     min-height:100px;
  }
+
+
+
 .ocr-line {
     display: block;
     position: absolute;
@@ -231,6 +238,7 @@ a.comment-count:hover {
 }
 .page a.comment-count {
   display: none;
+  margin-bottom: 0;
 }
 
 /* comment placement on page thumbnail */
@@ -436,6 +444,11 @@ li.empty-item:first-child:last-child {
   .page .content {
      margin: auto;  /* remove extra margin used to make space for annotations */
   }
+  #zoom-page {
+    padding-right: auto;
+    margin: auto;
+  }
+
   .margin-container {
     top: auto;
     padding: 0;
