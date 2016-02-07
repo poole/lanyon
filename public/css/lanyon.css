@@ -237,16 +237,15 @@ a.sidebar-nav-item:focus {
 #sidebar-checkbox:focus ~ .sidebar-toggle,
 #sidebar-checkbox:checked ~ .sidebar-toggle {
   color: #fff;
-  background-color: #555;
 }
 
 .sidebar-toggle:active:before,
 #sidebar-checkbox:focus ~ .sidebar-toggle:before,
 #sidebar-checkbox:checked ~ .sidebar-toggle:before {
-  background-image: -webkit-linear-gradient(to bottom, #fff, #fff 20%, #555 20%, #555 40%, #fff 40%, #fff 60%, #555 60%, #555 80%, #fff 80%, #fff 100%);
-  background-image:    -moz-linear-gradient(to bottom, #fff, #fff 20%, #555 20%, #555 40%, #fff 40%, #fff 60%, #555 60%, #555 80%, #fff 80%, #fff 100%);
-  background-image:     -ms-linear-gradient(to bottom, #fff, #fff 20%, #555 20%, #555 40%, #fff 40%, #fff 60%, #555 60%, #555 80%, #fff 80%, #fff 100%);
-  background-image:         linear-gradient(to bottom, #fff, #fff 20%, #555 20%, #555 40%, #fff 40%, #fff 60%, #555 60%, #555 80%, #fff 80%, #fff 100%);
+  background-image: -webkit-linear-gradient(to bottom, #fff, #fff 20%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 40%, #fff 40%, #fff 60%, rgba(0,0,0,0) 60%, rgba(0,0,0,0) 80%, #fff 80%, #fff 100%);
+  background-image:    -moz-linear-gradient(to bottom, #fff, #fff 20%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 40%, #fff 40%, #fff 60%, rgba(0,0,0,0) 60%, rgba(0,0,0,0) 80%, #fff 80%, #fff 100%);
+  background-image:     -ms-linear-gradient(to bottom, #fff, #fff 20%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 40%, #fff 40%, #fff 60%, rgba(0,0,0,0) 60%, rgba(0,0,0,0) 80%, #fff 80%, #fff 100%);
+  background-image:         linear-gradient(to bottom, #fff, #fff 20%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 40%, #fff 40%, #fff 60%, rgba(0,0,0,0) 60%, rgba(0,0,0,0) 80%, #fff 80%, #fff 100%);
 }
 
 @media (min-width: 30.1em) {
@@ -444,6 +443,7 @@ a.pagination-item:hover {
 /* Red */
 .theme-base-08 .sidebar,
 .theme-base-08 .sidebar-toggle:active,
+.theme-base-08 #sidebar-checkbox:focus ~ .sidebar-toggle,
 .theme-base-08 #sidebar-checkbox:checked ~ .sidebar-toggle {
   background-color: #ac4142;
 }
@@ -456,6 +456,7 @@ a.pagination-item:hover {
 /* Orange */
 .theme-base-09 .sidebar,
 .theme-base-09 .sidebar-toggle:active,
+.theme-base-09 #sidebar-checkbox:focus ~ .sidebar-toggle,
 .theme-base-09 #sidebar-checkbox:checked ~ .sidebar-toggle {
   background-color: #d28445;
 }
@@ -468,6 +469,7 @@ a.pagination-item:hover {
 /* Yellow */
 .theme-base-0a .sidebar,
 .theme-base-0a .sidebar-toggle:active,
+.theme-base-0a #sidebar-checkbox:focus ~ .sidebar-toggle,
 .theme-base-0a #sidebar-checkbox:checked ~ .sidebar-toggle {
   background-color: #f4bf75;
 }
@@ -480,6 +482,7 @@ a.pagination-item:hover {
 /* Green */
 .theme-base-0b .sidebar,
 .theme-base-0b .sidebar-toggle:active,
+.theme-base-0b #sidebar-checkbox:focus ~ .sidebar-toggle,
 .theme-base-0b #sidebar-checkbox:checked ~ .sidebar-toggle {
   background-color: #90a959;
 }
@@ -492,6 +495,7 @@ a.pagination-item:hover {
 /* Cyan */
 .theme-base-0c .sidebar,
 .theme-base-0c .sidebar-toggle:active,
+.theme-base-0c #sidebar-checkbox:focus ~ .sidebar-toggle,
 .theme-base-0c #sidebar-checkbox:checked ~ .sidebar-toggle {
   background-color: #75b5aa;
 }
@@ -504,6 +508,7 @@ a.pagination-item:hover {
 /* Blue */
 .theme-base-0d .sidebar,
 .theme-base-0d .sidebar-toggle:active,
+.theme-base-0d #sidebar-checkbox:focus ~ .sidebar-toggle,
 .theme-base-0d #sidebar-checkbox:checked ~ .sidebar-toggle {
   background-color: #6a9fb5;
 }
@@ -516,6 +521,7 @@ a.pagination-item:hover {
 /* Magenta */
 .theme-base-0e .sidebar,
 .theme-base-0e .sidebar-toggle:active,
+.theme-base-0e #sidebar-checkbox:focus ~ .sidebar-toggle,
 .theme-base-0e #sidebar-checkbox:checked ~ .sidebar-toggle {
   background-color: #aa759f;
 }
@@ -528,6 +534,7 @@ a.pagination-item:hover {
 /* Brown */
 .theme-base-0f .sidebar,
 .theme-base-0f .sidebar-toggle:active,
+.theme-base-0f #sidebar-checkbox:focus ~ .sidebar-toggle,
 .theme-base-0f #sidebar-checkbox:checked ~ .sidebar-toggle {
   background-color: #8f5536;
 }
