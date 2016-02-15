@@ -7,7 +7,6 @@ extra_js:
   - lazysizes.min.js
 excerpt: Browse volume pages by thumbnail.
 ---
-{% include base.html %}
 
 <p>{{ site.volume_pages|size }} pages, {{ site.annotations|size }} annotations.</p>
 <hr/>
@@ -40,7 +39,7 @@ excerpt: Browse volume pages by thumbnail.
   data-masonry-options='{ "itemSelector": ".page-thumbnail" }'>
 {% for page in site.volume_pages %}
 <div class="page-thumbnail">
-    <a href="{{ baseurl }}{{ page.url }}" title="{{ page.title }}">
+    <a href="{{ site.baseurl }}{{ page.url }}" title="{{ page.title }}">
         <p class="page-number">{{ page.short_label}} {{ page.number }}</p>
 {% comment %}<img class="lazy-load" data-original="{{ page.images.thumbnail }}"/> {% endcomment %}
         <picture>

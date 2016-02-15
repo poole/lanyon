@@ -5,7 +5,6 @@ nav_order: 4
 extra_js:
   - jekyll-search.min.js
 ---
-{% include base.html %}
 <div class="article-container">
 {% comment %}Search form and results container {% endcomment %}
   <div class="container">
@@ -34,7 +33,7 @@ var page_template = '<div class="media {type}"> ' +
 SimpleJekyllSearch({
   searchInput: document.getElementById('search-input'),
   resultsContainer: document.getElementById('search-results'),
-  json: '{{ baseurl }}/search.json',
+  json: '{{ site.baseurl }}/search.json',
   searchResultTemplate: page_template,
   limit: 100,
 });
