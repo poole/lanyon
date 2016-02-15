@@ -11,7 +11,7 @@ extra_js:
   <div class="container">
       <div id="search-container">
         <input type="text" id="search-input" class="form-control" style="width:auto"
-            size="100"
+            size="100" autofocus="true"
             placeholder="Search pages and annotations">
             <p class="help-block">Search by keyword or phrase.</p>
       </div>
@@ -23,7 +23,7 @@ extra_js:
 var page_template = '<div class="media {type}"> ' +
     '<h4><a href="{url}">{title}</a></h4>' +
     '<div class="media-left">' +
-    '    <a href="{url}">' +
+    '    <a href="{page_url}">' +
     '    <img class="media-object img-thumbnail"' +
     '            src="{image}" alt="{title}" title="{title}"/>' +
     '         </a>' +

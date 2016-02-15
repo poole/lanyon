@@ -10,6 +10,7 @@ other pages, e.g. introduction, credits, etc.{% endcomment %}
       "type"     : "volume_page",
       "title"    : "{{ page.title | escape }}",
       "url"      : "{{ baseurl }}{{ page.url }}",
+      "page_url" : "{{ baseurl }}{{ page.url }}",
       "image"    : "{{ page.images.small-thumbnail}}",
       "content"  : {{ page.content | strip_html | strip_newlines | jsonify }},
       "preview"  : {{ page.content | strip_html | strip_newlines | truncatewords: 50 | jsonify}}
@@ -24,7 +25,8 @@ other pages, e.g. introduction, credits, etc.{% endcomment %}
       "preview" : "{{ annotation.content | strip_html | strip_newlines | truncatewords: 50 }}",
       {% assign page=site.volume_pages[annotation.page_index] %}
       "title"   : "Annotation of {{ page.title }}",
-      "url"     : "{{ baseurl }}{{ page.url }}",
+      "url"     : "{{ baseurl }}{{ annotation.url }}",
+      "page_url": "{{ baseurl }}{{ page.url }}",
       "image"   : "{{ page.images.small-thumbnail}}"
     } {% unless forloop.last %},{% endunless %}
   {% endfor %}

@@ -62,6 +62,9 @@ layout: default
                 <li class="marginalia-item" data-annotation-id="{{ annotation.annotation_id }}">
                     <a name="{{ annotation.annotation_id }}" title="view highlight"
                         href="#hl-{{ annotation.annotation_id }}" class="to-hl"><span class="glyphicon glyphicon-chevron-up"></span></a>
+
+                    <a class="to-fullpage" href="{{ baseurl }}{{ annotation.url }}" title="full page annotation view"><i class="fa fa-expand"></i></a>
+
                 {% include annotation.html %}
                 </li>
             {% endif %}

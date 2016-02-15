@@ -439,6 +439,13 @@ li.empty-item:first-child:last-child {
   outline: 0;  /* remove outline when target url is clicked */
 }
 
+a.to-fullpage {
+  float: right;
+  padding: 5px;
+  color: #999
+}
+
+
 /* for smaller width screens, display annotations below the page image instead of beside */
 @media screen and (max-width: 1000px) {
   .page .content {
@@ -479,7 +486,7 @@ li.empty-item:first-child:last-child {
     color: #999;
     float: right;
     display: block;
-    padding: 0 5px;
+    padding: 5px;
   }
   li.empty-item:first-child:last-child {
     position: relative;
@@ -537,4 +544,16 @@ li.empty-item:first-child:last-child {
   .margin-container {
     width: 30%;
   }
+
+  #zoom-page {
+   position: absolute;
+   left: 55px;
+   margin: 0 auto;
+   padding: 0;
+   text-align:center;
+   z-index: -1;
+   width: 80%;
+   padding-right: 355px;  /* match page image space to marginalia */
+
+
 }
