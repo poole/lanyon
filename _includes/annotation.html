@@ -1,7 +1,7 @@
 <div rel="schema:comment">
 <div id="{{ annotation.annotation_id }}"
     about="#{{ annotation.annotation_id }}" typeof="schema:Comment">
-<meta property="schema:about" content="{{ site.volume_pages[annotation.page_index].url }}"/>
+<meta property="schema:about" content="{{ site.baseurl }}{{ site.volume_pages[annotation.page_index].url }}"/>
 <div class="text" property="schema:text">{{ annotation.content }}</div>
 <!-- show annotation author names if configured -->
 {% if site.show_annotation_author %}
