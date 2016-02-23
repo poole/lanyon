@@ -257,10 +257,23 @@ var marginalia = {
 $(document).ready(function () {
       var resizeTimer; // Set resizeTimer to empty so it resets on page load
       function resizeFunction() {
+        var page_img = $(".page img");
           // adjust font sizes based on container to use viewport height
-          $(".page img").relativeFontHeight({elements: $('.ocr-line')});
+          page_img.relativeFontHeight({elements: $('.ocr-line')});
           // adjust ocr text on window load or resize
           $(".ocrtext").textwidth();
+
+          // adjust deep-zoom container to match page image size and placement
+          var zoompage = $('#zoom-page'),
+              img_container =  $(".page .content");
+          // size relative to the image, but position relative to the container
+          zoompage.height(page_img.height());
+          zoompage.width(page_img.width());
+          // resize triggers on fullscreen deep zoom, but page image has no offset
+          var pg_pos = img_container.position();
+          if (pg_pos != undefined) {
+              zoompage.css({'left': pg_pos.left});
+          }
       };
 
       // On resize, run the function and reset the timeout with a 250ms delay
@@ -314,10 +327,9 @@ $(document).ready(function () {
     // left/right to next/prev, e.g. as if turning a page or swiping
     // through a gallery
     var swipe_nav_rel = {
-        'right': 'prev',
-        'left': 'next',
-        'up': 'index'
-    }
+        'swiperight': 'prev',
+        'swipeleft': 'next',
+    };
 
     function swipeNav(direction) {
        if (direction in swipe_nav_rel) {
@@ -327,30 +339,18 @@ $(document).ready(function () {
             }
        }
     }
+    // make sure text is still selectable with swipe area
+    delete Hammer.defaults.cssProps.userSelect;
+    // make image not draggable
+    $('.page .content img').on('dragstart', function(event) { event.preventDefault(); });
 
-    // enable touch swipe navigation
-    $(".page .content").swipe({
-        swipeLeft: function(event, direction, distance, duration, fingerCount) {
-            swipeNav(direction);
-        },
-        swipeRight: function(event, direction, distance, duration, fingerCount) {
-            swipeNav(direction);
-        },
-        // NOTE: can't use up swipe because it is needed for scrolling
-        // on the page
-        allowPageScroll: 'auto',
-        threshold: 200,
-        // exclude ocr text from swipe so it can still be selected normally
-        excludedElements:$.fn.swipe.defaults.excludedElements+", .ocr-line",
-
-        // hack to make sure scrolling works on ios,
-        // see https://github.com/mattbryson/TouchSwipe-Jquery-Plugin/issues/275
-        preventDefaultEvents: false,
-
-        /* NOTE: touchSwipe includes other functionality; e.g., could
-         use pinchOut or double swipes for additional functionality,
-         like turning on deep zoom.  However, pinchOut does not
-         seem to work reliably on touch devices (maybe ios only?).  */
+    // Could bind to image only, but that seems to make swipe much
+    // harder to use on text-heavy pages...
+    var touch = new Hammer($('.page .content')[0]);
+    // navigate to next/previous page on swipe left/right
+    touch.on("swiperight swipeleft", function(ev) {
+        swipeNav(ev.type);
     });
-
+    // Could use pinch gesture to trigger zoom mode, but it makes it
+    // impossible to scroll the page on smaller screens.
 });

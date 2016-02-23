@@ -3,7 +3,6 @@ layout: default
 title: Home
 nav_order: 1
 ---
-{% include base.html %}
 {% comment %}NOTE: could put type on the body element via yaml config, but
 could be misleading because this is also a website ... {% endcomment %}
 <div class="container" typeof="schema:Book">
@@ -31,8 +30,8 @@ could be misleading because this is also a website ... {% endcomment %}
 {% endif %}
 
 <!-- todo: use page objects for this instead of hard-coding urls -->
-<p><a href="{{ baseurl }}/introduction/">Read the introduction</a></p>
-<p><a href="{{ baseurl }}/pages/">Browse the pages</a></p>
+<p><a href="{{ site.baseurl }}/introduction/">Read the introduction</a></p>
+<p><a href="{{ site.baseurl }}/pages/">Browse the pages</a></p>
 
 {% comment %} link to source edition if urls are configured {% endcomment %}
 {% if site.source_info.url and site.source_info.pdf_url %}

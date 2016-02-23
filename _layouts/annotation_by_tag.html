@@ -2,7 +2,6 @@
 layout: default
 excerpt: Browse annotations by tag.
 ---
-{% include base.html %}
 <div class="container">
 {% comment %}
   Use tag name from data if we can, but use slug as fallback for display.
@@ -20,9 +19,9 @@ excerpt: Browse annotations by tag.
         {% if annotation.tags contains page.tag %}
         <div class="media">
             {% assign page=site.volume_pages[annotation.page_index] %}
-            {% ifchanged %}<h4><a href="{{ baseurl }}{{ page.url }}">{{ page.title }}</a></h4>{% endifchanged %}
+            {% ifchanged %}<h4><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h4>{% endifchanged %}
             <div class="media-left">
-                <a href="{{ baseurl }}{{ page.url }}">
+                <a href="{{ site.baseurl }}{{ page.url }}">
                     <p class="page-number">{{ page.short_label}} {{ page.number }}</p>
                      <img class="media-object img-thumbnail"
                         src="{{ page.images.small-thumbnail }}"
@@ -30,6 +29,7 @@ excerpt: Browse annotations by tag.
                  </a>
             </div>
              <div class="media-body" class="width:100%">
+            <a class="to-fullpage" href="{{ site.baseurl }}{{ annotation.url }}" title="full page annotation view"><i class="fa fa-expand"></i></a>
 
             {% include annotation.html %}
             </div>

@@ -12,16 +12,10 @@ description: An annotated digital edition created with <a href="http://readux.li
 url:
 baseurl: ''
 
-# Turn on relative links.
-# NOTE: only needed for deploying html at an unknown non top-level location.
-# It is recommended to use baseurl instead.
-relative_links: false
-
 # NOTE: jekyll-sitemap is supported by github pages;
 # may be worth looking into at some point
 #gems:
 #  - jekyll-sitemap
-
 
 # About/contact
 author:
@@ -55,13 +49,20 @@ publication_info:
 
 # optional: set thumbnail page size to tune page browse display
 image_size:
+  page:
+    width: 695
+    height: 1000
   thumbnail:
-    width: 204
+    width: 208
     height: 300
+  small-thumbnail:
+    width: 69
+    height: 100
 
 collections:
   annotations:
     output: true
+    permalink: /annotations/:path/
   volume_pages:
     output: true
     permalink: /pages/:path/
@@ -77,5 +78,10 @@ defaults:
     - deepzoom.js
     - openseadragon.min.js
     - volume-page.js
-    - jquery.touchSwipe.min.js
+    - hammer.min.js
+- scope:
+    path: ''
+    type: annotations
+  values:
+    layout: annotation
 

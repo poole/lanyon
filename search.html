@@ -5,13 +5,12 @@ nav_order: 4
 extra_js:
   - jekyll-search.min.js
 ---
-{% include base.html %}
 <div class="article-container">
 {% comment %}Search form and results container {% endcomment %}
   <div class="container">
       <div id="search-container">
         <input type="text" id="search-input" class="form-control" style="width:auto"
-            size="100"
+            size="100" autofocus="true"
             placeholder="Search pages and annotations">
             <p class="help-block">Search by keyword or phrase.</p>
       </div>
@@ -23,7 +22,7 @@ extra_js:
 var page_template = '<div class="media {type}"> ' +
     '<h4><a href="{url}">{title}</a></h4>' +
     '<div class="media-left">' +
-    '    <a href="{url}">' +
+    '    <a href="{page_url}">' +
     '    <img class="media-object img-thumbnail"' +
     '            src="{image}" alt="{title}" title="{title}"/>' +
     '         </a>' +
@@ -34,7 +33,7 @@ var page_template = '<div class="media {type}"> ' +
 SimpleJekyllSearch({
   searchInput: document.getElementById('search-input'),
   resultsContainer: document.getElementById('search-results'),
-  json: '{{ baseurl }}/search.json',
+  json: '{{ site.baseurl }}/search.json',
   searchResultTemplate: page_template,
   limit: 100,
 });

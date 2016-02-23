@@ -1,0 +1,27 @@
+---
+layout: default
+---
+{% comment %} display a single annotation in full-page view {% endcomment %}
+
+<div class="container">
+    {% assign volume_page=site.volume_pages[page.page_index] %}
+    <h4><a href="{{ site.baseurl }}{{ volume_page.url }}">{{ volume_page.title }}</a></h4>
+    <div class="row">
+    <div class="col-md-2 col-sm-2 col-xs-4">
+        <a href="{{ site.baseurl }}{{ volume_page.url }}">
+             <img class="img-thumbnail"
+                src="{{ volume_page.images.small-thumbnail }}"
+                alt="{{ volume_page.title }}" title="{{ page.title }}"/>
+                {% comment %} could use larger thumbnail for larger displays? {% endcomment %}
+         </a>
+    </div>
+     <div class="col-md-10 col-sm-10 col-xs-12">
+     {% comment %}use same include used to render annotations for marginalia display;
+     includes footer and tag handling {% endcomment %}
+     {% assign annotation=page %}
+     {% include annotation.html %}
+    </div>
+    </div> {% comment %} end row {% endcomment %}
+</div>
+
+</div>

@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-{% include base.html %}
 <article class="carousel page">
     <h1>{{ page.title }}</h1>
     <div class="carousel-inner">
@@ -9,11 +8,16 @@ layout: default
         <div class="container in-page-controls">
             <div id="view-toggle" class="col-sm-4 pull-right">
                 <div class="btn-group pull-right">
+                {% comment %}annotation indicator/link for smaller screen layout {% endcomment %}
+                    {% if page.annotation_count != 0 %}
+                      <a class="comment-count pull-left" title="{{ page.annotation_count }} annotation{{ page.annotation_count|pluralize }}" href="#annotations">
+                        {{ page.annotation_count }}</a>
+                    {% endif %}
                     <a id="enable-zoom" href="#" class="btn" alt="Deep Zoom Mode" title="Deep Zoom Mode"><span class="glyphicon glyphicon-fullscreen"></span></a>
 
                     <a id="covers" href="#" class="btn active" alt="Single Page" title="Single Page"><span class="glyphicon glyphicon-file"></span></a>
 
-                    <a id="list" alt="Browse pages" title="Browse pages" href="{{ baseurl }}/pages/" class="btn" rel="index"><span class="glyphicon glyphicon-th"></span></a>
+                    <a id="list" alt="Browse pages" title="Browse pages" href="{{ site.baseurl }}/pages/" class="btn" rel="index"><span class="glyphicon glyphicon-th"></span></a>
                 </div>
 
                 <div id="deepzoom-controls" class="hidden">
@@ -49,16 +53,24 @@ layout: default
 <!--    </div> (extra? seems to affect marginalia display) -->
 
     <aside class="margin-container">
+    <a name="annotations"></a>
         <ul class="annotation-list">
+        {% if page.annotation_count != 0 %}
         {% for annotation in site.annotations %}
             {% if annotation.annotated_page == page.tei_id %}
                 <li class="marginalia-item" data-annotation-id="{{ annotation.annotation_id }}">
                     <a name="{{ annotation.annotation_id }}" title="view highlight"
                         href="#hl-{{ annotation.annotation_id }}" class="to-hl"><span class="glyphicon glyphicon-chevron-up"></span></a>
+
+                    <a class="to-fullpage" href="{{ site.baseurl }}{{ annotation.url }}" title="full page annotation view"><i class="fa fa-expand"></i></a>
+
                 {% include annotation.html %}
                 </li>
             {% endif %}
         {% endfor %}
+        {% else %}
+          <li class="empty-item"/>
+        {% endif %}
 
         </ul>
     </aside>
@@ -85,12 +97,12 @@ otherwise find pages based on index to support Jekyll 2.4 on GitHub Pages.
     {% endif %}
 
     {% if prev_page %}
-    <a class="left carousel-control" href="{{ baseurl }}{{ prev_page.url }}" role="button" data-slide="prev" title="Prev: {{ prev_page.title }}" rel="prev">
+    <a class="left carousel-control" href="{{ site.baseurl }}{{ prev_page.url }}" role="button" data-slide="prev" title="Prev: {{ prev_page.title }}" rel="prev">
         <span class="glyphicon glyphicon-chevron-left"></span>
     </a>
     {% endif %}
     {% if next_page %}
-    <a class="right carousel-control" href="{{ baseurl }}{{ next_page.url }}" role="button" data-slide="next" title="Next: {{ next_page.title }}" rel="next">
+    <a class="right carousel-control" href="{{ site.baseurl }}{{ next_page.url }}" role="button" data-slide="next" title="Next: {{ next_page.title }}" rel="next">
         <span class="glyphicon glyphicon-chevron-right"></span>
     </a>
     {% endif %}
