@@ -501,6 +501,10 @@ a.to-fullpage {
     display: inline-block;
   }
 
+/* annotation display: related pages link */
+.annotator-related-pages {
+  padding-left: 5px;
+}
 
  /* site wide issue (not specific to volume page) */
  .masthead  {
