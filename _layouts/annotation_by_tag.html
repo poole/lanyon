@@ -11,21 +11,19 @@ excerpt: Browse annotations by tag.
 {% endif %}
 
 <h1>Annotations tagged with {{ tag_name }}</h1>
-
     {% if site.data.tags[page.tag] %}
-    {% comment %} FIXME: annotations currently not sorted ... {% endcomment %}
-    {% comment %} Note that it may not be possible to sort without adding more data to the import {% endcomment %}
         {% for annotation in site.annotations|sort: 'sort_order' %}
+
         {% if annotation.tags contains page.tag %}
         <div class="media">
-            {% assign page=site.volume_pages[annotation.page_index] %}
-            {% ifchanged %}<h4><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h4>{% endifchanged %}
+            {% assign annotated_page=site.volume_pages[annotation.page_index] %}
+            {% ifchanged %}<h4><a href="{{ site.baseurl }}{{ annotated_page.url }}">{{ annotated_page.title }}</a></h4>{% endifchanged %}
             <div class="media-left">
-                <a href="{{ site.baseurl }}{{ page.url }}">
-                    <p class="page-number">{{ page.short_label}} {{ page.number }}</p>
+                <a href="{{ site.baseurl }}{{ annotated_page.url }}">
+                    <p class="page-number">{{ annotated_page.short_label}} {{ annotated_page.number }}</p>
                      <img class="media-object img-thumbnail"
-                        src="{{ page.images.small-thumbnail }}"
-                        alt="{{ page.title }}" title="{{ page.title }}"/>
+                        src="{{ annotated_page.images.small-thumbnail }}"
+                        alt="{{ annotated_page.title }}" title="{{ annotated_page.title }}"/>
                  </a>
             </div>
              <div class="media-body" class="width:100%">
