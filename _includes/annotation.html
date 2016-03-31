@@ -3,7 +3,7 @@
     about="#{{ annotation.annotation_id }}" typeof="schema:Comment">
 <meta property="schema:about" content="{{ site.baseurl }}{{ site.volume_pages[annotation.page_index].url }}"/>
 <div class="text" property="schema:text">{{ annotation.content }}</div>
-{% if annotation.related_pages.size != 0 %}
+{% if annotation.related_pages.size > 0 %}
 {% comment %} find and display volume pages based on annotation related page ids {% endcomment %}
 <div class="annotator-related-pages">
     Related pages:
