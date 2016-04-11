@@ -10,7 +10,7 @@ tagline:             'Blog'
 description:         'kaist ingyo'
 url:                 http://j31d0.github.io
 baseurl:             ''
-paginate:            5
+paginate:            3
 
 # About/contact
 author:
