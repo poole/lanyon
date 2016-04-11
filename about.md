@@ -3,11 +3,11 @@ layout: page
 title: About
 ---
 
-# school
+#### school
 school of mathematical science, KAIST
 
-#about
+#### posting
 hacking, ctf, ..
 
-#contact
+#### contact
 e-mail : jihee0219@gmail.com
