@@ -2,6 +2,7 @@
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
 permalink:           pretty
+gems: [jekyll-paginate]
 
 # Setup
 title:               j31d0
