@@ -3,6 +3,7 @@
 # Use of `relative_permalinks` ensures post links from the index work properly.
 permalink:           pretty
 gems: [jekyll-paginate]
+paginate_path: "page:num"
 
 # Setup
 title:               j31d0
@@ -10,7 +11,7 @@ tagline:             'Blog'
 description:         'kaist ingyo'
 url:                 http://j31d0.github.io
 baseurl:             ''
-paginate:            3
+paginate:            5
 
 # About/contact
 author:
