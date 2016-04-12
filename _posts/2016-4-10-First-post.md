@@ -1,6 +1,7 @@
 ---
 layout: post
 title: first post
+category: sample
 ---
 
 hello.
