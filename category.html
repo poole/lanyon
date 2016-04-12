@@ -1,0 +1,25 @@
+---
+layout: page
+title: Category
+---
+
+<div class="category">
+  {% for category in site.categories %}
+  <div class="category-block" id="{{ category | first }}">
+    <h2>
+      {{ category | first }}
+      <small>({{ category | last | size }})</small>
+    </h2>
+    {% for posts in category %}
+      {% for post in posts %}
+        {% if post.url %}
+        <div>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+          <span class="article-date">{{ post.date | date_to_string }}</span>
+        </div>
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  </div>
+  {% endfor %}
+</div>
