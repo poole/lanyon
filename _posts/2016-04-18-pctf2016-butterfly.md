@@ -58,7 +58,9 @@ so this program get one integer, and xor one specific bits.
 I choose one address to change stack operation
 
 > .text:0000000000400860                 add     rsp, 48h | 48 83 C4 48
+
 to
+
 > .text:0000000000400860                 add     rsp,  8h | 48 83 C4 08
 
 so i can control return address. (goto main and loop this thing)
