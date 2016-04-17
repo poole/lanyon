@@ -12,6 +12,7 @@ description:         'kaist ingyo'
 url:                 http://j31d0.github.io
 baseurl:             ''
 paginate:            5
+timezone:            Asia/Tokyo
 
 # About/contact
 author:
