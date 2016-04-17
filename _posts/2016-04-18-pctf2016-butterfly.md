@@ -6,6 +6,7 @@ category: writeup
 
 
 with disassembler, I can get pseudocode like
+
 ```c
 int __cdecl main(int argc, const char **argv, const char **envp)
 {
@@ -68,6 +69,7 @@ so i can control return address. (goto main and loop this thing)
 and next thing is easy: overwrite any address to shellcode and execute it.
 
 my exploit code:
+
 ```python
 import pwnbox
 import struct

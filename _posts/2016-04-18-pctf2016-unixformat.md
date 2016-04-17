@@ -5,6 +5,7 @@ category: writeup
 ---
 
 this is simple formatter of unix time, and there are vulnerability in exit function.
+
 ```C
 signed __int64 menu_exit()
 {
@@ -29,6 +30,7 @@ signed __int64 menu_exit()
   return result;
 }
 ```
+
 If I goto exit, and choose "N", then I can reuse free chunks.
 so other thing is find values which is given by malloc.
 
