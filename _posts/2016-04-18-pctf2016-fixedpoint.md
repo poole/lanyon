@@ -4,7 +4,7 @@ title: pctf 2016 fixedpoint writeup
 category: writeup
 ---
 
-```C
+```c
 #include <stdlib.h>
 #include <sys/mman.h>
 #include <stdio.h>
@@ -32,7 +32,7 @@ but float is not so precise to control lsb, so i use float with
 
 I use hex-to-int convert code to find payload.
 
-```C
+```c
 --helper.c--
 int* hex_to_int(float a)
 {

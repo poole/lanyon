@@ -6,7 +6,7 @@ category: writeup
 
 this is simple formatter of unix time, and there are vulnerability in exit function.
 
-```C
+```c
 signed __int64 menu_exit()
 {
   signed __int64 result; // rax@1
