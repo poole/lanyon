@@ -3,7 +3,16 @@
     about="#{{ annotation.annotation_id }}" typeof="schema:Comment">
 <meta property="schema:about" content="{{ site.baseurl }}{{ site.volume_pages[annotation.page_index].url }}"/>
 <div class="text" property="schema:text">{{ annotation.content }}</div>
-<!-- show annotation author names if configured -->
+{% if annotation.related_pages.size > 0 %}
+{% comment %} find and display volume pages based on annotation related page ids {% endcomment %}
+<div class="annotator-related-pages">
+    Related pages:
+    {% for rel_page in annotation.related_pages %}
+        {% for page in site.volume_pages %}{% if page.tei_id == rel_page %}<a href="{{ site.baseurl }}{{ page.url }}">{{ page.short_label }} {{ page.number }}</a>{% endif %}{% endfor %}{% if forloop.last == false %}, {% endif %}
+    {% endfor %}
+</div>
+{% endif %}
+{% comment %} show annotation author names if configured {% endcomment %}
 {% if site.show_annotation_author %}
 <div class="annotation-footer"><span class="annotation-author" property="schema:author">{{ annotation.author }}</span></div>
 {% endif %}

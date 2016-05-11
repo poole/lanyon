@@ -40,12 +40,18 @@ will include the following:
   - one markdown file per annotation; files are numbered by annotation id
 - a tag [data file](http://jekyllrb.com/docs/datafiles/) in `_data/tags.yml`
   with the tags from your annotations
-- one markdown page per tag in the `tags` directory, for simple acess to
+- one markdown page per tag in the `tags` directory, for simple access to
   annotations by tag
 
 The base Jekyll theme also includes placeholder introduction and credits
 pages, which you can edit to content to your annotated digital
 edition.  Additional pages can be added in a similar fashion.
+
+Note that Jekyll is generally thought of as a blogging platform.  That functionality is
+still available here, of course, but in a somewhat suppressed fashion.  If you want to
+add blog posts to your digital edition, feel free to do so.  You will have to determine
+how and where to integrate them into the site, since they are not
+curently included.
 
 ## Options
 
