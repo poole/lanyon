@@ -1,19 +1,20 @@
 # Dependencies
 markdown:         redcarpet
-pygments:         true
+highlighter:      true
+gems:             [jekyll-paginate]
 
 # Permalinks
 permalink:        pretty
 
 # Setup
-title:            Lanyon
+title:            Arash
 tagline:          'A Jekyll theme'
-description:      'A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:              http://lanyon.getpoole.com
+description:      'Collection of stories'
+url:              http://arashThr.github.io
 
 author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
+  name:           'Arash Thr'
+  url:            https://twitter.com/arashThr
 
 paginate:         5
 
@@ -21,4 +22,4 @@ paginate:         5
 version:          1.0.0
 
 github:
-  repo:           https://github.com/poole/lanyon
+  repo:           https://github.com/arashThr/
