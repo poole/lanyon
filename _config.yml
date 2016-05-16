@@ -1,14 +1,16 @@
 # Dependencies
 markdown:         redcarpet
 highlighter:      true
-gems:             [jekyll-paginate]
+gems:
+    - jekyll-paginate
+    - jalalidate
 
 # Permalinks
 permalink:        pretty
 
 # Setup
-title:            Arash
-tagline:          'A series of mind events'
+title:            'از متن'
+tagline:          'دفترچه یادداشتی کوچک'
 description:      'مجموعه‌ای از افکار و داستان‌ها'
 url:              http://arashThr.github.io
 
