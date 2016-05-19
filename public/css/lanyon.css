@@ -40,12 +40,37 @@ body {
   overflow-x: hidden;
 }
 
+@font-face {
+  font-family: "Droid Arabic Naskh";
+  font-style: normal;
+  font-weight: 400;
+  src: url("//fonts.gstatic.com/ea/droidarabicnaskh/v7/DroidNaskh-Regular.eot?#iefix") format("embedded-opentype"), url("//fonts.gstatic.com/ea/droidarabicnaskh/v7/DroidNaskh-Regular.woff2") format("woff2"), url("//fonts.gstatic.com/ea/droidarabicnaskh/v7/DroidNaskh-Regular.woff") format("woff"), url("//fonts.gstatic.com/ea/droidarabicnaskh/v7/DroidNaskh-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "mitra";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/BMitra-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "mitra";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/BMitra-Regular.woff") format("woff");
+}
+
+.fa {
+    font-family: "Droid Arabic Naskh", Arial, sans-serif
+}
+
 html {
-  font-family: "PT Serif", Georgia, "Times New Roman", serif;
+  font-family: "mitra", "PT Serif", Georgia, "Times New Roman", serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-family: "mitra", "PT Sans", Helvetica, Arial, sans-serif;
   font-weight: 400;
   color: #313131;
   letter-spacing: -.025rem;
@@ -148,7 +173,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 14rem;
   visibility: hidden;
   overflow-y: auto;
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-family: "mitra", "PT Sans", Helvetica, Arial, sans-serif;
   font-size: .875rem; /* 15px */
   color: rgba(255,255,255,.6);
   background-color: #202020;
@@ -357,7 +382,7 @@ a.sidebar-nav-item:focus {
   overflow: hidden; /* clearfix */
   margin-left: -1rem;
   margin-right: -1rem;
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-family: "mitra", "PT Sans", Helvetica, Arial, sans-serif;
   color: #ccc;
   text-align: center;
 }
@@ -524,4 +549,17 @@ a.pagination-item:hover {
 .theme-base-0f .sidebar-toggle,
 .theme-base-0f .related-posts li a:hover {
   color: #8f5536;
+}
+
+@counter-style abjad {
+  system: additive;
+  range: 1 1000;
+  additive-symbols: 1000 "\63A", 900 "\638", 800 "\636", 700 "\630", 600 "\62E", 500 "\62B", 400 "\62A", 300 "\634", 200 "\631", 100 "\642", 90 "\635", 80 "\641", 70 "\639", 60 "\633", 50 "\646", 40 "\645", 30 "\644", 20 "\6A9", 10 "\649", 9 "\637", 8 "\62D", 7 "\632", 6 "\648", 5 "\FEEB", 4 "\62F", 3 "\62C", 2 "\628", 1 "\627\644\641";
+}
+
+@counter-style abjad-persian {
+  system: additive;
+  range: 1 1000;
+  additive-symbols: 1000 "\63A", 900 "\638", 800 "\636", 700 "\630", 600 "\62E", 500 "\62B", 400 "\62A", 300 "\634", 200 "\631", 100 "\642", 90 "\635", 80 "\641", 70 "\639", 60 "\633", 50 "\646", 40 "\645", 30 "\644", 20 "\6AF", 10 "\649", 9 "\637", 8 "\62D", 7 "\698", 6 "\648", 5 "\FEEB", 4 "\62F", 3 "\686", 2 "\67E", 1 "\627\644\641";
+  suffix: ". ";
 }
