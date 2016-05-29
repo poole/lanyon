@@ -85,8 +85,8 @@ RCP<const Poly> add_upoly(const Poly &a, const Poly &b)
 and how easily it can be used :
 
 ```c++
-A = uint_poly("x", {(0 : 1), (1 : 2)});	// 2*x + 1
-B = uint_poly("x", {(2 : 2)});			// 2*x**2
+A = uint_poly("x", {(0 : 1), (1 : 2)});   // 2*x + 1
+B = uint_poly("x", {(2 : 2)});            // 2*x**2
 
 C =  add_upoly(*A, *B);
 ```
