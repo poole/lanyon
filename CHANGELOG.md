@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.7
+
+* Enabled [jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap)
+
 ## 0.6
 
 * Display links to related pages when included in annotation metadata; only show related pages section
