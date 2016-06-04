@@ -7,7 +7,7 @@ category: writeup
 this problem is simple assembly challenge.
 
 
-```C
+```c
 void mamama()
 {
   int v0; // ebx@1
@@ -54,5 +54,24 @@ void mamama()
   exit(0);
 }
 ```
-answer is also simple~~~
+I can receive heap pointer and binary base approximately, so it seems easy. but between write and JUMPOUT, there are terrible assembly codes.
+
+
+```
+.text:0000000000000A3F                 call    _write
+.text:0000000000000A44                 mov     rax, [rsp+28h+buf]
+.text:0000000000000A49                 xor     rbx, rbx
+.text:0000000000000A4C                 xor     rcx, rcx
+.......
+.text:0000000000000A73                 xor     rsp, rsp
+.......
+.text:0000000000000ABE                 xorps   xmm14, xmm14
+.text:0000000000000AC2                 xorps   xmm15, xmm15
+.text:0000000000000AC6                 mov     rbx, [rax]
+.text:0000000000000AC9                 mov     rcx, [rbx]
+.text:0000000000000ACC                 mov     rdx, [rcx]
+.text:0000000000000ACF                 jmp     qword ptr [rdx]
+
+```
+so all registers set to 0 except rax, rbx, rcx, rdx.
 
