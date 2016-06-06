@@ -5,7 +5,7 @@ title: Flint Polynomials
 
 ### Overview
 
-This week has not been as interesting as the last. Most of my work this week involved wrapping Flint Polynomials, for use in SymEngine. I will discuss their internal implemetation and how they were integrated to the library.
+This week has not been as interesting as the last. Most of my work this week involved wrapping Flint Polynomials, for use in SymEngine. I will discuss their internal implementation and how they were integrated to the library.
 
 ### Flint Polynomials
 
@@ -25,9 +25,9 @@ static Poly from_vec()
 These methods are, as indicated from their names, used to construct the polynomial from any of the three sources. So, for example to construct a `UIntPolyFlint`, you can : 
 
 ```c++
-UIntPolyFlint a = UIntPolyFlint::from_container(fmpz_polyxx A);
-UIntPolyFlint b = UIntPolyFlint::from_vec(vector<integer_class> B);
-UIntPolyFlint a = UIntPolyFlint::from_dict(map<uint, integer_class> C);
+PolyFlint a = PolyFlint::from_container(fmpz_polyxx A);
+PolyFlint b = PolyFlint::from_vec(vector<integer_class> B);
+PolyFlint a = PolyFlint::from_dict(map<uint, integer_class> C);
 ```
 
 ### `integer_class` Conversions
