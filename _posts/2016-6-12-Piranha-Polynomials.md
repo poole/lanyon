@@ -22,7 +22,7 @@ Here, `Cf` is the class for storing the coefficients, while `Key` are the monomi
 
 ### SymEngine's integers in `piranha::polynomial`
 
-For an integer class to be usable as the `Cf`
+For an integer class to be usable as the `Cf` it should have some basic properties like, default constructibility, copy constructibility
 
 All the work related to flint polynomials can be seen in [#971](https://github.com/symengine/symengine/pull/971). The majority of the PR concerns introducing a new class `UIntPolyFlint` and all the necessary functionality like `__hash__`, `eval` and `compare`. Test cases have also been added, to see if the polynomial manipulation is working as intended. There is some additional minor work done here apart from this class introduction.
 
