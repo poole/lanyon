@@ -3,7 +3,7 @@ layout: page
 title: Search
 nav_order: 4
 extra_js:
-  - lunr.min.js
+  - elasticlunr.min.js
 ---
 <div class="article-container">
 {% comment %}Search form and results container {% endcomment %}
@@ -39,15 +39,15 @@ extra_js:
 // });
 
 // create the index
-var index = lunr(function(){
-    this.ref('id'); // special unique identifier (id)
-    this.field('type');
-    this.field('title', {boost: 10});
-    this.field('url');
-    this.field('page_url');
-    this.field('image');
-    this.field('content', {boost: 10});
-    this.field('preview');
+var index = elasticlunr(function(){
+    this.setRef('id'); // special unique identifier (id)
+    this.addField('type');
+    this.addField('title', {boost: 10});
+    this.addField('url');
+    this.addField('page_url');
+    this.addField('image');
+    this.addField('content', {boost: 10});
+    this.addField('preview');
 });
 
 // store information that will be retrieved later
@@ -56,22 +56,25 @@ var store = {};
 // read json content from file using jQuery
 $.getJSON( "/search.json", function( data ) {
   $.each( data, function( key, val ) {
-    index.add({
-        type: val.type,
-        title: val.title,
-        url: val.url,
-        page_url: val.page_url,
-        image: val.image,
-        content: val.content,
-        preview: val.preview,
-        id: val.id,
-    });
+    index.addDoc(val);
+    // index.add({
+    //     id: val.id,
+    //     type: val.type,
+    //     title: val.title,
+    //     url: val.url,
+    //     page_url: val.page_url,
+    //     image: val.image,
+    //     content: val.content,
+    //     preview: val.preview,
+    // });
 
     store[val.id] = {
+      type: val.type,
       title: val.title,
-      content: val.content,
+      url: val.url,
       page_url: val.page_url,
-      url: val.url
+      image: val.image,
+      content: val.content
     };
   });
 
@@ -88,7 +91,12 @@ jQuery(function($) {
             jQuery('.search-results').empty();
         } else {
             // perform search
-            var results = index.search(query);
+            var results = index.search(query, {
+              fields: {
+                title: {boost: 0}
+              },
+              expand: true
+            });
 
             $('#search-results').empty().append(
                 results.length ?
