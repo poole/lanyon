@@ -40,7 +40,8 @@ $.getJSON( "/search.json", function( data ) {
       url: val.url,
       page_url: val.page_url,
       image: val.image,
-      content: val.content
+      content: val.content,
+      preview: val.preview
     };
   });
 });
@@ -76,9 +77,31 @@ var execute_search = function() {
                         .attr('href', href_url)
                         .text(store[result.ref].title)
                     );
+
+                // show content
                 if (store[result.ref].content) {
                     el.append($('<p class="search-result-content">').text(store[result.ref].content));
                 }
+
+                // show page image
+                if (store[result.ref].image) {
+                    var img_container_el = $('<div class="media-left">');
+                    var img_link_el = $('<a>').attr('href', store[result.ref].page_url);
+                    var img_el = $('<img class="media-object img-thumbnail">')
+                      .attr('src', store[result.ref].image)
+                      .attr('alt', store[result.ref].title)
+                      .attr('title', store[result.ref].title)
+                    el.append(img_container_el.append(img_link_el.append(img_el)));
+                }
+
+                // show preview
+                // if (store[result.ref].preview) {
+                //   var preview_el = $('<div class="media-body">')
+                //     .css("width", "100%")
+                //     .text(store[result.ref].preview);
+                //   el.append(preview_el);
+                // }
+
                 return el;
             }) : $('<section class="search-result"><p>No results found</p></section>')
         );
