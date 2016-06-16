@@ -5,7 +5,6 @@ var search_options = {};
 $(document).ready(function(){
   // event listener for search options
   $( "#search-component" ).on( "click", 'input[name=scope]:checkbox, \
-    input[name=boolean]:radio, \
     input[name=expansion]:radio',
     function() {
       execute_search();
@@ -69,14 +68,14 @@ $.getJSON( "/search.json", function( data ) {
 var execute_search = function() {
     // get search options
     var expansion = $("input[name=expansion]:checked").val() == "expansion" ? true:false || true;
-    var boolean = $("input[name=boolean]:checked").val() || "OR";
+    // var boolean = $("input[name=boolean]:checked").val() || "OR";
     var fields = {};
     $("input[name=scope]:checked").each(function () {
         fields[this.value] = {};
     });
     search_options["expand"] = expansion;
     search_options["fields"] = fields;
-    search_options["boolean"] = boolean;
+    // search_options["boolean"] = boolean;
 
     // get search query
     var query = $('#search-input').val();
@@ -86,7 +85,6 @@ var execute_search = function() {
         jQuery('.search-results').empty();
     } else {
         // perform search
-
         var results = index.search(query, search_options);
         debugger;
         $('#search-results').empty().append(
