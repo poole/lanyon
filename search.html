@@ -16,18 +16,18 @@ extra_js:
             <p class="help-block">Search by keyword or phrase. </p>
       </div>
 
-      <div class="row text-left">
-        <div class="col-md-3">
+      <div class="row text-left" id="search-component">
+        <div class="col-md-3" id="search-filter-scope">
           <div>search scope</div>
-          <input type="checkbox" id="search-title" value="title" />
+          <input type="checkbox" name="scope" id="search-title" value="title" />
           <label for="search-title">include title</label>
           <br />
 
-          <input type="checkbox" id="search-content" value="content" />
+          <input type="checkbox" name="scope" id="search-content" value="content" />
           <label for="search-content">include content</label>
           <br />
 
-          <input type="checkbox" id="search-preview" value="preview" />
+          <input type="checkbox" name="scope" id="search-preview" value="preview" />
           <label for="search-preview">include preview</label>
 
         </div>
