@@ -5,6 +5,9 @@ nav_order: 4
 extra_js:
   - elasticlunr.min.js
   - search.js
+  - bootstrap.min.js
+extra_css:
+  - search.css
 ---
 <div class="article-container">
 {% comment %}Search form and results container {% endcomment %}
@@ -18,39 +21,51 @@ extra_js:
 
       <div class="row text-left" id="search-component">
         <div class="col-md-3" id="search-filter-scope">
-          <div>search scope</div>
+          <div class="search-option-title">search scope
+            <i class="fa fa-question-circle search-tooltips"
+              rel="tooltip"
+              title="include fields that you would like to search against (default to all fields below)"></i>
+          </div>
           <input type="checkbox" name="scope" id="search-title" value="title" checked/>
-          <label for="search-title">include title</label>
+          <label class="search-label" for="search-title">include title</label>
           <br />
 
           <input type="checkbox" name="scope" id="search-content" value="content" checked/>
-          <label for="search-content">include content</label>
+          <label class="search-label" for="search-content">include content</label>
           <br />
 
           <input type="checkbox" name="scope" id="search-preview" value="preview" checked/>
-          <label for="search-preview">include preview</label>
-
+          <label class="search-label" for="search-preview">include preview</label>
         </div>
-        <!-- <div class="col-md-3">
-          <div>keyword boolean</div>
-          <input type="radio" name="boolean" value="or" checked> OR (default)
-          <br>
-          <input type="radio" name="boolean" value="and"> AND
-        </div> -->
         <div class="col-md-3">
-          <div>search category</div>
+          <div class="search-option-title">
+            keyword expansion
+            <i class="fa fa-question-circle search-tooltips"
+              rel="tooltip"
+              title="show search results even if keywords are partially available in the content"></i>
+          </div>
+          <input type="radio" name="expansion" value="expansion" checked> expand
+          <br>
+          <input type="radio" name="expansion" value="no-expansion"> do not expand
+        </div>
+        <div class="col-md-3">
+          <div class="search-option-title">search category
+            <i class="fa fa-question-circle search-tooltips"
+              rel="tooltip"
+              title="search within only certain types (default to all types)"></i>
+          </div>
           <select>
             <option value="all">All (default)</option>
             <option value="pages">Pages</option>
             <option value="annotations">Annotations</option>
           </select>
         </div>
-        <div class="col-md-3">
-          <div>keyword expansion</div>
-          <input type="radio" name="expansion" value="expansion" checked> expand
+        <!-- <div class="col-md-3">
+          <div class="search-option-title">keyword boolean</div>
+          <input type="radio" name="boolean" value="or" checked> OR (default)
           <br>
-          <input type="radio" name="expansion" value="no-expansion"> do not expand
-        </div>
+          <input type="radio" name="boolean" value="and"> AND
+        </div> -->
       </div>
     <div class="media text-left" id="search-results"></div>
   </div>
