@@ -77,7 +77,7 @@ var execute_search = function() {
                         .text(store[result.ref].title)
                     );
                 if (store[result.ref].content) {
-                    el.after($('<p class="search-result-content">').text(store[result.ref].content));
+                    el.append($('<p class="search-result-content">').text(store[result.ref].content));
                 }
                 return el;
             }) : $('<section class="search-result"><p>No results found</p></section>')
