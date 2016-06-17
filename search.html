@@ -6,6 +6,7 @@ extra_js:
   - elasticlunr.min.js
   - search.js
   - bootstrap.min.js
+  - facetedsearch.js
 extra_css:
   - search.css
 ---
@@ -54,10 +55,10 @@ extra_css:
               rel="tooltip"
               title="search within only certain types (default to all types)"></i>
           </div>
-          <select>
+          <select name="type-facet">
             <option value="all">All (default)</option>
-            <option value="pages">Pages</option>
-            <option value="annotations">Annotations</option>
+            <option value="volume_page">Pages</option>
+            <option value="annotation">Annotations</option>
           </select>
         </div>
         <!-- <div class="col-md-3">

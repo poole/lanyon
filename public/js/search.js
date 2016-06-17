@@ -5,8 +5,9 @@ var store = {};
 // attach event listeners and initialize tooltips
 $(document).ready(function(){
   // event listener for search options
-  $( "#search-component" ).on( "click", 'input[name=scope]:checkbox, \
-    input[name=expansion]:radio',
+  $( "#search-component" ).on( "change", 'input[name=scope]:checkbox, \
+    input[name=expansion]:radio, \
+    select[name="type-facet"]',
     function() {
       execute_search();
   });
@@ -18,8 +19,8 @@ $(document).ready(function(){
   $(".search-tooltips").tooltip({ placement: 'bottom'});
 })
 
-// create the index
-var index = elasticlunr(function(){
+// setup index model
+var elasticlunr_index = elasticlunr(function(){
     this.setRef('id'); // special unique identifier (id)
     this.addField('type');
     this.addField('title');
@@ -31,27 +32,46 @@ var index = elasticlunr(function(){
 });
 
 // read json content from file using jQuery
-$.getJSON( "/search.json", function( data ) {
-  $.each( data, function( key, val ) {
-    index.addDoc(val);
-    store[val.id] = {
-      type: val.type,
-      title: val.title,
-      url: val.url,
-      page_url: val.page_url,
-      image: val.image,
-      content: val.content,
-      preview: val.preview
-    };
+var build_index = function(elasticlunr_index, search_type) {
+  // remove existing index if any
+  for (doc in elasticlunr_index.documentStore.docs) {
+    elasticlunr_index.removeDoc(elasticlunr_index.documentStore.docs[doc]);
+  }
+
+  // fill index with data
+  $.ajax({
+    url: "/search.json",
+    dataType: 'json',
+    async: false,
+    success: function(data) {
+      $.each( data, function( key, val ) {
+        if (search_type === val.type || search_type === "all") {
+          elasticlunr_index.addDoc(val);
+          store[val.id] = {
+            type: val.type,
+            title: val.title,
+            url: val.url,
+            page_url: val.page_url,
+            image: val.image,
+            content: val.content,
+            preview: val.preview
+          };
+        }
+      });
+    }
   });
-});
+
+  return elasticlunr_index;
+}
 
 // search logic
 var execute_search = function() {
     // get search options
     var expansion = $("input[name=expansion]:checked").val() == "expansion" ? true : false;
     var boolean = $("input[name=boolean]:checked").val();
+    var search_type = $("select[name=type-facet]").val();
     var fields = {};
+
     $("input[name=scope]:checked").each(function () {
         fields[this.value] = {};
     });
@@ -66,6 +86,9 @@ var execute_search = function() {
     if (query === '') {
         jQuery('.search-results').empty();
     } else {
+        // build the index
+        var index = build_index(elasticlunr_index, search_type);
+
         // perform search
         var results = index.search(query, search_options);
         $('#search-results').empty().append(
