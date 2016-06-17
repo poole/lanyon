@@ -1,6 +1,7 @@
 // initialize search option object and store object
 var search_options = {}
 var store = {};
+var types = [];
 
 // attach event listeners and initialize tooltips
 $(document).ready(function(){
@@ -17,6 +18,36 @@ $(document).ready(function(){
 
   // add tooltips
   $(".search-tooltips").tooltip({ placement: 'bottom'});
+
+  // populate the 'type' dropdown from data
+  // fill index with data
+  $.ajax({
+    url: "/search.json",
+    dataType: 'json',
+    async: false,
+    success: function(data) {
+      // get all types
+      var all_types = data.map(function(datum) {
+        return datum.type;
+      });
+
+      // get unique types
+      types = $.grep(all_types, function(el, index) {
+          return index == $.inArray(el, all_types);
+      });
+
+      // add all to the types for select dropdown
+      types.unshift("all");
+    }
+  });
+
+  // populate select dropdown for types
+  $.each(types, function(key, value) {
+    $('select[name=type-facet]')
+      .append($("<option></option>")
+        .attr("value", value)
+        .text(value));
+  });
 })
 
 // setup index model
