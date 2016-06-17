@@ -108,7 +108,7 @@ var build_index = function(elasticlunr_index, search_type) {
     success: function(data) {
       $.each( data, function( key, val ) {
         if ((search_type === val.type || search_type === "all")
-          && (search_tags.length == 0 || $.inArray(val.tag ,search_tags) )) {
+          && (search_tags.length == 0 || $.inArray(val.tag ,search_tags) != -1 )) {
           elasticlunr_index.addDoc(val);
           store[val.id] = {
             type: val.type,
