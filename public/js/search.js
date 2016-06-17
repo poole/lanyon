@@ -3,12 +3,62 @@ var search_options = {}
 var store = {};
 var types = [];
 
+// search by tags
+$(document).ready(function(){
+  // extract distinct tags
+  var tags = extract_distinct('/search.json', 'tag', false);
+
+  // populate select dropdown for tags
+  $.each(tags, function(key, value) {
+    $('select[name=tag-facet]')
+      .append($("<option></option>")
+        .attr("value", value)
+        .text(value));
+  });
+
+  // render select2 with options
+  $("#tag-facet").select2({ width: '100%' });
+});
+
+// extract distinct values from json
+var extract_distinct = function(json_url, field, hasAll) {
+  var distinct_values = [];
+
+  // read from json file
+  $.ajax({
+    url: json_url,
+    dataType: 'json',
+    async: false,
+    success: function(data) {
+      // get all values
+      var all_values = data.map(function(datum) {
+        return datum[field];
+      });
+
+      // get unique types
+      distinct_values = $.grep(all_values, function(el, index) {
+          return index == $.inArray(el, all_values);
+      });
+
+      // add all to the types for select dropdown
+      if (hasAll) {
+        distinct_values.unshift("all");
+      }
+    }
+  });
+
+  // return distinct field values in an array
+  return distinct_values;
+}
+
+
 // attach event listeners and initialize tooltips
 $(document).ready(function(){
   // event listener for search options
   $( "#search-component" ).on( "change", 'input[name=scope]:checkbox, \
     input[name=expansion]:radio, \
-    select[name="type-facet"]',
+    select[name="type-facet"], \
+    select[name="tag-facet"]',
     function() {
       execute_search();
   });
@@ -19,27 +69,8 @@ $(document).ready(function(){
   // add tooltips
   $(".search-tooltips").tooltip({ placement: 'bottom'});
 
-  // populate the 'type' dropdown from data
-  // fill index with data
-  $.ajax({
-    url: "/search.json",
-    dataType: 'json',
-    async: false,
-    success: function(data) {
-      // get all types
-      var all_types = data.map(function(datum) {
-        return datum.type;
-      });
-
-      // get unique types
-      types = $.grep(all_types, function(el, index) {
-          return index == $.inArray(el, all_types);
-      });
-
-      // add all to the types for select dropdown
-      types.unshift("all");
-    }
-  });
+  // extract distinct values from type field
+  var types = extract_distinct('/search.json', 'type', true);
 
   // populate select dropdown for types
   $.each(types, function(key, value) {
@@ -76,7 +107,8 @@ var build_index = function(elasticlunr_index, search_type) {
     async: false,
     success: function(data) {
       $.each( data, function( key, val ) {
-        if (search_type === val.type || search_type === "all") {
+        if ((search_type === val.type || search_type === "all")
+          && (search_tags.length == 0 || $.inArray(val.tag ,search_tags) )) {
           elasticlunr_index.addDoc(val);
           store[val.id] = {
             type: val.type,
@@ -109,6 +141,9 @@ var execute_search = function() {
     search_options["expand"] = expansion;
     search_options["fields"] = fields;
     // search_options["boolean"] = boolean;
+    search_tags = $("#tag-facet").select2("data").map(function(datum){
+      return datum.text;
+    });
 
     // get search query
     var query = $('#search-input').val();
@@ -118,7 +153,7 @@ var execute_search = function() {
         jQuery('.search-results').empty();
     } else {
         // build the index
-        var index = build_index(elasticlunr_index, search_type);
+        var index = build_index(elasticlunr_index, search_type, search_tags);
 
         // perform search
         var results = index.search(query, search_options);

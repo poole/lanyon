@@ -6,9 +6,10 @@ extra_js:
   - elasticlunr.min.js
   - search.js
   - bootstrap.min.js
-  - facetedsearch.js
+  - select2.min.js
 extra_css:
   - search.css
+  - select2.min.css
 ---
 <div class="article-container">
 {% comment %}Search form and results container {% endcomment %}
@@ -57,6 +58,15 @@ extra_css:
           </div>
           <select name="type-facet"></select>
         </div>
+        <div class="col-md-3">
+          <div class="search-option-title">filter by tags
+            <i class="fa fa-question-circle search-tooltips"
+              rel="tooltip"
+              title="search by tags"></i>
+          </div>
+          <select name="tag-facet" multiple="multiple" id="tag-facet"></select>
+        </div>
+
         <!-- <div class="col-md-3">
           <div class="search-option-title">keyword boolean</div>
           <input type="radio" name="boolean" value="or" checked> OR (default)
