@@ -90,10 +90,13 @@ customized and modify the following fields as desired:
 
 ### Search
 
-Currently, search is implemented using
+Currently, search is implemented using [Elasticlunr.js](http://elasticlunr.com/), a JavaScript-based search engine that does not require any extra Jekyll plugins, and provide more advanced features than Lunr.js, which is what Elasticlunr.js is based on. There are also changes to the UI so that the search is more granular and provides features such as faceting, filtering, and other options.
+
+Previously, search is implemented using
 [Simple-Jekyll-Search](https://github.com/christian-fei/Simple-Jekyll-Search), a javascript-based search that does not require any extra Jekyll plugins.  This provides a
 simple keyword and exact phrase search on volume pages and annotation
 content.
+
 
 ### Citation Information
 
