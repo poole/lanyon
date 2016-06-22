@@ -3,7 +3,13 @@ layout: page
 title: Search
 nav_order: 4
 extra_js:
-  - jekyll-search.min.js
+  - elasticlunr.min.js
+  - search.js
+  - bootstrap.min.js
+  - select2.min.js
+extra_css:
+  - search.css
+  - select2.min.css
 ---
 <div class="article-container">
 {% comment %}Search form and results container {% endcomment %}
@@ -12,30 +18,62 @@ extra_js:
         <input type="text" id="search-input" class="form-control" style="width:auto"
             size="100" autofocus="true"
             placeholder="Search pages and annotations">
-            <p class="help-block">Search by keyword or phrase.</p>
+            <p class="help-block">Search by keyword or phrase. </p>
+      </div>
+
+      <div class="row text-left" id="search-component">
+        <div class="col-md-3" id="search-filter-scope">
+          <div class="search-option-title">search scope
+            <i class="fa fa-question-circle search-tooltips"
+              rel="tooltip"
+              title="include fields that you would like to search against (default to all fields below)"></i>
+          </div>
+          <input type="checkbox" name="scope" id="search-title" value="title" checked/>
+          <label class="search-label" for="search-title">include title</label>
+          <br />
+
+          <input type="checkbox" name="scope" id="search-content" value="content" checked/>
+          <label class="search-label" for="search-content">include content</label>
+          <br />
+
+          <input type="checkbox" name="scope" id="search-preview" value="preview" checked/>
+          <label class="search-label" for="search-preview">include preview</label>
+        </div>
+        <div class="col-md-3">
+          <div class="search-option-title">
+            keyword expansion
+            <i class="fa fa-question-circle search-tooltips"
+              rel="tooltip"
+              title="show search results even if keywords are partially available in the content"></i>
+          </div>
+          <input type="radio" name="expansion" value="expansion" checked> expand
+          <br>
+          <input type="radio" name="expansion" value="no-expansion"> do not expand
+        </div>
+        <div class="col-md-3">
+          <div class="search-option-title">search category
+            <i class="fa fa-question-circle search-tooltips"
+              rel="tooltip"
+              title="search within only certain types (default to all types)"></i>
+          </div>
+          <select name="type-facet"></select>
+        </div>
+        <div class="col-md-3">
+          <div class="search-option-title">filter by tags
+            <i class="fa fa-question-circle search-tooltips"
+              rel="tooltip"
+              title="search by tags"></i>
+          </div>
+          <select name="tag-facet" multiple="multiple" id="tag-facet"></select>
+        </div>
+
+        <!-- <div class="col-md-3">
+          <div class="search-option-title">keyword boolean</div>
+          <input type="radio" name="boolean" value="or" checked> OR (default)
+          <br>
+          <input type="radio" name="boolean" value="and"> AND
+        </div> -->
       </div>
     <div class="media text-left" id="search-results"></div>
   </div>
 </div>
-
-<script>
-var page_template = '<div class="media {type}"> ' +
-    '<h4><a href="{url}">{title}</a></h4>' +
-    '<div class="media-left">' +
-    '    <a href="{page_url}">' +
-    '    <img class="media-object img-thumbnail"' +
-    '            src="{image}" alt="{title}" title="{title}"/>' +
-    '         </a>' +
-    '</div>' +
-    '<div class="media-body" class="width:100%">{preview}</div>' +
-'</div>';
-
-SimpleJekyllSearch({
-  searchInput: document.getElementById('search-input'),
-  resultsContainer: document.getElementById('search-results'),
-  json: '{{ site.baseurl }}/search.json',
-  searchResultTemplate: page_template,
-  limit: 100,
-});
-
-</script>
