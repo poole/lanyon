@@ -239,7 +239,27 @@ var execute_search = function() {
 
         // perform search
         var results = index.search(query, search_options);
-        $('#search-results').empty().append(
+
+        // clear search-results container
+        $('#search-results').empty();
+
+        // limit search results
+        var limited_results = "";
+        var RESULT_LIMIT = 50;
+        if (results.length > RESULT_LIMIT) {
+          limited_results = "Only first " + RESULT_LIMIT + " out of " + results.length + " results are shown for better performance."
+          results = results.slice(0, RESULT_LIMIT);
+        }
+
+        // append search result limit message (if applicable)
+        $('#search-results').append(
+          $('<section class="search-result">').append(
+            $("<p>").text(limited_results)
+          )
+        );
+
+        // append search results
+        $('#search-results').append(
             results.length ?
             results.map( function (result) {
                 var href_url = store[result.ref].page_url || store[result.ref].url;
