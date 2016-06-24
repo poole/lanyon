@@ -85,6 +85,15 @@ var search_options = {}
 var store = {};
 var types = [];
 
+// delay function for user input delay
+var delay = (function(){
+  var timer = 0;
+  return function(callback, ms){
+    clearTimeout (timer);
+    timer = setTimeout(callback, ms);
+  };
+})();
+
 // search by tags
 $(document).ready(function(){
   // extract distinct tags
@@ -146,7 +155,9 @@ $(document).ready(function(){
   });
 
   // event listener for query change
-  $('#search-input').keyup(execute_search);
+  $('#search-input').keyup(function() {
+    delay(execute_search, 500);
+  });
 
   // add tooltips
   $(".search-tooltips").tooltip({ placement: 'bottom'});
