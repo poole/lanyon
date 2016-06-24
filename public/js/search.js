@@ -6,7 +6,7 @@ var types = [];
 // search by tags
 $(document).ready(function(){
   // extract distinct tags
-  var tags = extract_distinct('/search.json', 'tag', false);
+  var tags = extract_distinct('search.json', 'tag', false);
 
   // populate select dropdown for tags
   $.each(tags, function(key, value) {
@@ -70,7 +70,7 @@ $(document).ready(function(){
   $(".search-tooltips").tooltip({ placement: 'bottom'});
 
   // extract distinct values from type field
-  var types = extract_distinct('/search.json', 'type', true);
+  var types = extract_distinct('search.json', 'type', true);
 
   // populate select dropdown for types
   $.each(types, function(key, value) {
@@ -102,7 +102,7 @@ var build_index = function(elasticlunr_index, search_type) {
 
   // fill index with data
   $.ajax({
-    url: "/search.json",
+    url: "search.json",
     dataType: 'json',
     async: false,
     success: function(data) {
