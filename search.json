@@ -22,7 +22,7 @@ other pages, e.g. introduction, credits, etc.{% endcomment %}
     {
       "id"      : {{forloop.index | plus: site.volume_pages.size}} ,
       "type"    : "annotation",
-      "tag"      : "tag-annotation",
+      "tags"    : {{ annotation.tags | jsonify }},
       "content" : "{{ annotation.content | strip_html | strip_newlines }}",
       "preview" : "{{ annotation.content | strip_html | strip_newlines | truncatewords: 50 }}",
       {% assign page=site.volume_pages[annotation.page_index] %}
