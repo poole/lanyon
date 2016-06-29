@@ -16,14 +16,20 @@ extra_css:
             placeholder="Search pages and annotations">
             <p class="help-block">Search by keyword or phrase. </p>
       </div>
-
-      <div class="row text-left" id="search-component" style="display: none;">
-        <div class="col-md-3">
-          <div class="search-option-title">search category</div>
-          <select name="type-facet"></select>
+      <div id="search-component" style="display: none;">
+        <div class="row text-left">
+          <div class="col-md-12">
+            <div class="search-option-title">applied filters</div>
+            <div class="applied-filters"></div>
+          </div>
+        </div>
+        <div class="row text-left">
+          <div class="col-md-12">
+            <div class="search-option-title">search type</div>
+            <div id="facet-type"></div>
+          </div>
         </div>
       </div>
-
     <div class="media text-left" id="search-results"></div>
   </div>
 </div>
@@ -31,9 +37,39 @@ extra_css:
 <script type="text/javascript">
 
 // initialize search option object and store object
-var search_options = {}
 var store = {};
 var types = [];
+var tags = [];
+
+// remove all query strings from the URI
+var remove_query_strings = function() {
+  var clean_uri = location.protocol + "//" + location.host + location.pathname;
+  var hash_pos = location.href.indexOf("#");
+  if (hash_pos > 0) {
+      var hash = location.href.substring(hash_pos, location.href.length);
+      clean_uri += hash;
+  }
+  return clean_uri;
+}
+
+// remove a specified url param
+var remove_url_param = function removeParam(key, sourceURL) {
+    var rtn = sourceURL.split("?")[0],
+        param,
+        params_arr = [],
+        queryString = (sourceURL.indexOf("?") !== -1) ? sourceURL.split("?")[1] : "";
+    if (queryString !== "") {
+        params_arr = queryString.split("&");
+        for (var i = params_arr.length - 1; i >= 0; i -= 1) {
+            param = params_arr[i].split("=")[0];
+            if (param === key) {
+                params_arr.splice(i, 1);
+            }
+        }
+        rtn = rtn + "?" + params_arr.join("&");
+    }
+    return rtn;
+}
 
 // delay function for user input delay
 var delay = (function(){
@@ -44,15 +80,20 @@ var delay = (function(){
   };
 })();
 
-// extract distinct items
-$(document).ready(function(){
-  // extract distinct tags and search types
-  var tags = extract_distinct('{{ site.baseurl }}/search.json', 'tag', false);
-  var types = extract_distinct('{{ site.baseurl }}/search.json', 'type', false);
-});
+// extract parameters from url
+var extract_url_params = function(target_param) {
+  var url = window.location.search.substring(1);
+  var params = url.split('&');
+  for (var i = 0; i < params.length; i++) {
+    var param_names = params[i].split('=');
+    if (param_names[0] == target_param) {
+      return param_names[1];
+    }
+  }
+}
 
 // extract distinct values from json
-var extract_distinct = function(json_url, field, hasAll) {
+var extract_distinct = function(json_url, field) {
   var distinct_values = [];
 
   // read from json file
@@ -80,10 +121,13 @@ var extract_distinct = function(json_url, field, hasAll) {
 
 // attach event listeners and initialize tooltips
 $(document).ready(function(){
+  // extract distinct tags and search types
+  tags = extract_distinct('{{ site.baseurl }}/search.json', 'tag');
+  types = extract_distinct('{{ site.baseurl }}/search.json', 'type');
+
   // event listener for search options
   $( "#search-component" ).on( "change", 'select[name="type-facet"], \
-    select[name="tag-facet"]',
-    function() {
+    select[name="tag-facet"]', function() {
       execute_search();
   });
 
@@ -92,16 +136,8 @@ $(document).ready(function(){
     delay(execute_search, 500);
   });
 
-  // extract distinct values from type field
-  var types = extract_distinct('{{ site.baseurl }}/search.json', 'type', true);
-
-  // // populate select dropdown for types
-  // $.each(types, function(key, value) {
-  //   $('select[name=type-facet]')
-  //     .append($("<option></option>")
-  //       .attr("value", value)
-  //       .text(value));
-  // });
+  // execute search on init
+  execute_search();
 })
 
 // setup index model
@@ -130,7 +166,7 @@ var build_index = function(elasticlunr_index, search_type) {
     async: false,
     success: function(data) {
       $.each( data, function( key, val ) {
-        if ((search_type === val.type || search_type === "all" || search_type === undefined)) {
+        if ((search_type === val.type || search_type === null || search_type === undefined)) {
           elasticlunr_index.addDoc(val);
           store[val.id] = {
             type: val.type,
@@ -152,11 +188,21 @@ var build_index = function(elasticlunr_index, search_type) {
 // search logic
 var execute_search = function() {
     // get search options
-    var search_type = $("select[name=type-facet]").val();
-    search_options["expand"] = true;
+    var search_type = extract_url_params("type");
+    var search_query = extract_url_params("query");
+    var search_options = {"expand": true};
+    var type_counts = {};
+    var tag_counts = {};
 
     // get search query
-    var query = $('#search-input').val();
+    var query = "";
+    debugger
+    if (search_query === undefined) {
+      query = $('#search-input').val();
+    } else {
+      query = search_query;
+      $('#search-input').val(search_query);
+    }
 
     // empty result container when search query is empty
     if (query === '') {
@@ -167,6 +213,47 @@ var execute_search = function() {
 
         // perform search
         var results = index.search(query, search_options);
+
+        // collect type counts
+        results.map(function(result) {
+          if (type_counts[store[result.ref].type] == undefined) {
+            type_counts[store[result.ref].type] = 1;
+          } else {
+            type_counts[store[result.ref].type] = type_counts[store[result.ref].type] + 1;
+          }
+        });
+
+        // collect tag counts - TODO
+
+        // append search filters
+        // search_type
+        if (search_type === undefined) {
+          $("#facet-type").empty();
+          for (var i = 0; i < types.length; i++) {
+            var type = types[i];
+            if (type_counts[type] !== undefined) {
+              var param_string = "?query=" + query + "&type=" + type;
+              var text_string = type + " (" + type_counts[type] + ")"
+              $("#facet-type").append(
+                $('<a class="tag-btn">')
+                  .attr("href", param_string)
+                  .text(text_string)
+              );
+            }
+          }
+        } else {
+          var url = window.location.href;
+          var altered_url = remove_url_param("type", url);
+          // var altered_url = remove_query_strings();
+          var text_string = search_type + " ";
+          $(".applied-filters").empty().append(
+            $('<a class="tag-btn">')
+              .attr('href', altered_url)
+              .text(text_string).append(
+                $('<i class="fa fa-times" aria-hidden="true"></i>')
+              )
+          );
+        }
 
         // toggle visibility of search filters
         if (results.length != 0) {
