@@ -1,0 +1,13 @@
+---
+formatting:
+  name: formatting
+image-annotation:
+  name: image-annotation
+test:
+  name: test
+ocr-correction:
+  name: ocr-correction
+whee:
+  name: whee!
+illustration:
+  name: illustration
