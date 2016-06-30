@@ -55,25 +55,25 @@ extra_css:
 // initialize search option object and store object
 var store = {};
 var types = [];
-var tags = [];
+var search_type, search_query, search_tag;
 
-// remove all query strings from the URI
+// remove all query strings from the URL
 var remove_query_strings = function() {
-  var clean_uri = location.protocol + "//" + location.host + location.pathname;
+  var clean_url = location.protocol + "//" + location.host + location.pathname;
   var hash_pos = location.href.indexOf("#");
   if (hash_pos > 0) {
       var hash = location.href.substring(hash_pos, location.href.length);
-      clean_uri += hash;
+      clean_url += hash;
   }
-  return clean_uri;
+  return clean_url;
 }
 
-// remove a specified uri param
-var remove_uri_param = function removeParam(key, uri) {
-    var rtn = uri.split("?")[0],
+// remove a specified url param
+var remove_url_param = function removeParam(key, url) {
+    var rtn = url.split("?")[0],
         param,
         params_arr = [],
-        queryString = (uri.indexOf("?") !== -1) ? uri.split("?")[1] : "";
+        queryString = (url.indexOf("?") !== -1) ? url.split("?")[1] : "";
     if (queryString !== "") {
         params_arr = queryString.split("&");
         for (var i = params_arr.length - 1; i >= 0; i -= 1) {
@@ -136,9 +136,16 @@ var extract_distinct = function(json_url, field) {
 
 // attach event listeners and initialize tooltips
 $(document).ready(function(){
-  // extract distinct tags and search types
-  tags = extract_distinct('{{ site.baseurl }}/search.json', 'tags');
+  // extract distinct search types
   types = extract_distinct('{{ site.baseurl }}/search.json', 'type');
+
+  // apply search query strings on page load
+  search_type = extract_url_params("type");
+  search_query = extract_url_params("query");
+  search_tag = extract_url_params("tag");
+  if (search_query !== undefined) {
+    $('#search-input').val(search_query);
+  }
 
   // event listener for search options
   $( "#search-component" ).on( "change", 'select[name="type-facet"], \
@@ -224,25 +231,28 @@ var build_index = function(elasticlunr_index, search_type, search_tag) {
 // search logic
 var execute_search = function() {
     // get search options
-    var search_type = extract_url_params("type");
-    var search_query = extract_url_params("query");
-    var search_tag = extract_url_params("tag");
+
     var search_options = { "fields": { "content": { "expand": true } } };
     var type_counts = {};
     var tag_counts = {};
 
     // get search query
-    var query = "";
-    if (search_query === undefined || $('#search-input').val() !== "") {
-      query = $('#search-input').val();
-    } else {
-      query = search_query;
-      $('#search-input').val(search_query);
-    }
+    var query = $('#search-input').val();
+    debugger
+
+    // if (search_query === undefined || $('#search-input').val() !== "") {
+    //   query = $('#search-input').val();
+    // } else {
+    //   query = search_query;
+    //   $('#search-input').val(search_query);
+    // }
 
     // empty result container when search query is empty
     if (query === '') {
-        jQuery('.search-results').empty();
+      $('#search-tip').css('display', 'none');
+      $('#type-filter').css('display', 'none');
+      $('#tag-filter').css('display', 'none');
+      $('#search-results').empty();
     } else {
         // build the index
         var index = build_index(elasticlunr_index, search_type, search_tag);
@@ -360,7 +370,7 @@ var execute_search = function() {
           } else {
             $('#tag-filter').css('display', 'none');
           }
-          
+
         }
 
         // clear search-results container
