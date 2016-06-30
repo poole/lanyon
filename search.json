@@ -8,7 +8,6 @@ other pages, e.g. introduction, credits, etc.{% endcomment %}
     {
       "id"       : {{forloop.index}},
       "type"     : "volume_page",
-      "tag"      : "tag-page",
       "title"    : "{{ page.title | escape }}",
       "url"      : "{{ site.baseurl }}{{ page.url }}",
       "page_url" : "{{ site.baseurl }}{{ page.url }}",

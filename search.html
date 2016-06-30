@@ -10,27 +10,43 @@ extra_css:
 <div class="article-container">
 {% comment %}Search form and results container {% endcomment %}
   <div class="container">
-      <div id="search-container">
-        <input type="text" id="search-input" class="form-control" style="width:auto"
-            size="100" autofocus="true"
-            placeholder="Search pages and annotations">
-            <p class="help-block">Search by keyword or phrase. </p>
+    <div id="search-container">
+      <input type="text" id="search-input" class="form-control" style="width:auto"
+          size="100" autofocus="true"
+          placeholder="Search pages and annotations">
+      <p class="help-block">Search by keyword or phrase.</p>
+    </div>
+
+    <div class="row text-left" id="applied-filters" style="display: none;">
+      <div class="col-md-12">
+        <div class="search-option-title">applied filter:</div>
+        <div class="applied-filters"></div>
       </div>
-      <div id="search-component" style="display: none;">
-        <div class="row text-left">
-          <div class="col-md-12">
-            <div class="search-option-title">applied filters</div>
-            <div class="applied-filters"></div>
-          </div>
-        </div>
-        <div class="row text-left">
-          <div class="col-md-12">
-            <div class="search-option-title">search type</div>
-            <div id="facet-type"></div>
-          </div>
-        </div>
+    </div>
+
+    <div class="row text-left search-filter" id="search-tip" style="display: none;">
+      <div class="col-md-12">
+        <div class="search-option-tip">You can limit your search to page content or annotations and refine your annotation search by selecting tags.</div>
       </div>
-    <div class="media text-left" id="search-results"></div>
+    </div>
+
+    <div class="row text-left search-filter" id="type-filter" style="display: none;">
+      <div class="col-md-12">
+        <div class="search-option-title">filter by a type:</div>
+        <div id="facet-type"></div>
+      </div>
+    </div>
+
+    <div class="row text-left search-filter" id="tag-filter" style="display: none;">
+      <div class="col-md-12">
+        <div class="search-option-title">filter by a tag:</div>
+        <div id="facet-tag"></div>
+      </div>
+    </div>
+
+    <div class="row media text-left">
+      <div class="col-md-12" id="search-results"></div>
+    </div>
   </div>
 </div>
 
@@ -52,12 +68,12 @@ var remove_query_strings = function() {
   return clean_uri;
 }
 
-// remove a specified url param
-var remove_url_param = function removeParam(key, sourceURL) {
-    var rtn = sourceURL.split("?")[0],
+// remove a specified uri param
+var remove_uri_param = function removeParam(key, uri) {
+    var rtn = uri.split("?")[0],
         param,
         params_arr = [],
-        queryString = (sourceURL.indexOf("?") !== -1) ? sourceURL.split("?")[1] : "";
+        queryString = (uri.indexOf("?") !== -1) ? uri.split("?")[1] : "";
     if (queryString !== "") {
         params_arr = queryString.split("&");
         for (var i = params_arr.length - 1; i >= 0; i -= 1) {
@@ -71,15 +87,6 @@ var remove_url_param = function removeParam(key, sourceURL) {
     return rtn;
 }
 
-// delay function for user input delay
-var delay = (function(){
-  var timer = 0;
-  return function(callback, ms){
-    clearTimeout (timer);
-    timer = setTimeout(callback, ms);
-  };
-})();
-
 // extract parameters from url
 var extract_url_params = function(target_param) {
   var url = window.location.search.substring(1);
@@ -91,6 +98,15 @@ var extract_url_params = function(target_param) {
     }
   }
 }
+
+// delay function for user input delay
+var delay = (function(){
+  var timer = 0;
+  return function(callback, ms){
+    clearTimeout (timer);
+    timer = setTimeout(callback, ms);
+  };
+})();
 
 // extract distinct values from json
 var extract_distinct = function(json_url, field) {
@@ -109,7 +125,7 @@ var extract_distinct = function(json_url, field) {
 
       // get unique types
       distinct_values = $.grep(all_values, function(el, index) {
-          return index == $.inArray(el, all_values);
+        return index == $.inArray(el, all_values);
       });
     }
   });
@@ -118,11 +134,10 @@ var extract_distinct = function(json_url, field) {
   return distinct_values;
 }
 
-
 // attach event listeners and initialize tooltips
 $(document).ready(function(){
   // extract distinct tags and search types
-  tags = extract_distinct('{{ site.baseurl }}/search.json', 'tag');
+  tags = extract_distinct('{{ site.baseurl }}/search.json', 'tags');
   types = extract_distinct('{{ site.baseurl }}/search.json', 'type');
 
   // event listener for search options
@@ -144,6 +159,7 @@ $(document).ready(function(){
 var elasticlunr_index = elasticlunr(function(){
     this.setRef('id'); // special unique identifier (id)
     this.addField('type');
+    this.addField('tags');
     this.addField('title');
     this.addField('url');
     this.addField('page_url');
@@ -153,7 +169,7 @@ var elasticlunr_index = elasticlunr(function(){
 });
 
 // read json content from file using jQuery
-var build_index = function(elasticlunr_index, search_type) {
+var build_index = function(elasticlunr_index, search_type, search_tag) {
   // remove existing index if any
   for (doc in elasticlunr_index.documentStore.docs) {
     elasticlunr_index.removeDoc(elasticlunr_index.documentStore.docs[doc]);
@@ -166,17 +182,37 @@ var build_index = function(elasticlunr_index, search_type) {
     async: false,
     success: function(data) {
       $.each( data, function( key, val ) {
-        if ((search_type === val.type || search_type === null || search_type === undefined)) {
-          elasticlunr_index.addDoc(val);
-          store[val.id] = {
-            type: val.type,
-            title: val.title,
-            url: val.url,
-            page_url: val.page_url,
-            image: val.image,
-            content: val.content,
-            preview: val.preview
-          };
+        if ((search_type === val.type
+            || search_type === null
+            || search_type === undefined)) { // search_type
+          if (search_tag === undefined) {
+            elasticlunr_index.addDoc(val);
+            store[val.id] = {
+              type: val.type,
+              tags: val.tags,
+              title: val.title,
+              url: val.url,
+              page_url: val.page_url,
+              image: val.image,
+              content: val.content,
+              preview: val.preview
+            };
+          } else if (typeof search_tag === 'string'
+            || search_tag instanceof String) { // search_tag
+            if (val.tags !== undefined && val.tags.indexOf(search_tag) !== -1){
+              elasticlunr_index.addDoc(val);
+              store[val.id] = {
+                type: val.type,
+                tags: val.tags,
+                title: val.title,
+                url: val.url,
+                page_url: val.page_url,
+                image: val.image,
+                content: val.content,
+                preview: val.preview
+              };
+            }
+          }
         }
       });
     }
@@ -190,14 +226,14 @@ var execute_search = function() {
     // get search options
     var search_type = extract_url_params("type");
     var search_query = extract_url_params("query");
-    var search_options = {"expand": true};
+    var search_tag = extract_url_params("tag");
+    var search_options = { "fields": { "content": { "expand": true } } };
     var type_counts = {};
     var tag_counts = {};
 
     // get search query
     var query = "";
-    debugger
-    if (search_query === undefined) {
+    if (search_query === undefined || $('#search-input').val() !== "") {
       query = $('#search-input').val();
     } else {
       query = search_query;
@@ -209,7 +245,7 @@ var execute_search = function() {
         jQuery('.search-results').empty();
     } else {
         // build the index
-        var index = build_index(elasticlunr_index, search_type);
+        var index = build_index(elasticlunr_index, search_type, search_tag);
 
         // perform search
         var results = index.search(query, search_options);
@@ -223,17 +259,29 @@ var execute_search = function() {
           }
         });
 
-        // collect tag counts - TODO
+        // collect tag counts
+        results.map(function(result) {
+          if (store[result.ref].tags !== undefined && store[result.ref].tags.length != 0) {
+            for (var i = 0; i < store[result.ref].tags.length; i++) {
+              if (tag_counts[store[result.ref].tags[i]] === undefined) {
+                tag_counts[store[result.ref].tags[i]] = 1;
+              } else {
+                tag_counts[store[result.ref].tags[i]] = tag_counts[store[result.ref].tags[i]] + 1;
+              }
+            }
+          }
+        });
 
-        // append search filters
+        // apply search filters and display in the UI
         // search_type
         if (search_type === undefined) {
           $("#facet-type").empty();
           for (var i = 0; i < types.length; i++) {
             var type = types[i];
             if (type_counts[type] !== undefined) {
+              var readable_type = type.split('_').join(' ');
               var param_string = "?query=" + query + "&type=" + type;
-              var text_string = type + " (" + type_counts[type] + ")"
+              var text_string = readable_type + " (" + type_counts[type] + ")"
               $("#facet-type").append(
                 $('<a class="tag-btn">')
                   .attr("href", param_string)
@@ -241,11 +289,38 @@ var execute_search = function() {
               );
             }
           }
-        } else {
+        } else { // type exists in the url; append removal btn
           var url = window.location.href;
           var altered_url = remove_url_param("type", url);
           // var altered_url = remove_query_strings();
-          var text_string = search_type + " ";
+          var readable_type = search_type.split('_').join(' ');
+          var text_string = readable_type + " ";
+          $(".applied-filters").empty().append(
+            $('<a class="tag-btn">')
+              .attr('href', altered_url)
+              .text(text_string).append(
+                $('<i class="fa fa-times" aria-hidden="true"></i>')
+              )
+          );
+        }
+
+        // search_tag
+        $("#facet-tag").empty();
+        if (tag_counts !== undefined
+            && !(typeof search_tag === 'string' || search_tag instanceof String)) {
+          for (var tag in tag_counts) {
+            var param_string = "?query=" + query + "&tag=" + tag;
+            var text_string = tag + " (" + tag_counts[tag] + ")"
+            $("#facet-tag").append(
+              $('<a class="tag-btn">')
+                .attr("href", param_string)
+                .text(text_string)
+            );
+          }
+        } else { // tag exists in the url; append removal btn
+          var url = window.location.href;
+          var altered_url = remove_url_param("tag", url);
+          var text_string = search_tag + " ";
           $(".applied-filters").empty().append(
             $('<a class="tag-btn">')
               .attr('href', altered_url)
@@ -256,10 +331,36 @@ var execute_search = function() {
         }
 
         // toggle visibility of search filters
-        if (results.length != 0) {
-          $('#search-component').css('display', 'block');
+        if (search_type !== undefined || search_tag !== undefined) {
+          $('#applied-filters').css('display', 'block');
+          $('#search-tip').css('display', 'none');
+          $('#type-filter').css('display', 'none');
+          $('#tag-filter').css('display', 'none');
         } else {
-          $('#search-component').css('display', 'none');
+
+          // display search tip or not
+          $('#applied-filters').css('display', 'none');
+          if (Object.keys(type_counts).length > 1
+            || Object.keys(tag_counts).length > 1) {
+            $('#search-tip').css('display', 'block');
+          } else {
+            $('#search-tip').css('display', 'none');
+          }
+
+          // display type filter or not
+          if (Object.keys(type_counts).length > 1) {
+            $('#type-filter').css('display', 'block');
+          } else {
+            $('#type-filter').css('display', 'none');
+          }
+
+          // display tag filter or not
+          if (Object.keys(tag_counts).length > 1) {
+            $('#tag-filter').css('display', 'block');
+          } else {
+            $('#tag-filter').css('display', 'none');
+          }
+          
         }
 
         // clear search-results container
@@ -267,16 +368,16 @@ var execute_search = function() {
 
         // limit search results
         var limited_results = "";
-        var RESULT_LIMIT = 10;
+        var RESULT_LIMIT = 50;
         if (results.length > RESULT_LIMIT) {
-          limited_results = "Only first " + RESULT_LIMIT + " out of " + results.length + " results are shown for better performance."
+          limited_results = "displaying top " + RESULT_LIMIT + " out of " + results.length + " results:"
           results = results.slice(0, RESULT_LIMIT);
         }
 
         // append search result limit message (if applicable)
         $('#search-results').append(
           $('<section class="search-result">').append(
-            $("<p>").text(limited_results)
+            $("<div class='result-summary'>").text(limited_results)
           )
         );
 
