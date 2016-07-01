@@ -233,17 +233,16 @@ var execute_search = function() {
         // perform search
         var results = index.search(query, search_options);
 
-        // collect type counts
+        // collect type and tag counts from the results
         results.map(function(result) {
-          if (type_counts[store[result.ref].type] == undefined) {
+          // collect type counts
+          if (type_counts[store[result.ref].type] === undefined) {
             type_counts[store[result.ref].type] = 1;
           } else {
             type_counts[store[result.ref].type] = type_counts[store[result.ref].type] + 1;
           }
-        });
 
-        // collect tag counts
-        results.map(function(result) {
+          // collect tag counts
           if (store[result.ref].tags !== undefined && store[result.ref].tags.length != 0) {
             for (var i = 0; i < store[result.ref].tags.length; i++) {
               if (tag_counts[store[result.ref].tags[i]] === undefined) {
