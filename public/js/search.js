@@ -138,17 +138,30 @@ var build_index = function(elasticlunr_index, search_type, search_tag) {
     async: false,
     success: function(data) {
       $.each( data, function( key, val ) {
-        elasticlunr_index.addDoc(val);
-        store[val.id] = {
-          type: val.type,
-          tags: val.tags,
-          title: val.title,
-          url: val.url,
-          page_url: val.page_url,
-          image: val.image,
-          content: val.content,
-          preview: val.preview
-        };
+        if (search_type === val.type // filter results by search_type
+            || search_type === null
+            || search_type === undefined) {
+
+          if (search_tag === undefined || ( // filter results by search_tag
+              (typeof search_tag === 'string' || search_tag instanceof String)
+              && (val.tags !== undefined && val.tags.indexOf(search_tag) !== -1))){
+
+            // add item that passes all filter requirements to the index
+            elasticlunr_index.addDoc(val);
+
+            // add the entry to the store
+            store[val.id] = {
+              type: val.type,
+              tags: val.tags,
+              title: val.title,
+              url: val.url,
+              page_url: val.page_url,
+              image: val.image,
+              content: val.content,
+              preview: val.preview
+            };
+          }
+        }
       });
     }
   });
