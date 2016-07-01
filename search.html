@@ -177,11 +177,6 @@ var elasticlunr_index = elasticlunr(function(){
 
 // read json content from file using jQuery
 var build_index = function(elasticlunr_index, search_type, search_tag) {
-  // remove existing index if any
-  for (doc in elasticlunr_index.documentStore.docs) {
-    elasticlunr_index.removeDoc(elasticlunr_index.documentStore.docs[doc]);
-  }
-
   // fill index with data
   $.ajax({
     url: "{{ site.baseurl }}/search.json",
@@ -189,38 +184,17 @@ var build_index = function(elasticlunr_index, search_type, search_tag) {
     async: false,
     success: function(data) {
       $.each( data, function( key, val ) {
-        if ((search_type === val.type
-            || search_type === null
-            || search_type === undefined)) { // search_type
-          if (search_tag === undefined) {
-            elasticlunr_index.addDoc(val);
-            store[val.id] = {
-              type: val.type,
-              tags: val.tags,
-              title: val.title,
-              url: val.url,
-              page_url: val.page_url,
-              image: val.image,
-              content: val.content,
-              preview: val.preview
-            };
-          } else if (typeof search_tag === 'string'
-            || search_tag instanceof String) { // search_tag
-            if (val.tags !== undefined && val.tags.indexOf(search_tag) !== -1){
-              elasticlunr_index.addDoc(val);
-              store[val.id] = {
-                type: val.type,
-                tags: val.tags,
-                title: val.title,
-                url: val.url,
-                page_url: val.page_url,
-                image: val.image,
-                content: val.content,
-                preview: val.preview
-              };
-            }
-          }
-        }
+        elasticlunr_index.addDoc(val);
+        store[val.id] = {
+          type: val.type,
+          tags: val.tags,
+          title: val.title,
+          url: val.url,
+          page_url: val.page_url,
+          image: val.image,
+          content: val.content,
+          preview: val.preview
+        };
       });
     }
   });
@@ -238,7 +212,6 @@ var execute_search = function() {
 
     // get search query
     var query = $('#search-input').val();
-    debugger
 
     // if (search_query === undefined || $('#search-input').val() !== "") {
     //   query = $('#search-input').val();
