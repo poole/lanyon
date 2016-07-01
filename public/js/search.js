@@ -185,7 +185,7 @@ var execute_search = function() {
           if (type_counts[store[result.ref].type] === undefined) {
             type_counts[store[result.ref].type] = 1;
           } else {
-            type_counts[store[result.ref].type] = type_counts[store[result.ref].type] + 1;
+            type_counts[store[result.ref].type] += 1;
           }
 
           // collect tag counts
@@ -194,7 +194,7 @@ var execute_search = function() {
               if (tag_counts[store[result.ref].tags[i]] === undefined) {
                 tag_counts[store[result.ref].tags[i]] = 1;
               } else {
-                tag_counts[store[result.ref].tags[i]] = tag_counts[store[result.ref].tags[i]] + 1;
+                tag_counts[store[result.ref].tags[i]] += 1;
               }
             }
           }
