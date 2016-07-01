@@ -205,20 +205,12 @@ var build_index = function(elasticlunr_index, search_type, search_tag) {
 // search logic
 var execute_search = function() {
     // get search options
-
     var search_options = { "fields": { "content": { "expand": true } } };
     var type_counts = {};
     var tag_counts = {};
 
     // get search query
     var query = $('#search-input').val();
-
-    // if (search_query === undefined || $('#search-input').val() !== "") {
-    //   query = $('#search-input').val();
-    // } else {
-    //   query = search_query;
-    //   $('#search-input').val(search_query);
-    // }
 
     // empty result container when search query is empty
     if (query === '') {
