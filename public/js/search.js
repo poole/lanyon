@@ -95,10 +95,10 @@ var extract_distinct = function(json_url, field) {
 $(document).ready(function(){
   // apply search query strings on page load
   search_type = extract_url_params("type");
-  search_query = decodeURIComponent(extract_url_params("query"));
+  search_query = extract_url_params("query");
   search_tag = extract_url_params("tag");
   if (search_query !== undefined) {
-    $('#search-input').val(search_query);
+    $('#search-input').val(decodeURIComponent(search_query));
   }
 
   // event listener for search options
