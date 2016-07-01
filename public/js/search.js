@@ -6,9 +6,8 @@ related_files:
   - search.json
 ---
 
-// initialize search option object and store object
+// initialize store object, type collection, and query string params
 var store = {};
-var types = [];
 var search_type, search_query, search_tag;
 
 // remove all query strings from the URL
@@ -90,9 +89,6 @@ var extract_distinct = function(json_url, field) {
 
 // attach event listeners and initialize tooltips
 $(document).ready(function(){
-  // extract distinct search types
-  types = extract_distinct('{{ site.baseurl }}/search.json', 'type');
-
   // apply search query strings on page load
   search_type = extract_url_params("type");
   search_query = extract_url_params("query");
@@ -159,8 +155,7 @@ var build_index = function(elasticlunr_index, search_type, search_tag) {
 // search logic
 var execute_search = function() {
     // initialize count variables
-    var type_counts = {};
-    var tag_counts = {};
+    var type_counts = {}, tag_counts = {};
 
     // set search options
     var search_options = { "fields": { "content": { "expand": true } } };
@@ -175,6 +170,9 @@ var execute_search = function() {
       $('#tag-filter').css('display', 'none');
       $('#search-results').empty();
     } else {
+        // initialize type collection variable
+        var types = [];
+
         // build the index
         var index = build_index(elasticlunr_index, search_type, search_tag);
 
@@ -200,6 +198,9 @@ var execute_search = function() {
               }
             }
           }
+
+          // collect types
+          types = Object.keys(type_counts);
         });
 
         // apply search filters and display in the UI
