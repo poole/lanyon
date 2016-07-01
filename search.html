@@ -204,10 +204,12 @@ var build_index = function(elasticlunr_index, search_type, search_tag) {
 
 // search logic
 var execute_search = function() {
-    // get search options
-    var search_options = { "fields": { "content": { "expand": true } } };
+    // initialize count variables
     var type_counts = {};
     var tag_counts = {};
+
+    // set search options
+    var search_options = { "fields": { "content": { "expand": true } } };
 
     // get search query
     var query = $('#search-input').val();
@@ -381,14 +383,6 @@ var execute_search = function() {
                       .attr('title', store[result.ref].title)
                     el.append(img_container_el.append(img_link_el.append(img_el)));
                 }
-
-                // show preview
-                // if (store[result.ref].preview) {
-                //   var preview_el = $('<div class="media-body">')
-                //     .css("width", "100%")
-                //     .text(store[result.ref].preview);
-                //   el.append(preview_el);
-                // }
 
                 return el;
             }) : $('<section class="search-result"><p>No results found</p></section>')
