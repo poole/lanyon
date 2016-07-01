@@ -7,6 +7,10 @@ related_files:
 ---
 
 // initialize store object, type collection, and query string params
+// these query params are used in the URL to keep track of what have
+// been searched for and what filter options are applied
+// with these query params we can also use URL to represent a particular
+// search
 var store = {};
 var search_type, search_query, search_tag;
 
