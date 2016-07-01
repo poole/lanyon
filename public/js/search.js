@@ -7,6 +7,10 @@ related_files:
 ---
 
 // initialize store object, type collection, and query string params
+// these query params are used in the URL to keep track of what have
+// been searched for and what filter options are applied
+// with these query params we can also use URL to represent a particular
+// search
 var store = {};
 var search_type, search_query, search_tag;
 
@@ -91,7 +95,7 @@ var extract_distinct = function(json_url, field) {
 $(document).ready(function(){
   // apply search query strings on page load
   search_type = extract_url_params("type");
-  search_query = extract_url_params("query");
+  search_query = decodeURIComponent(extract_url_params("query"));
   search_tag = extract_url_params("tag");
   if (search_query !== undefined) {
     $('#search-input').val(search_query);
