@@ -8,6 +8,21 @@ excerpt: List of tags available across all annotations.
 <ul class="text-left">
     {% for tag in site.data.tags %}
     {% comment %} tag[0] is tag slug, tag[1] is tag data {% endcomment %}
-    <li><a href="{{ site.baseurl }}/tags/{{ tag[0] }}/">{{ tag[1].name }}</a></li>
+    <li><a href="{{ site.baseurl }}/tags/{{ tag[0] }}/">{{ tag[1].name }}</a>
+        {% comment %} get a list of annotation ids for this page to calculate the total {% endcomment %}
+        {% capture annotation_idlist %}{% for annotation in site.annotations %}{% if annotation.tags contains tag[0] %}{{ annotation.id }} {% endif %}{% endfor %}{% endcapture %}
+        {% comment %} split on whitespace then get size {% endcomment %}
+        {% assign annotation_ids = annotation_idlist | split:' '%}
+        ({{ annotation_ids | size }})
+        <p>
+        {% for annotation in site.annotations|sort: 'sort_order' %}
+            {% if annotation.tags contains tag[0] %}
+            {% assign annotated_page=site.volume_pages[annotation.page_index] %}
+            <a href="{{ site.baseurl }}{{ annotation.url }}" title="full page annotation view">{{ annotated_page.short_label }} {{ annotated_page.number }}</a>
+            {% endif %}
+        {% endfor %}
+        </p>
+
+    </li>
     {% endfor %}
 </ul>
