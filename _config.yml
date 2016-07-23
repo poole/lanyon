@@ -1,19 +1,19 @@
 # Dependencies
 markdown:         redcarpet
-pygments:         true
+# pygments:         true
 
 # Permalinks
 permalink:        pretty
 
 # Setup
-title:            Lanyon
-tagline:          'A Jekyll theme'
-description:      'A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:              http://lanyon.getpoole.com
+title:            'Kyle Schmidt'
+tagline:          'Software Craftsman'
+description:      'Musings about Python, Emacs, JavaScript (React/Redux), and Databases as well as a few health & fitness posts.'
+url:              http://k-schmidt.github.io
 
 author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
+  name:           'Kyle Schmidt'
+  url:            https://twitter.com/kyle_schmidt
 
 paginate:         5
 
@@ -21,4 +21,9 @@ paginate:         5
 version:          1.0.0
 
 github:
-  repo:           https://github.com/poole/lanyon
+  repo:           https://github.com/k-schmidt
+linkedin:         https://www.linkedin.com/in/kylealanschmidt
+twitter:          https://twitter.com/Kyle_Schmidt
+
+gems:
+  - jekyll-paginate
