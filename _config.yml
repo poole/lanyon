@@ -9,7 +9,7 @@ permalink:        pretty
 title:            'Kyle Schmidt'
 tagline:          'Software Craftsman'
 description:      'Musings about Python, Emacs, JavaScript (React/Redux), and Databases as well as a few health & fitness posts.'
-url:              http://k-schmidt.github.io
+url:              https://k-schmidt.github.io
 
 author:
   name:           'Kyle Schmidt'
