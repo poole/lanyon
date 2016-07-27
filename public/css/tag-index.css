@@ -41,3 +41,13 @@ a.label:hover {
   padding: 5px 10px 5px;
   color: #268bd2;
 }
+
+/* use CSS to create comma separated list */
+.tag-pages li + li:before {
+    content: ", ";
+}
+
+.tag-page {
+  list-style-type: none;
+  display: inline;
+}
