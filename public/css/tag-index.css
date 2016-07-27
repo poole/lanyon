@@ -43,11 +43,15 @@ a.label:hover {
 }
 
 /* use CSS to create comma separated list */
-.tag-pages li + li:before {
+.tag-pages li:after {
     content: ", ";
 }
 
 .tag-page {
   list-style-type: none;
   display: inline;
+}
+
+.tag-pages li:last-child:after {
+    content: "";
 }
