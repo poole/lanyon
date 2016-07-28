@@ -1,0 +1,57 @@
+/*
+ * CSS for the tag index page
+ * Corresponding HTML: APP_ROOT/tags/index.html
+ */
+
+.tag-index {
+  margin-top: 30px;
+}
+.label-tag {
+  background: #E1ECF4;
+  color: #268bd2;
+
+  padding: 0.3em .7em;
+  font-size: 125%;
+  font-weight: bold;
+  border-radius: 0;
+}
+
+.label-tag:hover {
+  background-color: #cee0ed;
+  color: #33658a;
+}
+
+a.label:hover {
+  color: #33658a;
+}
+
+.tag-count {
+  color: #6a737c;
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+.tag-card {
+  margin-bottom: 2em;
+}
+
+.tag-pages{
+  border: 1px #f2f2f2 solid;
+  margin-top: 3px;
+  padding: 5px 10px 5px;
+  color: #268bd2;
+}
+
+/* use CSS to create comma separated list */
+.tag-pages li:after {
+    content: ", ";
+}
+
+.tag-page {
+  list-style-type: none;
+  display: inline;
+}
+
+.tag-pages li:last-child:after {
+    content: "";
+}
