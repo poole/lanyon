@@ -44,7 +44,7 @@ layout: default
             <div class="page">
                 <div class="content">
                     <section class="inner">
-                       <img class="page-image" src="{{ page.images.page }}"/>
+                       <img class="page-image" src="{% if page.images.page contains '://' %}{% else %}{{ site.url }}{{ site.baseurl }}/{% endif %}{{ page.images.page }}"/>
                       {{ content }}
                     </section>
                 </div>
@@ -115,7 +115,7 @@ otherwise find pages based on index to support Jekyll 2.4 on GitHub Pages.
       set_seadragon_opts({
           id: "zoom-page",
           // prefixUrl: "",
-          tileSources: "{{ page.images.json }}",
+          tileSources: "{% if page.images.page contains '://' %}{% else %}{{ site.url }}{{ site.baseurl }}/{% endif %}{{ page.images.json }}",
           toolbar: 'deepzoom-controls',
           showNavigator: true,
           navigatorPosition: 'TOP_LEFT',
