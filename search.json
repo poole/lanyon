@@ -16,7 +16,9 @@ other pages, e.g. introduction, credits, etc.{% endcomment %}
       "preview"  : {{ page.content | strip_html | strip_newlines | truncatewords: 50 | jsonify}}
     }{% unless forloop.last %},{% endunless %}
   {% endfor %}
-  {% if site.volume_pages and site.annotations %}, {% endif %}
+  {% assign page_count = site.volume_pages|size %}
+  {% assign annotation_count = site.annotations|size %}
+  {% if page_count > 0 and annotation_count > 0 %}, {% endif %}
   {% for annotation in site.annotations %}
     {
       "id"      : {{forloop.index | plus: site.volume_pages.size}} ,
