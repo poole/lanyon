@@ -22,7 +22,7 @@ excerpt: Browse annotations by tag.
                 <a href="{{ site.baseurl }}{{ annotated_page.url }}">
                     <p class="page-number">{{ annotated_page.short_label}} {{ annotated_page.number }}</p>
                      <img class="media-object img-thumbnail"
-                        src="{% if page.images.thumbnail contains '://' %}{% else %}{{ site.url }}{{ site.baseurl }}/{% endif %{{ annotated_page.images.small-thumbnail }}"
+                        src="{% if page.images.thumbnail contains '://' %}{% else %}{{ site.url }}{{ site.baseurl }}/{% endif %}{{ annotated_page.images.small-thumbnail }}"
                         alt="{{ annotated_page.title }}" title="{{ annotated_page.title }}"/>
                  </a>
             </div>
