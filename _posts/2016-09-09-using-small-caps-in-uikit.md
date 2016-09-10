@@ -67,7 +67,19 @@ The `UIFontDescriptorFeatureSettingsAttribute` attribute is in a bit of a weird 
 
 So we essentially want an array of dictionaries containing both the feature selector and type identifier. These values map back to the values referenced in the TrueType Font Feature documentation I [linked to earlier][2].  
 
-You can also find the provided enums in `<CoreText/SFNTLayoutTypes.h>`. There is no nice link between feature types and their supported values other than looking at the reference or comments within the headers.
+You can also find the provided enums in `<CoreText/SFNTLayoutTypes.h>`. There is no nice link between feature types and their supported values other than looking at the reference or comments within the headers.  
+
+If you're in a rush and just wanted to know a bit about small caps then you can probably finish here however, if you wanted some more tips when using small caps then it might be worth reading on a little more.
+
+# Extra Credit
+
+There are actually a couple of ways to use small caps and there are some things to note because you might actually want to use them in a different way to get your desired outcome.
+
+Looking back into the `SFNTLayoutTypes.h` header, you will see that there is both a `kUpperCaseType` and `kLowerCaseType` feature. These are the two different ways in that you can apply small caps and it essentially means you either make all uppercase letters into small caps or make all lowercase letters into small caps.
+
+
+
+You might have noticed that the above code is a little bloated in comparison to the simple one liner you get from using a regular `UIFont`.
 
 [^1]: [Apple say][3] that the small caps glyph should be slightly larger than the lowercase alternative however they are exactly the same in the San Francisco font from what I can see.
 
