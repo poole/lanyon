@@ -1,22 +1,20 @@
-# Permalinks
-#
-# Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:           pretty
-relative_permalinks: true
 
 # Setup
-title:               Lanyon
-tagline:             'A Jekyll theme'
-description:         'A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:                 http://lanyon.getpoole.com
-baseurl:             ''
-paginate:            5
+title:                          liamOS
+tagline:                        'An iOS development blog'
+description:                    ''
+url:                            https://liamnichols.github.io
+baseurl:                        ''
+paginate:                       5
+highlighter:                    rouge
+google_analytics_tracking_id:   UA-83930015-1
+
+
+# Gems
+gems:                 [jekyll-paginate]
 
 # About/contact
 author:
-  name:              Mark Otto
-  url:               https://twitter.com/mdo
-  email:             markdotto@gmail.com
-
-# Custom vars
-version:             1.0.0
+  name:               Liam Nichols
+  url:                https://twitter.com/liamnichols_
+  email:              liam.nichols.ln@gmail.com
