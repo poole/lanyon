@@ -19,7 +19,7 @@ You might be wondering why you don't just use a smaller point size instead? Well
 ![Why should you use small caps you ask?](/public/images/fonts/abc-bad.png){: .center-image }
 _The text in the centre is the same font but 10 points smaller than the other labels._
 
-To achieve this, small caps glyphs are actually a feature of the font rather than just a scaled down version of a regular uppercase glyph. This means that the font designer must support this feature in order for it to actually work with your own custom fonts.
+To achieve this, some letters actually have an additional small cap glyph that can be enabled by a font feature rather than just a scaled down version of a regular uppercase glyph. This means that the font designer must support this feature in order for it to actually work with your own custom fonts.
 
 # Uses
 
@@ -57,7 +57,7 @@ Lets take a look at a simple implementation:
 Here is a breakdown of the above code:
 
 1. Get an existing `UIFontDescriptor` from an existing font of our choice.
-2. Create a new descriptor from the existing font by adding additional attributes via the `addingAttributes(_ attributes: [String:Any])` method.
+2. Create a new `UIFontDescriptor` from the existing font by adding additional attributes via the `addingAttributes(_ attributes: [String:Any])` method.
 3. Specify the additional font features we would like via the `UIFontDescriptorFeatureSettingsAttribute` attribute key.
 4. Create a new `UIFont` object with the new `UIFontDescriptor` and the original point size.
 
@@ -67,7 +67,7 @@ The `UIFontDescriptorFeatureSettingsAttribute` attribute is in a bit of a weird 
 
 So we essentially want an array of dictionaries containing both the feature selector and type identifier. These values map back to the values referenced in the TrueType Font Feature documentation I [linked to earlier][2]{:target="\_blank"}.  
 
-You can also find the provided enums and constants in `<CoreText/SFNTLayoutTypes.h>`. There is no nice link between feature types and their supported values other than looking at the reference or comments within the headers.  
+You can also find the provided constants in `<CoreText/SFNTLayoutTypes.h>`. Note that there is no nice link between feature types and their supported selectors so you just have to read the comments within the header.  
 
 # Tips & Tricks
 
