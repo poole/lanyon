@@ -12,16 +12,18 @@ It turns out that fonts are actually very complex things but to keep this short 
 Usually you only ever come across uppercase or lowercase letters however, small caps bring an additional member to this group. They're essentially a smaller version of uppercase letters that _almost_[^1] align with the lowercase letters in a font.
 
 ![A comparison of each glyph type](/public/images/fonts/abc.png){: .center-image }
-_The text in the centre is rendered using the same font but with the small caps feature enabled._
+_Good: The text in the centre is rendered using the same font but with the small caps feature enabled._
 
 You might be wondering why you don't just use a smaller point size instead? Well if you like your interfaces to be pixel perfect (don't we all?) then you will notice that after you found the appropriate point size, other features of the font such as the weight and spacing are also adjusted meaning that your two fonts will look different next to each other.
 
 ![Why should you use small caps you ask?](/public/images/fonts/abc-bad.png){: .center-image }
-_The text in the centre is the same font but 10 points smaller than the other labels._
+_Bad: The text in the centre is the same font but 10 points smaller than the other labels._
 
-To achieve this, some letters actually have an additional small cap glyph that can be enabled by a font feature rather than just a scaled down version of a regular uppercase glyph. This means that the font designer must support this feature in order for it to actually work with your own custom fonts.
+Small caps allow the font designer to actually add an additional glyph specifically designed to be used in this case. This means that the font is correctly optimised resulting in something that looks a little like the first picture rather than the second. A minor difference but a good one.
 
-# Uses
+This does however mean that in order to use small caps, the font designer must have explicitly supported this feature.
+
+# Use Cases
 
 Small caps are designed to be subtle and can come in very handy when you're trying to perfect your designs. The case study from Apple demonstrates how they are used on the Apple TV to distinguish a title in a table without it drawing the users attention away from the actual content.
 
