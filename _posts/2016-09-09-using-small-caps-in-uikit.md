@@ -30,7 +30,7 @@ _The Director, Cast and Writer headings use small caps to keep the text size and
 
 Another use could be to offer a subtle hierarchy of information. For example, if you wanted to display a number but did not want to emphasise the text next to it then small caps could be used to offer a nicer alternative to just using lowercase letters.
 
-![image-title-here](/public/images/fonts/12am.png){: .center-image }
+![Example if a 12 hour clock](/public/images/fonts/12am.png){: .center-image }
 _An example could be showing the time in a 12 hour format._
 
 # Implementation
