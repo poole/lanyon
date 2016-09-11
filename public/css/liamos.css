@@ -12,3 +12,7 @@ pre {
   white-space: pre;
   overflow: auto;
 }
+
+code {
+  color: #6a9fb5;
+}
