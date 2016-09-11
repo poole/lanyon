@@ -43,16 +43,18 @@ To actually take advantage of the font features in code you can do this at a fai
 
 Lets take a look at a simple implementation:
 
-    let systemFont = UIFont.systemFont(ofSize: 24.0, weight: UIFontWeightLight)
-    let smallCapsDesc = systemFont.fontDescriptor.addingAttributes([
-        UIFontDescriptorFeatureSettingsAttribute: [
-            [
-                UIFontFeatureTypeIdentifierKey: kUpperCaseType,
-                UIFontFeatureSelectorIdentifierKey: kUpperCaseSmallCapsSelector
-            ]
+{% highlight swift %}
+let systemFont = UIFont.systemFont(ofSize: 24.0, weight: UIFontWeightLight)
+let smallCapsDesc = systemFont.fontDescriptor.addingAttributes([
+    UIFontDescriptorFeatureSettingsAttribute: [
+        [
+            UIFontFeatureTypeIdentifierKey: kUpperCaseType,
+            UIFontFeatureSelectorIdentifierKey: kUpperCaseSmallCapsSelector
         ]
-    ])
-    let font = UIFont(descriptor: smallCapsDesc, size: systemFont.pointSize)
+    ]
+])
+let font = UIFont(descriptor: smallCapsDesc, size: systemFont.pointSize)
+{% endhighlight %}
 
 Here is a breakdown of the above code:
 
@@ -91,9 +93,52 @@ Numbers and punctuation will also be treated as uppercase letters when a small c
 
 You might have noticed that code example above to achieve small caps is kind of bloated when you compare it to a one line `UIFont` initialiser. Below you can find a sample extension I've put together to make this a little bit simpler.
 
-<script src="https://gist.github.com/liamnichols/56736b4988c57a33ad70086a0dc6018b.js"></script>
+<!-- <script src="https://gist.github.com/liamnichols/56736b4988c57a33ad70086a0dc6018b.js"></script> -->
+{% highlight swift %}
+public extension UIFont {
 
-If you have any suggestions to improve the extension then please leave a comment on the above gist.
+    /// Helper method to create a UIFont with updated attributes applied to the UIFontDescriptor
+    ///
+    /// - parameter attributes: The new attributes to apply to the fontDescriptor
+    ///
+    /// - returns: A UIFont object with the new attributes appended to the receivers fontDescriptor
+    func addingAttributes(_ attributes: [String : Any] = [:]) -> UIFont {
+
+        return UIFont(descriptor: fontDescriptor.addingAttributes(attributes), size: pointSize)
+    }
+
+
+    /// Returns a UIFont object based on the receiver with small caps applied to upper case letters
+    var addingUpperCaseSmallCaps: UIFont {
+
+        return addingAttributes([
+
+            UIFontDescriptorFeatureSettingsAttribute: [
+                [
+                    UIFontFeatureTypeIdentifierKey: kUpperCaseType,
+                    UIFontFeatureSelectorIdentifierKey: kUpperCaseSmallCapsSelector
+                ]
+            ]
+        ])
+    }
+
+    /// Returns a UIFont object based on the receiver with small caps applied to lower case letters
+    var addingLowerCaseSmallCaps: UIFont {
+
+        return addingAttributes([
+
+            UIFontDescriptorFeatureSettingsAttribute: [
+                [
+                    UIFontFeatureTypeIdentifierKey: kLowerCaseType,
+                    UIFontFeatureSelectorIdentifierKey: kLowerCaseSmallCapsSelector
+                ]
+            ]
+        ])
+    }
+}
+{% endhighlight %}
+
+If you have any suggestions to improve the extension then please leave a comment on [the gist][4]{:target="\_blank"}.
 
 --------
 
@@ -102,3 +147,4 @@ If you have any suggestions to improve the extension then please leave a comment
 [1]: https://developer.apple.com/videos/play/wwdc2016/803/
 [2]: https://developer.apple.com/fonts/TrueType-Reference-Manual/RM09/AppendixF.html
 [3]: https://developer.apple.com/videos/play/wwdc2016-803/?time=1327
+[4]: https://gist.github.com/liamnichols/56736b4988c57a33ad70086a0dc6018b#file-smallcaps-swift

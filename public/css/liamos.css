@@ -1,5 +1,14 @@
-.center-image
-{
-    margin: 0 auto;
-    display: block;
+.center-image {
+  margin: 0 auto;
+  display: block;
+}
+
+figure {
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+
+pre {
+  white-space: pre;
+  overflow: auto;
 }
