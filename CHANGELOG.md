@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.8
+
+* Made deep zoom images on volume pages optional (based on  configuration setting)
+
 ## 0.7
 
 * Enabled [jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap)
