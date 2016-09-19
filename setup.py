@@ -10,6 +10,7 @@ import os
 import shutil
 from zipfile import ZipFile
 import sys
+from digitaledition_jekylltheme import __version__
 
 # minimal python setup script,
 # to support a standardized way of including this theme via zipfile
@@ -63,7 +64,7 @@ class CleanZip(clean):
 
 
 setup(name='digitaledition_jekylltheme',
-      version='0.1',
+      version=__version__,
       description='Jekyll theme for annotated digital facsimile editions',
       author='Emory Center for Digital Scholarship and Emory LITS',
       author_email='libsysdev-l@listserv.cc.emory.edu',
