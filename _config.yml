@@ -72,6 +72,7 @@ defaults:
   values:
     layout: volume_page
     short_label: p.
+    deep_zoom: true
     extra_js:
     - deepzoom.js
     - openseadragon.min.js
