@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+{% for data_tag in site.data.tags %}
+  {% if data_tag.slug == page.tag %}
+    {% assign tag_name = data_tag.name %}
+  {% endif %}
+{% endfor %}
+
+{% capture post_tagged_message %}Posts tagged <em>{{ tag_name }}</em>{% endcapture %}
+{% assign no_posts_tagged_message = 'There are no posts with this tag.' %}
+
+<div class="page">
+  <h1 class="page-title">{{ post_tagged_message }}</h1>
+    {% if site.tags[page.tag] %}
+      {% for post in site.tags[page.tag] %}
+        {% capture post_year %}{{ post.date | date: '%Y' }}{% endcapture %}
+        {% if forloop.first %}
+          <h3>{{ post_year }}</h3><div>
+        {% endif %}
+
+        {% if forloop.first == false %}
+          {% assign previous_index = forloop.index0 | minus: 1 %}
+          {% capture previous_post_year %}{{ site.tags[page.tag][previous_index].date | date: '%Y' }}{% endcapture %}
+          {% if post_year != previous_post_year %}
+            </div><h3>{{ post_year }}</h3><div>
+          {% endif %}
+        {% endif %}
+
+        <a href="{{ post.url }}">{{ post.title }}</a><br />
+
+        {% if forloop.last %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    {% else %}
+        <p>{{ no_posts_tagged_message }}</p>
+    {% endif %}
+</div>

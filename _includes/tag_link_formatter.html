@@ -1,0 +1,5 @@
+{% comment %}
+  Format a link to a posts-with-tag page from "tag", a _data/tags.yml object, and "tag_separator".
+{% endcomment %}
+
+<a href="{{ site.baseurl }}tag/{{ include.tag.slug }}">{{ include.tag.name }}</a>{% if forloop.last == false %}{{ include.tag_separator }}{% endif %}

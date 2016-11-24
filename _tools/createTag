@@ -1,0 +1,50 @@
+#!/bin/bash
+#
+# createTag
+# Copyright 2014 Joe Friedrichsen
+# Licensed under the MIT License
+
+if test $# -ne 2; then
+  echo "Usage: createTag 'slug-name-for-url' 'Pretty Name'"
+  exit 1
+fi
+
+newTagSlugName="$1"
+newTagPrettyName="$2"
+
+gitRepoRoot="$(git rev-parse --show-toplevel)"
+tagDataFile="${gitRepoRoot}/_data/tags.yml"
+tagListFile="${gitRepoRoot}/tag/${newTagSlugName}.md"
+
+if $(echo "${newTagSlugName}" | grep -q "[^a-z0-9_-]"); then
+  echo "Cannot use \"${newTagSlugName}\" for the tag since it contains illegal URL characters. Use lowercase letters, numbers, and '-' or '_'."
+  exit 2
+fi
+
+if $(grep -q "^- slug: ${newTagSlugName}" "${tagDataFile}"); then
+  echo "\"${newTagSlugName}\" is already a tag in \"${tagDataFile}\"."
+  exit 3
+fi 
+
+cat >> "${tagDataFile}" <<-new-tag-entry
+
+	- slug: ${newTagSlugName}
+	  name: ${newTagPrettyName}
+new-tag-entry
+
+cat > "${tagListFile}" <<-new-tag-list-file
+	---
+	layout: posts_by_tag
+	tag: ${newTagSlugName}
+	title: Posts tagged ${newTagPrettyName}
+	---
+
+new-tag-list-file
+
+echo "Created new tag! Use 'git add' on these files:"
+echo "  git add \"${tagDataFile}\" \"${tagListFile}\""
+echo
+echo "Begin using this tag by adding this line to your post's Front Matter:"
+echo "  ---"
+echo "  tags: [${newTagSlugName}]"
+echo "  ---"

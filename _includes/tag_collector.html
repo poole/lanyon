@@ -1,0 +1,26 @@
+{% comment %}
+  Fill "tag_list" with a list of links, separated by "tag_separator",
+  using the "tags" front-matter variable for a post.
+{% endcomment %}
+
+{% assign post = page %}
+{% assign tag_list = '' %}
+{% assign no_tags_message = 'no tags' %}
+
+{% if post.tags.size > 0 %}
+  {% for post_tag in post.tags %}
+    {% for data_tag in site.data.tags %}
+      {% if data_tag.slug == post_tag %}
+        {% assign tag = data_tag %}
+      {% endif %}
+    {% endfor %}
+    {% if tag %}
+      {% capture tags_content_temp %}
+        {{ tag_list }}{% include tag_link_formatter.html tag=tag tag_separator=include.tag_separator %}
+      {% endcapture %}
+      {% assign tag_list = tags_content_temp %}
+    {% endif %}
+  {% endfor %}
+{% else %}
+  {% assign tag_list = no_tags_message %}
+{% endif %}

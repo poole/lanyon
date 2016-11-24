@@ -56,7 +56,7 @@ h1, h2, h3, h4, h5, h6 {
  * Wrapper
  *
  * The wrapper is used to position site content when the sidebar is toggled. We
- * use an outter wrap to position the sidebar without interferring with the
+ * use an outter wrap to position the sidebar without interfering with the
  * regular page content.
  */
 
@@ -263,7 +263,7 @@ a.sidebar-nav-item:focus {
 
 /* Slide effect
  *
- * Handle the sliding effects of the sidebar and content in one spot, seperate
+ * Handle the sliding effects of the sidebar and content in one spot, separate
  * from the default styles.
  *
  * As an a heads up, we don't use `transform: translate3d()` here because when
