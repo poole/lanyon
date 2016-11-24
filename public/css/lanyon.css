@@ -331,6 +331,28 @@ a.sidebar-nav-item:focus {
   color: #9a9a9a;
 }
 
+/* Tags */
+.round {
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+}
+
+.tags {
+  padding-top: 2rem;
+  border-top: 1px solid #eee;
+}
+
+.tag-cloud {
+  display: inline-block;
+  padding: 8px;
+  margin-top: 8px;
+  color: #9a9a9a;
+  white-space: pre;
+  background-color: #F8FDFF;
+  border: 2px solid #89CEFF;
+}
+
 /* Related posts */
 .related {
   padding-top: 2rem;

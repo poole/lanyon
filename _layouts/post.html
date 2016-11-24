@@ -8,6 +8,18 @@ layout: default
   {{ content }}
 </div>
 
+{% capture difference %} {{ page.tags | size | minus:1 }} {% endcapture %}
+{% unless difference contains '-' %}
+<div class="tags">
+  <h2>Tags:</h2>
+  <ul>
+    {% for tag in page.tags %}
+      <li class="round tag-cloud">{{ tag }}</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endunless %}
+
 <div class="related">
   <h2>Related Posts</h2>
   <ul class="related-posts">
