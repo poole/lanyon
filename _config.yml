@@ -5,18 +5,18 @@ permalink:           pretty
 relative_permalinks: true
 
 # Setup
-title:               Lanyon
-tagline:             'A Jekyll theme'
-description:         'A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:                 http://lanyon.getpoole.com
+title:               Walter Dempsey
+tagline:             ' Statistican / Data Scientist'
+description:         'A postdoctoral researcher in the <a href="http://dept.stat.lsa.umich.edu/~samurphy/nida/overview.html" target="_blank">Statistical Reinforcement Lab</a> at the University of Michigan <a href="http://dept.stat.lsa.umich.edu/" target="_blank">Statistics department</a>.'
+url:                 http://plusthemonk.github.io
 baseurl:             ''
 paginate:            5
 
 # About/contact
 author:
-  name:              Mark Otto
-  url:               https://twitter.com/mdo
-  email:             markdotto@gmail.com
+  name:              Walter Dempsey
+  url:               https://github.com/PlusTheMonk
+  email:             dempsey.walter@gmail.com
 
 # Custom vars
 version:             1.0.0
