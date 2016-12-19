@@ -1,0 +1,28 @@
+# Setup
+title:               Lanyon
+tagline:             A Jekyll theme
+description:         A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.
+url:                 ""
+baseurl:             ""
+paginate:            5
+permalink:           pretty
+
+# About/contact
+author:
+  name:              Mark Otto
+  url:               https://twitter.com/mdo
+  email:             markdotto@gmail.com
+
+# Custom vars
+version:             1.0.0
+
+# Build settings
+markdown:            kramdown
+theme:               jekyll-theme-lanyon
+gems:
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-sitemap
+exclude:
+  - Gemfile
+  - Gemfile.lock

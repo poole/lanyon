@@ -9,6 +9,7 @@ Lanyon is an unassuming [Jekyll](http://jekyllrb.com) theme that places content 
 ## Contents
 
 - [Usage](#usage)
+  - [Install as a gem](#install-as-a-gem)
 - [Options](#options)
   - [Sidebar menu](#sidebar-menu)
   - [Themes](#themes)
@@ -22,6 +23,30 @@ Lanyon is an unassuming [Jekyll](http://jekyllrb.com) theme that places content 
 
 Lanyon is a theme built on top of [Poole](https://github.com/poole/poole), which provides a fully furnished Jekyll setup—just download and start the Jekyll server. See [the Poole usage guidelines](https://github.com/poole/poole#usage) for how to install and use Jekyll.
 
+
+### Install as a gem
+
+*Note*: Require Jekyll ~> 3.3
+
+Add this line to your Jekyll site's Gemfile:
+
+```ruby
+gem "lanyon-theme"
+```
+
+And add this line to your Jekyll site:
+
+```yaml
+theme: lanyon-theme
+```
+
+And then execute:
+
+```sh
+    $ bundle
+```
+
+To test this theme: run `bundle install` in the `example` folder, then run `bundle exec jekyll serve` and open `http://127.0.0.1:4000/` in your browser.
 
 ## Options
 
