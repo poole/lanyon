@@ -1,7 +1,7 @@
 # Permalinks
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:           pretty
+permalink:           /:categories/:title/
 
 # Setup
 title:               Power in the Book
@@ -10,6 +10,8 @@ description:         'A Book of Mormon blog'
 url:                 http:/powerintheword.com
 baseurl:             ''
 paginate:            5
+staticman:
+
 
 # About/contact
 author:
