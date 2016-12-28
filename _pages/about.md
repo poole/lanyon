@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Power in the Book
+title: About
 permalink: /about/
 ---
 

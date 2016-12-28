@@ -1,0 +1,24 @@
+---
+# Overrides for the main.scss for the minima theme
+---
+@charset "utf-8";
+@import "minima";
+
+// Our variables
+$title-color:       goldenrod;
+
+// Header
+.site-header {
+  background-color: midnightblue;
+  border-top: 5px solid $title-color;
+  color: $title-color;
+}
+
+.site-title, .site-title:visited {
+  color: $title-color;
+  font-weight: bold;
+}
+
+.site-nav .page-link, .site-nav .page-link:visited {
+  color: $title-color;
+}
