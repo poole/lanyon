@@ -1,27 +1,32 @@
-# Permalinks
+# Welcome to Jekyll!
 #
-# Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:           /:categories/:title/
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
-# Setup
-title:               Power in the Book
-tagline:             'A Book of Mormon blog'
-description:         'A Book of Mormon blog'
-url:                 http:/powerintheword.com
-baseurl:             ''
-paginate:            5
-staticman:
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Power in the Book
+email: admin@powerinthebook.com
+description: > # this means to ignore newlines until "baseurl:"
+  A Book of Mormon blog
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://www.powerinthebook.com" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: 
+github_username:  
 
-
-# About/contact
-author:
-  name:              Matthew Watkins
-  url:               http://powerintheword.com
-  email:             admin@powerintheword.com
-
-# Custom vars
-version:             1.0.0
-
-# Gems
+# Build settings
+markdown: kramdown
+theme: minima
 gems:
-  - jekyll-paginate
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock

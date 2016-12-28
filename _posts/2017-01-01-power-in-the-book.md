@@ -1,8 +1,7 @@
 ---
 layout: post
-title: Power in the Book
+title:  Power in the Book
 date:   2017-01-01 00:00:00 -0500
-categories: intro
 ---
 
 The Book of Mormon is a big deal. At least, that's what the Prophets and Apostles say:

@@ -1,30 +1,43 @@
 ---
 layout: page
-title: About
+title: Power in the Book
+permalink: /about/
 ---
 
-<p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
-</p>
+The Book of Mormon is a big deal. At least, that's what the Prophets and Apostles say:
 
-In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+> The Book of Mormon [is] the most correct of any book on earth, and the keystone of our religion, and a man [will] get nearer to God by abiding by its precepts, than by any other book.
 
-There are currently two themes built on Poole:
+-- [Joseph Smith](https://www.lds.org/scriptures/bofm/introduction?lang=eng)
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
+> Take away the Book of Mormon and the revelations, and where is our religion? We have none.
 
-Learn more and contribute on [GitHub](https://github.com/poole).
+-- [Joseph Smith](https://www.lds.org/manual/teachings-of-presidents-of-the-church-ezra-taft-benson/chapter-9-the-book-of-mormon-keystone-of-our-religion.p18?lang=eng#p17)
 
-## Setup
+> One cannot come to full faith in this latter-day work—and thereby find the fullest measure of peace and comfort in these, our times—until he or she embraces the divinity of the Book of Mormon.
 
-Some fun facts about the setup of this project include:
+-- [Jeffrey R Holland](https://www.lds.org/general-conference/2009/10/safety-for-the-soul.p19?lang=eng#p18)
 
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
+> There is a power in the book which will begin to flow into your lives the moment you begin a serious study of the book. 
 
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
+-- [Pres. Ezra Taft Benson](https://www.lds.org/general-conference/1986/10/the-book-of-mormon-keystone-of-our-religion.p28?lang=eng#p27)
 
-Thanks for reading!
+Pay attention to that last one; that's why I'm starting this blog.
+
+Each time I read the Book of Mormon, it gets better and better. After a few times through, you obecome familiar with the story, so you start to feel like you know the writers. At each juncture in the history, you know what's coming next, so you see it all in context. It's once you're familiar with it that the verses come alive in a way you never imagined possible.
+
+In addition to getting better and better, the reading also gets slower and slower. Our stake president set a goal for all of us to read the Book of Mormon as a stake in 2016. But I didn't even make it to Helaman. Why? Because there's just _so much_! I kep getting stuck highlighting and cross-referencing, getting excited about new discoveries in every other verse.
+
+![Gospel Library Screenshot](/assets/img/gl-screenshot-alma-42.png)
+
+My Sunday School teachers warned me this would happen. They tried to tell me that serious reading would turn me into a Book of Mormon nerd. ButI figured they were talking about people like my English teachers. People whose superpower is interpreting a whole lot of poignant meaning into really boring old literature. The one who tell you that when the author made such-and-such a character disabled, it was _actually_ a biting critique of the Gilded Age. As if the author couldn't just come out and say "This Gilded Age kind stinks."
+
+But that's what's great about the Book of Mormon. It's nothing like high school lit classes. You don't have to strain and squint your eyes, looking for hidden meanings like you have to do for, say, Hemmingway. In the Book of Mormon, it's all there right in front of you. Once I became familiar with the Book of Mormon, my reading changed. When i read one verse, other verses woudl start popping into your head. Verses I had never thought of being related until that moment.
+
+Half the time those verses wouild be linked already for me in the footnotes of the page, and I'd wonder why I never looked there before. The other half of the time, there wouldn't be any footnotes at all. And I'd wonder why they weren't there already.
+
+That's why I started this blog. To share my thoughts and insights as I continue to stumble across the Book of Mormon-- the ones that aren't already in the footnotes at the bottom of the page. I doubt I'll post very frequently. I doubt any of my commentary will be terribly profound. But maybe someone can benefit from it. 
+
+Also, because my wife is starting to get tired of me keeping her up until midnight excitedly flipping through Nephite history, so I need a new nerd outlet :)
+
+Enjoy!
