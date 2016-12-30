@@ -1,34 +1,26 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 title: Power in the Book
+header-img: img/home-bg.jpg
 email: admin@powerinthebook.com
-description: > # this means to ignore newlines until "baseurl:"
-  A Book of Mormon blog
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://www.powerinthebook.com" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: 
-github_username:  
+copyright_name: Matthew Watkins
+description: "There is a power in the book which will begin to flow into your lives the moment you begin a serious study of the book. "
+baseurl: ""
+url: "http://powerinthebook.com"
+twitter_username: powerinthebook
+github_username:  powerinthebook
+facebook_username:  powerinthebook
+email_username:  admin@powerinthebook.com
+
+# Google Analytics
+# To enable google analytics, uncomment below line with a valid Google Tracking ID
+# google_tracking_id:
 
 # Build settings
 markdown: kramdown
-theme: minima
-gems:
-  - jekyll-feed
-include:
-  - _pages
-exclude:
-  - Gemfile
-  - Gemfile.lock
+highlighter: rouge
+permalink: pretty
+paginate: 5
+include: [ "_pages" ]
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+
+gems: [ jekyll-paginate, jekyll-feed ]

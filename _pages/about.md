@@ -28,7 +28,7 @@ Each time I read the Book of Mormon, it gets better and better. After a few time
 
 In addition to getting better and better, the reading also gets slower and slower. Our stake president set a goal for all of us to read the Book of Mormon as a stake in 2016. But I didn't even make it to Helaman. Why? Because there's just _so much_! I kep getting stuck highlighting and cross-referencing, getting excited about new discoveries in every other verse.
 
-![Gospel Library Screenshot](/assets/img/gl-screenshot-alma-42.png)
+![Gospel Library Screenshot](/img/about/gl-screenshot-alma-42.png)
 
 My Sunday School teachers warned me this would happen. They tried to tell me that serious reading would turn me into a Book of Mormon nerd. ButI figured they were talking about people like my English teachers. People whose superpower is interpreting a whole lot of poignant meaning into really boring old literature. The one who tell you that when the author made such-and-such a character disabled, it was _actually_ a biting critique of the Gilded Age. As if the author couldn't just come out and say "This Gilded Age kind stinks."
 
