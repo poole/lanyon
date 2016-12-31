@@ -26,7 +26,7 @@ That last one that's why I'm starting this blog.
 
 Each time I read the Book of Mormon, it gets better and better. After a few times through, you become familiar with the story, so you start to feel like you know the writers. At each juncture in the history, you know what's coming next, so you see it all in context. It's once you're familiar with it that the verses come alive in a way you never imagined possible.
 
-In addition to getting better and better, the reading also gets slower and slower. Our stake president set a goal for all of us to read the Book of Mormon as a stake in 2016. But I didn't even make it to Helaman. Why? Because there's just _so much_! I kep getting stuck highlighting and cross-referencing, getting excited about new discoveries in every other verse.
+In addition to getting better and better, the reading also gets slower and slower. Our stake president set a goal for all of us to read the Book of Mormon as a stake in 2016. But I didn't even make it to Helaman. Why? Because there's just _so much_! I kep getting stuck highlighting and cross-referencing, getting excited about new discoveries in every other verse. A lot of chapters in my Gospel Library app have started looking like this:
 
 ![Gospel Library Screenshot](/img/about/gl-screenshot-alma-42.png)
 
