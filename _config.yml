@@ -6,10 +6,10 @@ copyright_name: Matthew Watkins
 description: "There is a power in the book which will begin to flow into your lives the moment you begin a serious study of the book. "
 baseurl: ""
 url: "http://powerinthebook.com"
-twitter_username: powerinthebook
-github_username:  powerinthebook
-facebook_username:  powerinthebook
-email_username:  admin@powerinthebook.com
+twitter_username: #powerinthebook
+github_username:  #powerinthebook
+facebook_username:  #powerinthebook
+email_username:  #admin@powerinthebook.com
 
 # Google Analytics
 # To enable google analytics, uncomment below line with a valid Google Tracking ID
