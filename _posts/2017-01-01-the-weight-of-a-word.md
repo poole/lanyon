@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Alma 44:20. The weight of a word
-date:   2016-01-01
+date:   2016-01-02
 categories: integrity
 ---
 
