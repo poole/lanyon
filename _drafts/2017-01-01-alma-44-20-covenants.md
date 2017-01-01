@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Alma 44:20. Covenants used to mean something
+title:  Alma 44:20. The weight of your word
 date:   2017-01-01
 ---
 
