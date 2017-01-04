@@ -356,6 +356,34 @@ a.sidebar-nav-item:focus {
   color: inherit;
 }
 
+/*
+ * Add a "Keep Reading" button to expand a post
+ *
+ * When a post is long, hide everything after the first few elements.
+ */
+.posts .post .more-checkbox,
+.posts .post .more-checkbox:not(:checked) ~ :not(:nth-child(-n+10)):not(.more-button) {
+  display: none;
+}
+
+/*
+ * If the post is short, hide the "Keep Reading" button.
+ * Also, hide the "Keep Reading" button once it has been clicked.
+ */
+.posts .post .more-button:nth-child(-n+11),
+.posts .post .more-checkbox:checked ~ .more-button {
+  display: none;
+}
+
+.posts .post .more-button {
+  /* poole default link color */
+  color: #268bd2;
+  cursor: pointer;
+}
+.posts .post .more-button:hover {
+  text-decoration: underline;
+}
+
 
 /*
  * Pagination
@@ -449,7 +477,8 @@ a.pagination-item:hover {
 }
 .theme-base-08 .container a,
 .theme-base-08 .sidebar-toggle,
-.theme-base-08 .related-posts li a:hover {
+.theme-base-08 .related-posts li a:hover,
+.theme-base-08 .more-button {
   color: #ac4142;
 }
 
@@ -461,7 +490,8 @@ a.pagination-item:hover {
 }
 .theme-base-09 .container a,
 .theme-base-09 .sidebar-toggle,
-.theme-base-09 .related-posts li a:hover {
+.theme-base-09 .related-posts li a:hover,
+.theme-base-09 .more-button {
   color: #d28445;
 }
 
@@ -473,7 +503,8 @@ a.pagination-item:hover {
 }
 .theme-base-0a .container a,
 .theme-base-0a .sidebar-toggle,
-.theme-base-0a .related-posts li a:hover {
+.theme-base-0a .related-posts li a:hover,
+.theme-base-0a .more-button {
   color: #f4bf75;
 }
 
@@ -485,7 +516,8 @@ a.pagination-item:hover {
 }
 .theme-base-0b .container a,
 .theme-base-0b .sidebar-toggle,
-.theme-base-0b .related-posts li a:hover {
+.theme-base-0b .related-posts li a:hover,
+.theme-base-0b .more-button {
   color: #90a959;
 }
 
@@ -497,7 +529,8 @@ a.pagination-item:hover {
 }
 .theme-base-0c .container a,
 .theme-base-0c .sidebar-toggle,
-.theme-base-0c .related-posts li a:hover {
+.theme-base-0c .related-posts li a:hover,
+.theme-base-0c .more-button {
   color: #75b5aa;
 }
 
@@ -509,7 +542,8 @@ a.pagination-item:hover {
 }
 .theme-base-0d .container a,
 .theme-base-0d .sidebar-toggle,
-.theme-base-0d .related-posts li a:hover {
+.theme-base-0d .related-posts li a:hover,
+.theme-base-0d .more-button {
   color: #6a9fb5;
 }
 
@@ -521,7 +555,8 @@ a.pagination-item:hover {
 }
 .theme-base-0e .container a,
 .theme-base-0e .sidebar-toggle,
-.theme-base-0e .related-posts li a:hover {
+.theme-base-0e .related-posts li a:hover,
+.theme-base-0e .more-button {
   color: #aa759f;
 }
 
@@ -533,7 +568,8 @@ a.pagination-item:hover {
 }
 .theme-base-0f .container a,
 .theme-base-0f .sidebar-toggle,
-.theme-base-0f .related-posts li a:hover {
+.theme-base-0f .related-posts li a:hover,
+.theme-base-0f .more-button {
   color: #8f5536;
 }
 
