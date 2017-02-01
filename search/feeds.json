@@ -1,0 +1,22 @@
+---
+layout: none
+---
+[
+{% for post in site.posts %}
+{% if post.title != null and post.title != empty and post.search_omit != true %}
+{% if forloop.index > 1 %},{%endif%}{
+  "title": {{post.title | jsonify}},
+  "content": {{post.content | markdownify | strip_html | jsonify}},
+  "link": "{{ site.url }}{{ post.url }}",
+  "date": {{ post.date | jsonify }},
+  "excerpt": {{ post.snippet | jsonify }}
+}{%endif%}{% endfor %}
+{% for page in site.pages %}{% if page.layout != 'none' and page.layout != 'none' and page.title != null and page.title != empty and page.title != 'Home' and page.search_omit != true %}
+{% if forloop.index > 1 %},{%endif%}{
+  "title": {{page.title | jsonify }},
+  "content": {{page.content | strip_html | strip_newlines | jsonify}},
+  "link": "{{ site.url }}{{ page.url | replace: 'index.html', '' }}",
+  "date": {{ page.date | jsonify }},
+  "excerpt": {{ page.description | jsonify }}
+}{%endif%}{% endfor %}
+]
