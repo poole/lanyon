@@ -356,6 +356,40 @@ a.sidebar-nav-item:focus {
   color: inherit;
 }
 
+/* Tag display */
+
+.date-published {
+  color: #9a9a9a;
+}
+
+.post-list {
+  list-style-type: none;
+}
+.tag-box {
+  list-style: none outside none;
+  margin-top: -.5rem;
+  overflow: hidden;
+  padding: 4px 0;
+}
+.tag-box.inline li {
+    float: left;
+    font-size: 0.875rem;
+    line-height: 2.5;
+}
+
+.tag-box a {
+    background-color: #f5f5f5;
+	color: #268bd2;
+    border-radius: 4px;
+    margin: 2px;
+    padding: 2px 4px;
+    text-decoration: none;
+	font-size: 0.85rem;
+}
+.tag-box a:hover,
+.tag-box a:focus {
+  text-decoration: underline;
+}
 
 /*
  * Pagination

@@ -4,7 +4,19 @@ layout: default
 
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
-  <span class="post-date">{{ page.date | date_to_string }}</span>
+  <span class="post-date">{{ page.date | date_to_string }}
+   <ul class="tag-box inline" style="float:right">
+	{% capture tags %}
+	  {% for tag in page.tags %}
+		{{ tag }}
+	  {% endfor %}
+	{% endcapture %}
+	{% assign sortedtags = tags | split:' ' | sort %}
+
+	{% for tag in sortedtags %}
+		<li><a href="/tags.html#{{ tag | cgi_escape }}">{{ tag }}</a></li>
+	{% endfor %}
+   </ul></span>
   {{ content }}
 </div>
 
