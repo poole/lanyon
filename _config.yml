@@ -7,7 +7,8 @@ permalink:           pretty
 title:               Hieu Nguyen's Blog
 tagline:             'Easy Peasy Lemon Squeezy'
 description:         'Bog about programming.'
-url:                 http://hieunguyentrung.com
+url:                 https://hieunguyentrung.com
+enforce_ssl:         hieunguyentrung.com
 baseurl:             ''
 paginate:            5
 
