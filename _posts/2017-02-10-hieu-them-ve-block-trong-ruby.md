@@ -7,6 +7,7 @@ Làm việc với ngôn ngữ Ruby, chắc chắn phải làm việc với `bloc
 
 # Block là gì ?
 Nếu bạn chưa biết nó thì cũng không hẳn là bạn chưa dùng nó bao giờ, mình chắc chắn là ai sử dụng ngôn ngữ Ruby dù ở mức độ nào cũng sử dụng nó, chỉ là không biết nó gọi là gì thôi. Ví dụ :
+
 ```ruby
 [1, 2, 3].each {|x| puts x}
 
@@ -20,6 +21,7 @@ end
 3
 => [1, 2, 3]
 ```
+
 Hai đoạn code trên thực hiện cùng một chức năng như nhau nên sẽ có cùng một output là điều dễ hiểu.
 Bạn thấy khuôn dạng của 2 đoạn code trên có quen và thông dụng không ? Block nó tồn tại ở đó đấy.
 
@@ -30,6 +32,7 @@ Về chức năng thì chúng như nhau, nhưng thường sẽ sử dụng `{}` 
 # Đặt vấn đề
 Dùng `block` thì nhiều, nhưng không hẳn là đã hiểu tại sao nó lại viết cú pháp như thế, bên trong nó làm trò gì.
 Hay đơn giản như có những đoạn code bạn thường sử dụng như :
+
 ```ruby
 def abc &block
   ...
@@ -37,6 +40,7 @@ end
 
 ["a", "b"].map &:upcase
 ```
+
 Bạn có từng thắc mắc `&block` để làm gì hay tại sao phải viết `&:upcase`  mà không phải cái gì dễ viết hơn chút ?
 
 # `yield` và cách sử dụng
@@ -44,6 +48,7 @@ Bạn có từng thắc mắc `&block` để làm gì hay tại sao phải viế
 Bất cứ một method nào trong Ruby cũng ngấm ngầm nhận một `block` làm tham số, kể cả khi tạo method đó ta có khai báo để nó nhận `block` làm tham số hay không. Nôm na kiểu như ai cũng cần ăn để sống, mà không cần bắt ép hay dạy là phải ăn.
 Và khi đó,  khi gọi tới `yield` bên trong `method` , nó sẽ có tác dụng thực thi đoạn code nằm trong `block` mà `method` đó âm thầm nhận vào.
 Ví dụ :
+
 ```ruby
 def test_yield
   puts "Start of method"
@@ -59,9 +64,11 @@ Blabla
 End of method
 => nil
 ```
+
 Như ví dụ trên ta có thể thấy, method `test_yield` âm thầm nhận vào block `{puts "Blabla"}` mặc dù ta code method đó không nhận bất cứ tham số nào. Code trong method sẽ được chạy lần lượt tới khi gặp `yield`, sau khi thực thi xong code của block, nó sẽ thực thi tiếp code của method đang chạy dang dở.
 
 ### `yield` có tác dụng thực thi code trong block, và bản thân nó sẽ nhận giá trị return từ block đó.
+
 ```ruby
 def test_yield
   puts "Start of method"
@@ -77,9 +84,11 @@ Start of method
 End of method
 => nil
 ```
+
 Ví dụ trên block `{1 + 1}` sẽ return về 2, `yield` thực thi code trong block nên sẽ nhận được return từ block là 2.
 
 ### `yield` cũng có thể truyền tham số vào.
+
 ```ruby
 def test_yield
   puts "Hello"
@@ -97,7 +106,9 @@ Hello
 FooBar
 => nil
 ```
+
 Dễ dàng nhận ra, `| ... |` sẽ chứa danh sách tham số được sử dụng cho block, được truyền từ `yield` vào. Danh sách tham số trong `| ... |` sẽ map chính xác với danh sách tham số truyền vào khi gọi `yield`, gọi thừa hay thiếu cũng không sao, chỉ là không có dữ liệu cho tham số thôi.
+
 ```ruby
 def test_yield
   yield "a"
@@ -148,9 +159,11 @@ y inside the block : 0
 x outside the block : 0
 y outside the block : 10
 ```
+
 Ta dễ dàng thấy, biến `x` không được khai báo như biến local của block, nên giá trị của nó ở bên ngoài block đã bị thay đổi khi ta gán `x = n`, ngược lại giá trị của `y` vẫn không bị thay đổi bên ngoài block.
 ### Sử dụng `block_given? ` để kiểm tra có block nào được truyền vào method hay không.
 Một điều mà không nhắc cũng hiểu, đó là nếu block được truyền vào nhưng ta không gọi tới `yield` thì block đó cũng không có tác dụng gì và không hề được thực thi. Còn ngược lại, ta gọi `yield` nhưng không truyền block vào thì sao ?
+
 ```ruby
 def test_no_block
   yield
@@ -160,7 +173,9 @@ test_no_block
 ```
 LocalJumpError: no block given (yield)
 ```
+
 Lỗi bét be ra ngay. Để tránh lỗi xảy ra, ta có thể sử dụng method `block_given?`, method này sẽ kiểm tra xem có block nào được truyền vào method mà ta đang gọi `yield` hay không.
+
 ```ruby
 def test_block
   if block_given?
@@ -177,8 +192,10 @@ test_block {puts "I saw a block"}
 No block given
 I saw a block
 ```
+
 # Sử dụng `&block`
 Sử dụng cú pháp này để truyền reference của block như là một tham số vào trong method.
+
 ```ruby
 def test_method &block
   puts block
@@ -192,16 +209,19 @@ test_method {puts "Hello Proc"}
 Hello Proc
 => nil
 ```
+
 Ta có thể thấy block ta truyền vào là một instance của class `Proc`.
 Chi tiết về `Block, Proc hay Lambda ...` mình sẽ viết chi tiết ở một bài khác.
 
 # Sử dụng `&:something`
+
 ```ruby
 ["a", "b"].map &:upcase
 ```
 ```
 => ["A", "B"]
 ```
+
 Như vừa nhắc tới cách sử dụng `&block`, sẽ không có chuyện gì nếu tham số truyền vào method là reference của một block, nhưng nếu nó không reference tới block thì method sẽ gọi tới `to_proc` để chuyển nó thành block cho việc sử dụng như bình thường.
 Như ví dụ trên, đầu tiên ta sẽ có `:upcase.to_proc` để tạo ra một instance của `Proc`, sau đó truyền reference của block vừa tạo ra vào trong method `.map` để sử dụng.
 
@@ -209,6 +229,7 @@ Như ví dụ trên, đầu tiên ta sẽ có `:upcase.to_proc` để tạo ra m
 Ứng dụng của block thì khỏi cần kể, dùng nó ở mọi lúc mọi nơi, nó cũng là một phần tạo ra sự đặc biệt cho ngôn ngữ Ruby.
 Tiện vừa nhắc tới việc nếu tham số truyền vào không phải reference tới một block, nó sẽ được `to_proc` để cố gắng chuyển thành một block. Ta có thể áp dụng nó cho bài toán cơ bản sau :
 > Từ một mảng các số nguyên, lọc ra những số chia hết cho 3.
+
 ```ruby
 class Fixnum
   def to_proc
@@ -226,6 +247,7 @@ puts numbers
 6
 9
 ```
+
 3 là một `Fixnum`, nên ta định nghĩa thêm method `to_proc` nhằm mục đích đưa logic để xác định nó có chia hết cho 3 hay không.
 
 # Kết luận
