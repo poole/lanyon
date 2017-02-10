@@ -161,6 +161,7 @@ y outside the block : 10
 ```
 
 Ta dễ dàng thấy, biến `x` không được khai báo như biến local của block, nên giá trị của nó ở bên ngoài block đã bị thay đổi khi ta gán `x = n`, ngược lại giá trị của `y` vẫn không bị thay đổi bên ngoài block.
+
 ### Sử dụng `block_given? ` để kiểm tra có block nào được truyền vào method hay không.
 Một điều mà không nhắc cũng hiểu, đó là nếu block được truyền vào nhưng ta không gọi tới `yield` thì block đó cũng không có tác dụng gì và không hề được thực thi. Còn ngược lại, ta gọi `yield` nhưng không truyền block vào thì sao ?
 
