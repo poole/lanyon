@@ -3,6 +3,8 @@
 ## 0.8
 
 * Made deep zoom images on volume pages optional (based on  configuration setting)
+* Bug fix: Image thumbnails show as broken links on "Annotations tagged with..."
+  pages in exported editions
 
 ## 0.7
 
@@ -50,5 +52,3 @@ volume pages, annotations, and tags.
       count with jump link is displayed at the top of the page
     - use HTML5 picture element to display smaller page thumbnail images
       for smaller screens on page browse
-
-
