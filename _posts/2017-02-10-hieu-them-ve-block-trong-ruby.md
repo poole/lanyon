@@ -1,3 +1,7 @@
+---
+layout: post
+title: Hiểu thêm về block trong Ruby
+---
 
 Làm việc với ngôn ngữ Ruby, chắc chắn phải làm việc với `block` ,  `block` là một trong những tính năng cực kỳ tuyệt vời của Ruby. Nhưng sử dụng `block` hàng ngày không có nghĩa là bạn thực sự hiểu nó hoạt động ra sao, và tận dụng nó như thế nào. Bài viết này mình sẽ diễn đạt lại bằng kiến thức cá nhân những gì mình hiểu về nó.
 
