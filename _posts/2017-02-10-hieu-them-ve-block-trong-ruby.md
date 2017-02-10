@@ -129,6 +129,7 @@ a
 
 ### Sử dụng biến cục bộ trong block.
 Để khai báo biến cục bộ dùng trong block, trong danh sách tham số khai báo bởi `| ... |`, ta sẽ dùng `;` để chia danh sách tham số thành 2 phần, phần đầu là những tham số được truyền vào qua `yield`, phần còn lại phía sau là danh sách biến dùng cục bộ trong block.
+
 ```ruby
 x = 10
 y = 10
