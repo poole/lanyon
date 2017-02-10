@@ -6,7 +6,7 @@ permalink:           pretty
 # Setup
 title:               Hieu Nguyen's Blog
 tagline:             'Easy Peasy Lemon Squeezy'
-description:         'Bog about programming.'
+description:         'Blog about programming'
 url:                 https://hieunguyentrung.com
 baseurl:             ''
 paginate:            5
