@@ -551,7 +551,7 @@ a.to-fullpage {
 @media screen and (min-width: 1200px) {
   /* give annotations more room on larger screens */
   .margin-container {
-    width: 30%;
+    width: 23%;
   }
 
   #zoom-page {
