@@ -364,7 +364,7 @@ span.glyphicon.glyphicon-chevron-left {
 /* make consecutive highlight spans look like they are seamless
    (NOTE: adjustment amount may depend on word/text spacing) */
 span.annotator-hl:not(:first-child) {
-    margin-left: -13px;
+    /*margin-left: -13px;*/
 }
 
 /* Annotator Tags - styles from annotator.js and readux
