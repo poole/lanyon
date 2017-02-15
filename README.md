@@ -70,6 +70,8 @@ automatically displays all top-level pages alphabetically.  To include
 a page in the sidebar navigation, and to control the order, set a *nav_order*
 number in the front matter of the page you want included.
 
+Show an open sidebar on page load by modifying the `<input>` tag within the `sidebar.html` layout to add the `checked` boolean attribute:
+
 ### Custom Page URLs
 
 The Readux web export and the teifacsimile-to-jekyll script allow you to
@@ -117,6 +119,3 @@ will be included.  An excerpt will be included if available, and you can
 set a custom excerpt by adding one to the
 [Jekyll front matter](http://jekyllrb.com/docs/frontmatter/) for any
 page (other than the home page).
-
-
-
