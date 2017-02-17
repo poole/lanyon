@@ -70,6 +70,8 @@ automatically displays all top-level pages alphabetically.  To include
 a page in the sidebar navigation, and to control the order, set a *nav_order*
 number in the front matter of the page you want included.
 
+Show an open sidebar on page load by modifying the `<input>` tag within the `sidebar.html` layout to add the `checked` boolean attribute:
+
 ### Custom Page URLs
 
 The Readux web export and the teifacsimile-to-jekyll script allow you to
@@ -90,10 +92,13 @@ customized and modify the following fields as desired:
 
 ### Search
 
-Currently, search is implemented using
+Currently, search is implemented using [Elasticlunr.js](http://elasticlunr.com/), a JavaScript-based search engine that does not require any extra Jekyll plugins, and provide more advanced features than Lunr.js, which is what Elasticlunr.js is based on. There are also changes to the UI so that the search is more granular and provides features such as faceting, filtering, and other options.
+
+Previously, search is implemented using
 [Simple-Jekyll-Search](https://github.com/christian-fei/Simple-Jekyll-Search), a javascript-based search that does not require any extra Jekyll plugins.  This provides a
 simple keyword and exact phrase search on volume pages and annotation
 content.
+
 
 ### Citation Information
 
@@ -114,6 +119,3 @@ will be included.  An excerpt will be included if available, and you can
 set a custom excerpt by adding one to the
 [Jekyll front matter](http://jekyllrb.com/docs/frontmatter/) for any
 page (other than the home page).
-
-
-

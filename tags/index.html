@@ -4,10 +4,31 @@ title: 'Annotations by Tag'
 nav_order: 5
 excerpt: List of tags available across all annotations.
 ---
-<div class="container">
-<ul class="text-left">
+<div class="container text-left tag-index">
+  <div class="row">
     {% for tag in site.data.tags %}
     {% comment %} tag[0] is tag slug, tag[1] is tag data {% endcomment %}
-    <li><a href="{{ site.baseurl }}/tags/{{ tag[0] }}/">{{ tag[1].name }}</a></li>
-    {% endfor %}
-</ul>
+
+    <div class="col-md-12 tag-card">
+      <a class="label label-tag"
+         href="{{ site.baseurl }}/tags/{{ tag[0] }}/">
+         {{ tag[1].name }}
+      </a>
+
+      {% comment %} get a list of annotation ids for this page to calculate the total {% endcomment %}
+      {% capture annotation_idlist %}{% for annotation in site.annotations %}{% if annotation.tags contains tag[0] %}{{ annotation.id }} {% endif %}{% endfor %}{% endcapture %}
+      {% comment %} split on whitespace then get size {% endcomment %}
+      {% assign annotation_ids = annotation_idlist | split:' '%}
+      <span class="tag-count">{{ annotation_ids | size }}</span>
+
+      <div class="tag-pages">
+        {% for annotation in site.annotations|sort: 'sort_order' %}
+            {% if annotation.tags contains tag[0] %}
+            {% assign annotated_page=site.volume_pages[annotation.page_index] %}
+            <li class="tag-page"><a href="{{ site.baseurl }}{{ annotation.url }}" title="full page annotation view">{{ annotated_page.short_label }} {{ annotated_page.number }}</a></li>
+            {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+</div>

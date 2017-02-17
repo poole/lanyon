@@ -1,0 +1,51 @@
+.search-option-title {
+  padding-top: 0.5em;
+  padding-bottom: 0.25em;
+  font-weight: bold;
+}
+
+.search-label {
+  font-weight: normal;
+}
+
+.tag-btn {
+  background: rgb(236, 236, 236);
+  transition: background-color 0.2s;
+
+  padding: 7px;
+  margin: 0 4px 5px 0;
+  border-radius: 4px;
+  text-align: center;
+  color: #337ab7;
+  text-decoration: none;
+}
+
+.tag-btn:hover {
+  text-decoration: none;
+}
+
+.search-filter {
+  margin-top: 15px;
+}
+
+.search-option-title {
+  margin-bottom: 5px;
+}
+
+.result-summary {
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.help-block {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.search-option-tip {
+  color: #999;
+  text-align: center;
+  margin-top: -10px;
+  margin-bottom: 15px;
+}

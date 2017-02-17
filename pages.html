@@ -17,14 +17,26 @@ excerpt: Browse volume pages by thumbnail.
     .page-thumbnails .page-thumbnail {
       width: {{ site.image_size.thumbnail.width }}px;
       height: {{ site.image_size.thumbnail.height }}px;
+      overflow: hidden;
     }
     @media screen and (max-width: {{ small_thumb_threshold }}) {
           .page-thumbnails .page-thumbnail {
               width: {{ site.image_size.small-thumbnail.width }}px;
               height: {{ site.image_size.small-thumbnail.height }}px;
+              overflow: hidden;
           }
     }
 {% endif %}
+
+  {% comment %} prevent thumbnail from not filling out the entire container {% endcomment %}
+  .page-thumbnail img {
+    {% if site.image_size.thumbnail.width < site.image_size.thumbnail.height %}
+    height: 100%;
+    {% else %}
+    width: 100%;
+    {% endif %}
+  }
+
   <noscript>
   img.lazy-load {
     display: none;
@@ -45,13 +57,13 @@ excerpt: Browse volume pages by thumbnail.
         <picture>
           <!--[if IE 9]><video style="display: none"><![endif]-->
           <source
-              data-srcset="{{ page.images.small-thumbnail }}"
+              data-srcset="{% if page.images.small-thumbnail contains '://' %}{% else %}{{ site.url }}{{ site.baseurl }}/{% endif %}{{ page.images.small-thumbnail }}"
               media="(max-width: {{small_thumb_threshold }})" />
         <!--[if IE 9]></video><![endif]-->
-          <img data-src="{{ page.images.thumbnail }}" class="lazyload" />
+          <img data-src="{% if page.images.thumbnail contains '://' %}{% else %}{{ site.url }}{{ site.baseurl }}/{% endif %}{{ page.images.thumbnail }}" class="lazyload" />
         </picture>
         <noscript>
-            <img src="{{ page.images.thumbnail }}"/>
+            <img src="{% if page.images.thumbnail contains '://' %}{% else %}{{ site.url }}{{ site.baseurl }}/{% endif %}{{ page.images.thumbnail }}"/>
         </noscript>
         {% assign count = page.annotation_count %}
         {% if count != 0 %}
@@ -65,6 +77,3 @@ excerpt: Browse volume pages by thumbnail.
 </div>
 
 </div>
-
-
-

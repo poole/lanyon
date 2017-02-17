@@ -12,10 +12,8 @@ description: An annotated digital edition created with <a href="http://readux.li
 url:
 baseurl: ''
 
-# NOTE: jekyll-sitemap is supported by github pages;
-# may be worth looking into at some point
-#gems:
-#  - jekyll-sitemap
+gems:
+ - jekyll-sitemap
 
 # About/contact
 author:
@@ -25,7 +23,7 @@ author:
   twitter:
 
 # Custom vars
-version: 0.6
+version: 0.7
 
 # readux export specifics
 homepage_image: http://readux.library.emory.edu/books/emory:7sr72/pages/emory:gmrpr/single-page/
@@ -74,6 +72,7 @@ defaults:
   values:
     layout: volume_page
     short_label: p.
+    deep_zoom: true
     extra_js:
     - deepzoom.js
     - openseadragon.min.js

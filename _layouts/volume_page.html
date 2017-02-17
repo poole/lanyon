@@ -13,13 +13,16 @@ layout: default
                       <a class="comment-count pull-left" title="{{ page.annotation_count }} annotation{{ page.annotation_count|pluralize }}" href="#annotations">
                         {{ page.annotation_count }}</a>
                     {% endif %}
+                    {% if page.deep_zoom %}
                     <a id="enable-zoom" href="#" class="btn" alt="Deep Zoom Mode" title="Deep Zoom Mode"><span class="glyphicon glyphicon-fullscreen"></span></a>
+                    {% endif %}
 
                     <a id="covers" href="#" class="btn active" alt="Single Page" title="Single Page"><span class="glyphicon glyphicon-file"></span></a>
 
                     <a id="list" alt="Browse pages" title="Browse pages" href="{{ site.baseurl }}/pages/" class="btn" rel="index"><span class="glyphicon glyphicon-th"></span></a>
                 </div>
 
+                {% if page.deep_zoom %}
                 <div id="deepzoom-controls" class="hidden">
                     <div class="btn-group">
                         <a id="dz-zoom-in" alt="Zoom In" title="Zoom In" href="#" class="btn"><span class="glyphicon glyphicon-plus"></span></a>
@@ -31,6 +34,7 @@ layout: default
                         <a id="dz-fs" alt="Fullscreen Mode" title="Fullscreen Mode" href="#" class="btn"><span class="glyphicon glyphicon-fullscreen"></span></a>
                     </div>
                 </div>
+                {% endif %}
             </div>
 
             <div class="col-xs-3 col-sm-4 col-sm-offset-4 text-center">
@@ -44,7 +48,7 @@ layout: default
             <div class="page">
                 <div class="content">
                     <section class="inner">
-                       <img class="page-image" src="{{ page.images.page }}"/>
+                       <img class="page-image" src="{% if page.images.page contains '://' %}{% else %}{{ site.url }}{{ site.baseurl }}/{% endif %}{{ page.images.page }}"/>
                       {{ content }}
                     </section>
                 </div>
@@ -108,14 +112,14 @@ otherwise find pages based on index to support Jekyll 2.4 on GitHub Pages.
     {% endif %}
 </article>
 
-
+{% if page.deep_zoom %}
 <script type="text/javascript" charset="utf-8">
    $(document).ready(function () {
       // set up seadragon configuration (not loaded unless triggered by user)
       set_seadragon_opts({
           id: "zoom-page",
           // prefixUrl: "",
-          tileSources: "{{ page.images.json }}",
+          tileSources: "{% if page.images.page contains '://' %}{% else %}{{ site.url }}{{ site.baseurl }}/{% endif %}{{ page.images.json }}",
           toolbar: 'deepzoom-controls',
           showNavigator: true,
           navigatorPosition: 'TOP_LEFT',
@@ -126,7 +130,7 @@ otherwise find pages based on index to support Jekyll 2.4 on GitHub Pages.
       });
   });
 </script>
-
+{% endif %}
 
 
 <!-- todo: readux basic layout, page image, deep zoom, next/prev,

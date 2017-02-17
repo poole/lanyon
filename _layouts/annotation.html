@@ -10,7 +10,7 @@ layout: default
     <div class="col-md-2 col-sm-2 col-xs-4">
         <a href="{{ site.baseurl }}{{ volume_page.url }}">
              <img class="img-thumbnail"
-                src="{{ volume_page.images.small-thumbnail }}"
+                src="{% if volume_page.images.small-thumbnail contains '://' %}{% else %}{{ site.url }}{{ site.baseurl }}/{% endif %}{{ volume_page.images.small-thumbnail }}"
                 alt="{{ volume_page.title }}" title="{{ page.title }}"/>
                 {% comment %} could use larger thumbnail for larger displays? {% endcomment %}
          </a>

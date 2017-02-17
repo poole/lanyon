@@ -1,11 +1,35 @@
 # Change Log
 
+## 0.7 - Export Search, Bug Triage, and Cosmetic Improvements
+
+* Bugfix: Revert a fix that caused display issue of cover page in exports
+* Bugfix: Tweak annotator-hl margin and remove offset
+* Bugfix: Make annotation sidebar move to show all page content in export
+* Bugfix: Fix inelegant vertical thumbnail in export
+* Bugfix: Fix thumbnail missing in export
+* Bugfix: Fix page/annotation count conditional
+* Change two http loading to protocol-relative URL
+* Update templates to support relative page image urls
+* Add result limit to defrost the front end
+* As an annotated edition author I want users to be able to search my
+  edition partial word matching so that they can more easily identify
+  relevant content (introduce elasticlunr.js as the front-end search engine)
+* Made deep zoom images on volume pages optional (based on configuration setting)
+* Bugfix: Image thumbnails show as broken links on "Annotations tagged with..."
+  pages in exported editions
+* As an annotated edition author I want my site to include a sitemap for volume
+  pages, annotations and other content so that my site will be findable by search
+  engines (Enabled [jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap))
+
+Compatible with [readux](http://github.com/emory-libraries/readux) 1.7 and [teifacsimile-to-jekyll](https://github.com/emory-libraries-ecds/teifacsimile-to-jekyll) 0.7
+
 ## 0.6
 
-* Display links to related pages when included in annotation metadata; only show related pages section
-   when an annotation has related pages.
+* Display links to related pages when included in annotation metadata; only show related
+  pages section when an annotation has related pages.
 * Remove starter blog posts and document available blog functionality in README.md
-* bugfix: update annotation-by-tag template so it displays all tagged annotations, not just the first
+* bugfix: update annotation-by-tag template so it displays all tagged annotations, not
+  just the first
 
 Compatible with [readux](http://github.com/emory-libraries/readux) 1.6 and [teifacsimile-to-jekyll](https://github.com/emory-libraries-ecds/teifacsimile-to-jekyll) 0.6.
 
@@ -42,5 +66,3 @@ volume pages, annotations, and tags.
       count with jump link is displayed at the top of the page
     - use HTML5 picture element to display smaller page thumbnail images
       for smaller screens on page browse
-
-
