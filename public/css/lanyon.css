@@ -93,8 +93,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .headerimage {
   display: block;
-  margin-left: relative;
-  margin-right: relative;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*
