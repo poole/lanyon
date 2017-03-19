@@ -86,6 +86,16 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/*
+ * Headerimage
+ *
+ */
+
+.headerimage {
+  display: block;
+  margin-left: relative;
+  margin-right: relative;
+}
 
 /*
  * Masthead
