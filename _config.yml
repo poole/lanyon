@@ -2,7 +2,7 @@
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
 permalink:           pretty
-
+excerpt_separator: <!--more-->
 
 # Setup
 title:               alexpaciorkowski.com
