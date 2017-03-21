@@ -1,7 +1,7 @@
 # Permalinks
 #
 # Use of `relative_permalinks` ensures post links from the index work properly. But not supported.
-permalink: /:year/:month/:day/:title/
+permalink: /blog/:year/:month/:day/:title/
 relative_permalink: false
 encoding: utf-8
 
@@ -15,7 +15,7 @@ description:         'A blog on a number of subjects...'
 url:                 https://alex-paciorkowski.github.io
 baseurl:             ''
 paginate:            5
-paginate_path:       "/page:num" 
+paginate_path:       "/blog/page:num" 
 
 
 # About/contact
