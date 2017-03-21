@@ -11,7 +11,7 @@ url:                 tba
 baseurl:             ''
 paginate:            5
 paginate_path:       "/page:num" 
-permalink:           pretty
+
 
 # About/contact
 author:
