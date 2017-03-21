@@ -1,7 +1,6 @@
 # Permalinks
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:           pretty
 excerpt_separator: <!--more-->
 
 # Setup
@@ -11,6 +10,7 @@ description:         'A blog on a number of subjects...'
 url:                 tba
 baseurl:             ''
 paginate:            5
+paginate_path:       "/page:num" 
 
 # About/contact
 author:
