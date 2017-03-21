@@ -1,13 +1,18 @@
 # Permalinks
 #
-# Use of `relative_permalinks` ensures post links from the index work properly.
+# Use of `relative_permalinks` ensures post links from the index work properly. But not supported.
+permalink: /:year/:month/:day/:title/
+relative_permalink: false
+encoding: utf-8
+
+# Excerpt separator
 excerpt_separator: <!--more-->
 
 # Setup
 title:               alexpaciorkowski.com
 tagline:             'a blog'
 description:         'A blog on a number of subjects...'
-url:                 tba
+url:                 https://alex-paciorkowski.github.io
 baseurl:             ''
 paginate:            5
 paginate_path:       "/page:num" 
