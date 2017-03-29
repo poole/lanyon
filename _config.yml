@@ -8,7 +8,7 @@ permalink: pretty
 # Setup
 title: 'Ladies First!'
 tagline: 'an annotated digital edition'
-description: An annotated digital edition created with <a href="http://readux.library.emory.edu/">Readux</a>
+description: An annotated digital edition created with <a href="https://readux.ecds.emory.edu/">Readux</a>
 url:
 baseurl: ''
 
@@ -26,15 +26,15 @@ author:
 version: 0.7
 
 # readux export specifics
-homepage_image: http://readux.library.emory.edu/books/emory:7sr72/pages/emory:gmrpr/single-page/
+homepage_image: https://readux.ecds.emory.edu/books/emory:7sr72/pages/emory:gmrpr/single-page/
 
 show_annotation_author: true
 source_info:
   title: '"Ladies first!" a novel'
   author: 'Verdenal, Dominique François, Mrs.'
   date: '1896'
-  url: http://readux.library.emory.edu/books/emory:7sr72/
-  pdf_url: http://readux.library.emory.edu/books/emory:7sr72/pdf/#page=2
+  url: https://readux.ecds.emory.edu/books/emory:7sr72/
+  pdf_url: https://readux.ecds.emory.edu/books/emory:7sr72/pdf/#page=2
   via_readux: true
 
 publication_info:
@@ -83,4 +83,3 @@ defaults:
     type: annotations
   values:
     layout: annotation
-
