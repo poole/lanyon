@@ -10,8 +10,8 @@ excerpt_separator: <!--more-->
 
 # Setup
 title:               alexpaciorkowski.com
-tagline:             'a blog'
-description:         'A blog on a number of subjects...'
+tagline:             ''
+description:         '...'
 url:                 https://alex-paciorkowski.github.io
 baseurl:             ''
 paginate:            5
