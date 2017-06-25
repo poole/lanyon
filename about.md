@@ -3,5 +3,5 @@ layout: page
 title: About
 ---
 
-More information coming soon.
+Mais informa&#231&#227o.
 
