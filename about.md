@@ -18,6 +18,7 @@ Have questions or ideas? [Get in touch](https://twitter.com/HunterLoftis).
 Elsewhere on the Internet:
 
 - [Github](https://github.com/hunterloftis)
+- [Stack Overflow](https://stackoverflow.com/users/1911432/hunterloftis)
 - [Playful JavaScript](http://www.playfuljs.com/)
 - [Heroku's Engineering Blog](https://blog.heroku.com/node-habits-2016)
 
