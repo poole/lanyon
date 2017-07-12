@@ -6,8 +6,8 @@ title: About
 Hi, I'm Hunter, a mediocre developer hacking away at hard problems.
 I write a lot of JavaScript, bash, markdown, and - lately - Go.
 
-Whenever I figure something out, I note it down for future-me.
-I've also started publishing those notes here.
+Whenever I figure something out, I take a note for future-me.
+I've started publishing those notes here.
 
 Have questions or ideas? Get in touch:
 
