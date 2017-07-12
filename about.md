@@ -14,11 +14,11 @@ and mostly get away from computers by hiking, sailing, or motorcycling.
 Whenever I figure something out, I take a note for future-me.
 I've started publishing those notes here. Have questions or ideas? Get in touch:
 
-- [twitter/hunterloftis](https://twitter.com/HunterLoftis)
-- [github/hunterloftis](https://github.com/hunterloftis)
+- [Twitter](https://twitter.com/HunterLoftis)
 
 Elsewhere on the Internet:
 
+- [Github](https://github.com/hunterloftis)
 - [Playful JavaScript](http://www.playfuljs.com/)
 - [Heroku's Engineering Blog](https://blog.heroku.com/node-habits-2016)
 
