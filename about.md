@@ -4,7 +4,10 @@ title: About
 ---
 
 Hi, I'm Hunter, a mediocre developer hacking away at hard problems.
-I write a lot of JavaScript, Unity, and - lately - Go.
+I live in North Carolina with my fiancé and two cats.
+I work on the Languages team at [Heroku](https://heroku.com),
+write a lot of JavaScript, Unity, and Go,
+and mostly get away from computers by hiking, sailing, or motorcycling.
 
 ![Hunter, Amanda, Angel at RevConf]({{ site.url }}/public/images/revconf.jpg)
 
