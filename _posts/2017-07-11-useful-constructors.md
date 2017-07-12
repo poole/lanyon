@@ -45,4 +45,10 @@ if c.Bar == "" {
 }
 ```
 
+As a user:
+
+```go
+fmt.Println(foo.Bar)  // nice default
+```
+
 Here's a [working example](https://play.golang.org/p/bw7uWSsnYW) on the Go Playground.
