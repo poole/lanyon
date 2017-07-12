@@ -9,9 +9,7 @@ I write a lot of JavaScript, Unity, and - lately - Go.
 ![Hunter, Amanda, Angel at RevConf]({{ site.url }}/public/images/revconf.jpg)
 
 Whenever I figure something out, I take a note for future-me.
-I've started publishing those notes here.
-
-Have questions or ideas? Get in touch:
+I've started publishing those notes here. Have questions or ideas? Get in touch:
 
 - [twitter/hunterloftis](https://twitter.com/HunterLoftis)
 - [github/hunterloftis](https://github.com/hunterloftis)
