@@ -13,9 +13,7 @@ and otherwise get away from my keyboard by hiking and motorcycling.
 
 Instead of saving notes locally, I've started publishing them here,
 because maybe you and I make the same mistakes.
-Have questions or ideas? Get in touch:
-
-- [Twitter](https://twitter.com/HunterLoftis)
+Have questions or ideas? [Get in touch](https://twitter.com/HunterLoftis).
 
 Elsewhere on the Internet:
 
