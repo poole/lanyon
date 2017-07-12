@@ -8,7 +8,7 @@ I'm learning Go ("golang") by building a
 and today I've begun refactoring pbr's constructors based on this philosophy:
 
 Where possible, design structs that don't require constructors
-and which have useful zero values by default (`point := &Vector3{1, 2, 3}`).
+and which have useful zero values by default (`point := &Vector3{}`).
 But when a constructor is necessary, follow the pattern:
 
 ```go
