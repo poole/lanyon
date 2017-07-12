@@ -3,28 +3,21 @@ layout: page
 title: About
 ---
 
-<p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
-</p>
+Hi, I'm Hunter, a mediocre developer hacking away at hard problems.
+I write a lot of JavaScript, bash, markdown, and - lately - Go.
 
-In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+Whenever I figure something out, I write a note to myself so
+when I inevitably have the same problem in the future, I'll have a reference.
+Though I've been taking local notes for years, I only recently started pushing them to a repo.
 
-There are currently two themes built on Poole:
+Have questions or ideas? Get in touch:
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
+- [twitter/hunterloftis](https://twitter.com/HunterLoftis)
+- [github/hunterloftis](https://github.com/hunterloftis)
 
-Learn more and contribute on [GitHub](https://github.com/poole).
+I also write:
 
-## Setup
+- [Playful JavaScript](http://www.playfuljs.com/)
+- [On the Heroku Blog](https://blog.heroku.com/node-habits-2016)
 
-Some fun facts about the setup of this project include:
-
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
-
-Thanks for reading!
+I work with awesome people at [Heroku](https://heroku.com) on the Languages team.
