@@ -6,18 +6,25 @@ title: About
 Hi, I'm Hunter, a mediocre developer hacking away at hard problems.
 I write a lot of JavaScript, bash, markdown, and - lately - Go.
 
-Whenever I figure something out, I write a note to myself so
-when I inevitably have the same problem in the future, I'll have a reference.
-Though I've been taking local notes for years, I only recently started pushing them to a repo.
+Whenever I figure something out, I note it down for future-me.
+I've also started publishing those notes here.
 
 Have questions or ideas? Get in touch:
 
 - [twitter/hunterloftis](https://twitter.com/HunterLoftis)
 - [github/hunterloftis](https://github.com/hunterloftis)
 
-I also write:
+Elsewhere on the Internet:
 
 - [Playful JavaScript](http://www.playfuljs.com/)
-- [On the Heroku Blog](https://blog.heroku.com/node-habits-2016)
+- [Heroku's Engineering Blog](https://blog.heroku.com/node-habits-2016)
 
-I work with awesome people at [Heroku](https://heroku.com) on the Languages team.
+Occasionally I present nerdy ideas to companies, conferences, and meetups.
+Here are a few coming soon:
+
+- [Connect.Tech 2017](http://connect.tech/), Atlanta
+- [API World 2017](https://apiworld2017.sched.com/event/9769b03206acb36f44528f3ff2554f73), San Jose
+- [International JS Conf 2017](https://javascript-conference.com/node-js/production-ready-node-js/), Munich
+- [NCDevCon](http://ncdevcon.com/), Raleigh
+
+I work with the awesome people at [Heroku](https://heroku.com) on the Languages team.
