@@ -3,6 +3,8 @@ layout: page
 title: About
 ---
 
+![Hunter, Amanda, Angel at RevConf]({{ site.url }}/public/images/revconf.jpg)
+
 Hi, I'm Hunter, a mediocre developer hacking away at hard problems.
 I write a lot of JavaScript, bash, markdown, and - lately - Go.
 
