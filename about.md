@@ -6,6 +6,8 @@ title: About
 Hi, I'm Hunter, a mediocre developer hacking away at hard problems.
 I write a lot of JavaScript, bash, markdown, and - lately - Go.
 
+![Hunter, Amanda, Angel at RevConf]({{ site.url }}/public/images/revconf.jpg)
+
 Whenever I figure something out, I take a note for future-me.
 I've started publishing those notes here.
 
