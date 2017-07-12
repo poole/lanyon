@@ -9,6 +9,7 @@ url:                 https://hunterloftis.github.io
 baseurl:             'https://hunterloftis.github.io'
 paginate:            5
 gems:                [jekyll-paginate]
+google_analytics_id: UA-102424191-1
 
 # About/contact
 author:
