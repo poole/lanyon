@@ -65,7 +65,7 @@ func (m *Material) reflect(norm, inc Direction, rnd *rand.Rand) (bool, Direction
 Third, the compiler alerted me to a couple of unnecessary calls to `Unit()`.
 How? After the change, `Unit` was no longer a valid method of `Direction` -
 a Direction is already a unit, after all.
-Renders actually completed faster after renaming the type.
+This readability change also helped optimize the program.
 
 The fixed bugs, improved readability, and increased performance convinced me to
 introduce a new [Energy type](https://github.com/hunterloftis/pbr/blob/gh-pages/pbr/energy.go),
