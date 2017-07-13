@@ -51,7 +51,7 @@ Anything that might possibly result in a non-unit vector returned a Vector3, not
 Similarly, the expensive `Unit()` operation now converted Vector3s into Directions.
 Several benefits fell out of this arrangement:
 
-First, I found a couple of bugs in the code. I'm not even exactly sure where they were,
+First, it fixed a couple of bugs in the code. I'm not even exactly sure where they were,
 but after the change, some subtle camera field-of-view issues disappeared.
 
 Second, my code became shorter and more readable.
