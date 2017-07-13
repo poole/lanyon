@@ -34,7 +34,7 @@ Simultaneously, I was drowning in Vector3s.
 I'd written function after function like this:
 
 ```go
-func (m *Material) reflect(norm, inc Vector3, rnd *rand.Rand) (bool, Vector3, Vector3)
+func (m *Material) absorb(norm, inc Vector3) (bool, Vector3, Vector3)
 ```
 
 One of those returned Vector3s represents the direction of a light ray.
@@ -59,7 +59,7 @@ I got to [delete a bunch of stuff](https://github.com/hunterloftis/pbr/pull/4/fi
 and the above function turned into:
 
 ```go
-func (m *Material) reflect(norm, inc Direction, rnd *rand.Rand) (bool, Direction, Vector3)
+func (m *Material) absorb(norm, inc Direction) (bool, Direction, Vector3)
 ```
 
 Third, the compiler alerted me to a couple of unnecessary calls to `Unit()`.
@@ -75,7 +75,7 @@ Now Energies, Directions, and Vector3s are easy to differentiate
 and the compiler understands that "violet, divided by up, minus two feet" makes no sense.
 
 ```go
-func (m *Material) reflect(norm, inc Direction, rnd *rand.Rand) (bool, Direction, Energy)
+func (m *Material) absorb(norm, inc Direction) (bool, Direction, Energy)
 ```
 
 I'm still new to Go so I'm sure there are ways I could make this better
