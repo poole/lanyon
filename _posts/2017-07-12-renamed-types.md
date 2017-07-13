@@ -72,7 +72,7 @@ introduce a new [Energy type](https://github.com/hunterloftis/pbr/blob/gh-pages/
 a Vector3 that exclusively deals with light energy.
 
 Now Energies, Directions, and Vector3s are easy to differentiate
-and the compiler understands that "violet, divided by up, minus two feet" makes no sense.
+and the compiler understands that "violet, divided by up, minus two feet" makes no sense:
 
 ```go
 func (m *Material) absorb(norm, inc Direction) (bool, Direction, Energy)
