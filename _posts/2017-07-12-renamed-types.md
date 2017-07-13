@@ -66,8 +66,8 @@ How? After the change, `Unit` was no longer a valid method of `Direction` -
 a Direction is already a unit, after all.
 Renders actually completed faster after renaming the type.
 
-Fixed bugs, improved readability, and better performance.
-That success was followed by the new [Energy type](https://github.com/hunterloftis/pbr/blob/gh-pages/pbr/energy.go),
+The fixed bugs, improved readability, and increased performance convinced me to
+introduce a new [Energy type](https://github.com/hunterloftis/pbr/blob/gh-pages/pbr/energy.go),
 a Vector3 that exclusively deals with light energy.
 
 Now, Energies, Directions, and Vector3s are easy to differentiate
