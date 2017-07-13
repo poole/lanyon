@@ -9,8 +9,8 @@ When I first saw this in Go, I thought, *"why the hell would anyone want to do t
 type MyType float64
 ```
 
-Great, now I have a float that's kind of like a float but that
-throws errors if I try to use it like a float, with other floats.
+Great, now I have a float that's kind of like a float, but it
+throws errors if I try to use it like a float with other floats.
 I put this silly and clearly useless construct aside.
 
 Then, working on my [physically-based renderer](https://github.com/hunterloftis/pbr) a couple of days later,
