@@ -65,9 +65,9 @@ func (m *Material) absorb(norm, inc Direction) (bool, Direction, Vector3)
 Third, the compiler alerted me to a couple of unnecessary calls to `Unit()`.
 How? After the change, `Unit` was no longer a valid method of `Direction` -
 a Direction is already a unit, after all.
-This readability change also helped optimize the program.
+So this readability change also improved performance.
 
-The fixed bugs, improved readability, and increased performance convinced me to
+The fixed bugs, better readability, and improved performance convinced me to
 introduce a new [Energy type](https://github.com/hunterloftis/pbr/blob/gh-pages/pbr/energy.go),
 a Vector3 that exclusively deals with light energy.
 
