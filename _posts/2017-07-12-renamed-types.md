@@ -78,6 +78,5 @@ and the compiler understands that "violet, divided by up, minus two feet" makes 
 func (m *Material) absorb(norm, inc Direction) (bool, Direction, Energy)
 ```
 
-I'm still new to Go so I'm sure there are ways I could make this better
-or improve the type system in other ways.
+I'm still new to Go so I'm sure there are ways I could make this better.
 If you have recommendations, please [let me know!](https://twitter.com/hunterloftis)
