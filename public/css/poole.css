@@ -160,16 +160,13 @@ code {
   border-radius: 3px;
 }
 pre {
+  overflow-x: scroll;
   display: block;
   margin-top: 0;
   margin-bottom: 1rem;
   padding: 1rem;
   font-size: .8rem;
   line-height: 1.4;
-  white-space: pre;
-  white-space: pre-wrap;
-  word-break: break-all;
-  word-wrap: break-word;
   background-color: #f9f9f9;
 }
 pre code {
