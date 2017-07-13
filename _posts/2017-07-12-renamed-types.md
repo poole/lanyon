@@ -70,8 +70,8 @@ The fixed bugs, improved readability, and increased performance convinced me to
 introduce a new [Energy type](https://github.com/hunterloftis/pbr/blob/gh-pages/pbr/energy.go),
 a Vector3 that exclusively deals with light energy.
 
-Now, Energies, Directions, and Vector3s are easy to differentiate
-and the compiler understands that "Violet divided by Up minus a Line" makes no sense.
+Now Energies, Directions, and Vector3s are easy to differentiate
+and the compiler understands that "violet divided by p minus a line" makes no sense.
 
 ```go
 func (m *Material) reflect(norm, inc Direction, rnd *rand.Rand) (bool, Direction, Energy)
