@@ -27,7 +27,7 @@ like using the [dot product](https://chortle.ccsu.edu/VectorLessons/vch09/vch09_
 to determine the cosine between two vectors -
 are only accurate between *unit* vectors.
 Applying them to non-unit vectors would create difficult-to-diagnose bugs.
-But `Unit` was already taking tons of processor time; I couldn't afford to check every incoming value.
+Liberal application of `Unit` would improve safety, but would also slow down the program.
 
 Simultaneously, I was drowning in Vector3s.
 I'd written function after function like this:
