@@ -43,7 +43,7 @@ or "forward-left times fuschia."
 
 Suddenly, the idea of named types that refuse to mix with members of different names didn't sound so stupid.
 
-To see, I [implemented](https://github.com/hunterloftis/pbr/pull/4) a
+To experiment, I [implemented](https://github.com/hunterloftis/pbr/pull/4) a
 [Direction](https://github.com/hunterloftis/pbr/blob/gh-pages/pbr/direction.go) type based on Vector3.
 All of the unit-vector-only operations found a home here.
 Anything that might possibly result in a non-unit vector returned a Vector3, not a Direction.
