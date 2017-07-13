@@ -3,7 +3,7 @@ layout: post
 title: Renamed types in Go
 ---
 
-When I first saw this in Go, I thought, "why the hell would anyone want to do that?"
+When I first saw this in Go, I thought, *"why the hell would anyone want to do that?"*
 
 ```go
 type MyType float64
