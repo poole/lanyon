@@ -20,7 +20,7 @@ Each worker forks its own process with all that that entails for
 startup time, memory use, and inter-process communication.
 
 This generates two habits:
-First, you *must* write async code, because you're sharing a single thread with the rest of the process.
+First, you *always* write async code, because you're sharing a single thread with the rest of the process.
 Iterating over a large array can cause performance issues in a JS app.
 Second, if you're writing for multiple CPUs, you're thinking of concurrency in the single or low-double digits
 to map processes to hardware.
