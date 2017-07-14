@@ -26,7 +26,7 @@ Iterating over a large array can cause performance issues in a JS app.
 Second, when writing for multiple CPUs, you consider concurrency in terms of single or low-double digits
 to map processes to hardware.
 
-There's nothing in JS like a [goroutine](https://tour.golang.org/concurrency/1),
+There's nothing like a [goroutine](https://tour.golang.org/concurrency/1),
 a light, concurrent "thread" that can happily run with hundreds of thousands of siblings
 across all the system's CPUs.
 Concurrency is a scarce resource for a JavaScript developer:
