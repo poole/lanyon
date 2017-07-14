@@ -30,5 +30,5 @@ a light, concurrent "thread" that can happily run with hundreds of thousands of 
 across all the system's CPUs.
 Concurrency is a scarce resource for a JavaScript developer:
 if you spend too much time on a task, you're blocking other functions from the event loop;
-if you spin up too many processes, you're adding CPU contention and wasting resources.
+if you spin up too many processes, you're creating contention and wasting resources.
 
