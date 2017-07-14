@@ -15,7 +15,7 @@ On a single CPU you have the single-threaded, non-blocking type,
 where an event loop lets you simulate I/O concurrency.
 This doesn't help with hashing passwords or processing long lists,
 but it lets you read a file without ignoring HTTP requests.
-You have to use workers to spread to multiple CPUs (web workers in the browser, cluster workers in node).
+Across multiple CPUs, you have workers (web workers in the browser, cluster workers in node).
 Each worker forks its own process with all that that entails for
 startup time, memory use, and inter-process communication.
 
