@@ -8,6 +8,7 @@ I just merged a
 that's so obviously the right model for my
 [Go rendering engine](https://github.com/hunterloftis/pbr#pbr-a-physically-based-renderer-in-go)
 that I had to sit down and figure out why I did it any other way in the first place.
+
 It turns out I have a JavaScripter's mindset on concurrency.
 
 In JavaScript, you have two levels of concurrency to choose from.
