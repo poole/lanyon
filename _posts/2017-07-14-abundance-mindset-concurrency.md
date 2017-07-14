@@ -45,7 +45,7 @@ Go developers approach concurrency with an *abundance mindset.*
 
 So now you can render pbr's
 [Hello, world scene](https://github.com/hunterloftis/pbr#hello-world)
-in 15 lines and zero channels.
+with 15 lines and zero channels.
 Underneath, it's creating goroutines for every block of *N* pixels.
 But why would you care?
 You just want a pretty picture.
