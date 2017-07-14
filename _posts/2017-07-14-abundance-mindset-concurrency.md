@@ -10,14 +10,12 @@ that's so obviously the right concurrency model for my
 that I had to sit down and figure out why I did it any other way in the first place.
 It turns out I have a JavaScripter's mindset on concurrency.
 
-In JavaScript, you have essentially two levels of concurrency to choose from.
-The first is the single-threaded, non-blocking type,
-where you're only running on a single CPU but you don't wait on IO.
+In JavaScript, you have two levels of concurrency to choose from.
+On a single CPU you have the single-threaded, non-blocking type,
+where an event loop lets you simulate I/O concurrency.
 This doesn't help with hashing passwords or processing long lists,
 but it lets you read a file without ignoring HTTP requests.
-
-If you want to use more than one CPU,
-you have to use workers (web workers in the browser, cluster workers in node).
+You have to use workers to spread to multiple CPUs (web workers in the browser, cluster workers in node).
 Each worker forks its own process with all that that entails for
 startup time, memory use, and inter-process communication.
 
