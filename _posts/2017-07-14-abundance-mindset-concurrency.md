@@ -41,7 +41,7 @@ without ever exposing that to the user.
 In Go, I can have as much concurrency as I want!
 It isn't tied to a single thread or CPU.
 
-Go developers approach concurrency with an abundance mindset.
+Go developers approach concurrency with an *abundance mindset.*
 
 So now you can render pbr's
 [Hello, world scene](https://github.com/hunterloftis/pbr#hello-world)
