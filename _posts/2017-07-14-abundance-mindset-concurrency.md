@@ -39,7 +39,7 @@ As I sketched out a 100-line, 2-channel "hello, world" example, I realized my mi
 The pbr renderer could, internally, start as many goroutines as it needs to quickly render an image,
 without ever exposing that to the user.
 In Go, I can have as much concurrency as I want!
-Concurrency isn't tied to a single thread or CPU.
+It isn't tied to a single thread or CPU.
 
 Go developers approach concurrency with an abundance mindset.
 
