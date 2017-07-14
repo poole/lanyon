@@ -5,7 +5,7 @@ title: Concurrency, an abundance mindset, and Go
 
 I just merged a
 [a Pull Request](https://github.com/hunterloftis/pbr/pull/9/files)
-that's so obviously the right concurrency model for my
+that's so obviously the right model for my
 [Go rendering engine](https://github.com/hunterloftis/pbr#pbr-a-physically-based-renderer-in-go)
 that I had to sit down and figure out why I did it any other way in the first place.
 It turns out I have a JavaScripter's mindset on concurrency.
