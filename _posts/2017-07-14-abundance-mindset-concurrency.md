@@ -38,14 +38,14 @@ which will be familiar to anyone who's used
 As I sketched out a 100-line, 2-channel "hello, world" example, I realized my mistake.
 The pbr renderer could, internally, start as many goroutines as it needs to quickly render an image,
 without ever exposing that to the user.
-In Go, I can have as much concurrency as I want!
-It isn't tied to a single thread or CPU.
+In Go, I can have as much concurrency as I want,
+and I'm free to expose a simple, sequential API to the user.
 
 Go developers approach concurrency with an *abundance mindset.*
 
 So now you can render pbr's
 [Hello, world scene](https://github.com/hunterloftis/pbr#hello-world)
 with 15 lines and zero channels.
-Underneath, it's creating goroutines for every block of *N* pixels.
+Underneath, `sampler.Sample()` creates goroutines for every block of *N* pixels to saturate your CPU.
 But why would you care?
 You just want a pretty picture.
