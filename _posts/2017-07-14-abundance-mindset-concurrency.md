@@ -29,6 +29,6 @@ There's nothing in JS like a [goroutine](https://tour.golang.org/concurrency/1),
 a light, concurrent "thread" that can happily run with hundreds of thousands of siblings
 across all the system's CPUs.
 Concurrency is a scarce resource for a JavaScript developer:
-if you spend too much time on a task, you're blocking other functions from the JS event loop;
+if you spend too much time on a task, you're blocking other functions from the event loop;
 if you spin up too many processes, you're adding CPU contention and wasting resources.
 
