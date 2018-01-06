@@ -1,11 +1,14 @@
+# frozen_string_literal: true
+
 source "https://rubygems.org"
 
-gem "jekyll", "~> 3.3"
+# Use local gem for testing
+gem "jekyll-theme-lanyon", :path => "../"
 
-group :jekyll_plugins do
-  gem "jekyll-feed"
-  gem "jekyll-paginate"
-  gem "jekyll-sitemap"
-end
-
-gem "jekyll-theme-lanyon"
+# gem "jekyll", "~> 3.3"
+# gem "jekyll-theme-lanyon"
+# group :jekyll_plugins do
+#   gem "jekyll-feed"
+#   gem "jekyll-paginate"
+#   gem "jekyll-sitemap"
+# end
