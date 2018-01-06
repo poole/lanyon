@@ -9,7 +9,7 @@ Lanyon is an unassuming [Jekyll](http://jekyllrb.com) theme that places content 
 ## Contents
 
 - [Usage](#usage)
-  - [Install as a gem](#install-as-a-gem)
+  - [Install as a gem](#install-as-a-gem-based-theme)
 - [Options](#options)
   - [Sidebar menu](#sidebar-menu)
   - [Themes](#themes)
@@ -23,30 +23,72 @@ Lanyon is an unassuming [Jekyll](http://jekyllrb.com) theme that places content 
 
 Lanyon is a theme built on top of [Poole](https://github.com/poole/poole), which provides a fully furnished Jekyll setup—just download and start the Jekyll server. See [the Poole usage guidelines](https://github.com/poole/poole#usage) for how to install and use Jekyll.
 
+## Install as a gem-based theme
 
-### Install as a gem
+Jekyll encourage the use of `bundler` to manage themes and plugins. [Themes](https://jekyllrb.com/docs/themes/) can be packaged as Ruby gems since Jekyll 3.3. If you don't intend to modify the theme a lot, this is a nice way of focusing on your content and benefits from  theme updates.
 
-*Note*: Require Jekyll ~> 3.3
+### 1. Install theme
 
-Add this line to your Jekyll site's Gemfile:
+1. Create a folder that will be your Jekyll source directory, e.g `blog`.
+2. Create a `Gemfile` in your source directory to list all theme dependencies, it should looks like this:
 
 ```ruby
-gem "lanyon-theme"
+# frozen_string_literal: true
+
+source "https://rubygems.org"
+
+gem "jekyll", "~> 3.7.0"
+gem "jekyll-theme-lanyon", "~> 1.1"
 ```
 
-And add this line to your Jekyll site:
+### 2. Configuration
 
-```yaml
-theme: lanyon-theme
+1. Run `bundle install` to install all theme dependencies.
+2. Copy [`_config.yml`](example/_config.yml), [`index.html`](example/index.html), [`404.html`](example/404.html) (and [`about.md`](example/about.md)) from this repository's [example files](example) to your source directory.
+3. Run `bundle exec jekyll serve --livereload` to preview your website locally.
+
+If you list the files in your source directory, don't be surprised if you only see:
+
+```
+├── _posts        # your posts are here
+├── _site         # default destination build directory
+├── _config.yml   # jekyll configuration
+├── 404.html      # default 404 page template
+├── about.md      # default example page
+├── Gemfile       # bundler configuration
+├── Gemfile.lock  # bundler version lock
+└── index.html    # list all the posts on the homepage
 ```
 
-And then execute:
+:bulb: When you use gem-based themes, the themes files don't appear in your source directory, they're packaged within the gem.
+
+If you wonder where the original theme files are, `bundler` allows you to show a gem content:
 
 ```sh
-    $ bundle
+tree $(bundle show jekyll-theme-lanyon)
+├── Gemfile
+├── Gemfile.lock
+├── LICENSE.md
+├── README.md
+├── _includes
+│   ├── head.html
+│   └── sidebar.html
+├── _layouts
+│   ├── default.html
+│   ├── home.html
+│   ├── page.html
+│   └── post.html
+├── assets
+│   ├── apple-touch-icon-precomposed.png
+│   ├── css
+│   │   ├── lanyon.css
+│   │   ├── poole.css
+│   │   └── syntax.css
+│   └── favicon.ico
 ```
 
-To test this theme: run `bundle install` in the `example` folder, then run `bundle exec jekyll serve` and open `http://127.0.0.1:4000/` in your browser.
+If you want to customize the theme, you'll have to copy the files you need to modify in your source directory.
+Report to jekyll's documentation to learn [how to override a theme](https://jekyllrb.com/docs/themes/#overriding-theme-defaults).
 
 ## Options
 
