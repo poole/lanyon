@@ -1,0 +1,16 @@
+inherit_gem:
+  jekyll: .rubocop.yml
+
+AllCops:
+  TargetRubyVersion: 2.2
+  Include:
+    - Gemfile
+    - jekyll-theme-lanyon.spec
+    - Rakefile
+
+  Exclude:
+    - .rubocop.yml
+    - .gitignore
+    - Gemfile.lock
+    - LICENSE.md
+    - vendor/**/*
