@@ -41,10 +41,37 @@ gem "jekyll", "~> 3.7.0"
 gem "jekyll-theme-lanyon", "~> 1.1"
 ```
 
+If you intend to use GitHub Pages, then it should rather look like:
+
+```ruby
+# frozen_string_literal: true
+
+source "https://rubygems.org"
+
+group :jekyll_plugins do
+  gem "github-pages"
+  gem "jekyll-feed"
+  gem "jekyll-paginate"
+  gem "jekyll-sitemap"
+  gem "jekyll-theme-lanyon"
+end
+```
+
+To use a remote theme on GitHub Pages, your `_config.yml` should mention:
+
+```ruby
+remote_theme: dirtyf/lanyon@v1.1.0
+plugins:
+  - jekyll-theme-lanyon
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-sitemap
+```
+
 ### 2. Configuration
 
 1. Run `bundle install` to install all theme dependencies.
-2. Copy [`_config.yml`](example/_config.yml), [`index.html`](example/index.html), [`404.html`](example/404.html) (and [`about.md`](example/about.md)) from this repository's [example files](example) to your source directory.
+2. Copy [`_config.yml`](example/_config.yml), [`index.html`](docs/index.html), [`404.html`](docs/404.html) (and [`about.md`](docs/about.md)) from this repository's [example files](docs) to your source directory.
 3. Run `bundle exec jekyll serve --livereload` to preview your website locally.
 
 If you list the files in your source directory, don't be surprised if you only see:
