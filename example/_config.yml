@@ -17,12 +17,8 @@ author:
 version:             1.0.0
 
 # Build settings
-markdown:            kramdown
 theme:               jekyll-theme-lanyon
-gems:
+plugins:
   - jekyll-paginate
   - jekyll-feed
   - jekyll-sitemap
-exclude:
-  - Gemfile
-  - Gemfile.lock
