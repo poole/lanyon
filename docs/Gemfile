@@ -1,0 +1,21 @@
+# frozen_string_literal: true
+
+source "https://rubygems.org"
+
+# Use local gem for testing
+# gem "jekyll-theme-lanyon", :path => "../"
+
+# Default to GitHub Pages for demo purpose
+
+# Uncomment if you plan to use default Jekyll
+# gem "jekyll", "~> 3.6"
+# gem "jekyll-theme-lanyon"
+
+# Comment out all the following lines if you don't plan to use GitHub Pages
+group :jekyll_plugins do
+  gem "github-pages"
+  gem "jekyll-feed"
+  gem "jekyll-paginate"
+  gem "jekyll-sitemap"
+  gem "jekyll-theme-lanyon"
+end
