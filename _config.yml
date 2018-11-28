@@ -22,10 +22,8 @@ author:
 # Custom vars
 version:             1.0.0
 theme: jekyll-theme-lanyon
-=======
 
 # Plugins
 plugins: [jekyll-paginate]
 paginate: 5
 paginate_path: "page:num"
->>>>>>> 214
