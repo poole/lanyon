@@ -11,7 +11,7 @@ description:         'A reserved <a href="http://jekyllrb.com" target="_blank">J
 url:                 http://lanyon.getpoole.com
 baseurl:             ''
 paginate:            5
-gems: ["jekyll-paginate"]
+gems:                [jekyll-paginate]
 
 # About/contact
 author:
