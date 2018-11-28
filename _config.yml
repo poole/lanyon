@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-# Permalinks
-#
-# Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:           pretty
-#relative_permalinks: true
 
 # Setup
 title:               Lanyon
@@ -11,8 +5,6 @@ tagline:             'A Jekyll theme'
 description:         'A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
 url:                 http://lanyon.getpoole.com
 baseurl:             ''
-paginate:            5
-gems:                [jekyll-paginate]
 
 # About/contact
 author:
@@ -25,6 +17,11 @@ author:
 
 # Custom vars
 version:             1.0.0
-=======
 theme: jekyll-theme-lanyon
->>>>>>> 4adf639252d3e6d1d8e69cd713d29b479efd1aaf
+=======
+
+# Plugins
+plugins: [jekyll-paginate]
+paginate: 5
+paginate_path: "page:num"
+>>>>>>> 214
