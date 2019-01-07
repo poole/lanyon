@@ -3,28 +3,78 @@ layout: page
 title: About
 ---
 
-<p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!Chris
-</p>
+---
+title: 'Your Name'
+website: http://yourwebsite.com
+street: Street address
+city: City
+postcode: Postal code
+phone: +12 (0)3456 7891011
+email: your.email@address.com
+date: 22 November 2014
+...
 
-In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+### Personal summary
 
-There are currently two themes built on Poole:
+> My research interests are ... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
+### Education 
 
-Learn more and contribute on [GitHub](https://github.com/poole).
+- M.A.     Subject (grade), University name and location
+- B.A.     Subject (grade), University name and location
+- A Level  Subject (grade), University name and location
 
-## Setup
+### Technical
 
-Some fun facts about the setup of this project include:
+- Intermediate: HTML, Python, etc, etc
+- Basic: CSS, Stata, etc, etc
 
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
+### Employment 
 
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
+- 2015: Job title, Company
 
-Thanks for reading!
+> In this role I...Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+- 2012: Job title, Company
+
+> In this role I...Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+- 2011: Job title, Company
+
+> In this role I...Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+- 2008: Job title, Company
+
+> In this role I...Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\newpage
+
+### Publications
+
+- YYYY: Name et al. Article title. Journal name. Link/DOI
+- YYYY: Name et al. Article title. Journal name. Link/DOI
+
+### Selected presentations
+
+- YYYY: Title of presentation. Conference. Location. Poster/Oral
+- YYYY: Title of presentation. Conference. Location. Poster/Oral
+
+### Memberships and committees
+
+- YYYY: Name of committee/society etc.
+- YYYY: Name of committee/society etc.
+
+### Awards and supporting information
+
+- YYYY: Description of award, certificate, supporting info etc.
+- YYYY: Description of award, certificate, supporting info etc.
+
+### References
+
+Available on request.
+
+
+
+
+
+
