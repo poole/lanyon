@@ -6,7 +6,7 @@ permalink:           pretty
 # Setup
 title:               Chrispen Shumba
 tagline:             'A data scientist at DXC Technology'
-description:         '"In God I trust, all others must bring data". Follow me <a href="https://twitter.com/chrispenlion?ref_src=twsrc%5Etfw" target="_blank">@chrispenlion</a>.'
+description:         '"In God I trust, all others must bring data". Follow me <a href="https://twitter.com/chrispenlion?ref_src=twsrc%5Etfw" target="_blank" >@chrispenlion</a>.'
 url:                 http://lanyon.getpoole.com
 baseurl:             ''
 paginate:            5
