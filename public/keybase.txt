@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/cchacin
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://cchacin.github.io
+  * I am cchacin (https://keybase.io/cchacin) on keybase.
+  * I have a public key ASAYGkVTEuMIdYEZKAq7C_HPps7zN04Cw7SwseICUU7lago
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120181a455312e308758119280abb0bf1cfa6cef3374e02c3b4b0b1e202514ee56a0a",
+      "host": "keybase.io",
+      "kid": "0120181a455312e308758119280abb0bf1cfa6cef3374e02c3b4b0b1e202514ee56a0a",
+      "uid": "62c3137abf9ff2b82a36ece01e828419",
+      "username": "cchacin"
+    },
+    "merkle_root": {
+      "ctime": 1552425215,
+      "hash": "5288bc7eb0163a3fd8a8732522d3fd0b1028258b715e0df8fa5e117860f67218fc245e3b51c4811099878c97f83b5d4757c188d146694c4e6e3e0aa5ab95dc0f",
+      "hash_meta": "e257a59a4c2c0f77af22adc68bb07bcc3516b772cb5341cb1e2fbc35ca8ae8ae",
+      "seqno": 4934038
+    },
+    "service": {
+      "entropy": "FXqWRR23jYUBdC/RgDc8wRwN",
+      "hostname": "cchacin.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "3.1.2"
+  },
+  "ctime": 1552425259,
+  "expire_in": 504576000,
+  "prev": "c453398bccefc83810fd4ed0369d02d1b307280afa0bbab80aefd1361c595ddc",
+  "seqno": 25,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgGBpFUxLjCHWBGSgKuwvxz6bO8zdOAsO0sLHiAlFO5WoKp3BheWxvYWTESpcCGcQgxFM5i8zvyDgQ/U7QNp0C0bMHKAr6C7q4Cu/RNhxZXdzEIJxx2F5nUgmn2jDZqzIvKjv2JpmmZUZVwxCR7CvxNyFiAgHCo3NpZ8RAUBPCpBvZHV/7yrjRKFsfdGJjDsoUZGIhbwUxtFNbPDLkblf7jHBfbTbHYEPY5mO0WUFBMYvdtwOuMRN6ZRcvA6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEILedZlpFnG0hPYgKDVjSjQlZNx6hpy4X+V3rai8jMI9Io3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/cchacin
+
+==================================================================
