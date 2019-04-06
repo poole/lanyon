@@ -1,0 +1,7 @@
+User-agent: Mediapartners-Google
+Disallow:
+
+User-agent: *
+Disallow: /.bundle/
+Disallow: /.gitignore
+Allow: /

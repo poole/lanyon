@@ -1,21 +1,21 @@
-# Permalinks
-#
-# Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:           pretty
+# Site settings
+title: "On Software Engineering, Mathematics<br>and Philosophy"
+author: "Hugo Sereno Ferreira"
+description: "This is a blog about software, some mathematics, and the occasional philosophy. Not necessarily in that order."
+keywords: "Software Engineering, Mathematics, Philosophy, Scala, Epistemology, Existentialism, Programming, Machine-Learning, Artificial Intelligence, Statistics, Probability, Puzzles"
+biography: "I am a Professor of Software Engineering at the <a href='http://www.fe.up.pt'>Faculty of Engineering</a>, University of Porto and Senior Researcher at <a href='https://www.inesctec.pt'>INESC TEC</a>. Here you can find my <a href='/assets/thesis.pdf'>PhD Thesis</a> and my <a href='/assets/cv.pdf'>Résumé</a>."
+colophon: "© MMXIII — MMXVI by Hugo Sereno Ferreira.<br>Content available under <a href='http://creativecommons.org/licenses/by-nc-sa/4.0/'>Creative Commons (BY-NC-SA)</a> unless otherwise noted.<br>This site is hosted at <a href='https://pages.github.com/'>Github Pages</a> and created with <a href='http://jekyllrb.com/'>Jekyll</a>."
 
-# Setup
-title:               Chrispen Shumba
-tagline:             'A data scientist at DXC Technology'
-description:         '"In God I trust, all others must bring data". Follow me <a href="https://twitter.com/chrispenlion?ref_src=twsrc%5Etfw" target="_blank" >@chrispenlion</a>.'
-url:                 http://lanyon.getpoole.com
-baseurl:             ''
-paginate:            5
+baseurl: ""
+url: "http://hugosereno.eu"
 
-# About/contact
-author:
-  name:              Theme - Mark Otto
-  url:               https://twitter.com/mdo
-  email:             markdotto@gmail.com
+twitter_username: ferreira_hugo
+github_username: hugoferreira
+linkedin_username: hugoserenoferreira
+facebook_username: hugo.sereno.ferreira
+google-analytics: UA-69060-5
 
-# Custom vars
-version:             1.0.0
+simple_search: http://google.com/search
+markdown: kramdown
+highlighter: rouge
+permalink: /blog/:year/:month/:day/:title/
