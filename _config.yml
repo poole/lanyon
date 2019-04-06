@@ -1,10 +1,10 @@
 # Site settings
-title: "Chrispen Shumba, Data Science and AWS"
-author: "Hugo Sereno Ferreira"
+title: "Life, Data Science and AWS"
+author: "Chrispen Shumba"
 description: "This is a blog about Data Science, AWS, and some occasional blogging"
 keywords: "Data Science, Machine-Learning, Artificial Intelligence, Statistics, Probability"
 biography: "I am a data scientist at DXC technology."
-colophon: "© MMXIII — MMXVI by Hugo Sereno Ferreira."
+colophon: "© Theme MMXIII — MMXVI by Hugo Sereno Ferreira."
 
 baseurl: ""
 url: "https://chrispenshumba.github.io/"
