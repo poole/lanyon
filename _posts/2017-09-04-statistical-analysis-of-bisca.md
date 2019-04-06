@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Statistical Analysis of Bisca - Part I
+title: AWS
 date: 2017-09-04 00:46
 comments: true
 external-url:
-categories: Mathematics
+categories: AWS
 ---
 
 > Bisca (a Portuguese version of the Italian game [Bríscola](https://en.wikipedia.org/wiki/Briscola)) is a trick-taking card game usually played by 2 players with the common 52-card French deck, but with the 8, 9 and 10's of each suite removed, thus creating a 40-card deck. The main objective is to accumulate more points than the opponent, based on the cards that are captured and forfeited.
