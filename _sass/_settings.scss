@@ -1,0 +1,26 @@
+$base-font-family:  'Merriweather', Georgia, Times, 'Times New Roman', serif;
+$base-font-size:    10.4pt;
+$base-font-weight:  400;
+$bold-font-weight:  700;
+$base-line-height:  1.7;
+
+$title-font-family: 'PT Serif', Georgia, Times, 'Times New Roman', serif;
+$header-font-family: 'Merriweather', Georgia, Times, 'Times New Roman', serif;
+$header-font-weight: 700;
+
+$small-font-size:   $base-font-size * 0.875;
+
+$mono-font-family: 'Fira Code';
+$mono-font-size:   11pt;
+
+$text-color:       hsl(0, 0%, 25%);
+
+$alt-color:        hsl(0, 70%, 46%);
+$alt-color-darker: darken($alt-color, 6%);
+
+$article-bg-color: rgb(250, 250, 250);
+$background-color: darken($article-bg-color, 6%);
+$bg-color-darker:  darken($article-bg-color, 15%);
+$alt-text-color:   darken($article-bg-color, 60%);
+
+$subdued-border:   rgba($bg-color-darker, 0.5);

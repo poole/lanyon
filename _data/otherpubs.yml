@@ -1,0 +1,42 @@
+- name: "Automating the Extraction of Static Content and Dynamic Behaviour from e-Commerce Websites"
+  year: 2017
+  authors:
+    - João Pedro Dias
+    - Hugo Sereno Ferreira
+  conference: "10ª Edição Encontro Investigação Jovem"
+  acronym: ijup
+  city: Porto, Portugal
+
+- name: "Bluetooth Based Warning System for Ambient Assisted Living"
+  year: 2016
+  authors:
+    - João Silva
+    - Hugo Sereno Ferreira
+  conference: "9ª Edição Encontro Investigação Jovem"
+  acronym: ijup
+  city: Porto, Portugal
+
+- name: "Assessing Tools for Software Development: An overview of three user evaluations"
+  year: 2012
+  authors:
+    - Filipe Correia
+    - Nuno Flores
+    - Hugo Sereno Ferreira
+    - Ademar Aguiar
+  conference: User evaluation for Software Engineering Researchers Workshop at the 34th International Conference on Software Engineering
+  acronym: user
+
+- name: "Introdução à Programação Objecto-Funcional com Scala"
+  year: 2012
+  authors:
+    - Hugo Sereno Ferreira
+  conference: "MundoJ (53)"
+  
+- name: Quality evolution track at QUATIC’10
+  year: 2011
+  authors:
+    - Michel Wermelinger
+    - Hugo Sereno Ferreira
+  conference: ACM SIGSOFT Software Engineering Notes 36(1)
+  pages: 28—29
+  doi: 10.1145/1921532.1960273

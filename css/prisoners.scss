@@ -1,0 +1,58 @@
+---
+---
+@import "settings";
+
+#histogram {
+  font-family: $base-font-family;
+  background-color: $background-color;
+  padding: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border-radius: 10px;
+  width: 100%;
+  height: 300px;
+
+  svg {
+    width: 100%;
+    height: 100%;
+
+    .x-marker {
+      stroke: darken($alt-color, 50%);
+      stroke-width: 1;
+      stroke-dasharray: 5;
+      stroke-opacity: 0.4;
+    }
+  }
+
+  .n-simulations {
+    fill: black;
+    font-size: 13px;
+    font-family: $base-font-family;
+  }
+
+  .bar text {
+    fill: $background-color;
+    font-size: 10px;
+    font-family: $base-font-family;
+  }
+
+  .bar rect {
+    fill: $alt-color;
+    shape-rendering: crispEdges;
+  }
+
+  .bar rect:hover {
+    fill: darken($alt-color, 10%);
+  }
+
+  .axis {
+        font-family: $base-font-family;
+        transition: opacity 0.5s;
+        opacity: 0.3;
+
+        &:hover {
+            transition: opacity 0.5s;
+            opacity: 0.5
+        }
+    }
+}

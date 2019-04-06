@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "target": "es2016",
+        "module": "commonjs",
+        "sourceMap": true,
+        "removeComments": false,
+        "experimentalDecorators": true
+    },
+    "exclude": [
+        "node_modules",
+        "**/node_modules/*",
+        "typings",
+        "dist"
+    ]
+}

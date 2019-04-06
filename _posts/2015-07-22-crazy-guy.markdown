@@ -1,0 +1,46 @@
+---
+layout: post
+title: Crazy Guy
+date: 2015-07-22 01:14
+comments: true
+external-url:
+categories: Mathematics
+---
+
+> John and 99 other people make a queue to enter a plane, with Camille standing last. They each hold a ticket to one of the 100 seats on that flight. John, the first person in line, is a little cuckoo, and chooses a random seat disregarding his own ticket and ignoring the complains of other passengers. All of the other passengers are quite normal, and will go to their proper seat unless it is already occupied. If it is occupied, they will then find a free seat to sit in, at random. What's the probability that Camille (the last person to board) will sit in her proper seat? Assume may each ticket is numbered from 1 to 100.
+
+Let $p(i)$ be the probability of the $i^{th}$ person to enter the airplane sitting on Camille's place. Note that only one, if any, will ever sit there. Then:
+
+$$
+\begin{align}
+P(1) & = \frac{1}{N} \\
+P(2) & = P(1) \frac{1}{N-1}
+\end{align}
+$$
+
+Note that the probability of 1 sitting in Camille's place is the same as sitting in 2 place, the only way 2 would be forced to move to Camille's place. In general:
+
+$$
+P(i) = \frac{1}{N-i+1} \sum_{j=1}^{i-1} P(j)
+$$
+
+This is, either the first occupied $i^{th}$ place, or the second, or the third, etc, and then $i^{th}$ takes Camille's. So, the question is what is the probability of Camille taking Camille's place, that is, $P(N) = P(100) = 0.5$.
+
+For fun, here's a Scala program that simulates this puzzle:
+
+```scala
+val sims = 100000
+val size = 100
+
+(0 to sims).count { _ =>
+  val a = (1 to size).zip(Random.shuffle(1 to size)).toList
+  val b = a.foldLeft(Map[Int, Int]()) { case (acc, (p, seat)) => acc + (p match {
+    case 1 => 1 -> (Random.nextInt(size) + 1)
+    case _ => p -> (if (acc.exists(_._2 == seat))
+                      Random.shuffle((1 to size).toSet -- acc.values).head
+                    else seat)
+  }) }
+
+  a.last._2 == b(size)
+} / sims.toFloat
+```

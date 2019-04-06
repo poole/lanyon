@@ -1,15 +1,18 @@
 /**
  * Syntax highlighting styles
  */
+
+.bghighlight { color: rgb(82, 86, 67); background-color: rgba(132, 189, 0, 0.188235); padding: 2px; }
+
 .highlight {
-    .c     {  color: lighten($text-color, 35%); font-style: italic } // Comment
+    .c     {  color: lighten($text-color, 50%); font-style: italic } // Comment
     .err   {  } // Error
-    .k     {  color: $alt-color; font-weight: bold } // Keyword
-    .o     {  font-weight: bold }  // Operator
+    .k     {  color: $alt-color } // Keyword
+    // .o     {  }  // Operator
     .cm    {  font-style: italic } // Comment.Multiline
     .cp    {  font-weight: bold }  // Comment.Preproc
     .c1    {  font-style: italic } // Comment.Single
-    .cs    {  font-weight: bold; font-style: italic } // Comment.Special
+    .cs    {  font-weight: 500; font-style: italic } // Comment.Special
     .gd    {  } // Generic.Deleted
     .gd .x {  } // Generic.Deleted.Specific
     .ge    {  font-style: italic } // Generic.Emph
@@ -19,27 +22,27 @@
     .gi .x {  } // Generic.Inserted.Specific
     .go    {  } // Generic.Output
     .gp    {  } // Generic.Prompt
-    .gs    {  font-weight: bold } // Generic.Strong
+    .gs    {  font-weight: 500 } // Generic.Strong
     .gu    {  } // Generic.Subheading
     .gt    {  } // Generic.Traceback
-    .kc    {  font-weight: bold } // Keyword.Constant
-    .kd    {  font-weight: bold } // Keyword.Declaration
-    .kp    {  font-weight: bold } // Keyword.Pseudo
-    .kr    {  font-weight: bold } // Keyword.Reserved
-    .kt    {  font-weight: bold } // Keyword.Type
+    .kc    {  font-weight: 500 } // Keyword.Constant
+    .kd    {  color: $alt-color; } // Keyword.Declaration
+    .kp    {  font-weight: 500 } // Keyword.Pseudo
+    .kr    {  font-weight: 500 } // Keyword.Reserved
+    .kt    {  font-weight: 500 } // Keyword.Type
     .m     {  } // Literal.Number
     .s     { font-style: italic } // Literal.String
     .na    {  } // Name.Attribute
     .nb    {  } // Name.Builtin
-    .nc    {  font-weight: bold } // Name.Class
+    .nc    {  font-weight: 500 } // Name.Class
     .no    {  } // Name.Constant
     .ni    {  } // Name.Entity
-    .ne    {  font-weight: bold } // Name.Exception
-    .nf    {  font-weight: bold } // Name.Function
+    .ne    {  font-weight: 500 } // Name.Exception
+    .nf    {  font-weight: 500 } // Name.Function
     .nn    {  } // Name.Namespace
     .nt    {  } // Name.Tag
     .nv    {  } // Name.Variable
-    .ow    {  font-weight: bold } // Operator.Word
+    .ow    {  font-weight: 500 } // Operator.Word
     .w     {  } // Text.Whitespace
     .mf    {  } // Literal.Number.Float
     .mh    {  } // Literal.Number.Hex

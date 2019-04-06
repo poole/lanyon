@@ -1,10 +1,10 @@
 # Site settings
-title: "On Software Engineering, Mathematics<br>and Philosophy"
+title: "On Software Engineering, Mathematics and Philosophy"
 author: "Hugo Sereno Ferreira"
 description: "This is a blog about software, some mathematics, and the occasional philosophy. Not necessarily in that order."
 keywords: "Software Engineering, Mathematics, Philosophy, Scala, Epistemology, Existentialism, Programming, Machine-Learning, Artificial Intelligence, Statistics, Probability, Puzzles"
-biography: "I am a Professor of Software Engineering at the <a href='http://www.fe.up.pt'>Faculty of Engineering</a>, University of Porto and Senior Researcher at <a href='https://www.inesctec.pt'>INESC TEC</a>. Here you can find my <a href='/assets/thesis.pdf'>PhD Thesis</a> and my <a href='/assets/cv.pdf'>Résumé</a>."
-colophon: "© MMXIII — MMXVI by Hugo Sereno Ferreira.<br>Content available under <a href='http://creativecommons.org/licenses/by-nc-sa/4.0/'>Creative Commons (BY-NC-SA)</a> unless otherwise noted.<br>This site is hosted at <a href='https://pages.github.com/'>Github Pages</a> and created with <a href='http://jekyllrb.com/'>Jekyll</a>."
+biography: "I am a Professor of Software Engineering at the <a href='http://www.fe.up.pt'>Faculty of Engineering</a>, University of Porto and Research Associate at <a href='https://www.inesctec.pt'>INESC TEC</a>. Here you can find my <a href='/assets/thesis.pdf'>PhD Thesis</a> and my <a href='/assets/cv.pdf'>Résumé</a>."
+colophon: "© MMXIII — MMXVI by Hugo Sereno Ferreira.<br>Content available under <a href='http://creativecommons.org/licenses/by-nc-sa/4.0/''>Creative Commons (BY-NC-SA)</a> unless otherwise noted.<br>This site is hosted at <a href='https://pages.github.com/''>Github Pages</a> and created with <a href='http://jekyllrb.com/'>Jekyll</a> and <a href='http://getbootstrap.com'>Bootstrap</a>."
 
 baseurl: ""
 url: "http://hugosereno.eu"
@@ -13,9 +13,15 @@ twitter_username: ferreira_hugo
 github_username: hugoferreira
 linkedin_username: hugoserenoferreira
 facebook_username: hugo.sereno.ferreira
+instagram_username: hugo.sereno.ferreira
+500px_username: hugoserenoferreira
+
 google-analytics: UA-69060-5
 
 simple_search: http://google.com/search
 markdown: kramdown
 highlighter: rouge
 permalink: /blog/:year/:month/:day/:title/
+
+gems:
+- jekyll-sitemap

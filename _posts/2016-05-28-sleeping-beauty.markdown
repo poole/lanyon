@@ -5,6 +5,8 @@ date: 2016-05-28 15:46
 comments: true
 external-url:
 categories: Mathematics
+custom_js:
+- sleepingbeauty
 ---
 
 > Sleeping Beauty undergoes an experiment where she's put to sleep on Sunday. Immediately after that, a fair coin is tossed. If it comes out Heads, Sleeping Beauty is waken on Monday. If it comes out Tails, she's waken both on Monday and Tuesday. After being waken, the experimentalist asks Sleeping Beauty: *"What is your degree of certainty that the coin landed heads?"*. He subsequently puts Sleeping Beauty to sleep, taking care to administer her an amnesia inducing drug that ensures she doesn't remember the experiment. Hence, everytime Sleeping Beauty is awaked, she won't know which day it is or whether she has already been awakened before or not. What should her answer be?
@@ -13,40 +15,44 @@ It's amazing how a simple puzzle installs chaos among mathematicians and philoso
 
 As many things in life, it's all a matter of perspective. And the conundrum here lies in the way the problem is phrased. But before going into maths and probability theory, we shall **simulate**:
 
-```scala
-var correct = 0
-var questions = 0
-var heads = 0
-var trials = 10000
+{% highlight javascript linenos %}
+const toss = () => Math.random() >= 0.5
 
-// Let's run some trials
-(1 to trials).foreach { trial =>
-  // toss a fair coin
-  scala.util.Random.nextBoolean() match {
-    case true =>  // Heads was tossed. Wake on Monday.
-      // Sleeping Beauty always bet Heads was tossed;
-      // ... in this case, only once.
-      questions += 1
-      correct += 1
-      heads += 1
-    case _ =>     // Tails was tossed. Wake on Monday and Tuesday.
-      // Sleeping Beauty always bet Heads was tossed;
-      // ... in this case, it will bet both on Monday
-      // and Tuesday. But it will fail!
-      questions += 2
+let correct = 0
+let questions = 0
+let heads = 0
+
+function trial() {
+  if (toss()) {   // toss a fair coin
+    // Heads was tossed. Wake on Monday.
+    // Sleeping Beauty always bet Heads was tossed;
+    // ... in this case, only once.
+    questions += 1
+    correct += 1
+    heads += 1
+  } else {
+    // Tails was tossed. Wake on Monday and Tuesday.
+    // Sleeping Beauty always bet Heads was tossed;
+    // ... in this case, it will bet both on Monday
+    // and Tuesday. But it will fail!
+    questions += 2
   }
 }
 
-println("Probability of SB being correct: " + correct.toDouble/questions)
-println("Probability of Heads being tossed: " + heads.toDouble/trials)
-```
+const trials = 10000
+for (let i = 0; i < trials; i++) trial()
 
-Here's a sample run:
+console.log(`Probability of SB being correct: ${correct/questions}`)
+console.log(`Probability of Heads being tossed: ${heads/trials}`)
+{% endhighlight %}
+
+Here's the result with <a href="javascript:simulate(1000)">1000</a>, <a href="javascript:simulate(10000)">10000</a>, and <a href="javascript:simulate(100000)">100000</a> runs:
 
 ```
 Probability of SB being correct: 0.33636242148870776
 Probability of Heads being tossed: 0.5034
 ```
+{:id="output"}
 
 ## Two questions, two answers
 
