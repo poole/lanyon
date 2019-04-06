@@ -1,6 +1,7 @@
-User-Agent: *
+User-agent: Mediapartners-Google
+Disallow:
+
+User-agent: *
 Disallow: /.bundle/
 Disallow: /.gitignore
 Allow: /
-
-Sitemap: http://hugosereno.eu/sitemap.xml
