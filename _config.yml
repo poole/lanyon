@@ -1,13 +1,13 @@
 # Site settings
 title: "Chrispen Shumba, Data Science and AWS"
 author: "Hugo Sereno Ferreira"
-description: "This is a blog about Data Science, some AWS, and the occasional blogging."
-keywords: "Software Engineering, Mathematics, Philosophy, Scala, Epistemology, Existentialism, Programming, Machine-Learning, Artificial Intelligence, Statistics, Probability, Puzzles"
-biography: "I am a Professor of Software Engineering at the <a href='http://www.fe.up.pt'>Faculty of Engineering</a>, University of Porto and Research Associate at <a href='https://www.inesctec.pt'>INESC TEC</a>. Here you can find my <a href='/assets/thesis.pdf'>PhD Thesis</a> and my <a href='/assets/cv.pdf'>Résumé</a>."
+description: "This is a blog about Data Science, AWS, and some occasional blogging"
+keywords: "Data Science, Machine-Learning, Artificial Intelligence, Statistics, Probability"
+biography: "I am a data scientist at DXC technology."
 colophon: "© MMXIII — MMXVI by Hugo Sereno Ferreira.<br>Content available under <a href='http://creativecommons.org/licenses/by-nc-sa/4.0/''>Creative Commons (BY-NC-SA)</a> unless otherwise noted.<br>This site is hosted at <a href='https://pages.github.com/''>Github Pages</a> and created with <a href='http://jekyllrb.com/'>Jekyll</a> and <a href='http://getbootstrap.com'>Bootstrap</a>."
 
 baseurl: ""
-url: "http://hugosereno.eu"
+url: "https://chrispenshumba.github.io/"
 
 twitter_username: chrispenlion
 github_username: chrispenshumba
