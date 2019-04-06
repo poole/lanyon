@@ -1,0 +1,23 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "sourceType": "script"
+    },
+    "rules": {
+        "linebreak-style": ["warn", "unix"],
+        "quotes": ["warn", "single"],
+        "semi": ["warn", "never"],
+        "no-unused-vars": "off",
+        "no-console": "off",
+        "arrow-parens": ["warn", "as-needed"],
+        "no-extra-parens": ["warn"],
+        "eqeqeq": ["warn", "always"],
+        "prefer-template": "error",
+        "prefer-const": "error"
+    }
+}

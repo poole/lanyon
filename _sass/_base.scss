@@ -11,81 +11,170 @@ body {
   background-color: $background-color;
   font-family: $base-font-family;
   font-size: $base-font-size;
+  font-weight: $base-font-weight;
   color: $text-color;
 
-  a, a:hover {
+  .et-symbol {
+    svg {
+      height: 0.98em;
+      position: relative;
+      top: 0.145em;
+      image-rendering: auto;
+
+      path {
+          fill: $alt-color-darker;
+          fill-rule: evenodd;
+          stroke: $alt-color-darker;
+          stroke-width: 3px;
+      }
+    }
+  }
+
+  a {
     color: $alt-color;
+    text-decoration: none;
+    transition: background-color 400ms;
+
+    &:hover {
+      color: $alt-color;
+      background-color: transparentize($alt-color, 0.93);
+      text-decoration: none;
+    }
+
+    &:visited {
+      color: $alt-color !important;
+      text-decoration: none !important;
+    }
   }
 
   p {
     line-height: $base-line-height;
   }
 
-  article > :first-child {
-    &:first-letter {
-      color: $alt-color-darker;
-      display: inline-block;
-      float: left;
-      font-size: 3.2em;
-      line-height: 0.7em;
-      font-style: normal;
-      font-weight: bold;
-      margin: 0.12em 0.15em 0 -0.01em;
-    }
-
-    min-height: 2em + $base-line-height;
-  }
-
-  h1 {
-    font-weight: 600;
+  h1, h2, h3 {
+    font-family: $header-font-weight;
+    line-height: 1.4em;
+    font-weight: bold;
   }
 
   h2 {
-    margin-top: 1em;
     font-size: 1.6em;
-    margin-bottom: 0.6em;
+    margin-top: 2em;
+    margin-bottom: 1em;
   }
 
   h3 {
+    font-family: $title-font-family;
     font-size: 1.2em;
     font-variant: small-caps;
     text-transform: lowercase;
-    font-weight: bold;
     letter-spacing: 0.15em;
+  }
+
+  strong {
+    font-weight: $bold-font-weight;
   }
 }
 
 article {
+  p {
+    hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+  }
+
+  .mjx-mtext span {
+    font-family: $base-font-family !important;
+    font-size: $base-font-size;
+    font-weight: $base-font-weight;
+  }
+
+  > :first-child {
+    min-height: 2em + $base-line-height;
+
+    &::first-letter {
+      color: $alt-color-darker;
+      float: left;
+      font-size: 3.4em;
+      line-height: .7em;
+      font-family: $title-font-family;
+      font-style: normal;
+      font-weight: bold;
+      margin: .12em .15em 0 -.02em;
+    }
+  }
+
+  br {
+    display: block;
+    margin: .3em 0;
+    content: ' ';
+  }
+
+  ol li, ul li {
+    padding-left: 0;
+  }
+
   ul li {
-    padding-left: 0em;
-    margin-bottom: 0;
     list-style: none;
+    margin-bottom: 0;
   }
 
-  ul {
-    position: relative;
-    padding: 0;
-    margin-left: 0;
+  ol li {
+    margin-bottom: 1em;
   }
 
-  ul > li:before {
+  ol, ul {
+    @media (max-width: 768px) {
+      padding-left: 1.1rem;
+    }
+
+    @media (min-width: 768px) {
+      padding-left: 0;
+    }
+  }
+
+  ul > li::before {
     position: absolute;
-    content: "▪";
+    content: '▪';
     color: $alt-color;
-    left: -1.15em;
+
+    @media (min-width: 572px) {
+      left: -1.15em;
+    }
   }
 
-  pre, code {
+  pre, code, aside {
     background-color: $background-color;
   }
 
-  pre {
+  pre, aside {
     padding: 1em;
     border-radius: 5px;
   }
 
   code {
     font-family: $mono-font-family;
+    font-size: $mono-font-size;
+
+    table {
+      border: 0;
+      margin: 0;
+      padding: 0;
+
+      pre {
+        margin: 0;
+        border-radius: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      .lineno {
+        padding-left: 0;
+        border-right: 1px solid transparentize(black, .8);
+        color: transparentize(black, .8);
+      }
+    }
   }
 }
 
@@ -93,7 +182,7 @@ blockquote {
   margin-top: 1em;
   margin-bottom: 1em;
   border-left: 2pt solid $alt-color;
-  padding-left: 0.9em;
+  padding-left: .9em;
   margin-left: -1em;
   font-style: oblique;
 
@@ -113,11 +202,10 @@ blockquote {
 
 .main {
   background-color: $article-bg-color;
-  border: 1px solid $bg-color-darker;
+  box-shadow: 0 0 5px 5px rgba(160,160,160,.05);
   margin-top: 16px;
   padding: 16px;
-  border-radius: 4px;
-  border-top: 3px solid $alt-color;
+  border-radius: 12px;
 }
 
 .small-ornament, .big-ornament {
@@ -152,15 +240,19 @@ header {
   }
 }
 
-footer {
-  margin-top: 1em;
-  margin-bottom: 1em;
-  font-size: $small-font-size;
+abbr {
+  font-size: 1.1em;
+  font-variant: small-caps;
+  text-transform: lowercase;
+  letter-spacing: .05em;
+}
 
+
+footer, .navbar {
+  font-size: $small-font-size;
   color: $alt-text-color;
 
   .biography {
-    margin-top: 2em;
     padding-bottom: 1em;
     border-bottom: 1px solid $subdued-border;
     margin-bottom: 1em;
@@ -171,40 +263,56 @@ footer {
     font-variant: small-caps;
     text-transform: lowercase;
     font-weight: bold;
-    letter-spacing: 0.15em;
+    letter-spacing: .15em;
   }
 
-  a, a:hover {
-    color: $alt-color-darker;
+  a.fa {
+    color: lighten($text-color, 50%) !important;
+    margin-right: .25em;
+    margin-left: .25em;
+    margin-bottom: .8em;
+    transition: color 400ms;
+
+    &:hover {
+      color: $alt-color !important;
+      background-color: transparent !important;
+    }
   }
+}
+
+.navbar {
+  font-size: $small-font-size * 1.1;
 }
 
 .footnotes {
   border-top: 1px solid $subdued-border;
   padding-top: 1em;
   margin-top: 2em;
-
-  ul, ol {
-    margin-left: -2em;
-  }
-
-  > ol {
-    margin-left: -1.5em;
-  }
 }
 
 sup > .footnote {
-  margin-left: -0.2em;
+  margin-left: .1em;
   font-style: normal;
+
+  &::before { content: '{'; }
+  &::after  { content: '}'; }
+}
+
+.small-table {
+  font-size: $small-font-size;
+
+  td {
+    vertical-align: text-top;
+  }
 }
 
 table {
   margin: 0 auto;
   margin-top: 1.25em;
   margin-bottom: 1.25em;
-  border-spacing: 2em 0.1em;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+  border-spacing: 2em .1em;
+  padding-top: .5em;
+  padding-bottom: .5em;
   border-collapse: separate;
   background-color: $background-color;
   border-left: 2.5pt solid $alt-color;
@@ -218,7 +326,11 @@ table {
   }
 
   th {
-    padding-bottom: 0.6em;
-    // border-bottom: 2px solid $alt-color;
+    font-variant: small-caps;
+    text-transform: lowercase;
+    font-weight: 700;
+    font-size: $base-font-size * 1.1;
+    letter-spacing: .1em;
+    padding-bottom: .6em;
   }
 }

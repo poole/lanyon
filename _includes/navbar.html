@@ -1,0 +1,20 @@
+<div class="row navbar">
+    <div class="col-6">
+        {% if site.github_username %}
+        <a class="fa fa-github" href="https://github.com/{{ site.github_username }}" title="GitHub"></a>
+        {% endif %} {% if site.twitter_username %}
+        <a class="fa fa-twitter" href="https://twitter.com/{{ site.twitter_username }}" title="Twitter"></a>
+        {% endif %} {% if site.linkedin_username %}
+        <a class="fa fa-linkedin" href="https://id.linkedin.com/in/{{ site.linkedin_username }}" title="LinkedIn"></a>
+        {% endif %} {% if site.facebook_username %}
+        <a class="fa fa-facebook" href="https://www.facebook.com/{{ site.facebook_username }}" title="Facebook"></a>
+        {% endif %} {% if site.500px_username %}
+        <a class="fa fa-500px" href="https://500px.com/{{ site.500px_username }}" title="500px"></a>
+        {% endif %} {% if site.instagram_username %}
+        <a class="fa fa-instagram" href="https://www.instagram.com/{{ site.instagram_username }}" title="Instagram"></a>
+        {% endif %}
+    </div>
+    <div class="col-6 text-right">
+        <a class="fa fa-home" href="/"></a>
+    </div>
+</div>

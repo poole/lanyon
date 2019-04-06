@@ -2,7 +2,16 @@
 <html>
   {% include head.html %}
   <body>
-    {{ content }}
+    <div class="container main">
+      {% include navbar.html %}
+      {{ content }}
+    </div>
     {% include footer.html %}
   </body>
+
+  {% if page.custom_js %}
+    {% for js_file in page.custom_js %}
+    <script src='/javascripts/{{ js_file }}.js' type="text/javascript"></script>
+    {% endfor %}
+  {% endif %}
 </html>

@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/bytter
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://hugosereno.eu
+  * I am bytter (https://keybase.io/bytter) on keybase.
+  * I have a public key ASAMmL1U1qmV9_HFtZ39FPzJnyWqYE2MUaog1jaexvYTjAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01200c98bd54d6a995f7f1c5b59dfd14fcc99f25aa604d8c51aa20d6369ec6f6138c0a",
+      "host": "keybase.io",
+      "kid": "01200c98bd54d6a995f7f1c5b59dfd14fcc99f25aa604d8c51aa20d6369ec6f6138c0a",
+      "uid": "3a0ea953778c7349b3d861ff87ba8919",
+      "username": "bytter"
+    },
+    "merkle_root": {
+      "ctime": 1544662848,
+      "hash": "c0fd180f5c17c59bb7ded566cc0c87e76014d2a256175e32e79857ab150f053df010dfbc49e3783e4b76ec5c607190686a3b7b5dcb914164d9213dd495d8df7d",
+      "hash_meta": "f387a6a2a67a13b50fbc887692934907da1a86d364481a9dc7fe90e54df61401",
+      "seqno": 4122623
+    },
+    "service": {
+      "entropy": "fOSMUeRBCcayNbctUmDiZ4l8",
+      "hostname": "hugosereno.eu",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "2.11.0"
+  },
+  "ctime": 1544662864,
+  "expire_in": 504576000,
+  "prev": "b13192ec33059ad24a761d91879fab7debd276ab172bd1e164111d1a2373795f",
+  "seqno": 24,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgDJi9VNaplffxxbWd/RT8yZ8lqmBNjFGqINY2nsb2E4wKp3BheWxvYWTESpcCGMQgsTGS7DMFmtJKdh2Rh5+rfevSdqsXK9HhZBEdGiNzeV/EIDf0FwXh7aKtjn7Ia/2VPkMfBH4FngD+lI+Lrre9NtvsAgHCo3NpZ8RA+7dSMVBDT46s83DE6Lo7Gh2hyjoYKR4ej7kaUYWoDHhOv7d8icUsTpsXrH47NeagkzDSZBJUYtGXir4+Lr9kAqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIEAsCLQUoGfwFgmeu4RJ2W7nSLyIRa8web/SSMzpeIavo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/bytter
+
+==================================================================
