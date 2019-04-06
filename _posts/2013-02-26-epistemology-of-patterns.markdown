@@ -4,7 +4,7 @@ title: "Some Words on the Epistemology of Patterns"
 date: 2013-02-26 03:27
 comments: true
 external-url:
-categories: Software
+categories: AWS
 ---
 
 The opening of third book on *Pattern Languages of Program Design* starts with the following sentence:

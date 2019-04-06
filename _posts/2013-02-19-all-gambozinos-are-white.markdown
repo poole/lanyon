@@ -4,7 +4,7 @@ title: "All Gambozinos are White"
 date: 2013-02-19 01:24
 comments: true
 external-url:
-categories: Mathematics
+categories: Data Science
 output:
   pdf_document:
     latex_engine: xelatex

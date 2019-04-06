@@ -4,7 +4,7 @@ title: "Preliminary Thoughts on Software Design - Part I"
 date: 2013-02-26 02:47
 comments: true
 external-url:
-categories: Software
+categories: Statistics
 ---
 
 I see the word *design* being loosely used almost every day. People say a particular framework has a good or bad design. They discuss "*architectural design*" [^1]. They even pay thousands for an expert to design their innovative software solution.
