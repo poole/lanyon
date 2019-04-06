@@ -7,14 +7,14 @@ biography: "I am a Professor of Software Engineering at the <a href='http://www.
 colophon: "© MMXIII — MMXVI by Hugo Sereno Ferreira.<br>Content available under <a href='http://creativecommons.org/licenses/by-nc-sa/4.0/''>Creative Commons (BY-NC-SA)</a> unless otherwise noted.<br>This site is hosted at <a href='https://pages.github.com/''>Github Pages</a> and created with <a href='http://jekyllrb.com/'>Jekyll</a> and <a href='http://getbootstrap.com'>Bootstrap</a>."
 
 baseurl: ""
-url: "http://hugosereno.eu"
+url: "http://chrispenshumba.github.io"
 
-twitter_username: ferreira_hugo
-github_username: hugoferreira
-linkedin_username: hugoserenoferreira
-facebook_username: hugo.sereno.ferreira
-instagram_username: hugo.sereno.ferreira
-500px_username: hugoserenoferreira
+twitter_username: chrispenlion
+github_username: chrispenshumba
+linkedin_username: chrispenshumba
+facebook_username:
+instagram_username: chrispenlion
+500px_username:
 
 google-analytics: UA-69060-5
 

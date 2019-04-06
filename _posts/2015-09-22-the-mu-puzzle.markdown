@@ -1,10 +1,10 @@
 ---
 layout: post
-title: The Mu Puzzle
+title: Data science
 date: 2015-09-22 00:51
 comments: true
 external-url:
-categories: Mathematics
+categories: Data Science
 ---
 
 > Imagine strings that only contains the letters `M`, `I` and `U`. Every valid string begins with an `M`. You can generate new strings by successively applying one of four rules: (1) you can add an `U` to any string that ends in an `I`; (2) you can double everything from an `M` to the end of the string; (3) any occurrence of `III` can be replaced by a single `U`; and (4) you can simply remove any occurrences of `UU`. The puzzle is thus: starting from the string `MI`, what is the sequence of rules one must apply to produce the string `MU`? [^1]
