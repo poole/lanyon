@@ -4,7 +4,7 @@ author: "Hugo Sereno Ferreira"
 description: "This is a blog about Data Science, AWS, and some occasional blogging"
 keywords: "Data Science, Machine-Learning, Artificial Intelligence, Statistics, Probability"
 biography: "I am a data scientist at DXC technology."
-colophon: "© MMXIII — MMXVI by Hugo Sereno Ferreira.<br>Content available under <a href='http://creativecommons.org/licenses/by-nc-sa/4.0/''>Creative Commons (BY-NC-SA)</a> unless otherwise noted.<br>This site is hosted at <a href='https://pages.github.com/''>Github Pages</a> and created with <a href='http://jekyllrb.com/'>Jekyll</a> and <a href='http://getbootstrap.com'>Bootstrap</a>."
+colophon: "© MMXIII — MMXVI by Hugo Sereno Ferreira."
 
 baseurl: ""
 url: "https://chrispenshumba.github.io/"
