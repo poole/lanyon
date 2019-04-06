@@ -4,7 +4,7 @@ title: "How to Write an Academic Report"
 date: 2013-02-19 00:38
 comments: true
 external-url:
-categories: Others
+categories: Statistics
 ---
 
 Here are some tips for writing an undergraduate academic report:

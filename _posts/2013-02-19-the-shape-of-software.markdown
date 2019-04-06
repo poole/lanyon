@@ -4,7 +4,7 @@ title: "The Shape of Software"
 date: 2013-02-19 01:58
 comments: true
 external-url:
-categories: Software
+categories: Blog
 ---
 
 ![software-incompleteness](http://skyservers.org/~bytter/software-incompleteness.png)

@@ -4,7 +4,7 @@ title: "And so it (re-)Begins..."
 date: 2013-02-18 00:38
 comments: true
 external-url:
-categories: Others
+categories: AWS
 ---
 
 It was back in 2011 the last time I took the trouble of updating my old wordpress blog. I was just finishing my [PhD thesis](/assets/thesis.pdf) and so the last post was something like "Yay, I finished it".
