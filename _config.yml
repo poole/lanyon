@@ -6,17 +6,17 @@ relative_permalinks: false
 
 # Setup
 title:               Jeffrey De Fauw
-tagline:             'Jeffrey De Fauw'
+tagline:             'Machine Learning research'
 description:         'Jeffrey De Fauw'
 url:                 http://jeffreydf.github.io
 baseurl:             ''
-paginate:            5
+# paginate:            5
 
 # About/contact
 author:
   name:              Jeffrey De Fauw
   url:               https://twitter.com/JeffreyDeFauw
-  email:             s
+  email:             jeffrey@mathbb.com
 
 # Custom vars
 version:             1.0.0
