@@ -3,7 +3,7 @@ title:  "Detecting diabetic retinopathy in eye images"
 date:   2015-07-28 12:00:00
 //author: Jeffrey De Fauw
 categories: kaggle diabetic retinopathy convnet
-permalink: "diabetic-retinopathy-detection"
+permalink: diabetic-retinopathy-detection
 ---
 
 {% include image.html img="/images/dr_comp/layer_1_output_selection_thumb.png" title="" caption=""  url="/images/dr_comp/layer_1_output_selection.png" %}

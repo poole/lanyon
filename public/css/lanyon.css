@@ -568,6 +568,7 @@ a.pagination-item:hover {
     .image-caption {
         color: #828282;
         margin-top: 30px / 3;
+        font-size: 75%;
     }
 }
 
