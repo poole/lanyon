@@ -2,15 +2,17 @@
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
 permalink:           pretty
-relative_permalinks: false
+markdown:            kramdown
+highlighter:         true
 
 # Setup
 title:               Jeffrey De Fauw
 tagline:             'Machine Learning research'
 description:         'Jeffrey De Fauw'
-url:                 http://jeffreydf.github.io
+url:                 https://jeffreydf.github.io
 baseurl:             ''
 paginate:            1
+
 
 # About/contact
 author:
