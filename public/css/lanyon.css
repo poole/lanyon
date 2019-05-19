@@ -566,7 +566,8 @@ a.pagination-item:hover {
     text-align: center;
 
     .image-caption {
-        color: $grey-color;
-        margin-top: $spacing-unit / 3;
+        color: #828282;
+        margin-top: 30px / 3;
     }
 }
+

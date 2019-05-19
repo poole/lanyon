@@ -10,7 +10,7 @@ tagline:             'Machine Learning research'
 description:         'Jeffrey De Fauw'
 url:                 http://jeffreydf.github.io
 baseurl:             ''
-paginate:            5
+paginate:            1
 
 # About/contact
 author:
@@ -20,3 +20,6 @@ author:
 
 # Custom vars
 version:             1.0.0
+
+# Gems
+gems: [jekyll-paginate]
