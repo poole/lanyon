@@ -20,7 +20,7 @@ The past almost four months I have been competing in a [Kaggle competition about
 6. [Conclusion](#conclusion)
 7. [Code, models and example activations](#code-models-and-example-activations)
 
-##Introduction
+## Introduction
 
 **Diabetic retinopathy** (DR) is the leading cause of blindness in the working-age population of the developed world and is estimated to affect over 93 million people. (From the [competition description][comp-descrip]{:target="_blank"} where some more background information can be found.) 
 
@@ -58,7 +58,7 @@ Not surprisingly, all my models were **convolutional networks** (convnets) adapt
 
 Also note that competing in a competition such as this requires you -- unless you have a huge amount of resources and time -- to interpret a stream of fairly complex and noisy data as quickly and efficiently as possible and thus, the things I have "learned" are not really tested rigorously and might even be wrong. In the same mindset, a lot of the code is written very quickly and even obvious optimisations might be postponed (or never done!) because the trade-off is not worth it, there are more immediate priorities, you don't want to risk breaking some things, I don't know how (to do it quickly), etc. I started working on this competition somewhere in the beginning of April because before that I was in the process of moving to London.
 
-##Overview / TL;DR
+## Overview / TL;DR
 This post is written in an approximate chronological order, which might be somewhat confusing to read through at first. Therefore, I'll try to sketch in a very concise fashion what my eventual models looked like. (It's not completely independent of the rest of the text, which does try to provide some more explanation.)
 
 My best models used a **convolutional network** with the following relatively basic architecture (listing the output size of each layer) 
@@ -134,7 +134,7 @@ weighted_probs = probs[:, 1] + probs[:, 2] * 2 + probs[:, 3] * 3 + probs[:, 4] *
 
 to get one vector of predictions on which we can apply the ranking procedure from the previous paragraph to assign labels. A few candidate boundaries were determined using [scipy's minimize](http://docs.scipy.org/doc/scipy-0.15.1/reference/generated/scipy.optimize.minimize.html) function on the kappa score of some ensembles.
 
-##The opening
+## The opening
 
 The patients are always split into a training set (90%) and a validation set (10%) by stratified sampling based on the maximum label of the two eyes per patient.
 
@@ -267,7 +267,7 @@ which used the cyclic layers from the [≋ Deep Sea ≋ team][deepsea-blog]{:tar
 Something else that I had already started testing in models somewhat, which seemed to be quite critical for decent performance, was **oversampling the smaller classes**. I.e., you make samples of certain classes more likely than others to be picked as input to your network. This resulted in more stable updates and better, quicker training in general (especially since I was using small batch sizes of 32 or 64 samples because of GPU memory restrictions).
 
 
-##The middlegame
+## The middlegame
 
 First I wanted to take into account the fact that for each *patient* we get two retina images: the left and right eye. By **combining the dense representations of the two eyes** before the last two dense layers (one of which being a softmax layer) I could use both images to classify each image. Intuitively you can expect some pairs of labels to be more probable than others and since you always get two images per patient, this seems like a good thing to do. 
 
@@ -316,7 +316,7 @@ Some things that had also been changed:
 3. The oversampling of smaller classes was now done with a **resulting uniform distribution of the classes**. But now it also switched back somewhere during the training to the *original* training set distribution. This was done because initially I noticed the distribution of the predicted classes to be quite different from the training set distribution. However, this is not necessarily because of the oversampling (although you would expect it to have a significant effect!) and it appeared to be mostly because of the specific kappa loss optimisation (which takes into account the distributions of the predictions and the ground truth). It is also much more prone to overfitting when training for a long time on some samples which are 10 times more likely than others.
 4. Maxout worked slightly better or at least as well as normal dense layers (but it had fewer parameters).
 
-###Visual attention
+### Visual attention
 
 Throughout I also kept trying to find a way to work better with the high resolution input. I tried splitting the image into four (or sixteen) non-overlapping (or only slightly overlapping) squares, passing these through a smaller convnet in parallel and then combining these representations (by stacking them or pooling over them) but this did not seem to work. Something I was a little more hopeful about was using the **spatial transformation layers** from the [Spatial Transformer Networks paper][st-paper]{:target="_blank"} from [DeepMind][deepmind]{:target="_blank"}. The intention was to use some coarse input to make the ST-modules *direct their attention to some parts of the image in higher resolution* (for example, potential microaneurysms!) and hopefully they would be able to detect those finer details. 
  
@@ -330,11 +330,11 @@ Some small things I have learned:
 
 In general, I think these layers are very interesting but they certainly didn't seem that straightforward to me. However, this might be partially because of this specific problem.
 
-##The endgame
+## The endgame
 
 In the last two to three weeks I was trying to wrap up any (very) experimental approaches and started focusing on looking more closely at the models (and their predictions) to see where I could maybe still improve. The "basic architecture" from the previous section barely changed for more than a month and most of my improvements came from optimising the learning process. My best (leaderboard) score (of about **0.828**, which was top 3 for a few weeks) three weeks before the end of the competition came from a simple log mean ensemble from 2-3 models scoring individually around **0.82**.
 
-###Camera artifacts
+### Camera artifacts
 When looking at the two images of certain patients next to each other I noticed something which is harder to see when looking at single images: **camera artifacts**.
  
 {% include image.html img="/images/dr_comp/camera_artifacts_19936.png" title="Sample camera artifacts: tiny black dots on the outer left center and bigger black spots and stripes on the outer right." caption="Sample camera artifacts: tiny black dots on the outer left center and bigger black spots and stripes on the outer right." %}
@@ -348,11 +348,11 @@ One thing I tried to take this into account was to _merge_ the outputs of the fi
 
 Unfortunately this did not seem to help that much and I was running out of time such that I put this aside. 
 
-###Pseudo-labeling
+### Pseudo-labeling
 
 Nearer to the end of the competition I also started testing the clever **pseudo-labeling** idea from the [≋ Deep Sea ≋ team][deepsea-blog]{:target="_blank"} which uses the predictions from other (ensembles of) models on the test set to help _guide_ or regularise new models. Essentially, during training I added some test images to the batches, such that on average roughly 25% of the batch was comprised of images from the test set, together with the softmax predictions for those images from my best ensemble. This probably helped to push me to about **0.83** for a single model.
 
-###Better decoding
+### Better decoding
 
 For a long time I simply used the class with the highest probability from my softmax output as my prediction (i.e., `argmax`). Even though this allowed me to get this far, it was obvious that this method is quite unstable since it doesn't take the magnitude of the (other) probabilities into account, only their size relative to each other. To get around that, I used a similar _ranking decoding_ strategy as was used by some people in the [CrowdFlower Search Results Relevance competition](https://www.kaggle.com/c/crowdflower-search-relevance): first we convert the probabilities from the softmax output to one value by weighing each probability by the class label {0, 1, 2, 3, 4}
 
@@ -364,7 +364,7 @@ Next we rank the weighted probabilities from low to high and try to find the mos
 
 This helped quite a bit, pushing some of my single models from 0.83 to **0.835**. However, I was kind of surprised that changing the prediction distribution quite significantly with different boundaries did not result in bigger differences in scores.
 
-###Error distribution
+### Error distribution
 
 Something that stood out was the fact that the models were highly variable on the validation sets. Although this was mostly because of the discrete metric, the noise in the dataset itself and my small validation set, I still wanted to try to find out more. If you look at the `quadratic_kappa` metric/loss above you can see that it is determined by two matrices: `nom` and `denom`. The kappa score is then given by `1 - sum(nom) / sum(denom)`. Hence, you want to minimise the `nom` sum and maximise the `denom` sum. The denominator `denom` is fairly stable and captures the distributions of the predictions and the targets. The nominator `nom` is the one which will give us the most insight into our model's predictions. Let's look at the nom and denom for some random well-performing model (+0.82 kappa) when I was using the simple `argmax` decoding:
 
@@ -374,10 +374,10 @@ Whereby the matrices are normalised and show the percentage of the total sum loc
 
 Because the other ranking decoding strategy is only applied _after training_ and was done quite late in the competition, I don't have any error distribution pictures for those yet. But I do remember the nom behaving quite similarly and most of the error (30-40%) coming from predicting class 0 when it was really class 2.
 
-###Ensembling
+### Ensembling
 A good improvement then came from **ensembling** a few models using the mean of their log probabilities for each class, converting these to normal probabilities in [0, 1] again and using the _ranking decoding_ strategy from one of the previous paragraphs to assign labels to the images. A few candidate boundaries were determined using [scipy's minimize](http://docs.scipy.org/doc/scipy-0.15.1/reference/generated/scipy.optimize.minimize.html) function on the kappa score of some ensembles. Doing this on the best models at the time pushed my models to **+0.84**.
 
-##Other (not) tried approaches and papers
+## Other (not) tried approaches and papers
 Some other things that *did not seem to work* (well enough):
 
 - [Batch Normalisation][bn-paper]{:target="_blank"}: although it allowed for higher learning rates, it did not seem to speed up training all that much. (But I do believe the training of convnets should be able to be much faster than it is now.)
@@ -403,7 +403,7 @@ I have read quite a few papers (and skimmed a lot more) and even though some of 
 - [Inverting Convolutional Networks with Convolutional Networks](http://arxiv.org/abs/1506.02753){:target="_blank"},  [Visualizing and Understanding Convolutional Networks](http://arxiv.org/abs/1311.2901){:target="_blank"} and [Object Detectors Emerge in Deep Scene CNNs](http://arxiv.org/abs/1412.6856){:target="_blank"}: all of these papers try to deduce what kind of information each layer holds, how well you can reconstruct the original image just from this information and some try to see how invariant this information is under certain transformations of the original image. If you've heard or read about _DeepDream_ (kind of hard not to have), there are some related things going on in the first paper but more theoretical. The more direct inspiration for DeepDream was the paper [Deep Inside Convolutional Networks: Visualising Image Classification Models and Saliency Maps](http://arxiv.org/abs/1312.6034) which is also very interesting!
 
 
-##Conclusion
+## Conclusion
 
 The actual process was quite a bit more lengthy and chaotic (especially at the end) but hopefully this captures the most important elements of my competition experience. All in all, a relatively basic architecture was able to achieve top scores in this competition. Nevertheless, the predictions always felt quite "weak" and my feeling is that there is still quite a bit of room for improvement. Without a doubt the biggest difficulty for me was dealing with the **large amount of variance** resulting from
 
@@ -419,7 +419,7 @@ Personally, I very much enjoyed the competition. I learned a lot, am left with a
 
 Also, when comparing results from this competition to other approaches or software, take into account that it does not necessarily make any sense because they may be training and/or evaluating on different datasets!
 
-##Code, models and example activations
+## Code, models and example activations
 
 Everything was trained on a NVIDIA GTX 980 in the beginning; this was the GPU for the desktop I was also working on, which wasn't ideal. Therefore, later I also tried using the GRID K520 on AWS (even though it was at least two times slower). The [code][dr-code]{:target="_blank"} is based on the [code][ndsb-code]{:target="_blank"} from the [≋ Deep Sea ≋ team][deepsea-blog]{:target="_blank"} that won the [Kaggle National Data Science Bowl competition][ndsb]{:target="_blank"} and uses mostly [Lasagne][lasagne]{:target="_blank"} (which uses [Theano][theano]{:target="_blank"}). Models (including static and learned parameters and data from the training) were dumped via [cPickle][pickle-docs]{:target="_blank"} and a quickly written script was used to produce images for each of these dumps summarising the model and its performance. For example:
 
@@ -441,7 +441,7 @@ This way it was much easier to compare models and keep track of them. (This is j
 
 {% include image.html img="/images/dr_comp/outputs/2015_07_20_204321_5_thumb.png" title="Fifth layer, 3//2 pooling layer activations. Click for larger image (<b>17MB</b>)." caption="Fifth layer, 3//2 pooling layer activations. Click for larger image (<b>17MB</b>)."  url="/images/dr_comp/outputs/2015_07_20_204321_5.png" %}
 
-###Thanks
+### Thanks
 
 I would like to thank [Kaggle][kaggle]{:target="_blank"}, [California Healthcare Foundation][chcf]{:target="_blank"} and [EyePACS][eyepacs]{:target="_blank"} for organising and/or sponsoring this challenging competition. Also many thanks to the wonderful developers and contributors of [Theano][theano]{:target="_blank"} and [Lasagne][lasagne]{:target="_blank"} for their continuous effort on these libraries.
 
