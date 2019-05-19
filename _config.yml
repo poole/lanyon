@@ -10,7 +10,7 @@ tagline:             'Machine Learning research'
 description:         'Jeffrey De Fauw'
 url:                 http://jeffreydf.github.io
 baseurl:             ''
-# paginate:            5
+paginate:            5
 
 # About/contact
 author:
