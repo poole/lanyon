@@ -12,7 +12,8 @@ excerpt: Browse annotations by tag.
 
 <h1>Annotations tagged with {{ tag_name }}</h1>
     {% if site.data.tags[page.tag] %}
-        {% for annotation in site.annotations|sort: 'sort_order' %}
+        {% assign sorted_annotations=site.annotations|sort: 'sort_order' %}
+        {% for annotation in sorted_annotations %}
 
         {% if annotation.tags contains page.tag %}
         <div class="media">
