@@ -8,7 +8,7 @@ permalink: hierarchical-autoregressive-models
 
 {% include image.html img="/images/2019_hierarchical_autoregressive_image/samples_frontpage_256x256.png" title="256x256 class-conditional samples from our model." caption="256x256 class-conditional samples from our model."  url="/images/2019_hierarchical_autoregressive_image/samples_frontpage_256x256.png" %}
  
-We hierarchically stack discrete autoencoders to allow likelihood models to capture long-range structure in images. This allows us to generate realistic images at 128x128 and 256x256 with autoregressive models, which had not been shown before!  
+We hierarchically stack discrete autoencoders to allow likelihood models to capture long-range structure in images. This allows us to generate realistic images at resolutions of 128x128 and 256x256 with autoregressive models, which had not been shown before!  
 [**arXiv**](https://arxiv.org/abs/1903.04933){:target="_blank"}   
 [**Samples for all classes of ImageNet**](https://bit.ly/2FJkvhJ){:target="_blank"}
 

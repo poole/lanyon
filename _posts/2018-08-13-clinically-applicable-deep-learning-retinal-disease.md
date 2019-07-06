@@ -7,7 +7,7 @@ permalink: clinically-applicable-deep-learning-retinal-disease
 ---
 
 {% include image.html img="/images/2018_nature_medicine_oct/figure_1_smaller.png" title="Our proposed two-stage architecture trained with sparse segmentations and diagnosis and referral labels." caption="Our proposed two-stage architecture trained with sparse segmentations and diagnosis and referral labels."  url="/images/2018_nature_medicine_oct/figure_1_smaller.png" %} 
-We propose a two-stage architecture that consists of first mapping the original (noisy) Optical Coherence Tomography (OCT) scan to multiple tissue-segmentation hypotheses, and consequently using a classification network on these tissue maps to infer diagnosis and referral probabilities. On these tasks we achieve expert-level results or better. One benefit of the two-stage architecture is that it allows for much quicker transfer to different device types, as demonstrated in the paper.  
+We propose a two-stage architecture that consists of first mapping the original (noisy) 3D Optical Coherence Tomography (OCT) scan to multiple tissue-segmentation hypotheses, and consequently using a classification network on these tissue maps to infer diagnosis and referral probabilities. On these tasks we achieve expert-level results or better. One benefit of the two-stage architecture is that it allows for much quicker transfer to different device types, as demonstrated in the paper.  
 [**Nature Medicine article**](https://www.nature.com/articles/s41591-018-0107-6){:target="_blank"}  
 [**Open-access link**](https://rdcu.be/4sNU){:target="_blank"}  
 [**BBC article**](https://www.bbc.co.uk/news/health-44924948){:target="_blank"} 

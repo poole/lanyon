@@ -7,11 +7,11 @@ highlighter:         true
 
 # Setup
 title:               Jeffrey De Fauw
-tagline:             'Machine Learning research'
+tagline:             'Machine learning / AI research'
 description:         'Jeffrey De Fauw'
 url:                 https://jeffreydf.github.io
 baseurl:             ''
-paginate:            5
+paginate:            10
 
 
 # About/contact
