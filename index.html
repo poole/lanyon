@@ -1,7 +1,10 @@
 ---
 layout: default
+permalink: index.html
 title: Home
 ---
+
+{% include intro.md %} 
 
 <div class="posts">
   {% for post in paginator.posts %}
