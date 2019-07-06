@@ -4,7 +4,9 @@ http://codingtips.kanishkkunal.in/image-caption-jekyll/-->
     {% if include.url %}
     <a href="{{ include.url }}" title="{{ include.title }}" target="_blank">
     {% endif %}
+		<p align="center">
         <img src="{{ include.img }}" alt="{{ include.title }}"/>
+        </p>
     {% if include.url %}
     </a>
     {% endif %}

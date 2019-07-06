@@ -6,7 +6,7 @@ categories: kaggle diabetic retinopathy convnet
 permalink: diabetic-retinopathy-detection
 ---
 
-{% include image.html img="/images/dr_comp/layer_1_output_selection_thumb.png" title="" caption=""  url="/images/dr_comp/layer_1_output_selection.png" %}
+{% include image.html img="/images/dr_comp/layer_1_output_selection_thumb.png" title="Pairs of fundus images of the eye after the first layer in the convolutional neural network." caption="Pairs of fundus images of the eye after the first layer in the convolutional neural network."  url="/images/dr_comp/layer_1_output_selection.png" %}
 The past almost four months I have been competing in a [Kaggle competition about diabetic retinopathy grading based on high-resolution eye images][comp-descrip]{:target="_blank"}. In this post I try to reconstruct my progression through the competition; the challenges I had, the things I tried, what worked and what didn't. This is not meant as a complete documentation but, nevertheless, some more concrete examples can be found at the [end](#code-models-and-example-activations) and certainly in the [code](#code-models-and-example-activations). In the end I finished [fifth of the almost 700 competing teams](https://www.kaggle.com/c/diabetic-retinopathy-detection/leaderboard). 
 
 **Update 02/08/2015:** [Code and models (with parameters)][dr-code]{:target="_blank"} added.

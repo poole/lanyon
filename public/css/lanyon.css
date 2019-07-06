@@ -563,12 +563,14 @@ a.pagination-item:hover {
 }
 
 .image-wrapper {
+	align: center;
     text-align: center;
+    font-style: italic;
+    font-size: 80%;
 
     .image-caption {
         color: #828282;
-        margin-top: 30px / 3;
-        font-size: 75%;
+        margin-top: 5px;
     }
 }
 
