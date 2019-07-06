@@ -11,7 +11,7 @@ tagline:             'Machine Learning research'
 description:         'Jeffrey De Fauw'
 url:                 https://jeffreydf.github.io
 baseurl:             ''
-paginate:            1
+paginate:            5
 
 
 # About/contact
