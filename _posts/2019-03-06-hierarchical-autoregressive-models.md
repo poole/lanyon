@@ -12,6 +12,9 @@ We hierarchically stack discrete autoencoders to allow likelihood models to capt
 [**arXiv**](https://arxiv.org/abs/1903.04933){:target="_blank"}   
 [**Samples for all classes of ImageNet**](https://bit.ly/2FJkvhJ){:target="_blank"}
 
+{% include image.html img="/images/2019_hierarchical_autoregressive_image/samples_paper_128x128.png" title="More 128x128 class-conditional samples from our two proposed models. Top: using feed-forward auxiliary decoders, bottom: using masked self-prediction decoders." caption="More 128x128 class-conditional samples from our two proposed models. Top: using feed-forward auxiliary decoders, bottom: using masked self-prediction decoders."  url="/images/2019_hierarchical_autoregressive_image/samples_paper_128x128.png" %}
+
+
 _**Jeffrey De Fauw**, Sander Dieleman, Karen Simonyan_  
 
 ## Abstract
