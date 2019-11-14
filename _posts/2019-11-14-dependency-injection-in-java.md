@@ -133,7 +133,7 @@ class Main {
 
 ![Collaborators](/public/images/dependency-injection-in-java/npe.png)
 
-In statically typed languages like Java is always a good thing to let the compiler to help us. See [Constructor Injection](#constructor-injection)
+In statically typed languages like Java is always a good thing to let the compiler to help us. See `Constructor Injection`
 
 
 ### Constructor Injection (Highly recommended)
@@ -187,7 +187,7 @@ There is a 3rd way to inject dependencies in Java, and it is called `Field Injec
 
 This approach have the same problems exposed for the `Setter Injection` and additionally adds complexity due to mutation/reflection required, unfortunally this is a pretty common pattern used when a `Dependency Injection Framework` it's used.
 
-###### INSERT SAD PICTURE HERE (DONT DO THIS AT HOME)
+![dont](/public/images/dependency-injection-in-java/dont.jpg)
 
 ---
 ## Realistic Example
