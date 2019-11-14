@@ -3,7 +3,7 @@ layout: post
 title: Dependency Injection in Java
 ---
 
-![Collaborators](public/images/dependency-injection-in-java/Collaborators.png)
+![Collaborators](/public/images/dependency-injection-in-java/Collaborators.png)
 
 Java is an object oriented language with some functional aspects included in its core, as any other object oriented language, classes and objects are the foundation of any functionality that we can write and use in it and the relationships between the classes/objects make possible to extend and reuse functionality. But the way that we choose to built those relationships can determine how modular, decoupled and reusable is our code base and not only in terms of production code but also in our test suites.
 
@@ -49,7 +49,7 @@ Now, there is a big problem with this approach:
 
 If we needed to change/replace `ClassB` with `ClassC` because has a optimized version of the `calculate()` method, we will need to recompile our project.
 
-![Collision](public/images/dependency-injection-in-java/Collision.png)
+![Collision](/public/images/dependency-injection-in-java/Collision.png)
 
 ---
 ## The Dependency Injection Principle
@@ -176,7 +176,7 @@ ADVANTAGES:
 - We still can inject a specialized subclass of `ClassB` to `ClassA`
 - Now the compiler is going to ask us for the dependencies that we need in compile time
 
-![Happy](public/images/dependency-injection-in-java/Happy.png)
+![Happy](/public/images/dependency-injection-in-java/Happy.png)
 
 ### Field Injection (Kids don't try this at home)
 
@@ -198,7 +198,7 @@ Now that we know the advantages of the `Dependency Injection Principle` using th
 
 ---
 ### The Todo's Application
-![Todos](public/images/dependency-injection-in-java/Todos.png)
+![Todos](/public/images/dependency-injection-in-java/Todos.png)
 
 Let design a Todo's Application to perform CRUD operations (Create, Read, Update, Delete) to manage our todo list, a initial architecture can be like this:
 
