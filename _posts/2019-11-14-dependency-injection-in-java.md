@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Dependency Injection in Java
+title: Dependency Injection in Java (part 1)
 ---
 
 ![Collaborators](/public/images/dependency-injection-in-java/Collaborators.png)
