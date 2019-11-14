@@ -131,7 +131,7 @@ class Main {
 }
 ```
 
-###### INSERT SAD PICTURE HERE
+![Collaborators](/public/images/dependency-injection-in-java/npe.png)
 
 In statically typed languages like Java is always a good thing to let the compiler to help us. See [Constructor Injection](#constructor-injection)
 
