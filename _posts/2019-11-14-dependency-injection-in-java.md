@@ -13,34 +13,34 @@ In this article we are going to describe the concept of Dependency Injection in 
 
 When a class `ClassA` uses any method of another class `ClassB` we can say that `ClassB` is a dependency of `ClassA`.
 
-<img src="http://yuml.me/diagram/scruffy/class/[ClassA]-uses a method of->[ClassB], [ClassB]-[note: ClassB It's a dependency of ClassA{bg:gray}], [ClassA]-[note: ClassA depends on ClassB{bg:dark}]" alt="dependency" />
+![1](/public/images/dependency-injection-in-java/1.png)
 
-  ```java
-  class ClassA {
+```java
+class ClassA {
 
-    ClassB classB = new ClassB();
+  ClassB classB = new ClassB();
 
-    int tenPercent() {
-      return classB.calculate() * 0.1d;
-    }
+  int tenPercent() {
+    return classB.calculate() * 0.1d;
   }
-  ```
+}
+```
 
 In this example, `ClassA` is calculating the 10% of a value, and in order to calculate that value, it's reusing the functionality exposed by `ClassB`.
 
-<img src="http://yuml.me/diagram/scruffy/class/[ClassA|-classB|+double tenPercent()]->[ClassB||+int calculate()]" alt="dependency" />
+![2](/public/images/dependency-injection-in-java/2.png)
 
 And it can be used like this:
 
-  ```java
-  class Main {
-    public static void main(String... args) {
-      ClassA classA = new ClassA();
+```java
+class Main {
+  public static void main(String... args) {
+    ClassA classA = new ClassA();
 
-      System.out.println("Ten Percent: " + classA.tenPercent());
-    }
+    System.out.println("Ten Percent: " + classA.tenPercent());
   }
-  ```
+}
+```
 
 Now, there is a big problem with this approach:
 
@@ -60,73 +60,73 @@ The **Dependency Injection Principle** is nothing else than being able to pass (
 
 ### Setter Injection (Not recommended)
 
-  ```java
-  class ClassA {
+```java
+class ClassA {
 
-    ClassB classB;
+  ClassB classB;
 
-    /* Setter Injection */
-    void setClassB(ClassB injected) {
-      classB = injected;
-    }
-
-    int tenPercent() {
-      return classB.calculate() * 0.1d;
-    }
+  /* Setter Injection */
+  void setClassB(ClassB injected) {
+    classB = injected;
   }
-  ```
+
+  int tenPercent() {
+    return classB.calculate() * 0.1d;
+  }
+}
+```
 
 With this approach we remove the `new` keyword from our `ClassA`, with that we move away from `ClassA` the responsibility of the creation of `ClassB`.
 
 `ClassA` still have a hard dependency on `ClassB` but now it can be `injected` from the outside:
 
-  ```java
-  class Main {
-    public static void main(String... args) {
-      ClassA classA = new ClassA();
-      ClassB classB = new ClassB();
+```java
+class Main {
+  public static void main(String... args) {
+    ClassA classA = new ClassA();
+    ClassB classB = new ClassB();
 
-      classA.setClassB(classB);
+    classA.setClassB(classB);
 
-      System.out.println("Ten Percent: " + classA.tenPercent());
-    }
+    System.out.println("Ten Percent: " + classA.tenPercent());
   }
-  ```
+}
+```
 
 This is definitely better than the initial approach, now we can `inject` in `ClassA` an instance of `ClassB` or even better we can also inject a subclass of `ClassB`:
 
-  ```java
-  class ImprovedClassB extends ClassB {
-    // content omitted
+```java
+class ImprovedClassB extends ClassB {
+  // content omitted
+}
+```
+
+```java
+class Main {
+  public static void main(String... args) {
+    ClassA classA = new ClassA();
+    ImprovedClassB improvedClassB = new ImprovedClassB();
+
+    classA.setClassB(improvedClassB);
+
+    System.out.println("Ten Percent: " + classA.tenPercent());
   }
-  ```
-
-  ```java
-  class Main {
-    public static void main(String... args) {
-      ClassA classA = new ClassA();
-      ImprovedClassB improvedClassB = new ImprovedClassB();
-
-      classA.setClassB(improvedClassB);
-
-      System.out.println("Ten Percent: " + classA.tenPercent());
-    }
-  }
-  ```
+}
+```
 
 But there is a main problem with the `Setter Injection` approach:
 
 We are hiding the `ClassB` dependency in `ClassA` because reading the constructor signature we can not identify its dependencies right away, we can write the code in this way causing a `NullPointerException` that only is going to be caught on runtime:
 
-  ```java
-  class Main {
-    public static void main(String... args) {
-      ClassA classA = new ClassA();
+```java
+class Main {
+  public static void main(String... args) {
+    ClassA classA = new ClassA();
 
-      System.out.println("Ten Percent: " + classA.tenPercent()); // NullPointerException here
-    }
+    System.out.println("Ten Percent: " + classA.tenPercent()); // NullPointerException here
   }
-  ```
+}
+```
 
 ![npe](/public/images/dependency-injection-in-java/npe.png)
 
@@ -135,37 +135,37 @@ In statically typed languages like Java is always a good thing to let the compil
 
 ### Constructor Injection (Highly recommended)
 
-  ```java
-  class ClassA {
+```java
+class ClassA {
 
-    ClassB classB;
+  ClassB classB;
 
-    /* Constructor Injection */
-    ClassA(ClassB injected) {
-      classB = injected;
-    }
-
-    int tenPercent() {
-      return classB.calculate() * 0.1d;
-    }
+  /* Constructor Injection */
+  ClassA(ClassB injected) {
+    classB = injected;
   }
-  ```
+
+  int tenPercent() {
+    return classB.calculate() * 0.1d;
+  }
+}
+```
 
 `ClassA` still have a hard dependency on `ClassB` but now it can be `injected` from the outside using the constructor:
 
-  ```java
-  class Main {
-    public static void main(String... args) {
-      /* Notice that we are creating ClassB fisrt */
-      ClassB classB = new ImprovedClassB();
+```java
+class Main {
+  public static void main(String... args) {
+    /* Notice that we are creating ClassB fisrt */
+    ClassB classB = new ImprovedClassB();
 
-      /* Constructor Injection */
-      ClassA classA = new ClassA(classB);
+    /* Constructor Injection */
+    ClassA classA = new ClassA(classB);
 
-      System.out.println("Ten Percent: " + classA.tenPercent());
-    }
+    System.out.println("Ten Percent: " + classA.tenPercent());
   }
-  ```
+}
+```
 
 ADVANTAGES:
 - The functionality remains intact compared with the `Setter Injection` approach
@@ -197,50 +197,51 @@ Now that we know the advantages of the `Dependency Injection Principle` using th
 
 Let design a Todo's Application to perform CRUD operations (Create, Read, Update, Delete) to manage our todo list, a initial architecture can be like this:
 
-<img src="http://yuml.me/diagram/scruffy/class/[TodoApp]->[TodoView],[TodoView]->[TodoHttpClient]" alt="todoApp" />
+![3](/public/images/dependency-injection-in-java/3.png)
 
 - `TodoApp` is the main class that is going to initialize our application, this can be an android app, web page or a desktop application using any framework.
 - `TodoView` is the class that would display a view to interact with, this class is going to delegate the data-related aspects to the `TodoHttpClient` and it's only responsibility is to paint/draw/render the information and get the input to perform actions against the data using the `TodoHttpClient` dependency.
 - `TodoHttpClient` is the class that contains a set of HTTP methods to persists `Todo` objects using a REST API.
 - `Todo` is a value object that represents a todo item in our data store.
 
-<img src="http://yuml.me/diagram/scruffy/class/[TodoApp|- TodoView view|+ main(String... args)]->[TodoView|- TodoHttpClient client|showTodos; + showTodo; + addTodo; + deleteTodo; +updateTodo],[TodoView]->[TodoHttpClient||+ GET /todos; + GET /todos/:id; + POST /todos; + POST /todos/:id; + PUT /todos/:id]" alt="todoApp" />
+<!-- <img src="http://yuml.me/diagram/scruffy/class/[TodoApp|- TodoView view|+ main(String... args)]->[TodoView|- TodoHttpClient client|showTodos; + showTodo; + addTodo; + deleteTodo; +updateTodo],[TodoView]->[TodoHttpClient||+ GET /todos; + GET /todos/:id; + POST /todos; + POST /todos/:id; + PUT /todos/:id]" alt="todoApp" /> -->
+![4](/public/images/dependency-injection-in-java/4.png)
 
 Let's write the Java classes for our design using the `Constructor Injection` approach that we just learned:
 
-  ```java
-  class Todo {
-    /* Value Object class */
-    // content omitted
+```java
+class Todo {
+  /* Value Object class */
+  // content omitted
+}
+```
+
+```java
+class TodoApp {
+  private final TodoView todoView;
+
+  TodoApp(final TodoView todoView) {
+    this.todoView = todoView;
   }
-  ```
+  // content omitted
+}
+```
 
-  ```java
-  class TodoApp {
-    private final TodoView todoView;
+```java
+class TodoView {
+  private final TodoHttpClient todoHttpClient;
 
-    TodoApp(final TodoView todoView) {
-      this.todoView = todoView;
-    }
-    // content omitted
+  TodoView(final TodoHttpClient todoHttpClient) {
+    this.todoHttpClient = todoHttpClient;
   }
-  ```
+  // content omitted
+}
+```
 
-  ```java
-  class TodoView {
-    private final TodoHttpClient todoHttpClient;
-
-    TodoView(final TodoHttpClient todoHttpClient) {
-      this.todoHttpClient = todoHttpClient;
-    }
-    // content omitted
+```java
+class Main {
+  public static void main(String... args) {
+    new TodoApp(new TodoView(new TodoHttpClient("https://api.todos.io/")))
   }
-  ```
-
-  ```java
-  class Main {
-    public static void main(String... args) {
-      new TodoApp(new TodoView(new TodoHttpClient("https://api.todos.io/")))
-    }
-  }
-  ```
+}
+```
