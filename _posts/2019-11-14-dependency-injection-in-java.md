@@ -9,7 +9,6 @@ Java is an object oriented language with some functional aspects included in its
 
 In this article we are going to describe the concept of Dependency Injection in Java and how that helps us to have a more modular and decoupled codebase that makes our live easier even for testing without the need of any sophisticated container or framework.
 
----
 ## What is a Dependency?
 
 When a class `ClassA` uses any method of another class `ClassB` we can say that `ClassB` is a dependency of `ClassA`.
@@ -51,14 +50,12 @@ If we needed to change/replace `ClassB` with `ClassC` because has a optimized ve
 
 ![Collision](/public/images/dependency-injection-in-java/Collision.png)
 
----
 ## The Dependency Injection Principle
 
 The **Dependency Injection Principle** is nothing else than being able to pass (`inject`) the dependencies when required instead of initializing the dependencies inside of the recipient class.
 
 > Decouple your classes construction of the constructions of its dependencies
 
----
 ## Dependency Injection approaches in Java
 
 ### Setter Injection (Not recommended)
@@ -131,7 +128,7 @@ class Main {
 }
 ```
 
-![Collaborators](/public/images/dependency-injection-in-java/npe.png)
+![npe](/public/images/dependency-injection-in-java/npe.png)
 
 In statically typed languages like Java is always a good thing to let the compiler to help us. See `Constructor Injection`
 
@@ -180,6 +177,8 @@ ADVANTAGES:
 
 ### Field Injection (Kids don't try this at home)
 
+![dont](/public/images/dependency-injection-in-java/dont.jpg)
+
 There is a 3rd way to inject dependencies in Java, and it is called `Field Injection`, the only ways for field injection to work are:
 
 - Mutating the field because it's a non-private and non-final field
@@ -187,16 +186,12 @@ There is a 3rd way to inject dependencies in Java, and it is called `Field Injec
 
 This approach have the same problems exposed for the `Setter Injection` and additionally adds complexity due to mutation/reflection required, unfortunally this is a pretty common pattern used when a `Dependency Injection Framework` it's used.
 
-![dont](/public/images/dependency-injection-in-java/dont.jpg)
-
----
 ## Realistic Example
 
 Every single `Hello World` example for any idea, concept, pattern, framework or library is super siomple of understand and it jsut work fine, but when we need to implemented in a real project things get more complicated and often as engineers we tend to try to solve the problem introducing new layers to the problem instead of understanding what is the real problem.
 
 Now that we know the advantages of the `Dependency Injection Principle` using the `Constructor Injection` approach, let's create a more realistic example to see some inconveniences and how can we solve it without introducing a new layer to the mix.
 
----
 ### The Todo's Application
 ![Todos](/public/images/dependency-injection-in-java/Todos.png)
 
@@ -211,7 +206,6 @@ Let design a Todo's Application to perform CRUD operations (Create, Read, Update
 
 <img src="http://yuml.me/diagram/scruffy/class/[TodoApp|- TodoView view|+ main(String... args)]->[TodoView|- TodoHttpClient client|showTodos; + showTodo; + addTodo; + deleteTodo; +updateTodo],[TodoView]->[TodoHttpClient||+ GET /todos; + GET /todos/:id; + POST /todos; + POST /todos/:id; + PUT /todos/:id]" alt="todoApp" />
 
----
 Let's write the Java classes for our design using the `Constructor Injection` approach that we just learned:
 
 ```java
