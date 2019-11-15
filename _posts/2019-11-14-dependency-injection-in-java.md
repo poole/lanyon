@@ -5,6 +5,10 @@ title: Dependency Injection in Java (part 1)
 
 ![Collaborators](/public/images/dependency-injection-in-java/Collaborators.png)
 
+> **UPDATE:** This article is part of a series. Check out the full series: [Part 1](https://cchacin.github.io/2019/11/14/dependency-injection-in-java/)
+
+> **UPDATE:** Editorial changes were made to improve the readability, thanks to `Shefali Agarwal`
+
 Java is an object-oriented language with some functional aspects included in its core. Like any other object-oriented language, classes and objects are the foundations of any functionality that we can write and use and the relationships between the classes/objects make it possible to extend and reuse functionality. However, the way that we choose to build those relationships determine how modular, decoupled and reusable our codebase is, not only in terms of our production code but also in our test suites.
 
 In this article, we are going to describe the concept of Dependency Injection in Java and how it helps us have a more modular and decoupled codebase which makes our lives easier, even for testing, without the need of any sophisticated container or framework.
