@@ -5,9 +5,9 @@ title: Dependency Injection in Java (part 1)
 
 ![Collaborators](/public/images/dependency-injection-in-java/Collaborators.png)
 
-Java is an object-oriented language with some functional aspects included in its core, like any other object-oriented language, classes and objects are the foundation of any functionality that we can write and use in it and the relationships between the classes/objects make possible to extend and reuse functionality. But the way that we choose to build those relationships can determine how modular, decoupled and reusable is our codebase and not only in terms of production code but also in our test suites.
+Java is an object-oriented language with some functional aspects included in its core. Like any other object-oriented language, classes and objects are the foundations of any functionality that we can write and use and the relationships between the classes/objects make it possible to extend and reuse functionality. However, the way that we choose to build those relationships determine how modular, decoupled and reusable our codebase is, not only in terms of our production code but also in our test suites.
 
-In this article we are going to describe the concept of Dependency Injection in Java and how that helps us to have a more modular and decoupled codebase that makes our lives easier even for testing without the need of any sophisticated container or framework.
+In this article, we are going to describe the concept of Dependency Injection in Java and how it helps us have a more modular and decoupled codebase which makes our lives easier, even for testing, without the need of any sophisticated container or framework.
 
 ## What is a Dependency?
 
@@ -26,7 +26,7 @@ class ClassA {
 }
 ```
 
-In this example, `ClassA` is calculating the 10% of a value, and in order to calculate that value, it's reusing the functionality exposed by `ClassB`.
+In this example, `ClassA` is calculating 10% of a value, and in order to calculate that value, it's reusing the functionality exposed by `ClassB`.
 
 ![2](/public/images/dependency-injection-in-java/2.png)
 
@@ -46,13 +46,13 @@ Now, there is a big problem with this approach:
 
 > `ClassA` **is tightly coupled with** `ClassB`
 
-If we needed to change/replace `ClassB` with `ClassC` because has an optimized version of the `calculate()` method, we will need to recompile our project.
+If we needed to change/replace `ClassB` with `ClassC` because ‘ClassC’ has an optimized version of the `calculate()` method, we will need to recompile our project.
 
 ![Collision](/public/images/dependency-injection-in-java/Collision.png)
 
 ## The Dependency Injection Principle
 
-The **Dependency Injection Principle** is nothing else than being able to pass (`inject`) the dependencies when required instead of initializing the dependencies inside of the recipient class.
+The **Dependency Injection Principle** is nothing but being able to pass (`inject`) the dependencies when required instead of initializing the dependencies inside of the recipient class.
 
 > Decouple your classes construction of the constructions of its dependencies
 
@@ -76,9 +76,9 @@ class ClassA {
 }
 ```
 
-With this approach we remove the `new` keyword from our `ClassA`, with that we move away from `ClassA` the responsibility of the creation of `ClassB`.
+With this approach we remove the `new` keyword from our `ClassA`. Thus, we move the responsibility of the creation of `ClassB` away from `ClassA`.
 
-`ClassA` still have a hard dependency on `ClassB` but now it can be `injected` from the outside:
+`ClassA` still has a hard dependency on `ClassB` but now it can be `injected` from the outside:
 
 ```java
 class Main {
@@ -93,7 +93,7 @@ class Main {
 }
 ```
 
-This is definitely better than the initial approach, now we can `inject` in `ClassA` an instance of `ClassB` or even better we can also inject a subclass of `ClassB`:
+This is definitely better than the initial approach, now we can `inject` in `ClassA` an instance of `ClassB` or even better, a subclass of `ClassB`:
 
 ```java
 class ImprovedClassB extends ClassB {
@@ -114,9 +114,9 @@ class Main {
 }
 ```
 
-But there is a main problem with the `Setter Injection` approach:
+But there is a major problem with the `Setter Injection` approach:
 
-We are hiding the `ClassB` dependency in `ClassA` because reading the constructor signature we can not identify its dependencies right away, we can write the code in this way causing a `NullPointerException` that only is going to be caught on runtime:
+We are hiding the `ClassB` dependency in `ClassA` because by reading the constructor signature we can not identify its dependencies right away, we can write the code in this way causing a `NullPointerException` that is only going to be caught on runtime:
 
 ```java
 class Main {
@@ -188,14 +188,14 @@ This approach has the same problems exposed for the `Setter Injection` and addit
 
 ## Realistic Example
 
-Every single `Hello World` example for any idea, concept, pattern, framework or library is super simple of understand and it just works fine, but when we need to implement in a real project things get more complicated and often as engineers we tend to try to solve the problem introducing new layers to the problem instead of understanding what is the real problem.
+Every single `Hello World` example for any idea, concept, pattern, framework or library is super simple to understand and it just works fine, but when we need to implement in a real project things get more complicated and often as engineers we tend to try to solve the problem by introducing new layers to the problem instead of understanding what is the real problem.
 
 Now that we know the advantages of the `Dependency Injection Principle` using the `Constructor Injection` approach, let's create a more realistic example to see some inconveniences and how can we solve it without introducing a new layer to the mix.
 
 ### The Todo's Application
 ![Todos](/public/images/dependency-injection-in-java/Todos.png)
 
-Let design a Todo's Application to perform CRUD operations (Create, Read, Update, Delete) to manage our todo list, a initial architecture can be like this:
+Let's design a Todo's Application to perform CRUD operations (Create, Read, Update, Delete) to manage our todo list, an initial architecture can be like this:
 
 ![3](/public/images/dependency-injection-in-java/3.png)
 
