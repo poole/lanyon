@@ -182,8 +182,6 @@ ADVANTAGES:
 
 ### Field Injection (Kids don't try this at home)
 
-![dont](https://cchacin.github.io/public/images/dependency-injection-in-java/dont.jpg)
-
 There is a 3rd way to inject dependencies in Java, and it is called `Field Injection`, the only ways for field injection to work are:
 
 - Mutating the field because it's a non-private and non-final field
@@ -191,9 +189,7 @@ There is a 3rd way to inject dependencies in Java, and it is called `Field Injec
 
 This approach has the same problems exposed for the `Setter Injection` and additionally adds complexity due to mutation/reflection required, unfortunately, this is a pretty common pattern used when a `Dependency Injection Framework` it's used.
 
-#### Remember this:
-
-![Chat](https://cchacin.github.io/public/images/dependency-injection-in-java/Chat.png)
+## Conclusion:
 
 *When a class `ClassA` uses any method of another class `ClassB` we can say that `ClassB` is a dependency of `ClassA` and if `ClassA` has a dependency in `ClassB` the latter has to be explicitly required in `ClassA`'s constructor.*
 
