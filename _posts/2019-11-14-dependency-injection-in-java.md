@@ -3,7 +3,7 @@ layout: post
 title: Dependency Injection in Java (part 1)
 ---
 
-![Collaborators](/public/images/dependency-injection-in-java/Collaborators.png)
+![Collaborators](https://cchacin.github.io/public/images/dependency-injection-in-java/Collaborators.png)
 
 > **UPDATE:** This article is part of a series. Check out the full series: [Part 1](https://cchacin.github.io/2019/11/14/dependency-injection-in-java/)
 
@@ -17,7 +17,7 @@ In this article, we are going to describe the concept of Dependency Injection in
 
 When a class `ClassA` uses any method of another class `ClassB` we can say that `ClassB` is a dependency of `ClassA`.
 
-![1](/public/images/dependency-injection-in-java/1.png)
+![1](https://cchacin.github.io/public/images/dependency-injection-in-java/1.png)
 
 ```java
 class ClassA {
@@ -32,7 +32,7 @@ class ClassA {
 
 In this example, `ClassA` is calculating 10% of a value, and in order to calculate that value, it's reusing the functionality exposed by `ClassB`.
 
-![2](/public/images/dependency-injection-in-java/2.png)
+![2](https://cchacin.github.io/public/images/dependency-injection-in-java/2.png)
 
 And it can be used like this:
 
@@ -52,7 +52,7 @@ Now, there is a big problem with this approach:
 
 If we needed to change/replace `ClassB` with `ClassC` because ‘ClassC’ has an optimized version of the `calculate()` method, we will need to recompile our project.
 
-![Collision](/public/images/dependency-injection-in-java/Collision.png)
+![Collision](https://cchacin.github.io/public/images/dependency-injection-in-java/Collision.png)
 
 ## The Dependency Injection Principle
 
@@ -132,7 +132,7 @@ class Main {
 }
 ```
 
-![npe](/public/images/dependency-injection-in-java/npe.png)
+![npe](https://cchacin.github.io/public/images/dependency-injection-in-java/npe.png)
 
 In statically typed languages like Java is always a good thing to let the compiler help us. See `Constructor Injection`
 
@@ -177,11 +177,11 @@ ADVANTAGES:
 - We still can inject a specialized subclass of `ClassB` to `ClassA`
 - Now the compiler is going to ask us for the dependencies that we need in compile time
 
-![Happy](/public/images/dependency-injection-in-java/Happy.png)
+![Happy](https://cchacin.github.io/public/images/dependency-injection-in-java/Happy.png)
 
 ### Field Injection (Kids don't try this at home)
 
-![dont](/public/images/dependency-injection-in-java/dont.jpg)
+![dont](https://cchacin.github.io/public/images/dependency-injection-in-java/dont.jpg)
 
 There is a 3rd way to inject dependencies in Java, and it is called `Field Injection`, the only ways for field injection to work are:
 
@@ -197,11 +197,11 @@ Every single `Hello World` example for any idea, concept, pattern, framework or 
 Now that we know the advantages of the `Dependency Injection Principle` using the `Constructor Injection` approach, let's create a more realistic example to see some inconveniences and how can we solve it without introducing a new layer to the mix.
 
 ### The Todo's Application
-![Todos](/public/images/dependency-injection-in-java/Todos.png)
+![Todos](https://cchacin.github.io/public/images/dependency-injection-in-java/Todos.png)
 
 Let's design a Todo's Application to perform CRUD operations (Create, Read, Update, Delete) to manage our todo list, an initial architecture can be like this:
 
-![3](/public/images/dependency-injection-in-java/3.png)
+![3](https://cchacin.github.io/public/images/dependency-injection-in-java/3.png)
 
 - `TodoApp` is the main class that is going to initialize our application, this can be an android app, web page or a desktop application using any framework.
 - `TodoView` is the class that would display a view to interact with, this class is going to delegate the data-related aspects to the `TodoHttpClient` and it's only responsibility is to paint/draw/render the information and get the input to perform actions against the data using the `TodoHttpClient` dependency.
@@ -209,7 +209,7 @@ Let's design a Todo's Application to perform CRUD operations (Create, Read, Upda
 - `Todo` is a value object that represents a todo item in our data store.
 
 <!-- <img src="http://yuml.me/diagram/scruffy/class/[TodoApp|- TodoView view|+ main(String... args)]->[TodoView|- TodoHttpClient client|showTodos; + showTodo; + addTodo; + deleteTodo; +updateTodo],[TodoView]->[TodoHttpClient||+ GET /todos; + GET /todos/:id; + POST /todos; + POST /todos/:id; + PUT /todos/:id]" alt="todoApp" /> -->
-![4](/public/images/dependency-injection-in-java/4.png)
+![4](https://cchacin.github.io/public/images/dependency-injection-in-java/4.png)
 
 Let's write the Java classes for our design using the `Constructor Injection` approach that we just learned:
 
