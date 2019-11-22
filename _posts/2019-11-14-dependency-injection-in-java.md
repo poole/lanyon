@@ -5,6 +5,8 @@ title: Dependency Injection in Java (Part 1)
 
 ![Collaborators](https://cchacin.github.io/public/images/dependency-injection-in-java/Collaborators.png)
 
+> The article was originally published [here](https://cchacin.github.io/2019/11/14/dependency-injection-in-java/)
+
 > **UPDATE:** Editorial changes were made to improve the readability, thanks to `Shefali Agarwal`
 
 Java is an object-oriented language with some functional aspects included in its core. Like any other object-oriented language, classes and objects are the foundations of any functionality that we can write and use and the relationships between the classes/objects make it possible to extend and reuse functionality. However, the way that we choose to build those relationships determine how modular, decoupled and reusable our codebase is, not only in terms of our production code but also in our test suites.
@@ -498,7 +500,7 @@ The only changes were related to naming:
 
 ## Can we remove the mocking framework?
 
-If we have now an interface why are we coupled to the mocking framework in order to create a dummy object that we can manually create using an anonymous class? Let's change that:
+If we have now an interface why are we coupled to the mocking framework in order to create a fake object that we can manually create using an anonymous class? Let's change that:
 
 ```java
 @ExtendWith(MockitoExtension.class)
@@ -540,3 +542,11 @@ class TodoViewTest {
   assertThat(todoView.getTodoItemList()).isEmpty();
 }
 ```
+
+Nice, now our design is more flexible since we can inject a different `TodoProvider` implementation and we can do the same in our tests without using a mocking framework. But, we are paying a price: **Verbosity**, the mocking framework removes the need of implementing every single method from the interfaces.
+
+## Only the beginning
+
+In a next article, we are going to see how to remove that verbosity from our tests and also how can we end up with an even better design.
+
+Stay tuned for more posts like this.
