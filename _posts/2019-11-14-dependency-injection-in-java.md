@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Dependency Injection in Java (Part 1)
+title: Dependency Injection in Java
 ---
 
 ![Collaborators](https://cchacin.github.io/public/images/dependency-injection-in-java/Collaborators.png)
@@ -543,10 +543,10 @@ class TodoViewTest {
 }
 ```
 
-Nice, now our design is more flexible since we can inject a different `TodoProvider` implementation and we can do the same in our tests without using a mocking framework. But, we are paying a price: **Verbosity**, the mocking framework removes the need of implementing every single method from the interfaces.
+Nice, now our design is more flexible since we can inject a different `TodoProvider` implementation and we can do the same in our tests without using a mocking framework. But, we are paying a price: **Verbosity**, the mocking framework removes the need for implementing every single method from the interfaces.
 
 ## Only the beginning
 
-In a next article, we are going to see how to remove that verbosity from our tests and also how can we end up with an even better design.
+In the next article, we are going to see how to remove that verbosity from our tests and also how can we end up with an even better design.
 
 Stay tuned for more posts like this.
