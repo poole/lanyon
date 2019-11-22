@@ -192,11 +192,6 @@ NOTE:
 
 ![Feedback](https://cchacin.github.io/public/images/dependency-injection-in-java/Feedback.png)
 
-> **UPDATE:** This article is part of a series. Check out the full series:
-[Part 1](https://cchacin.github.io/2019/11/14/dependency-injection-in-java/), [Part 2](https://cchacin.github.io/2019/11/14/dependency-injection-in-java-2/)
-
-In the [Part 1]() of this series, we discussed how to implement **Dependency Injection** using the `Constructor Injection` approach and the benefits that can bring to our codebase.
-
 ## Realistic Example
 
 Every single `Hello World` example for any idea, concept, pattern, framework or library is super simple to understand and it just works fine, but when we need to implement in a real project things get more complicated and often as engineers we tend to try to solve the problem by introducing new layers to the problem instead of understanding what is the real problem.
