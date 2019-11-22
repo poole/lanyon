@@ -5,7 +5,7 @@ title: Dependency Injection in Java (Part 1)
 
 ![Collaborators](https://cchacin.github.io/public/images/dependency-injection-in-java/Collaborators.png)
 
-> The article was originally published [here](https://cchacin.github.io/2019/11/14/dependency-injection-in-java/)
+> The article was originally published at [cchacin.github.io](https://cchacin.github.io/2019/11/14/dependency-injection-in-java/)
 
 > **UPDATE:** Editorial changes were made to improve the readability, thanks to `Shefali Agarwal`
 
