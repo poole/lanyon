@@ -5,17 +5,18 @@ title: Dependency Injection in Java
 
 ![Collaborators](https://cchacin.github.io/public/images/dependency-injection-in-java/Collaborators.png)
 
-> The article was originally published at [cchacin.github.io](https://cchacin.github.io/2019/11/14/dependency-injection-in-java/)
+> The article was initially published at [cchacin.github.io](https://cchacin.github.io/2019/11/14/dependency-injection-in-java/)
 
-> **UPDATE:** Editorial changes were made to improve the readability, thanks to `Shefali Agarwal`
+> **UPDATE:** Editorial changes to improve the readability, thanks to `Shefali Agarwal`.
+> **UPDATE 2019-12-19:** Editorial changes to improve the readability.
 
-Java is an object-oriented language with some functional aspects included in its core. Like any other object-oriented language, classes and objects are the foundations of any functionality that we can write and use and the relationships between the classes/objects make it possible to extend and reuse functionality. However, the way that we choose to build those relationships determine how modular, decoupled and reusable our codebase is, not only in terms of our production code but also in our test suites.
+Java is an object-oriented language with some functional aspects included in its core. Like any other object-oriented language, classes and objects are the foundations of any functionality that we can write and use. The relationships between the classes/objects make it possible to extend and reuse functionality. However, the way that we choose to build those relationships determine how modular, decoupled, and reusable our codebase is, not only in terms of our production code but also in our test suites.
 
-In this article, we are going to describe the concept of Dependency Injection in Java and how it helps us have a more modular and decoupled codebase which makes our lives easier, even for testing, without the need of any sophisticated container or framework.
+In this article, we are going to describe the concept of Dependency Injection in Java and how it helps us have a more modular and decoupled codebase, which makes our lives easier, even for testing, without the need of any sophisticated container or framework.
 
-## What is a Dependency?
+## What is Dependency?
 
-When a class `ClassA` uses any method of another class `ClassB` we can say that `ClassB` is a dependency of `ClassA`.
+When a class `ClassA` uses any method of another class `ClassB`, we can say that `ClassB` is a dependency of `ClassA`.
 
 ![1](https://cchacin.github.io/public/images/dependency-injection-in-java/1.png)
 
@@ -30,7 +31,7 @@ class ClassA {
 }
 ```
 
-In this example, `ClassA` is calculating 10% of the value, and in order to calculate that value, it's reusing the functionality exposed by `ClassB`.
+In this example, `ClassA` is calculating 10% of the value, and calculating that value, it's reusing the functionality exposed by `ClassB`.
 
 ![2](https://cchacin.github.io/public/images/dependency-injection-in-java/2.png)
 
@@ -50,7 +51,7 @@ Now, there is a big problem with this approach:
 
 > `ClassA` **is tightly coupled with** `ClassB`
 
-If we needed to change/replace `ClassB` with `ClassC` because `ClassC` has an optimized version of the `calculate()` method, we will need to recompile `ClassA` because we don't have a way to change that dependency, it's hardcoded inside of `ClassA`.
+If we needed to change/replace `ClassB` with `ClassC` because `ClassC` has an optimized version of the `calculate()` method, we need to recompile `ClassA` because we don't have a way to change that dependency, it's hardcoded inside of `ClassA`.
 
 ![Collision](https://cchacin.github.io/public/images/dependency-injection-in-java/Collision.png)
 
@@ -58,7 +59,7 @@ If we needed to change/replace `ClassB` with `ClassC` because `ClassC` has an op
 
 The **Dependency Injection Principle** is nothing but being able to pass (`inject`) the dependencies when required instead of initializing the dependencies inside of the recipient class.
 
-> Decouple the construction of your classes from the construction of your classes’ dependencies
+> Decouple the construction of your classes from the construction of your classes' dependencies
 
 ## Forms of Dependency Injection in Java
 
@@ -97,7 +98,7 @@ class Main {
 }
 ```
 
-This is definitely better than the initial approach because now we can `inject` in `ClassA` an instance of `ClassB` or even better, a subclass of `ClassB`:
+The above example is better than the initial approach because now we can `inject` in `ClassA` an instance of `ClassB` or even better, a subclass of `ClassB`:
 
 ```java
 class ImprovedClassB extends ClassB {
@@ -118,9 +119,9 @@ class Main {
 }
 ```
 
-But there is a major problem with the `Setter Injection` approach:
+But there is a significant problem with the `Setter Injection` approach:
 
-We are hiding the `ClassB` dependency in `ClassA` because by reading the constructor signature we cannot identify its dependencies right away. We can write the code in this way causing a `NullPointerException` that is only going to be caught on runtime:
+We are hiding the `ClassB` dependency in `ClassA` because by reading the constructor signature, we cannot identify its dependencies right away. The code below causes a `NullPointerException`  on runtime:
 
 ```java
 class Main {
@@ -134,7 +135,7 @@ class Main {
 
 ![npe](https://cchacin.github.io/public/images/dependency-injection-in-java/npe.png)
 
-In statically typed languages like Java is always a good thing to let the compiler help us. See `Constructor Injection`
+In a statically typed language like Java, it's always a good thing to let the compiler help us. See `Constructor Injection`
 
 
 ### Constructor Injection (Highly recommended)
@@ -173,9 +174,9 @@ class Main {
 
 **ADVANTAGES:**
 - The functionality remains intact compared with the `Setter Injection` approach
-- We removed the `new` initialization from the `ClassA`
-- We still can inject a specialized subclass of `ClassB` to `ClassA`
-- Now the compiler is going to ask us for the dependencies that we need in compile time
+- We removed the `new` initialization from the `ClassA`.
+- We still can inject a specialized subclass of `ClassB` to `ClassA`.
+- Now the compiler is going to ask us for the dependencies that we need in compile time.
 
 ![Happy](https://cchacin.github.io/public/images/dependency-injection-in-java/Happy.png)
 
@@ -186,29 +187,31 @@ There is a 3rd way to inject dependencies in Java, and it is called `Field Injec
 - Mutating the field because it's a non-private and non-final field
 - Mutating a final/private field using reflection
 
-This approach has the same problems exposed by the `Setter Injection` approach and additionally adds complexity due to the mutation/reflection required. Unfortunately, this is a pretty common pattern when a `Dependency Injection Framework` is used.
+This approach has the same problems exposed by the `Setter Injection` approach and additionally adds complexity due to the mutation/reflection required. Unfortunately, this is a pretty common pattern when people use a `Dependency Injection Framework`.
 
 NOTE:
 
-> When a class `ClassA` uses any method of another class `ClassB` we can say that `ClassB` is a dependency of `ClassA` and if `ClassA` has a dependency in `ClassB` the latter has to be explicitly required in `ClassA`'s constructor.
+> When a class `ClassA` uses any method of another class `ClassB` we can say that `ClassB` is a dependency of `ClassA`.
+
+> If `ClassA` has a dependency on `ClassB`, `ClassA` constructor should require `ClassB`.
 
 ![Feedback](https://cchacin.github.io/public/images/dependency-injection-in-java/Feedback.png)
 
 ## Realistic Example
 
-Every single `Hello World` example for any idea, concept, pattern, framework or library is super simple to understand and it just works fine, but when we need to implement in a real project things get more complicated and often as engineers we tend to try to solve the problem by introducing new layers to the problem instead of understanding what is the real problem.
+Every single `Hello World` example for any idea, concept, or pattern is super simple to understand, and it just works fine. But when we need to implement it in a real project, things get more complicated, and often, as engineers, we tend to try to solve the problem by introducing new layers to the problem instead of understanding what the real problem is.
 
 Now that we know the advantages of the `Dependency Injection Principle` using the `Constructor Injection` approach, let's create a more realistic example to see some inconveniences and how can we solve it without introducing a new layer to the mix.
 
 ### The Todo's Application
 ![Todos](https://cchacin.github.io/public/images/dependency-injection-in-java/Todos.png)
 
-Let's design a Todo's Application to perform CRUD operations (Create, Read, Update, Delete) to manage our todo list, an initial architecture can be like this:
+Let's design a Todo's Application to perform CRUD operations (Create, Read, Update, Delete) to manage our todo list, and an original architecture can be like this:
 
 ![3](https://cchacin.github.io/public/images/dependency-injection-in-java/3.png)
 
-- `TodoApp` is the main class that is going to initialize our application, this can be an android app, web page or a desktop application using any framework.
-- `TodoView` is the class that would display a view to interact with, this class is going to delegate the data-related aspects to the `TodoHttpClient` and it's only responsibility is to paint/draw/render the information and get the input to perform actions against the data using the `TodoHttpClient` dependency.
+- `TodoApp` is the main class that is going to initialize our application; this can be an android app, web page, or a desktop application using any framework.
+- `TodoView` is the class that would display a view to interact with, this class is going to delegate the data-related aspects to the `TodoHttpClient`.  It's only responsibility is to paint/draw/render the information and get the input to perform actions against the data using the `TodoHttpClient` dependency.
 - `TodoHttpClient` is the class that contains a set of HTTP methods to persists `Todo` objects using a REST API.
 - `Todo` is a value object that represents a todo item in our data store.
 
@@ -334,7 +337,7 @@ class TodoView extends MyFrameworkView {
 ## Testing our design
 ![Scientist](https://cchacin.github.io/public/images/dependency-injection-in-java/Scientist.png)
 
-Let's create a unit test for the `TodoView` class where we test the class in isolation without instantiating any of its dependencies, in this case, the dependency is `TodoHttpClient`:
+Let's create a unit test for the `TodoView` class where we test the class in isolation without instantiating any of its dependencies. In this case, the dependency is `TodoHttpClient`:
 
 ```java
 @ExtendWith(MockitoExtension.class)
@@ -357,14 +360,14 @@ class TodoViewTest {
 
 Now that we have our test case passing, let's analyze how our design impacts the testing approach:
 
-- We introduced the [Mockito](https://site.mockito.org/) framework in order to be able to create a fake instance of `TodoHttpClient` and that adds a lot of complexity.
+- We introduced the [Mockito](https://site.mockito.org/) framework to be able to create a fake instance of `TodoHttpClient`, and that adds much complexity.
 - We have to prepare our instance of `TodoHttpClient` to fake the return of an empty list when calling the `getAll()` method, now our unit test also contains implementation details about the `TodoHttpClient`.
-- Additionally, since `TodoHttpClient` is a concrete class we cannot change the implementation to call a DB instead without having to change the `TodoView` class as well, and we would need to rewrite the unit tests even when they should be isolated of this implementation detail.
+- Additionally, since `TodoHttpClient` is a concrete class, we cannot change the implementation to call a DB instead without having to change the `TodoView` class as well, and we would need to rewrite the unit tests even when they should isolate this implementation detail.
 
 ## Let's improve our design
 ![VideoLearning](https://cchacin.github.io/public/images/dependency-injection-in-java/VideoLearning.png)
 
-One thing that we can do in order to decouple our classes is to introduce an interface since the Java language is always a good thing to rely on abstractions instead of relying on actual implementations.
+One thing that we can do to decouple our classes is to introduce an interface since the Java language is always a good thing to rely on abstractions instead of relying on actual implementations.
 
 Let's put an interface between `TodoView` and `TodoHttpClient`:
 
@@ -495,12 +498,12 @@ The only changes were related to naming:
 - `TodoHttpClient` -> `TodoProvider` no value for the test.
 - `httpClient` -> `provider` no value for the test here.
 - We are still relying on the mocking framework.
-- We are still coupled to the interface's name: `TodoProvider`.
-- We are still coupled to the method name: `getAll()`
+- We are still coupling the test to the interface's name: `TodoProvider`.
+- We are still coupling the test to the method name: `getAll()`
 
 ## Can we remove the mocking framework?
 
-If we have now an interface why are we coupled to the mocking framework in order to create a fake object that we can manually create using an anonymous class? Let's change that:
+If we have now an interface, why are we coupled to the mocking framework to create a fake object that we can manually create using an anonymous class? Let's change that:
 
 ```java
 @ExtendWith(MockitoExtension.class)
@@ -543,10 +546,10 @@ class TodoViewTest {
 }
 ```
 
-Nice, now our design is more flexible since we can inject a different `TodoProvider` implementation and we can do the same in our tests without using a mocking framework. But, we are paying a price: **Verbosity**, the mocking framework removes the need for implementing every single method from the interfaces.
+Sweet, now our design is more flexible since we can inject a different `TodoProvider` implementation, and we can do the same in our tests without using a mocking framework. But, we are paying the price: **Verbosity**, the mocking framework removes the need for implementing every single method from the interfaces.
 
 ## Only the beginning
 
-In the next article, we are going to see how to remove that verbosity from our tests and also how can we end up with an even better design.
+In the next article, let's remove the verbosity from the tests and write an even better design.
 
 Stay tuned for more posts like this.
