@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Dependency Injection in Java
+tags: java dependency-injection di best-practices
 ---
 
 ![Collaborators](https://cchacin.github.io/public/images/dependency-injection-in-java/Collaborators.png)
