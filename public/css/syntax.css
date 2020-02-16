@@ -1,4 +1,5 @@
-.highlight .hll { background-color: #ffc; }
+.highlight .hll { background: rgb(213,181,255);
+  background: linear-gradient(90deg, rgba(213,181,255,1) 0%, rgba(255,236,171,1) 50%, rgba(255,206,227,1) 100%); }
 .highlight .c { color: #999; } /* Comment */
 .highlight .err { color: #a00; background-color: #faa } /* Error */
 .highlight .k { color: #069; } /* Keyword */
