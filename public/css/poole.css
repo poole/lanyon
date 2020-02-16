@@ -391,13 +391,13 @@ tbody tr:nth-child(odd) th {
 }
 
 ::-moz-selection {
-  background: rgb(213,181,255);
-  background: linear-gradient(90deg, rgba(213,181,255,1) 0%, rgba(255,236,171,1) 50%, rgba(255,206,227,1) 100%);
+  background-color: #D5B5FF;
+  color: #FFECAB;
 }
 
 ::selection {
-  background: rgb(213,181,255);
-  background: linear-gradient(90deg, rgba(213,181,255,1) 0%, rgba(255,236,171,1) 50%, rgba(255,206,227,1) 100%);
+  background-color: #D5B5FF;
+  color: #FFECAB;
 }
 
 
