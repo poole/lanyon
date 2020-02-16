@@ -1,6 +1,7 @@
 ---
 layout: default
 title: About Rene
+permalink: /
 ---
 
 I'm Rene (pronounced like reh-nay, not reen).

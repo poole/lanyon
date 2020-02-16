@@ -6,7 +6,7 @@ relative_permalinks: false
 
 # Setup
 title:               Hi, I'm Rene
-tagline:             Software Engineer
+tagline:             
 description:         'Backend Software Engineer'
 url:                 https://github.com/renaynay/
 baseurl:             ''
