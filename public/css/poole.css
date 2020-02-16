@@ -317,6 +317,9 @@ tbody tr:nth-child(odd) th {
   padding-top:    1rem;
   padding-bottom: 1rem;
   margin-bottom: 3rem;
+  background: rgb(213,181,255);
+  background: linear-gradient(90deg, rgb(213, 181, 255) 0%, rgba(255,236,171,1) 50%, rgba(255,206,227,1) 100%);
+
 }
 .masthead-title {
   margin-top: 0;
