@@ -114,8 +114,8 @@ h4, h5, h6 {
 
 /* Body text */
 p {
-  padding-left 0.2em; 
-  padding-right 0.2em;		
+  padding-left: 0.2em; 
+  padding-right: 0.2em;		
   margin-top: 0;
   margin-bottom: 1rem;
 }
