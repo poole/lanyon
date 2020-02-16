@@ -69,7 +69,7 @@ body {
 
 /* No `:visited` state is required by default (browsers will use `a`) */
 a {
-  color: rgb(213,181,255);
+  color: #D5B5FF;
   text-decoration: underline;
 
 }
