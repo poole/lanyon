@@ -108,7 +108,7 @@ h4, h5, h6 {
   margin-top: 1rem;
   font-size: 1.15rem;
   padding-left 0.2em; 
-  padding-right 0.2em
+  padding-right 0.2em;
   background: rgb(213,181,255);
   background: linear-gradient(90deg, rgba(213,181,255,1) 0%, rgba(255,236,171,1) 50%, rgba(255,206,227,1) 100%);
 }
