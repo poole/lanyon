@@ -11,7 +11,7 @@ I like the Badlands in South Dakota, Golang, hot sauce/peppers, and learning abo
 Docker, Kubernetes, Python, Golang, Postgres, and sometimes Ruby.
 
 ### I enjoy learning about
-Networking, peer-to-peer and distributed systems, hot peppers.
+Networking, peer-to-peer and distributed systems, and hot peppers.
 
 ### I have fun
 Making hot sauces, [implementing](https://github.com/renaynay/go-hobbits) light wire protocols in Go, [implementing](https://github.com/renaynay/go-canonical-serialization) different serialization protocols in Go, and taking [photos](https://www.instagram.com/renenayman/).
