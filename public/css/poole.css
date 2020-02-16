@@ -69,9 +69,10 @@ body {
 
 /* No `:visited` state is required by default (browsers will use `a`) */
 a {
-  color: #D5B5FF;
+  color: #000000;
   text-decoration: underline;
-
+  background: rgb(213,181,255);
+  background: linear-gradient(90deg, rgb(213, 181, 255) 0%, rgba(255,236,171,1) 50%, rgba(255,206,227,1) 100%);
 }
 a strong {
   color: inherit;
