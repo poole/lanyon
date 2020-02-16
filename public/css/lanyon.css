@@ -41,11 +41,11 @@ body {
 }
 
 html {
-  font-family: "PT Serif", Georgia, "Times New Roman", serif;
+  font-family: "Lucida Console", Monaco, monospace;;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-family: "Lucida Console", Monaco, monospace;;
   font-weight: 400;
   color: #313131;
   letter-spacing: -.025rem;
