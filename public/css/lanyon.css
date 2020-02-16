@@ -47,7 +47,7 @@ html {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Lucida Console", Monaco, monospace;;
   font-weight: 400;
-  color: #313131;
+  color: #000000; /* 313131*/
   letter-spacing: -.025rem;
 }
 
@@ -174,7 +174,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #999;
 }
 .related-posts li a:hover {
-  color: #268bd2;
+  color: #000000;
   text-decoration: none;
 }
 .related-posts li a:hover small {

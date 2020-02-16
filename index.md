@@ -3,7 +3,7 @@ layout: default
 title: About
 ---
 
-I'm a backend software engineer.
+I'm a [backend software engineer](https://github.com/renaynay).
 
 I like the Badlands in South Dakota, Golang, hot sauce/peppers, and learning about all things distributed systems.
 
