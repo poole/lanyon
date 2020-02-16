@@ -91,6 +91,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 {
   font-size: 2rem;
+  background: rgb(213,181,255);
+  background: linear-gradient(90deg, rgba(213,181,255,1) 0%, rgba(255,236,171,1) 50%, rgba(255,206,227,1) 100%);
 }
 h2 {
   margin-top: 1rem;
@@ -99,6 +101,8 @@ h2 {
 h3 {
   margin-top: 1.5rem;
   font-size: 1.25rem;
+  background: rgb(213,181,255);
+  background: linear-gradient(90deg, rgba(213,181,255,1) 0%, rgba(255,236,171,1) 50%, rgba(255,206,227,1) 100%);
 }
 h4, h5, h6 {
   margin-top: 1rem;
