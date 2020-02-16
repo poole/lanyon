@@ -197,6 +197,8 @@ pre code {
 }
 .highlight pre {
   margin-bottom: 0;
+  background: rgb(213,181,255);
+  background: linear-gradient(90deg, rgb(213, 181, 255) 0%, rgba(255,236,171,1) 50%, rgba(255,206,227,1) 100%);
 }
 
 /* Gist via GitHub Pages */
@@ -386,6 +388,16 @@ tbody tr:nth-child(odd) th {
 }
 .related-posts li a:hover small {
   color: inherit;
+}
+
+::-moz-selection {
+  background: rgb(213,181,255);
+  background: linear-gradient(90deg, rgba(213,181,255,1) 0%, rgba(255,236,171,1) 50%, rgba(255,206,227,1) 100%);
+}
+
+::selection {
+  background: rgb(213,181,255);
+  background: linear-gradient(90deg, rgba(213,181,255,1) 0%, rgba(255,236,171,1) 50%, rgba(255,206,227,1) 100%);
 }
 
 
