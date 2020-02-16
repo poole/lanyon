@@ -6,10 +6,10 @@ relative_permalinks: false
 
 # Setup
 title:               Hi, I'm Rene
-tagline:             
+tagline:
 description:         'Backend Software Engineer'
 url:                 https://github.com/renaynay/
-baseurl:             ''
+baseurl:             'https://rene.sh'
 paginate:            5
 
 # About/contact
