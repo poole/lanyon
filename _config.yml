@@ -8,8 +8,6 @@ relative_permalinks: false
 title:               Hi, I'm Rene
 tagline:
 description:         'Backend Software Engineer'
-url:                 https://github.com/renaynay/
-baseurl:             'https://rene.sh'
 
 # About/contact
 author:
