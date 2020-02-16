@@ -51,6 +51,8 @@ html {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
+  background: rgb(213,181,255);
+  background: linear-gradient(90deg, rgba(213,181,255,1) 0%, rgba(255,236,171,1) 50%, rgba(255,206,227,1) 100%);
 }
 @media (min-width: 38em) {
   html {
