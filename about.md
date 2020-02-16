@@ -1,7 +1,7 @@
 ---
 layout: post
 title: About Rene
-permalink: /
+permalink: /about
 ---
 
 I'm Rene (pronounced like reh-nay, not reen).
