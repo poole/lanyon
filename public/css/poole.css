@@ -192,6 +192,8 @@ pre code {
 .highlight {
   margin-bottom: 1rem;
   border-radius: 4px;
+  background: rgb(213,181,255);
+  background: linear-gradient(90deg, rgb(213, 181, 255) 0%, rgba(255,236,171,1) 50%, rgba(255,206,227,1) 100%);
 }
 .highlight pre {
   margin-bottom: 0;
@@ -295,7 +297,7 @@ tbody tr:nth-child(odd) th {
  */
 
 .container {
-  max-width: 38rem;
+  max-width: 50rem;
   padding-left:  1rem;
   padding-right: 1rem;
   margin-left:  auto;
