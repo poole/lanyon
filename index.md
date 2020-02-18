@@ -5,6 +5,8 @@ title: About
 
 #### I'm Rene
 
+![Rene](https://raw.githubusercontent.com/renaynay/renaynay.github.io/master/rene2.jpg)
+
 I'm a [backend software engineer](https://github.com/renaynay) at [Whiteblock](https://whiteblock.io/).
 
 I like the Badlands in South Dakota, Golang, hot sauce/peppers, and learning about all things distributed systems.
