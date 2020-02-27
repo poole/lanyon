@@ -16,7 +16,7 @@ Docker, Kubernetes, Python, Golang, Postgres, and sometimes Ruby.
 Networking, peer-to-peer and distributed systems, and hot peppers.
 
 #### I have fun
-Making hot sauces, [implementing](https://github.com/renaynay/go-hobbits) light wire protocols in Go, [implementing](https://github.com/renaynay/go-canonical-serialization) different serialization protocols in Go, and taking [photos](https://www.instagram.com/renenayman/).
+Making hot sauces, [implementing](https://github.com/renaynay/go-hobbits) light wire protocols in Go and taking [photos](https://www.instagram.com/renenayman/).
 
 #### Watch me
 [Speak](https://www.youtube.com/watch?v=ebh3Y1vHQBo) about networking in ethereum 2.0 at Devcon 2019 and [summarize](https://www.youtube.com/watch?v=oJfq5SHlX_A&t=1s) my work in helping the Prysm ethereum 2.0 client communicate with the Artemis ethereum 2.0 client.
