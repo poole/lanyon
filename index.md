@@ -5,7 +5,7 @@ title: About
 
 #### I'm Rene
 
-I'm a [backend software engineer](https://github.com/renaynay), formerly at [Whiteblock](https://whiteblock.io/). I am currently looking for new opportunities! 
+I'm a [backend software engineer](https://github.com/renaynay), formerly at [Whiteblock](https://whiteblock.io/). 
 
 I like the Badlands in South Dakota, Golang, hot sauce/peppers, and learning about all things distributed systems.
 
