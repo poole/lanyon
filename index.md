@@ -3,7 +3,7 @@ layout: default
 title: About
 ---
 
-#### I'm Rene
+#### I'm Rene BLHA
 
 I'm a [backend software engineer](https://github.com/renaynay), formerly at [Whiteblock](https://whiteblock.io/). BLAH. 
 
