@@ -2,7 +2,7 @@
 title:               Lanyon
 tagline:             'A Jekyll theme'
 description:         'A reserved <a href="https://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:                 http://lanyon.getpoole.com
+url:                 https://lanyon.getpoole.com
 baseurl:             ''
 paginate:            5
 permalink:           pretty
