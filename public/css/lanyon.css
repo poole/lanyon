@@ -75,12 +75,12 @@ h1, h2, h3, h4, h5, h6 {
 .container {
   max-width: 28rem;
 }
-@media (min-width: 38rem) {
+@media (min-width: 38em) {
   .container {
     max-width: 32rem;
   }
 }
-@media (min-width: 56rem) {
+@media (min-width: 56em) {
   .container {
     max-width: 38rem;
   }
@@ -114,7 +114,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0;
 }
 
-@media (max-width: 48rem) {
+@media (max-width: 48em) {
   .masthead-title {
     text-align: center;
   }
@@ -155,7 +155,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-transition: all .3s ease-in-out;
           transition: all .3s ease-in-out;
 }
-@media (min-width: 30rem) {
+@media (min-width: 30em) {
   .sidebar {
     font-size: .75rem; /* 14px */
   }
@@ -190,7 +190,7 @@ a.sidebar-nav-item:focus {
   border-color: transparent;
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 48em) {
   .sidebar-item {
     padding: 1.5rem;
   }
@@ -202,54 +202,59 @@ a.sidebar-nav-item:focus {
 
 /* Hide the sidebar checkbox that we toggle with `.sidebar-toggle` */
 .sidebar-checkbox {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 /* Style the `label` that we use to target the `.sidebar-checkbox` */
 .sidebar-toggle {
   position: absolute;
-  top:  1rem;
+  top:  .8rem;
   left: 1rem;
-  display: block;
-  width: 2.2rem;
-  padding: .5rem .65rem;
+  display: flex;
+  align-items: center;
+  padding: .25rem .75rem;
   color: #505050;
   background-color: #fff;
-  border-radius: 4px;
+  border-radius: .25rem;
   cursor: pointer;
 }
-.sidebar-toggle:before {
-  display: block;
-  content: "";
-  width: 100%;
-  padding-bottom: .125rem;
-  border-top: .375rem double;
-  border-bottom: .125rem solid;
 
-  /* Make the border inside the box */
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+.sidebar-toggle::before {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  content: "";
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='%23555' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M2.5 11.5A.5.5 0 013 11h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5zm0-4A.5.5 0 013 7h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5zm0-4A.5.5 0 013 3h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5z' clip-rule='evenodd'/%3E%3C/svg%3E") no-repeat;
 }
 
 .sidebar-toggle:active,
+#sidebar-checkbox:focus ~ .sidebar-toggle,
 #sidebar-checkbox:checked ~ .sidebar-toggle {
   color: #fff;
-  background-color: #505050;
+  background-color: #555;
 }
 
-@media (min-width: 30.1rem) {
+.sidebar-toggle:active:before,
+#sidebar-checkbox:focus ~ .sidebar-toggle::before,
+#sidebar-checkbox:checked ~ .sidebar-toggle::before {
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='%23fff' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M2.5 11.5A.5.5 0 013 11h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5zm0-4A.5.5 0 013 7h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5zm0-4A.5.5 0 013 3h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5z' clip-rule='evenodd'/%3E%3C/svg%3E") no-repeat;
+}
+
+@media (min-width: 30.1em) {
   .sidebar-toggle {
     position: fixed;
-    width: 2.25rem;
-  }
-  .sidebar-toggle:before {
-    padding-bottom: .15rem;
-    border-top-width: .45rem;
-    border-bottom-width: .15rem;
   }
 }
 
+@media print {
+  .sidebar-toggle {
+    display: none;
+  }
+}
 
 /* Slide effect
  *
@@ -278,6 +283,7 @@ a.sidebar-nav-item:focus {
 }
 
 #sidebar-checkbox:checked + .sidebar {
+  z-index: 10;
   visibility: visible;
 }
 #sidebar-checkbox:checked ~ .sidebar,
@@ -377,7 +383,7 @@ a.pagination-item:hover {
   background-color: #f5f5f5;
 }
 
-@media (min-width: 30rem) {
+@media (min-width: 30em) {
   .pagination {
     margin: 3rem 0;
   }
@@ -524,4 +530,29 @@ a.pagination-item:hover {
 .theme-base-0f .sidebar-toggle,
 .theme-base-0f .related-posts li a:hover {
   color: #8f5536;
+}
+
+
+/*
+ * Overlay sidebar
+ *
+ * Make the sidebar content overlay the viewport content instead of pushing it
+ * aside when toggled.
+ */
+
+.sidebar-overlay #sidebar-checkbox:checked ~ .wrap {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+}
+.sidebar-overlay #sidebar-checkbox:checked ~ .sidebar-toggle {
+  box-shadow: 0 0 0 .25rem #fff;
+}
+.sidebar-overlay #sidebar-checkbox:checked ~ .sidebar {
+  box-shadow: .25rem 0 .5rem rgba(0,0,0,.1);
+}
+
+/* Only one tweak for a reverse layout */
+.layout-reverse.sidebar-overlay #sidebar-checkbox:checked ~ .sidebar {
+  box-shadow: -.25rem 0 .5rem rgba(0,0,0,.1);
 }
