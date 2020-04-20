@@ -2,7 +2,8 @@
 title:               Theo Chemel
 tagline:             ''
 description:         'Student by day, maker by night.'
-baseurl:             http://theochemel.github.io/
+url: 'https://theochemel.github.io/'
+baseurl:             'https://theochemel.github.io/'
 paginate:            5
 permalink:           pretty
 
