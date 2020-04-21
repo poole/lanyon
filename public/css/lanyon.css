@@ -51,6 +51,24 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -.025rem;
 }
 
+h2 {
+  margin-top: 2rem;
+}
+
+img {
+  margin-top: 2rem;
+}
+
+div.caption {
+  font-size: 80%;
+  text-align: center;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.mjx-box {
+  margin: auto;
+}
 
 /*
  * Wrapper

@@ -1,7 +1,7 @@
 # Setup
 title:               Theo Chemel
-tagline:             ''
-description:         'Student by day, maker by night.'
+tagline:
+description:         'Student / maker / hustler.'
 url: 'https://theochemel.github.io'
 baseurl:             '/'
 paginate:            5
