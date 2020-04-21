@@ -8,7 +8,7 @@ title: Homebrew LiDAR
 Self-driving cars, robots, and mapping vehicles often use LiDAR scanners (Light Detection and Ranging) in order to quickly and accurately map their surroundings. On a basic level, a LiDAR scanner repeatedly shoots out laser beams in various directions, measuring the time interval between when each beam is sent and when it returns to the scanner after reflecting off of an object. Since the speed of said laser beam is just the speed of light (travelling in air), the distance it traveled from the scanner to the object and back again can be calculated. By repeating this process in various different directions, a point-cloud can be constructed, mapping the spacial representation of the scanner's surroundings.
 
 
-![img](http://www-video.eecs.berkeley.edu/research/indoor/Cory5thCartWall.jpg)
+![img](/public/images/2020-04-20-homebrew-lidar/Berkely Hallway Scan.jpg)
 <div class="caption" markdown="1">
 *An example point-cloud scan of an office hallway.[^fn1]*
 </div>
