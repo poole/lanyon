@@ -62,10 +62,10 @@ $$
 \theta = \text{yaw angle (radians)}\\
 d = \text{distance reading}\\
 
-(x, y. z) = (dcos(\theta)sin(\phi), dsin(\phi)sin(\theta),dcos(\phi))
+(x, y, z) = (dcos(\theta)sin(\phi), dsin(\phi)sin(\theta),dcos(\phi))
 $$
 
-After all of the readings have been converted to Cartesian coordinates, they are displayed as a 3D point cloud using matplotlib. In this example, points are color-coded based on their distance from the scanner, and correlation can clearly be seen between the photograph and the scan of the scene, even though the scan is flipped horizontally.
+After all of the readings have been converted to Cartesian coordinates, they are displayed as a 3D point cloud using [matplotlib](https://matplotlib.org/). In this example, points are color-coded based on their distance from the scanner, and correlation can clearly be seen between the photograph and the scan of the scene, even though the scan is flipped horizontally.
 
 ![Stool Point Cloud](public/images/2020-04-20-homebrew-lidar/Stool Point Cloud.png)
 
@@ -103,7 +103,7 @@ The raw point clouds created by the scanner are quite noisy and need to be clean
 
 By selecting a certain threshold of points and removing all of the points that fall in regions with a point count below this threshold, the point cloud is suprisingly cleaner. Only the high-density regions of the scan remain, which usually correspond to the acutal surfaces in the scene, instead of noise.
 
-The actual plane detection is done thorugh using the Hough Transform, an absolutely wonderful piece of math that is explained quite well [here](https://www.youtube.com/watch?v=4zHbI-fFIlI). In essence, points "vote" on all of the possible planes that pass through them, and the planes with the highest number of votes are the planes that best fit the largest number of points. In this case, since only vertical planes are of interest, the data can be simplified to 2D points with the height information discarded. 
+The actual plane detection is done thorugh using the Hough Transform, an absolutely wonderful piece of math that is explained quite well [here](https://www.youtube.com/watch?v=4zHbI-fFIlI). In essence, points "vote" on all of the possible planes that pass through them, and the planes with the highest number of votes are the planes that best fit the largest number of points. In this case, since only vertical planes are of interest, the data can be simplified to 2D points with the height information discarded.
 
 ![Top Down](public/images/2020-04-20-homebrew-lidar/Top Down.png)
 

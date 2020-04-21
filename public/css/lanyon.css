@@ -55,7 +55,7 @@ h2 {
   margin-top: 2rem;
 }
 
-img {
+p img {
   margin-top: 2rem;
 }
 
@@ -93,7 +93,7 @@ div.caption {
 .container {
   max-width: 28rem;
 }
-@media (min-width: 38em) {
+@media (min-width: 40em) {
   .container {
     max-width: 32rem;
   }
@@ -118,12 +118,21 @@ div.caption {
   border-bottom: 1px solid #eee;
 }
 .masthead-title {
-  margin-top: 0;
-  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  /* margin-top: 0;
+  margin-bottom: 0; */
   color: #505050;
 }
+
+.masthead-title img {
+  margin-bottom: 0;
+  margin-right: 1.1rem;
+}
+
 .masthead-title a {
   color: #505050;
+  margin-right: 1.1rem;
 }
 .masthead-title small {
   font-size: 75%;
@@ -132,11 +141,25 @@ div.caption {
   letter-spacing: 0;
 }
 
+@media (max-width: 28em) {
+  .masthead-title {
+    margin-left: 64px;
+  }
+}
+
+@media (max-width: 40em) {
+
+}
+
 @media (max-width: 48em) {
   .masthead-title {
     text-align: center;
   }
   .masthead-title small {
+    display: none;
+  }
+
+  .masthead-title img {
     display: none;
   }
 }
