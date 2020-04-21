@@ -66,6 +66,11 @@ div.caption {
   margin-bottom: 2rem;
 }
 
+.contact-field {
+  display: flex;
+  justify-content: space-between;
+}
+
 .mjx-box {
   margin: auto;
 }
@@ -127,7 +132,6 @@ div.caption {
 
 .masthead-title img {
   margin-bottom: 0;
-  margin-right: 1.1rem;
 }
 
 .masthead-title a {
@@ -548,6 +552,7 @@ a.pagination-item:hover {
   background-color: #6a9fb5;
 }
 .theme-base-0d .container a,
+.theme-base-0d .container h1,
 .theme-base-0d .sidebar-toggle,
 .theme-base-0d .related-posts li a:hover {
   color: #6a9fb5;

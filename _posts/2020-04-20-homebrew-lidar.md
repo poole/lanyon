@@ -18,13 +18,13 @@ Self-driving cars, robots, and mapping vehicles often use LiDAR scanners (Light 
 
 ## Hardware
 
-![Scanner](public/images/2020-04-20-homebrew-lidar/Scanner.jpg)
+![Scanner](/public/images/2020-04-20-homebrew-lidar/Scanner.jpg)
 <div class="caption" markdown="1">
 *The scanner.*
 </div>
 
 
-![Controller](public/images/2020-04-20-homebrew-lidar/Controller.jpg)
+![Controller](/public/images/2020-04-20-homebrew-lidar/Controller.jpg)
 <div class="caption" markdown="1">
 *The (messy) controller.*
 </div>
@@ -67,11 +67,11 @@ $$
 
 After all of the readings have been converted to Cartesian coordinates, they are displayed as a 3D point cloud using [matplotlib](https://matplotlib.org/). In this example, points are color-coded based on their distance from the scanner, and correlation can clearly be seen between the photograph and the scan of the scene, even though the scan is flipped horizontally.
 
-![Stool Point Cloud](public/images/2020-04-20-homebrew-lidar/Stool Point Cloud.png)
+![Stool Point Cloud](/public/images/2020-04-20-homebrew-lidar/Stool Point Cloud.png)
 
 
 
-![Stool Image](public/images/2020-04-20-homebrew-lidar/Stool Image.jpg)
+![Stool Image](/public/images/2020-04-20-homebrew-lidar/Stool Image.jpg)
 
 
 
@@ -81,13 +81,13 @@ Point clouds may look great, but most real-world applications need to go a step 
 
 This project implements detection for vertical planes, but the same techniques could be generalized to account for planes in any orientation. For this step-by-step example, a scan was taken facing a corner, so two vertical planes intersected at a 90˚ angle.
 
-![Plane Detection image](public/images/2020-04-20-homebrew-lidar/Plane Detection image.jpg)
+![Plane Detection image](/public/images/2020-04-20-homebrew-lidar/Plane Detection image.jpg)
 
 <div class="caption" markdown="1">
 *The scene with yaw bounds overlayed.*
 </div>
 
-![Plane Detection Point Cloud](public/images/2020-04-20-homebrew-lidar/Plane Detection Point Cloud.png)
+![Plane Detection Point Cloud](/public/images/2020-04-20-homebrew-lidar/Plane Detection Point Cloud.png)
 
 <div class="caption" markdown="1">
 *The resulting scan.*
@@ -95,7 +95,7 @@ This project implements detection for vertical planes, but the same techniques c
 
 The raw point clouds created by the scanner are quite noisy and need to be cleaned up before proceeding. This quick-and-dirty cleaning algorithm divides the area of the scan into small bounding boxes, and tallies the number of points that fall within each box.
 
-![Region Point Count Distribution](public/images/2020-04-20-homebrew-lidar/Region Point Count Distribution.png)
+![Region Point Count Distribution](/public/images/2020-04-20-homebrew-lidar/Region Point Count Distribution.png)
 
 <div class="caption" markdown="1">
 *The distribution of region point counts.*
@@ -105,7 +105,7 @@ By selecting a certain threshold of points and removing all of the points that f
 
 The actual plane detection is done thorugh using the Hough Transform, an absolutely wonderful piece of math that is explained quite well [here](https://www.youtube.com/watch?v=4zHbI-fFIlI). In essence, points "vote" on all of the possible planes that pass through them, and the planes with the highest number of votes are the planes that best fit the largest number of points. In this case, since only vertical planes are of interest, the data can be simplified to 2D points with the height information discarded.
 
-![Top Down](public/images/2020-04-20-homebrew-lidar/Top Down.png)
+![Top Down](/public/images/2020-04-20-homebrew-lidar/Top Down.png)
 
 <div class="caption" markdown="1">
 *The simplified, top-down 2D point cloud.*
@@ -113,7 +113,7 @@ The actual plane detection is done thorugh using the Hough Transform, an absolut
 
 The Hough Transform when run on this top-down 2D set of points returns a set of 2D lines that best fit the points. These lines represent the position and orientation of the vertical planes present in the scan.
 
-![Top Down With Lines](public/images/2020-04-20-homebrew-lidar/Top Down With Lines.png)
+![Top Down With Lines](/public/images/2020-04-20-homebrew-lidar/Top Down With Lines.png)
 
 <div class="caption" markdown="1">
 *The 2D point cloud with detected lines superimposed.*
@@ -121,7 +121,7 @@ The Hough Transform when run on this top-down 2D set of points returns a set of 
 
 The lines returned by the Hough Transform are infinitely long. To calculate bounds for the lines, the most extreme points are found that are within a certain distance of each line. In between these extreme points lie the vertical planes in the scan.
 
-![Planes](public/images/2020-04-20-homebrew-lidar/Planes.png)
+![Planes](/public/images/2020-04-20-homebrew-lidar/Planes.png)
 
 <div class="caption" markdown="1">
 *The original scan with detected planes superimposed.*

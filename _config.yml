@@ -1,8 +1,8 @@
 # Setup
 title:               Theo Chemel
-tagline: CNC, Electronics, and Software Projects
+tagline: CNC, Electronics, and Software Projects.
 description:         'Student / maker / hustler.'
-url: 'https://theochemel.github.io'
+url: 'https://theo.chemel.net'
 baseurl:             '/'
 paginate:            5
 permalink:           pretty

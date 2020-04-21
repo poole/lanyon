@@ -40,9 +40,11 @@
       <div class="masthead">
         <div class="container">
           <h3 class="masthead-title">
-            <img src="/public/logo.png" height=36 width=36>
+            <a href="{{ site.url }}/" title="Home">
+              <img src="/public/logo.png" height=36 width=36>
+            </a>
             <span>
-                <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
+                <a href="{{ site.url }}/" title="Home">{{ site.title }}</a>
                 <small>{{ site.tagline }}</small>
             </span>
           </h3>
