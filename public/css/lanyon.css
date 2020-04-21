@@ -148,7 +148,11 @@ div.caption {
 }
 
 @media (max-width: 40em) {
-
+  .masthead-title {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media (max-width: 48em) {
