@@ -3,9 +3,9 @@ layout: post
 title: Homebrew LiDAR
 ---
 
-## Overview
+## Introduction
 
-Self-driving cars, robots, and mapping vehicles often use LiDAR scanners (Light Detection and Ranging) in order to quickly and accurately map their surroundings. On a basic level, a LiDAR scanner repeatedly shoots out laser beams in various directions, measuring the time interval between when each beam is sent and when it returns to the scanner after reflecting off of an object. Since the speed of said laser beam is just the speed of light (travelling in air), the distance it traveled from the scanner to the object and back again can be calculated. By repeating this process in various different directions, a point-cloud can be constructed, mapping the spacial representation of the scanner's surroundings.
+Self-driving cars, robots, and mapping vehicles often use LiDAR scanners (Light Detection and Ranging) in order to quickly and accurately map their surroundings. On a basic level, a LiDAR scanner repeatedly shoots out laser beams in various directions, measuring the time interval between when each beam is sent and when it returns to the scanner after reflecting off of an object. Since the speed of said laser beam is just the speed of light (traveling in air), the distance it traveled from the scanner to the object and back again can be calculated. By repeating this process in various different directions, a point-cloud can be constructed, mapping the spacial representation of the scanner's surroundings.
 
 
 ![img](/public/images/2020-04-20-homebrew-lidar/Berkely Hallway Scan.jpg)
@@ -55,7 +55,7 @@ To start a scan, a Python script running on a host computer sends a command to t
 
 ## Post Processing
 
-The raw pitch, yaw, and distance values recieved from the Arduino aren't very useful as they stand. To generate point clouds, these spherical coordinates must be converted to Cartesian coordinates. Thankfully, this is easily accomplished with some basic trigonometry as follows:
+The raw pitch, yaw, and distance values received from the Arduino aren't very useful as they stand. To generate point clouds, these spherical coordinates must be converted to Cartesian coordinates. Thankfully, this is easily accomplished with some basic trigonometry as follows:
 
 $$
 \phi = \text{pitch angle from vertical (radians)}\\
@@ -84,7 +84,7 @@ This project implements detection for vertical planes, but the same techniques c
 ![Plane Detection image](/public/images/2020-04-20-homebrew-lidar/Plane Detection image.jpg)
 
 <div class="caption" markdown="1">
-*The scene with yaw bounds overlayed.*
+*The scene with yaw bounds overlaid.*
 </div>
 
 ![Plane Detection Point Cloud](/public/images/2020-04-20-homebrew-lidar/Plane Detection Point Cloud.png)
@@ -101,9 +101,9 @@ The raw point clouds created by the scanner are quite noisy and need to be clean
 *The distribution of region point counts.*
 </div>
 
-By selecting a certain threshold of points and removing all of the points that fall in regions with a point count below this threshold, the point cloud is suprisingly cleaner. Only the high-density regions of the scan remain, which usually correspond to the acutal surfaces in the scene, instead of noise.
+By selecting a certain threshold of points and removing all of the points that fall in regions with a point count below this threshold, the point cloud is surprisingly cleaner. Only the high-density regions of the scan remain, which usually correspond to the actual surfaces in the scene, instead of noise.
 
-The actual plane detection is done thorugh using the Hough Transform, an absolutely wonderful piece of math that is explained quite well [here](https://www.youtube.com/watch?v=4zHbI-fFIlI). In essence, points "vote" on all of the possible planes that pass through them, and the planes with the highest number of votes are the planes that best fit the largest number of points. In this case, since only vertical planes are of interest, the data can be simplified to 2D points with the height information discarded.
+The actual plane detection is done through using the Hough Transform, an absolutely wonderful piece of math that is explained quite well [here](https://www.youtube.com/watch?v=4zHbI-fFIlI). In essence, points "vote" on all of the possible planes that pass through them, and the planes with the highest number of votes are the planes that best fit the largest number of points. In this case, since only vertical planes are of interest, the data can be simplified to 2D points with the height information discarded.
 
 ![Top Down](/public/images/2020-04-20-homebrew-lidar/Top Down.png)
 

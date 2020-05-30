@@ -4,7 +4,7 @@ tagline: CNC, Electronics, and Software Projects.
 description:         'Student / maker / hustler.'
 url: 'https://theo.chemel.net'
 baseurl:             '/'
-paginate:            5
+paginate:            1
 permalink:           pretty
 
 # About/contact

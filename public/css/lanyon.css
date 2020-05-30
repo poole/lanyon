@@ -495,6 +495,15 @@ a.sidebar-nav-item:focus {
   padding: 1rem;
   border: 1px solid #eee;
 }
+
+@media(prefers-color-scheme: dark) {
+  .pagination {
+    color: #aaa;
+  }
+  .pagination-item {
+    border: 1px solid #aaa;
+  }
+}
 .pagination-item:first-child {
   margin-bottom: -1px;
 }
