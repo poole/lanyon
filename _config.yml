@@ -6,6 +6,9 @@ url:                 https://lanyon.getpoole.com
 baseurl:             ''
 paginate:            5
 permalink:           pretty
+category_dir: category/
+tag_dir: tag/
+
 
 # About/contact
 author:
