@@ -4,6 +4,21 @@
 
 <!-- Toggleable sidebar -->
 <div class="sidebar" id="sidebar">
+  <div>
+    <div class="sidebar-nav-item">Category</div>
+    <nav class="content-ul">
+      {% for category in site.categories %}
+      <a href="{{ root_url }}/{{ site.category_dir }}#{{ category | first }}"
+         class="sidebar-nav-item pl-3rem">
+                            <span class="name">
+                                {{ category | first }}
+                            </span>
+        <span class="badge">{{ category | last | size }}</span>
+      </a>
+      {% endfor %}
+    </nav>
+  </div>
+
   <div class="sidebar-item">
     <p>{{ site.description }}</p>
   </div>
@@ -25,8 +40,8 @@
       {% endif %}
     {% endfor %}
 
-    <a class="sidebar-nav-item" href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">Download</a>
-    <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub project</a>
+    <!-- <a class="sidebar-nav-item" href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">Download</a>
+    <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub project</a> -->
     <span class="sidebar-nav-item">Currently v{{ site.version }}</span>
   </nav>
 
