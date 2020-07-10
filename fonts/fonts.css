@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'Founders Grotesk';
+    font-display: swap;
+    src: url('fonts/FoundersGroteskWeb-Light.eot');
+
+    /* IE9 Compat Modes */
+    src:
+        url('fonts/FoundersGroteskWeb-Light.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('fonts/FoundersGroteskWeb-Light.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('fonts/FoundersGroteskWeb-Light.woff') format('woff');
+
+    /* Pretty Modern Browsers */
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Founders Grotesk';
+    font-display: swap;
+    src: url('fonts/FoundersGroteskWeb-Regular.eot');
+
+    /* IE9 Compat Modes */
+    src:
+        url('fonts/FoundersGroteskWeb-Regular.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('fonts/FoundersGroteskWeb-Regular.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('fonts/FoundersGroteskWeb-Regular.woff') format('woff');
+
+    /* Pretty Modern Browsers */
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Founders Grotesk';
+    font-display: swap;
+    src: url('fonts/FoundersGroteskWeb-Medium.eot');
+
+    /* IE9 Compat Modes */
+    src:
+        url('fonts/FoundersGroteskWeb-Medium.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('fonts/FoundersGroteskWeb-Medium.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('fonts/FoundersGroteskWeb-Medium.woff') format('woff');
+
+    /* Pretty Modern Browsers */
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Founders Grotesk Mono';
+    font-display: swap;
+    src: url('fonts/FoundersGroteskMonoWeb-Medium.eot');
+
+    /* IE9 Compat Modes */
+    src:
+        url('fonts/FoundersGroteskMonoWeb-Medium.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('fonts/FoundersGroteskMonoWeb-Medium.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('fonts/FoundersGroteskMonoWeb-Medium.woff') format('woff');
+
+    /* Pretty Modern Browsers */
+    font-weight: 500;
+    font-style: normal;
+}

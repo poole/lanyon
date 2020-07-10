@@ -1,9 +1,9 @@
 # Setup
 title:               payvision development
 tagline:             'House of engineers'
-description:         'A reserved <a href="https://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+description:         ''
 url:                 https://leonardopoza.github.io/
-baseurl:             ''
+baseurl:             'https://leonardopoza.github.io/'
 paginate:            5
 permalink:           pretty
 
