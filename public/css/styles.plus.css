@@ -38,9 +38,6 @@ h1 {
 .locations .list_item {
   margin: 0 auto 2.18182rem;
 }
-@media screen and (min-width: 1024px) .list_item {
-  margin: 0 auto 5rem;
-}
 
 .list_item {
   margin: 0 auto 2.18182rem;
