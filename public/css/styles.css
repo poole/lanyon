@@ -8,6 +8,7 @@
 6- Link
 7- Form
 8- Column Grid
+9- Video modal
 
 */
 
@@ -2017,3 +2018,141 @@ textarea.form-field {
   }
 }
 /*End Column Grid*/
+/*Start Video modal*/
+.video {
+  padding-bottom: rem(75px);
+  padding-top: 0;
+}
+@media screen and (min-width: 768px) {
+  .video {
+    padding-bottom: rem(100px);
+    padding-top: rem(150px);
+  }
+}
+.video-figure {
+  position: relative;
+  width: 100%;
+  margin-bottom: 50px;
+  margin-top: 15px;
+  background-color: white;
+}
+.video-figure::before {
+  content: '';
+  width: 100%;
+  display: block;
+  height: 0;
+  padding-top: 61.8%;;
+}
+.video-figure:hover .video-icon {
+  fill: #af9bff;
+}
+@media screen and (min-width: 580px) {
+  .video-figure {
+    margin-top: 0;
+  }
+}
+.video-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 970px;
+  margin: 0 auto;
+  display: block;
+}
+.video-icon {
+  width: 60px;
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  cursor: pointer;
+  fill: #3237be;
+}
+@media screen and (min-width: 768px) {
+  .video-icon {
+    width: 80px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .video-icon {
+    width: 100px;
+  }
+}
+.video-icon path {
+  transition: fill ease 0.25s;
+}
+
+.video_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,200,130,.75);
+  background-blend-mode: screen;
+  cursor: pointer;
+}
+
+/****/
+.modal-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1024px;
+}
+.modal-wrapper::before {
+  content: '';
+  display: block;
+  padding-bottom: 56.25%;
+}
+.modal-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.modal-overlay {
+  position: fixed;
+  background-color: rgba(255, 200, 130, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  visibility: hidden;
+  transition: all .2s, visibility 0s linear .2s;
+}
+.modal-overlay--active {
+  z-index: 9999;
+  pointer-events: all;
+  visibility: visible;
+  opacity: 1;
+  transition: all .2s, visibility 0s;
+}
+.modal-close {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 20px;
+  left: calc(50vw - 10px);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9;
+}
+.modal-close_svg {
+  width: 22px;
+  fill: #3237BE;
+}
+/*End Video modal*/

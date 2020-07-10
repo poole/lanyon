@@ -37,7 +37,7 @@ title: Home
 </p>
 
 <br /><br />
-
+<!--
 <iframe
   src="https://www.youtube.com/embed/QpBPiWphsFc"
   width="100%"
@@ -45,9 +45,52 @@ title: Home
   frameborder="0"
   allowfullscreen
 ></iframe>
+-->
+
+  <figure class="video-figure">
+    <video
+      class="video-video"
+      muted=""
+      playsinline=""
+      autoplay=""
+      webkit-playsinline=""
+      loop=""
+    >
+      <source src="videos/teaser-careers-payvision.mp4" type="video/mp4" />
+      Sorry, your browser doesn't support embedded videos.
+    </video>
+    <div class="video_overlay"></div>
+    <svg class="video-icon" viewBox="0 0 107 155">
+      <path
+        fill-rule="evenodd"
+        d="M.063.861l106.785 77.063L.063 154.986z"
+      ></path>
+    </svg>
+  </figure>
+
+  <!---->
+
+  <div id="iframeVideoOverlay" class="modal-overlay">
+    <div class="modal-close">
+      <svg class="modal-close_svg" viewBox="0 0 20 20">
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M9.83885 11.2531L17.9706 19.3848L19.3848 17.9706L11.2531 9.83885L19.3848 1.70713L17.9706 0.292912L9.83885 8.42464L1.70712 0.292908L0.292908 1.70712L8.42464 9.83885L0.292908 17.9706L1.70712 19.3848L9.83885 11.2531Z"
+        ></path>
+      </svg>
+    </div>
+    <div class="modal-wrapper">
+      <iframe
+        data-src="https://www.youtube.com/embed/JXLDA54xq1c?autoplay=1"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen=""
+      ></iframe>
+    </div>
+  </div>
 
 <br /><br /><br /><br />
-
 
 <h1 class="post-title">Our HR team.</h1>
 <p>
@@ -619,12 +662,53 @@ title: Home
 
 <br /><br />
 
-<!-- Initialize Swiper -->
 <script>
+  /*Initialize Swiper*/
   var swiper = new Swiper(".swiper-container", {
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+  });
+
+
+  /*Video Popup Modal Logic*/
+  const VideoModal = function (options) {
+    const body = document.body;
+    const triggerElem = options.triggerElem;
+    const modal = options.modal;
+    const iframe = modal.querySelector("iframe");
+
+    function openModal() {
+      modal.classList.add(options.modalActiveClass);
+      body.classList.add("overflow-hidden");
+      const url = iframe.dataset.src;
+      iframe.setAttribute("src", url);
+    }
+
+    function closeModal() {
+      iframe.setAttribute("src", "");
+      body.classList.remove("overflow-hidden");
+      modal.classList.remove(options.modalActiveClass);
+    }
+
+    if (triggerElem) {
+      triggerElem.addEventListener("click", function () {
+        openModal();
+      });
+    }
+
+    if (modal) {
+      modal.addEventListener("click", function () {
+        closeModal();
+      });
+    }
+  };
+
+  /*Initializa Video Popup*/
+  const video = new VideoModal({
+    triggerElem: document.querySelector(".video-figure"),
+    modal: document.getElementById("iframeVideoOverlay"),
+    modalActiveClass: "modal-overlay--active",
   });
 </script>
