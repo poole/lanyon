@@ -3,7 +3,7 @@ title:               payvision development
 tagline:             'House of engineers'
 description:         ''
 url:                 https://leonardopoza.github.io/
-baseurl:             'https://leonardopoza.github.io/'
+baseurl:             ''
 paginate:            5
 permalink:           pretty
 
