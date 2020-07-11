@@ -1,6 +1,6 @@
 ---
 layout: page
-title: DS_category
+title: category
 ---
 <p class="message">
   Data Science Study Category
