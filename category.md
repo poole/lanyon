@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: page
 title: category
 ---
@@ -7,4 +7,4 @@ title: category
 </p>
 
 * [Data_Science](_posts/2020-07-10-test_1.md)
-* [Life](https://lanyon.getpoole.com)
+* [Life](https://lanyon.getpoole.com) -->
