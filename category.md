@@ -6,5 +6,5 @@ title: category
   Data Science Study Category
 </p>
 
-* [Data_Science](/Users/th/Desktop/Youn/TH_git/taehwanyoun.github.io/_posts/2020-07-10-test_1.md)
+* [Data_Science](_posts/2020-07-10-test_1.md)
 * [Life](https://lanyon.getpoole.com)
