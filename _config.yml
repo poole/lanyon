@@ -6,6 +6,7 @@ url:                 https://leonardopoza.github.io/
 baseurl:             ''
 paginate:            5
 permalink:           pretty
+port:                4001
 
 # About/contact
 author:

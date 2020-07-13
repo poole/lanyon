@@ -157,22 +157,7 @@ p.yv-blog-card__jobtitle {
   overflow: hidden;
 }
 
-.swiper-container {
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-  list-style: none;
-  padding: 0;
-  z-index: 1;
-}
 
-.swiper-button-next.yv-button_next,
-.swiper-button-prev.yv-button_prev {
-  width: 90px;
-  height: 60px;
-  margin: 0;
-  top: 0;
-}
 
 
 .about_page .timeline-graphic:after,
@@ -198,71 +183,14 @@ p.yv-blog-card__jobtitle {
   position: relative;
 }
 
-.swiper-slide {
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  -o-transition-property: transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
-}
-
-.swiper-container {
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-  list-style: none;
-  padding: 0;
-  z-index: 1;
-}
-
 .color-payvision-green {
   color: #007364;
-}
-
-.swiper-button-prev,
-.swiper-button-next,
-.swiper-container-rtl {
-  right: 10px;
-  left: auto;
-}
-
-.swiper-wrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  -o-transition-property: transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
 }
 
 .about_page .timeline .arrows_container {
   display: block;
   width: 100%;
   height: 60px;
-}
-
-.swiper-button-prev.yv-button_prev {
-  display: block;
-  width: 90px;
-  height: 60px;
-  margin: 0;
-  top: 0;
-  transition: transform .2s ease;
 }
 
 .stroke-color-payvision-blue {
