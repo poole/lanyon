@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Life
+title: life
 ---
 
 {% if post.category == 'life' %}
