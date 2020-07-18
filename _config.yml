@@ -6,7 +6,7 @@ url:                 https://taehwanyoun.github.io
 baseurl:             ''
 paginate:            5
 permalink:           pretty
-category_dir:        category/
+# category_dir:        category/
 
 # About/contact
 author:
