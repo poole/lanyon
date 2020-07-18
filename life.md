@@ -3,8 +3,9 @@ layout: page
 title: life
 ---
 
-{% if post.category == life %}
-  {% for post in site.posts %}
+
+{% for post in site.posts %}
+  {% if post.category == life %}
     * {{ post.date | date_to_string }} &raquo; [ {{ post.title }} ]({{ post.url }})
-    {% endfor %}
-{% endif %}
+    {% endif %}
+{% endfor %}
