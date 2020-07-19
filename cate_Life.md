@@ -3,10 +3,7 @@ layout: page
 title: life
 ---
 {% for post in site.posts %}
-  {% if post.category == 'life' %}
-  <a href="{{ post.url | absolute_url }}">
-    {{ post.title }}
-    <small>{{ post.date | date_to_string }}</small>
-
+  {% if post.category == 'Archive' %}
+  * {{ post.date | date_to_string }} &raquo; [ {{ post.title }} ]({{ post.url }})
   {% endif %}
 {% endfor %}
