@@ -7,8 +7,6 @@ title: life
   {% if post.category == 'life' %}
   <a href="{{ post.url | absolute_url }}">
     {{ post.title }}
-      <a href="{{ post.url | absolute_url }}">
-        {{ post.title }}
 
   {% endif %}
 {% endfor %}
