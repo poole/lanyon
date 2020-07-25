@@ -11,7 +11,7 @@ permalink:           pretty
 # About/contact
 author:
   name:              TaeHwan Youn
-  url:               https://twitter.com/mdo
+  # url:               https://twitter.com/mdo
   email:             youn4576@gmail.com
 
 # Gems
