@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Profile2
+title: [Recommend] 2_Latent Factor CF(feat. SVD)
 date : 05 Jul 2020
 category : Archive
 ---
