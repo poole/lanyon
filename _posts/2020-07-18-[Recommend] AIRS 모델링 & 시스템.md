@@ -1,6 +1,6 @@
 ---
 layout: post
-title: AIRS 모델링 & 시스템
+title: [Recommend] AIRS 모델링 & 시스템
 date : 18 Jul 2020
 category : Data_Science
 ---
