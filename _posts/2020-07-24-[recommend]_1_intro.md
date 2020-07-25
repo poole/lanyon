@@ -1,8 +1,8 @@
 ---
 layout: post
 title : [Recommend] 1_Intro
-date : 24 Jul 2020 
-category : Archive
+date : 24 Jul 2020
+category : DS_Study
 ---
 
 # 1. 추천 알고리즘 종류

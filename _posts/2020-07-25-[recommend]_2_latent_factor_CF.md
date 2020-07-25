@@ -2,7 +2,7 @@
 layout : post
 title : [Recommend] 2_Latent Factor CF(feat. SVD)
 date : 25 Jul 2020
-category : Archive
+category : DS_Study
 ---
 
 # Latent Factor Based Collaborative Filtering(feat.SVD) - 잠재요인 협업 필터링
