@@ -1,6 +1,6 @@
 ---
-layout: post
-title: [Recommend] 2_Latent Factor CF(feat. SVD)
+layout : post
+title : [Recommend] 2_Latent Factor CF(feat. SVD)
 date : 25 Jul 2020
 category : Data_Science
 ---
@@ -24,6 +24,7 @@ category : Data_Science
  - $V^T$ (아이템-잠재요인) : 영화별 어떤 장르(잠재요인) 성격을 갖고 있는지 분해
 
 
+<br>
 #### 2. 행렬 결합
 <center>
 <img src = '/assets/svd_1.png' width = '60%'>
@@ -35,14 +36,6 @@ category : Data_Science
 <img src="/assets/svd_2.png" width="80%">
 <img src="/assets/svd_3.png" width="80%">
 </center>
-
- <!-- - $R$ : original rating data matrix (사용자 - 아이템 행렬 데이터)
- - $N_u$ : number of Users (row : 사용자)
- - $N_i$ : number of items (col : 아이템)
- ![스크린샷 2020-07-25 오후 4.29.12](/assets/스크린샷%202020-07-25%20오후%204.29.12.png)
- - $N_f$ : dimension of latent factor
- - $X$ : user latent factor matrix ($N_f$ x $N_u$)
- - $Y$ : user latent factor matrix ($N_f$ x $N_i$) -->
 
 
 
@@ -75,11 +68,14 @@ user_movie_rating = user_movie_data.pivot_table('rating', index = 'userId', colu
 
 
 ## 1) 유사 영화 추천
+<input : 사용자 id> & <output : 영화 리스트>
+
 ```python
 # 영화-사용자 행렬 생성
 movie_user_rating = user_movie_rating.values.T # 영화 - 사용자 행렬
 ```
 
+### (1) 행렬 분해
 ```python
 # 행렬 분해
 SVD = TruncatedSVD(n_components=12)
@@ -89,6 +85,8 @@ matrix.shape # 9064 x 12
 여기서 matrix는 12개의 잠재요인을 컬럼으로 갖는, 영화 정보에 대한 matrix
 이 영화 정보 행렬을 활용해서 상관관계를 살펴 서로 유사한 영화를 찾을 수 있음
 
+
+### (2) 상관계수 계산
 ```python
 # 상관계수 계산
 corr = np.corrcoef(matrix)
@@ -107,16 +105,80 @@ list(movie_title[(corr_coffey_hands >= 0.9)])[:50]
 
 
 
-## 2) 유사 영화 추천
+## 2) 사용자 개인 추천
+<input : 사용자 id> & <output : 영화 리스트>
+
+```python
+# 사용자-영화 행렬
+user_movie_rating.head()
+```
+
+```python
+matrix = df_user_movie_ratings.as_matrix() # matrix는 pivot_table 값을 numpy matrix로 만든 것
+user_ratings_mean = np.mean(matrix, axis = 1)# user_ratings_mean은 사용자의 평균 평점
+matrix_user_mean = matrix - user_ratings_mean.reshape(-1, 1) # R_user_mean : 사용자-영화에 대해 사용자 평균 평점을 뺀 것.
+```
+이때 각 사용자별 사용자 평점을 빼주는 작업은 사용자 별 평점을 주는 정도가 다름을 반영하기 위함이다. 누군가는 굉장히 재미있게 본 영화도 3점을 주는 반면 누군가는 5점을 주는 등 개인의 선호가 다르기에 이를 개인화 시켜주기 위해 평균을 빼준다.(평점 데이터가 아닌, 단순 관람 데이터인 경우 필요치 않음)
+
+### (1) 행렬 분해
+```python
+#scipy에서 제공해주는 svd.  
+# U 행렬, sigma 행렬, V 전치 행렬을 반환.
+U, sigma, Vt = svds(matrix_user_mean, k = 12)
+
+print(U.shape)
+print(sigma.shape)
+print(Vt.shape)
+
+#(671, 12)
+#(12,)
+#(12, 9066)
+
+# 이때 sigma 행렬은 현재 1차원 행렬로 되어있기에, 0을 포함한 대각행렬로 만들어줌
+sigma = np.diag(sigma)
+sigma.shape
+```
 
 
+### (2) 행렬 결합
+```python
+# U, Sigma, Vt의 내적을 수행하면, 다시 원본 행렬로 복원이 된다.
+# 거기에 + 사용자 평균 rating을 적용한다.
+svd_user_predicted_ratings = np.dot(np.dot(U, sigma), Vt) + user_ratings_mean.reshape(-1, 1)
+
+# 생성된 matrix를 데이터 프레임 형태로 변환
+df_svd_preds = pd.DataFrame(svd_user_predicted_ratings, columns = df_user_movie_ratings.columns)
+df_svd_preds.head()
+```
+위 행렬을 내적하는 작업을 진행할 때, 거대한 스파스 매트릭스 형태가 다시 생성되기에 메모리 이슈에 주의할 것!
 
 
+```python
+def recommend_movies(df_svd_preds, user_id, ori_movies_df, ori_ratings_df, num_recommendations=5):
+
+    #현재는 index로 적용이 되어있으므로 user_id - 1을 해야함.
+    user_row_number = user_id - 1
+
+    # 최종적으로 만든 pred_df에서 사용자 index에 따라 영화 데이터 정렬 -> 영화 평점이 높은 순으로 정렬 됌
+    sorted_user_predictions = df_svd_preds.iloc[user_row_number].sort_values(ascending=False)
+
+    # 원본 평점 데이터에서 user id에 해당하는 데이터를 뽑아낸다.
+    user_data = ori_ratings_df[ori_ratings_df.userId == user_id]
+
+    # 위에서 뽑은 user_data와 원본 영화 데이터를 합친다.
+    user_history = user_data.merge(ori_movies_df, on = 'movieId').sort_values(['rating'], ascending=False)
+
+    # 원본 영화 데이터에서 사용자가 본 영화 데이터를 제외한 데이터를 추출
+    recommendations = ori_movies_df[~ori_movies_df['movieId'].isin(user_history['movieId'])]
+    # 사용자의 영화 평점이 높은 순으로 정렬된 데이터와 위 recommendations을 합친다.
+    recommendations = recommendations.merge( pd.DataFrame(sorted_user_predictions).reset_index(), on = 'movieId')
+    # 컬럼 이름 바꾸고 정렬해서 return
+    recommendations = recommendations.rename(columns = {user_row_number: 'Predictions'}).sort_values('Predictions', ascending = False).iloc[:num_recommendations, :]
 
 
-
-
-
+    return user_history, recommendations
+already_rated, predictions = recommend_movies(df_svd_preds, 330, df_movies, df_ratings, 10)
+```
 
 
 
