@@ -29,7 +29,7 @@ category : Data_Science
   ---
 
 # 2. Contents Based Filtering
- <img src = '/assets/스크린샷%202020-07-24%20오후%207.57.01.png' width="70%">
+ <img src = '/assets/ContentsBased.png' width="70%">
 
 |사용자|영화명|장르|
 |------|---|---|
