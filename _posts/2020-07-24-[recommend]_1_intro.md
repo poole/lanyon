@@ -1,5 +1,5 @@
 ---
-layout : post
+layout: post
 title : [Recommend] 1_Intro
 date : 24 Jul 2020
 category : Archive
