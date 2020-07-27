@@ -1,11 +1,10 @@
 ---
 layout: post
-title: Recommend) 2_Latent Factor CF(feat. SVD)
+title: Recommend 2_Latent Factor CF(feat. SVD)
 date : 25 Jul 2020
 category : DS_Study
 ---
 
-# Latent Factor Based Collaborative Filtering(feat.SVD) - 잠재요인 협업 필터링
 : Latent Factor Based Collaborative Filtering은 행렬 분해(Matrix Facotrization)에 기반한 알고리즘으로,
 사용자 행렬과 아이템 행렬을 각각 잠재요인 기준으로 생성한 후 이를 다시 내적하여 사용자가 아직 선호를 나타내지 않은 아이템에 대해서도 선호를 예측
 
