@@ -40,13 +40,13 @@ category : DS_Study
 : 주어진 평점 데이터를 가지고 서로 비슷한 유저 혹은 아이템 찾기 
  - pearson correlation : 1에 가까울 수록 유사한 선호 
  - ‘User-oriented Neighborhood’ &   ‘Item-oriendted Negiborhood’
- - 양/음의 관계를 계산하기에 선호와 비선호가 구분되어 있는 Explicit Dataset에 적합
+  - 양/음의 관계를 계산하기에 선호와 비선호가 구분되어 있는 Explicit Dataset에 적합
 
 
 ## 3-2. latent factor based CF Model(feat.SVD) - 잠재요인 협업 필터링
  : 잠재요인을 기준으로 '사용자 정보 행렬'과 '아이템 정보 행렬'을 생성하고 둘을 내적하여 예측값을 생성하는 방법
   - U('사용자-잠재요인') &  Sigma(잠재요인) & vT('아이템-잠재요인')
-   ![스크린샷 2020-07-24 오후 8.13.00](/assets/스크린샷%202020-07-24%20오후%208.13.00.png)
+   ![스크린샷 2020-07-24 오후 8.13.00](/assets/svd_1.png)
 
 
 

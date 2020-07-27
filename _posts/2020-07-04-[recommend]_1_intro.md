@@ -37,10 +37,10 @@ category : Archive
 # 3. Collaborative Filtering
 
 ## 3-1. Neighborhood CF Model
-: 주어진 평점 데이터를 가지고 서로 비슷한 유저 혹은 아이템 찾기 
+: 주어진 평점 데이터를 가지고 서로 비슷한 유저 혹은 아이템 찾기   
  - pearson correlation : 1에 가까울 수록 유사한 선호 
  - ‘User-oriented Neighborhood’ &   ‘Item-oriendted Negiborhood’
- - 양/음의 관계를 계산하기에 선호와 비선호가 구분되어 있는 Explicit Dataset에 적합
+  - 양/음의 관계를 계산하기에 선호와 비선호가 구분되어 있는 Explicit Dataset에 적합
 
 
 ## 3-2. latent factor based CF Model(feat.SVD) - 잠재요인 협업 필터링
