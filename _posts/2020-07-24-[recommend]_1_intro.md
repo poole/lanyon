@@ -31,12 +31,7 @@ category : DS_Study
 # 2. Contents Based Filtering
 <center> <img src = '/assets/ContentsBased.png' width="70%"></center>  
 
-|사용자|영화명|장르|
-|------|---|---|
-|a|파이썬|[코미디, 액션, 호러]|
-|b|라이언|[드라마, 코미디, 멜로]|
-|c|물티슈|[드라마, 액션, 멜로]|
- : 장르값들을 기반으로 비슷한 영화를 묶고, 관람한 영화와 유사한 영화를 추천
+ : 장르값들을 기반으로 비슷한 영화를 묶고, 관람한 영화와 유사한 영화를 추천.
 
 
 # 3. Collaborative Filtering
