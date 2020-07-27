@@ -29,7 +29,8 @@ category : Archive
   ---
 
 # 2. Contents Based Filtering
- <img src = '/assets/ContentsBased.png' width="70%">
+<center> <img src = '/assets/ContentsBased.png' width="70%"></center>  
+
 
 |사용자|영화명|장르|
 |------|---|---|

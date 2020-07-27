@@ -31,6 +31,7 @@ category : DS_Study
 # 2. Contents Based Filtering
  <img src = '/assets/ContentsBased.png' width="70%">
 
+
 |사용자|영화명|장르|
 |------|---|---|
 |a|파이썬|[코미디, 액션, 호러]|
