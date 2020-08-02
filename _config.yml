@@ -29,3 +29,10 @@ highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
 incremental: false
+
+# comments
+comments: true
+  provider : "disqus" # 블로그 댓글 기능 false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
+  disqus:
+    shortname : 'taehwanyoun-github-io'
+  # 블로그 댓글 기능 https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-	    shortname            : "devinlife-github-io" # 블로그 댓글 기능 https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
