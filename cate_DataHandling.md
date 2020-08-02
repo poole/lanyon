@@ -1,9 +1,9 @@
 ---
 layout: page
-title: DS_Study
+title: DataHandling
 ---
 {% for post in site.posts %}
-  {% if post.category == 'DS_Study' %}
+  {% if post.category == 'DataHandling' %}
   * {{ post.date | date_to_string }} &raquo; [ {{ post.title }} ]({{ post.url }})
   {% endif %}
 {% endfor %}

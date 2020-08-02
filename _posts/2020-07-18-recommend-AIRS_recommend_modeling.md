@@ -2,7 +2,7 @@
 layout: post
 title: Recommend AIRS 모델링 & 시스템
 date : 18 Jul 2020
-category : DS_Study
+category : ML
 ---
 
 : 자세한 추천 시스템 공부에 앞서, 네이버 뉴스 추천 시스템인 AIRS개발과정을 토대로, 추천시스템의 주요 골자와 현황, 예상되는 문제점등을 살펴보자.
@@ -56,7 +56,7 @@ category : DS_Study
 ### 2-1) Statistics Based
 "좋아할 만한 = ***통계적으로 유의미한*** 아이템"
 - **Chi-squared (category)**    
-$ : X^2 = sum{(x_i - m_i)^2/m_i}$
+    $ : X^2 = sum{(x_i - m_i)^2/m_i}$
     - 원래 모집단과 표본이 있을 때, 모집단과 표본이 얼만큼 다른가를 검증하는 방법.
     - 유저가 소비한 아이템의 예측치(m_i)와 실제로 소비한 관측치(x_i)의 차이를 이용
     - 절대적인 값보다는 상대적인 변화량에 주목해 하나의 새로운 feature로 활용
