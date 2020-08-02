@@ -18,7 +18,7 @@ category : ML
 ※ Deep Learning을 활용한 방식이 최근 핫하지만, 여기선 기초적인 추천시스템 내용의 정리를 위해 배제하였다.
 
   ---
-#### <데이터 종류>
+#### \<데이터 종류\>
 *Explict Data*
  - 평점등 선호와 비선호가 명확하게 구분
  - 아직 평점을 매기지 않은 데이터는 활용불가  
@@ -28,12 +28,13 @@ category : ML
  - 모든 데이터를 사용하여 분석 가능
   ---
 
+<br><br>
 # 2. Contents Based Filtering
 <center> <img src = '/assets/ContentsBased.png' width="40%"></center>  
 
  : 위 그림 처럼 예를들어 '장르'라는 변수를 활용해 비슷한 영화를 묶고, 동일한 장르내에서 유사한 영화를 추천해줄 수 있다.
 
-
+<br><br>
 # 3. Collaborative Filtering
 
 ## 3-1. Neighborhood CF Model
