@@ -80,8 +80,8 @@ SVD = TruncatedSVD(n_components=12)
 matrix = SVD.fit_transform(movie_user_rating)
 matrix.shape # 9064 x 12
 ```
-여기서 matrix는 12개의 잠재요인을 컬럼으로 갖는, 영화 정보에 대한 matrix
-이 영화 정보 행렬을 활용해서 상관관계를 살펴 서로 유사한 영화를 찾을 수 있음
+여기서 matrix는 12개의 잠재요인을 컬럼으로 갖는, 영화 정보에 대한 matrix이다.
+영화의 정보는 사용자가 영화에 대해 남겨놓은 rating으로 영화간의 유사도를 12개의 잠재요인으로 평가한 결과이며, 상관관계를 활용해 유사 영화를 찾아보자.  
 
 
 ### (2) 상관계수 계산
