@@ -3,7 +3,6 @@ layout: post
 title: Recommend AIRS 모델링 & 시스템
 date : 18 Jul 2020
 category : ML
-comments : true
 ---
 
 : 자세한 추천 시스템 공부에 앞서, 네이버 뉴스 추천 시스템인 AIRS개발과정을 토대로, 추천시스템의 주요 골자와 현황, 예상되는 문제점등을 살펴보자.
