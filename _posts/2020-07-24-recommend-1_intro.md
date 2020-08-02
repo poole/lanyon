@@ -3,6 +3,7 @@ layout: post
 title: Recommend 1_Intro
 date : 24 Jul 2020
 category : ML
+comments : true
 ---
 
 # 1. 추천 알고리즘 종류

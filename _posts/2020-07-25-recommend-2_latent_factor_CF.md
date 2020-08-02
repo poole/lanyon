@@ -3,6 +3,7 @@ layout: post
 title: Recommend 2_Latent Factor CF(feat. SVD)
 date : 25 Jul 2020
 category : ML
+comments : true
 ---
 
 : Latent Factor Based Collaborative Filtering은 행렬 분해(Matrix Facotrization)에 기반한 알고리즘으로,
@@ -50,6 +51,7 @@ import numpy as np
 import warnings
 warnings.filterwarnings("ignore")
 ```
+피봇 테이블을 이용해, 영화명이 컬럼으로 들어가 있는 데이터 프레임 생성한다.
 
 ```python
 # Data Import
@@ -63,7 +65,10 @@ movie_data.drop('genres', axis = 1, inplace = True)
 user_movie_data = pd.merge(rating_data, movie_data, on = 'movieId')
 user_movie_rating = user_movie_data.pivot_table('rating', index = 'userId', columns='title').fillna(0)
 ```
-피봇 테이블을 이용해, 영화명이 컬럼으로 들어가 있는 데이터 프레임 생성
+
+우선, 영화간 유사도를 계산하여 특정 영화를 입력할 때, 해당 영화와 유사한 영화를 추출해내는 모델을 만들어 보자. 영화간 유사도를 계산하기 위해, 사용자 기준이었던 행렬을 영화중심으로 변환해준다.
+- input : item
+- output : similar item
 
 
 ## 1) 유사 영화 추천
@@ -71,17 +76,17 @@ user_movie_rating = user_movie_data.pivot_table('rating', index = 'userId', colu
 # 영화-사용자 행렬 생성
 movie_user_rating = user_movie_rating.values.T # 영화 - 사용자 행렬
 ```
-영화간 유사도를 계산하기 위해, 사용자 기준이었던 행렬을 영화중심으로 변환해주었다.
 
-### (1) 행렬 분해
+### (1) 행렬 분해 & 결합
+영화 기준의 행렬을 TruncatedSVD 함수를 행렬분해를 진행하였다.
+일반 SVD의 결과는 원본 행렬과 동일한 shape을 갖춰야 하지만, TruncatedSVD는 행렬곱의 결과를 시그마 행렬의 특이값 가운데 상위 n개만으로 압축해서 출력해준다. 이로 인해 정보량의 손실이 발생하기는 하지만, 거의 유사한 행렬을 얻으면서 메모리를 절약할 수 있다.
+(결과 행렬은 0이 거의 존재하지 않는 Dense Matrix이기에 영화간 유사도만을 계산하기 위한 행렬에 굳이 사용자의 모든 선호를 출력해주는 컬럼을 유지할 필요가 없지 않았을까 한다.)
 ```python
 # 행렬 분해
 SVD = TruncatedSVD(n_components=12)
 matrix = SVD.fit_transform(movie_user_rating)
 matrix.shape # 9064 x 12
 ```
-여기서 matrix는 12개의 잠재요인을 컬럼으로 갖는, 영화 정보에 대한 matrix이다.
-영화의 정보는 사용자가 영화에 대해 남겨놓은 rating으로 영화간의 유사도를 12개의 잠재요인으로 평가한 결과이며, 상관관계를 활용해 유사 영화를 찾아보자.  
 
 
 ### (2) 상관계수 계산
@@ -104,21 +109,24 @@ list(movie_title[(corr_coffey_hands >= 0.9)])[:50]
 
 
 ## 2) 사용자 개인 추천
-<input : 사용자 id> & <output : 영화 리스트>
+위에서 영화간 유사도 통해 유사한 아이템을 확인해 보았으나, 실제 개인화 추천모델이라면 사용자를 input값으로 넣었을 때, 사용자에게 적합한 아이템 리스트가 output으로 출력되는 형태가 좀더 자연스러울 것이다. 그렇기에 이번엔 사용자 사용자 개인을 기준으로한 matrx 활용해보자.
+ - input : user_id
+ - output : item
 
 ```python
 # 사용자-영화 행렬
 user_movie_rating.head()
 ```
-
+이때 각 사용자별 사용자 평점을 빼주는 작업은 사용자 별 평점을 주는 정도가 다름을 반영하기 위함이다. 누군가는 굉장히 재미있게 본 영화도 3점을 주는 반면 누군가는 5점을 주는 등 개인의 선호가 다르기에 이를 개인화 시켜주기 위해 평균을 빼준다.(평점 데이터가 아닌, 단순 관람 데이터인 경우 필요치 않음)
 ```python
 matrix = df_user_movie_ratings.as_matrix() # matrix는 pivot_table 값을 numpy matrix로 만든 것
 user_ratings_mean = np.mean(matrix, axis = 1)# user_ratings_mean은 사용자의 평균 평점
 matrix_user_mean = matrix - user_ratings_mean.reshape(-1, 1) # R_user_mean : 사용자-영화에 대해 사용자 평균 평점을 뺀 것.
 ```
-이때 각 사용자별 사용자 평점을 빼주는 작업은 사용자 별 평점을 주는 정도가 다름을 반영하기 위함이다. 누군가는 굉장히 재미있게 본 영화도 3점을 주는 반면 누군가는 5점을 주는 등 개인의 선호가 다르기에 이를 개인화 시켜주기 위해 평균을 빼준다.(평점 데이터가 아닌, 단순 관람 데이터인 경우 필요치 않음)
+
 
 ### (1) 행렬 분해
+TruncatedSVD함수와는 달리, scipy패키지에서 제공해주는 svds함수는 Output으로 분해된 3개의 행렬을 그대로 출력해준다.  
 ```python
 #scipy에서 제공해주는 svd.  
 # U 행렬, sigma 행렬, V 전치 행렬을 반환.
@@ -138,7 +146,9 @@ sigma.shape
 ```
 
 
+
 ### (2) 행렬 결합
+위 행렬을 내적하는 과정에서, TruncatedSVD와 달리 모든 컬럼을 그대로 출력해주기에 메모리 이슈에 주의해야 한다.
 ```python
 # U, Sigma, Vt의 내적을 수행하면, 다시 원본 행렬로 복원이 된다.
 # 거기에 + 사용자 평균 rating을 적용한다.
@@ -148,7 +158,7 @@ svd_user_predicted_ratings = np.dot(np.dot(U, sigma), Vt) + user_ratings_mean.re
 df_svd_preds = pd.DataFrame(svd_user_predicted_ratings, columns = df_user_movie_ratings.columns)
 df_svd_preds.head()
 ```
-위 행렬을 내적하는 작업을 진행할 때, 거대한 스파스 매트릭스 형태가 다시 생성되기에 메모리 이슈에 주의할 것!
+
 
 
 ```python
