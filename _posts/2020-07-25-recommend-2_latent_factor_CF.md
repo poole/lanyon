@@ -67,12 +67,11 @@ user_movie_rating = user_movie_data.pivot_table('rating', index = 'userId', colu
 
 
 ## 1) 유사 영화 추천
-<input : 사용자 id> & <output : 영화 리스트>
-
 ```python
 # 영화-사용자 행렬 생성
 movie_user_rating = user_movie_rating.values.T # 영화 - 사용자 행렬
 ```
+영화간 유사도를 계산하기 위해, 사용자 기준이었던 행렬을 영화중심으로 변환해주었다.
 
 ### (1) 행렬 분해
 ```python
