@@ -35,7 +35,8 @@ incremental: false
 # # comments
 # disqus_url : http://disqus.com/by/disqus_NqcV1O9wdy
 # disqus_id : 'taehwanyoun.github.io'
-disqus_shortname: 'taehwanyoun.github.io/'
+disqus_shortname: taehwanyoun.github.io/
+discus-identifier: taehwanyoun.github.io/ # add your discus identifier
 # comments: true
 #   provider : "disqus" # 블로그 댓글 기능 false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
 #   disqus:
