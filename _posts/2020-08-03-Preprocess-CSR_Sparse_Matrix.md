@@ -1,7 +1,7 @@
 ---
 layout: post
 title: CSR_Sparse_Matrix
-date : 25 Jul 2020
+date : 08 Aug 2020
 category : DataHandling
 comments : true
 ---
@@ -60,9 +60,10 @@ print(csr)
 ```
 
 ### 2) CSR Matrix 생성하기-2
- : 그러나 이미 희소행렬 자체가 너무 크다면, 이를 array 형태로 생성하는 것 조차 불가능한 경우가 있습니다. 즉 One-Hot-Encoding 자체가 메모리 이슈로 인해 진행되지 않는 상황입니다.
- 이 경우, OHE과정에서 `sparse_output = ture`옵션을 활용해 OHE output matrix를 csr sprase matrix로 생성할 수 있습니다.
+ : 그러나 이미 희소행렬 자체가 너무 크다면, 이를 array 형태로 생성하는 것 조차 불가능한 경우가 있습니다. 즉 One-Hot-Encoding 자체가 메모리 이슈로 인해 진행되지 않는 상황입니다.  
+ 이 경우, OHE과정에서 `sparse_output = ture`옵션을 활용해 OHE output matrix를 csr sprase matrix로 생성할 수 있습니다.  
  (특정 row가 2개 이상의 value를 갖고 있는 multi label의 상황을 가정하여 진행하였습니다.)
+
  ```python
  import pandas as pd
 df = pd.DataFrame({'id' : [1,2,3,4,5],
@@ -72,6 +73,7 @@ df = pd.DataFrame({'id' : [1,2,3,4,5],
                               ['a', 'c', 'e'],
                               ['e','f']]})
  ```
+
 <center>  
 <img src = '/assets/df_sample_1.png' width = '20%'>  <br><br>
 <img src = '/assets/df_sample_2.png' width = '40%'>
@@ -101,8 +103,10 @@ print(df_mat)
  ```
 
 
- ## 2. CSR Matrix indexing
- csr_matrix는 data, indices, indptr 세가지 구성요소를 갖고있습니다.
+
+## 2. CSR Matrix indexing
+
+csr_matrix는 data, indices, indptr 세가지 구성요소를 갖고있습니다.
   - `data` : matrix내에 있는 모든 0이 아닌 value값
   - `indices` : value가 위치한 columnd의 index
   - `indptr` : indptr은 위 indices를 기준으로, 각 row내 value의 indices 시작점과 끝점을 알려준다.
@@ -132,10 +136,13 @@ df_mat.indptr
 <br>
 
 - `nonzero()`
-당장 위의 3가지 인덱싱을 이해하더라도, 이를 csr_matrix가 잘 이해되지 않는다면 `.nonzero()`를 사용하면 값이 위치한 행과 열의 인덱스를 직관적으로 압축하지 않고 출력해줍니다.
+당장 위의 3가지 인덱싱을 이해하더라도 csr_matrix가 잘 이해되지 않는다면 `.nonzero()`를 사용해 값이 위치한 행과 열의 인덱스를 직관적으로 확인해 볼 수 있습니다.
+
 - `todense()`  
 끝으로, `todense()` 압축한 csr_matrix를 다시 익숙한 dense matrix로 변환해줍니다.
- -
+
+
+
 ```python
 df_mat.nonzero()
 # (array([0, 0, 1, 1, 2, 3, 3, 3, 4, 4], dtype=int32),
