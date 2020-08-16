@@ -2,36 +2,31 @@
 layout: default
 title: Home
 ---
-<div class=
-<div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ post.url | absolute_url }}">
-        {{ post.title }}
-      </a>
-    </h1>
 
-    <span class="post-date">{{ post.date | date_to_string }}</span>
-
-    {{ post.content }}
-  </div>
-  {% endfor %}
+<div class="home-header">
+  <h1 class="home-header-title">
+    Projects
+  </h1>
+  <h4 class="home-header-subtitle">
+    <i>Check out what I've been working on!</i>
+  </h4>
 </div>
 
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ paginator.next_page_path | absolute_url }}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ '/' | absolute_url }}">Newer</a>
-    {% else %}
-      <a class="pagination-item newer" href="{{ paginator.previous_page_path | absolute_url }}">Newer</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
+<div class="home-projects">
+  {% for post in site.posts %}
+  <a href="{{ post.url | absolute_url }}">
+
+    <span style="display: block;" class="home-project">
+      {% if post.title_image %}
+        <img src="{{ post.title_image }}" alt="" />
+      {% endif %}
+      <h4>
+        {{ post.title }}
+      </h4>
+      <h5>
+        {{ post.date | date_to_string }}
+      </h5>
+    </span>
+  </a>
+  {% endfor %}
 </div>

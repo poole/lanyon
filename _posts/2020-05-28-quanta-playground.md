@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Quanta Playground
+title_image: /public/images/2020-05-28-quanta-playground/Quanta Playground Interface.png
 ---
 
 ## Introduction
