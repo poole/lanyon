@@ -38,7 +38,7 @@ comments : true
 ## 2. Preliminaries
  - users : u, v
  - items : i, j
- - $r_ui$ : number of times u purchased item
+ - $r_ui$ : number of times u purchased item(original rating)
 
 
 ## 3. Previous work
@@ -51,7 +51,7 @@ comments : true
 
 
 
-**object**
+**SVD object**
 <center>  
 
 $min_{xy} \sum (r_{ui} - x^T_u y_i)^2 + \lambda(||x_u||^2 + ||y_i||^2)$
@@ -62,16 +62,53 @@ $min_{xy} \sum (r_{ui} - x^T_u y_i)^2 + \lambda(||x_u||^2 + ||y_i||^2)$
 
 
 ## 4. Our model
+#### (1) Raw observation($r_{ui}$) into two separate magnitudes($p_{ui}, c_{ui}$)
  - $p_{ui}$ = { 1 $r_{ui}$ > 0  |  0 $r_{ui}$ = 0}
   : 유저의 선호를 0과 1로 나타낸 set (preference of user $u$ to item $i$)  
   ex) 유저($u$)가 아이템($i$) 소비시 $r_{ui}$ > 0 이며, $p_{ui}$ = 1
+
  - $c_{ui} = 1 + \alpha r_{ui}$
   : implicit 데이터에서 선호를 나타내는 $p_{ui}$만으로는 선호를 확정할 수 없기에 다야한 수준에서 신뢰도를 나타낼 수 있는 지표가 필요하다. 신뢰도의 개념으로 기존 '0'이던 값들도 최소한의 신뢰도 수준에서 값을 지닐 수 있게 되며, preference가 존재하는 값은 $\alpha$에 비례해 커지게 된다.($\alpha$ = 40)
- - Goal
+
+#### (2) **ALS object**
   : 목표는 기존의 MF와 동일하게 user-factor & item-factor의 잠재요인을 찾아내, $p_{ui}$를 계산하는 과정이다. 그러나 이때 아래의 다음 두 가지 차이점이 존재한다.
-   (1) 다양한 신뢰수준($c_{ui}$ 설명(계산)하기
-   (2) 관찰되지 않은 모든 데이터 쌍($u,i$)에 대해서 optimization을 진행
-$$
+  (1) 다양한 신뢰수준($c_{ui}$ 설명(계산)하기
+  (2) 관찰되지 않은 모든 데이터 쌍($u,i$)에 대해서 optimization을 진행
+
+
+   <center>  
+
+   $min_{xy} \sum_{u,i} c_{ui}(p_{ui} - x^T_u y_i)^2 + \lambda(\sum||x_u||^2 + \sum||y_i||^2)$
+
+   </center>
+   : item or user factor가 고정되면 cost function은 quadratic 방정식이되어 global minimum을 계산할 수 있게 된다.(Alternating-Least-Squares optimization process)
+
+   - step 1
+    : 아이템 latent factor 행렬을 고정하고, 사용자의 latent factor를 계산합니다.
+   위 loss funcition에서 $y_i$를 상수로 취급한 다음 미분을 진행하면 되며, 미분 결과 유저 행렬 $x_u$는 다음과 같이 산출됩니다.
+      $x_u = (Y^TC^uY + \lambda I)^{-1}Y^TC^up(u)$
+   다음 초기 랜덤하게 설정된 유저 행렬을 위에서 계산된 값으로 업데이트 해줍니다.
+
+   - step 2
+    : 다음으로 사용자 행렬($x_u$)을 고정하고 아이템의 latent factor를 계산합니다.
+       $y_i = (X^TC^iX + \lambda I)^{-1}X^TC^ip(i)$
+   마찬가지로 랜덤하게 설정된 아이템 행렬을 업데이트 시켜줍니다.
+   - step 3
+    : 위의 과정을 통해 최적의 user & item 행렬을 찾아내며 보통 이때의 loop 횟수는 10~15회 정도로 설정됩니다.
+    ALS 결과 업데이트 된 $x_u, y_i$를 곱해 고객 u의 아이템 i에 대한 선호 $\hat p_{ui}$를 계산 할 수 있게 됩니다.
+<center>
+
+$\hat p_{ui} = x_u^T y_i$
+</center>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -79,4 +116,5 @@ $$
 
 
 #### Refernce
-[1] [Yifan Hu et al. Collaborative Filtering for Implicit Feedback](http://www.Datasetshttp://yifanhu.net/PUB/cf.pdf)
+[1] [Yifan Hu et al. Collaborative Filtering for Implicit Feedback](http://www.Datasetshttp://yifanhu.net/PUB/cf.pdf)  
+[2] [갈아먹는 추 알고리즘 [4] Alternating Least Squares](https://yeomko.tistory.com/4?category=805638)
