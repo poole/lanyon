@@ -50,19 +50,28 @@ comments : true
  - $\hat r_{ui} = x^T_u y_i$
 
 
-<center>  
 
 **object**
+<center>  
 
-$min_{xy} r_{ui} \sum (r_{ui} - x^T_u y_i)^2 + \lambda(||x_u||^2 + ||y_i||^2)$
+$min_{xy} \sum (r_{ui} - x^T_u y_i)^2 + \lambda(||x_u||^2 + ||y_i||^2)$
 
 </center>
 
 : 명시적 데이터 셋에서는 선호가 남아있는 값에 한하여 MSE를 진행하고, 과적합을 피하기 위해에 정규화항을 두었습니다. 이때  $\lambda$ 는 정규화를 위해 사용되는 파라미터로 SGD(stochastic gradient descent)를 활용해 계산합니다.
 
 
-
-
+## 4. Our model
+ - $p_{ui}$ = { 1 $r_{ui}$ > 0  |  0 $r_{ui}$ = 0}
+  : 유저의 선호를 0과 1로 나타낸 set (preference of user $u$ to item $i$)  
+  ex) 유저($u$)가 아이템($i$) 소비시 $r_{ui}$ > 0 이며, $p_{ui}$ = 1
+ - $c_{ui} = 1 + \alpha r_{ui}$
+  : implicit 데이터에서 선호를 나타내는 $p_{ui}$만으로는 선호를 확정할 수 없기에 다야한 수준에서 신뢰도를 나타낼 수 있는 지표가 필요하다. 신뢰도의 개념으로 기존 '0'이던 값들도 최소한의 신뢰도 수준에서 값을 지닐 수 있게 되며, preference가 존재하는 값은 $\alpha$에 비례해 커지게 된다.($\alpha$ = 40)
+ - Goal
+  : 목표는 기존의 MF와 동일하게 user-factor & item-factor의 잠재요인을 찾아내, $p_{ui}$를 계산하는 과정이다. 그러나 이때 아래의 다음 두 가지 차이점이 존재한다.
+   (1) 다양한 신뢰수준($c_{ui}$ 설명(계산)하기
+   (2) 관찰되지 않은 모든 데이터 쌍($u,i$)에 대해서 optimization을 진행
+$$
 
 
 
