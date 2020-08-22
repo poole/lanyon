@@ -85,17 +85,17 @@ $min_{xy} \sum (r_{ui} - x^T_u y_i)^2 + \lambda(||x_u||^2 + ||y_i||^2)$
 
    - step 1
     : 아이템 latent factor 행렬을 고정하고, 사용자의 latent factor를 계산합니다.
-   위 loss funcition에서 $y_i$를 상수로 취급한 다음 미분을 진행하면 되며, 미분 결과 유저 행렬 $x_u$는 다음과 같이 산출됩니다.
-      $x_u = (Y^TC^uY + \lambda I)^{-1}Y^TC^up(u)$
+   위 loss funcition에서 $y_i$를 상수로 취급한 다음 미분을 진행하면 되며, 미분 결과 유저 행렬 $x_u$는 다음과 같이 산출됩니다.<br>
+      $x_u = (Y^TC^uY + \lambda I)^{-1}Y^TC^up(u)$<br>
    다음 초기 랜덤하게 설정된 유저 행렬을 위에서 계산된 값으로 업데이트 해줍니다.  
 
    - step 2
-    : 다음으로 사용자 행렬($x_u$)을 고정하고 아이템의 latent factor를 계산합니다.
-       $y_i = (X^TC^iX + \lambda I)^{-1}X^TC^ip(i)$
+    : 다음으로 사용자 행렬($x_u$)을 고정하고 아이템의 latent factor를 계산합니다.  
+       $y_i = (X^TC^iX + \lambda I)^{-1}X^TC^ip(i)$<br>
    마찬가지로 랜덤하게 설정된 아이템 행렬을 업데이트 시켜줍니다.  
 
    - step 3
-    : 위의 과정을 통해 최적의 user & item 행렬을 찾아내며 보통 이때의 loop 횟수는 10~15회 정도로 설정됩니다.
+    : 위의 과정을 통해 최적의 user & item 행렬을 찾아내며 보통 이때의 loop 횟수는 10~15회 정도로 설정됩니다.<br>
     ALS 결과 업데이트 된 $x_u, y_i$를 곱해 고객 u의 아이템 i에 대한 선호 $\hat p_{ui}$를 계산 할 수 있게 됩니다.
 <center>
 
