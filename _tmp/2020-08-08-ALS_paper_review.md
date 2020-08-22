@@ -49,8 +49,14 @@ comments : true
  - $y_i$ : item(i) & item factor($y_i$)
  - $\hat r_{ui} = x^T_u y_i$
 
- **object**
-<center>$min_{xy} r_{ui} \sum (r_{ui} - x^T_u y_i)^2 + \lambda(||x_u||^2 + ||y_i||^2)$</center>
+
+<center>  
+
+**object**
+
+$min_{xy} r_{ui} \sum (r_{ui} - x^T_u y_i)^2 + \lambda(||x_u||^2 + ||y_i||^2)$
+
+</center>
 
 : 명시적 데이터 셋에서는 선호가 남아있는 값에 한하여 MSE를 진행하고, 과적합을 피하기 위해에 정규화항을 두었습니다. 이때  $\lambda$ 는 정규화를 위해 사용되는 파라미터로 SGD(stochastic gradient descent)를 활용해 계산합니다.
 
