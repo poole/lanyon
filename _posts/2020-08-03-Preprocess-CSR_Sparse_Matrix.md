@@ -2,7 +2,7 @@
 layout: post
 title: CSR_Sparse_Matrix
 date : 08 Aug 2020
-category : DataHandling
+category : ML_Preprocess
 comments : true
 ---
 
