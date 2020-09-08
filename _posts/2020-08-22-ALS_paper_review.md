@@ -102,9 +102,11 @@ $min_{xy} \sum (r_{ui} - x^T_u y_i)^2 + \lambda(||x_u||^2 + ||y_i||^2)$
 $\hat p_{ui} = x_u^T y_i$
 </center>
 
+
+<center>
+
 [![title](/assets/als_title_image.png)](https://github.com/TaeHwanYoun/taehwanyoun.github.io/blob/master/test_code/ALS%20Implementation.ipynb)
-
-
+</center>
 
 
 
