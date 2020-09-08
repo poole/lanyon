@@ -104,7 +104,7 @@ $\hat p_{ui} = x_u^T y_i$
 
 <center>
 
-[![title](/assets/als_title_image.png)](https://github.com/TaeHwanYoun/taehwanyoun.github.io/blob/master/test_code/ALS%20Implementation.ipynb)
+[[title](/assets/als_title_image.png)](https://github.com/TaeHwanYoun/taehwanyoun.github.io/blob/master/test_code/ALS%20Implementation.ipynb)
 
 </center>
 
