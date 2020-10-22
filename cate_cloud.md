@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Crawler
+title: Cloud
 ---
 {% for post in site.posts %}
   {% if post.category == 'Cloud' %}

@@ -2,7 +2,7 @@
 layout: post
 title: NaverNews_Crawler
 date : 16 Oct 2020
-category : Crawler
+category : etc
 comments : true
 ---
 # Naver News Cralwer

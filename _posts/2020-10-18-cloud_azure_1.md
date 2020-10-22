@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Cloud Intro
+title: Cloud Azure 1
 date : 18 Oct 2020
 category : Cloud
 comments : true
