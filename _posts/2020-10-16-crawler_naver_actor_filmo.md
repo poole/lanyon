@@ -1,14 +1,35 @@
 ---
 layout: post
-title: NaverNews_Crawler
+title: NaverNews_Crawler : tab 화면 전환
 date : 16 Oct 2020
 category : etc
 comments : true
 ---
-# Naver News Cralwer
+# naver & wikipedia crawler
+## switch window...@ㅁ@
+: 네이버 뉴스 및 위키피디아를 사용해, 특정 배우의 filmo graphy와, 학력, 나이 등의 기본 정보를 스크랩핑해야 하는 상황이 생겼다.  
+  
+프로세스는 해당 배우의 이름(query)을 검색한 후, **'더보기'** 버튼을 클릭해서, 세부 내용을 가져오는 어렵지 않은 과정이었다.  
+
+문제는 셀레니움 패키지를 사용해 **'더보기'** 버튼을 클릭할 시, 새로운 창이 뜨게 되는데, 새롭게 생겨난 창을 Driver가 잡지 못하면서 해당 페이지의 정보를 가져오지 못하게 된다.   
+
+이렇게 새로운 탭이 생성되는 경우, `driver.switch_to.window(driver.window_handles[0])` 코드를 사용해, 탭의 위치를 지정해주어야 한다.
+
+```python
+# sample code
+naver_url = str(basic_url + '&query=' + actor)
+driver = webdriver.Chrome('./chromedriver')
+
+driver.get(naver_url)
+more_btn = driver.find_element_by_xpath('//*[@id="people_info_z"]/div[3]/a')
+more_btn.click()
+
+driver.switch_to.window(driver.window_handles[0])
+```
 
 
 ```python
+# full code
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from datetime import datetime, timedelta, date
@@ -18,6 +39,8 @@ import re
 from math import *
 import time
 import wikipediaapi
+
+actor_list = ['이민정','배수지', '박은빈', '공유']
 
 listForDF = []
 for actor in actor_list :

@@ -2,7 +2,7 @@
 layout: post
 title: Cloud Azure 1
 date : 18 Oct 2020
-category : Cloud
+category : cloud
 comments : true
 ---
 
