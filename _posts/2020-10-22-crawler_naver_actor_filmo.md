@@ -1,14 +1,14 @@
 ---
 layout: post
 title: NaverNews_Crawler : tab 화면 전환
-date : 16 Oct 2020
+date : 22 Oct 2020
 category : etc
 comments : true
 ---
 # naver & wikipedia crawler
 ## switch window...@ㅁ@
 : 네이버 뉴스 및 위키피디아를 사용해, 특정 배우의 filmo graphy와, 학력, 나이 등의 기본 정보를 스크랩핑해야 하는 상황이 생겼다.  
-  
+
 프로세스는 해당 배우의 이름(query)을 검색한 후, **'더보기'** 버튼을 클릭해서, 세부 내용을 가져오는 어렵지 않은 과정이었다.  
 
 문제는 셀레니움 패키지를 사용해 **'더보기'** 버튼을 클릭할 시, 새로운 창이 뜨게 되는데, 새롭게 생겨난 창을 Driver가 잡지 못하면서 해당 페이지의 정보를 가져오지 못하게 된다.   
