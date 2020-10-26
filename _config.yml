@@ -1,17 +1,17 @@
 # Setup
-title:               Lanyon
-tagline:             'A Jekyll theme'
-description:         'A reserved <a href="https://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:                 https://lanyon.getpoole.com
+title:               Tomato
+tagline:             '토마토는 맛있어'
+description:         '백엔드 개발자 꿈나무의 블로그입니다.'
+url:                 https://ssseungzz.github.io
 baseurl:             ''
 paginate:            5
 permalink:           pretty
 
 # About/contact
 author:
-  name:              Mark Otto
-  url:               https://twitter.com/mdo
-  email:             markdotto@gmail.com
+  name:              Seunghyeon-Kim
+  url:               
+  email:             ssseungzz7@gmail.com
 
 # Gems
 plugins:
