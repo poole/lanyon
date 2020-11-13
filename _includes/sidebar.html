@@ -8,7 +8,7 @@
     <p>{{ site.description }}</p>
   </div>
 
-  <nav class="theme-base-0a">
+  <nav class="layout-reverse theme-base-0e">
     <a class="sidebar-nav-item{% if page.title == 'Home' %} active{% endif %}" href="{{ '/' | absolute_url }}">Home</a>
 
     {% comment %}
@@ -20,7 +20,9 @@
     {% for node in pages_list %}
       {% if node.title != null %}
         {% if node.layout == "page" %}
-          <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url | absolute_url }}">{{ node.title }}</a>
+          <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url | absolute_url }}">
+            {{ node.title }}
+          </a>
         {% endif %}
       {% endif %}
     {% endfor %}
@@ -36,9 +38,4 @@
 
   </nav>
 
-  <div class="sidebar-item">
-    <p>
-      &copy; {{ site.time | date: '%Y' }}. All rights reserved.
-    </p>
-  </div>
 </div>

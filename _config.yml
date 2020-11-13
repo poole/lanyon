@@ -6,7 +6,7 @@ url:                 https://dondon17.github.io
 baseurl:             ''
 paginate:            5
 permalink:           pretty
-
+logo:                '/public/apple-touch-icon-precomposed.png'
 # About/contact
 author:
   name:              DOWOON KIM
@@ -21,5 +21,6 @@ plugins:
   - jekyll-paginate
 
 # Custom vars
-version:             1.1.0
+mathjax: true
+google_analytics_token: ''
 google_analytics_id: #UA-XXXX-Y
