@@ -3,12 +3,12 @@
 <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
 
 <!-- Toggleable sidebar -->
-<div class="sidebar" id="sidebar">
+<div class="layout-reverse theme-base-0e" id="sidebar">
   <div class="sidebar-item">
     <p>{{ site.description }}</p>
   </div>
 
-  <nav class="layout-reverse theme-base-0e">
+  <nav class="sidebar-nav">
     <a class="sidebar-nav-item{% if page.title == 'Home' %} active{% endif %}" href="{{ '/' | absolute_url }}">Home</a>
 
     {% comment %}
