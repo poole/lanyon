@@ -8,7 +8,7 @@
     <p>{{ site.description }}</p>
   </div>
 
-  <nav class="sidebar-nav">
+  <nav class="theme-base-0a">
     <a class="sidebar-nav-item{% if page.title == 'Home' %} active{% endif %}" href="{{ '/' | absolute_url }}">Home</a>
 
     {% comment %}
@@ -25,9 +25,15 @@
       {% endif %}
     {% endfor %}
 
-    <a class="sidebar-nav-item" href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">Download</a>
-    <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub project</a>
-    <!-- <span class="sidebar-nav-item">Currently v{{ site.version }}</span> -->
+    <a class="sidebar-nav-item" href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">
+      Download
+    </a>
+    <a class="sidebar-nav-item" href="{{ site.github.repo }}">
+      GitHub project
+    </a>
+    <span class="sidebar-nav-item">정보처리기사</span>
+    <span class="sidebar-nav-item">알고리즘 풀이</span>
+
   </nav>
 
   <div class="sidebar-item">
