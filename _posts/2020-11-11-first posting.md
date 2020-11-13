@@ -10,4 +10,5 @@ title: 첫번째 포스팅
 지금은 그래도 수월하게 진행되는 것 같아 조금 흥미를 느끼고 있는 것 같다. 
 
 주 전공이 개발은 아니지만 요즘 시대에 개발해서 안 좋을게 없으니 열심히 해야겠다.
-> github: [dondon17](https://github.com/dondon17)
+> Github: [dondon17](https://github.com/dondon17)
+> Facebook: [25dons](https://www.facebook.com/25dons)
