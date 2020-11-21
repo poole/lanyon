@@ -17,6 +17,8 @@
 /*
  * Contents
  *
+ * CSS variables
+ *
  * Global resets
  * Masthead
  * Sidebar
@@ -26,6 +28,45 @@
  * Reverse layout
  * Themes
  */
+
+ /*
+ * CSS variables
+ *
+ * Contains reused variables for this file.
+ * Variables shared with Poole are included as fallbacks and prefixed with "lanyon".
+ */
+
+:root {
+	--lanyon-masthead-color: #505050;
+	--lanyon-subtitle-color: #c0c0c0;
+
+	--lanyon-post-date-color: #9a9a9a;
+	--lanyon-related-date-color: #999;
+	--lanyon-related-link-hover-color: inherit;
+	--lanyon-pagination-color: #ccc;
+	--lanyon-pagination-hover-background-color: #f5f5f5;
+
+	--lanyon-link-color: #268bd2;
+	--lanyon-header-color: #313131;
+
+	--lanyon-bold-color: #303030;
+
+	--lanyon-layout-border-color: #eee;
+
+	--sidebar-color: rgba(255,255,255,.6);
+	--sidebar-background-color: #202020;
+	--sidebar-overlay-box-shadow-color: rgba(0,0,0,.1);
+
+	--sidebar-nav-link-color: #fff;
+	--sidebar-nav-active-color: rgba(255,255,255,.1);
+	--sidebar-nav-active-border-color: transparent;
+
+	--sidebar-toggle-inactive-color: #505050;
+	--sidebar-toggle-inactive-background-color: #fff;
+
+	--sidebar-toggle-active-color: #fff;
+	--sidebar-toggle-active-background-color: #555;
+}
 
 
 /*
@@ -47,7 +88,7 @@ html {
 h1, h2, h3, h4, h5, h6 {
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-weight: 400;
-  color: #313131;
+  color: var(--header-color, var(--lanyon-header-color));
   letter-spacing: -.025rem;
 }
 
@@ -97,20 +138,20 @@ h1, h2, h3, h4, h5, h6 {
   padding-top:    1rem;
   padding-bottom: 1rem;
   margin-bottom: 3rem;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--layout-border-color, var(--lanyon-layout-border-color));
 }
 .masthead-title {
   margin-top: 0;
   margin-bottom: 0;
-  color: #505050;
+  color: var(--masthead-color, var(--lanyon-masthead-color));
 }
 .masthead-title a {
-  color: #505050;
+  color: var(--masthead-color, var(--lanyon-masthead-color));
 }
 .masthead-title small {
   font-size: 75%;
   font-weight: 400;
-  color: #c0c0c0;
+  color: var(--subtitle-color, var(--lanyon-subtitle-color));
   letter-spacing: 0;
 }
 
@@ -150,8 +191,8 @@ h1, h2, h3, h4, h5, h6 {
   overflow-y: auto;
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-size: .875rem; /* 15px */
-  color: rgba(255,255,255,.6);
-  background-color: #202020;
+  color: var(--sidebar-color);
+  background-color: var(--sidebar-background-color);
   -webkit-transition: all .3s ease-in-out;
           transition: all .3s ease-in-out;
 }
@@ -164,7 +205,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Sidebar content */
 .sidebar a {
   font-weight: normal;
-  color: #fff;
+  color: var(--sidebar-nav-link-color);
 }
 .sidebar-item {
   padding: 1rem;
@@ -175,19 +216,19 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Sidebar nav */
 .sidebar-nav {
-  border-bottom: 1px solid rgba(255,255,255,.1);
+  border-bottom: 1px solid var(--sidebar-nav-active-color);
 }
 .sidebar-nav-item {
   display: block;
   padding: .5rem 1rem;
-  border-top: 1px solid rgba(255,255,255,.1);
+  border-top: 1px solid var(--sidebar-nav-active-color);
 }
 .sidebar-nav-item.active,
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
   text-decoration: none;
-  background-color: rgba(255,255,255,.1);
-  border-color: transparent;
+  background-color: var(--sidebar-nav-active-color);
+  border-color: var(--sidebar-nav-active-border-color);
 }
 
 @media (min-width: 48em) {
@@ -217,8 +258,8 @@ a.sidebar-nav-item:focus {
   display: flex;
   align-items: center;
   padding: .25rem .75rem;
-  color: #505050;
-  background-color: #fff;
+  color: var(--sidebar-toggle-inactive-color);
+  background-color: var(--sidebar-toggle-inactive-background-color);
   border-radius: .25rem;
   cursor: pointer;
 }
@@ -234,8 +275,8 @@ a.sidebar-nav-item:focus {
 .sidebar-toggle:active,
 #sidebar-checkbox:focus ~ .sidebar-toggle,
 #sidebar-checkbox:checked ~ .sidebar-toggle {
-  color: #fff;
-  background-color: #555;
+  color: var(--sidebar-toggle-active-color);
+  background-color: var(--sidebar-toggle-active-background-color);
 }
 
 .sidebar-toggle:active:before,
@@ -311,7 +352,7 @@ a.sidebar-nav-item:focus {
 .page-title,
 .post-title,
 .post-title a {
-  color: #303030;
+  color: var(--bold-color, var(--lanyon-bold-color));
 }
 .page-title,
 .post-title {
@@ -323,14 +364,14 @@ a.sidebar-nav-item:focus {
   display: block;
   margin-top: -.5rem;
   margin-bottom: 1rem;
-  color: #9a9a9a;
+  color: var(--post-date-color, var(--lanyon-post-date-color));
 }
 
 /* Related posts */
 .related {
   padding-top: 2rem;
   padding-bottom: 2rem;
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--layout-border-color, var(--lanyon-layout-border-color));
 }
 .related-posts {
   padding-left: 0;
@@ -341,14 +382,14 @@ a.sidebar-nav-item:focus {
 }
 .related-posts li small {
   font-size: 75%;
-  color: #999;
+  color: var(--related-date-color, --lanyon-related-date-color));
 }
 .related-posts li a:hover {
-  color: #268bd2;
+  color: var(--link-color, --lanyon-link-color));
   text-decoration: none;
 }
 .related-posts li a:hover small {
-  color: inherit;
+  color: var(--related-link-hover-color, var(--lanyon-related-link-hover-color));
 }
 
 
@@ -364,7 +405,7 @@ a.sidebar-nav-item:focus {
   margin-left: -1rem;
   margin-right: -1rem;
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
-  color: #ccc;
+  color: var(--pagination-color, var(--lanyon-pagination-color));
   text-align: center;
 }
 
@@ -372,7 +413,7 @@ a.sidebar-nav-item:focus {
 .pagination-item {
   display: block;
   padding: 1rem;
-  border: 1px solid #eee;
+  border: 1px solid var(--layout-border-color, var(--lanyon-layout-border-color));
 }
 .pagination-item:first-child {
   margin-bottom: -1px;
@@ -380,7 +421,7 @@ a.sidebar-nav-item:focus {
 
 /* Only provide a hover state for linked pagination items */
 a.pagination-item:hover {
-  background-color: #f5f5f5;
+  background-color: var(--pagination-hover-background-color, var(--lanyon-pagination-hover-background-color));
 }
 
 @media (min-width: 30em) {
@@ -546,13 +587,13 @@ a.pagination-item:hover {
           transform: translateX(0);
 }
 .sidebar-overlay #sidebar-checkbox:checked ~ .sidebar-toggle {
-  box-shadow: 0 0 0 .25rem #fff;
+  box-shadow: 0 0 0 .25rem var(--sidebar-toggle-active-color);
 }
 .sidebar-overlay #sidebar-checkbox:checked ~ .sidebar {
-  box-shadow: .25rem 0 .5rem rgba(0,0,0,.1);
+  box-shadow: .25rem 0 .5rem var(--sidebar-overlay-box-shadow-color);
 }
 
 /* Only one tweak for a reverse layout */
 .layout-reverse.sidebar-overlay #sidebar-checkbox:checked ~ .sidebar {
-  box-shadow: -.25rem 0 .5rem rgba(0,0,0,.1);
+  box-shadow: -.25rem 0 .5rem var(--sidebar-overlay-box-shadow-color);
 }
