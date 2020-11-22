@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 첫번째 포스팅
+category: daily
 ---
 
 처음 github.io를 알게된지 2년이 더 넘었지만, 오늘 처음으로 포스팅을 시작하게 되었다.
