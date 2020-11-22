@@ -1,7 +1,8 @@
 ---
 layout: default
-title: "HELLO DONDON"
-# comments: true
+title: dondon
+subtitle: About me
+comments: true
 tags: [jekyll, github, markdown]
 ---
 
