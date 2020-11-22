@@ -1,12 +1,13 @@
 # Setup
 title:               dondon
 tagline:             'blog'
-description:         'Today I Learned'
+description:         '오늘보다 나은 내일이 되길...🙏🏻'
 url:                 https://dondon17.github.io
 baseurl:             ''
 paginate:            5
 permalink:           pretty
 logo:                '/public/apple-touch-icon-precomposed.png'
+
 # About/contact
 author:
   name:              DOWOON KIM
@@ -15,6 +16,7 @@ author:
     email:           qwerqw889@ajou.ac.kr
     github:          https://github.com/dondon17
     facebook:        https://www.facebook.com/25dons
+    instagram:       https://www.instagram.com/25dons
 
 # Gems
 plugins:
