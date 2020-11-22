@@ -1,7 +1,7 @@
 # Setup
 title:               dondon
 tagline:             'blog'
-description:         '오늘보다 나은 내일이 되길...🙏🏻'
+description:         'TIL🙏🏻'
 url:                 https://dondon17.github.io
 baseurl:             ''
 paginate:            5
