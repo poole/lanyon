@@ -9,7 +9,7 @@ tags: [jekyll, github, markdown]
 # About me
 
 <p align="center">
-    <img src="https://github.com/dondon17/dondon17.github.io/blob/master/image/profileimg1.jpg?raw=true">
+    <img src="https://github.com/dondon17/dondon17.github.io/blob/master/image/profileimg.jpg?raw=true">
 </p>
 
 > 🔴Name : Dowoon Kim
