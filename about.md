@@ -7,7 +7,7 @@ tags: [jekyll, github, markdown]
 ---
 
 # About me
-![profile](https://github.com/WonHeeSoo/GitBook_StudyBook/blob/master/image/Image%20Example.PNG?raw=true)
+![profile](https://github.com/dondon17/dondon17.github.io/blob/master/image/profileimg1.jpg?raw=true)
 
 > 🎂Birth : JAN 07 1997
 > 
