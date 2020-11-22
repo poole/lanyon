@@ -24,3 +24,6 @@ plugins:
 mathjax: true
 google_analytics_token: ''
 google_analytics_id: #UA-XXXX-Y
+
+category_dir: category/
+tag_dir: tag/
