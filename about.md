@@ -1,7 +1,7 @@
 ---
-layout: page
+layout: default
 title: "HELLO DONDON"
-comments: true
+# comments: true
 tags: [jekyll, github, markdown]
 ---
 
