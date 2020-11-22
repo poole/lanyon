@@ -1,18 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- 헤더를 아래와 같이 포함 -->
+  <!-- head 태그의 내용을 독립적인 파일로 만들어서 관리 
+       이렇게 하면 여러 페이지에 동일한 헤더를 간단하게 적용시킬 수 있음-->
   {% include head.html %}
-<body class="theme-base-0d">
-  {% include sidebar.html %}
-
-</body>
-</html>
-
-  <body class="theme-base-0e">
-
+  <body class="theme-base-0d">
+    <!-- 사이드바 추가 부분 -->
+    <!-- 사이드바 element들 변경하려면 sidebar.html 에서 변경하면 됨 -->
     {% include sidebar.html %}
-
-    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
-         content to avoid any CSS collisions with our real content. -->
     <div class="wrap">
       <div class="masthead">
         <div class="container">
@@ -26,10 +21,9 @@
       <div class="container content">
         {{ content }}
       </div>
+      
+      <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+      <script src='{{ site.baseurl }}/public/js/script.js'></script>
     </div>
-
-    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
-
-    <script src='{{ site.baseurl }}/public/js/script.js'></script>
   </body>
 </html>
