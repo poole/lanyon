@@ -1,7 +1,7 @@
 # Setup
-title:               don's
+title:               don's blog
 tagline:             blog
-description:         오늘보다 나은 내일을 살 수 있기를
+description:         오늘보다 나은 내일을 살자
 url:                 https://dondon17.github.io
 baseurl:             ''
 paginate:            5
