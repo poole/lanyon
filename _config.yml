@@ -1,17 +1,17 @@
 # Setup
 title:               Lanyon
-tagline:             'A Jekyll theme'
+tagline:             'musings'
 description:         'A reserved <a href="https://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:                 https://lanyon.getpoole.com
+url:                 monikernemo.github.io
 baseurl:             ''
 paginate:            5
 permalink:           pretty
 
 # About/contact
 author:
-  name:              Mark Otto
-  url:               https://twitter.com/mdo
-  email:             markdotto@gmail.com
+  name:              Lee Yi Quan
+  url:               https://twitter.com/yiquannieee
+  email:             leeyiquan95@gmail.com
 
 # Gems
 plugins:
