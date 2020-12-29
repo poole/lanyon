@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Standardize vs Normalize vs Regularize
-date : 20 Oct 2020
+date : 30 Nov 2020
 category : ML_Preprocess
 comments : true
 ---
@@ -56,7 +56,8 @@ df = df[df['col_std'].between(-2,2)] # outlier detection
 
 <br>
 
- ###### \+ 위 방법들은 독립적이지 않고, 아래와 같이 두 방법을 모두 거쳐 사용하기도 한다.
+###### \+ 위 방법들은 독립적이지 않고, 아래와 같이 두 방법을 모두 거쳐 사용하기도 한다.
+
  - (1) Standardization(표준화)으로 outlier 제거하기
  - (2) Normalization(정규화)으로 scale의 상대적 크기 영향력을 줄여 분석에 투입
 
@@ -81,36 +82,35 @@ df = df[df['col_std'].between(-2,2)] # outlier detection
  #  [ 0.  1.  2.]]
  ```
 
- ### 1) L1-Norm : Lasso
- **- 목표** : 절대값 함수는 0에서 미분이 불가하기에, Sparse한 모델을 트레이닝할때, 불필요한 변수의 파라미터를 완전히 0으로 만들 수 있어 차원을 줄이는데 효과적이다.
+### 1) L1-Norm : Lasso
+**- 목표** : 절대값 함수는 0에서 미분이 불가하기에, Sparse한 모델을 트레이닝할때, 불필요한 변수의 파라미터를 완전히 0으로 만들 수 있어 차원을 줄이는데 효과적이다.
 
 <center>
 
 ${\lVert x \rVert}_p = \sqrt[p]{\sum_{i = 1}^{n} {\lvert x_i \rvert}^p}$
 </center>
-```python
-X_normalized_l1 = preprocessing.normalize(X, norm='l1')
-print(X_normalized_l1)
-# [[-0.5   0.   0.5]
-#  [  0.   0.3  0.67]]
 
-# Absolute value of all elements/features.
-X_abs = np.abs(X_normalized_l1)
-print(X_abs)
-# [[0.5   0.   0.5]
-#  [0     0.3  0.67]]
+ ```python
+ X_normalized_l1 = preprocessing.normalize(X, norm='l1')
+ print(X_normalized_l1)
+ # [[-0.5   0.   0.5]
+ #  [  0.   0.3  0.67]]
 
-# Sum over the rows.
-X_sum_abs = np.sum(X_abs, axis=1)
-print(X_sum_abs)
-# Output,
-# [ 1.  1.]
+ # Absolute value of all elements/features.
+ X_abs = np.abs(X_normalized_l1)
+ print(X_abs)
+ # [[0.5   0.   0.5]
+ #  [0     0.3  0.67]]
 
-# Yay! Each row sums to 1 after being normalized.
-```
+ # Sum over the rows.
+ X_sum_abs = np.sum(X_abs, axis=1)
+ print(X_sum_abs)
+ # Output,
+ # [ 1.  1.]
 
+ # Yay! Each row sums to 1 after being normalized.
+ ```
 
- ### 2) L2-Norm : Ridge
 **- 목표** : 반면 L2는 변수의 파라미터를 완전히 0으로 만들지 않기에,
 주어진 조건이 명확하지 않거나 부족한 *ill-posed problem*에서 더 자주 선호됩니다.
 <center>

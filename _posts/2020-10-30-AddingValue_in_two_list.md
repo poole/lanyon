@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Adding values ​​in two lists
-date : 20 Oct 2020
+date : 30 Oct 2020
 category : ML_Preprocess
 comments : true
 ---
