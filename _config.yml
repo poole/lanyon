@@ -1,9 +1,9 @@
 # Setup
-title:               Lanyon
-tagline:             'A Jekyll theme'
+title:               'Noah Kennedy'
+tagline:             'Data Engineer, among other things. Based out of Washington, D.C.'
 description:         'A reserved <a href="https://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
 url:                 http://lanyon.getpoole.com
-baseurl:             'http://noahfkennedy.github.io/lanyon-nkSite/'
+baseurl:             ''
 paginate:            5
 permalink:           pretty
 
