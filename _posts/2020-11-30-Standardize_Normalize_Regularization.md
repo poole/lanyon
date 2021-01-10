@@ -25,6 +25,7 @@ comments : true
 from sklearn.preprocessing import MinMaxScaler
 scaler = MInMaxScaler()
 df[:] = scaler.fit_transform(df[:])
+df[:] = scaler.fit_transform(df['col_1']) # 하나의 열에 한하여 Normalization을 진행하고 싶은 경우,
 ```
 
 #### (2) Mean Normalization[-1~1]
@@ -83,7 +84,7 @@ df = df[df['col_std'].between(-2,2)] # outlier detection
  ```
 
 ### 1) L1-Norm : Lasso
-**- 목표** : 절대값 함수는 0에서 미분이 불가하기에, Sparse한 모델을 트레이닝할때, 불필요한 변수의 파라미터를 완전히 0으로 만들 수 있어 차원을 줄이는데 효과적이다.
+**- 목표** : 절대값 함수는 0에서 미분이 불가하기에, Sparse한 모델을 트레이닝할때, 불필요한 변수의 파라미터를 완전히 0으로 만들 수 있어 차원을 줄이는데 유용합니다.
 
 <center>
 
