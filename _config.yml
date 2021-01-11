@@ -1,8 +1,8 @@
 # Setup
-title:               Lanyon
-tagline:             'A Jekyll theme'
+title:               'Noah Kennedy'
+tagline:             'Data Engineer, among other things. Based out of Washington, D.C.'
 description:         'A reserved <a href="https://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:                 https://lanyon.getpoole.com
+url:                 http://lanyon.getpoole.com
 baseurl:             ''
 paginate:            5
 permalink:           pretty
@@ -16,7 +16,14 @@ author:
 # Gems
 plugins:
   - jekyll-paginate
+  - jekyll-theme-lanyon
+  - jekyll-feed
+  - jekyll-sitemap
+
 
 # Custom vars
 version:             1.1.0
-google_analytics_id: UA-146052-15
+google_analytics_id: #UA-XXXX-Y
+
+# Theme
+theme: jekyll-theme-lanyon
