@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Welcome to my Jekyll Site
+title: Welcome to my Site
 published: true
 ---
 
