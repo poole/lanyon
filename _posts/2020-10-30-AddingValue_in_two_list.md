@@ -43,9 +43,26 @@ list_2 = [10,20,30,40]
 #  [11, 23, 35, 47]
 ```
 
+# ETC
+## dict.items() : Get keys & Values from dictionary
+ :  키(Key) & 값(Value) 쌍을 리턴
+```python
+dict_tmp = {"철수": 90, "민수": 85, "영희": 80}
+# dict_items([('민수', 85), ('영희', 80), ('철수', 90)])
+```
+
+## enumerate(list) : Get Index & Value from list
+:  리스트내 인덱스(Index) & 값(Value) 쌍을 리턴.
+```python
+lst_tmp = ['a', 'b', 'c']
+for idx, value in enumerate(lst_tmp)
+  print(idx, value)
+# 0,'a'
+# 1,'b'
+# 2,'c'
+```
 
 
-아무쪼록, 기초가 중요하다는 생각이 다시든다...
 
 #### Refernce
 [1] [Python zip 내장함수](https://medium.com/@hckcksrl/python-zip-%EB%82%B4%EC%9E%A5%ED%95%A8%EC%88%98-95ad2997990)
