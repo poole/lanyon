@@ -3,11 +3,11 @@ layout: page
 title: About
 ---
 
-Born and raised in Arlington, VA, soon to be living in The District.
+Born and raised in Arlington, VA, currently living in Washington, D.C.
 
-I graduated from the University of Delaware in 2019, where I studied Chemical Engineering with a minor in Computer Science. Whoever said you can get a job with just a minor in CS* was right - after college I moved back home and started work as a Data Engineer for a small project within Deloitte Consulting. 
+I graduated from the University of Delaware where I studied Chemical Engineering with a minor in Computer Science. Whoever said you can get a job with just a minor in CS* was right - I've since pivoted to Data Engineering, working on a small project within Deloitte Consulting. 
 
-<img src="images/NoahFloatie.jpg" alt="Noah on an Alpaca Floatie" width="700px">
+<img src="/assets/about/NoahFloatie.jpg" alt="Noah on an Alpaca Floatie" width="700px">
 
 <p>*(I think I'm actually just quoting myself here)</p>
 
