@@ -60,8 +60,40 @@ for i in gen:
 
 
 # 2. How to use generator?
+### (1) 함수로 생성
+: generator를 생성하는 방법은 2가지가 있다.   
+첫번째는 <u>for loop를 통해 값을 하나씩 반환하는 일반 함수를 생성하되</u>, 반횐하는 함수를 `return` 대신 <strong>`yield` </strong>를 사용하는 방법이다.
+```python
+#  data
+df = pd.DataFrame(
+  key_id : ['a','b','c'],
+  value : [1,2,3]
+  )
+
+# make generator
+def gen(df_tmp) :
+  for idx in df_tmp['key_id'] :
+    yield idx
+idx_gen = gen(df_tmp)
+
+# use generator by 'next'
+while True :
+  try :
+    next(idx_gen)
+  except StopIteration :
+    break
+```
 
 
+### (2) Generator expression
+두번째는 <u>generator expression</u>를 사용하는 방법이다.
+```Python
+# make generator by generator expression
+idx_gen = ( i for i in df_tmp.index )
+
+# use generator by 'next'
+next(idx_gen)
+```
 
 
 # 3. What is generator?
@@ -111,7 +143,6 @@ for x in generator(5) :
 
 
 
-
 #### Refernce
-[1] [python generator(제너레이터) 란 무엇인가](https://bluese05.tistory.com/56)
+[1] [python generator(제너레이터) 란 무엇인가](https://bluese05.tistory.com/56)  
 [2] [Value too large for dtype('float64') sklearn.preprocessing .StandardScaler()](https://stackoverflow.com/questions/45886312/value-too-large-for-dtypefloat64-sklearn-preprocessing-standardscaler)
