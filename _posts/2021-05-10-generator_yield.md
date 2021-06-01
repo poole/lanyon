@@ -1,7 +1,7 @@
 ---
 layout: post
 title: generator & yield
-date : 18 Mar 2021
+date : 10 May 2021
 category : ML_Preprocess
 comments : true
 ---
@@ -134,6 +134,30 @@ for x in generator(5) :
 # (7) x 값은 1을 전달 받고 print 된다. (이후 반복)
 ```
 
+# 4. Usage
+## 1) list_sum
+: generator와 dictionary 자료구조를 사용해 시간을 단축한 예제다.
+무수히 많은 리스트가 존재하고, 해당 원소들의 개수를 모두 더해서 카운트해야하는 문제에서 많은 리스트를 제너레이트로 변환하고,
+원소들을 dictionary형태의 key값으로 지정하여 개수를 카운트하였다.
+```python
+def generate_list_sum(target_idx) :
+    """
+     : [a,b,c] + [a,b,f] = {a : 2, b = 2, c = 1, f = 1}
+    """
+    gen_list = (i for i in target_idx)
+    dict_counter = {}
+    while True :
+        try :
+            l = next(gen_list)
+            for k in l :
+                try :
+                    dict_counter[k] += 1
+                except :
+                    dict_counter[k] = 0
+        except StopIteration :
+            break
+    return dict_counter
+```
 
 
 
@@ -145,4 +169,3 @@ for x in generator(5) :
 
 #### Refernce
 [1] [python generator(제너레이터) 란 무엇인가](https://bluese05.tistory.com/56)  
-[2] [Value too large for dtype('float64') sklearn.preprocessing .StandardScaler()](https://stackoverflow.com/questions/45886312/value-too-large-for-dtypefloat64-sklearn-preprocessing-standardscaler)
