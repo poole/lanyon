@@ -1,22 +1,28 @@
 # Setup
-title:               Lanyon
-tagline:             'A Jekyll theme'
-description:         'A reserved <a href="https://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:                 https://lanyon.getpoole.com
+title:               winnie jeng
+tagline:             'class notes'
+# description:         '<a href="https://github.com/winniewjeng" target="_blank">Github</a>.'
+url:                 https://winniewjeng.github.io
 baseurl:             ''
-paginate:            5
+paginate:            3
 permalink:           pretty
 
 # About/contact
 author:
-  name:              Mark Otto
-  url:               https://twitter.com/mdo
-  email:             markdotto@gmail.com
+  name:              Winnie Jeng
+  url:               
+  email:             winniewjeng@gmail.com
 
 # Gems
 plugins:
   - jekyll-paginate
 
 # Custom vars
-version:             1.1.0
-google_analytics_id: UA-146052-15
+excerpt_separator: <!--more-->
+# version:             1.1.0
+# google_analytics_id: UA-146052-15
+
+# KaTex
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
