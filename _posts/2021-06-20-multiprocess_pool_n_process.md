@@ -30,7 +30,34 @@ comments : true
 
   따라서 파이썬에서는 Multi Thread를 사용하더라도, Lock으로 인하여 한번에 하나의 Thread만 실행되기에, 되려 Multi core CPU라고 하더라도 실행시간이 효과가 없거나 되려 늘어나버릴 수 있다.
 
+ 그렇다고 Multi-Thread를 사용할 수 없는 것은 아니다. GIL이 적용도니느 것은 CPU동작에 한해서이며, 쓰레드가 CPU동작을 마치고 I/O작업을 실행하는 동안에는 다른 쓰레드가 CP동작을 동시에 실행 할 수 있다. 따라서 CPU동작이 많지 않고 I/O동작이 더 많은 프로그램에서는 Multi-Thread를 사용하여 큰 효과를 볼 수 있다. (다만 나는 어떤 작업이 CPU가 적고 I/O가 많은지 구별하지 못한다...)
+
+
 # 2. Multi-Processing
+ : 앞선 이유로 Multi-Thread 사용은 제한되지만, `multiprocessing`패키지를 사용하면, 프로세스 자체를 복수로 생성하여 보유하고 있는 CPU를 병렬로 사용할 수 있다. `multiprocessing`는 아래 두가지 방식으로 사용 가능하며, 각 수행해야 하는 테스크에 따라 적합한 방식이 달라진다.
+  - multiprocessing : Pool
+  - multiprocessing : Process
+
+## 1) Pool
+ - Pool은 FIFO(first in, first out) 방식으로 업무를 사용가능한 Processor에게 분배한다. map-reduce방식과 유사하게 작업을 각기 다른 프로세서에게 맵(map)하고, 각 결과를 다시 수집한후(reduce) 결과를 list or array형태로 출력한다. pool은 각 프로세스가 맡은 모든 작업이 끝날 때까지 기다린후 결과를 수집하여 반환하며, 메모리 측면에서 pool은 프로세스에 할당된 작업은 메모리에 올라가지만 실행되지 않은 작업은 메모리에 올라가지 않는다.
+
+
+ - 작동 방식 : 각 프로세스가 맡은 모든 작업이 끝날 때까지 기다린후 결과를 수집하여 반환
+ - output type : list or array
+ - memory :프로세스에 할당된 작업만 메모리에 올라가며(stored in), 그외의 작업은 메모리에서 제외됨(stored out)
+
+
+
+## 2) Process
+ - memory : 프로세스에 모든 메모리를 올려둠(stored in)
+
+## 3) [Pool vs Process] 무엇을 써야할까?
+- *usage* : 작업량이 *적고*, 각 작업이 한번만 진행되면 되는 상황에서는 `multiprocessing.process`가 적합
+- *usage* : 프로세스별로 진행하여 병렬처리를 가능하게 하기에, '간단' & '동일'한 *많은* 작업을 수행할 때 적합
+
+
+
+
 
 
 #### Refernce
