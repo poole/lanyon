@@ -39,24 +39,26 @@ comments : true
   - multiprocessing : Process
 
 ## 1) Pool
- - Pool은 FIFO(first in, first out) 방식으로 업무를 사용가능한 Processor에게 분배한다. map-reduce방식과 유사하게 작업을 각기 다른 프로세서에게 맵(map)하고, 각 결과를 다시 수집한후(reduce) 결과를 list or array형태로 출력한다. pool은 각 프로세스가 맡은 모든 작업이 끝날 때까지 기다린후 결과를 수집하여 반환하며, 메모리 측면에서 pool은 프로세스에 할당된 작업은 메모리에 올라가지만 실행되지 않은 작업은 메모리에 올라가지 않는다.
-
-
+ : Pool은 FIFO(first in, first out) 방식으로 업무를 사용가능한 Processor에게 분배한다. map-reduce방식과 유사하게 작업을 각기 다른 프로세서에게 맵(map)하고, 각 결과를 다시 수집한후(reduce) 결과를 list or array형태로 출력한다. pool은 각 프로세스가 맡은 모든 작업이 끝날 때까지 기다린후 결과를 수집하여 반환하며, 메모리 측면에서 pool은 프로세스에 할당된 작업은 메모리에 올라가지만 실행되지 않은 작업은 메모리에 올라가지 않는다.
  - 작동 방식 : 각 프로세스가 맡은 모든 작업이 끝날 때까지 기다린후 결과를 수집하여 반환
  - output type : list or array
  - memory :프로세스에 할당된 작업만 메모리에 올라가며(stored in), 그외의 작업은 메모리에서 제외됨(stored out)
 
-
-
 ## 2) Process
- - memory : 프로세스에 모든 메모리를 올려둠(stored in)
-
-## 3) [Pool vs Process] 무엇을 써야할까?
-- *usage* : 작업량이 *적고*, 각 작업이 한번만 진행되면 되는 상황에서는 `multiprocessing.process`가 적합
-- *usage* : 프로세스별로 진행하여 병렬처리를 가능하게 하기에, '간단' & '동일'한 *많은* 작업을 수행할 때 적합
+ : 반면 프로세스에 모든 프로세스를 메모리를 올려두고, 작업들을 FIFO 방식으로 스케쥴링한다.
+ - output type : list or array
+ - memory :모든 프로세스가 메모리에 올라감
 
 
+# 3. [Pool vs Process] 무엇을 써야할까?
+- `multiprocessing.pool` : 병렬로 작업해야하는 작업량이 *많으*나 'I/O operation'이 작을 때
+- `multiprocessing.process`: 병렬로 진행해야 하는 작업량이 *적고*, 각 작업이 한번만 진행되면 되는 상황
 
+## 1) Task Number
+ : pool은 실행중인 작업만을 memory에 올려 두기에 task가 많아도 메모리를 모두 차지하지 않는다. 반면 Process는 실행해야하는 모든 작업을 한번에 memory에 올려두기에 작업량이 많으면 메모리 문제를 발생시킬 수 있다.
+
+## 2) I/O operation
+ : pool은 각 process들을 FIFO 방식으로 CPU core에 할당하고, 할당된 process는 순자적으로 실행된다. 따라서 이때 시간이 길게 소요되는 I/O Operation이 있다면, Pool은 I/O operation이 끝날 때 까지 기다리며 process들의 스케쥴을 잡지 않게된다. 이는 결국 큰 시간 소요로 이어지게 된다. 반면 process class는 I/O operation 실행을 잠시 중지하며, 다른 process의 스케쥴을 잡기에 I/O 작업이 길어도 비효율적으로 시간을 소모하지 않는다.
 
 
 
