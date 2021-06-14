@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [Multiprocessing] Pool vs Process
+title: Multiprocessing) Pool vs Process
 date : 30 Jun 2021
 category : ML_Preprocess
 comments : true
@@ -60,11 +60,119 @@ comments : true
 ## 2) I/O operation
  : pool은 각 process들을 FIFO 방식으로 CPU core에 할당하고, 할당된 process는 순자적으로 실행된다. 따라서 이때 시간이 길게 소요되는 I/O Operation이 있다면, Pool은 I/O operation이 끝날 때 까지 기다리며 process들의 스케쥴을 잡지 않게된다. 이는 결국 큰 시간 소요로 이어지게 된다. 반면 process class는 I/O operation 실행을 잠시 중지하며, 다른 process의 스케쥴을 잡기에 I/O 작업이 길어도 비효율적으로 시간을 소모하지 않는다.
 
+# 4. Multi-Processing Code
+```python
+import numpy as np
+import multiprocessing
+import time
+
+# 전체 작업량
+task = list(range(100000000))
+```
+
+## 0) single core
+```python
+start_time = time.time()
+output = 0
+gen = (i for i in task)
+for i in gen :
+    output += i
+print("---%s second ---"% (time.time() - start_time))
+# ---9.102992296218872 second ---
+```
+
+## 1) multiprocess.pool
+```python
+# 1. 작업 분할 및 process 개수 지정
+## 1) 코어 개수 생성
+n_process = 4 #calc_n_procs_core(task)
+
+## 2) 작업분항(job_list) 생성
+job_list = np.array_split(task, n_process)
+
+# 2. multiprocess
+## 1) 실행할 작업 함수
+def list_sum(target_lst) :
+    output = 0
+    gen = (i for i in target_lst)
+    for i in gen :
+        output += i
+    return output
+
+## 2) multiprocess.pool 객체 생성
+start_time = time.time()
+
+if __name__ == '__main__' :
+    lst_tmp = []
+    # multiprocess
+
+    pool = multiprocessing.Pool(processes = n_process)  
+    lst_pool = pool.map(list_sum, job_list)
+    pool.close()
+    pool.join()
+print(sum(lst_pool))
+print("---%s second ---"% (time.time() - start_time
+
+# 4999999950000000
+# ---7.931491851806641 second ---
+```
+
+## 2) multiprocess.Prcoess
+```python
+# 1. 작업 분할 및 process 개수 지정
+## 1) 코어 개수 생성
+# n_process = 4 #calc_n_procs_core(task)
+
+## 2) 작업분항(job_list) 생성
+job_list = np.array_split(task, n_process)
+
+# 2. multiprocess
+## 1) 각 프로세스에서 반환한 Output을 list형태로 묶어주기 위해서 manager 메서드 사용
+manager = multiprocessing.Manager()
+fin_list = manager.list()
+
+## 2) 실행할 작업 함수
+def list_sum(target_lst) :
+    output = 0
+    gen = (i for i in target_lst)
+    for i in gen :
+        output += i
+    fin_list.append(output)
+    return output
+
+## 3) multiprocess.process 객체 생성
+def multiProcess_main() :
+    procs = []
+    for _job in job_list :
+        lst_tmp = []
+        # multiprocess
+        proc = multiprocessing.Process(target = list_sum, args = (_job,))
+        procs.append(proc)
+        proc.start() # 프로세스 시작
+
+    for proc in procs :
+        proc.join() # 프로세스 종료
+
+start_time = time.time()
+if __name__ == '__main__' :
+    multiProcess_main()
+
+print(sum(list(fin_list)))
+print("---%s second ---"% (time.time() - start_time))
+#4999999950000000
+#---6.672454118728638 second ---
+```
+
+
+
 
 
 #### Refernce
 ##### 1. Multi-Processing vs Multi-Thread
 [1] [Thread란?](http://tcpschool.com/java/java_thread_concept)  
 [2] [Thread와 MultiProcessing 차이점](https://www.ellicium.com/python-multiprocessing-pool-process)  
-##### 2. Multi-Processing
-[2] [Python Multiprocessing: Pool vs Process – Comparative Analysis](https://www.ellicium.com/python-multiprocessing-pool-process)  
+##### 2 & 3 . Multi-Processing
+[1] [Python Multiprocessing: Pool vs Process – Comparative Analysis](https://www.ellicium.com/python-multiprocessing-pool-process)
+
+##### 4. Multi-Processing Code
+[1] [[Python] 병렬처리(Multiprocessing)를 통한 연산속도 개선](https://yganalyst.github.io/data_handling/memo_17_parallel/)
