@@ -1,7 +1,8 @@
 .content-tag {
-  text-decoration: underline;
+  text-decoration: underline !important;
+  display: inline !important;
 }
 
 .content-tag:hover {
-  text-decoration: none;
+  text-decoration: none !important;;
 }
