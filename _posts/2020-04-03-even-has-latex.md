@@ -10,3 +10,9 @@ i2=0 \\\
 j=1 \\\
 k=2 \\\
 \end{equation}
+
+\begin{align}
+i2=0 \\\
+j=1 \\
+k=2 \\
+\end{align}
