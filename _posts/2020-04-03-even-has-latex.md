@@ -53,16 +53,16 @@ Don't forget the enclosing `$$`! Otherwise, your newlines won't work:
 
 ```
 \begin{equation}
-i2=0 \\\
-j=1 \\\
-k=2 \\\
+i2=0 \\
+j=1 \\
+k=2 \\
 \end{equation}
 ```
 
 ...becomes...
 
 \begin{equation}
-i2=0 \\\
-j=1 \\\
-k=2 \\\
+i2=0 \\
+j=1 \\
+k=2 \\
 \end{equation}
