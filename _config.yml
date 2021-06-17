@@ -1,11 +1,15 @@
 # Setup
 title:               The Bourbaki Blogchain
 tagline:             'A blogpost track, Bourbaki-style.'
-description:         'For short-term, peer-sourced tests of time, generalizations, specializations, reproductions...'
+description:         'For short-term, peer-sourced tests of time, generalizations, specializations, reproductions, etc.!'
 url:                 https://bourbaki-blogchain.github.io/
 baseurl:             ''
 paginate:            5
 permalink:           pretty
+
+# github
+github:
+  repo: https://github.com/bourbaki-blogchain/bourbaki-blogchain.github.io
 
 # About/contact
 author:
@@ -18,5 +22,5 @@ plugins:
   - jekyll-paginate
 
 # Custom vars
-version:             1.1.0
+version:             ICLR Spring 2021
 google_analytics_id: #UA-XXXX-Y
