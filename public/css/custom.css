@@ -1,18 +1,18 @@
 .content-tag {
-  text-decoration: underline !important;
-  display: inline !important;
+  text-decoration: underline;
+  display: inline;
 }
 
 .content-tag:before {
   content: "#";
-  text-decoration: none !important;
+  text-decoration: none;
 }
 
 .content-tag:after {
   content: " ";
-  text-decoration: none !important;
+  text-decoration: none;
 }
 
 .content-tag:hover {
-  text-decoration: none !important;
+  text-decoration: none;
 }
