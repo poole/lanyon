@@ -3,6 +3,10 @@
   display: inline !important;
 }
 
+.content-tag:before {
+  content: "#"
+}
+
 .content-tag:hover {
   text-decoration: none !important;;
 }
