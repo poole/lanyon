@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Ceci n'est pas un blogpost
+tags: [tutorial, latex]
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rutrum enim in ipsum mattis sollicitudin. Curabitur tristique enim libero, sed facilisis leo lobortis eu. Suspendisse faucibus vestibulum ligula, non ultrices justo interdum ut. Sed gravida iaculis sollicitudin. Integer nec rhoncus quam. Quisque convallis enim blandit sem hendrerit, in malesuada nibh euismod. Nulla sit amet quam quis magna luctus ornare. Sed id leo dignissim, vestibulum magna at, placerat magna. Praesent finibus dolor ac sem vestibulum, ac pretium metus consectetur. Curabitur justo ipsum, egestas vel dignissim sed, pretium a quam. In hac habitasse platea dictumst. Curabitur id risus fringilla odio elementum commodo nec vitae purus. Morbi mollis, tortor a porta gravida, ligula nisi interdum mi, sed dapibus neque mi ut dolor.

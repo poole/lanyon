@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Even has Latex!
+tags: [test, embeds]
 ---
 
 ## How to add $\LaTeX$ commands to your posts:
