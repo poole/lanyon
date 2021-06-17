@@ -1,7 +1,7 @@
 # Setup
-title:               Lanyon
-tagline:             'A Jekyll theme'
-description:         'A reserved <a href="https://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+title:               The Bourbaki Blogchain
+tagline:             'A blogpost track, Bourbaki-style.'
+description:         'For short-term, peer-sourced tests of time, generalizations, specializations, reproductions...'
 url:                 https://bourbaki-blogchain.github.io/
 baseurl:             ''
 paginate:            5
