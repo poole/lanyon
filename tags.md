@@ -39,7 +39,7 @@ The purpose of this snippet is to list all your posts posted with a certain tag.
 =======================
 {% endcomment %}
 {% for tag in tags %}
-	<h2 class="content-tag post-date" id="{{ tag | slugify }}">{{ tag }}</h2>
+	<h2 class="content-tag" id="{{ tag | slugify }}">{{ tag }}</h2>
 	<ul>
 	 {% for post in site.posts %}
 		 {% if post.tags contains tag %}
@@ -50,7 +50,7 @@ The purpose of this snippet is to list all your posts posted with a certain tag.
 		 <small>{{ post.date | date_to_string }}</small>
 		 </a>
 		 {% for tag in post.tags %}
-			 <a class="content-tag post-date" href="tags/#{{ tag | slugify }}">{{ tag }}</a>
+			 <a class="content-tag" href="tags/#{{ tag | slugify }}">{{ tag }}</a>
 		 {% endfor %}
 		 </h3>
 		 </li>
