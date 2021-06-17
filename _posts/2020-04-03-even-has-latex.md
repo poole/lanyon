@@ -3,7 +3,7 @@ layout: post
 title: Even has Latex!
 ---
 
-$ \sum_{i=0}^j \frac{1}{2^n} $
+$ \sum_{i=0}^j \frac{1}{2^n} \times i $
 
 \begin{equation}
 i=0 \\
