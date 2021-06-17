@@ -33,6 +33,7 @@ The following part removes dulpicated tags and invalid tags like blank tag.
 	{% endif %}
 {% endfor %}
 
+<div>
 {% comment %}
 =======================
 The purpose of this snippet is to list all your posts posted with a certain tag.
@@ -58,3 +59,4 @@ The purpose of this snippet is to list all your posts posted with a certain tag.
 	 {% endfor %}
 	</ul>
 {% endfor %}
+</div>
