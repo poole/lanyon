@@ -2,6 +2,7 @@
 layout: post
 title: Example content
 tags: [tutorial, markdown]
+authors: John Doe, Jane Doe
 ---
 
 
