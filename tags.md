@@ -40,7 +40,7 @@ The purpose of this snippet is to list all your posts posted with a certain tag.
 {% endcomment %}
 {% for tag in tags %}
 	<h2 class="content-tag" id="{{ tag | slugify }}">{{ tag }}</h2>
-	<ul>
+	<ul class="related-posts">
 	 {% for post in site.posts %}
 		 {% if post.tags contains tag %}
 		 <li>
