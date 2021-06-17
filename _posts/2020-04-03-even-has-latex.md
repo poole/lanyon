@@ -16,3 +16,9 @@ i2=0 \\\
 j=1 \\
 k=2 \\
 \end{align}
+
+$$\begin{equation}
+i2=0 \\
+j=1 \\
+k=2 \\
+\end{equation}$$
