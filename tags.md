@@ -47,7 +47,7 @@ The purpose of this snippet is to list all your posts posted with a certain tag.
 		 <h3>
           <a href="{{ site.baseurl }}{{ post.url }}">
             {{ post.title }}
-            <small>{{ post.date | date_to_string }} | {% for tag in page.tags %}
+            <small>{{ post.date | date_to_string }} | {% for tag in post.tags %}
     <a class="content-tag" href="/tags/#{{ tag | slugify }}"> {{ tag }} </a>
   {% endfor %}</small>
           </a>
