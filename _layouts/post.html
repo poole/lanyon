@@ -19,7 +19,9 @@ layout: default
         <h3>
           <a href="{{ site.baseurl }}{{ post.url }}">
             {{ post.title }}
-            <small>{{ post.date | date_to_string }}</small>
+            <small>{{ post.date | date_to_string }} | {% for tag in page.tags %}
+    <a class="content-tag" href="/tags/#{{ tag | slugify }}"> {{ tag }} </a>
+  {% endfor %}</small>
           </a>
         </h3>
       </li>

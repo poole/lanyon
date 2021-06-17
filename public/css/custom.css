@@ -4,13 +4,15 @@
 }
 
 .content-tag:before {
-  content: "#"
+  content: "#";
+  text-decoration: none !important;
 }
 
 .content-tag:after {
-  content: " "
+  content: " ";
+  text-decoration: none !important;
 }
 
 .content-tag:hover {
-  text-decoration: none !important;;
+  text-decoration: none !important;
 }
