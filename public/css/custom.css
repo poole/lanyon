@@ -1,0 +1,7 @@
+.content-tag {
+  text-decoration: underline;
+}
+
+.content-tag:hover {
+  text-decoration: none;
+}
