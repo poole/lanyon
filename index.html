@@ -12,7 +12,9 @@ title: Home
       </a>
     </h1>
 
-    <span class="post-date">{{ post.date | date_to_string }}</span>
+    <span class="post-date">{{ post.date | date_to_string }} | {% for tag in page.tags %}
+    <a class="content-tag" href="/tags/#{{ tag | slugify }}"> {{ tag }} </a>
+  {% endfor %}</span>
 
     {{ post.content }}
   </div>
