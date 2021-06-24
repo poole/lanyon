@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Nan vs None
-date : 18 Jun 2021
+date : 24 Jun 2021
 category : env
 comments : true
 ---
