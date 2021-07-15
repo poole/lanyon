@@ -2,10 +2,18 @@
 title:               Noah Kennedy
 tagline:             'Based in D.C.'
 description:         'Chemical Engineer by education, Data Engineer by trade. I geek out about biotech, endurance sports, and good coffee.'
-url:                 https://noahkennedy.co
+url:                 'https://noahkennedy.co'
 baseurl:             ''
-paginate:            5
 permalink:           pretty
+
+# Pagination
+pagination:
+  enabled: true
+  debug: false
+  collections: 'posts'
+  per_page: 5
+  permalink: '/page/:num/'
+  sort_field: 'release_date'
 
 # About/contact
 author:
@@ -15,7 +23,7 @@ author:
 
 # Gems
 plugins:
-  - jekyll-paginate
+  - jekyll-paginate-v2
 
 # Custom vars
 version:             1.1.0. Still working on NK.v.2
