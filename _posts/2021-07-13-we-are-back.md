@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Welcome to my Site
+title: We're back! 
 published: true
 tags: personal ontology
 ---
 
-It's been about 6 months since I first tried to kick off a personal website. There has been some progress - I published an article, created a few pages, and tried for several weeks without results to add a LinkedIn icon to my sidebar. But at some point the progress stopped. The beginning of the end was probably due to my failed attempts at adding a LinkedIn hyper-link, however the full collapse most likely stemmed from a combination of unrelated factors (something something *life got in the way*). 
+It's been about 6 months since I first tried to kick off a personal website. There has been some progress - I published an article, created a few pages, and tried for several weeks without results to add a LinkedIn icon to my sidebar. But at some point the progress stopped. The beginning of the end was likely from getting hung up on LinkedIn URLs, however the full collapse definitely stemmed from combination of unrelated factors (something something *life got in the way*). 
 
-I think there are two lessons here. 
+I think there are two good lessons here -
 
-1. A waterfall approach to personal websites, or software engineering in general, simply doesn't work. In other words, I became caught up in the fine details of making my site 'perfect', and failed to work on what I actually set out to do: write out, flesh out, and publish my thoughts out. This is loosely related to an interesting article a colleague sent me, about the [Skateboard Minimum Viable Product](https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp)
+1. A waterfall approach to personal websites, or software engineering in general, simply doesn't work. In other words, I became caught up in the fine details of making my site 'perfect', and failed to work on what I actually set out to do: write out, flesh out, and publish my thoughts out. This is loosely related to an interesting article a colleague sent me, about the [Skateboard Minimum Viable Product](https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp).
 2. Creativity is, as Abraham Maslow once suggested, only possible if your basic needs and psychological needs are both met. From my seat of at the zenith of privilege, where the majority of the pyramid is filled in, there's kind of an added layer: if life is at all hectic, it becomes pretty hard to be creative (maybe this is just me). 
 
-As I said above, Life got in the way, and I think that's where any and all creative progress came to a halt. Quite a few things happened 
+As I said above, Life got in the way, and I think that's where any and all creative progress came to a halt. Quite a few things happened:
 
 - During February and March, I devoted most of my free time to triathlon, training and racing for the USA Triathlon Elite Draft Legal Race in Clermont, FL. 
 - During March and April, I was on the hunt - job searching and interviews took up most of my free time outside of training and work. 
