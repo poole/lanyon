@@ -12,9 +12,9 @@ exclude:
 sudo: false
 env:
   global:
-  - secure: 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
   - secure: gwKVHnjfH8zBTQZnQIzU9895KBAUcdwIIGLADMp4GNbnLrb0EICZ0DKdcj5xh1ad6FBOyEMLVgLXyDvcKyvGlyzUlRtCKKcDrLkJH6VmV6p1bj2vtZI1/gSASToBFx/v9mdPV+Nxqma5q+AFqfAOnroVzRQlNFoZkfzV0mTj+J55sELaqsnQLz0AZvAxbU6Pw29pouRVItT21+Y4Ml64Zef3ObNPNUplvQdfBgMYkMT7LwiDeCligE8J78ngh8JpHa5YItAcngzAz+eTulZZv0OvdaBo1xAiYTv8nAYX/G4t0CTdA1sBxZ9U9QIcsKlz3NqTJlqULpGUIKTXuLaqJXu7hzhVsNqihdusaFETr6Ay2+iWQS8qq5PP147nWtC2daqncadyXEVfcjR0mQ+Nzrk4hsGzukrydOMd2No9MDtZA4HafaC496fqIZt6rc/1RVZeObSqCsWpwERU+eQu4xehJI03efOjTfH00UKlyDAWqL3Rd2xD1t4x2Jaiir+trpQp2lttcLj9S3p2J0Q4eIvsY5hPA/tWQJxzLlBIKgRt0+auZ0x/LhUHN08bKZiXIuOV+SpHffBfnO/98jLs6S/cfckjBLxt17HgJ6Fyq5eftV1HgTFObz/z2bCpDwnMtofWucgWhiqVM45NzDYVdrmaXkChtfy7+n3hBHvaHJA=
   jobs:
   - USE_NETWORK=true
   - USE_NETWORK=false
   - secure: "<you can also put encrypted vars inside matrix>"
+dist: trusty
