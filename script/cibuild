@@ -14,8 +14,7 @@ rm -rf _site
 mkdir _site
 
 # clone remote repo to "_site"
-gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-command curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
 git clone https://${GH_TOKEN}@github.com/noahfkennedy/noahfkennedy.github.io.git --branch gh-pages _site
 
 # build with Jekyll into "_site"
