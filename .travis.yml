@@ -1,4 +1,8 @@
 language: ruby
+dist: trusty
+install:
+  - gem uninstall bundler
+  - gem install bundler --version '2.2.24'
 branches:
   only:
   - master
@@ -17,4 +21,3 @@ env:
   - USE_NETWORK=true
   - USE_NETWORK=false
   - secure: "<you can also put encrypted vars inside matrix>"
-dist: trusty
