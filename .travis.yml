@@ -1,13 +1,11 @@
 language: ruby
 dist: trusty
-install:
-  - gem uninstall bundler
-  - gem install bundler --version '2.2.24'
+
 branches:
   only:
   - master
 rvm:
-- 2.2.3
+- 3.0.2
 before_script:
 - chmod +x ./script/cibuild
 script: "./script/cibuild"
