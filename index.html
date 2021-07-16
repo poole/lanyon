@@ -1,15 +1,14 @@
 ---
 layout: default
 title: Home
-<!-- pagination:
-  enabled: true -->
+pagination:
+  enabled: true
 ---
 
 <div class="posts">
   {% for post in paginator.posts %}
   <div class="post">
     <h1 class="post-title">
-      anything??? 
       <a href="{{ post.url | absolute_url }}">
         {{ post.title }}
       </a>
