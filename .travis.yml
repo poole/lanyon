@@ -1,8 +1,7 @@
 language: ruby
 dist: trusty
-install:
-  - gem uninstall bundler
-  - gem install bundler
+before_install:
+    - gem install bundler
 branches:
   only:
   - master
