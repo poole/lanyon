@@ -3,7 +3,7 @@ dist: trusty
 before_install:
   - gpg –keyserver hkp://keys.gnupg.net –recv-keys 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
   - gem install bundler:2.2.24
-  - rvm get stable
+  # - rvm get stable
 branches:
   only:
   - master
