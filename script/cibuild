@@ -22,9 +22,16 @@ bundle install
 bundle exec jekyll build
 
 # push
+echo spot 1
 cd _site
+echo spot 2
 git config user.email "noah.kennedy1@gmail.com"
+echo spot 3
 git config user.name "Noah Kennedy"
+echo spot 4
 git add --all
+echo spot 5
 git commit -a -m "Travis #$TRAVIS_BUILD_NUMBER"
+echo spot 6
 git push --force origin gh-pages
+echo spot 7
