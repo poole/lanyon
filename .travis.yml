@@ -7,7 +7,7 @@ branches:
   only:
   - master
 rvm:
-- 1.29.12
+- 1.25.0
 before_script:
 - chmod +x ./script/cibuild
 script: "./script/cibuild"
