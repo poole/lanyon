@@ -1,7 +1,8 @@
 language: ruby
 dist: trusty
-install:
-    - gem install bundler
+before_install:
+  - rvm get stable
+  - gem install bundler
 branches:
   only:
   - master
