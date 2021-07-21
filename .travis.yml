@@ -1,5 +1,7 @@
 language: ruby
 dist: trusty
+rvm:
+- 2.5
 before_install:
   - yes | gem update --system --force
   - gem install bundler:2.2.24
@@ -7,8 +9,6 @@ before_install:
 branches:
   only:
   - master
-rvm:
-- 2.5
 before_script:
 - chmod +x ./script/cibuild
 script: "./script/cibuild"
