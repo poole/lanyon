@@ -13,6 +13,11 @@ set -e
 rm -rf _site
 mkdir _site
 
+# Echo settings 
+ruby --version
+rvm --version
+bundler --version
+
 # clone remote repo to "_site"
 gpg –keyserver hkp://keys.gnupg.net –recv-keys 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
 git clone https://${GH_TOKEN}@github.com/noahfkennedy/noahfkennedy.github.io.git --branch gh-pages _site
