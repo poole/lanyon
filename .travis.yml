@@ -1,6 +1,6 @@
 language: ruby
 dist: trusty
-before_install:
+install:
     - gem install bundler
 branches:
   only:
