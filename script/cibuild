@@ -22,7 +22,6 @@ bundle install
 bundle exec jekyll build
 
 # push
-cd _site
 git config user.email "noah.kennedy1@gmail.com"
 git config user.name "Noah Kennedy"
 git config --list 
