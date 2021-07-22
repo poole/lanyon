@@ -27,4 +27,4 @@ git config user.name "Noah Kennedy"
 git config --list 
 git add --all
 git commit -m "Travis #$TRAVIS_BUILD_NUMBER"
-git push gh-pages
+git push
