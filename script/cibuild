@@ -15,13 +15,13 @@ mkdir _site
 
 # clone remote repo to "_site"
 git clone https://${GH_TOKEN}@github.com/noahfkennedy/noahfkennedy.github.io.git --branch gh-pages _site
-cd _site
 
 # build with Jekyll into "_site"
 bundle install
 bundle exec jekyll build
 
 # push
+cd _site
 git config user.email "noah.kennedy1@gmail.com"
 git config user.name "Noah Kennedy"
 git config --list 
