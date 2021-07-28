@@ -92,6 +92,9 @@ deactivate
 
 ```
 
+# * local default python 꼬이는 문제
+
+
 
 
 #### Refernce
