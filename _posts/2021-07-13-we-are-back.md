@@ -2,6 +2,7 @@
 layout: post
 title: We're back! 
 published: true
+release_date: 2021-07-15
 tags: personal ontology
 ---
 
