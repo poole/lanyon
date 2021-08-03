@@ -20,7 +20,7 @@ comments : true
 
 <center>
 
-"drwxr-xr-x 13 root tand 4096 4 3 0066"
+"drwxr-xr-x 13 root tand 4096 4 3 0066"  
 이 정보를 하나씩 확인하면, 아래와 같다.
 
 <img src = '/assets/linux/linux_file_permission_2.png' width = '80%'>
@@ -36,14 +36,14 @@ comments : true
   - `x`(실행): 파일의 실행 권한 (1)
 
 ## 3. chmod : linux 파일 권한 변경하기   
-<center>
 
- `chmod (옵션) [변경할 권한 값] [변경할 파일]`
+``chmod (옵션) [변경할 권한 값] [변경할 파일]``
 
-</center>
- : 파일 소유자는 `chmod` 명령어를 사용해, 그룹 또는 사용자 전체에게 해당 파일의 권한을 변경해 줄 수 있다.
+
+: 파일 소유자는 `chmod` 명령어를 사용해, 그룹 또는 사용자 전체에게 해당 파일의 권한을 변경해 줄 수 있다.
 권한값을 지정할 때, 권한을 계산하는 방식은 각 권한에 따른 수치를 더하는 방식이다.
 이때 파일이 디렉토리인 경우, -R (대문자) 옵션을 사용해 하위 폴더까지 권한을 변경하면 된다.
+
 #### * 수행할 연산
   - `+` : 권한 추가
   - `-` : 권한 제거
@@ -73,12 +73,12 @@ chmod -R a=rw directory_nm
 
 
 ## 4. chown : linux 파일 소유권을 변경
+
+``chown (옵션) [변경할 유저명 또는 그룹명] [변경할 파일]``
+
+
  : `chmod`는 권한을 변경했다면, `chown`은 파일 및 디렉토리의 <strong>소유권</strong>을 바꾸는 명령어다.
-<center>
 
-`chown (옵션) [변경할 유저명 또는 그룹명] [변경할 파일]`
-
-</center>
 
 ```sh
 # ex_1) test.txt 파일에 대해 소유자를 user1로 바꾼다.
