@@ -27,14 +27,13 @@ comments : true
 </center>
 
 #### * file type
-  - d' : dir
-  - '-' : 일반파일
+  - `d`' : dir
+  - `-` : 일반파일
 
 #### * permission 종류
-  - r(읽기): 파일의 읽기 권한
-  - w(쓰기): 파일의 쓰기 권한
-  - x(실행): 파일의 실행 권한
-
+  - `r`(읽기): 파일의 읽기 권한 (4)
+  - `w`(쓰기): 파일의 쓰기 권한 (2)
+  - `x`(실행): 파일의 실행 권한 (1)
 
 ## 3. chmod : linux 파일 권한 변경하기   
 <center>
@@ -43,22 +42,33 @@ comments : true
 
 </center>
  : 파일 소유자는 `chmod` 명령어를 사용해, 그룹 또는 사용자 전체에게 해당 파일의 권한을 변경해 줄 수 있다.
-권한값을 지정할 때, 권한을 계산하는 방식은 아래의 각 권한에 따른 수치를 더하는 방식이다.
+권한값을 지정할 때, 권한을 계산하는 방식은 각 권한에 따른 수치를 더하는 방식이다.
+이때 파일이 디렉토리인 경우, -R (대문자) 옵션을 사용해 하위 폴더까지 권한을 변경하면 된다.
+#### * 수행할 연산
+  - `+` : 권한 추가
+  - `-` : 권한 제거
+  - `=` : 권한 부여(지정) -> 기존의 권한 속성이 사라짐
 
- - r = 4
- - w = 2
- - x = 1
+#### * 사용자
+  - `u` : user, 소유자
+  - `g` : group, 그룹
+  - `o` : other, 일반 사용자
+  - `a` : all, 모든 사용자
 
+### (1) 권한값을 이용해, 모든 사용자의 권한을 각각 지정하는 경우
 ```sh
 # ex) 소유자 : rwx, 그룹 : r-x, 전체사용자 : r--
 chmod 751 test.txt
-```
-
-이때 파일이 디렉토리인 경우, -R (대문자) 옵션을 사용해 하위 폴더까지 권한을 변경하면 된다.
-
-```sh
 # ex) 소유자 : rwx, 그룹 : r-x, 전체사용자 : r--, 하위 디렉터리 폴더 모두 변경시
 chmod -R 751 file_nm
+```
+
+### (2) 권한을 변경할 사용자를 지정하여 권한을 각각 지정하는 경우
+```sh
+# ex) 그룹에게 쓰기 기능을 추가
+chmod -R g+w directory_nm
+# ex) 모든 사용자에게 읽기,쓰기 권한을 부여
+chmod -R a=rw directory_nm
 ```
 
 
@@ -87,5 +97,6 @@ chown user1:user2 test.txt
 
 
 #### Refernce
-[1] [리눅스 권한(permisson) 설정(chmod,chown)(1)
-](https://velog.io/@wmc1415/%EB%A6%AC%EB%88%85%EC%8A%A4-%EA%B6%8C%ED%95%9Cpermisson-%EC%84%A4%EC%A0%95chmodchown1)
+[1] [리눅스 권한(permisson) 설정(chmod,chown)(1)](https://velog.io/@wmc1415/%EB%A6%AC%EB%88%85%EC%8A%A4-%EA%B6%8C%ED%95%9Cpermisson-%EC%84%A4%EC%A0%95chmodchown1)
+
+[2] [linux 파일, 폴더 권한 변경](https://itworld.gmax8.com/25)
