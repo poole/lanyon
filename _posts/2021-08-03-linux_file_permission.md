@@ -1,6 +1,6 @@
 ---
 layout: post
-title: linux file permission (chown)
+title: linux file permission (chmod & chown)
 date : 03 Aug 2021
 category : linux
 comments : true
@@ -20,8 +20,7 @@ comments : true
 
 <center>
 
-"drwxr-xr-x 13 root tand 4096 4 3 0066"  
-이 정보를 하나씩 확인하면, 아래와 같다.
+"drwxr-xr-x 13 root tand 4096 4 3 0066" 이 정보를 하나씩 확인하면, 아래와 같다.
 
 <img src = '/assets/linux/linux_file_permission_2.png' width = '80%'>
 </center>
