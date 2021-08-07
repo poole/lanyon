@@ -17,12 +17,14 @@ mkdir _site
 git clone https://${GH_TOKEN}@github.com/noahfkennedy/noahfkennedy.github.io.git --branch gh-pages _site
 
 # build with Jekyll into "_site"
+bundle install
 bundle exec jekyll build
 
 # push
 cd _site
 git config user.email "noah.kennedy1@gmail.com"
 git config user.name "Noah Kennedy"
+git config --list 
 git add --all
-git commit -a -m "Travis #$TRAVIS_BUILD_NUMBER"
+git commit -m "Travis #$TRAVIS_BUILD_NUMBER"
 git push --force origin gh-pages
