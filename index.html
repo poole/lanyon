@@ -16,11 +16,12 @@ pagination:
 
     <span class="post-date">{{ post.date | date_to_string }}</span>
 
-    {{ post.content | truncatewords: 45 }}
-    <div></div>
-    <a href="{{ post.url | absolute_url }}">
-      read more ...
-    </a>
+    {{ post.excerpt}}
+    {% if post.content contains site.excerpt_separator %}
+      <a href="{{ post.url | absolute_url }}">
+        read more ...
+      </a>
+    {% endif %}
   </div>
   {% endfor %}
 </div>
