@@ -7,6 +7,8 @@ release_date: 2021-01-10
 
 After messing around with github pages for a bit, and following a simple but effective [guide by Barry Clark](https://github.com/barryclark/jekyll-now) on how to host your first Jekyll site via Github, I decided to play around with a few more themes. 
 
+<!--excerpt-->
+
 Barry's guide was great, and I need to give him the kudos he deserves here. He convinced me that anyone with a propensity for coding and hacking should look at Jekyll blogs instead of Wordpress. He's right - how can I blog about data engineering and coding on a blog that I wrote no code for? 
 
 I've moved on since Barry's guide, since I wanted a bit more control over my own theme. I'm still figuring out how to achieve the same URL elegance without buying my own domain name just yet. The theme I'm using is Lanyon -

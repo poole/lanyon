@@ -16,6 +16,8 @@ pagination:
   sort_field: 'release_date'
   sort_reverse: true
 
+excerpt_separator: "<!--excerpt-->"
+
 
 # About/contact
 author:
