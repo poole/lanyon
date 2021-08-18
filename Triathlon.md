@@ -6,7 +6,7 @@ title: Triathlon Coaching
 I've been competing in endurance sports since a young age. No real pro aspirations but I like to pretend, sometimes. 
 
 <img src="/assets/triathlon/clermont1.jpg" alt="Clermont EDR Day 2" width="700px">
-If you're interested in highly efficient, personal training plans [send me an email](mailto:noah.kennedy1@gmail.com). Rates are $60 a month, negotiable for students and committed junior athletes.
+If you're interested in highly efficient, personal training plans [send me an email](mailto:noah.kennedy1@gmail.com). Rates are negotiable and reasonable; my main reasons to coach are for fun and for practice, not to make money. Committed junior/student athletes rates are especially negotiable. 
 
 ## What you get: 
 - Fully customized training plans updated weekly through TrainingPeaks. 
@@ -19,7 +19,7 @@ If you're interested in highly efficient, personal training plans [send me an em
 - Past president of UD Triathlon, assisted in coaching and leading 50+ athletes. 
 - 2 years coaching athletes of all ranges, from beginners to competitive age groupers. 
 - 10 years of triathlon knowledge.
-- Extensive experience competing at a high level across multiple sports.    
+- Extensive experience competing, often at the national level, across a half dozen sports. 
 &nbsp;
 
 ## Why you should get a coach (criteria and reasons):
@@ -28,6 +28,6 @@ If you're interested in highly efficient, personal training plans [send me an em
 - Self-coaching is hard. Even the best coaches will not have luck self coaching, because subjectivity leaks in. Results come from consistency. Consistency is only possible with objective training. 
 - A good coach will teach you to be a better athlete, permanently. 
 
-<img src="/assets/triathlon/reston2.jpg" alt="Clermont EDR Day 2" width="700px">
+<img src="/assets/triathlon/reston2.jpg" alt="Reston victory" width="700px">
 
 Reach out to find out more. 
