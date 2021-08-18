@@ -6,7 +6,7 @@ release_date: 2021-07-15
 tags: personal ontology
 ---
 
-It's been about 6 months since I first tried to kick off a personal website. There has been some progress - I published an article, created a few pages, and tried for several weeks without results to add a LinkedIn icon to my sidebar. But at some point the progress stopped. <!--excerpt--> 
+It's been about 6 months since I first tried to kick off a personal website. There has been some progress - <!--excerpt--> I published an article, created a few pages, and tried for several weeks without results to add a LinkedIn icon to my sidebar. But at some point the progress stopped. 
 
 The beginning of the end was likely from getting hung up on LinkedIn URLs, however the full collapse definitely stemmed from combination of unrelated factors (something something *life got in the way*). 
 
