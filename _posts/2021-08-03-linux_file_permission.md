@@ -5,6 +5,7 @@ date : 03 Aug 2021
 category : linux
 comments : true
 ---
+
 `#linux, #file, #permission, #chmod, #chown  
 `
 
