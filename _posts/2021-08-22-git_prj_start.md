@@ -66,10 +66,11 @@ $ git push # -u 옵션을 이용하면 다음 push때 이전 히스토리를 기
 
 Git 작업시 주요 브랜치는 master(main)와 develop 이며, 이외에도 기능별 브랜치가 존재하지만 지금 나는 이 두개도 벅차다..ㅎ
 <center>
-<img src = '/assets/git_study/git_branch.png' width = '70%'>
+<img src = '/assets/git_study/git_branch.png' width = '60%'>
 </center>
 
-작업 순서는 아래와 같이 생각하면 된다.
+작업 순서는 아래와 같이 생각하면 된다.  
+<br>
 @ <b>[작업 시작]</b>
 1. `git checkout dev` : git master branch --> dev branch 변경
     (HEAD가 dev 브랜치를 바라보며 변경사항을 저장)
@@ -82,13 +83,13 @@ Git 작업시 주요 브랜치는 master(main)와 develop 이며, 이외에도 �
 2. [branch : master] `git merge "dev"` : dev branch를 merge
 3. [branch : master] `gut push` : 최종 배포할(merge된) 코드를 git에 업로드
 
+###### + branch 주요 commend
 
 ```sh
 ## 1) branch 생성 : master branch에서 develop 이라는 새로운 branch를 만들고 갈아탄다.
 $ git checkout -b dev
 
 ## 2) branch 확인 및 변경 (서버에서 만든 branch가 보이지 않을 땐, pull로 업데이트)
-##
 $ git branch # local
 $ git branch -r # remote 저장소의 branch 확인
 $ git branch -a # local & remote branch 모두 확인
@@ -106,6 +107,6 @@ $ git merge "dev" # merge 하고자 하는 branch명을 써주면 master로 merg
 
 
 #### Refernce
-[1] [git lab 프로젝트 생성하기](https://goldsony.tistory.com/138)
-[2] [git branch & commend](https://www.holaxprogramming.com/2018/11/01/git-commands/)
+[1] [git lab 프로젝트 생성하기](https://goldsony.tistory.com/138)  
+[2] [git branch & commend](https://www.holaxprogramming.com/2018/11/01/git-commands/)  
 [3] [branch Merge하기](https://backlog.com/git-tutorial/kr/stepup/stepup2_4.html)
