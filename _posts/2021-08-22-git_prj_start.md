@@ -12,14 +12,11 @@ comments : true
 github(or gitlab)을 사용하여, 프로젝트를 시작할때 절차별 사항들을 정리해보자.
 
 ## 1. git 서버에 프로젝트 생성하기
-<p>
 : git 프로젝트 생성방법은 아래 링크에 소개되어있는 절차대로 진행하면 쉽게 생성할 수 있다.(간단하기에 링크없이도 진행할 수 있다) <br>
  - [git lab 프로젝트 생성하기](https://goldsony.tistory.com/138)
-
-</p>
+<br>
 
 ## 2. git config
-<p>
 git에 생성한 repository를 다운받기 전,
 실행하고자 하는 local pc에 내가 어떤 git 계정인지 세팅해주어야 한다.
 (git 계정이 private인 경우, 서버에도 해당 계정을 초대/등록해주어야 함.)
@@ -32,14 +29,17 @@ git config --list
 git config --global user.name "git 회원가입 시 입력한 이름"  
 git config --global user.email "git 회원가입 이메일 주소"
 ```
+<br>
 
-</p>
+
 
 ## 3. 로컬 pc에 git서버 clone
 내가 누구인지 설정해주었다면, remote서버내 저장되어 있는 repository를 복사해오자.
 ```sh
 $ git clone "git 주소" # 이때 git 주소는 repository에서 copy.
 ```
+<br>
+
 
 ## 4. 프로젝트 관리하기(매번 할 작업)
 ```sh
@@ -57,9 +57,8 @@ $ git commit -am "이 버전의 변경 내역에 대한 설명" # add + commit
 ## 3) push : remote 서버에 변경 내역 올리기
 $ git push -u origin master
 $ git push # -u 옵션을 이용하면 다음 push때 이전 히스토리를 기억하고 반영
-
 ```
-
+<br>
 
 
 ## 5. Branch 전략
