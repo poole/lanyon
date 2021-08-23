@@ -17,16 +17,98 @@ The year is 2021 and we have a plethora of tools at our disposal to make life mo
 
 The question I ask myself frequently is this: what would my brain be like without all this technology? What would my attention span be like? Would I have less anxiety? What would my days look like without my 90-100 average pickups a day? 
 
-I'm regularly a bit disgusted with how much of my life seems to be wasted by apps and companies trying to monopolize my time, a disgust that I have little control over and no input on. So, I have started taking steps to distance myself from technology. I've added friction points to guard myself against the slip into addictive patterns. This is a comprehensive guide that I plan on updating as time goes on. 
+<!-- Take picture of you + all roommates phones -->
+
+I'm regularly a bit disgusted with how much of my life seems to be wasted by apps and companies trying to monopolize my time, a situation that I have little control over and no input on. So, I have started taking steps to distance myself from technology. I've added guard rails to protect myself against the slip into addictive patterns. This is a comprehensive guide that I plan on updating as time goes on. 
 
 <!-- More information here on an actual ontology, how to adapt this to your devices but also a more theory level,  of identifying -> eliminating -> retrospective -> repeat  -->
 <!-- You need minimum 1 hour to get any meaningful work done. Maybe this isn't true, but pretending that it is helps you protect your time -->
 
-<!-- Also put in screen shots  -->
-
-
-
 <!-- # Framework for Eliminating Addiction Points -->
+
+# Ideology 
+
+<!-- [qkz] As simple as possible!! No big words, only ideas! 
+[qkz] You have time in the FUTURE to band these ideas together into an ideology, this is not the place for that. The ideology will come with time as you continue writing on these ideas.  -->
+
+Below are some of my top reasons for setting guard rails on my technology. 
+
+1. For productivity reasons, I want to live intentionally, purposefully. Mindless Usage gets in the way of hobbies, side projects. 
+2. For mental health reasons, because Mindless Usage increases my general levels of anxiety and prevents me from feeling fulfilled. 
+3. Mindless Usage does not just waste the time being spent mindlessly, it also interrupts large stretches of time and head space before and after. 
+4. Mindless Usage prevents deep work, moments of self awareness/thoughtfulness, states of flow where you feel genuinely *amazing*. 
+
+And, here is a general framework, a philosophy of how Mindless Usage can be curbed. 
+
+**Identification**
+1. Identifying Addictive Patterns allows you to remediate them. The problem is *mindless* addiction, where our conscious self fails to step in. 
+2. In order to identify Addictive Patterns, you need regular retrospectives to reflect on what Mindless Usage was the most problematic. I retrospect on Monday mornings.
+3. Sites with news feeds that encourage *passive consumption* or leverage [variable rewards](https://www.diygenius.com/the-dopamine-loop/) are the most problematic. 
+
+**Remeditation**
+1. A Friction Point is when you add a mindfulness task or pause to the start of a problematic app/site to give your conscious self the chance to avoid a bad habit. 
+2. Whenever possible, apps/sites with Addictive Patterns should have a Friction Point. 
+    - An example of a Friction Point is having a site blocked on Chrome, and needing to open up a browser like Safari to use the site. 
+
+
+The steps below are implementations of this framework. 
+
+----
+
+# Phone Adaptations 
+
+Most of the detailed instructions here are for iPhone - I've switched between iOS and Android several times, landing on Apple for now mainly due to the social implications of not having iMessage. If you have an Android, these steps will still apply, however the implementation will be a little different.
+
+## Coach Tony's Guide
+
+My first introduction to detailed iPhone modifications for better productivity came from [this BetterHumans article by Coach Tony](https://betterhumans.pub/how-to-set-up-your-iphone-for-productivity-focus-and-your-own-longevity-bb27a68cc3d8). It's a behemoth of a read, but I can't recommend it enough. Just don't get distracted when you get on Medium.
+
+Since first reading it, Coach Tony has added a *lot* of extra information, some of which I find to be personal preference. My recommendation is the first 11 steps in his guide, specifically aimed at "Optimizing Single Tasking". 
+
+![The first 11 steps, and the most important](/assets/posts/2021-08-18-21-addictive-tech/CoachTony_Guide.png)
+<sub><sup>Screenshot from the guide. The first 11 steps are the most important<sub><sup>
+
+Some of these steps have changed my relationship with my phone entirely. You might say "wow, this is a long guide, I don't have time for this!", but I promise that the 30-45 minutes this takes will pay dividends in the future. 
+
+On top of Coach Tony's guide, I have a few other recommendations. 
+
+## Grayscale
+
+A phone just should be a tool, but it's a lot more interesting to look at than a hammer or screwdriver. A lot of that appeal comes from the vibrant colors. Putting my phone into grayscale makes it legitimately boring to use, in a good way. Instagram suddenly 
+
+Putting your phone into grayscale
+    - Accessibility > Display and Text Size > Color Filters > On > Grayscale  
+
+This setting is hidden, which is ultimately nice, since it's a pain to remove. If you can leave your phone on grayscale for more than a week, let me know. I always remove it at some point to look at photos and forget to put it back on. 
+
+## Content Restrictions on all your apps. 
+
+You can add a screentime password onto your phone and apply it to certain apps during certain time periods. I have downtime scheduled from 9am-7pm.
+
+![Screentime](/assets/posts/2021-08-18-21-addictive-tech/Screentime2.png)
+<sub><sup>Screentime settings, TIL that grayscale doesn't show in screenshots. <sub><sup>
+
+The nice thing about scheduled downtime is that I can still access my apps with limits, I just need to enter a password and approve it for a set amount of time (15 minutes, an hour, all day). Yes, sometimes this is annoying, and yes, I bypass my limits regularly. But I find that at least half the time when I open an app to use it, I see the restriction and close my phone. These moments are worth the occasional inconvenience. 
+
+To turn this on go to 
+    - Settings > Screen Time > Downtime 
+
+I also have app limits set for things like Chrome and Instagram 
+    - Settings > Screen Time > App Limits 
+
+Lastly, I find that changing my screen time password every month helps me stay aware. The more comfortable I am with the 8 buttons it takes to open Instagram, the less helpful this is. 
+
+## Hide your phone 
+
+I find that if I can see my phone, it can distract me just a little bit. If I'm doing important/urgent work, then this isn't a problem, but if I'm in a highly procrastinatory mood then my brain is in total flight-from-responsibilities mode. So, I take my phone and chuck it onto the couch. Or I put it in my silverware drawer. Sometimes I put it in the bathroom, and if it's really bad, I put it in a first class envelope with my return address and drop it in the nearest mailbox (it'll come back eventually, right?) 
+
+I'm kidding on the last part, but I'm serious when I say that this is plain and simple the most effective strategy. The hard part is remembering that you're happier with addictive technology away from your working environment. 
+
+Sadly, sometimes with my phone in the other room, I still waste my own time on my computer.  The fucked up part about technology is that it makes it all too easy to avoid work. Laziness is rewarded with dopamine hits, and I rarely need to break through the wall of procrastination. 
+
+Because of this, I've worked to implement similar strategies on my computer, so that I can own more of my time.
+
+---
 
 # Computer Adaptations
 
@@ -38,22 +120,6 @@ What are my goals here? Primarily, I want to remove *immediate* access from site
 
 Most of these tools involve Chrome extensions, because I personally use Chrome with a 3rd party search as default. Plenty of articles have been written about the pro's and con's of alternative browsers, such as these [qkz], however I still haven't yet made the jump. 
 
-----
-
-# Phone Adaptations 
-
-Most of the detailed instructions here are for iPhone - I've switched between iOS and Android several times, landing on Apple for now mainly due to the social implications of not having iMessage. If you have an Android, these steps will still apply, however the implementation will be a little different.
-
-## Coach Tony's Guide
-
-My first introduction to detailed iPhone modifications for better productivity came from [this BetterHumans article by Coach Tony](https://betterhumans.pub/how-to-set-up-your-iphone-for-productivity-focus-and-your-own-longevity-bb27a68cc3d8). It's a behemoth of a read, but I can't recommend it enough. 
-
-Since first reading it, Coach Tony has added a *lot* of extra information, some of which I find to be personal preference. However, I strongly recommend the first 11 steps in his guide, specifically aimed at "Optimizing Single Tasking". 
-
-![The first 11 steps, and the most important](/assets/posts/2021-08-18-21-addictive-tech/CoachTony_Guide.png)
-<sub><sup>The first 11 steps are the most important<sub><sup>
-
-Some of these steps have changed my relationship with my phone entirely. As I mention at the top, it's important to 
 
 ## Chrome extensions 
 
@@ -89,6 +155,19 @@ The News Feed Eradicator nixes feeds for Instagram, Facebook, Reddit, and a few 
 ### [AdBlocker](https://chrome.google.com/webstore/detail/adblock-plus-free-ad-bloc/cfhdojbkjhnklbpkdaibdccddilifddb) 
 
 I think advertisements are insidious and I try and block as many as I can. If I actually need a novel product, I'm sure that I'll run across it eventually - I don't need a company sneaking in through my interests to tell me that I need something. I don't find myself distracted by ads, but they're designed to catch your eye and they can still interrupt your train of thought.
+
+### [Pause](https://chrome.google.com/webstore/detail/pause-stop-mindless-brows/ljfdccdjpfjpfjbpdiihanpodilolofh?hl=en)
+
+One of my newer extensions and a favorite of mine is Pause. It adds a 5 second pause before getting on a site. The default list of sites is very thorough, but you can also add new sites. 
+
+If you're at all familiar with the [psychology of addiction](https://theconversation.com/snorted-injected-or-smoked-it-can-affect-a-drugs-addictiveness-45281), you might know that the length of time between stimulus and reward is a key component. One of the reasons heroin is so addictive is because there is an almost instantaneous reward immediately after injection. 
+
+Pause makes variable rewards like news feeds less addictive, by adding in a short pause. Furthermore, the green screen at the start encourages me to take a moment for myself and breath. 
+
+![Pause](/assets/posts/2021-08-18-21-addictive-tech/Pause.png)
+<sub><sup>Pause Chrome Extension<sub><sup>
+
+If you try out their pay-to-play product "Freedom", let me know. I'm considering upgrading. 
 
 ----
 
