@@ -17,9 +17,7 @@ The year is 2021 and we have a plethora of tools at our disposal to make life mo
 
 The question I ask myself frequently is this: what would my brain be like without all this technology? What would my attention span be like? Would I have less anxiety? What would my days look like without my 90-100 average pickups a day? 
 
-These things I can't know easily, not without leaving my current world. However, I can take a guess - my attention span would be higher, my anxiety would be lower, and I would probably feel a bit better every day. I'm regularly a bit disgusted with how much of my life seems to be wasted by apps and companies trying to monopolize my time, a disgust that I have little control over and no input on. 
-
-So, I have started taking steps to distance myself from technology. I've added friction points to guard myself against the slip into addictive patterns. This is a comprehensive guide that I plan on updating as time goes on. 
+I'm regularly a bit disgusted with how much of my life seems to be wasted by apps and companies trying to monopolize my time, a disgust that I have little control over and no input on. So, I have started taking steps to distance myself from technology. I've added friction points to guard myself against the slip into addictive patterns. This is a comprehensive guide that I plan on updating as time goes on. 
 
 <!-- More information here on an actual ontology, how to adapt this to your devices but also a more theory level,  of identifying -> eliminating -> retrospective -> repeat  -->
 <!-- You need minimum 1 hour to get any meaningful work done. Maybe this isn't true, but pretending that it is helps you protect your time -->
@@ -28,7 +26,7 @@ So, I have started taking steps to distance myself from technology. I've added f
 
 
 
-# Framework for Eliminating Addiction Points
+<!-- # Framework for Eliminating Addiction Points -->
 
 # Computer Adaptations
 
@@ -41,6 +39,21 @@ What are my goals here? Primarily, I want to remove *immediate* access from site
 Most of these tools involve Chrome extensions, because I personally use Chrome with a 3rd party search as default. Plenty of articles have been written about the pro's and con's of alternative browsers, such as these [qkz], however I still haven't yet made the jump. 
 
 ----
+
+# Phone Adaptations 
+
+Most of the detailed instructions here are for iPhone - I've switched between iOS and Android several times, landing on Apple for now mainly due to the social implications of not having iMessage. If you have an Android, these steps will still apply, however the implementation will be a little different.
+
+## Coach Tony's Guide
+
+My first introduction to detailed iPhone modifications for better productivity came from [this BetterHumans article by Coach Tony](https://betterhumans.pub/how-to-set-up-your-iphone-for-productivity-focus-and-your-own-longevity-bb27a68cc3d8). It's a behemoth of a read, but I can't recommend it enough. 
+
+Since first reading it, Coach Tony has added a *lot* of extra information, some of which I find to be personal preference. However, I strongly recommend the first 11 steps in his guide, specifically aimed at "Optimizing Single Tasking". 
+
+![The first 11 steps, and the most important](/assets/posts/2021-08-18-21-addictive-tech/CoachTony_Guide.png)
+<sub><sup>The first 11 steps are the most important<sub><sup>
+
+Some of these steps have changed my relationship with my phone entirely. As I mention at the top, it's important to 
 
 ## Chrome extensions 
 
@@ -134,30 +147,3 @@ Calendar notifications are always-on by design, otherwise your calendar is not v
 On Microsoft Suite, there sadly is not the granularity to distinguish between email notifications and calendar notifications. I chose to disable all notifications at the cost of being late to meetings and sometimes missing them altogether. The upside of this was that any meeting I missed where my presence was actually needed, I would usually get a Direct Message asking where I was, and any meeting I wasn't required at I would miss without any consequence. 
 
 With Google Suite, no notification settings are required. 
-
------
-
-# Phone Adaptations 
-
-Most of the detailed instructions here are for iPhone - I've switched between iOS and Android for my whole life, landing on Apple for now mainly due to the social implications of not having iMessage.
-
-If you have an Android, these steps will still apply, however the implementation will be a little different. 
-
-My first introduction to detailed iPhone modifications for better productivity came from [this BetterHumans article by Coach Tony](https://betterhumans.pub/how-to-set-up-your-iphone-for-productivity-focus-and-your-own-longevity-bb27a68cc3d8). It's a behemoth of a read, but I can't recommend taking these steps enough. 
-
-Since reading it, Coach Tony has added a *lot* of extra information, some of which I find to be personal preference. However, I strongly recommend the first 11 steps in his guide, specifically aimed at "Optimizing Single Tasking". 
-
-> 
-Optimize First for Single Tasking
- #1. Turn OFF (almost) all notifications
- #2. Hide social media slot machines
- #3. Hide messaging slot machines
- #4. Disable app review requests
- #5. Turn on Do Not Disturb
- #6. Be strategic about your wallpaper
- #7. Turn off Raise to Wake
- #8. Add the Screen Time widget
- #9. Add Content Restrictions
- #10. (Optional) Use Restrictions to turn off Safari
- #11. Organize your Apps and Folders alphabetically
-> 
