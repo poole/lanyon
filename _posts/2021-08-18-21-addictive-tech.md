@@ -13,32 +13,29 @@ A guide and outline on steps I've taken to make my tech stack less addictive.
 
 # Introduction 
 
-The year is 2021 and we have a plethora of tools at our disposal to make life more convenient and connected. I was born at an interesting time - old enough to remember dial up internet and floppy disks in the fourth grade, young enough to be a digital native. Smart phones started to become ubiquitous as I became a "real person", beginning to be conscious of the world around me in a real way. The consequences of being a digital native are not understanding what an adult world was like before the convenience of technology. 
+The year is 2021 and we have a plethora of tools at our disposal to make life more convenient and connected. I was born at an interesting time - old enough to remember dial up internet and floppy disks in the fourth grade, young enough to be a digital native. Smart phones started to become ubiquitous as I became a "real person", beginning to be conscious of the world around me in a real way. The consequence digital nativism is not understanding what an adult world was like before the convenience of technology. 
 
 The question I ask myself frequently is this: what would my brain be like without all this technology? What would my attention span be like? Would I have less anxiety? What would my days look like without my 90-100 average pickups a day? 
 
-<!-- Take picture of you + all roommates phones -->
+![real photo of my life as a consultant](/assets/posts/2021-08-18-21-addictive-tech/tooManyPhones.jpg)
+<sub><sup>Accurate representation of my consulting days with 3 iPhones (Stock photo, Unsplash)<sub><sup>
 
-I'm regularly a bit disgusted with how much of my life seems to be wasted by apps and companies trying to monopolize my time, a situation that I have little control over and no input on. So, I have started taking steps to distance myself from technology. I've added guard rails to protect myself against the slip into addictive patterns. This is a comprehensive guide that I plan on updating as time goes on. 
+I'm regularly a bit disgusted with how much of my life seems to be wasted by apps and companies trying to monopolize my time, a situation that I have little control over and no input on. So, I have started taking steps to distance myself from technology. I've added guard rails to protect myself against the slip into addictive patterns. 
 
-<!-- More information here on an actual ontology, how to adapt this to your devices but also a more theory level,  of identifying -> eliminating -> retrospective -> repeat  -->
-<!-- You need minimum 1 hour to get any meaningful work done. Maybe this isn't true, but pretending that it is helps you protect your time -->
+This is a comprehensive guide that I plan on updating as time goes on. First, I will discuss why we care, and provide a framework for fixing things yourself. Next, I'll offer my solutions, the techniques and tools I've implemented on my own phone and computer.
 
-<!-- # Framework for Eliminating Addiction Points -->
 
 # Ideology 
 
-<!-- [qkz] As simple as possible!! No big words, only ideas! 
-[qkz] You have time in the FUTURE to band these ideas together into an ideology, this is not the place for that. The ideology will come with time as you continue writing on these ideas.  -->
 
-Below are some of my top reasons for setting guard rails on my technology. 
+Below are some of my top reasons for setting guard rails on my technology usage. 
 
-1. For productivity reasons, I want to live intentionally, purposefully. Mindless Usage gets in the way of hobbies, side projects. 
-2. For mental health reasons, because Mindless Usage increases my general levels of anxiety and prevents me from feeling fulfilled. 
+1. For productivity reasons; I want to live intentionally, purposefully. Mindless Usage gets in the way of hobbies and side projects. 
+2. For mental health reasons; Mindless Usage increases my general levels of anxiety and prevents me from feeling fulfilled. 
 3. Mindless Usage does not just waste the time being spent mindlessly, it also interrupts large stretches of time and head space before and after. 
 4. Mindless Usage prevents deep work, moments of self awareness/thoughtfulness, states of flow where you feel genuinely *amazing*. 
 
-And, here is a general framework, a philosophy of how Mindless Usage can be curbed. 
+Below is a general framework, a philosophy of how these Mis-use Patterns can be curbed. 
 
 **Identification**
 1. Identifying Addictive Patterns allows you to remediate them. The problem is *mindless* addiction, where our conscious self fails to step in. 
@@ -46,9 +43,10 @@ And, here is a general framework, a philosophy of how Mindless Usage can be curb
 3. Sites with news feeds that encourage *passive consumption* or leverage [variable rewards](https://www.diygenius.com/the-dopamine-loop/) are the most problematic. 
 
 **Remeditation**
-1. A Friction Point is when you add a mindfulness task or pause to the start of a problematic app/site to give your conscious self the chance to avoid a bad habit. 
+1. A Friction Point is when you insert a mindfulness task or pause to the start of a problematic app/site to give your conscious self the chance to avoid a bad habit. 
 2. Whenever possible, apps/sites with Addictive Patterns should have a Friction Point. 
     - An example of a Friction Point is having a site blocked on Chrome, and needing to open up a browser like Safari to use the site. 
+3. I am most vulnerable when on my off days, when I feel depressed or in a funk. In these days it's important to not be hard on yourself, but it's also important to recognize that 
 
 
 The steps below are implementations of this framework. 
@@ -57,13 +55,13 @@ The steps below are implementations of this framework.
 
 # Phone Adaptations 
 
-Most of the detailed instructions here are for iPhone - I've switched between iOS and Android several times, landing on Apple for now mainly due to the social implications of not having iMessage. If you have an Android, these steps will still apply, however the implementation will be a little different.
+Most of the detailed instructions here are for iPhone - I've switched between iOS and Android several times, landing on Apple for now mainly due to the social implications of not having iMessage. If you have an Android, these steps will still apply, however the implementation will be different.
 
 ## Coach Tony's Guide
 
-My first introduction to detailed iPhone modifications for better productivity came from [this BetterHumans article by Coach Tony](https://betterhumans.pub/how-to-set-up-your-iphone-for-productivity-focus-and-your-own-longevity-bb27a68cc3d8). It's a behemoth of a read, but I can't recommend it enough. Just don't get distracted when you get on Medium.
+My first introduction to detailed iPhone modifications for better productivity came from [this BetterHumans article by Coach Tony](https://betterhumans.pub/how-to-set-up-your-iphone-for-productivity-focus-and-your-own-longevity-bb27a68cc3d8). It's a behemoth of a read, but succinct enough that I'm not going to re-invent the wheel. It's worth it, I promise.
 
-Since first reading it, Coach Tony has added a *lot* of extra information, some of which I find to be personal preference. My recommendation is the first 11 steps in his guide, specifically aimed at "Optimizing Single Tasking". 
+Since first reading it, Coach Tony has added a *lot* of extra information, some of which I find to be unnecessary for my purposes. I recommend reading the first 11 steps of his guide, implementing whichever techniques you think apply to yourself. 
 
 ![The first 11 steps, and the most important](/assets/posts/2021-08-18-21-addictive-tech/CoachTony_Guide.png)
 <sub><sup>Screenshot from the guide. The first 11 steps are the most important<sub><sup>
@@ -74,10 +72,10 @@ On top of Coach Tony's guide, I have a few other recommendations.
 
 ## Grayscale
 
-A phone just should be a tool, but it's a lot more interesting to look at than a hammer or screwdriver. A lot of that appeal comes from the vibrant colors. Putting my phone into grayscale makes it legitimately boring to use, in a good way. Instagram suddenly 
+A phone should just be a tool, but it's a helluva lot more interesting to look at than a hammer or screwdriver. A lot of that appeal comes from the vibrant colors. Putting my phone into grayscale makes it legitimately boring to use, and therefore significantly less addictive. 
 
-Putting your phone into grayscale
-    - Accessibility > Display and Text Size > Color Filters > On > Grayscale  
+Putting your phone into grayscale:
+ - Accessibility > Display and Text Size > Color Filters > On > Grayscale  
 
 This setting is hidden, which is ultimately nice, since it's a pain to remove. If you can leave your phone on grayscale for more than a week, let me know. I always remove it at some point to look at photos and forget to put it back on. 
 
@@ -86,40 +84,41 @@ This setting is hidden, which is ultimately nice, since it's a pain to remove. I
 You can add a screentime password onto your phone and apply it to certain apps during certain time periods. I have downtime scheduled from 9am-7pm.
 
 ![Screentime](/assets/posts/2021-08-18-21-addictive-tech/Screentime2.png)
-<sub><sup>Screentime settings, TIL that grayscale doesn't show in screenshots. <sub><sup>
+<sub><sup>Screentime settings. TIL that grayscale doesn't show in screenshots. <sub><sup>
 
 The nice thing about scheduled downtime is that I can still access my apps with limits, I just need to enter a password and approve it for a set amount of time (15 minutes, an hour, all day). Yes, sometimes this is annoying, and yes, I bypass my limits regularly. But I find that at least half the time when I open an app to use it, I see the restriction and close my phone. These moments are worth the occasional inconvenience. 
 
-To turn this on go to 
-    - Settings > Screen Time > Downtime 
+To turn on Down Time go to:
+ - Settings > Screen Time > Downtime 
 
-I also have app limits set for things like Chrome and Instagram 
-    - Settings > Screen Time > App Limits 
+I also have permanent app limits set for things like Chrome and Instagram:
+- Settings > Screen Time > App Limits 
 
 Lastly, I find that changing my screen time password every month helps me stay aware. The more comfortable I am with the 8 buttons it takes to open Instagram, the less helpful this is. 
 
 ## Hide your phone 
 
-I find that if I can see my phone, it can distract me just a little bit. If I'm doing important/urgent work, then this isn't a problem, but if I'm in a highly procrastinatory mood then my brain is in total flight-from-responsibilities mode. So, I take my phone and chuck it onto the couch. Or I put it in my silverware drawer. Sometimes I put it in the bathroom, and if it's really bad, I put it in a first class envelope with my return address and drop it in the nearest mailbox (it'll come back eventually, right?) 
+I find that if I can see my phone, it can still distract me. If I'm doing important/urgent work, then this isn't a problem, but if I'm in a highly procrastinatory mood then my brain is in total flight-from-responsibilities mode. So, I take my phone and chuck it onto the couch. Or I put it in my silverware drawer. Sometimes I put it in the bathroom, and if it's really bad, I put it in a first class envelope with my return address and drop it in the nearest mailbox (it'll come back eventually, right?) 
 
-I'm kidding on the last part, but I'm serious when I say that this is plain and simple the most effective strategy. The hard part is remembering that you're happier with addictive technology away from your working environment. 
+I'm kidding on the last part, but I'm serious when I say that this is plain and simple the most effective strategy when you're trying to achieve deep work.
 
 Sadly, sometimes with my phone in the other room, I still waste my own time on my computer.  The fucked up part about technology is that it makes it all too easy to avoid work. Laziness is rewarded with dopamine hits, and I rarely need to break through the wall of procrastination. 
 
-Because of this, I've worked to implement similar strategies on my computer, so that I can own more of my time.
+Because of this, I've worked to implement similar strategies on my computer, so that I can own more of my time and force myself to work. 
 
 ---
 
 # Computer Adaptations
 
-Phone's are more addictive, but I need to use my laptop daily for my job. And, since I believe maintaining two separate computer environments is a waste of time, I also use my work computer for most leisure activites (reading the news, watching Netflix, building my personal site). The downside of this dual-usage is that I can slip into misuse patterns during work that I have developed outside of work. The boundaries blend. 
+Phone's are more addictive, but I need to use my laptop daily for my job. And, since I believe maintaining two separate computer environments is personally not a good use of my time, I also use my work computer for many leisure activites (reading the news or watching Netflix)[^1]. The downside of this dual-usage is that I can slip into Mis-use Pattners during work that I have developed outside of work. The boundaries blend. 
 
-What are the patterns I have sought to eliminate on my computer? Primarily, I'm looking to eliminate mindless patterns: going on Reddit when motivation slips or boredom strikes. I don't care to go so far as to remove any *possibility* of a  distraction - sometimes I do want to go on Reddit. Just not when my primary goal is to get my tasks done for the day.  
+What are the patterns I have sought to eliminate on my computer? Primarily, I'm looking to eliminate mindless patterns: going on Reddit when motivation slips or boredom strikes. I don't care to go so far as to remove any *possibility* of a distraction - sometimes I want to browse Reddit, or I need a break. Just not when my primary goal is to get my tasks done for the day.  
 
-What are my goals here? Primarily, I want to remove *immediate* access from sites that I've identified as dopamine hits, and do my best to block *unwanted* solicitations from these sites. Solicitations are things like ads and feeds. Dopamine hits can really be anything, and require a bit more introspection.
+What's the goal then? Primarily, I want to remove *immediate* access from sites that I've identified as dopamine hits, and do my best to block *unwanted* solicitations from these sites. Solicitations are things like ads and feeds. Dopamine hits can really be anything, and require a bit more introspection.
 
-Most of these tools involve Chrome extensions, because I personally use Chrome with a 3rd party search as default. Plenty of articles have been written about the pro's and con's of alternative browsers, such as these [qkz], however I still haven't yet made the jump. 
+Most of these tools involve Chrome extensions, because I personally use Chrome with a 3rd party search as default. [Plenty of discussion](https://news.ycombinator.com/item?id=26765493) is out there about the pro's and con's of switching, however I still haven't yet made the jump. 
 
+Let's get started! 
 
 ## Chrome extensions 
 
@@ -226,3 +225,5 @@ Calendar notifications are always-on by design, otherwise your calendar is not v
 On Microsoft Suite, there sadly is not the granularity to distinguish between email notifications and calendar notifications. I chose to disable all notifications at the cost of being late to meetings and sometimes missing them altogether. The upside of this was that any meeting I missed where my presence was actually needed, I would usually get a Direct Message asking where I was, and any meeting I wasn't required at I would miss without any consequence. 
 
 With Google Suite, no notification settings are required. 
+
+[^1]: <sub><sup>Disclaimer: I do not do stupid or illegal things on my work computer that could potentially compromise my companies OpSec. I'm talking like, checking my personal email, watching TV, listening to music, writing. It's just easier than setting up two work stations for productivity in my small NYC apartment. <sub><sup>
