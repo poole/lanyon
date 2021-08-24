@@ -13,7 +13,7 @@ A guide and outline on steps I've taken to make my tech stack less addictive.
 
 # Introduction 
 
-The year is 2021 and we have a plethora of tools at our disposal to make life more convenient and connected. I was born at an interesting time - old enough to remember dial up internet and floppy disks in the fourth grade, young enough to be a digital native. Smart phones started to become ubiquitous as I became a "real person", beginning to be conscious of the world around me in a real way. The consequence digital nativism is not understanding what an adult world was like before the convenience of technology. 
+The year is 2021 and we have a plethora of tools at our disposal to make life more convenient and connected. I was born at an interesting time - old enough to remember dial up internet and floppy disks in the fourth grade, young enough to be a digital native. Smart phones started to become ubiquitous as I became a "real person", beginning to be conscious of the world around me in a major way. The consequence digital nativism is not understanding what an adult world was like before the convenience of technology. 
 
 The question I ask myself frequently is this: what would my brain be like without all this technology? What would my attention span be like? Would I have less anxiety? What would my days look like without my 90-100 average pickups a day? 
 
@@ -26,7 +26,7 @@ This is a comprehensive guide that I plan on updating as time goes on. First, I 
 
 
 # Ideology 
-
+<!-- Remove some of the below, gets in the way of the good points, people might skip -->
 
 Below are some of my top reasons for setting guard rails on my technology usage. 
 
@@ -226,4 +226,14 @@ On Microsoft Suite, there sadly is not the granularity to distinguish between em
 
 With Google Suite, no notification settings are required. 
 
+# Conclusions
+
+The tools I outline above might seem outlandish to some people. aw
+
+Many apps and sites are designed to be addictive. The metric that engineers at any site from Facebook to Reddit optimize for is *time on screen*. The downstream effect of this is addictive technology, the more addictive the more profitiable, with the burden passed on to the user [^2].
+
+
+
 [^1]: <sub><sup>Disclaimer: I do not do stupid or illegal things on my work computer that could potentially compromise my companies OpSec. I'm talking like, checking my personal email, watching TV, listening to music, writing. It's just easier than setting up two work stations for productivity in my small NYC apartment. <sub><sup>
+
+[^2]: <sub><sup>The Netflix documentary "The Social Dilemma" does a great job elaborating. <sub><sup>
