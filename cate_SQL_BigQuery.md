@@ -1,6 +1,6 @@
 ---
 layout: page
-title: ML
+title: SQL_BigQuery
 ---
 {% for post in site.posts %}
   {% if post.category == 'SQL_BigQuery' %}
