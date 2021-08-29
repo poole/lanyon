@@ -13,7 +13,7 @@ A guide and outline on steps I've taken to make my tech stack less addictive.
 
 # Introduction 
 
-The year is 2021 and we have a plethora of tools at our disposal to make life more convenient and connected. I was born at an interesting time - old enough to remember dial up internet and floppy disks, young enough to be a digital native. Smart phones started to become ubiquitous as I became a "real person", beginning to be conscious of the world around me in a major way. The consequence of digital nativism is this: I don't understand what being an adult was like before the convenience of technology. 
+The year is 2021 and we have a plethora of tools at our disposal to make life more convenient and connected. I was born at an interesting time - old enough to remember dial up internet and floppy disks but young enough to be a digital native. Smart phones started to become ubiquitous as I hit high school, before I had a chance to experience adulthood without the convenience of technology. 
 
 What would my brain be like without all this technology? What would my attention span be like? Would I have less anxiety? Would my days be better without my 70-80 average pickups a day? 
 
@@ -22,15 +22,14 @@ What would my brain be like without all this technology? What would my attention
 
 I'm regularly a bit disgusted with how much of my life seems to be wasted by apps and companies trying to monopolize my time, a situation that I have little control over and no input on. 70-80 interruptions *daily* can't be good for my ability to focus. So, I have started taking steps to distance myself from technology. I've added guard rails to protect myself against the slip into addictive patterns. 
 
-This is a comprehensive guide that I plan on updating as time goes on. First, I will discuss why we care, and provide a framework for fixing things yourself. Next, I'll offer my solutions, the techniques and tools I've implemented on my own phone and computer.
+This is a comprehensive guide that I plan on updating as time goes on. First, I will discuss why we care, and provide a framework for fixing things yourself. Next, I'll offer my solutions: the techniques and tools I've implemented on my own phone and computer.
 
 
 # Ideology 
-<!-- Remove some of the below, gets in the way of the good points, people might skip -->
 
 **Why do we care about restricting compulsive phone use?**
 
-My reasons center around productivity and mental health. Mindless Usage of my phone gets in the way of hobbies like reading or playing music, and makes me feel more anxious. It fragments my days, and prevents me from deep work, moments of self awareness/thoughtfulness, states of flow where I feel genuinely *amazing*. 
+My reasons center around productivity and mental health. Mindless Usage of my phone gets in the way of hobbies like reading or playing music, and makes me feel more anxious. Impulsive scrolling fragments my days, and prevents me from deep work, moments of self awareness/thoughtfulness, states of flow where I feel genuinely *amazing*. 
 
 How can we remedy this problem of Mindless Usage? Below is a general framework, a philosophy of how these Mis-use Patterns can be curbed. 
 
@@ -42,7 +41,7 @@ How can we remedy this problem of Mindless Usage? Below is a general framework, 
 **Remediation**
 1. Whenever possible, apps/sites with Addictive Patterns should have Friction Points. 
 2. A Friction Point is when you insert a mindfulness task or pause to the start/middle of a problematic app/site to give your conscious self the chance to avoid a bad habit. 
-3. Progress is not linear, and some days are better than others.
+3. Progress is not linear, and some days are better than others. Be kind to yourself. 
 
 The steps below are implementations of this framework. 
 
@@ -54,7 +53,7 @@ Most of the detailed instructions here are for iPhone - I've switched between iO
 
 ## Coach Tony's Guide
 
-My first introduction to detailed iPhone modifications for better productivity came from [this BetterHumans article by Coach Tony](https://betterhumans.pub/how-to-set-up-your-iphone-for-productivity-focus-and-your-own-longevity-bb27a68cc3d8). It's a behemoth of a read, but succinct enough that I'm not going to reinvent the wheel. It's worth it, I promise.
+My first introduction to detailed iPhone modifications for better productivity came from [this BetterHumans article by Coach Tony](https://betterhumans.pub/how-to-set-up-your-iphone-for-productivity-focus-and-your-own-longevity-bb27a68cc3d8). It's a behemoth of a read, but well written enough that I'm not going to reinvent the wheel. It's worth it, I promise.
 
 Since first reading it, Coach Tony has added a *lot* of extra information, some of which I find to be unnecessary for my purposes. I recommend reading the first 11 steps of his guide, implementing techniques you think apply to yourself. 
 
@@ -62,6 +61,11 @@ Since first reading it, Coach Tony has added a *lot* of extra information, some 
 <sub><sup>Screenshot from the guide. The first 11 steps are the most important<sub><sup>
 
 Some of these steps have changed my relationship with my phone entirely. You might say "wow, this is a long guide, I don't have time for this!", but I promise that the 30-45 minutes this takes will pay dividends in the future. 
+
+Some of my biggest take-aways from the article:
+- Turning off all notifications for (almost) all apps is incredibly helpful
+- Look at your Screentime every night: you can't decrease a metric you aren't paying attention to. 
+- The goal is to
 
 On top of Coach Tony's guide, I have a few other recommendations. 
 
@@ -89,7 +93,7 @@ To turn on Down Time go to:
 I also have permanent app limits set for things like Chrome and Instagram:
 - Settings > Screen Time > App Limits 
 
-Lastly, I find that changing my screen time password every month helps me stay aware. The more comfortable I am with the 8 buttons it takes to open Instagram, the less helpful this is. 
+Lastly, I find that changing my screen time password every month helps me stay aware. Over time, my subconscious gets better at opening Instagram in search of dopamine, and interruptions from the normal pattern disrupt this. 
 
 ## Set up messaging on your computer 
 
@@ -99,23 +103,23 @@ If you're on iPhone, iMessage makes this easy. Android is simple as well, follow
 
 ## Hide your phone 
 
-If I can see my phone, it can still distract me. If I'm doing important/urgent work, then this isn't a problem, but if I'm in a highly procrastinatory mood then my brain is in total flight-from-responsibilities mode. So, I take my phone and chuck it onto the couch. Or I put it in my silverware drawer. Sometimes I put it in the bathroom, and if it's really bad, I put it in a first class envelope with my return address and drop it in the nearest mailbox (it'll come back eventually, right?). 
+If I can see my phone, it can still distract me. If I'm doing important/urgent work, then I can easily avoid distractions, but if I'm in a highly procrastinatory mood then my brain is in total flight-from-responsibilities mode. So, I take my phone and chuck it onto the couch. Or I put it in my silverware drawer. Sometimes I put it in the bathroom, and if it's really bad, I put it in a first class envelope with my return address and drop it in the nearest mailbox (it'll come back eventually, right?). 
 
 I'm kidding on the last part, but I'm serious when I say that this is plain and simple the most effective strategy when you're trying to achieve deep work.
 
 Sadly, sometimes with my phone in the other room, I still waste my own time on my computer.  The fucked up part about technology is that it makes it all too easy to avoid work. Laziness is rewarded with dopamine hits. Breaking procrastination is a muscle that gets stronger with time, technology helps me avoid working out this muscle.
 
-Because of this, I've worked to implement similar strategies on my computer, so that I can own more of my time and force myself to work. 
+Because of this, I've worked to implement similar strategies on my computer, so that I can own more of my time and not get stuck in procrastination cycles. 
 
 ---
 
 # Computer Adaptations
 
-Phone's are more addictive, but I need to use my laptop daily for my job. And, since I believe maintaining two separate computer environments is personally not a good use of my time, I also use my work computer for many leisure activities (reading the news or watching Netflix)[^1]. The downside of this dual-usage is that I can slip into Mis-use Patterns during work that I have developed outside of work. The boundaries blend. 
+Phone's are more addictive, but I need to use my laptop daily for my job. And, since I believe maintaining two separate computer environments is personally not a good use of my time, I also use my work computer for many leisure activities (mainly random side projects or watching Season 2 of Ted Lasso)[^1]. The downside of this dual-usage is that I can slip into Mis-use Patterns during work that I have developed outside of work. The boundaries blend. 
 
-What are the patterns I have sought to eliminate on my computer? Primarily, I'm looking to eliminate mindless patterns: going on Reddit when motivation slips or boredom strikes. I don't care to go so far as to remove any *possibility* of a distraction - sometimes I want to browse Reddit, or I need a break. Just not when my primary goal is to get my tasks done for the day.  
+What are the patterns I have sought to eliminate on my computer? Primarily, I'm looking to eliminate mindless patterns: going on Reddit when motivation slips or boredom strikes.  I don't care to go so far as to remove any *possibility* of a distraction - sometimes I want to browse Reddit, or I need a break. Have you ever been in a null from work and the next thing you know you're on Reddit? That's the sort of pattern I'm trying to disrupt.
 
-What's the goal then? Primarily, I want to remove *immediate* access from sites that I've identified as dopamine hits, and do my best to block *unwanted* solicitations from these sites. Solicitations are things like ads and feeds. Dopamine hits can really be anything, and require a bit more introspection.
+What's the goal then? Primarily, I want to remove *immediate* access from sites that I've identified as dopamine hits, and do my best to block *unwanted* solicitations from these sites. Solicitations are things like ads and feeds. Dopamine hits can really be anything. Finding them requires a bit more introspection.
 
 Most of these tools involve Chrome extensions, because I personally use Chrome with a 3rd party search as default. [Plenty of discussion](https://news.ycombinator.com/item?id=26765493) is out there about the pro's and con's of switching, however I still haven't yet made the jump. 
 
@@ -130,10 +134,11 @@ I use Blocksite to block certain sites on my work computer. I find that not bein
 
 Blocksite is self-explanatory to set up. It also gives the option to re-route from a blocked site to a site of your choice. Mine re-routes to [this website](http://www.minimizedistraction.com/), a presentation by Google employees called "A Call to Minimize Distraction & Respect Users' Attention".
 
+
 ![Blocksite reroutes me to this Google presentation](/assets/posts/2021-08-18-21-addictive-tech/BlockSite.png)
 <sub><sup>Blocksite reroutes me to this Google presentation<sub><sup>
 
-I personally have Reddit blocked, as well as PokemonShowdown.com. I find that these are the two sites I mindlessly plug in when bored. The first time BlockSite re-routed me from Reddit to the Google Presentation I felt so bamboozled I just got right back to work. 
+If I need to use a website I have blocked, I can open it in Safari. The upsides here are that I'm usually not logged into the site in question, and Safari isn't in my regular rotation, so it's several extra steps. The first time BlockSite re-routed me from Reddit to the Google Presentation I felt so bamboozled I just got right back to work. 
 
 ### [Unhook](https://chrome.google.com/webstore/detail/unhook-remove-youtube-rec/khncfooichmfjbepaaaebmommgaepoid) 
 
@@ -142,11 +147,11 @@ Unhook removes YouTube's recommended videos. I can't recommend it enough. Before
 ![Example of my YouTube setup](/assets/posts/2021-08-18-21-addictive-tech/YouTubeUnhook.png)
 <sub><sup>Unhook removes all recommended videos - here is the undisturbed view from my favorite channel<sub><sup>
 
-With Unhook, if you open YouTube to search for something important like a tech tutorial, you won't get distracted away from your objective. If you open YouTube out of boredom, you'll probably just leave and do something else instead. 
+With Unhook, if you open YouTube to search for something important like a tech tutorial, you won't get distracted away from your objective. If you open YouTube out of boredom, you'll probably just leave and do something else instead.  
 
 ### [News Feed Eradicator](https://chrome.google.com/webstore/detail/news-feed-eradicator/fjcldmjmjhkklehbacihaiopjklihlgg?hl=en)
 
-The News Feed Eradicator nixes feeds for Instagram, Facebook, Reddit, and a few other apps. Personally, I can't bring myself to delete my social media. Sometimes I get important event invites, and I still use it to check for friends' birthdays. 
+The News Feed Eradicator nixes feeds for Instagram, Facebook, Reddit, and a few other apps. Personally, I can't yet bring myself to delete my social media. Sometimes I get important event invites, and I still use it to check for friends' birthdays. 
 
 ![News Feed Eradicator](/assets/posts/2021-08-18-21-addictive-tech/InstagramBlock.png)
 <sub><sup>News Feed Eradicator replaces your feeds with quotes<sub><sup>
@@ -162,7 +167,7 @@ One of my newer extensions and a favorite of mine is Pause. It adds a 5 second p
 
 If you're at all familiar with the [psychology of addiction](https://theconversation.com/snorted-injected-or-smoked-it-can-affect-a-drugs-addictiveness-45281), you might know that the length of time between stimulus and reward is a key component. One of the reasons heroin is so addictive is because there is an almost instantaneous reward immediately after injection. 
 
-Pause makes variable rewards like news feeds less addictive, by adding in a short pause. Furthermore, the green screen at the start encourages me to take a moment for myself and breathe. 
+Pause makes variable rewards like news feeds less addictive, by adding in a short pause. Furthermore, the green screen at the start encourages me to take a moment for myself and breathe. THe The user experience is fantastic.
 
 ![Pause](/assets/posts/2021-08-18-21-addictive-tech/Pause.png)
 <sub><sup>Pause Chrome Extension<sub><sup>
@@ -178,23 +183,23 @@ Visual distractions fall primarily into the category of solicitations. I've foun
 
 ### Slack/Teams
 
-Most organizations use Slack or Teams. I've used both, prefer neither, and find that the settings for any messaging app are pretty granular. Here are the settings I look for. 
+Most organizations use Slack or Teams. I've used both, prefer neither, and find that the settings for most messaging app are pretty granular. Here are the settings I look for. 
 <br>
 
-1. Removing badges 
+**1. Removing badges**
 
 I have a compulsive hatred for badges. I find that they are impossible to ignore, which violates my philosophy of batch-checking messages on my own schedule. 
 
 <!-- Instructions -->
 
-2. Optimizing Notifications 
+**2. Optimizing Notifications**
 
-My philosophy with notifications is "always-off by default". I think that spending 15 minutes on your notifications settings is worth it in the long run. Here are some example settings from myself 
+My philosophy with notifications is "always-off by default". Spending 15 minutes on your notifications settings is worth it in the long run. Here are some example settings from myself 
  - Direct Messages and Mentions show notifications, since these are usually important
  - Most of my slack channels are muted by default.
  - DMs and Mentions still show through muted channels. 
 
-3. Cmd + Q 
+**3. Cmd + Q (On Mac)**
 
 I close Slack regularly when I need to get urgent work done. On a Mac, this is as simple as Cmd + Q. Usually when I try and do this I change my Slack status, just in case someone messaging me is expecting an immediate response. **These are my most productive times**
 
@@ -229,7 +234,7 @@ With Google Suite, no notification settings are required.
 
 # Conclusions
 
-The tools I outline above might seem outlandish to some people, and I wouldn't disagree. However, I find they help me get more done on a daily basis, and stay distraction free without going so far as destroying my phone and living like Walden in the woods. 
+The tools I outline above might seem outlandish to some people, and I wouldn't disagree. However, I find they help me get more done on a daily basis, and stay distraction free without going so far as destroying my phone and living like Thoreau in the woods. 
 
 ![Lotr](/assets/posts/2021-08-18-21-addictive-tech/TheRing.jpeg)
 <sub><sup>Sometimes this is how I feel about my smartphone<sub><sup>
