@@ -7,7 +7,7 @@ Born and raised in DC/Arlington currently living in Manhattan.
 
 I graduated from the University of Delaware where I studied Chemical Engineering with a minor in Computer Science. Whoever said you can get a job with just a minor in CS[^1] was right - I've since pivoted to Data Engineering, working on a small project within Deloitte Consulting. 
 
-<img src="/assets/about/NoahFloatie.jpg" alt="Noah on an Alpaca Floatie" width="700px">
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/110967671@N02/51411370779/in/dateposted-public/" title="memorial day weekend"><img src="https://live.staticflickr.com/65535/51411370779_fd5353c7d0_z.jpg" width="640" height="508" alt="memorial day weekend"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 
 [^1]: <sub><sup>(I think I'm actually just quoting myself here)<sub><sup>
 
