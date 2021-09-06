@@ -37,5 +37,17 @@ layout: default
         label="utterance"
         theme="boxy-light"
         crossorigin="anonymous"
-        async>
+        >
+</script>
+
+<script>
+addEventListener('utterances-loaded', function(event) {
+  var issue = event.detail.issue;
+  var comments = event.detail.comments;
+  var user = event.detail.user;
+  console.log(issue);
+    console.log(comments);
+      console.log(user);
+  // ... do something with the data ...
+});
 </script>
