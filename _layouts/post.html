@@ -30,7 +30,7 @@ layout: default
   let lnameFnameInstitution = authorsText.split(";");
   let lfiList = lnameFnameInstitution.map(lfi => lfi.split(",").map(item => item.trim()));
   let bibtexLFI = lfiList.map(lfi => lfi[0] + ", " + lfi[1]).join(" and ")
-  let academicLFI = lfiList.map(lfi => lfi[1]);
+  let academicLFI = lfiList.map(lfi => lfi[0]);
   {
     console.log(academicLFI);
     if(academicLFI.length > 2) academicLFI = academicLFI[0] + ", et al.";
