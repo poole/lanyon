@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="post">
-  <h1 class="post-title">{{ page.title }}</h1>
+  <h1 id="iclr-post-title" class="post-title">{{ page.title }}</h1>
   <span id="iclr-post-authors">{{page.authors}}</span>
   <span class="post-date">{{ page.date | date_to_string }} | {% for tag in page.tags %}
     <a class="content-tag" href="/tags/#{{ tag | slugify }}"> {{ tag }} </a>
@@ -12,18 +12,41 @@ layout: default
 </div>
 
 <div id="bibtex-container">
+  For attribution in academic contexts, please cite this work as
+  <pre id="bibtex-academic-attribution">
+
+  </pre>
+
+  BibTeX citation
+  <pre id="bibtex-box">
+
+  </pre>
 </div>
 <script>
   let bibtexContainer = document.getElementById("bibtex-container");
+
   let authorsSpan = document.getElementById("iclr-post-authors");
-
   let authorsText = authorsSpan.textContent;
-
   let lnameFnameInstitution = authorsText.split(";");
-  let lfiList = lnameFnameInstitution.map(lfi => lfi.split(","));
+  let lfiList = lnameFnameInstitution.map(lfi => lfi.split(",").map(item => item.trim()));
+  let bibtexLFI = lfiList.map(lfi => lfi[0] + ", " + lfi[1]).join(" and ")
 
-  console.log(lfiList);
+  let titleSpan = document.getElementById("iclr-post-title");
+  let titleText = titleSpan.textContent.trim();
+  let bibtexShorthand = lfiList[0][1]+"2022"+titleText.slice(3);
 
+  let template = `
+@article{${bibtexShorthand}},
+  author = {${bibtexLFI}},
+  title = {${titleText}},
+  journal = {ICLR Blog Track},
+  year = {2022},
+  note = {${window.location.href}},
+  url  = {${window.location.href}}
+}
+  `;
+
+  document.getElementById("bibtex-box").innerText = template;
 </script>
 
 {% if site.related_posts.size >= 1 %}
