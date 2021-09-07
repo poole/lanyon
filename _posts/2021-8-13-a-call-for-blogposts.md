@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A Call for Blog Posts
+title: Blog Posts as Conference Contributions
 tags: [proposal, call]
 authors: Bubeck, Sebastien, Microsoft; Dobre, David, Mila; Gauthier, Charlie, Mila; Gidel, Gauthier, Mila; Vernade, Claire, DeepMind
 
@@ -11,16 +11,16 @@ authors: Bubeck, Sebastien, Microsoft; Dobre, David, Mila; Gauthier, Charlie, Mi
 The Machine Learning community is currently experiencing a
 [reproducibility
 crisis](https://neuripsconf.medium.com/designing-the-reproducibility-program-for-neurips-2020-7fcccaa5c6ad)
-and a reviewing crisis . Because of the highly competitive and noisy
-reviewing process of ML conferences , researchers have an incentive to
+and a reviewing crisis [[Littman, 2021]](#Litt). Because of the highly competitive and noisy
+reviewing process of ML conferences [[Tran et al., 2020]](#Tran), researchers have an incentive to
 oversell their results, slowing down the progress and diminishing the
 integrity of the scientific community. Moreover with the growing number
-of papers published and submitted at the main ML conferences , it has
+of papers published and submitted at the main ML conferences [[Lin et al., 2020]](#Lin), it has
 become more challenging to keep track of the latest advances in the
 field.
 
 Blog posts are becoming an increasingly popular and useful way to talk
-about science . They offer substantial value to the scientific community
+about science [[Brown and Woolston, 2018]](#Brow). They offer substantial value to the scientific community
 by providing a flexible platform to foster open, human, and transparent
 discussions about new insights or limitations of a scientific
 publication. However, because they are not as recognized as standard
@@ -45,10 +45,9 @@ incentivize and reward researchers to review past work and summarize the
 outcomes, develop new intuitions, or highlight some shortcomings. A very
 influential initiative of this kind happened after the second world war
 in France. Because of the lack of up-to-date textbooks, a collective of
-mathematicians under the pseudonym Nicolas Bourbaki , decided to start a
-series of textbooks  about the foundations of mathematics. Their modern
-—at the time— structuralist take on mathematics had a long lasting
-impact that continues to influence the mathematics community of today.
+mathematicians under the pseudonym Nicolas Bourbaki [[Halmos 1957]](#Halm), decided to start a
+series of textbooks  about the foundations of mathematics [[Bourbaki, 1939]](#Bour).  
+In the same vein, we aim at providing a new way to summarize scientific knowledge in the ML community.
 
 # Our Idea: Blog post Conference Track
 
@@ -140,7 +139,8 @@ conference itself:
 ## Submission Format
 
 Our goal is to avoid heavily engineered, professionally-made
-blog-posts[1], to entice ideas and clear writing rather than dynamic
+blog-posts---Such as the “100+ hours” mentioned as a standard by the [Distill
+  guidelines](https://distill.pub/journal/)---to entice ideas and clear writing rather than dynamic
 visualizations or embedded javascript engines.
 
 As a result, we restrict submissions to the Markdown format. We believe
@@ -173,9 +173,7 @@ de-anonymize their post, make their fork public again, and make a GitHub
 Pull Request to the main blog, allowing us to pull in their new blog
 post in a transparent way.
 
-A temporary mock-up of the blog website is available:
-<https://bourbaki-blogchain.github.io//about/>. Once the submission
-period has ended, the GitHub repository of our track will be temporarily
+Once the submission period has ended, the GitHub repository of our track will be temporarily
 made private for the duration of the conference, allowing the conference
 to host the website. After the conference, the GitHub repository will be
 made public again to allow viewers to fork and download its contents.
@@ -230,10 +228,7 @@ other workshops discussing alternative formats for publications.
 
 Created in 2016, [Distill](https://distill.pub/) is an online scientific
 journal based on blog post publications. We address our differences with
-respect to Distill: <span
-class="sans-serif">\[ggi\]$\_{\\arabic{ggiCounter}}$:maybe more
-here</span>
-
+respect to Distill: 
 -   *Visualizations*: Blog posts should take advantage of the fact that
     they’re not paperbound, and use innovative visualisations. But the
     process of creating the intricate, dynamic visualisations associated
@@ -311,5 +306,20 @@ on the usefulness of blog posts to get up-to-date with the field of ML.
 In alignment with these initiatives, this new track is another step in
 the direction of making research more human.
 
-[1] Such as the “100+ hours” mentioned as a standard by the [Distill
-guidelines](https://distill.pub/journal/)
+### bibliography
+<a name="Litt">Michael L Littman. Collusion rings threaten the integrity of computer science research. Communications of the ACM, 2021.</a>
+
+<a name="Tran">David Tran, Alex Valtchanov, Keshav Ganapathy, Raymond Feng, Eric Slud, Micah Goldblum, and Tom Goldstein. An open review of openreview: A critical analysis of the machine learning conference review process. arXiv, 2020. </a>
+
+<a name="Lin">Hsuan-Tien Lin, Maria-Florina Balcan, Raia Hadsell, and Marc’Aurelio Ranzato. What we learned from neurips2020 reviewing process. Medium https://medium.com/@NeurIPSConf/what-we-learned-from-neurips-2020-reviewing-process-e24549eea38f, 2020. </a>
+
+<a name="Brow">Eryn Brown and Chris Woolston. Why science blogging still matters. Nature, 2018.</a>
+
+<a name="Halm">Paul R Halmos. Nicolas bourbaki. Scientific American, 1957.<a>
+
+<a name="Bour">Nicolas Bourbaki. Elements of mathematics. Éditions Hermann, 1939.</a>
+
+
+
+
+
