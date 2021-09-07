@@ -307,17 +307,17 @@ In alignment with these initiatives, this new track is another step in
 the direction of making research more human.
 
 ### bibliography
-<a name="Litt">Michael L Littman. Collusion rings threaten the integrity of computer science research. Communications of the ACM, 64(6):43–44, 2021.</a>
+<a name="Litt">Michael L Littman. Collusion rings threaten the integrity of computer science research. Communications of the ACM, 2021.</a>
 
-<a name="Tran">David Tran, Alex Valtchanov, Keshav Ganapathy, Raymond Feng, Eric Slud, Micah Goldblum, and Tom Goldstein. An open review of openreview: A critical analysis of the machine learning conference review process. arXivpreprint arXiv:2010.05137, 2020. </a>
+<a name="Tran">David Tran, Alex Valtchanov, Keshav Ganapathy, Raymond Feng, Eric Slud, Micah Goldblum, and Tom Goldstein. An open review of openreview: A critical analysis of the machine learning conference review process. arXiv, 2020. </a>
 
 <a name="Lin">Hsuan-Tien Lin, Maria-Florina Balcan, Raia Hadsell, and Marc’Aurelio Ranzato. What we learned from neurips2020 reviewing process. Medium https://medium.com/@NeurIPSConf/what-we-learned-from-neurips-2020-reviewing-process-e24549eea38f, 2020. </a>
 
-<a name="Brow">Eryn Brown and Chris Woolston. Why science blogging still matters.Nature, 554(7690), 2018.</a>
+<a name="Brow">Eryn Brown and Chris Woolston. Why science blogging still matters. Nature, 2018.</a>
 
-<a name="Halm">Paul R Halmos. Nicolas bourbaki.Scientific American, 196(5):88–102, 1957.<a>
+<a name="Halm">Paul R Halmos. Nicolas bourbaki. Scientific American, 1957.<a>
 
-<a name="Bour">Nicolas Bourbaki.Elements of mathematics. Éditions Hermann, 1939.</a>
+<a name="Bour">Nicolas Bourbaki. Elements of mathematics. Éditions Hermann, 1939.</a>
 
 
 
