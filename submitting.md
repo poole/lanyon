@@ -11,9 +11,9 @@ The process is relatively simple.
     ```
    ---
     layout: post
-    title: Ceci n'est pas un blogpost
-    tags: [tutorial, latex]
-    authors: John Doe
+    title: Title goes here
+    tags: [tag1, tag2, tag3]
+    authors: Doe, John, Mila; Doe, Jane, DeepMind
     ---
    ```
     You must change the `title`, `tags`, and `authors` fields. The `authors` and `title` fields accept standard strings, but the `tags` field must be an array (i.e. a string starting with `[`, followed by a comma-separated list of tags, followed by `]`).
