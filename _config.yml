@@ -1,15 +1,15 @@
 # Setup
-title:               The Bourbaki Blogchain
+title:               The ICLR Blog Track
 tagline:             'A blogpost track, Bourbaki-style.'
 description:         'For short-term, peer-sourced tests of time, generalizations, specializations, reproductions, etc.!'
-url:                 https://bourbaki-blogchain.github.io/
+url:                 https://iclr-blog-track.github.io/
 baseurl:             ''
 paginate:            5
 permalink:           pretty
 
 # github
 github:
-  repo: https://github.com/bourbaki-blogchain/bourbaki-blogchain.github.io
+  repo: https://github.com/iclr-blog-track/iclr-blog-track.github.io
 
 # About/contact
 author:
