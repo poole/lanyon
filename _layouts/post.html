@@ -18,7 +18,11 @@ layout: default
   let authorsSpan = document.getElementById("iclr-post-authors");
 
   let authorsText = authorsSpan.textContent;
-  console.log(authorsText);
+
+  let lnameFnameInstitution = authorsText.split(";");
+  let lfiList = lnameFnameInstitution.map(lfi => lfi.split(","));
+
+  console.log(lfiList);
 
 </script>
 
