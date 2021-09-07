@@ -1,7 +1,9 @@
 # ICLR 2022 blog track
 
 Call for blog posts: https://iclr-blog-track.github.io//2021/08/13/a-call-for-blogposts/
+
 About: https://iclr-blog-track.github.io//about/ 
+
 Submission guide: https://iclr-blog-track.github.io//submitting/
 
 ## Track Chairs / Proposal Authors
