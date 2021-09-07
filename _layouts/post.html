@@ -33,10 +33,13 @@ layout: default
 
   let titleSpan = document.getElementById("iclr-post-title");
   let titleText = titleSpan.textContent.trim();
-  let bibtexShorthand = lfiList[0][1]+"2022"+titleText.slice(3);
+  let bibtexTitleShorthand = (lfiList[0][1]+
+    "2022"+
+    titleText.split(" ").slice(3).join("")
+  ).toLowerCase();
 
   let template = `
-@article{${bibtexShorthand}},
+@article{${bibtexTitleShorthand}},
   author = {${bibtexLFI}},
   title = {${titleText}},
   journal = {ICLR Blog Track},
