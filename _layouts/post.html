@@ -4,10 +4,11 @@ layout: default
 
 <div class="post">
   <h1 id="iclr-post-title" class="post-title">{{ page.title }}</h1>
-  <span id="iclr-post-authors">{{page.authors}}</span>
   <span class="post-date">{{ page.date | date_to_string }} | {% for tag in page.tags %}
     <a class="content-tag" href="/tags/#{{ tag | slugify }}"> {{ tag }} </a>
   {% endfor %}</span>
+
+  <span id="iclr-post-authors">{{page.authors}}</span>
   {{ content }}
 </div>
 
