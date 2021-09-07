@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Even has Latex!
-tags: [test, embeds]
-authors: Absolutely not John Doe Sr.
+tags: [test, tutorial, markdown, latex]
+authors: Doe, John Sr., School of Hard Knocks
 ---
 
 ## How to add $\LaTeX$ commands to your posts:

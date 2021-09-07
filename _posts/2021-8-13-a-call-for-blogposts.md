@@ -1,3 +1,11 @@
+---
+layout: post
+title: A Call for Blog Posts
+tags: [proposal, call]
+authors: Bubeck, Sebastien, Microsoft; Dobre, David, Mila; Gauthier, Charlie, Mila; Gidel, Gauthier, Mila; Vernade, Claire, DeepMind
+
+---
+
 # Motivations
 
 The Machine Learning community is currently experiencing a

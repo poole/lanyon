@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Example content
-tags: [tutorial, markdown]
-authors: John Doe, Jane Doe
+tags: [test, tutorial, markdown]
+authors: Doe, John, School of Life; Doe, Jane, A School
 ---
 
 
