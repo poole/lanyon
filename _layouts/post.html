@@ -4,12 +4,23 @@ layout: default
 
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
-  <span>{{page.authors}}</span>
+  <span id="iclr-post-authors">{{page.authors}}</span>
   <span class="post-date">{{ page.date | date_to_string }} | {% for tag in page.tags %}
     <a class="content-tag" href="/tags/#{{ tag | slugify }}"> {{ tag }} </a>
   {% endfor %}</span>
   {{ content }}
 </div>
+
+<div id="bibtex-container">
+</div>
+<script>
+  let bibtexContainer = document.getElementById("bibtex-container");
+  let authorsSpan = document.getElementById("iclr-post-authors");
+
+  let authorsText = authorsSpan.textContent;
+  console.log(authorsText);
+
+</script>
 
 {% if site.related_posts.size >= 1 %}
 <div class="related">
@@ -30,13 +41,6 @@ layout: default
   </ul>
 </div>
 {% endif %}
-
-<div class="bibtex-container">
-</div>
-
-<script>
-  console.log("test");
-</script>
 
 <script src="https://utteranc.es/client.js"
         repo="iclr-blog-track/iclr-blog-track.github.io"
