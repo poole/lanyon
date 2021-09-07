@@ -30,6 +30,13 @@ layout: default
   let lnameFnameInstitution = authorsText.split(";");
   let lfiList = lnameFnameInstitution.map(lfi => lfi.split(",").map(item => item.trim()));
   let bibtexLFI = lfiList.map(lfi => lfi[0] + ", " + lfi[1]).join(" and ")
+  let academicLFI = lfiList.map(lfi => lfi[1]);
+  {
+    console.log(academicLFI);
+    if(academicLFI.length > 2) academicLFI = academicLFI[0] + ", et al.";
+    else if(academicLFI.length == 2) academicLFI = academicLFI[0] + " & " + academicLFI[1];
+    else academicLFI = academicLFI[0];
+  }
 
   let titleSpan = document.getElementById("iclr-post-title");
   let titleText = titleSpan.textContent.trim();
@@ -38,7 +45,7 @@ layout: default
     titleText.split(" ").slice(3).join("")
   ).toLowerCase();
 
-  let template = `
+  let bibtexTemplate = `
 @article{${bibtexTitleShorthand}},
   author = {${bibtexLFI}},
   title = {${titleText}},
@@ -47,9 +54,14 @@ layout: default
   note = {${window.location.href}},
   url  = {${window.location.href}}
 }
-  `;
+  `.trim();
+  document.getElementById("bibtex-box").innerText = bibtexTemplate;
 
-  document.getElementById("bibtex-box").innerText = template;
+  let academicTemplate = `
+${academicLFI}, "${titleText}", ICLR Blog Track, 2022.
+`.trim();
+  document.getElementById("bibtex-academic-attribution").innerText = academicTemplate;
+
 </script>
 
 {% if site.related_posts.size >= 1 %}
