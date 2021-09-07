@@ -12,9 +12,11 @@ title: Home
       </a>
     </h1>
 
-    <span class="post-date">{{ post.date | date_to_string }} | {{ post.authors }} | {% for tag in post.tags %}
-    <a class="content-tag" href="/tags/#{{ tag | slugify }}"> {{ tag }} </a>
-  {% endfor %}</span>
+    <span class="post-date">{{ post.date | date_to_string }} | {% for tag in post.tags %}
+      <a class="content-tag" href="/tags/#{{ tag | slugify }}"> {{ tag }} </a>
+        {% endfor %}
+    </span>
+    <span class="post-date">{{ post.authors }}</span>
 
     <!-- {{ post.content }} -->
   </div>
