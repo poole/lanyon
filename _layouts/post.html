@@ -23,8 +23,6 @@ layout: default
   </pre>
 </div>
 <script>
-  let bibtexContainer = document.getElementById("bibtex-container");
-
   let authorsSpan = document.getElementById("iclr-post-authors");
   let authorsText = authorsSpan.textContent;
   let lnameFnameInstitution = authorsText.split(";");
@@ -32,7 +30,6 @@ layout: default
   let bibtexLFI = lfiList.map(lfi => lfi[0] + ", " + lfi[1]).join(" and ")
   let academicLFI = lfiList.map(lfi => lfi[0]);
   {
-    console.log(academicLFI);
     if(academicLFI.length > 2) academicLFI = academicLFI[0] + ", et al.";
     else if(academicLFI.length == 2) academicLFI = academicLFI[0] + " & " + academicLFI[1];
     else academicLFI = academicLFI[0];
