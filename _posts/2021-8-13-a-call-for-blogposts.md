@@ -46,10 +46,10 @@ outcomes, develop new intuitions, or highlight some shortcomings. A very
 influential initiative of this kind happened after the second world war
 in France. Because of the lack of up-to-date textbooks, a collective of
 mathematicians under the pseudonym Nicolas Bourbaki [[Halmos 1957]](#Halm), decided to start a
-series of textbooks  about the foundations of mathematics [[Bourbaki, 1939]](#Bour).  
-In the same vein, we aim at providing a new way to summarize scientific knowledge in the ML community.
+series of textbooks  about the foundations of mathematics [[Bourbaki, 1939]](#Bour). 
+In the same vein, we aim to provide a new way to summarize scientific knowledge in the ML community.
 
-# Our Idea: Blog post Conference Track
+# The Idea: A Blog Post Conference Track
 
 Due to the large diversity of topics that can be discussed in a blog
 post, we decided to restrict the range of topics for this call for blog
@@ -59,7 +59,7 @@ discuss *previously published papers*.
 
 ## Call for blog posts on papers previously published at ICLR
 
-The call for blog post would take the following form:
+This call for blog posts would take the following form:
 
 -   Write a post about a paper previously published at ICLR, with the
     constraint that one cannot write a blog post on work that they have
@@ -83,15 +83,15 @@ The call for blog post would take the following form:
 
 ## Positive Impact for the Community
 
-We believe having this call for blog posts as a conference track would
+We believe that having a formal conference track for blog posts will
 increase the posts’ visibility, impact, and credibility, while
-simultaneously providing benefits to the conference.
+simultaneously providing benefits to the conference and community.
 
--   *Adoption*: we think that, with the conference’s stamp, such a
-    format will be more broadly recognized and adopted by the community.
+-   *Adoption*: we think that being backed by a conference will make the
+    format more broadly recognized and adopted by the community.
 
--   *Accessibility*: maintaining a blog is time consuming , and requires
-    many blog posts to gain a stable following. By allowing researchers
+-   *Accessibility*: maintaining a blog is time consuming, and requires
+    many posts to gain a stable following. By allowing researchers
     to publish a single post, we will permit occasional blog writers to
     publish their ideas, something that is relatively impossible right
     now. Moreover, it will make this format accessible to more
@@ -99,7 +99,7 @@ simultaneously providing benefits to the conference.
     research lab to support them.
 
 -   *Synchronization*: the fast evolving field of ML advances at the
-    paces of its conferences. By following the same pace the blog posts
+    pace of its conferences. By following the same pace, blog posts
     will add value and momentum to the conference. It will benefit from
     the same advantages of conferences with respect to scientific
     journals: faster publication process and cross-fertilization of
@@ -127,12 +127,12 @@ conference itself:
     will distill important theoretical and practical ideas improving
     their adoption and impact.
 
--   Tests of time: this track will provide a sort of crowd-sourced test
-    of time at a shorter timescale than the current test of times
+-   Tests of time: this track will provide a sort of crowd-sourced "test
+    of time" at a shorter timescale than the current test of times
     awards.
 
 -   Promotes accessibility: because many of this track’s blog posts will
-    vulgarize past content, this track will make the conference broadly
+    cover past content, this track will make the conference broadly
     more accessible (to students, non-natives, and, more generally,
     non-experts in the field).
 
