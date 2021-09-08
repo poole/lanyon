@@ -46,7 +46,7 @@ outcomes, develop new intuitions, or highlight some shortcomings. A very
 influential initiative of this kind happened after the second world war
 in France. Because of the lack of up-to-date textbooks, a collective of
 mathematicians under the pseudonym Nicolas Bourbaki [[Halmos 1957]](#Halm), decided to start a
-series of textbooks  about the foundations of mathematics [[Bourbaki, 1939]](#Bour).  
+series of textbooks  about the foundations of mathematics [[Bourbaki, 1939]](#Bour).
 In the same vein, we aim at providing a new way to summarize scientific knowledge in the ML community.
 
 # Our Idea: Blog post Conference Track
@@ -161,34 +161,34 @@ link)](https://github.com/bourbaki-blogchain/bourbaki-blogchain.github.io).
 
 The process for creating and submitting a blog post is as follows:
 
-1.  Entrants will fork this repository and **make their fork private**. 
+1.  Entrants will fork this repository and **make their fork private**.
     Failure to do so will result in the submission being rejected, as it
     breaches the double-blind review process.
-    
+
 2.  Users will modify their fork as they see fit; they will add their post
     along with any media files it might require. Since this is a full fork,
     they will be able to view their own copy of the blog. This means that
-    they will be able to see exactly how their post will look and behave 
-    on the main website. 
+    they will be able to see exactly how their post will look and behave
+    on the main website.
 
 3.  Once completed, entrants will **anonymize** their blog post (i.e. strip their
-    name, affiliation, etc). 
-    
-4.  Entrants will download a ZIP of their **anonymized** fork (see figure 
-    below), and submit the ZIP to our OpenReview venue. 
+    name, affiliation, etc).
+
+4.  Entrants will download a ZIP of their **anonymized** fork (see figure
+    below), and submit the ZIP to our OpenReview venue.
 
 <p align="center">
-  <img src="../_assets/download_zip.png" />
+  <img src="../assets/download_zip.png" />
 </p>
 
-5.  Once accepted, entrants will de-anonymize their post, make their fork 
-    public again, and make a *Pull Request* on Github from their fork to the 
-    main blog, allowing us to pull in their new blog post in a transparent 
+5.  Once accepted, entrants will de-anonymize their post, make their fork
+    public again, and make a *Pull Request* on Github from their fork to the
+    main blog, allowing us to pull in their new blog post in a transparent
     way.
 
-Once the submission period has ended, the GitHub repository of our track will 
-be temporarily made private for the duration of the conference, allowing the 
-conference to host the website. After the conference, the GitHub repository will 
+Once the submission period has ended, the GitHub repository of our track will
+be temporarily made private for the duration of the conference, allowing the
+conference to host the website. After the conference, the GitHub repository will
 be made public again to allow viewers to fork and download its contents.
 
 ## The potential Pitfalls of our Blog Post Track
@@ -241,7 +241,7 @@ other workshops discussing alternative formats for publications.
 
 Created in 2016, [Distill](https://distill.pub/) is an online scientific
 journal based on blog post publications. We address our differences with
-respect to Distill: 
+respect to Distill:
 -   *Visualizations*: Blog posts should take advantage of the fact that
     they’re not paperbound, and use innovative visualisations. But the
     process of creating the intricate, dynamic visualisations associated
