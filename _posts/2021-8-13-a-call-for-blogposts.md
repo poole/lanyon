@@ -161,25 +161,23 @@ link)](https://github.com/bourbaki-blogchain/bourbaki-blogchain.github.io).
 
 The process for creating and submitting a blog post is as follows:
 
-1.  Entrants will fork this repository and **make their fork private**.
+1. Entrants will fork this repository and **make their fork private**.
     Failure to do so will result in the submission being rejected, as it
     breaches the double-blind review process.
 
-2.  Users will modify their fork as they see fit; they will add their post
+2. Users will modify their fork as they see fit; they will add their post
     along with any media files it might require. Since this is a full fork,
     they will be able to view their own copy of the blog. This means that
     they will be able to see exactly how their post will look and behave
     on the main website.
 
-3.  Once completed, entrants will **anonymize** their blog post (i.e. strip their
+3. Once completed, entrants will **anonymize** their blog post (i.e. strip their
     name, affiliation, etc).
 
-4.  Entrants will download a ZIP of their **anonymized** fork (see figure
+4. Entrants will download a ZIP of their **anonymized** fork (see figure
     below), and submit the ZIP to our OpenReview venue.
 
-<p align="center">
-  <img src="../public/images/download_zip.png" />
-</p>
+![Download instructions image](../public/images/download_zip.png)
 
 5.  Once accepted, entrants will de-anonymize their post, make their fork
     public again, and make a *Pull Request* on Github from their fork to the
