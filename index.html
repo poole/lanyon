@@ -17,11 +17,12 @@ pagination:
     <span class="post-date">{{ post.date | date_to_string }}</span>
 
     {{ post.excerpt}}
-    {% if post.content contains site.excerpt_separator %}
+    <!-- To add in a read more button, enable this -->
+    <!-- {% if post.content contains site.excerpt_separator %}
       <a href="{{ post.url | absolute_url }}">
         read more ...
       </a>
-    {% endif %}
+    {% endif %} -->
   </div>
   {% endfor %}
 </div>

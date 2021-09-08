@@ -88,11 +88,12 @@ h1, h2, h3, h4, h5, h6 {
   text-rendering: optimizeLegibility;
 }
 h1 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
+  color: #367da2 !important;
 }
 h2 {
   margin-top: 1rem;
-  font-size: 1.25rem;
+  font-size: 1.50rem;
 }
 h3 {
   margin-top: 1.5rem;
@@ -105,6 +106,7 @@ h4, h5, h6 {
 
 /* Body text */
 p {
+  font-size: .80rem;
   margin-top: 0;
   margin-bottom: 1rem;
 }
