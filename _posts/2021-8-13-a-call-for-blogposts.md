@@ -177,7 +177,7 @@ The process for creating and submitting a blog post is as follows:
 4. Entrants will download a ZIP of their **anonymized** fork (see figure
     below), and submit the ZIP to our OpenReview venue.
 
-![Download instructions image](../public/images/download_zip.png)
+![Download instructions image]({{ site.url }}/public/images/download_zip.png)
 
 5.  Once accepted, entrants will de-anonymize their post, make their fork
     public again, and make a *Pull Request* on Github from their fork to the
