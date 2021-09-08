@@ -40,7 +40,7 @@ layout: default
   let titleText = titleSpan.textContent.trim();
   let bibtexTitleShorthand = (lfiList[0][1]+
     "2022"+
-    titleText.split(" ").slice(3).join("")
+    titleText.split(" ").slice(0, 3).join("")
   ).replace(" ", "").replace(/[\p{P}$+<=>^`|~]/gu, '').toLowerCase().trim();
 
   let bibtexTemplate = `
