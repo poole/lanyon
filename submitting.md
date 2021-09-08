@@ -19,6 +19,8 @@ The process is relatively simple.
     You must change the `title`, `tags`, and `authors` fields. The `authors` and `title` fields accept standard strings, but the `tags` field must be an array (i.e. a string starting with `[`, followed by a comma-separated list of tags, followed by `]`).
 
     Don't worry about using "new" tags. Our blog server will automatically adapt to new tag names without issue.
+
+    If you want to include gifs, images, and the like, you can add them to the `assets` folder.
 4. Submit an anonymized version of your post to our OpenReview. To do so, simply remove any references to yourself from your MarkDown file, and send it to OpenReview. A link will be provided at a later date.
 5. Upon acceptance, you will be contacted. You will then make your fork public again, and open a Pull Request to merge your changes with our repository. After asking you to fix any compatibility issues (or fixing them ourselves if they are minor enough), we will then merge your fork into the blog. That way, GitHub will keep track of every single change made to the blog (and if someone wants to find a posts' authors' GitHub usernames, they'll directly be able to find your Pull Request and your fork!).
 
