@@ -178,7 +178,7 @@ The process for creating and submitting a blog post is as follows:
     below), and submit the ZIP to our OpenReview venue.
 
 <p align="center">
-  <img src="../assets/download_zip.png" />
+  <img src="../public/assets/download_zip.png" />
 </p>
 
 5.  Once accepted, entrants will de-anonymize their post, make their fork
