@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Example content
+title: Example content (Images and Assets)
 tags: [test, tutorial, markdown]
 authors: Doe, John, School of Life; Doe, Jane, A School
 ---
@@ -121,4 +121,16 @@ Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur e
 
 -----
 
-Want to see something else added? <a href="https://github.com/poole/poole/issues/new">Open an issue.</a>
+# Images, gifs, and assets
+
+If you include an hosted elsewhere on the web, the process is trivial. Simply use the standard GitHub-flavoured-MarkDown syntax.
+
+`![Example Image](https://iclr.cc/static/core/img/ICLR-logo.svg)` becomes:
+
+![Example Image](https://iclr.cc/static/core/img/ICLR-logo.svg)
+(be wary of copyrights).
+
+However, if your image must be hosted locally, it's a bit more touchy. You must add the site's URL (use the `{{ site.url }}` syntax).
+
+`![Download instructions image]({{ site.url }}/public/images/download_zip.png)` becomes:
+![Download instructions image]({{ site.url }}/public/images/download_zip.png)

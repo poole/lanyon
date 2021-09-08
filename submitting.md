@@ -21,6 +21,8 @@ The process is relatively simple.
     Don't worry about using "new" tags. Our blog server will automatically adapt to new tag names without issue.
 
     If you want to include gifs, images, and the like, you can add them to the `assets` folder. When you submit to OpenReview, add them too. We'll assume that anything that isn't your main post goes inside the `assets` directory.
+
+    Read our example posts carefully to make sure that your embedded assets and $ \LaTeX $ work!
 4. Submit an anonymized version of your post to our OpenReview. To do so, simply remove any references to yourself from your MarkDown file, and send it to OpenReview. A link will be provided at a later date. Also include any assets that you added to the `assets` folder.
 
     To reiterate: only submit your MarkDown file and its assets. Not the entire blog.
