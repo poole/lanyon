@@ -1,3 +1,24 @@
+
+<!--
+  JavaScript to allow for post sorting by category
+  This works. Red highlighting is wrong
+-->
+<script type="text/javascript">
+  function filterUsingCategory(selectedCategory) {
+    var id = 0;
+    {% for post in site.posts %}
+      var cats = {{ post.categories | jsonify }}
+
+      var postDiv = document.getElementById(++id);
+      postDiv.style.display =
+        (selectedCategory == 'All' || cats.includes(selectedCategory)) 
+          ? 'unset' 
+          : 'none';
+    {% endfor %}
+  }
+</script>
+  
+
 <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
      styles, `#sidebar-checkbox` for behavior. -->
 <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
@@ -27,8 +48,29 @@
 
     <!-- <a class="sidebar-nav-item" href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">Download</a>
     <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub project</a> -->
-    <span class="sidebar-nav-item">Currently v{{ site.version }}</span>
+    <!-- <span class="sidebar-nav-item">Currently v{{ site.version }}</span> -->
+
+
   </nav>
+
+  <div class="sidebar-nav-item">
+    <br>
+    Sort posts by category
+    <p>
+      {% assign categories = site.categories | sort %}
+      {% for category in categories %}
+        {% assign cat = category | first %}
+        <a id="{{ cat }}" onclick="filterUsingCategory(this.id)">
+          #{{ cat }} <br>
+        </a>
+      {% endfor %}
+   </p>
+  </div>
+
+  <div class="sidebar-links">
+    <img src="/assets/generic/linkedin-logo.png" alt="LinkedIn">
+    <img src="/assets/generic/instagram-logo.png" alt="Instagram">
+  </div>
 
   <div class="sidebar-item">
     <p>

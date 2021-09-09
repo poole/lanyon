@@ -3,29 +3,51 @@ layout: default
 title: Home
 pagination:
   enabled: true
+post-content:
+backsite: javascript:history.back()
 ---
 
-<div class="posts">
+<!-- <div class="posts">
   {% for post in paginator.posts %}
-  <div class="post">
-    <h2 class="post-title">
+    <div class="post">
+      <h2 class="post-title">
+        <a href="{{ post.url | absolute_url }}">
+          {{ post.title }}
+        </a>
+      </h2>
+
+      <span class="post-date">{{ post.date | date_to_string }}</span>
+
+      {{ post.excerpt}} -->
+      <!-- To add in a read more button, enable this -->
+      <!-- {% if post.content contains site.excerpt_separator %}
+        <a href="{{ post.url | absolute_url }}">
+          read more ...
+        </a>
+      {% endif %} -->
+    <!-- </div>
+  {% endfor %}
+</div> -->
+
+{% assign id = 0 %}
+{% for post in site.posts %}
+  {% assign id = id | plus:1 %}
+  <div id="{{id}}">
+    <p class="itemInteriorSection">
+      <h2 class="post-title">
       <a href="{{ post.url | absolute_url }}">
         {{ post.title }}
       </a>
     </h2>
+      <span class="post-date">{{ post.date | date_to_string }}</span>
 
-    <span class="post-date">{{ post.date | date_to_string }}</span>
-
-    {{ post.excerpt}}
-    <!-- To add in a read more button, enable this -->
-    <!-- {% if post.content contains site.excerpt_separator %}
-      <a href="{{ post.url | absolute_url }}">
-        read more ...
-      </a>
-    {% endif %} -->
+      <p class="post">
+        {{ post.excerpt}}
+      </p>
+    </p>
   </div>
-  {% endfor %}
-</div>
+{% endfor %}
+
 
 <div class="pagination">
   {% if paginator.next_page %}
