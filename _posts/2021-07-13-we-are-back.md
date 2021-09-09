@@ -3,7 +3,7 @@ layout: post
 title: We're back! 
 published: true
 release_date: 2021-07-15
-categories: all personal ontology
+tags: personal ontology
 ---
 
 It's been about 6 months since I first tried to kick off a personal website. There has been some progress - <!--excerpt--> I published an article, created a few pages, and tried for several weeks without results to add a LinkedIn icon to my sidebar. But at some point the progress stopped. 

@@ -3,7 +3,6 @@ layout: post
 title: Welcome to my Site
 published: true
 release_date: 2021-01-10
-categories: all personal
 ---
 
 After messing around with github pages for a bit, and following a simple but effective [guide by Barry Clark](https://github.com/barryclark/jekyll-now) on how to host your first Jekyll site via Github, I decided to play around with a few more themes. 

@@ -190,47 +190,11 @@ a.sidebar-nav-item:focus {
   border-color: transparent;
 }
 
-/* Sidebar categories */ 
-.sidebar-cat {
-  border-bottom: 1px solid rgba(255,255,255,.1);
-}
-.sidebar-cat-item {
-  display: block;
-  padding: 1rem 1rem;
-  border-top: 1px solid rgba(255,255,255,.1);
-}
-.sidebar-cat-item.active,
-a.sidebar-cat-item:hover,
-a.sidebar-cat-item:focus {
-  text-decoration: none;
-  background-color: rgba(255,255,255,.1);
-  border-color: transparent;
-}
-.sidebar-links-container {
-  width: 200px;
-  height: 120px;
-}
-.sidebar-links-container img {
-  width: 25%;
-  display: inline;
-  align-items: center;
-  height: auto;
-}
-
-
 @media (min-width: 48em) {
   .sidebar-item {
     padding: 1.5rem;
   }
   .sidebar-nav-item {
-    padding-left:  1.5rem;
-    padding-right: 1.5rem;
-  }
-  .sidebar-cat-item {
-    padding-left:  1.5rem;
-    padding-right: 1.5rem;
-  }
-  .sidebar-links {
     padding-left:  1.5rem;
     padding-right: 1.5rem;
   }
@@ -340,11 +304,7 @@ a.sidebar-cat-item:focus {
 
 .page,
 .post {
-  margin-bottom: 2.5rem;
-}
-.post p {
-  margin-top: -1.75rem;
-  margin-bottom: 3.0rem;
+  margin-bottom: 2.5em;
 }
 
 /* Blog post or page title */

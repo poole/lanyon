@@ -3,7 +3,7 @@ layout: post
 title: Optimizing Your Tech Stack for Productivity
 published: true
 release_date: 2021-08-06
-categories: all documentation tools-for-thought ontology 
+tags: personal 
 ---
 
 A guide and outline on steps I've taken to make my tech stack less addictive. 
