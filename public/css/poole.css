@@ -229,12 +229,13 @@ blockquote p:last-child {
   }
 }
 
-img {
-  display: block;
-  max-width: 100%;
-  margin: 0 0 1rem;
+.sidebar-links img {
+  display: inline;
+  max-width: 20%;
+  margin: 0.865rem;
   border-radius: 5px;
 }
+
 
 /* Tables */
 table {

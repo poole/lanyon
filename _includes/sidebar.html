@@ -6,7 +6,7 @@
   function filterUsingCategory(selectedCategory) {
     var id = 0;
     {% for post in site.posts %}
-      var cats = {{ post.categories | jsonify }}
+      var cats = {{ post.tags | jsonify }}
 
       var postDiv = document.getElementById(++id);
       postDiv.style.display =
@@ -56,19 +56,27 @@
     <br>
     Sort posts by category
     <p>
-      {% assign categories = site.categories | sort %}
-      {% for category in categories %}
-        {% assign cat = category | first %}
-        <a id="{{ cat }}" onclick="filterUsingCategory(this.id)">
-          #{{ cat }} <br>
+      {% assign tags = site.tags | sort %}
+      {% for tag in tags %}
+        {% assign t = tag | first %}
+        <a id="{{ t }}" onclick="filterUsingCategory(this.id)">
+          #{{ t }} <br>
         </a>
       {% endfor %}
    </p>
   </div>
 
   <div class="sidebar-links">
-    <img src="/assets/generic/linkedin-logo.png" alt="LinkedIn">
-    <img src="/assets/generic/instagram-logo.png" alt="Instagram">
+
+    <a href="https://instagram.com/noahfkennedy">
+        <img src="/assets/generics/linkedin-logo.png" alt="LinkedIn">
+    </a>
+    <a href="https://www.linkedin.com/in/noahfkennedy/">
+      <img src="/assets/generics/instagram-logo.png" alt="Instagram">
+    </a>
+    <a href="https://twitter.com/big_ben_clock">
+    <img src="/assets/generics/twitter-logo.png" alt="Note that I don't use my twitter">
+    </a>
   </div>
 
   <div class="sidebar-item">
