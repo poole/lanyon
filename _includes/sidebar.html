@@ -1,3 +1,23 @@
+<!--
+  JavaScript to allow for post sorting by category
+  This works. Red highlighting is wrong
+-->
+<script type="text/javascript">
+  function filterUsingCategory(selectedCategory) {
+    var id = 0;
+    {% for post in site.posts %}
+      var cats = {{ post.tags | jsonify }}
+
+      var postDiv = document.getElementById(++id);
+      postDiv.style.display =
+        (selectedCategory == 'All' || cats.includes(selectedCategory)) 
+          ? 'unset' 
+          : 'none';
+    {% endfor %}
+  }
+</script>
+  
+
 <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
      styles, `#sidebar-checkbox` for behavior. -->
 <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
@@ -27,8 +47,37 @@
 
     <!-- <a class="sidebar-nav-item" href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">Download</a>
     <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub project</a> -->
-    <span class="sidebar-nav-item">Currently v{{ site.version }}</span>
+    <!-- <span class="sidebar-nav-item">Currently v{{ site.version }}</span> -->
+
+
   </nav>
+
+  <div class="sidebar-nav-item">
+    <br>
+    Sort posts by category
+    <p>
+      {% assign tags = site.tags | sort %}
+      {% for tag in tags %}
+        {% assign t = tag | first %}
+        <a id="{{ t }}" onclick="filterUsingCategory(this.id)">
+          #{{ t }} <br>
+        </a>
+      {% endfor %}
+   </p>
+  </div>
+
+  <div class="sidebar-links">
+
+    <a href="https://instagram.com/noahfkennedy">
+        <img src="/assets/generics/linkedin-logo.png" alt="LinkedIn">
+    </a>
+    <a href="https://www.linkedin.com/in/noahfkennedy/">
+      <img src="/assets/generics/instagram-logo.png" alt="Instagram">
+    </a>
+    <a href="https://twitter.com/big_ben_clock">
+    <img src="/assets/generics/twitter-logo.png" alt="Note that I don't use my twitter">
+    </a>
+  </div>
 
   <div class="sidebar-item">
     <p>
