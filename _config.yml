@@ -18,5 +18,5 @@ plugins:
   - jekyll-paginate
 
 # Custom vars
-version:             1.1.0
-google_analytics_id: #UA-XXXX-Y
+# version:             1.1.0
+# google_analytics_id: #UA-XXXX-Y
