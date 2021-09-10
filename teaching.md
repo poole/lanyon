@@ -9,13 +9,13 @@ title: Teaching
 
 ### 2021-22
 
-Retòrica (BA, Art History)
+**Retòrica** (BA, Art History)
 
 ### 2020-21
 
-Expresión oral y escrita para los medios de comunicación I (BA, Audiovisual Communication)
+**Expresión oral y escrita para los medios de comunicación I** (BA, Audiovisual Communication)
 
-Expressió oral i escrita per als mitjans de comunicació II (BA, Audiovisual Communication)
+**Expressió oral i escrita per als mitjans de comunicació II** (BA, Audiovisual Communication)
 
 <br/>
 
@@ -23,15 +23,15 @@ Expressió oral i escrita per als mitjans de comunicació II (BA, Audiovisual 
 
 ### 2018-19
 
-Lengua española (BA, Classical Philology)
+**Lengua española** (BA, Classical Philology)
 
-Lengua española. Teoría y prácticas de la lengua escrita (BA, Modern Languages)
+**Lengua española. Teoría y prácticas de la lengua escrita** (BA, Modern Languages)
 
 ### 2017-18 
 
-Introducción a la gramática española (BA, Spanish: Language and Literature)
+**Introducción a la gramática española** (BA, Spanish: Language and Literature)
 
-Español escrito para fines académicos (BA, English Studies)
+**Español escrito para fines académicos** (BA, English Studies)
 
-Pragmática de la comunicación intercultural (BA, Tourism)
+**Pragmática de la comunicación intercultural** (BA, Tourism)
 
