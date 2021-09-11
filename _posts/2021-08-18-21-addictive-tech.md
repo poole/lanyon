@@ -17,7 +17,7 @@ The year is 2021 and we have a plethora of tools at our disposal to make life mo
 
 What would my brain be like without all this technology? What would my attention span be like? Would I have less anxiety? Would my days be better without my 70-80 average pickups a day? 
 
-![real photo of my life as a consultant](/assets/posts/2021-08-18-21-addictive-tech/tooManyPhones.jpg)
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/110967671@N02/51409867372/in/dateposted-public/" title="tooManyPhones"><img src="https://live.staticflickr.com/65535/51409867372_90c365606e_o.jpg" width="6240" height="8320" alt="tooManyPhones"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 <sub><sup>Accurate representation of my consulting days, when I had 3 iPhones (Stock photo, Unsplash)<sub><sup>
 
 I'm regularly a bit disgusted with how much of my life seems to be wasted by apps and companies trying to monopolize my time, a situation that I have little control over and no input on. 70-80 interruptions *daily* can't be good for my ability to focus. So, I have started taking steps to distance myself from technology. I've added guard rails to protect myself against the slip into addictive patterns. 
@@ -57,7 +57,7 @@ My first introduction to detailed iPhone modifications for better productivity c
 
 Since first reading it, Coach Tony has added a *lot* of extra information, some of which I find to be unnecessary for my purposes. I recommend reading the first 11 steps of his guide, implementing techniques you think apply to yourself. 
 
-![The first 11 steps, and the most important](/assets/posts/2021-08-18-21-addictive-tech/CoachTony_Guide.png)
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/110967671@N02/51411601225/in/dateposted-public/" title="CoachTony_Guide"><img src="https://live.staticflickr.com/65535/51411601225_5304aef81d_o.png" width="1348" height="512" alt="CoachTony_Guide"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 <sub><sup>Screenshot from the guide. The first 11 steps are the most important<sub><sup>
 
 Some of these steps have changed my relationship with my phone entirely. You might say "wow, this is a long guide, I don't have time for this!", but I promise that the 30-45 minutes this takes will pay dividends in the future. 
@@ -82,7 +82,7 @@ This setting is hidden, making it a pain to turn off (this is a plus). If you ca
 
 You can add a screen time password onto your phone and apply it to certain apps during certain time periods. I have downtime scheduled from 9am-7pm.
 
-![Screentime](/assets/posts/2021-08-18-21-addictive-tech/Screentime2.png)
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/110967671@N02/51410616211/in/dateposted-public/" title="Screentime2"><img src="https://live.staticflickr.com/65535/51410616211_6ff20ce024_o.png" width="1480" height="1214" alt="Screentime2"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 <sub><sup>Screen time settings. TIL that grayscale doesn't show in screenshots. <sub><sup>
 
 The nice thing about scheduled downtime is that I can still access my apps with limits, I just need to enter a password and approve it for a set amount of time (15 minutes, an hour, all day). Yes, sometimes this is annoying, and yes, I bypass my limits regularly. But I find that at least half the time when I open an app to use it, I see the restriction and close my phone. These moments are worth the occasional inconvenience. 
@@ -135,7 +135,7 @@ I use Blocksite to block certain sites on my work computer. I find that not bein
 Blocksite is self-explanatory to set up. It also gives the option to re-route from a blocked site to a site of your choice. Mine re-routes to [this website](http://www.minimizedistraction.com/), a presentation by Google employees called "A Call to Minimize Distraction & Respect Users' Attention".
 
 
-![Blocksite reroutes me to this Google presentation](/assets/posts/2021-08-18-21-addictive-tech/BlockSite.png)
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/110967671@N02/51411601310/in/dateposted-public/" title="BlockSite"><img src="https://live.staticflickr.com/65535/51411601310_65a15efd96_o.png" width="2434" height="1312" alt="BlockSite"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 <sub><sup>Blocksite reroutes me to this Google presentation<sub><sup>
 
 If I need to use a website I have blocked, I can open it in Safari. The upsides here are that I'm usually not logged into the site in question, and Safari isn't in my regular rotation, so it's several extra steps. The first time BlockSite re-routed me from Reddit to the Google Presentation I felt so bamboozled I just got right back to work. 
@@ -144,7 +144,7 @@ If I need to use a website I have blocked, I can open it in Safari. The upsides 
 
 Unhook removes YouTube's recommended videos. I can't recommend it enough. Before installing, go and subscribe to any channels you actually care about. 
 
-![Example of my YouTube setup](/assets/posts/2021-08-18-21-addictive-tech/YouTubeUnhook.png)
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/110967671@N02/51410612686/in/dateposted-public/" title="YouTubeUnhook"><img src="https://live.staticflickr.com/65535/51410612686_7c452449a1_o.png" width="3530" height="1668" alt="YouTubeUnhook"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 <sub><sup>Unhook removes all recommended videos - here is the undisturbed view from my favorite channel<sub><sup>
 
 With Unhook, if you open YouTube to search for something important like a tech tutorial, you won't get distracted away from your objective. If you open YouTube out of boredom, you'll probably just leave and do something else instead.  
@@ -153,7 +153,7 @@ With Unhook, if you open YouTube to search for something important like a tech t
 
 The News Feed Eradicator nixes feeds for Instagram, Facebook, Reddit, and a few other apps. Personally, I can't yet bring myself to delete my social media. Sometimes I get important event invites, and I still use it to check for friends' birthdays. 
 
-![News Feed Eradicator](/assets/posts/2021-08-18-21-addictive-tech/InstagramBlock.png)
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/110967671@N02/51411601210/in/dateposted-public/" title="InstagramBlock"><img src="https://live.staticflickr.com/65535/51411601210_b18b7cb75c_o.png" width="3474" height="908" alt="InstagramBlock"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 <sub><sup>News Feed Eradicator replaces your feeds with quotes<sub><sup>
 
 
@@ -169,7 +169,7 @@ If you're at all familiar with the [psychology of addiction](https://theconversa
 
 Pause makes variable rewards like news feeds less addictive, by adding in a short pause. Furthermore, the green screen at the start encourages me to take a moment for myself and breathe. THe The user experience is fantastic.
 
-![Pause](/assets/posts/2021-08-18-21-addictive-tech/Pause.png)
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/110967671@N02/51411375949/in/dateposted-public/" title="Pause"><img src="https://live.staticflickr.com/65535/51411375949_94bcc2c0e3_o.png" width="1764" height="1066" alt="Pause"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 <sub><sup>Pause Chrome Extension<sub><sup>
 
 If you try out their pay-to-play product "Freedom", let me know. I'm considering upgrading. 
@@ -236,7 +236,7 @@ With Google Suite, no notification settings are required.
 
 The tools I outline above might seem outlandish to some people, and I wouldn't disagree. However, I find they help me get more done on a daily basis, and stay distraction free without going so far as destroying my phone and living like Thoreau in the woods. 
 
-![Lotr](/assets/posts/2021-08-18-21-addictive-tech/TheRing.jpeg)
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/110967671@N02/51410879763/in/dateposted-public/" title="TheRing"><img src="https://live.staticflickr.com/65535/51410879763_9edc9deb1b_o.jpg" width="800" height="450" alt="TheRing"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 <sub><sup>Sometimes this is how I feel about my smartphone<sub><sup>
 
 Many of these sites and apps are designed to be addictive. The metric that engineers at any site from Facebook to Reddit optimize for is *time on screen*. The downstream effect of this is addictive technology, the more addictive the more profitable, with the burden passed on to the user [^2]. Some people might not need all these steps. But for those of us with addictive personalities, certain guard rails can increase productivity and give you back some of your head space. 

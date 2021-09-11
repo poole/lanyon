@@ -230,6 +230,7 @@ blockquote p:last-child {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
   margin: 0 0 1rem;
   border-radius: 5px;
 }
