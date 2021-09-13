@@ -23,8 +23,9 @@ The process is relatively simple.
     If you want to include gifs, images, and the like, you can add them to the `assets` folder. When you submit to OpenReview, add them too. We'll assume that anything that isn't your main post goes inside the `assets` directory.
 
     Read our example posts carefully to make sure that your embedded assets and $ \LaTeX $ work!
-4. Submit an anonymized version of your post to our OpenReview. To do so, simply remove any references to yourself from your MarkDown file, and send it to OpenReview. A link will be provided at a later date. Also include any assets that you added to the `assets` folder.
+4. Submit an anonymized version of your post to our OpenReview. To do so, simply remove any references to yourself from your MarkDown file, download your fork as a ZIP file, and send it to OpenReview. A link will be provided at a later date.
 
-    To reiterate: only submit your MarkDown file and its assets. Not the entire blog.
-5. Upon acceptance, you will be contacted. You will then make your fork public again, and open a Pull Request to merge your changes with our repository. After asking you to fix any compatibility issues (or fixing them ourselves if they are minor enough), we will then merge your fork into the blog. That way, GitHub will keep track of every single change made to the blog (and if someone wants to find a posts' authors' GitHub usernames, they'll directly be able to find your Pull Request and your fork!).
+    ![Download instructions image]({{ site.url }}/public/images/download_zip.png)
+
+6. Upon acceptance, you will be contacted. You will then make your fork public again, and open a Pull Request to merge your changes with our repository. After asking you to fix any compatibility issues (or fixing them ourselves if they are minor enough), we will then merge your fork into the blog. That way, GitHub will keep track of every single change made to the blog (and if someone wants to find a posts' authors' GitHub usernames, they'll directly be able to find your Pull Request and your fork!).
 
