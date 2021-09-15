@@ -1,0 +1,23 @@
+{
+  "name": "academicons",
+  "version": "1.9.1",
+  "description": "Academicons is a specialist icon font for academics. It contains icons for websites and organisations related to academia that are often missing from mainstream font packages. It can be used by itself, but its primary purpose is to be used as a supplementary package alongside a larger icon set. Go [here](http://jpswalsh.github.io/academicons) to view the full icon set along with instructions for their use.",
+  "main": "css/academicons.css",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpswalsh/academicons.git"
+  },
+  "keywords": [],
+  "author": "James Walsh",
+  "license": "OFL-1.1",
+  "bugs": {
+    "url": "https://github.com/jpswalsh/academicons/issues"
+  },
+  "homepage": "https://jpswalsh.github.io/academicons/"
+}

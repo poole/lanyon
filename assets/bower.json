@@ -1,0 +1,8 @@
+{
+  "name": "academicons",
+  "description": "Academicons",
+  "homepage": "https://jpswalsh.github.io/academicons/",
+  "license": ["OFL-1.1", "MIT", "CC-BY-3.0"],
+  "main": ["css/academicons.css"],
+  "ignore": ["**/.*"]
+}
