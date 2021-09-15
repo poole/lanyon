@@ -5,6 +5,10 @@
 <!-- Toggleable sidebar -->
 <div class="sidebar" id="sidebar">
 
+    <div class="sidebar-item">
+    <p>Melania S. Masià</p>
+  </div>
+  
   <nav class="sidebar-nav">
     <a class="sidebar-nav-item{% if page.title == 'Home' %} active{% endif %}" href="{{ '/' | absolute_url }}">Home</a>
 
@@ -27,11 +31,10 @@
 
   <div class="sidebar-item">
     <p>
-      Melania S. Masià
-      Universitat de València
-      Dep. de Teoria dels Lenguatges i Ciències de la Comunicació
-      Facultat de Filologia, Traducció i Comunicació
-      Avda. Blasco Ibáñez, 32; 46010 València
+      Universitat de València <br>
+      Dep. de Teoria dels Lenguatges i Ciències de la Comunicació <br>
+      Facultat de Filologia, Traducció i Comunicació <br>
+      Avda. Blasco Ibáñez, 32; 46010 València <br>
     </p>
   </div>
   
@@ -39,7 +42,7 @@
     <script language="JavaScript">
     <!-- Hide JavaScript...
     var lastUpdated = new Date(document.lastModified);
-    theMonth = lastUpdated.toLocaleString('default', { month: 'long' });
+    theMonth = lastUpdated.toLocaleString('default', { month: 'short' });
     theYear = lastUpdated.getFullYear();
     document.writeln ("Last updated: " + theMonth + " " + theYear);
     // End Hiding -->
