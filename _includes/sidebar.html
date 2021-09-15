@@ -36,8 +36,11 @@
   
   <script language="JavaScript">
   <!-- Hide JavaScript...
-  var LastUpdated = document.lastModified;
-  document.writeln ("This page was last updated " + LastUpdated);
+  lastUpdated = new Date(document.lastModified);
+  theMonth = update.getMonth() + 1;
+  theYear = update.getFullYear();
+  document.writeln ("Last updated: " + theMonth + theYear);
   // End Hiding -->
   </script>
+
 </div>
