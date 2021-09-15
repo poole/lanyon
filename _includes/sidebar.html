@@ -3,7 +3,7 @@
 <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
 
 <!-- Toggleable sidebar -->
-<div class="sidebar" id="sidebar">
+<div class="sidebar-overlay" id="sidebar">
   <div class="sidebar-item">
     <p>{{ site.description }}</p>
   </div>
@@ -34,15 +34,15 @@
     </p>
   </div>
   
-  <script language="JavaScript">
-  <!-- Hide JavaScript...
-  var lastUpdated = new Date(document.lastModified);
-  theMonth = lastUpdated.getMonth() + 1;
-  theYear = lastUpdated.getFullYear();
-  document.writeln ("Last updated: " + theMonth + theYear);
-  // End Hiding -->
-  </script>
-  
-  <div class="footer">This is a test</div>
+  <div class="footer">    
+    <script language="JavaScript">
+    <!-- Hide JavaScript...
+    var lastUpdated = new Date(document.lastModified);
+    theMonth = lastUpdated.toLocaleString('default', { month: 'long' });
+    theYear = lastUpdated.getFullYear();
+    document.writeln ("Last updated: " + theMonth + " " + theYear);
+    // End Hiding -->
+    </script>
+  </div>
 
 </div>
