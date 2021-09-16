@@ -28,6 +28,7 @@
 
   <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ '/atom.xml' | absolute_url }}">
 
+  <!-- Style for footer -->
   <style type ="text/css" >
     .footer{ 
       position: fixed;     
@@ -36,6 +37,19 @@
       width: 100%;
       font-size: 75%;
     }  
+  </style>
+  
+  <!-- Style for details sections (abstracts) -->
+  <style>
+    details > summary {
+      list-style: none;
+      color: #5F8FA2; 
+    }
+
+    details > p {
+      text-align: justify;"
+      font-size: 80%;
+    }
   </style>
   
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.0/css/all.css">
