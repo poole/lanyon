@@ -1,7 +1,7 @@
 # Setup
 title:               Gardens Between
 tagline:             'irene_hong@outlook.com'
-description:         'Welcome to my personal website!'
+description:         'Welcome!<br> This is a personal blog where I wirte things to log my learning.'
 baseurl:             ''
 paginate:            5
 permalink:           pretty
