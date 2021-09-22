@@ -51,11 +51,11 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -.025rem;
 }
 
-#sidebar-welcome {
+.sidebar-welcome {
    color: #fff;
 }
 
-#sidebar-avatar {
+.sidebar-avatar {
    width: 2rem;
 }
 
