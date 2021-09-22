@@ -1,7 +1,7 @@
 # Setup
 title:               Gardens Between
 tagline:             'irene_hong@outlook.com'
-description:         '<h5 id="sidebar-welcome">Welcome</h5><br> This is a personal blog where I write things as a tech learner. Feel free to reach me anytime at irene_hong@outlook.com.'
+description:         '<img src="/public/images/avatar_rabbit.png"><h5 id="sidebar-welcome">Welcome</h5><br> This is a personal blog where I write things as a tech learner. Feel free to reach me anytime at irene_hong@outlook.com.'
 baseurl:             ''
 paginate:            5
 permalink:           pretty
