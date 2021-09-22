@@ -17,5 +17,5 @@ plugins:
   - jekyll-paginate
 
 # Custom vars
-version:             1.1.0
-google_analytics_id: UA-146052-15
+time:             2021
+update:           September
