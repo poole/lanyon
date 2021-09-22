@@ -1,7 +1,8 @@
 # Setup
-title:               Gardens Between
+title:               'Gardens Between'
 tagline:             '      irene_hong@outlook.com'
-description:         '<img src="/images/avatar_rabbit.png" alt="avatar"> Caifei's Blog <br> Welcome to my personal website!'
+description:         'Caifei's Blog <br> Welcome to my personal website!'
+# description:         '<img src="/images/avatar_rabbit.png" alt="avatar"> Caifei's Blog <br> Welcome to my personal website!'
 baseurl:             ''
 paginate:            5
 permalink:           pretty
