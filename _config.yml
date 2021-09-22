@@ -17,5 +17,4 @@ plugins:
   - jekyll-paginate
 
 # Custom vars
-time:             2021
-update:           September
+time:               2021
