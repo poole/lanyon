@@ -1,7 +1,7 @@
 # Setup
 title:               Melania S. Masià
-tagline:             'Academic site of Melania Sánchez Masià'
-description:         'Linguistics'
+# tagline:             ''
+description:         'Linguistics | Academic site of Melania Sánchez Masià'
 url:                 https://sanmame.github.io
 baseurl:             ''
 paginate:            5
