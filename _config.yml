@@ -1,7 +1,7 @@
 # Setup
 title:               Melania S. Masià
-# tagline:             ''
-# description:         ''
+tagline:             'Academic site of Melania Sánchez Masià'
+description:         'Linguistics'
 url:                 https://sanmame.github.io
 baseurl:             ''
 paginate:            5
@@ -11,6 +11,7 @@ permalink:           pretty
 author:
   name:              Melania S. Masià
   email:             melaniasanchezmasia@gmail.com
+  twitter:           melaniasmasia
 
 # Gems
 plugins:
