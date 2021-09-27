@@ -2,7 +2,7 @@
 title:               Melania S. Masià
 # tagline:             ''
 description:         'Linguistics | Academic site of Melania Sánchez Masià'
-url:                 https://sanmame.github.io
+url:                 'https://sanmame.github.io'
 baseurl:             ''
 paginate:            5
 permalink:           pretty
