@@ -1,8 +1,8 @@
 ---
 layout: post
 title: git 프로젝트 시작하기
-date : 22 Aug 2021
-category : etc
+date : 02 Sep 2021
+category : git
 comments : true
 ---
 
