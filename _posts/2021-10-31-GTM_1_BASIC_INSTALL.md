@@ -19,15 +19,16 @@ comments : true
 <center>
  <img src = '/assets/gtm/gtm_1_1.png' width = '80%'>
 
-"GTM을 사용해 위 코드 대신, GTM의 코드가 설치되고,
+"GTM을 사용해 위 코드 대신, GTM의 코드가 설치되고,  
  기능과 설정을 GTM에서 쉽게 관리가능"
 </center>
 
 ## 2.태그 관리자 장점
 #### 1) html문서 편집 필요 X
-  - 대시보드에 값을 입력하는 방식으로 작성하기에, html 문서를 편집할 위험성이 낮음.
+ : 대시보드에 값을 입력하는 방식으로 작성하기에, html 문서를 편집할 위험성이 낮음.
+
 #### 2) 태그 관리자 코드가 여러 코드를 대신함
-  - GA, 카카오광고, 페이스북 등 여러 서비스의 추적 기능을 활성화 할 수 있음.
+ : GA, 카카오광고, 페이스북 등 여러 서비스의 추적 기능을 활성화 할 수 있음.
   <center>
    <img src = '/assets/gtm/gtm_1_2.png' width = '80%'>
   </center>
@@ -35,7 +36,7 @@ comments : true
 #### 3) 트리거를 이용해 복잡한 기능 구현 가능
  : 이벤트가 전달 복잡한 조건문을 마케터가 설정가능
 <center>
- <img src = '/assets/gtm/gtm_1_3.png' width = '80%'>
+ <img src = '/assets/gtm/gtm_1_3.png' width = '60%'>
 </center>
 
 
