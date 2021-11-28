@@ -16,7 +16,7 @@ comments : true
  - 반복 수행이 가능 할 것
 : 위 과정을 가능하게 하는 것 "피드백 루프(feedback loop)"
 <center>
-<img src = '/assets/210825_data_seminar/data_seminar_1.png' width = '80%'>
+<img src = '../assets/210825_data_seminar/data_seminar_1.png' width = '80%'>
 </center>
 
 <br>
@@ -33,14 +33,14 @@ comments : true
  - 모든 데이터를 다 축적하려는 기업이 많음. 그러나, 완벽한 모든 데이터 구축은 오랜 시간이 걸리며, 불가능함.
  - So 해결하고자 하는 주제를 명확히 정하고 이에 필요한 데이터를 모으는 것이 중요
 <center>
-<img src = '/assets/210825_data_seminar/data_seminar_2.png' width = '80%'>
+<img src = '../assets/210825_data_seminar/data_seminar_2.png' width = '80%'>
 </center>
 
 <br>
 ## 2. 현재 개선
 
 <center>
-<img src = '/assets/210825_data_seminar/data_seminar_3.png' width = '80%'>
+<img src = '../assets/210825_data_seminar/data_seminar_3.png' width = '80%'>
 </center>
 
   - 현재 개선 : 성장 / 광고 효율 / 유저 획득에 관련된 업무
@@ -56,10 +56,10 @@ comments : true
 
 #### + OMTM을 찾는 기술적 방법
 <center>
-<img src = '/assets/210825_data_seminar/data_seminar_4.png' width = '70%'>
-<img src = '/assets/210825_data_seminar/data_seminar_4_2.png' width = '70%'>
-<img src = '/assets/210825_data_seminar/data_seminar_5.png' width = '70%'>
-<img src = '/assets/210825_data_seminar/data_seminar_6.png' width = '70%'>
+<img src = '../assets/210825_data_seminar/data_seminar_4.png' width = '70%'>
+<img src = '../assets/210825_data_seminar/data_seminar_4_2.png' width = '70%'>
+<img src = '../assets/210825_data_seminar/data_seminar_5.png' width = '70%'>
+<img src = '../assets/210825_data_seminar/data_seminar_6.png' width = '70%'>
 </center>
 
 <br>  
@@ -70,32 +70,32 @@ comments : true
   - 채널 : 고객에게 가치를 전달할 수단(ex. push 메세지, 광고 배너 등)
   - 선택지 : 유저에게 오퍼할 선택의 충분한 양과 질(ex. 상품, 고객 대상, 컨텐츠)
 <center>
-<img src = '/assets/210825_data_seminar/data_seminar_7.png' width = '80%'>
+<img src = '../assets/210825_data_seminar/data_seminar_7.png' width = '80%'>
 </center>
 
 
 <br>
 ## 3. 미래 예측
 <center>
-<img src = '/assets/210825_data_seminar/data_seminar_8.png' width = '80%'>
+<img src = '../assets/210825_data_seminar/data_seminar_8.png' width = '80%'>
 </center>
 
 
 <br>
 ## 현실
 <center>
-<img src = '/assets/210825_data_seminar/data_seminar_9.png' width = '80%'>
+<img src = '../assets/210825_data_seminar/data_seminar_9.png' width = '80%'>
 </center>
 
 
 ## 해결책
 <center>
-<img src = '/assets/210825_data_seminar/data_seminar_10.png' width = '80%'>
-<img src = '/assets/210825_data_seminar/data_seminar_11.png' width = '80%'>
+<img src = '../assets/210825_data_seminar/data_seminar_10.png' width = '80%'>
+<img src = '../assets/210825_data_seminar/data_seminar_11.png' width = '80%'>
 </center>
 
 
 ## 정리
 <center>
-<img src = '/assets/210825_data_seminar/data_seminar_12.png' width = '80%'>
+<img src = '../assets/210825_data_seminar/data_seminar_12.png' width = '80%'>
 </center>
