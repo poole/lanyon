@@ -44,15 +44,18 @@ html {
   /*
   font-family: "PT Serif", Georgia, "Times New Roman", serif; # 이전에 사용하던 폰트
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
-   */
   font-family: 'Nanum Myeongjo', serif;
+  */
+  font-family: 'IBM Plex Sans KR', sans-serif;
   font-weight: 300;
   /* font-size: 80%; */
 }
 
 h1, h2, h3, h4, h5, h6 {
-  /* font-family: "PT Sans", Helvetica, Arial, sans-serif; */
+  /* font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-family: 'Nanum Myeongjo', serif;
+  */
+  font-family: 'IBM Plex Sans KR', sans-serif;
   font-weight: 400;
   color: #313131;
   letter-spacing: -.025rem;
@@ -155,8 +158,11 @@ h1, h2, h3, h4, h5, h6 {
   width: 14rem;
   visibility: hidden;
   overflow-y: auto;
-  /* font-family: "PT Sans", Helvetica, Arial, sans-serif; */
+  /*
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-family: 'Nanum Myeongjo', serif;
+  */
+  font-family: 'IBM Plex Sans KR', sans-serif;
   font-size: .875rem; /* 15px */
   color: rgba(255,255,255,.6);
   background-color: #202020;
@@ -371,8 +377,11 @@ a.sidebar-nav-item:focus {
   overflow: hidden; /* clearfix */
   margin-left: -1rem;
   margin-right: -1rem;
-  /* font-family: "PT Sans", Helvetica, Arial, sans-serif; */
+  /*
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-family: 'Nanum Myeongjo', serif;
+  */
+  font-family: 'IBM Plex Sans KR', sans-serif;
   color: #ccc;
   text-align: center;
 }
