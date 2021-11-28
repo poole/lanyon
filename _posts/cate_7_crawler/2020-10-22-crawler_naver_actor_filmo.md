@@ -2,7 +2,7 @@
 layout: post
 title: NaverNews_Crawler : tab 화면 전환
 date : 22 Oct 2020
-category : crawler
+category : 7_crawler
 comments : true
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: YouTube Recommendations Paper_review
 date : 27 sep 2020
-category : ML
+category : 1_ML
 comments : true
 ---
 # Deep Neural Networks for YouTube Recommendations

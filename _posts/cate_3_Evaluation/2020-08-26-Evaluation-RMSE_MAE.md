@@ -2,7 +2,7 @@
 layout: post
 title: RMSE & MAE
 date : 28 Aug 2020
-category : ML_Evaluation
+category : 3_Evaluation
 comments : true
 ---
 
