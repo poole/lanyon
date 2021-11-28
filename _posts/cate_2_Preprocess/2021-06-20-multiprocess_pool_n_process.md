@@ -2,7 +2,7 @@
 layout: post
 title: Multiprocessing) Pool vs Process
 date : 30 Jun 2021
-category : ML_Preprocess
+category : 2_Preprocess
 comments : true
 ---
  : 일부 반복적인 작업 과정에서 1개의 Process만을 사용함에 따라, 작업시간이 오래걸리는 문제를 해결하기 위해 MultiProcessing에 대해서 공부해보고자한다.

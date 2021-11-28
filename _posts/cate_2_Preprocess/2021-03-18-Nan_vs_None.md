@@ -2,7 +2,7 @@
 layout: post
 title: Nan vs None
 date : 18 Mar 2021
-category : ML_Preprocess
+category : 2_Preprocess
 comments : true
 ---
 : 무심코 Nan과 None을 동일한 존재로 생각하고 있었다.

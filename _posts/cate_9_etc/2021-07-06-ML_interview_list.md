@@ -2,7 +2,7 @@
 layout: post
 title: ML interview
 date : 06 July 2021
-category : etc
+category : 9_etc
 comments : true
 ---
 
