@@ -2,7 +2,7 @@
 layout: post
 title: Recommend 1_Intro
 date : 24 Jul 2020
-category : ML
+category : 1_ML
 comments : true
 ---
 

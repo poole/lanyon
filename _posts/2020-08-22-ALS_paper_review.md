@@ -2,7 +2,7 @@
 layout: post
 title: ALS Paper_review
 date : 25 Jul 2020
-category : ML
+category : 1_ML
 comments : true
 ---
 # Collaborative Filtering for Implicit Feedback Datasets

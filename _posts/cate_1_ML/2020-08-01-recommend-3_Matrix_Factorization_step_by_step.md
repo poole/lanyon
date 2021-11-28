@@ -2,7 +2,7 @@
 layout: post
 title: Recommend 3_Matrix Factorization step by step
 date : 01 Aug 2020
-category : ML
+category : 1_ML
 comments : true
 ---
 

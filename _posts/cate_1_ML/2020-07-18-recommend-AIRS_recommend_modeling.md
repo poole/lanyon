@@ -2,7 +2,7 @@
 layout: post
 title: Recommend AIRS 모델링 & 시스템
 date : 18 Jul 2020
-category : ML
+category : 1_ML
 comments : true
 ---
 
