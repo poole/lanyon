@@ -2,11 +2,13 @@
 layout: post
 title: NaverNews_Crawler : tab 화면 전환
 date : 22 Oct 2020
-category : etc
+category : crawler
 comments : true
 ---
+
 # naver & wikipedia crawler
-## switch window...@ㅁ@
+
+## switch window ...@ㅁ@
 : 네이버 뉴스 및 위키피디아를 사용해, 특정 배우의 filmo graphy와, 학력, 나이 등의 기본 정보를 스크랩핑해야 하는 상황이 생겼다.  
 
 프로세스는 해당 배우의 이름(query)을 검색한 후, **'더보기'** 버튼을 클릭해서, 세부 내용을 가져오는 어렵지 않은 과정이었다.  
