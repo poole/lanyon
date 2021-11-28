@@ -559,3 +559,11 @@ a.pagination-item:hover {
 .layout-reverse.sidebar-overlay #sidebar-checkbox:checked ~ .sidebar {
   box-shadow: -.25rem 0 .5rem rgba(0,0,0,.1);
 }
+
+/* font change test */
+@font-face {
+    font-family: 'RIDIBatang';
+    src: url('../../assets/fonts/RIDIBatang.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
