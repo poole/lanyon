@@ -2,7 +2,7 @@
 layout: post
 title: 데이터로 세상을 해석하기
 date : 25 Aug 2021
-category : seminar
+category : etc
 comments : true
 ---
 
@@ -40,7 +40,7 @@ comments : true
 ## 2. 현재 개선
 
 <center>
-<img src = '/assets/210825_data_seminar/data_seminar_3.png' width = '80%'>
+<img src = '../assets/210825_data_seminar/data_seminar_3.png' width = '80%'>
 </center>
 
   - 현재 개선 : 성장 / 광고 효율 / 유저 획득에 관련된 업무
@@ -56,10 +56,10 @@ comments : true
 
 #### + OMTM을 찾는 기술적 방법
 <center>
-<img src = '/assets/210825_data_seminar/data_seminar_4.png' width = '70%'>
-<img src = '/assets/210825_data_seminar/data_seminar_4_2.png' width = '70%'>
-<img src = '/assets/210825_data_seminar/data_seminar_5.png' width = '70%'>
-<img src = '/assets/210825_data_seminar/data_seminar_6.png' width = '70%'>
+<img src = '../assets/210825_data_seminar/data_seminar_4.png' width = '70%'>
+<img src = '../assets/210825_data_seminar/data_seminar_4_2.png' width = '70%'>
+<img src = '../assets/210825_data_seminar/data_seminar_5.png' width = '70%'>
+<img src = '../assets/210825_data_seminar/data_seminar_6.png' width = '70%'>
 </center>
 
 <br>  
@@ -70,32 +70,32 @@ comments : true
   - 채널 : 고객에게 가치를 전달할 수단(ex. push 메세지, 광고 배너 등)
   - 선택지 : 유저에게 오퍼할 선택의 충분한 양과 질(ex. 상품, 고객 대상, 컨텐츠)
 <center>
-<img src = '/assets/210825_data_seminar/data_seminar_7.png' width = '80%'>
+<img src = '../assets/210825_data_seminar/data_seminar_7.png' width = '80%'>
 </center>
 
 
 <br>
 ## 3. 미래 예측
 <center>
-<img src = '/assets/210825_data_seminar/data_seminar_8.png' width = '80%'>
+<img src = '../assets/210825_data_seminar/data_seminar_8.png' width = '80%'>
 </center>
 
 
 <br>
 ## 현실
 <center>
-<img src = '/assets/210825_data_seminar/data_seminar_9.png' width = '80%'>
+<img src = '../assets/210825_data_seminar/data_seminar_9.png' width = '80%'>
 </center>
 
 
 ## 해결책
 <center>
-<img src = '/assets/210825_data_seminar/data_seminar_10.png' width = '80%'>
-<img src = '/assets/210825_data_seminar/data_seminar_11.png' width = '80%'>
+<img src = '../assets/210825_data_seminar/data_seminar_10.png' width = '80%'>
+<img src = '../assets/210825_data_seminar/data_seminar_11.png' width = '80%'>
 </center>
 
 
 ## 정리
 <center>
-<img src = '/assets/210825_data_seminar/data_seminar_12.png' width = '80%'>
+<img src = '../assets/210825_data_seminar/data_seminar_12.png' width = '80%'>
 </center>
