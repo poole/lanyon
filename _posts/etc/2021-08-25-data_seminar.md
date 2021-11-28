@@ -16,7 +16,7 @@ comments : true
  - 반복 수행이 가능 할 것
 : 위 과정을 가능하게 하는 것 "피드백 루프(feedback loop)"
 <center>
-<img src = '../assets/210825_data_seminar/data_seminar_1.png' width = '80%'>
+<img src = '/assets/210825_data_seminar/data_seminar_1.png' width = '80%'>
 </center>
 
 <br>
@@ -33,7 +33,7 @@ comments : true
  - 모든 데이터를 다 축적하려는 기업이 많음. 그러나, 완벽한 모든 데이터 구축은 오랜 시간이 걸리며, 불가능함.
  - So 해결하고자 하는 주제를 명확히 정하고 이에 필요한 데이터를 모으는 것이 중요
 <center>
-<img src = '../assets/210825_data_seminar/data_seminar_2.png' width = '80%'>
+<img src = '/assets/210825_data_seminar/data_seminar_2.png' width = '80%'>
 </center>
 
 <br>
