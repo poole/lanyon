@@ -6,7 +6,7 @@ title: Submitting
 The process is relatively simple.
 
 1. Fork this blog. You can use this link to find the github repo: [https://github.com/iclr-blog-track/iclr-blog-track.github.io](https://github.com/iclr-blog-track/iclr-blog-track.github.io)
-2. **Make your fork private**. To maintain anonymity in our double-blind submission process, **we must not see your changes to the blog**. After your submission to our OpenReview, we **will** investigate the accepted posts, and we **will** reject the forks that are still public.
+2. **Privately clone the repo**. To maintain anonymity in our double-blind submission process, **we must not see your changes to the blog**. After your submission to our OpenReview, we **will** investigate the accepted posts, and we **will** reject the forks that are still public.
 3. Add your post to the `_posts` folder. **This new `MarkDown` file must be your sole change to the entire blog.** You can use standard GitHub-flavoured MarkDown. Additionally, you have to edit the file's header:
     ```
    ---
