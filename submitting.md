@@ -84,6 +84,7 @@ gem "jekyll-gist"
 gem "jekyll-sitemap"
 gem "jekyll-seo-tag" 
 gem "jekyll-paginate"
+gem "webrick"
 ```
 Then run
 
