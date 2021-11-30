@@ -7,9 +7,8 @@ The process is relatively simple.
 
 ## Overall process
 
-1. **Go to the submission branch of our repository***. You can use this link to find the github repo: [https://github.com/iclr-blog-track/iclr-blog-track.github.io](https://github.com/iclr-blog-track/iclr-blog-track.github.io)
-2. **Privately clone the repo**. To maintain anonymity in our double-blind submission process, **we must not see your changes to the blog**. After your submission to our OpenReview, we **will** investigate the accepted posts, and we **will** reject the forks that are still public.
-3. Write your post by modifying the `_posts/2021-04-25-template.md` file that is in the branch **submission**. **This edited `MarkDown` file and the associated images/gifs must be your sole change to the entire blog.** You can use standard GitHub-flavoured MarkDown. Additionally, you have to edit the file's header:
+1. Download the lastest release of the template: https://github.com/iclr-blog-track/iclr-blog-track.github.io/releases/tag/v1.1.1
+2. Write your post by modifying the `_posts/2021-04-25-template.md` file that is in the branch **submission**. **This edited `MarkDown` file and the associated images/gifs must be your sole change to the entire blog.** You can use standard GitHub-flavoured MarkDown. Additionally, you have to edit the file's header:
     ```
    ---
     layout: post
@@ -25,13 +24,13 @@ The process is relatively simple.
     If you want to include gifs, images, and the like, you can add them to the `public/images` folder.
 
     Read our example posts carefully to make sure that your embedded assets and $ \LaTeX $ work!
-4. Export a static version of your blobpost (see below for details about this step). Note that no javascript 
-5. Submit an anonymized version of your post to our OpenReview. To do so, simply remove any references to yourself from your MarkDown file, upload your static blogpost as a ZIP file, and send it to OpenReview. A link will be provided at a later date.
+3. Export a static version of your blobpost (see below for details about this step). Note that no javascript 
+4. Submit an anonymized version of your post to our OpenReview. To do so, simply remove any references to yourself from your MarkDown file, upload your static blogpost as a ZIP file, and send it to OpenReview. A link will be provided at a later date.
 
     ![Download instructions image]({{ site.url }}/public/images/download_zip.png)
     Include a README.txt file in the root of that ZIP that mentions which blog post is yours.
 
-6. Upon acceptance, you will be contacted. You will then make a public fork of the official repository, and open a Pull Request to merge your changes with our repository. After asking you to fix any compatibility issues (or fixing them ourselves if they are minor enough), we will then merge your fork into the blog. That way, GitHub will keep track of every single change made to the blog (and if someone wants to find a posts' authors' GitHub usernames, they'll directly be able to find your Pull Request and your fork!).
+5. Upon acceptance, you will be contacted. You will then make a public fork of the official repository, and open a Pull Request to merge your changes with our repository. After asking you to fix any compatibility issues (or fixing them ourselves if they are minor enough), we will then merge your fork into the blog. That way, GitHub will keep track of every single change made to the blog (and if someone wants to find a posts' authors' GitHub usernames, they'll directly be able to find your Pull Request and your fork!).
 
 ## Exporting a static version of your website
 
