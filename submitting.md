@@ -7,9 +7,9 @@ The process is relatively simple.
 
 ## Overall process
 
-1. Fork this blog. You can use this link to find the github repo: [https://github.com/iclr-blog-track/iclr-blog-track.github.io](https://github.com/iclr-blog-track/iclr-blog-track.github.io)
+1. **Go to the submission branch of our repository***. You can use this link to find the github repo: [https://github.com/iclr-blog-track/iclr-blog-track.github.io](https://github.com/iclr-blog-track/iclr-blog-track.github.io)
 2. **Privately clone the repo**. To maintain anonymity in our double-blind submission process, **we must not see your changes to the blog**. After your submission to our OpenReview, we **will** investigate the accepted posts, and we **will** reject the forks that are still public.
-3. Add your post to the `_posts` folder. **This new `MarkDown` file must be your sole change to the entire blog.** You can use standard GitHub-flavoured MarkDown. Additionally, you have to edit the file's header:
+3. Write your post by modifying the `_posts/2021-04-25-template.md` file that is in the branch **submission**. **This edited `MarkDown` file and the associated images/gifs must be your sole change to the entire blog.** You can use standard GitHub-flavoured MarkDown. Additionally, you have to edit the file's header:
     ```
    ---
     layout: post
@@ -37,7 +37,7 @@ The process is relatively simple.
 
 ### With Docker (recommended method)
 
-TBD
+TBD 
 
 ### With jerkyll
 
