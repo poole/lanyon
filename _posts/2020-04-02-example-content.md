@@ -141,6 +141,6 @@ author is John Doe, so the images go in `/public/images/example_content_jdoe`. T
 
 To add HTML figures, you must add them to the `_includes` folder. Again, add them under a unique name.
 
-Here, `{% include example_content_jdoe/plotly_demo_1.html %}` becomes
+Here, `\{\% include example_content_jdoe/plotly_demo_1.html \%\}` becomes
 
 {% include example_content_jdoe/plotly_demo_1.html %}
