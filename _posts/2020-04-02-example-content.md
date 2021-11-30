@@ -133,7 +133,7 @@ If you include an hosted elsewhere on the web, the process is trivial. Simply us
 However, if your image must be hosted locally, it's a bit more touchy. You must add the site's URL (use the `{{ site.url }}` syntax).
 
 `![ICLR LOGO]({{ site.url }}/public/images/example_content_jdoe/ICLR-logo.png)` becomes:
-![ICLR LOGO] ({{ site.url }}/public/images/example_content_jdoe/ICLR-logo)
+![ICLR LOGO]({{ site.url }}/public/images/example_content_jdoe/ICLR-logo.png)
 
 In order to ensure there is no namespace conflict between submissions, we ask you to add your images
 inside a separate folder inside `/public/images`. For example, this blog post is called "example-content" and the first
@@ -141,6 +141,6 @@ author is John Doe, so the images go in `/public/images/example_content_jdoe`. T
 
 To add HTML figures, you must add them to the `_includes` folder. Again, add them under a unique name.
 
-Here, `\{\% include example_content_jdoe/plotly_demo_1.html \%\}` becomes
+Here, `\{% include example_content_jdoe/plotly_demo_1.html %}` (without the `\` prefix) becomes
 
 {% include example_content_jdoe/plotly_demo_1.html %}
