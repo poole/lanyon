@@ -5,6 +5,8 @@ title: Submitting
 
 The process is relatively simple.
 
+## Overall process
+
 1. Fork this blog. You can use this link to find the github repo: [https://github.com/iclr-blog-track/iclr-blog-track.github.io](https://github.com/iclr-blog-track/iclr-blog-track.github.io)
 2. **Privately clone the repo**. To maintain anonymity in our double-blind submission process, **we must not see your changes to the blog**. After your submission to our OpenReview, we **will** investigate the accepted posts, and we **will** reject the forks that are still public.
 3. Add your post to the `_posts` folder. **This new `MarkDown` file must be your sole change to the entire blog.** You can use standard GitHub-flavoured MarkDown. Additionally, you have to edit the file's header:
@@ -23,10 +25,137 @@ The process is relatively simple.
     If you want to include gifs, images, and the like, you can add them to the `public/images` folder.
 
     Read our example posts carefully to make sure that your embedded assets and $ \LaTeX $ work!
-4. Submit an anonymized version of your post to our OpenReview. To do so, simply remove any references to yourself from your MarkDown file, download your fork as a ZIP file, and send it to OpenReview. A link will be provided at a later date.
+4. Export a static version of your blobpost (see below for details about this step). Note that no javascript 
+5. Submit an anonymized version of your post to our OpenReview. To do so, simply remove any references to yourself from your MarkDown file, upload your static blogpost as a ZIP file, and send it to OpenReview. A link will be provided at a later date.
 
     ![Download instructions image]({{ site.url }}/public/images/download_zip.png)
     Include a README.txt file in the root of that ZIP that mentions which blog post is yours.
 
-6. Upon acceptance, you will be contacted. You will then make your fork public again, and open a Pull Request to merge your changes with our repository. After asking you to fix any compatibility issues (or fixing them ourselves if they are minor enough), we will then merge your fork into the blog. That way, GitHub will keep track of every single change made to the blog (and if someone wants to find a posts' authors' GitHub usernames, they'll directly be able to find your Pull Request and your fork!).
+6. Upon acceptance, you will be contacted. You will then make a public fork of the official repository, and open a Pull Request to merge your changes with our repository. After asking you to fix any compatibility issues (or fixing them ourselves if they are minor enough), we will then merge your fork into the blog. That way, GitHub will keep track of every single change made to the blog (and if someone wants to find a posts' authors' GitHub usernames, they'll directly be able to find your Pull Request and your fork!).
+
+## Exporting a static version of your website
+
+### With Docker (recommended method)
+
+TBD
+
+### With jerkyll
+
+
+#### Installation of Jerkyll (Ubuntu)
+
+1. Install Ruby (I'm using v3.2.5)
+
+```bash
+sudo apt install ruby-full
+```
+
+2. Once installed, add the following to your `.bashrc` or whatever terminal startup script you may use:
+
+```bash
+export GEM_HOME="$HOME/.gem"
+export PATH="$HOME/.gem/bin:$PATH"
+```
+
+3. Install bundler:
+
+```bash
+gem install jekyll bundler
+```
+
+4. Install dependencies:
+
+From within this repository's root directory, run:
+
+```bash
+bundle init
+```
+It creates a ```Gemfile``` file. Edit the file in order to have the following ```Gemfile```
+
+```
+# frozen_string_literal: true
+
+source "https://rubygems.org"
+
+git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
+
+# gem "rails"
+gem "jekyll-gist"
+gem "jekyll-sitemap"
+gem "jekyll-seo-tag" 
+gem "jekyll-paginate"
+```
+Then run
+
+```bash
+bundle install
+```
+
+#### Installation of Jerkyll (MacOS and Windows)
+
+Mac and Windows users can find relevant guides for installing Jekyll here:
+
+- [Windows guide](https://jekyllrb.com/docs/installation/windows/)
+- [MacOS guide](https://jekyllrb.com/docs/installation/macos/)
+
+Additionally, you will need to do a few steps in Windows before serving you are able to serve your page locally. The steps below are Windows only, and you won't need them if you're on a Linux based machine. 
+
+#### Windows Specific Steps:
+
+Before running these, you'd want to make sure your Ruby and Jekyll installations are functional.
+
+1. From within the repository's root directory, run: 
+
+```
+bundle add webrick
+```
+
+2. Open the `gemfile` present in the root directory of the repository, and add the following line at the end of the file: 
+
+```
+gem 'wdm', '>= 0.1.0'
+```
+
+3. Run the following command in the same directory: 
+
+```
+gem install wdm
+```
+
+You should be able to serve the page locally on Windows after these steps. 
+
+### Serving the Page Locally
+
+Once you've installed jekyll and all of the dependencies, you can now serve the webpage on your local machine for development purposes using the `jekyll serve` command, using bundle to handle any dependencies.
+In your terminal, from the directory containing the Jekyll project run:
+
+```bash
+bundle exec jekyll serve
+```
+
+You should see something along the lines of:
+
+```
+> bundle exec jekyll serve
+Configuration file: /home/USER/ift6758-blog-template/_config.yml
+            Source: /home/USER/ift6758-blog-template
+       Destination: /home/USER/ift6758-blog-template/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+                    done in 0.661 seconds.
+ Auto-regeneration: enabled for '/home/USER/ift6758-blog-template'
+    Server address: http://127.0.0.1:4000/
+  Server running... press ctrl-c to stop.
+```
+
+If you see this, you've successfully served your web page locally!
+You can access it at server address specified, in this case `http://127.0.0.1:4000/`.
+
+### Generating the html file
+
+```bash
+JEKYLL_ENV=production bundle exec jekyll build
+```
+
+The static html webpage should appear in ```/_site```
 
