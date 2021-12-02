@@ -120,6 +120,8 @@ GitHub.
 
 ## Submission Process
 
+TODO DAVID i think you should just link to submitting.md here instead
+
 A full copy of the track’s blogs will always be publicly available as a
 GitHub repository [(mock-up
 link)](https://github.com/bourbaki-blogchain/bourbaki-blogchain.github.io).
