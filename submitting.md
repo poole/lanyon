@@ -33,6 +33,8 @@ The process is relatively simple.
     It will also export a `vars.yml` containing your submission ID.
 
     **NOTE**: You will need to install Docker. Read about exporting your blog [bellow](#exporting).
+
+    You will need to upload both the `site.zip` and the `vars.yml` to OpenReview (link to venue TBD).
 4. Upon acceptance, you will be contacted. You will then make a public fork of the official repository, and open a Pull
     Request to merge your changes with our repository. After asking you to fix any compatibility issues
     (or fixing them ourselves if they are minor enough), we will then merge your fork into the blog. That way,
