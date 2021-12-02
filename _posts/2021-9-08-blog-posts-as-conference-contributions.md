@@ -2,15 +2,13 @@
 layout: post
 title: Blog Posts as Conference Contributions
 tags: [proposal, call]
-authors: Bubeck, Sebastien, Microsoft; Dobre, David, Mila; Gauthier, Charlie, Mila; Gidel, Gauthier, Mila; Vernade, Claire, DeepMind
-
+authors: Bubeck, Sebastien (Microsoft); Dobre, David (Mila); Gauthier, Charlie (Mila); Gidel, Gauthier (Mila); Vernade, Claire (DeepMind)
 ---
 
-# Motivations
+# Motivation
 
-The Machine Learning community is currently experiencing a
-[reproducibility
-crisis](https://neuripsconf.medium.com/designing-the-reproducibility-program-for-neurips-2020-7fcccaa5c6ad)
+The Machine Learning community is currently experiencing a 
+[reproducibility crisis](https://neuripsconf.medium.com/designing-the-reproducibility-program-for-neurips-2020-7fcccaa5c6ad)
 and a reviewing crisis [[Littman, 2021]](#Litt). Because of the highly competitive and noisy
 reviewing process of ML conferences [[Tran et al., 2020]](#Tran), researchers have an incentive to
 oversell their results, slowing down the progress and diminishing the
@@ -20,7 +18,8 @@ become more challenging to keep track of the latest advances in the
 field.
 
 Blog posts are becoming an increasingly popular and useful way to talk
-about science [[Brown and Woolston, 2018]](#Brow). They offer substantial value to the scientific community
+about science [[Brown and Woolston, 2018]](#Brow). 
+They offer substantial value to the scientific community
 by providing a flexible platform to foster open, human, and transparent
 discussions about new insights or limitations of a scientific
 publication. However, because they are not as recognized as standard
@@ -40,16 +39,17 @@ to expect a significant portion of the machine learning community to
 contribute to such an initiative when everyone is trying to establish
 themselves through publications.
 
+# A Blog Post Conference Track
+
 Our goal is to create a formal call for blog posts at ICLR to
 incentivize and reward researchers to review past work and summarize the
 outcomes, develop new intuitions, or highlight some shortcomings. A very
 influential initiative of this kind happened after the second world war
 in France. Because of the lack of up-to-date textbooks, a collective of
 mathematicians under the pseudonym Nicolas Bourbaki [[Halmos 1957]](#Halm), decided to start a
-series of textbooks  about the foundations of mathematics [[Bourbaki, 1939]](#Bour).
-In the same vein, we aim at providing a new way to summarize scientific knowledge in the ML community.
-
-# Our Idea: Blog post Conference Track
+series of textbooks about the foundations of mathematics [[Bourbaki, 1939]](#Bour).
+In the same vein, we aim at providing a new way to summarize scientific knowledge in 
+the ML community.
 
 Due to the large diversity of topics that can be discussed in a blog
 post, we decided to restrict the range of topics for this call for blog
@@ -57,9 +57,9 @@ posts. We identified that the blog posts that would bring to most value
 to the community and the conference would be posts that distill and
 discuss *previously published papers*.
 
-## Call for blog posts on papers previously published at ICLR
+## Call for blog posts discussing work previously published at ICLR
 
-The call for blog post would take the following form:
+The format and process for this blog post track is:
 
 -   Write a post about a paper previously published at ICLR, with the
     constraint that one cannot write a blog post on work that they have
@@ -87,8 +87,8 @@ We believe having this call for blog posts as a conference track would
 increase the posts’ visibility, impact, and credibility, while
 simultaneously providing benefits to the conference.
 
--   *Adoption*: we think that, with the conference’s stamp, such a
-    format will be more broadly recognized and adopted by the community.
+-   *Adoption*: we think that a conference’s "stamp" will give more credibility to blog posts,
+    making them more broadly recognized and adopted by the community.
 
 -   *Accessibility*: maintaining a blog is time consuming , and requires
     many blog posts to gain a stable following. By allowing researchers

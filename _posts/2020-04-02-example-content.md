@@ -121,26 +121,3 @@ Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur e
 
 -----
 
-# Images, gifs, and assets
-
-If you include an hosted elsewhere on the web, the process is trivial. Simply use the standard GitHub-flavoured-MarkDown syntax.
-
-`![Example Image](https://iclr.cc/static/core/img/ICLR-logo.svg)` becomes:
-
-![Example Image](https://iclr.cc/static/core/img/ICLR-logo.svg)
-(be wary of copyrights).
-
-However, if your image must be hosted locally, it's a bit more touchy. You must add the site's URL (use the `{{ site.url }}` syntax).
-
-`![ICLR LOGO](\{\{ site.url \}\}/public/images/example_content_jdoe/ICLR-logo.png)` (without the `\` character before `{` and `}`) becomes:
-![ICLR LOGO]({{ site.url }}/public/images/example_content_jdoe/ICLR-logo.png)
-
-In order to ensure there is no namespace conflict between submissions, we ask you to add your images
-inside a separate folder inside `/public/images`. For example, this blog post is called "example-content" and the first
-author is John Doe, so the images go in `/public/images/example_content_jdoe`. Try to pick a unique name.
-
-To add HTML figures, you must add them to the `_includes` folder. Again, add them under a unique name.
-
-Here, `\{\% include example_content_jdoe/plotly_demo_1.html \%\}` (without the `\` character before `}`, `{` and `%`) becomes
-
-{% include example_content_jdoe/plotly_demo_1.html %}
