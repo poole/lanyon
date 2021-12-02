@@ -7,7 +7,7 @@ The process is relatively simple.
 
 ## Overall process
 
-1. Download the lastest release of the template: https://github.com/iclr-blog-track/iclr-blog-track.github.io/releases/tag/v1.1.1
+1. Download the lastest release of the template: https://github.com/iclr-blog-track/iclr-blog-track.github.io/releases
 2. Write your post by modifying the `_posts/2021-04-25-template.md` file that is in the branch **submission**. **This
     edited `MarkDown` file and the associated images/gifs/HTML figures must be your sole change to the entire blog.**
     You can use standard GitHub-flavoured MarkDown. Additionally, you have to edit the file's header:
