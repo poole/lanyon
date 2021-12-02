@@ -352,7 +352,7 @@ tbody tr:nth-child(odd) th {
   color: #9a9a9a;
 }
 
-/* Related posts */
+/* Related blog */
 .related {
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -382,7 +382,7 @@ tbody tr:nth-child(odd) th {
  * Pagination
  *
  * Super lightweight (HTML-wise) blog pagination. `span`s are provide for when
- * there are no more previous or next posts to show.
+ * there are no more previous or next blog to show.
  */
 
 .pagination {

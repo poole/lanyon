@@ -12,20 +12,20 @@ authors: Bubeck, Sebastien (Microsoft); Dobre, David (Mila); Gauthier, Charlie (
 
 ## Important Dates
 
-- The submission deadline for your blog post is **January 7th, 2022 EOA**. 
+- The submission deadline for your blog post is **January 7th, 2022 EOA**.
 - The review process will conclude on **March ???, 2022**
 
 ---
 
-- <h2><a href="about">About</a></h2> 
-- <h2><a href="posts">ICLR Blog Posts</a></h2> 
+- <h2><a href="about">About</a></h2>
+- <h2><a href="blog">ICLR Blog Posts</a></h2>
 - <h2><a href="submitting">Submitting</a></h2>
 
 ---
 
 <!-- # Motivation -->
 
-The Machine Learning community is currently experiencing a 
+The Machine Learning community is currently experiencing a
 [reproducibility crisis](https://neuripsconf.medium.com/designing-the-reproducibility-program-for-neurips-2020-7fcccaa5c6ad)
 and a reviewing crisis [[Littman, 2021]](#Litt). Because of the highly competitive and noisy
 reviewing process of ML conferences [[Tran et al., 2020]](#Tran), researchers have an incentive to
@@ -36,7 +36,7 @@ become more challenging to keep track of the latest advances in the
 field.
 
 Blog posts are becoming an increasingly popular and useful way to talk
-about science [[Brown and Woolston, 2018]](#Brow). 
+about science [[Brown and Woolston, 2018]](#Brow).
 They offer substantial value to the scientific community
 by providing a flexible platform to foster open, human, and transparent
 discussions about new insights or limitations of a scientific
@@ -67,7 +67,7 @@ influential initiative of this kind happened after the second world war
 in France. Because of the lack of up-to-date textbooks, a collective of
 mathematicians under the pseudonym Nicolas Bourbaki [[Halmos 1957]](#Halm), decided to start a
 series of textbooks about the foundations of mathematics [[Bourbaki, 1939]](#Bour).
-In the same vein, we aim at providing a new way to summarize scientific knowledge in 
+In the same vein, we aim at providing a new way to summarize scientific knowledge in
 the ML community.
 
 Due to the large diversity of topics that can be discussed in a blog

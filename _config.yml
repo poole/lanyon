@@ -21,6 +21,8 @@ author:
 plugins:
   - jekyll-paginate
 
+paginate_path: "/blog/:num"
+
 # Custom vars
 version:             ICLR Spring 2021
 google_analytics_id: #UA-XXXX-Y
