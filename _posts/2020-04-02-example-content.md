@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Example content (Images and Assets)
+title: Example content (Images, Assets, HTML Figures, Latex)
 tags: [test, tutorial, markdown]
 authors: Doe, John, School of Life; Doe, Jane, A School
 ---
@@ -144,3 +144,69 @@ To add HTML figures, you must add them to the `_includes` folder. Again, add the
 Here, `\{\% include example_content_jdoe/plotly_demo_1.html \%\}` (without the `\` character before `}`, `{` and `%`) becomes
 
 {% include example_content_jdoe/plotly_demo_1.html %}
+
+
+
+## How to add $\LaTeX$ commands to your posts:
+
+### Inline
+
+To add inline math, you can use `$ <math> $`. Here is an example:
+
+
+`$ \sum_{i=0}^j \frac{1}{2^n} \times i $` becomes
+$ \sum_{i=0}^j \frac{1}{2^n} \times i $
+
+### Block
+
+To add block math, you *must* use `$$<math>$$`. Here are some examples:
+
+```
+$$\begin{equation}
+a \times b \times c = 0 \\
+j=1 \\
+k=2 \\
+\end{equation}$$
+```
+
+...becomes...
+
+$$\begin{equation}
+a \times b \times c = 0 \\
+j=1 \\
+k=2 \\
+\end{equation}$$
+
+```
+$$\begin{align}
+i2 \times b \times c =0 \\
+j=1 \\
+k=2 \\
+\end{align}$$
+```
+
+...becomes...
+
+$$\begin{align}
+i2 \times b \times c =0 \\
+j=1 \\
+k=2 \\
+\end{align}$$
+
+Don't forget the enclosing `$$`! Otherwise, your newlines won't work:
+
+```
+\begin{equation}
+i2=0 \\
+j=1 \\
+k=2 \\
+\end{equation}
+```
+
+...becomes...
+
+\begin{equation}
+i2=0 \\
+j=1 \\
+k=2 \\
+\end{equation}
