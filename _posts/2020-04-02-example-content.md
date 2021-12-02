@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Example content (Images and Assets)
+title: Example content (Basic Markdown)
 tags: [test, tutorial, markdown]
 authors: Doe, John, School of Life; Doe, Jane, A School
 ---

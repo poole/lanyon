@@ -5,6 +5,24 @@ tags: [proposal, call]
 authors: Bubeck, Sebastien (Microsoft); Dobre, David (Mila); Gauthier, Charlie (Mila); Gidel, Gauthier (Mila); Vernade, Claire (DeepMind)
 ---
 
+<br>
+<p align="center">
+  <img src="{{ sit.url }}/public/images/2021/2021-09-01-sample-submission/ICLR-logo.png" alt="ICLR Logo">
+</p>
+
+## Important Dates
+
+- The submission deadline for your blog post is **January 7th, 2022 EOA**. 
+- The review process will conclude on **March ???, 2022**
+
+---
+
+- <h2><a href="about">About</a></h2> 
+- <h2><a href="posts">ICLR Blog Posts</a></h2> 
+- <h2><a href="submitting">Submitting</a></h2>
+
+---
+
 <!-- # Motivation -->
 
 The Machine Learning community is currently experiencing a 
@@ -40,13 +58,6 @@ contribute to such an initiative when everyone is trying to establish
 themselves through publications.
 
 
-- [About]({{ site.baseurl }}{% link about.md %})
-- [Submitting]({{ site.baseurl }}{% link submitting.md %})
-- [Posts](https://link-url-here.org)
-- [A Blog Post Conference Track](#a-blog-post-conference-track)
-<!-- - [Submission](#submission) -->
-    <!-- - [Submission Process](#submission-process) -->
-
 # A Blog Post Conference Track
 
 Our goal is to create a formal call for blog posts at ICLR to
@@ -67,7 +78,7 @@ discuss *previously published papers*.
 
 ### A call for blog posts discussing work previously published at ICLR
 
-The format and process for this blog post track is:
+The format and process for this blog post track is as follows:
 
 -   Write a post about a paper previously published at ICLR, with the
     constraint that one cannot write a blog post on work that they have
@@ -142,6 +153,46 @@ Once the submission period has ended, the GitHub repository of our track will
 be temporarily made private for the duration of the conference, allowing the
 conference to host the website. After the conference, the GitHub repository will
 be made public again to allow viewers to fork and download its contents.
+
+
+
+<div class="posts">
+  {% for post in paginator.posts %}
+  <div >
+    <h1 class="post-title">
+      <a href="{{ post.url | absolute_url }}">
+        {{ post.title }}
+      </a>
+    </h1>
+
+    <span class="post-date">{{ post.date | date_to_string }} | {% for tag in post.tags %}
+      <a class="content-tag" href="/tags/#{{ tag | slugify }}"> {{ tag }} </a>
+        {% endfor %}
+    </span>
+    <span class="post-date">{{ post.authors }}</span>
+
+    <!-- {{ post.content }} -->
+  </div>
+  {% endfor %}
+</div>
+
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ paginator.next_page_path | absolute_url }}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="{{ '/' | absolute_url }}">Newer</a>
+    {% else %}
+      <a class="pagination-item newer" href="{{ paginator.previous_page_path | absolute_url }}">Newer</a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
+</div>
+
 
 # References
 
