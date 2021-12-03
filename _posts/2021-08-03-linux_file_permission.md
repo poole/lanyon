@@ -2,7 +2,7 @@
 layout: post
 title: linux file permission (chmod & chown)
 date : 03 Aug 2021
-category : linux
+category : 08_Linux
 comments : true
 ---
 

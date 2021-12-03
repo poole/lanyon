@@ -2,7 +2,7 @@
 layout: post
 title: git 프로젝트 시작하기
 date : 02 Sep 2021
-category : 05_git
+category : 05_Git
 comments : true
 ---
 
