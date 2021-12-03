@@ -6,11 +6,11 @@ title: Home
 <div class="posts">
   {% for post in paginator.posts %}
   <div >
-    <h1 class="post-title">
+    <h2 class="post-title">
       <a href="{{ post.url | absolute_url }}">
         {{ post.title }}
       </a>
-    </h1>
+    </h2>
 
     <span class="post-date">{{ post.date | date_to_string }} | {% for tag in post.tags %}
       <a class="content-tag" href="/tags/#{{ tag | slugify }}"> {{ tag }} </a>
@@ -19,6 +19,8 @@ title: Home
     <span class="post-date">{{ post.authors }}</span>
 
     <!-- {{ post.content }} -->
+    {{ post.excerpt }}
+    <hr>
   </div>
   {% endfor %}
 </div>

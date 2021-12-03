@@ -56,16 +56,16 @@ might face losing important information in your blog post.
 To include images in your submission, you could do something like the following:
 
 ```markdown
-{% raw %}![ICLR LOGO]({{ site.url }}/public/images/2021/2021-09-01-sample-submission/ICLR-logo.png){% endraw %} 
+{% raw %}![ICLR LOGO]({{ site.url }}/public/images/2021-09-01-sample-submission/ICLR-logo.png){% endraw %} 
 ```
 
 which becomes:
 
-![ICLR LOGO]({{ site.url }}/public/images/2021/2021-09-01-sample-submission/ICLR-logo.png)
+![ICLR LOGO]({{ site.url }}/public/images/2021-09-01-sample-submission/ICLR-logo.png)
 
 The {% raw %}`{{ site.url }}`{% endraw %} syntax expands the site URL for you.
 To ensure that there are no namespace conflicts, you must save your asset to your unique directory
-`/public/images/2022/2022-05-03-[SUBMISSION NAME]` within your submission.
+`/public/images/2022-05-03-[SUBMISSION NAME]` within your submission.
 
 ## Interactive Figures
 
@@ -73,7 +73,7 @@ Here's how you could embed interactive figures that have been exported as HTML f
 Note that we will be using plotly for this demo, but anything that allows you to HTML should work
 (**no javascript is allowed!**).
 All that's required is for you to export your figure into HTML format, and make sure that the file 
-exists in the `_includes/2022/[YOUR SUBMISSION NAME]/` directory in this repository's root directory.
+exists in the `_includes/[SUBMISSION NAME]/` directory in this repository's root directory.
 To embed it into any page, simply insert the following code anywhere into your page.
 
 ```markdown
@@ -93,7 +93,7 @@ fig = px.density_mapbox(df, lat='Latitude', lon='Longitude', z='Magnitude', radi
                         mapbox_style="stamen-terrain")
 fig.show()
 
-fig.write_html('./_includes/2021/2021-09-01-sample-submission/plotly_demo_1.html')
+fig.write_html('./_includes/2021-09-01-sample-submission/plotly_demo_1.html')
 ```
 
 And then include it with the following:
@@ -104,14 +104,14 @@ And then include it with the following:
 
 Voila!
 
-{% include 2021/2021-09-01-sample-submission/plotly_demo_1.html %}
+{% include 2021-09-01-sample-submission/plotly_demo_1.html %}
 
 
 The above figure is pretty cool, but you can also embed heavier/more complex figures.
 For brevity, the following figure is generated from the figure produced in 
 [this plotly tutorial](https://plotly.com/python/dropdowns/).
 
-{% include 2021/2021-09-01-sample-submission/plotly_demo_2.html %}
+{% include 2021-09-01-sample-submission/plotly_demo_2.html %}
 
 
 ## $\LaTeX$
