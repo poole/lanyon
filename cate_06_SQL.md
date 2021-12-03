@@ -1,9 +1,9 @@
 ---
 layout: page
-title: SQL_BigQuery
+title: 06_SQL
 ---
 {% for post in site.posts %}
-  {% if post.category == 'SQL_BigQuery' %}
+  {% if post.category == '06_SQL' %}
   * {{ post.date | date_to_string }} &raquo; [ {{ post.title }} ]({{ post.url }})
   {% endif %}
 {% endfor %}
