@@ -104,7 +104,7 @@ The format and process for this blog post track is as follows:
     and hosted on the conference website or our own Github page.
 
 
-# Submission
+# Submissions
 
 Our goal is to avoid heavily engineered, professionally-made
 blog-posts---Such as the “100+ hours” mentioned as a standard by the [Distill
@@ -121,83 +121,8 @@ without much effort for offline reading or archival purposes. More
 importantly, this format can be easily hosted and maintained through
 GitHub.
 
-## Submission Process
-
-TODO DAVID i think you should just link to submitting.md here instead
-
-A full copy of the track’s blogs will always be publicly available as a
-GitHub repository [(mock-up
-link)](https://github.com/bourbaki-blogchain/bourbaki-blogchain.github.io).
-
-The process for creating and submitting a blog post is as follows:
-
-1. Entrants will fork this repository and **make their fork private**.
-    Failure to do so will result in the submission being rejected, as it
-    breaches the double-blind review process.
-
-2. Users will modify their fork as they see fit; they will add their post
-    along with any media files it might require. Since this is a full fork,
-    they will be able to view their own copy of the blog. This means that
-    they will be able to see exactly how their post will look and behave
-    on the main website.
-
-3. Once completed, entrants will **anonymize** their blog post (i.e. strip their
-    name, affiliation, etc).
-
-4. Entrants will download a ZIP of their **anonymized** fork (see figure
-    below), and submit the ZIP to our OpenReview venue.
-
-![Download instructions image]({{ site.url }}/public/images/download_zip.png)
-
-5.  Once accepted, entrants will de-anonymize their post, make their fork
-    public again, and make a *Pull Request* on Github from their fork to the
-    main blog, allowing us to pull in their new blog post in a transparent
-    way.
-
-Once the submission period has ended, the GitHub repository of our track will
-be temporarily made private for the duration of the conference, allowing the
-conference to host the website. After the conference, the GitHub repository will
-be made public again to allow viewers to fork and download its contents.
-
-
-
-<div class="posts">
-  {% for post in paginator.posts %}
-  <div >
-    <h1 class="post-title">
-      <a href="{{ post.url | absolute_url }}">
-        {{ post.title }}
-      </a>
-    </h1>
-
-    <span class="post-date">{{ post.date | date_to_string }} | {% for tag in post.tags %}
-      <a class="content-tag" href="/tags/#{{ tag | slugify }}"> {{ tag }} </a>
-        {% endfor %}
-    </span>
-    <span class="post-date">{{ post.authors }}</span>
-
-    <!-- {{ post.content }} -->
-  </div>
-  {% endfor %}
-</div>
-
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ paginator.next_page_path | absolute_url }}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ '/' | absolute_url }}">Newer</a>
-    {% else %}
-      <a class="pagination-item newer" href="{{ paginator.previous_page_path | absolute_url }}">Newer</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
-</div>
-
+Please checkout the <a href="submitting">submitting</a> section for a detailed overview on the
+process of creating and submitting a blog post.
 
 # References
 
