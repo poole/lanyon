@@ -40,7 +40,8 @@ This is detailed in the sections below.
 
 ## Contents
 
-<!-- - [Quickstart](#quickstart) -->
+- [Quickstart](#quickstart)
+
 - [Download the Blog Repository](#download-the-blog-repository)
 - [Creating a Blog Post](#creating-a-blog-post)
 - [Serving and Exporting](#serving-and-exporting)
@@ -54,12 +55,29 @@ This is detailed in the sections below.
 - [Submitting Your Blog Post](#submitting-your-blog-post)
 - [Merging an Accepted Blog Post](#merging-an-accepted-blog-post)
 
-<!-- # Quickstart 
+# Quickstart 
 
-Don't need to know anymore and you just want to start writing a blogpost?
-The simplest way is to use our 
+This section provides a summary of the workflow for creating and submitting a blog post. 
+For more details about any of these steps, please refer to the appropriate section.
 
- -->
+1. Download the latest release of our repository [here](https://github.com/iclr-blog-track/iclr-blog-track.github.io/releases)
+and unpack your archive of choice.
+2. Create your blog post content as detailed in the "[Creating a Blog Post](#creating-a-blog-post)"
+section. In summary, you will create a markdown file in the `_posts/` directory with the format
+`_posts/2022-05-04-[SUBMISSION NAME].md`. Any static image assets will be added to 
+`public/images/2022-05-04-[SUBMISSION NAME]/`, and any interactive HTML figures will be added 
+to `_includes/2022-05-04-[SUBMISSION NAME]/`. Read the [relevant section](#creating-a-blog-post) for
+more details.
+3. Use our docker image to build and serve your blog locally via the `make serve` command. Note that
+you must have [docker installed on your system](https://docs.docker.com/get-docker/).
+4. When ready to submit, use our docker image to build and export your submission via the `make export`
+command. This will produce a `site.zip` and `vars.yml` file which you will submit to the ICLR venue;
+see the section on [submitting your blog post](#submitting-your-blog-post) for more details.
+5. If accepted, you will fork our repo and add your contributions to the fork, and open a PR against
+our repository. See the section on [merging an accepted blog post](#merging-an-accepted-blog-post)
+for more details.
+
+---
 
 # Download the Blog Repository
 
