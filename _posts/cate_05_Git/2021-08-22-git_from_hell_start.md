@@ -2,7 +2,7 @@
 layout: post
 title: Git 버전관리의 본질
 date : 22 Aug 2021
-category : 05_Git
+category : Git
 comments : true
 ---
 `#git, #생활코딩, #본질

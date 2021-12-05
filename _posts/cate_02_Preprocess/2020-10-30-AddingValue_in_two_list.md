@@ -2,7 +2,7 @@
 layout: post
 title: Adding values ​​in two lists
 date : 30 Oct 2020
-category : 02_Preprocess
+category : Preprocess
 comments : true
 ---
 

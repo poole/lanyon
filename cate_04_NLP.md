@@ -1,9 +1,9 @@
 ---
 layout: page
-title: 12_GA_GTM
+title: 04_NLP
 ---
 {% for post in site.posts %}
-  {% if post.category == 'GA_GTM' %}
+  {% if post.category == 'NLP' %}
   * {{ post.date | date_to_string }} &raquo; [ {{ post.title }} ]({{ post.url }})
   {% endif %}
 {% endfor %}

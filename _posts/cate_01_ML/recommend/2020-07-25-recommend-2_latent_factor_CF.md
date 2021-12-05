@@ -2,7 +2,7 @@
 layout: post
 title: Recommend 2_Latent Factor CF(feat. SVD)
 date : 25 Jul 2020
-category : 01_ML
+category : ML
 comments : true
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: GTM 개념 및 설치
 date : 31 Oct 2021
-category : 12_GA_GTM
+category : GA_GTM
 comments : true
 ---
 

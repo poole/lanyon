@@ -2,7 +2,7 @@
 layout: post
 title: Standardize vs Normalize vs Regularize
 date : 30 Nov 2020
-category : 02_Preprocess
+category : Preprocess
 comments : true
 ---
  : 데이터 전처리 단계에서 변수별 스케일이 서로 다르기에 이를 조정하기 위한 sclaling과정을 자주 거치게 된다. 위 3가지 방법은 데이터를 학습이 용이한 형태로 변형한다는 유사점을 갖고 있지만, 각 방법마다 상황에 맞게 사용하기 위해서 차이점을 구분해보자.

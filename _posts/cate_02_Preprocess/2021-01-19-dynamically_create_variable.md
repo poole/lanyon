@@ -2,7 +2,7 @@
 layout: post
 title: Dynamically_create_variable
 date : 19 Jan 2021
-category : 02_Preprocess
+category : Preprocess
 comments : true
 ---
  : 여러개의 변수를 loop문을 활용하여 자동으로 생성하는 방법.

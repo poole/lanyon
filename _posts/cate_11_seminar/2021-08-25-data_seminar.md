@@ -2,7 +2,7 @@
 layout: post
 title: 데이터로 세상을 해석하기
 date : 25 Aug 2021
-category : 11_Seminar
+category : Seminar
 comments : true
 ---
 

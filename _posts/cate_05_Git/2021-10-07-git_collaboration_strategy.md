@@ -2,7 +2,7 @@
 layout: post
 title: Git 협업 전략
 date : 07 Oct 2021
-category : 05_Git
+category : Git
 comments : true
 ---
 

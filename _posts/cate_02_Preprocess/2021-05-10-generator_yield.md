@@ -2,7 +2,7 @@
 layout: post
 title: generator & yield
 date : 10 May 2021
-category : 02_Preprocess
+category : Preprocess
 comments : true
 ---
 # 1. why use generator?

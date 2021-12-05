@@ -2,7 +2,7 @@
 layout: post
 title: GTM 사용방법
 date : 08 Nov 2021
-category : 12_GA_GTM
+category : GA_GTM
 comments : true
 ---
 
