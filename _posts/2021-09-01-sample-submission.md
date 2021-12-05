@@ -41,7 +41,7 @@ code, headings, etc. check out the [Example Content]({% post_url 2020-04-02-exam
 
 ## Images
 
-If you include an hosted elsewhere on the web simply use the standard GitHub-flavoured-MarkDown 
+If you include an image hosted elsewhere on the web simply use the standard GitHub-flavoured-MarkDown 
 syntax (be wary of copyrights):
 
 ```
@@ -53,7 +53,7 @@ syntax (be wary of copyrights):
 
 Its generally a better idea to avoid linking to images hosted elsewhere - links can break and you
 might face losing important information in your blog post. 
-To include images in your submission, you could do something like the following:
+To include images in your submission in this way, you must do something like the following:
 
 ```markdown
 {% raw %}![ICLR LOGO]({{ site.url }}/public/images/2021-09-01-sample-submission/ICLR-logo.png){% endraw %} 
@@ -70,7 +70,7 @@ To ensure that there are no namespace conflicts, you must save your asset to you
 ## Interactive Figures
 
 Here's how you could embed interactive figures that have been exported as HTML files.
-Note that we will be using plotly for this demo, but anything that allows you to HTML should work
+Note that we will be using plotly for this demo, but anything built off of HTML should work
 (**no javascript is allowed!**).
 All that's required is for you to export your figure into HTML format, and make sure that the file 
 exists in the `_includes/[SUBMISSION NAME]/` directory in this repository's root directory.

@@ -7,7 +7,7 @@ title: Submitting
 
 - The ICLR Venue is currently **not yet open**. We will announce when the venue opens, expected around Dec. 10th.
 - The submission deadline for your blog post is **January 7th, 2022 EOA**.
-- The review process will conclude on **March ???, 2022**
+- The review process will conclude on **March 25th 2022**
 - More details on how to add accepted submissions to our blog will be released closer to the end of the review process.
 
 ---
