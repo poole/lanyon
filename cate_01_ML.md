@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 01_ML_DL
+title: 01_ML
 ---
 {% for post in site.posts %}
   {% if post.category == 'ML' %}
