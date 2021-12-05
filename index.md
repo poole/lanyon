@@ -5,8 +5,6 @@ tags: [proposal, call]
 authors: Bubeck, Sebastien (Microsoft); Dobre, David (Mila); Gauthier, Charlie (Mila); Gidel, Gauthier (Mila); Vernade, Claire (DeepMind)
 ---
 
-<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" {% if page.title =="Home" %}checked{% endif %}>
-
 <br>
 <p align="center">
   <img src="{{ sit.url }}/public/images/2021-09-01-sample-submission/ICLR-logo.png" alt="ICLR Logo">
@@ -16,7 +14,7 @@ authors: Bubeck, Sebastien (Microsoft); Dobre, David (Mila); Gauthier, Charlie (
 
 - The ICLR Venue is currently **not yet open**. We will announce when the venue opens.
 - The submission deadline for your blog post is **January 7th, 2022 EOA**.
-- The review process will conclude on **March ???, 2022**
+- The review process will conclude on **March 25th, 2022**
 
 ---
 
