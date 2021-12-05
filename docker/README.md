@@ -9,7 +9,13 @@ The image can be found on dockerhub:
 Of particular note is `ghp_export.sh`. This implements our specific logic for hosting the submitters static site:
 we generate a unique ID, concatenate a timestamp to it, and then replace the Jekyll URL inside the config folder by it.
 
-# Build
+
+# Building and Pushing (for ICLR Admins only) 
+
+If you are creating a blog post to submit to ICLR, you should **not run the following steps**!
+These are to be run by the ICLR blog post track admins when updating the docker image. 
+
+### Build
 
 Build the image via:
 
@@ -21,7 +27,7 @@ docker build -t velythyl/jekyll-ghp:${TAG} -t velythyl/jekyll-ghp:latest .
 Make sure the tag is incremented appropriately!
 
 
-# Push
+### Push
 
 Note that you will need push permissions to the docker repository!
 
