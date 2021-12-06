@@ -1,5 +1,10 @@
-serve:
-	docker run --rm   --volume="${PWD}:/srv/jekyll"  -p 4000:4000  -it velythyl/jekyll-ghp:latest  ghp_serve
+BLOG_PATH 	= ${PWD}
+IMAGE 		= velythyl/jekyll-ghp
+TAG 		= latest
+PORT 		= 4000
 
-zip:
-	docker run --rm --volume="${PWD}:/srv/jekyll" -it velythyl/jekyll-ghp:latest   ghp_export
+serve:
+	docker run --rm --volume="${BLOG_PATH}:/srv/jekyll" -p ${PORT}:${PORT} -e PORT=${PORT} -it ${IMAGE}:${TAG} ghp_serve
+
+export:
+	docker run --rm --volume="${BLOG_PATH}:/srv/jekyll" -it ${IMAGE}:${TAG} ghp_export
