@@ -34,7 +34,7 @@ comments : true
 <center>
 <img src = '/assets/tableau/tableau_study_training_1_3-1.png' width = '80%'>
 
-<img src = '/assets/tableau/tableau_study_training_1_3-1.png' width = '80%'>
+<img src = '/assets/tableau/tableau_study_training_1_3-2.png' width = '80%'>
 </center>
 
 ##### Step_4 : 축 동기화
