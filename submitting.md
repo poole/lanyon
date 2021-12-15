@@ -6,7 +6,7 @@ title: Submitting
 ## Important Information
 
 - The ICLR Venue is currently **not yet open**. We will announce when the venue opens, expected around Dec. 10th.
-- The submission deadline for your blog post is **January 7th, 2022 A0E**.
+- The submission deadline for your blog post is **January 7th, 2022 AoE**.
 - The review process will conclude on **March 25th, 2022**
 - More details on how to add accepted submissions to our blog will be released closer to the end of the review process.
 
@@ -57,6 +57,10 @@ This is detailed in the sections below.
 
 # Quickstart 
 
+**Note: previous instructions stated to set the filename of your blogpost to** `2021-12-01-[SUBMISSION NAME].md`.
+**This caused your submission to be ignored when making the blogpost, as _future_ posts are ignored.**
+**Instead, please set the filename of your blogpost to** `2021-12-01-[SUBMISSION NAME].md`.
+
 This section provides a summary of the workflow for creating and submitting a blog post. 
 For more details about any of these steps, please refer to the appropriate section.
 
@@ -64,15 +68,18 @@ For more details about any of these steps, please refer to the appropriate secti
 and unpack your archive of choice.
 2. Create your blog post content as detailed in the "[Creating a Blog Post](#creating-a-blog-post)"
 section. In summary, you will create a markdown file in the `_posts/` directory with the format
-`_posts/2022-05-04-[SUBMISSION NAME].md`. Any static image assets will be added to 
-`public/images/2022-05-04-[SUBMISSION NAME]/`, and any interactive HTML figures will be added 
-to `_includes/2022-05-04-[SUBMISSION NAME]/`. Read the [relevant section](#creating-a-blog-post) for
+`_posts/2021-12-01-[SUBMISSION NAME].md`. Any static image assets will be added to 
+`public/images/2021-12-01-[SUBMISSION NAME]/`, and any interactive HTML figures will be added 
+to `_includes/2021-12-01-[SUBMISSION NAME]/`. Read the [relevant section](#creating-a-blog-post) for
 more details.
 3. Use our docker image to build and serve your blog locally via the `make serve` command. Note that
-you must have [docker installed on your system](https://docs.docker.com/get-docker/).
+you must have [docker installed on your system](https://docs.docker.com/get-docker/). Once served, 
+you should be able to see your blog post at the `blog/` endpoint (default: 
+[http://0.0.0.0:4000/blog/](http://0.0.0.0:4000/blog/)).
 4. When ready to submit, use our docker image to build and export your submission via the `make export`
 command. This will produce a `site.zip` and `vars.yml` file which you will submit to the ICLR venue;
-see the section on [submitting your blog post](#submitting-your-blog-post) for more details.
+see the section on [submitting your blog post](#submitting-your-blog-post) for more details. Note
+that there is a **50mb limit** on your zipfile submissions!
 5. If accepted, you will fork our repo and add your contributions to the fork, and open a PR against
 our repository. See the section on [merging an accepted blog post](#merging-an-accepted-blog-post)
 for more details.
@@ -136,45 +143,45 @@ the following (excluding all files and directories that are not relevant to your
 iclr-blog-track.github.io/
 │
 ├── _includes
-│   ├── 2022-05-04-[YOUR SUBMISSION]         # <--- Create this directory and add HTML figures here
+│   ├── 2021-12-01-[YOUR SUBMISSION]         # <--- Create this directory and add HTML figures here
 │   │   └── [YOUR HTML FIGURES].html
 │   └── ...
 ├── _posts
-│   ├── 2022-05-04-[YOUR SUBMISSION].md      # <--- Create this file; this is your blogpost
+│   ├── 2021-12-01-[YOUR SUBMISSION].md      # <--- Create this file; this is your blogpost
 │   └── ...
 ├── public
 │   ├── images
-│   │   ├── 2022-05-04-[YOUR SUBMISSION]     # <--- Create this directory and add static images here
+│   │   ├── 2021-12-01-[YOUR SUBMISSION]     # <--- Create this directory and add static images here
 │   │   │   └── [YOUR IMAGES].png
 │   │   └── ...
 │   └── ...
 └── ...
 ```
 
-Your blogpost markdown file will go in `_posts/2022-05-04-[YOUR SUBMISSION].md`.
-Any static images should go in `public/images/2022-05-04-[YOUR SUBMISSION]/`.
-Any interactive HTML figures should be saved in `_includes/2022-05-04-[YOUR SUBMISSION]`.
+Your blogpost markdown file will go in `_posts/2021-12-01-[YOUR SUBMISSION].md`.
+Any static images should go in `public/images/2021-12-01-[YOUR SUBMISSION]/`.
+Any interactive HTML figures should be saved in `_includes/2021-12-01-[YOUR SUBMISSION]`.
 You **should not** touch anything else in the blog post release; everything else will be set by 
 the conference committee.
 
-Note that `2022-05-04-[YOUR SUBMISSION]` serves as a tag to your submission, so it should be the
+Note that `2021-12-01-[YOUR SUBMISSION]` serves as a tag to your submission, so it should be the
 same for all three items.
 For example, if you're writing a blog post called "Deep Learning", you'd likely want to make your
-tag `2022-05-04-deep-learning`, and the directory structure would look like this:
+tag `2021-12-01-deep-learning`, and the directory structure would look like this:
 
 ```bash
 iclr-blog-track.github.io/
 │
 ├── _includes
-│   ├── 2022-05-04-deep-learning             # <--- Create this directory and add HTML figures here
+│   ├── 2021-12-01-deep-learning             # <--- Create this directory and add HTML figures here
 │   │   └── [YOUR HTML FIGURES].html
 │   └── ...
 ├── _posts
-│   ├── 2022-05-04-deep-learning.md          # <--- Create this file; this is your blogpost
+│   ├── 2021-12-01-deep-learning.md          # <--- Create this file; this is your blogpost
 │   └── ...
 ├── public
 │   ├── images
-│   │   ├── 2022-05-04-deep-learning         # <--- Create this directory and add static images here
+│   │   ├── 2021-12-01-deep-learning         # <--- Create this directory and add static images here
 │   │   │   └── [YOUR IMAGES].png
 │   │   └── ...
 │   └── ...
@@ -239,7 +246,8 @@ Configuration file: /srv/jekyll/_config.yml
   Server running... press ctrl-c to stop.
 ```
 
-If you see this, your built site should be accessible at [http://0.0.0.0:4000/](http://0.0.0.0:4000/).
+If you see this, your built site should be accessible at [http://0.0.0.0:4000/](http://0.0.0.0:4000/),
+and your post will be accessible at [http://0.0.0.0:4000/blog/](http://0.0.0.0:4000/blog/).
 If you make any changes to your blog post, the server should automatically pick these up and display
 the updated content (so you don't need to constantly spin the container up and down to render new
 content).
@@ -376,7 +384,8 @@ Configuration file: /home/USER/ift6758-blog-template/_config.yml
 ```
 
 If you see this, you've successfully served your web page locally!
-You can access it at server address specified, in this case `http://127.0.0.1:4000/`.
+You can access it at server address specified, in this case `http://127.0.0.1:4000/` (and the blog
+posts should once again be viewable at the `blog/` endpoint).
 
 ### Manual Export
 
@@ -447,6 +456,8 @@ echo "Done exporting submission!"
 Once you've exported your blogpost using one of the methods described above and have a `site.zip` 
 and `vars.yml` file, you will submit these files to the ICLR venue, which is **not yet open**.
 We execpt the venue to open around December 10th - check back around then for more information.
+Note that there will be a **50mb limit** on your zipfile submissions - make sure that your zipfile
+does not exceed this!
 
 ---
 
@@ -463,11 +474,11 @@ available closer to the end of the review period.
 
 As a reminder, your contributions should be:
 
-- Your blog post in `_posts/2022-05-04-[YOUR SUBMISSION].md`
-- (Optionally) any static images must be in `public/images/2022-05-04-[YOUR SUBMISSION]/`
-- (Optionally) any HTML content must be in `_includes/2022-05-04-[YOUR SUBMISSION]/`
+- Your blog post in `_posts/2021-12-01-[YOUR SUBMISSION].md`
+- (Optionally) any static images must be in `public/images/2021-12-01-[YOUR SUBMISSION]/`
+- (Optionally) any HTML content must be in `_includes/2021-12-01-[YOUR SUBMISSION]/`
 
-where `2022-05-04-[YOUR SUBMISSION]` is the same string across the blog post file and two directories.
+where `2021-12-01-[YOUR SUBMISSION]` is the same string across the blog post file and two directories.
 Any other changes in your pull request will be rejected and you will be asked to modify your PR 
 accordingly.
 
@@ -475,15 +486,15 @@ accordingly.
 iclr-blog-track.github.io/
 │
 ├── _includes
-│   ├── 2022-05-04-[YOUR SUBMISSION]         # <--- Create this directory and add HTML figures here
+│   ├── 2021-12-01-[YOUR SUBMISSION]         # <--- Create this directory and add HTML figures here
 │   │   └── [YOUR HTML FIGURES].html
 │   └── ...
 ├── _posts
-│   ├── 2022-05-04-[YOUR SUBMISSION].md      # <--- Create this file; this is your blogpost
+│   ├── 2021-12-01-[YOUR SUBMISSION].md      # <--- Create this file; this is your blogpost
 │   └── ...
 ├── public
 │   ├── images
-│   │   ├── 2022-05-04-[YOUR SUBMISSION]     # <--- Create this directory and add static images here
+│   │   ├── 2021-12-01-[YOUR SUBMISSION]     # <--- Create this directory and add static images here
 │   │   │   └── [YOUR IMAGES].png
 │   │   └── ...
 │   └── ...
