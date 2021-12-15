@@ -22,14 +22,17 @@ printf "%s\n" "url: $GHP_UUID_URL" "uuid: $GHP_UUID" > vars.yml
 # create zip
 echo "Zipping submission..."
 rm -rf site.zip
+cp _config.yml _site
 cp -r _site $GHP_UUID
 cp vars.yml $GHP_UUID/
 zip -r site.zip $GHP_UUID
 
 # clean up
 echo "Cleaning up..."
-rm -r ${PWD}/${GHP_UUID}
 rm ${PWD}/_config.yml
 cp ${PWD}/_config.yml.bak ${PWD}/_config.yml
+rm -r ${PWD}/${GHP_UUID} _config.yml.bak
+
+chmod 777 _config.yml site.zip vars.yml
 
 echo "Done exporting submission!"

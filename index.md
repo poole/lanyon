@@ -7,7 +7,7 @@ authors: Bubeck, Sebastien (Microsoft); Dobre, David (Mila); Gauthier, Charlie (
 
 <br>
 <p align="center">
-  <img src="{{ sit.url }}/public/images/2021-09-01-sample-submission/ICLR-logo.png" alt="ICLR Logo">
+  <img src="{{ site.url }}/public/images/2021-09-01-sample-submission/ICLR-logo.png" alt="ICLR Logo">
 </p>
 
 ## Important Information
