@@ -57,9 +57,10 @@ This is detailed in the sections below.
 
 # Quickstart 
 
-**Note: previous instructions stated to set the filename of your blogpost to** `2021-12-01-[SUBMISSION NAME].md`.
-**This caused your submission to be ignored when making the blogpost, as _future_ posts are ignored.**
-**Instead, please set the filename of your blogpost to** `2021-12-01-[SUBMISSION NAME].md`.
+**Note: previous instructions stated to set the filename of your blog post to** `2022-05-04-[SUBMISSION NAME].md`.
+**This caused your post to be ignored when building the site with jekyll, as _future_ posts are ignored.**
+**Instead, please set the filename of your blog post to** `2021-12-01-[SUBMISSION NAME].md` 
+**(and all of your asset directories to** `2021-12-01-[SUBMISSION NAME]`**)**.
 
 This section provides a summary of the workflow for creating and submitting a blog post. 
 For more details about any of these steps, please refer to the appropriate section.
