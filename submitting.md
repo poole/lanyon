@@ -466,6 +466,8 @@ For the actual content of your blog, you will see a `Submission Full` and `Blogp
 - Upload the generated `site.zip` file containing your entire submission to the `Submission Full` field. 
   Note that there will be a **50mb limit** on your zipfile submissions - make sure that your zipfile
   does not exceed this!
+  If you're having issues with the size of your zipfile, try removing the `_site` directory that is generated when running
+  `make serve` or `make export` before re-running `make export`.
 
 - For the `Blogpost URL` field, upload the generated `vars.yml` file (which was generated in the same
   directory that exporting your submission generated the `site.zip` file).
