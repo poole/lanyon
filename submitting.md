@@ -5,7 +5,7 @@ title: Submitting
 
 ## Important Information
 
-- The ICLR Venue is currently **not yet open**. We will announce when the venue opens, expected around Dec. 10th.
+- The ICLR Venue is currently **open**, and blog posts can be [submitted here](https://openreview.net/group?id=ICLR.cc/2022/Track/Blog).
 - The submission deadline for your blog post is **January 14th, 2022 AoE**.
 - The review process will conclude on **March 25th, 2022**
 - More details on how to add accepted submissions to our blog will be released closer to the end of the review process.
@@ -455,10 +455,26 @@ echo "Done exporting submission!"
 # Submitting your Blog Post
 
 Once you've exported your blogpost using one of the methods described above and have a `site.zip` 
-and `vars.yml` file, you will submit these files to the ICLR venue, which is **not yet open**.
-We execpt the venue to open around December 10th - check back around then for more information.
-Note that there will be a **50mb limit** on your zipfile submissions - make sure that your zipfile
-does not exceed this!
+and `vars.yml` file, you're ready to submit your post.
+Navigate to the [OpenReview venue](https://openreview.net/group?id=ICLR.cc/2022/Track/Blog).
+Click on the "Add `ICLR 2022 Track Blog Submission`" button, and you should see a dialogue with several fields.
+Most of the fields are self explanatory: enter your post title, authors, keywords, and abstract as per typical paper submissions.
+For the actual content of your blog, you will see a `Submission Full` and `Blogpost URL` field:
+
+![OpenReview]({{ site.url }}/public/images/iclr_submission.png)
+
+- Upload the generated `site.zip` file containing your entire submission to the `Submission Full` field. 
+  Note that there will be a **50mb limit** on your zipfile submissions - make sure that your zipfile
+  does not exceed this!
+
+- For the `Blogpost URL` field, upload the generated `vars.yml` file (which was generated in the same
+  directory that exporting your submission generated the `site.zip` file).
+  It should look something like this:
+
+   ```yaml
+   url: https://iclr.iro.umontreal.ca/038d20d0-869a-49ef-a475-d024e3883f6e_1640977316
+   uuid: 038d20d0-869a-49ef-a475-d024e3883f6e_1640977316
+   ```
 
 ---
 
