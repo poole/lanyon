@@ -1,9 +1,9 @@
 ---
 layout: page
-title: 02_Preprocess
+title: 99_Seminar
 ---
 {% for post in site.posts %}
-  {% if post.category == 'Preprocess' %}
+  {% if post.category == 'Seminar' %}
   * {{ post.date | date_to_string }} &raquo; [ {{ post.title }} ]({{ post.url }})
   {% endif %}
 {% endfor %}

@@ -2,7 +2,7 @@
 layout: post
 title: Relation & Causality
 date : 28 Dec 2020
-category : ML
+category : Statistics
 comments : true
 ---
 
