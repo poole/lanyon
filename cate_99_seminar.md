@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 99_Seminar
+title: 099_Seminar
 ---
 {% for post in site.posts %}
   {% if post.category == 'Seminar' %}

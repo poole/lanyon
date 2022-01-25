@@ -1,9 +1,0 @@
----
-layout: page
-title: env
----
-{% for post in site.posts %}
-  {% if post.category == 'env' %}
-  * {{ post.date | date_to_string }} &raquo; [ {{ post.title }} ]({{ post.url }})
-  {% endif %}
-{% endfor %}
