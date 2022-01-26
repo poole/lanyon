@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 확률적 표본 추출(Probability Sampling)
+title: 설문데이터 활용하기1 - 확률적 표본 추출(Probability Sampling)
 date : 25 Jan 2022
 category : Statistics
 comments : true
@@ -12,7 +12,7 @@ comments : true
 ```
 
 설문데이터 활용에 앞서서, 해당 설문 자체가 얼만큼 모집단을 대표할 수 있는가를 알기 위해서는 설문 대상이 "확률적 표본 추출"을 따랐는지 확인해보아야한다.
-따라서 "확률적 표본 추출"이 구체적으로 무엇을 뜻하는지 살펴보자.
+이에 "확률적 표본 추출"이 구체적으로 무엇을 뜻하는지 살펴보자.
 
 ## 확률적 표본추출
 : 큰 모집단으로부터 작은 샘플그룹을 랜덤하게 선택하는 통계 방법으로, 샘플의 응답이 모집단의 경향성을 대표. 이때 모집단을 대표하기 위해서는 2가지 중요한 조건이 필요.
@@ -43,4 +43,4 @@ comments : true
 
 
 #### Refernce
-[1] [확률적표본추출)](https://ko.surveymonkey.com/mp/probability-sampling/)
+[1] [확률적표본추출](https://ko.surveymonkey.com/mp/probability-sampling/)
