@@ -130,9 +130,9 @@ comments : true
 #### (c) 표본평균과 모집단의 관계
  : 우리는 표본평균으로부터 위와 같은 통계치들을 얻을 때, 아래와 같은 사실을 확인 할 수 있습니다.
 
-  - <strong>표본평균의 평균은 모평균과 같다.[$\bar{x} = \mu$] </strong>
-  - <strong>표본평균의 오차 제곱의 평균 즉 분산은, 모분산을 표본의 크기로 나눈값과 같다.  [$S^2$ = $\sigma^2\over n$] </strong>
-  - <strong>표본평균의 표준편차(= 표준오차) = [$S$ = $\sqrt{\sigma^2\over n}$] </strong>
+  - <strong>표본평균의 평균은 모평균과 같다. → [$\bar{x} = \mu$] </strong>
+  - <strong>표본평균의 오차 제곱의 평균 즉 분산은, 모분산을 표본의 크기로 나눈값과 같다. → [$S^2$ = $\sigma^2\over n$] </strong>
+  - <strong>표본평균의 표준편차(= 표준오차) → [$S$ = $\sqrt{\sigma^2\over n}$] </strong>
 
 <center><strong>"이는 즉, 표본의 평균과 분산을 알면, 모집단의 평균과 분산도 알 수 있다는 이야기!"</strong></center>
 
@@ -162,7 +162,7 @@ comments : true
   - 위 표준오차의 분산($\sigma^2$)자리에, 위에서 찾은 `발생확률 p로 계산한 분산`을 대입하면 아래와 같습니다.
   - $S$ = $\sqrt{p(1-p)\over n}$
   <br>
-  - 앞서 표준편차
+  - 앞서 표준편
 
 
 
