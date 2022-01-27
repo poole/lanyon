@@ -31,7 +31,7 @@ comments : true
 
 <br><br>
 # 2. Contents Based Filtering
-<center> <img src = '/assets/ContentsBased.png' width="40%"></center>  
+<center> <img src = '/assets/ML/recommend/ContentsBased.png' width="40%"></center>  
 
  : 위 그림 처럼 예를들어 '장르'라는 변수를 활용해 비슷한 영화를 묶고, 동일한 장르내에서 유사한 영화를 추천해줄 수 있다.
 
@@ -40,7 +40,7 @@ comments : true
 
 ## 3-1. Neighborhood CF Model
 : 주어진 평점 데이터를 가지고 서로 비슷한 유저 혹은 아이템 찾기   
-<center><img src = '/assets/screen_1.png' width="40%"><img src = '/assets/pearson.png' width="40%"></center>  
+<center><img src = '/assets/ML/recommend/MF_0.png' width="40%"><img src = '/assets/ML/recommend/pearson.png' width="40%"></center>  
 
  - pearson correlation : 1에 가까울 수록 유사한 선호 
  - ‘User-oriented Neighborhood’ & ‘Item-oriendted Negiborhood’
@@ -51,7 +51,7 @@ comments : true
 ## 3-2. latent factor based CF Model(feat.SVD)
 ### 잠재요인 협업 필터링
  : 주어진 사용자 평점(또는 관람) 데이터를 잠재요인을 기준으로 '사용자 정보 행렬'과 '아이템 정보 행렬'로 분해하여 각각의 행렬을 사용해 사용자간 유사도와 아이템간 유사도를 계산할 수 있다. 또한 두 행렬을 다시 내적하여 이전에 사용자가 선호를 남기지 않은 항목에 대해서도 예측값을 제공해 줄 수있다.
- <center><img src = '/assets/svd_1.png' width="80%"></center>
+ <center><img src = '/assets/ML/recommend/svd_1.png' width="80%"></center>
   - U('사용자-잠재요인') &  Sigma(잠재요인) & vT('아이템-잠재요인')
 
 

@@ -15,7 +15,7 @@ comments : true
 :  특정 고객의 과거 관람 이력을 토대로 , 아직 관람하지 않은 신규 영화의 선호 예측
 
 <center>
-<img src="/assets/rec_3_mf_1.png" width="80%">
+<img src="/assets/ML/recommend/rec_3_mf_1.png" width="80%">
 </center>
 
 
@@ -24,7 +24,7 @@ comments : true
 : 주어진 거래데이터(입력 데이터)를 활용해, 유저별로 어떤 *장르 취향을 지니고 있는지 & 영화별로는 어떤* 장르 특성을 지니고 있는지 학습하고자 합니다.
 
 <center>
-<img src="/assets/rec_3_mf_2.png" width="80%">
+<img src="/assets/ML/recommend/rec_3_mf_2.png" width="80%">
 </center>
 
 ##### ① <유저 잠재 행렬>
@@ -55,9 +55,9 @@ e.g. A고객은 [테넷, 인셉션, 클로저] 영화를 관람하였고 그 결
 </center>
 
 <center>
-<img src="/assets/rec_3_mf_3.png" width="80%">
+<img src="/assets/ML/recommend/rec_3_mf_3.png" width="80%">
 
-<img src="/assets/rec_3_mf_4.png" width="80%">
+<img src="/assets/ML/recommend/rec_3_mf_4.png" width="80%">
 
 
 이처럼 고객의 선호값에 영화의 특성값을 곱하면,
@@ -67,7 +67,7 @@ e.g. A고객은 [테넷, 인셉션, 클로저] 영화를 관람하였고 그 결
 최종 예측 행렬을 얻을 수 있습니다.
 
 
- <img src="/assets/rec_3_mf_5.png" width="80%">
+ <img src="/assets/ML/recommend/rec_3_mf_5.png" width="80%">
  </center>
 
 #### Refernce

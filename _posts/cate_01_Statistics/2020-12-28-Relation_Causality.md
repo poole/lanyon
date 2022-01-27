@@ -33,7 +33,7 @@ comments : true
 
 <center>
 
-<img src = '/assets/corr_causality_1.png' width = '80%'>  
+<img src = '/assets/statistics/relation_causality/corr_causality_1.png' width = '80%'>  
 
 선형관계라면 단조관계이지만,  
 단조관계라고 선형관계는 아니다.
