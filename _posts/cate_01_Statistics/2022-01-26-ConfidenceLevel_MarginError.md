@@ -42,11 +42,13 @@ comments : true
   - H, 0회 확률 : 1/4 [T,T]
   - H, 1회 확률 : 2/4 [T,H], [H,T]
   - H, 2회 확률 : 1/4 [H,H]
+
 #### (2) 3회 시행시, 앞면(H)이 N번 나올 확률 분포
   - H, 0회 확률 : 1/8 [T,T,T]
   - H, 1회 확률 : 3/8 [T,T,H], [T,H,T], [H,T,T]
   - H, 2회 확률 : 3/8 [T,H,H], [H,T,H], [H,H,T]
   - H, 3회 확률 : 1/8 [H,H,H]
+
 #### (3) 100회 시행시, 앞면(H)이 N번 나올 확률 분포
 <center>
 <img src = '/assets/statistics/220126_confidence_error/confidence_error_1.png' width = '80%'>  
