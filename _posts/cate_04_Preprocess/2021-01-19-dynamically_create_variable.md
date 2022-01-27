@@ -40,5 +40,5 @@ for nm in nm_list :
 
 
 
-#### Refernce
+#### Reference
 [1] [변수 이름을 loop 돌려서 할당하기](http://blog.naver.com/PostView.nhn?blogId=nomadgee&logNo=220857820094&parentCategoryNo=&categoryNo=57&viewDate=&isShowPopularPosts=false&from=postView)

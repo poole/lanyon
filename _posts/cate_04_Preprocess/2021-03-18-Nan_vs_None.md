@@ -36,6 +36,6 @@ math.isnan(b)
 ```
 
 
-#### Refernce
+#### Reference
 [1] [(python)None, NaN에 대해서](https://purplechip.tistory.com/5)
 [2] [Value too large for dtype('float64') sklearn.preprocessing .StandardScaler()](https://stackoverflow.com/questions/45886312/value-too-large-for-dtypefloat64-sklearn-preprocessing-standardscaler)

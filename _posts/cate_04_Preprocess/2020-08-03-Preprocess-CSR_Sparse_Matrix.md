@@ -164,6 +164,6 @@ df_mat.todense()
 
 
 
-#### Refernce
+#### Reference
 [1] https://lovit.github.io/nlp/machine%20learning/2018/04/09/sparse_mtarix_handling/  
 [2] https://bkshin.tistory.com/entry/NLP-7-%ED%9D%AC%EC%86%8C-%ED%96%89%EB%A0%AC-Sparse-Matrix-COO-%ED%98%95%EC%8B%9D-CSR-%ED%98%95%EC%8B%9D  

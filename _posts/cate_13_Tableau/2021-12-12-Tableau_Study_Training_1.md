@@ -45,5 +45,5 @@ comments : true
 <img src = '/assets/tableau/tableau_study_training_1_4-3.png' width = '80%'>
 </center>
 
-#### Refernce
+#### Reference
 [1] [테블루 손흥민 시즌별 대회별 득점수 시각화 #막대차트 #간트차트 #이중축](https://www.youtube.com/watch?v=kn4e5e8XICA)  

@@ -190,7 +190,7 @@ already_rated, predictions = recommend_movies(df_svd_preds, 330, df_movies, df_r
 
 
 
-#### Refernce
+#### Reference
 [1] https://dc7303.github.io/python/2019/08/06/python-memory/  
 [2] https://yeomko.tistory.com/5?category=805638  
 [3] https://scvgoe.github.io/2017-02-01-%ED%98%91%EC%97%85-%ED%95%84%ED%84%B0%EB%A7%81-%EC%B6%94%EC%B2%9C-%EC%8B%9C%EC%8A%A4%ED%85%9C-(Collaborative-Filtering-Recommendation-System)/  

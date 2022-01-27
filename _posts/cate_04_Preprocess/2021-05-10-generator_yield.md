@@ -167,5 +167,5 @@ def generate_list_sum(target_idx) :
 
 
 
-#### Refernce
+#### Reference
 [1] [python generator(제너레이터) 란 무엇인가](https://bluese05.tistory.com/56)  

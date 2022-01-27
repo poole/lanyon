@@ -36,5 +36,5 @@ git checkout [branch_nm]# 생성한 독립된 브랜치로 이동
 
 
 
-#### Refernce
+#### Reference
 [1] [초심자를 위한 Github 협업](https://milooy.wordpress.com/2017/06/21/working-together-with-github-tutorial/)  

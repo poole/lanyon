@@ -61,7 +61,7 @@ comments : true
 
 
 
-#### Refernce
+#### Reference
 [1] [자기상관(autocorrelation)](https://m.blog.naver.com/PostView.nhn?blogId=nlboman&logNo=23353211&proxyReferer=https:%2F%2Fwww.google.com%2F)  
 [2] [상관관계 분석(correlation analysis)](https://m.blog.naver.com/istech7/50153047118)  
 [3] [공분산과 상관관계(covariance_correlation)](http://elearning.kocw.net/contents4/document/lec/2013/konkuk/leegiseong/3.pdf)  

@@ -59,5 +59,5 @@ X-Cron-Env: <LOGNAME=dlab>
 
 
 
-#### Refernce
+#### Reference
 [1] [에러 문제 확인한 스택오버플로우](https://stackoverflow.com/questions/12230690/string-comparison-in-bash-not-found/17753098)

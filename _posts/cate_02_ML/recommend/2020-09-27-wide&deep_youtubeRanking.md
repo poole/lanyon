@@ -101,7 +101,7 @@ comments : true
 
 
 
-#### Refernce
+#### Reference
 
 [1] [Yifan Hu et al. Collaborative Filtering for Implicit Feedback](http://www.Datasetshttp://yifanhu.net/PUB/cf.pdf)  
 [2] [갈아먹는 추 알고리즘 [4] Alternating Least Squares](https://yeomko.tistory.com/4?category=805638)

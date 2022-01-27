@@ -69,7 +69,7 @@ comments : true
     </center>
 
 
-#### Refernce
+#### Reference
 [1] [GTM관리자란 무엇이고 왜 사용하는가 - 마케톨로지](https://marketology.co.kr/all-category/tag-manager/%ea%b5%ac%ea%b8%80-%ed%83%9c%ea%b7%b8-%ea%b4%80%eb%a6%ac%ec%9e%90%eb%9e%80-%eb%ac%b4%ec%97%87%ec%9d%b4%ea%b3%a0-%ec%99%9c-%ec%82%ac%ec%9a%a9%ed%95%98%eb%8a%94%ea%b0%80/)  
 
 [2] [구글 태그 관리자 설치 및 사용법 - 마케톨로지](https://marketology.co.kr/all-category/tag-manager/%EA%B5%AC%EA%B8%80-%ED%83%9C%EA%B7%B8-%EA%B4%80%EB%A6%AC%EC%9E%90-%EC%84%A4%EC%B9%98-%EB%B0%8F-%EC%82%AC%EC%9A%A9%EB%B2%95/)

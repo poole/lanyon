@@ -190,5 +190,5 @@ RC) 그러나 추천 모델에선 예측 분포와 관측 분포간 얼마나 �
 - 신규 아이템 회전율
 *→ A/B Test 실행시 평가지표로 고민해 보면 좋을 듯*
 
-#### Refernce
+#### Reference
 [1] https://www.youtube.com/watch?v=oTuM8WDI3nA

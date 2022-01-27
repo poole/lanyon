@@ -106,7 +106,7 @@ $ git merge "dev" # merge 하고자 하는 branch명을 써주면 master로 merg
 
 
 
-#### Refernce
+#### Reference
 [1] [git lab 프로젝트 생성하기](https://goldsony.tistory.com/138)  
 [2] [git branch & commend](https://www.holaxprogramming.com/2018/11/01/git-commands/)  
 [3] [branch Merge하기](https://backlog.com/git-tutorial/kr/stepup/stepup2_4.html)

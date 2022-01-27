@@ -26,6 +26,6 @@ comments : true
 
 
 
-#### Refernce
+#### Reference
 [1] [Mean Absolute Error (MAE) and Root Mean Squared Error (RMSE)](http://www.eumetrain.org/data/4/451/english/msg/ver_cont_var/uos3/uos3_ko1.htm)  
 [2] https://mjdeeplearning.tistory.com/30

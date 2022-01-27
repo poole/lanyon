@@ -167,7 +167,7 @@ print("---%s second ---"% (time.time() - start_time))
 
 
 
-#### Refernce
+#### Reference
 ##### 1. Multi-Processing vs Multi-Thread
 [1] [Thread란?](http://tcpschool.com/java/java_thread_concept)  
 [2] [Thread와 MultiProcessing 차이점](https://www.ellicium.com/python-multiprocessing-pool-process)  

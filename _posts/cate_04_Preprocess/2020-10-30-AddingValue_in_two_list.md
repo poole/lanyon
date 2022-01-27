@@ -64,6 +64,6 @@ for idx, value in enumerate(lst_tmp)
 
 
 
-#### Refernce
+#### Reference
 [1] [Python zip 내장함수](https://medium.com/@hckcksrl/python-zip-%EB%82%B4%EC%9E%A5%ED%95%A8%EC%88%98-95ad2997990)
 [2] [Add SUM of values of two LISTS into new LIST](https://stackoverflow.com/questions/14050824/add-sum-of-values-of-two-lists-into-new-list)

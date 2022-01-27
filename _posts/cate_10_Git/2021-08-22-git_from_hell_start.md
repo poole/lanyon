@@ -93,5 +93,5 @@ git revert 'commit_id_1'
 ```
 
 
-#### Refernce
+#### Reference
 [1] [[생활코딩 : 지옥에서 온 git] 버전관리의 본질](https://opentutorials.org/course/2708/15242)  

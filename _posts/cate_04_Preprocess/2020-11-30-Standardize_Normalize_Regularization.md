@@ -153,6 +153,6 @@ print(X_sum_squared)
 
 </center>
 
-#### Refernce
+#### Reference
 [1] [Differences between Normalization, Standardization and Regularization](https://maristie.com/2018/02/Normalization-Standardization-and-Regularization)
 [2] [데이터 표준화(Standardization), 정규화(Normalization) 차이점](https://soo-jjeong.tistory.com/123)

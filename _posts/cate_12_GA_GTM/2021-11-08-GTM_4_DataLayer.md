@@ -64,7 +64,7 @@ comments : true
 
 
 
-#### Refernce
+#### Reference
 [1] [구글 태그 관리자 설치 및 사용법](https://marketology.co.kr/all-category/tag-manager/%EA%B5%AC%EA%B8%80-%ED%83%9C%EA%B7%B8-%EA%B4%80%EB%A6%AC%EC%9E%90-%EC%84%A4%EC%B9%98-%EB%B0%8F-%EC%82%AC%EC%9A%A9%EB%B2%95/)
 
 [2] [GTM사용하기](https://medium.com/@cute3681/3-ga-tag-manager-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0-2cb6b27e4e61)

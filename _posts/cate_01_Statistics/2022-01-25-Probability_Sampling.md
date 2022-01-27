@@ -42,5 +42,5 @@ comments : true
 
 
 
-#### Refernce
+#### Reference
 [1] [확률적표본추출](https://ko.surveymonkey.com/mp/probability-sampling/)

@@ -97,6 +97,6 @@ deactivate
 
 
 
-#### Refernce
+#### Reference
 ###### 1~
 [1] [파이썬 버전 관리](https://alphahackerhan.tistory.com/23)

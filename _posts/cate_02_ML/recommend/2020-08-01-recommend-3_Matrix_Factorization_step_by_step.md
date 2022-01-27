@@ -70,6 +70,6 @@ e.g. A고객은 [테넷, 인셉션, 클로저] 영화를 관람하였고 그 결
  <img src="/assets/ML/recommend/rec_3_mf_5.png" width="80%">
  </center>
 
-#### Refernce
+#### Reference
 [1] [추천 시스템 – 잠재 요인 협업 필터링](https://lsjsj92.tistory.com/564?category=853217)  
 [2] [갈아먹는 추천 알고리즘 3 Matrix Factorization](https://yeomko.tistory.com/5?category=805638)
