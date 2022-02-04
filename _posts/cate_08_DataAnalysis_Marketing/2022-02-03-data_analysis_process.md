@@ -10,7 +10,7 @@ comments : true
 
 <br>
 # 1. 문제정의 $\star\star\star$
-### 1) Why : 리포팅을 왜 하는 것일까? $\star$
+## 1) Why : 리포팅을 왜 하는 것일까? $\star$
  : 리포트를 보는 대상에 따라서, 문제정의 작성 및 리포팅의 이유가 크게 달라진다.
   특정 문제에 국한된 리포트 또는 Daily리포트는 주로 실무자나 중간급에서 빠른 의사결정 및 진행상황을 체크하기 위함이기에 문제정의가 명확하다. <br>
 
@@ -27,47 +27,47 @@ comments : true
 <img src = '/assets/DataAnalysis_Marketing/report_1.png' width = '100%'>
 </center>  
 
-    1. 유입 (Acqusition)
-      - 앱설치자수 (total / daily)
+### (1) 유입 (Acqusition)
+    - 앱설치자수 (total / daily)
 
-    2. 유입 채널 (Attribution)
-      - 채널별 앱설치자수(유입자수) (total / daily)
-      - 채널별 유입자 *KPI 전환율 (KPI : 회원가입 / 구매 / ETC)
-      - 채널별 Fraud / Bounce 유저수 (total / daily)
+### (2) 유입 채널 (Attribution)
+    - 채널별 앱설치자수(유입자수) (total / daily)
+    - 채널별 유입자 *KPI 전환율 (KPI : 회원가입 / 구매 / ETC)
+    - 채널별 Fraud / Bounce 유저수 (total / daily)
 
-    3. 활성화 (Activation)
-      - 회원가입자수 (total / monthly / weekly / daily)
-      - 회원가입 전환율 (total / monthly / weekly / daily)
+### (3) 활성화 (Activation)
+    - 회원가입자수 (total / monthly / weekly / daily)
+    - 회원가입 전환율 (total / monthly / weekly / daily)
 
-    4. 유지 (Retention)
-      - 접속 빈도 : DAU / WAU / MAU
-      - 접속 빈도 : 평균 접속주기  
-      - 사용 시간 : 세션당 평균 사용 시간 (집단별 / daily)
-      - 퍼널 분석 : 설치 > 가입 > 상품 조회 > 상품 구매 > 재구매
-                  (기간별 / 집단별 비교)
+### (4) 유지 (Retention)
+    - 접속 빈도 : DAU / WAU / MAU
+    - 접속 빈도 : 평균 접속주기  
+    - 사용 시간 : 세션당 평균 사용 시간 (집단별 / daily)
+    - 퍼널 분석 : 설치 > 가입 > 상품 조회 > 상품 구매 > 재구매
+                (기간별 / 집단별 비교)
 
-    5. 참여 & 커머스 (Engagement & Commerce)
-      - 참여 : 이벤트 / 공유 조회
-      - 커머스 : 상세페이지 조회 & 조회자수  
-      - 커머스 : 구매 & 구매자수 (total / monthly / weekly / daily)
-      - 커머스 : 재구매 & 재구매율
-      - 커머스 : 조회 & 구매 상품 Top 10
-      - 커머스 : 구매 전환율 (사용자 그룹별 / 기간별 / 상품별)
-      - 커머스 : 구매 금액 / 인당 평균 구매액
-      - 커머스 : Pair 분석
+### (5) 참여 & 커머스 (Engagement & Commerce)
+    - 참여 : 이벤트 / 공유 조회
+    - 커머스 : 상세페이지 조회 & 조회자수  
+    - 커머스 : 구매 & 구매자수 (total / monthly / weekly / daily)
+    - 커머스 : 재구매 & 재구매율
+    - 커머스 : 조회 & 구매 상품 Top 10
+    - 커머스 : 구매 전환율 (사용자 그룹별 / 기간별 / 상품별)
+    - 커머스 : 구매 금액 / 인당 평균 구매액
+    - 커머스 : Pair 분석
 
-    6. 이탈 (Churn)
-      - 최근 7/14/28일 이탈율 (동기간 대비 / 집단별 / 일별)
-      - Bounce / Farud  유저수 / 비율
+### (6) 이탈 (Churn)
+    - 최근 7/14/28일 이탈율 (동기간 대비 / 집단별 / 일별)
+    - Bounce / Farud  유저수 / 비율
 
-    7. 도달 (Reachability)
-      - 메시지 퍼널 : 발송자 > 오픈자수 > 오픈자 중 구매자
-      - 메시지 성과 분석 : 시간대별 접속자수 / 구매자수 추이 + 메시지 발송 시간 표기
+### (7) 도달 (Reachability)
+    - 메시지 퍼널 : 발송자 > 오픈자수 > 오픈자 중 구매자
+    - 메시지 성과 분석 : 시간대별 접속자수 / 구매자수 추이 + 메시지 발송 시간 표기
 
-    + 인구통계 (Demographic)
-      - 전체 유저 : 성별 / 연령 분포
-      - 사용자 그룹별(일반 / VIP 등등) : 성별 & 연령 분포
-      - 사용자 속성 정보(등급 / 설문 결과 등등)
+### + 인구통계 (Demographic)
+    - 전체 유저 : 성별 / 연령 분포
+    - 사용자 그룹별(일반 / VIP 등등) : 성별 & 연령 분포
+    - 사용자 속성 정보(등급 / 설문 결과 등등)
 
 
 
