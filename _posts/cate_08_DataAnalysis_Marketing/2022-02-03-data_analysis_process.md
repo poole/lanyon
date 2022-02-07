@@ -178,7 +178,7 @@ comments : true
   - 상대가 이해할 수 있는 언어 사용
   - <b>목적을 수시로 상기</b>하고 재확인
   - 분석 과정 보다는 <b>'결과'</b>중심 전달
-  
+
 ### (2) 간결 & 명확
   - 짧은 문장
   - Bullet point 방식
@@ -196,6 +196,6 @@ comments : true
 
 
 #### Reference
-[1] [데이터 분석 절차 - @osk3856](https://velog.io/@osk3856/data-analysis)
-[2] [데이터 분석을 위한 5단계 절차 - 마경근](https://brunch.co.kr/@data/10)  
-[3] [분석 프로세스 - 위키독스](https://wikidocs.net/16561)
+[1] [데이터 분석 절차 - @osk3856](https://velog.io/@osk3856/data-analysis)  
+[2] [데이터 분석을 위한 5단계 절차 - 마경근](https://brunch.co.kr/@data/10)   
+[3] [분석 프로세스 - 위키독스](https://wikidocs.net/16561)  
