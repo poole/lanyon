@@ -7,6 +7,7 @@ comments : true
 ---
 
 : 타인 계정의 AWS S3로 파일을 자동으로 전달해야하는 업무가 생겨났다. 일반적으로는 동일 계정의 EC2에서 S3로 파일을 전송하는 레퍼런스가 많이 있으나, 나의 로컬 서버(linux)에서 타인 계정의 S3로 접근해야하는 상황이기에, 필요한 과정을 스텝별로 정리해보며 진행해보자.
+
 ---
 
 
@@ -50,39 +51,45 @@ $  sudo ./aws/install # cli 설치
  : 관리자 IAM계정이 생성되었다면, 해당 계정으로 로그인 후 아래 절차대로 IAM
 
  - <b>Step 1 : A 계정 로그인 (관리자 IAM)  </b>
-   <img src = '/assets/cloud/aws/upload_file_to_s3/upload_file_to_s3_1.png' width = '80%'>
+   <img src = '/assets/cloud/aws/upload_file_to_s3/upload_file_to_s3_1.png' width = '100%'>
 
  - <b>Step 2 : 검색창에 IAM 검색 및 상단 IAM 클릭 </b>
-   <img src = '/assets/cloud/aws/upload_file_to_s3/upload_file_to_s3_2.png' width = '80%'>
+   <img src = '/assets/cloud/aws/upload_file_to_s3/upload_file_to_s3_2.png' width = '100%'>
 
  - <b>Step 3 : 좌측 'users' 탭 클릭 및 권한을 부여할 계정 선택</b>
-   <img src = '/assets/cloud/aws/upload_file_to_s3/upload_file_to_s3_3.png' width = '80%'>
-   <img src = '/assets/cloud/aws/upload_file_to_s3/upload_file_to_s3_4.png' width = '80%'>
+   <img src = '/assets/cloud/aws/upload_file_to_s3/upload_file_to_s3_3.png' width = '100%'>
+   <img src = '/assets/cloud/aws/upload_file_to_s3/upload_file_to_s3_4.png' width = '100%'>
 
  - <b>Step 4 : `Add inline policy` 버튼 클릭 및 `Json`탭 이동 </b>
- <img src = '/assets/cloud/aws/upload_file_to_s3/upload_file_to_s3_5.png' width = '80%'>
- <img src = '/assets/cloud/aws/upload_file_to_s3/upload_file_to_s3_6.png' width = '80%'>
+ <img src = '/assets/cloud/aws/upload_file_to_s3/upload_file_to_s3_5.png' width = '100%'>
+ <img src = '/assets/cloud/aws/upload_file_to_s3/upload_file_to_s3_6.png' width = '100%'>
 
- - <b>Step 5 : 권한 추가 코드 삽입 및 타겟 S3 ARN 입력 </b>
- <img src = '/assets/cloud/aws/upload_file_to_s3/upload_file_to_s3_7.png' width = '80%'>
-```json
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": [
-                "s3:PutObject",
-                "s3:PutObjectAcl"      
-            ],
-            "Resource": [
-                "arn:aws:s3:::DOC-EXAMPLE-BUCKET",  # target s3 bucket ARN
-                "arn:aws:s3:::DOC-EXAMPLE-BUCKET/*"
-            ]
-        }
-    ]
-}
-```
+ - <b>Step 5 : 정책 추가 코드 삽입 및 타겟 S3 ARN 입력 </b>
+ <img src = '/assets/cloud/aws/upload_file_to_s3/upload_file_to_s3_7.png' width = '100%'>
+ ```
+ {
+     "Version": "2012-10-17",
+     "Statement": [
+         {
+             "Effect": "Allow",
+             "Action": [
+                 "s3:PutObject",
+                 "s3:PutObjectAcl"      
+             ],
+             "Resource": [
+                 "arn:aws:s3:::DOC-EXAMPLE-BUCKET",  # target s3 bucket ARN
+                 "arn:aws:s3:::DOC-EXAMPLE-BUCKET/*"
+             ]
+         }
+     ]
+ }
+ ```
+
+ - <b>Step 6 : 코드로 새롭게 추가한 정책명 입력 및 생성 </b>
+  <img src = '/assets/cloud/aws/upload_file_to_s3/upload_file_to_s3_8.png' width = '100%'>
+
+
+
 
 
 
