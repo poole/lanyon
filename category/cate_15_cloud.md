@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 15_cloud
+title: 15_Cloud
 ---
 {% for post in site.posts %}
   {% if post.category == 'cloud' %}
