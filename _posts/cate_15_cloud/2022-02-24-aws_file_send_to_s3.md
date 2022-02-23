@@ -10,6 +10,10 @@ comments : true
 
 ---
 
+> [계정]
+$\star$ A계정 : 접근을 희망하는 계정  (나)
+$\star$ B계정 : S3를 소유한 계정    (타인)
+
 
 
 # 1. Linux instence에서 AWS CLI(Command Line Interface) 설치하기  
@@ -38,8 +42,16 @@ $  sudo ./aws/install # cli 설치
 # 2. IAM(Identity and Access Management) 설정하기
  : CLI 설치가 완료됐다면, 목표 S3 계정에 접근하기 위한 IAM 설정해야한다. 여기에서는 파일을 전달할 A계정과 S3를 소유하고 있는 B가 각각 해야하는 작업이 다르기에 구분하여 세팅 절차를 살펴보자.
 
+ > [타계정(B)에게 내 계정(A)의 S3 접근 권한 부여하는 방법(youtube)](https://www.youtube.com/watch?v=OhupTkhPoZM)  
+ > [타계정(B)에게 내 계정(A)의 S3 접근 권한 부여하는 방법(docs)](https://aws.amazon.com/ko/premiumsupport/knowledge-center/s3-cross-account-upload-access/)
+
+ > [계정]
+ $\star$ A계정 : 접근을 희망하는 계정  (나)
+ $\star$ B계정 : S3를 소유한 계정    (타인)
+
+
 ## 1) [A계정] IAM 세팅
-### (1) [A계정] 관리자 IAM 계정
+### (1) 관리자 IAM 계정
  : 우선 AWS는 모든 권한을 갖는 루트사용자와 일부 권한만을 갖는 IAM사용자로 나뉜다. 그리고 IAM사용자에서도 IAM 계정을 생성할 관리자와 특정 목적별 IAM 계정으로 구분되어야 하는데, 만약 관리자용 IAM 사용자가 없다면 아래 포스팅을 따라 '관리자용 IAM계정'을 먼저 만들자.
 
 > [TH : IAM 사용자 생성 방법](/_posts/cate_15_cloud/2022-02-24-aws_file_send_to_s3.md)  
@@ -47,7 +59,7 @@ $  sudo ./aws/install # cli 설치
 [나도 한 번 만들어 보자's 블로그 : AWS IAM 사용자 만들기](https://ukayzm.github.io/aws-create-iam-user/)
 
 
-### (2) [A계정] S3에 파일을 전송할 목적의 IAM 계정
+### (2) S3에 파일을 전송할 목적의 IAM 계정
  : 관리자 IAM계정이 생성되었다면, 해당 계정으로 로그인 후 아래 절차대로 IAM
 
  - <b>Step 1 : A 계정 로그인 (관리자 IAM)  </b>
@@ -61,11 +73,11 @@ $  sudo ./aws/install # cli 설치
    <img src = '/assets/cloud/aws/upload_file_to_s3/upload_file_to_s3_4.png' width = '100%'>
 
  - <b>Step 4 : `Add inline policy` 버튼 클릭 및 `Json`탭 이동 </b>
- <img src = '/assets/cloud/aws/upload_file_to_s3/upload_file_to_s3_5.png' width = '100%'>
- <img src = '/assets/cloud/aws/upload_file_to_s3/upload_file_to_s3_6.png' width = '100%'>
+   <img src = '/assets/cloud/aws/upload_file_to_s3/upload_file_to_s3_5.png' width = '100%'>
+   <img src = '/assets/cloud/aws/upload_file_to_s3/upload_file_to_s3_6.png' width = '100%'>
 
  - <b>Step 5 : 정책 추가 코드 삽입 및 타겟 S3 ARN 입력 </b>
- <img src = '/assets/cloud/aws/upload_file_to_s3/upload_file_to_s3_7.png' width = '100%'>
+   <img src = '/assets/cloud/aws/upload_file_to_s3/upload_file_to_s3_7.png' width = '100%'>
  ```
  {
      "Version": "2012-10-17",
@@ -89,26 +101,48 @@ $  sudo ./aws/install # cli 설치
   <img src = '/assets/cloud/aws/upload_file_to_s3/upload_file_to_s3_8.png' width = '100%'>
 
 
+---
+
+## 2) [B계정] 접근 권한을 부여할 S3 설정
+ [A]의 IAM 계정에 정책 추가가 완료되었다면, [A]가 접근할, S3 버킷에 대한 설정이 필요하다.
+
+
+ - <b>Step 1 : [B계정] 로그인 및 S3 설정 진입 </b>
+   <img src = '/assets/cloud/aws/upload_file_to_s3/upload_file_to_s3_b_1.png' width = '100%'>
+   <img src = '/assets/cloud/aws/upload_file_to_s3/upload_file_to_s3_b_2.png' width = '100%'>
+
+ - <b>Step 2 : 접근을 허용할 S3 버킷 선택 </b>
+   <img src = '/assets/cloud/aws/upload_file_to_s3/upload_file_to_s3_b_3.png' width = '100%'>
+
+ - <b>Step 3 : S3 Permission 권한 설정 </b>
+   상단 `Permission` 탭 클릭
+   <img src = '/assets/cloud/aws/upload_file_to_s3/upload_file_to_s3_b_4.png' width = '100%'>
+   스크롤을 내려서, 우측 `edit`클릭
+   <img src = '/assets/cloud/aws/upload_file_to_s3/upload_file_to_s3_b_5.png' width = '100%'>
+   아래 policy 붙여넣으며, 이때 <b>Principal의 값으로는 계정 A에 있는 IAM 사용자의 ARN을 입력!</b>
+   <img src = '/assets/cloud/aws/upload_file_to_s3/upload_file_to_s3_b_6.png' width = '100%'>
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "DelegateS3Access",
+            "Effect": "Allow",
+            "Principal": {"AWS": "arn:aws:iam::999999999999:user/UploadData"},  ## 계정 A에서 IAM 사용자의 Amazon 리소스 이름(ARN)
+            "Action": ["s3:PutObject", "s3:PutObjectAcl"],
+            "Resource": [
+                "arn:aws:s3:::DOC-EXAMPLE-BUCKET",
+                "arn:aws:s3:::DOC-EXAMPLE-BUCKET/*"
+            ]
+        }
+    ]
+}
+```
 
 
 
 
-
-## 2) [B계정] IAM 세팅
-### (1) [A계정] 관리자 IAM 계정
-### 2) 접근 권한을 부여할 IAM 계정 생성
- IAM 계정이 생성되었다면, 이제 해당 계정에 권한을 부여하고, 접근 권한을 준 S3버킷에도 접근 권한을 설정해주어야 한다.
-
-> $\star$ A계정 : 접근을 희망하는 계정  (나)
-$\star$ B계정 : S3를 소유한 계정    (타인)
-
-
-
-
-
-
-> [타계정(B)에게 내 계정(A)의 S3 접근 권한 부여하는 방법(youtube)](https://www.youtube.com/watch?v=OhupTkhPoZM)  
-> [타계정(B)에게 내 계정(A)의 S3 접근 권한 부여하는 방법(docs)](https://aws.amazon.com/ko/premiumsupport/knowledge-center/s3-cross-account-upload-access/)
 
 
  * IAM은 AWS 리소스에 대한 액세스를 안전하게 제어하는 서비스로, 자세한 설명은 아래 링크를 참조하자.
