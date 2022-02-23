@@ -8,6 +8,9 @@ comments : true
 
 : 타인 계정의 AWS S3로 파일을 자동으로 전달해야하는 업무가 생겨났다. 일반적으로는 동일 계정의 EC2에서 S3로 파일을 전송하는 레퍼런스가 많이 있으나, 나의 로컬 서버(linux)에서 타인 계정의 S3로 접근해야하는 상황이기에, 필요한 과정을 스텝별로 정리해보며 진행해보자.
 
+* 반면 S3 버킷을 소유한 계정에서, S3 접근 및 업로드 권한이 있는 IAM계정을 생성하여 계정 Key값(Access key값 / Secret key)을 공유해준다면,
+동일 계정내에서 파일을 업로드하는 이슈가 되기에, 아래의 2.번 IAM 설정 스탭을 진행하지 않아도 된다.
+
 ---
 
 > [계정]
@@ -103,8 +106,8 @@ $  sudo ./aws/install # cli 설치
 
 ---
 
-## 2) [B계정] 접근 권한을 부여할 S3 설정
- [A]의 IAM 계정에 정책 추가가 완료되었다면, [A]가 접근할, S3 버킷에 대한 설정이 필요하다.
+## 2) [B계정] 접근 권한을 부여할 S3에 정책 추가
+ [A]의 IAM 계정에 정책 추가가 완료되었다면, [A]가 접근할, S3 버킷에 [A계정]에서 설정했던 정책에 대한 추가가 필요하다.
 
 
  - <b>Step 1 : [B계정] 로그인 및 S3 설정 진입 </b>
@@ -119,8 +122,9 @@ $  sudo ./aws/install # cli 설치
    <img src = '/assets/cloud/aws/upload_file_to_s3/upload_file_to_s3_b_4.png' width = '100%'>
    스크롤을 내려서, 우측 `edit`클릭
    <img src = '/assets/cloud/aws/upload_file_to_s3/upload_file_to_s3_b_5.png' width = '100%'>
-   아래 policy 붙여넣으며, 이때 <b>Principal의 값으로는 계정 A에 있는 IAM 사용자의 ARN을 입력!</b>
+   아래 policy 붙여넣으며, 이때 <b>Principal의 값으로는 계정 A에 있는 IAM 사용자의 ARN을 입력해야한다!</b>
    <img src = '/assets/cloud/aws/upload_file_to_s3/upload_file_to_s3_b_6.png' width = '100%'>
+   끝났다면 하단 `save changes`
 
 ```
 {
@@ -140,21 +144,52 @@ $  sudo ./aws/install # cli 설치
 }
 ```
 
+# 3. 서버에 IAM 사용자 등록
+ : 위 단계까지 마쳤다면, 우리는 A계정과 B계정의 버킷이 연결된 상황이다. 이제 다음 작업으로 EC2 or Linux 서버내에 나의 A계정을 등록해주자.
+
+ ## A계정 등로 절차
+ ```bash
+ # 1) 경로 폴더 이동  -- 이 과정이 없을시 위 에러가 발생
+ $  cd awscliv2    # 폴더 이동
+
+ # 2) configure 등록
+ $  aws configure
+ > AWS Access Key ID [None]: 직접 입력
+ > AWS Secret Access Key [None]: 직접 입력
+ > Default region name [None]: 직접 입력 #
+ > Default output format [None]: 직접 입력
+
+
+ # 3) 목표 S3 버킷이 출력된다면, 성공!!
+ $  aws s3 ls
+
+ ```
+   <img src = '/assets/cloud/aws/upload_file_to_s3/upload_file_to_s3_check.png' width = '100%'>
 
 
 
 
+ # 4. python으로 S3 접근하기
+ : 여기까지 왔다면, 이제 아래 파이썬 코드를 활용하여 file을 S3 버킷으로 업로드할 수 있다.
 
- * IAM은 AWS 리소스에 대한 액세스를 안전하게 제어하는 서비스로, 자세한 설명은 아래 링크를 참조하자.
- [AWS : 루트 사용자 vs IAM 사용자](https://wonit.tistory.com/348)
+ ```python
+ import boto3
 
-
+  s3_client = boto3.client('s3')
+  # 파일 올리기
+  s3_client.upload_file('올리고자하는파일', '나의버킷이름', '버킷에저장될이름')
+  # 파일 다운받기
+  s3_client.download_file('나의버킷이름', '내려받을파일', '로컬에저장될이름')
+ ```
  ---
 
 
 
 
 #### Reference
-[1] [AWS : 인스턴스에서 S3 접근, AWS CLI](https://www.youtube.com/watch?v=OhupTkhPoZM)  
-[2] [AWS : 인스턴스에서 S3 접근, AWS CLI](https://cjsal95.tistory.com/28)  
-[3] [AWS : CLI 설치 AWS 공식 가이드 링크(영문)](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html)  
+[1] [AWS : 인스턴스에서 S3 접근, AWS CLI](https://cjsal95.tistory.com/28)  
+
+[2] [AWS : 타계정(B)에게 내 계정(A)의 S3 접근 권한 부여하는 방법(youtube)](https://www.youtube.com/watch?v=OhupTkhPoZM)  
+[3] [AWS : 타계정(B)에게 내 계정(A)의 S3 접근 권한 부여하는 방법(docs)](https://aws.amazon.com/ko/premiumsupport/knowledge-center/s3-cross-account-upload-access/)  
+
+[4] [AWS : CLI 설치 AWS 공식 가이드 링크(영문)](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html)  

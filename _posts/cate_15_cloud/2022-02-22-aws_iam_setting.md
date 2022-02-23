@@ -19,7 +19,9 @@ comments : true
  - 세분화된 권한
  - 무료
 
-> [원잇님 블로그 : 루트 사용자 vs IAM 사용자](https://wonit.tistory.com/348)
+> IAM은 AWS 리소스에 대한 액세스를 안전하게 제어하는 서비스로, 자세한 설명은 아래 링크를 참조하자.
+ [원잇님 블로그 : 루트 사용자 vs IAM 사용자](https://wonit.tistory.com/348)
+
 
 ## 2. 관리자 & 세부 목표 IAM User(Upload File to S3) 생성
  : AWS는 IAM User를 생성하는 역할도, 관리자 IAM User를 먼저 만들어 진행하라고 권고하기에, 관리자급 IAM 사용자 생성 및 관리자 폴더를 생성하고, 이후, 특정 세부 목표를 지닌 IAM 유저를 생성해야한다.
