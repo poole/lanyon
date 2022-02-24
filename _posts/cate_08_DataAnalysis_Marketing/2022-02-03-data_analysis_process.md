@@ -8,6 +8,18 @@ comments : true
 : 데이터 분석을 하다보면, 연간/분기/특정기간내 서비스 전체 또는 주요 지표들에 대해서 리포팅을 해야하는 상황이 생겨난다. 이에 데이터 분석 리포팅 작성시, 절차 및 이슈들을 정리해보자.
  이때 각자의 문제 상황에 따라서 리포팅 작성 방식은 다를 수 밖에 없기에, 특정 문제를 해결하기 위한 FrameWork라고 보면 좋을 것 같다. 또한 본글은 개인적 경험과 일부 리서치에 기반하였기에, 지속적인 수정 & 보완이 필요하다.  
 
+
+> 아래 작성한 개인 경헙에 기반한 분석 방법론 외, 체계화 되어있는 방법론들은 아래 링크를 참고하자
+
+<center>
+
+ <img src = '/assets/DataAnalysis_Marketing/data_analysis_process/data_analysis_process_1.png' width = '80%'>
+
+ [데이터_분석계획_빅데이터_분석기획 by noti-note님 블로그](https://noti-note.tistory.com/12)
+
+ </center>  
+
+
 <br>
 # 1. 문제정의 $\star\star\star$
 ## 1) Why : 리포팅을 왜 하는 것일까? $\star$
@@ -199,3 +211,4 @@ comments : true
 [1] [데이터 분석 절차 - @osk3856](https://velog.io/@osk3856/data-analysis)  
 [2] [데이터 분석을 위한 5단계 절차 - 마경근](https://brunch.co.kr/@data/10)   
 [3] [분석 프로세스 - 위키독스](https://wikidocs.net/16561)  
+[4] [데이터 분석 계획](https://noti-note.tistory.com/12)  
