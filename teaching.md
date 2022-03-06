@@ -11,6 +11,10 @@ title: Teaching
 
 **Retòrica** (BA, Art History)
 
+**Fundamentos Lingüísticos de la Logopedia* (BA, Speech Therapy)
+
+**Documentació per a traductors** (BA, Translation and Intercultural Mediation)
+
 ### 2020-21
 
 **Expresión oral y escrita para los medios de comunicación I** (BA, Audiovisual Communication)
