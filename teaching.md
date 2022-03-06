@@ -11,7 +11,7 @@ title: Teaching
 
 **Retòrica** (BA, Art History)
 
-**Fundamentos Lingüísticos de la Logopedia* (BA, Speech Therapy)
+**Fundamentos Lingüísticos de la Logopedia** (BA, Speech Therapy)
 
 **Documentació per a traductors** (BA, Translation and Intercultural Mediation)
 
