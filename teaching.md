@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Teaching
+title: a_Teaching
 ---
 
 <br/>
