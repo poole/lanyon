@@ -12,9 +12,10 @@ authors: Bubeck, Sebastien (Microsoft); Dobre, David (Mila); Gauthier, Charlie (
 
 ## Important Information
 
-- The ICLR Venue is currently **open**, and blog posts can be [submitted here](https://openreview.net/group?id=ICLR.cc/2022/Track/Blog).
-- The submission deadline for your blog post is **January 14th, 2022 AoE**.
+- The ICLR Venue is currently **closed**.
+- The submission deadline for your blog post is **January 14th, 2022 AoE**
 - The review process will conclude on **March 25th, 2022**
+- Details on submitting accepted blog posts have been added; see [Merging an Accepted Blog Post](submitting#merging-an-accepted-blog-post).
 
 ---
 
