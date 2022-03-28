@@ -533,7 +533,7 @@ We additionally provide optional instructions for hosting github pages on your o
     ```
 
 4. **Create a pull request to our repo's master branch.**
-    You can do so by clicking on the `Contribute` button when on the original ICLR Blog Track repo.
+    You can do so by clicking on the `Contribute` button when on your new fork.
 
     ![Opening PRs]({{ site.url }}/public/images/opening_pr.png)
     
