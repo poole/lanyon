@@ -11,6 +11,8 @@ permalink:           pretty
 github:
   repo: https://github.com/iclr-blog-track/iclr-blog-track.github.io
 
+exclude: [.github/]
+
 # About/contact
 author:
   name:              Mark Otto
