@@ -11,7 +11,7 @@ permalink:           pretty
 github:
   repo: https://github.com/iclr-blog-track/iclr-blog-track.github.io
 
-exclude: [.github/]
+exclude: [.github/, docker/]
 
 # About/contact
 author:
