@@ -25,7 +25,7 @@ layout: default
 </div>
 <script>
   let authorsSpan = document.getElementById("iclr-post-authors");
-  let authorsText = authorsSpan.textContent;
+  let authorsText = authorsSpan.textContent.replace(/\(.*?\)/g, "");
   let lnameFnameInstitution = authorsText.split(";");
   let lfiList = lnameFnameInstitution.map(lfi => lfi.split(",").map(item => item.trim()));
   let bibtexLFI = lfiList.map(lfi => lfi[0] + ", " + lfi[1]).join(" and ")
@@ -44,7 +44,7 @@ layout: default
   ).replace(" ", "").replace(/[\p{P}$+<=>^`|~]/gu, '').toLowerCase().trim();
 
   let bibtexTemplate = `
-@inproceedings{${bibtexTitleShorthand}},
+@inproceedings{${bibtexTitleShorthand},
   author = {${bibtexLFI}},
   title = {${titleText}},
   booktitle = {ICLR Blog Track},
