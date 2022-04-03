@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [AWS] EC2(or Local) -> S3로 파일 전송하기
+title: AWS_EC2_or_Local_S3로_파일_전송하기
 date : 24 Feb 2022
 category : cloud
 comments : true
@@ -13,7 +13,7 @@ comments : true
 
 ---
 
-> [계정]
+> [계정]  
 $\star$ A계정 : 접근을 희망하는 계정  (나)  
 $\star$ B계정 : S3를 소유한 계정    (타인)
 
@@ -167,7 +167,7 @@ $  sudo ./aws/install # cli 설치
    <img src = '/assets/cloud/aws/upload_file_to_s3/upload_file_to_s3_check.png' width = '100%'>
 
 
- # 4. [Bash] CLI S3 접근하기
+# 4. [Bash] CLI S3 접근하기
  : 여기까지 왔다면, 이제 AWS CLI를 활용하여, 목표 버킷에 접근할 수 있다. CLI를 활용하여 버킷의 접근하는 코드는 아래와 같다.
 
 ```bash
@@ -212,7 +212,7 @@ aws s3 sync local_dir/ s3://{my-s3-bucket}
 
 > [EC2에서 S3 접근하기 (CLI 코드 정리)- 시나브로101블로그](https://blog.naver.com/PostView.nhn?blogId=m2seo&logNo=222051627467)
 
- # 5. [python] S3 접근하기
+# 5. [python] S3 접근하기
  : 끝으로 파일 업로드 과정에서 파이썬 코드로 구현하여해야 하는 경우 코드를 활용하여 file을 S3 버킷으로 업로드할 수 있다.
 
  ```python

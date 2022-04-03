@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [AWS] 계정 생성 및 IAM User 생성하기
+title: AWS_계정생성_및_IAM_User_생성하기
 date : 22 Feb 2022
 category : cloud
 comments : true
