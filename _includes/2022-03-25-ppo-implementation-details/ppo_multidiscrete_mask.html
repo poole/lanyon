@@ -1,0 +1,30 @@
+<div style="padding-bottom: 20px;">
+	<div
+	id="ppo_multidiscrete_mask"
+	style="width: 100%; height: 600px; border: 1px solid grey"
+	></div>
+</div>
+
+
+<script>
+  require(["vs/editor/editor.main"], function () {
+    var diffEditor = monaco.editor.createDiffEditor(
+      document.getElementById("ppo_multidiscrete_mask")
+    );
+
+	
+    Promise.all([
+		xhr("{{ site.baseurl }}/public/images/2022-03-25-ppo-implementation-details/algo/ppo_multidiscrete.py"),
+		xhr("{{ site.baseurl }}/public/images/2022-03-25-ppo-implementation-details/algo/ppo_multidiscrete_mask.py")
+	]).then(function (r) {
+      var originalTxt = r[0].responseText;
+      var modifiedTxt = r[1].responseText;
+
+      diffEditor.setModel({
+        original: monaco.editor.createModel(originalTxt, "python"),
+        modified: monaco.editor.createModel(modifiedTxt, "python"),
+      });
+      diffEditor.revealPositionInCenter({ lineNumber: 119, column: 0 });
+    });
+  });
+</script>
