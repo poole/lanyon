@@ -19,7 +19,9 @@ title: Home
     <span class="post-date">{{ post.authors }}</span>
 
     <!-- {{ post.content }} -->
-    {{ post.excerpt }}
+    <div class="post-excerpt">
+      {{ post.excerpt }}
+    </div>
     <hr>
   </div>
   {% endfor %}
@@ -41,3 +43,21 @@ title: Home
   <span class="pagination-item newer">Newer</span>
   {% endif %}
 </div>
+
+<script>
+  window.onload = (event) => {
+    console.log("loaded")
+    const collection = document.getElementsByClassName("post-excerpt");
+    console.log(collection);
+    [...collection].forEach(excerpt => {
+      console.log(excerpt);
+      [...excerpt.getElementsByTagName('a')].forEach(anchor => {
+        console.log(anchor);
+
+        const span = document.createElement('span');
+        span.innerHTML = anchor.innerHTML;
+        anchor.parentNode.replaceChild(span, anchor);
+      })
+    });
+  };
+</script>
