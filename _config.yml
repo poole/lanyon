@@ -26,5 +26,5 @@ plugins:
 paginate_path: "/blog/:num"
 
 # Custom vars
-version:             ICLR Spring 2021
+version:             ICLR Spring 2022
 google_analytics_id: #UA-XXXX-Y
