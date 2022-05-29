@@ -24,10 +24,10 @@ comments : true
 
 <br>
 ## 3. 문제 해결 방법
-  (1) 세팅 화면 열기 : `ctrl(cmd)` + `,`
-  (2) 추가 경로 옵션 검색 : `python.analysis.extraPaths`검색
-  (3) 추가 경로 입력 버튼 클릭 : `Add Item`
-  (4) 추가 서브 디렉토리 경로 입력 : ex) `/home/th/subdirectory/`
+  (1) 세팅 화면 열기 : `ctrl(cmd)` + `,`  
+  (2) 추가 경로 옵션 검색 : `python.analysis.extraPaths`검색  
+  (3) 추가 경로 입력 버튼 클릭 : `Add Item`  
+  (4) 추가 서브 디렉토리 경로 입력 : ex) `/home/th/subdirectory/`  
 
   <center>
 
