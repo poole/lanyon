@@ -188,7 +188,10 @@ aws s3 ls s3://{my-s3-bucket}/{directory_name}/ # 폴더 내 파일 탐색
 ### 단순 파일 복사
 aws s3 cp {local_file_nm} s3://{my-s3-bucket}
 ### 버킷내 디렉토리를 만들어서 복사할 경우, {버킷명}/{디렉토리명}}/ 명시
+#### [local -> S3]
 aws s3 cp {local_file_nm} s3://{my-s3-bucket}/{directory_name}/
+### [S3 -> local]
+aws s3 cp s3://{my-s3-bucket}/{directory_name}/{file_name} {local_file_nm} 
 
 #------------------------------#
 # 4) 폴더 이동
