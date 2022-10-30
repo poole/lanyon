@@ -29,6 +29,7 @@ pd.pivot_table(df, index=, columns=, values=)
     : True로 설정시, 행과 열을 기준으로 합계(All, row sum, column sum)를 같이 제시
 
 
+
 ## 2. Wide to Long (melt)
  : 주어진 WideFormData를 아래로 길게 녹여내듯 LongForm으로 변환
 
@@ -45,6 +46,7 @@ pd.pivot_table(df, index=, columns=, values=)
    : (default : None) Category or Group과 같이 값의 구분자가 될 필드명
  - value_name
    : (default : value) value값 column명
+
 
 
 ## 3. Stack <-> Unstack
@@ -74,18 +76,18 @@ data_wide
 data_wide.set_index(['cust_id', 'prod_cd']).\
  stack(level = -1).to_frame().head(10)
 # [output]
-#               0
+#                           0
 # cust_id	prod_cd		
-# c1	p1	grade	A
-# pch_amt	30
-# p2	grade	A
-# pch_amt	10
-# p3	grade	A
-# pch_amt	0
-# c2	p1	grade	A
-# pch_amt	40
-# p2	grade	A
-# pch_amt	15
+# c1	p1	grade	    A
+#               pch_amt	    30
+#       p2	grade	    A
+#               pch_amt	    10
+#       p3	grade	    A
+#               pch_amt	    0
+# c2	p1	grade	    A
+#               pch_amt	    40
+#       p2	grade	    A
+#               pch_amt	    15
 ```
 
 #### (2) UnStack
@@ -106,14 +108,7 @@ data_long
 #       pch_amt	40
 # 4	grade	A
 #       pch_amt	15
-# 5	grade	A
-#       pch_amt	30
-# 6	grade	B
-#       pch_amt	0
-# 7	grade	B
-#       pch_amt	0
-# 8	grade	B
-#       pch_amt	10
+
 
 data_long.unstack()
 #      grade	pch_amt
@@ -122,10 +117,7 @@ data_long.unstack()
 # 2	A	0
 # 3	A	40
 # 4	A	15
-# 5	A	30
-# 6	B	0
-# 7	B	0
-# 8	B	10
+
 ```
 
 #### Reference
