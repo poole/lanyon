@@ -1,5 +1,6 @@
 ---
 layout: post
+date:   2020-04-02 20:42:42 +0100
 title: Example content
 ---
 
