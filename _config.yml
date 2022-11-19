@@ -30,7 +30,6 @@ twitter_username: mdo
 github_username:  mdo
 paginate: 1
 paginate_path: /page/:num
-permalink: pretty
 permalink: /:title
 
 # About/contact
