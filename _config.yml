@@ -18,21 +18,34 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
-email: your-email@example.com
+title: Lanyon
+tagline: 'A Jekyll theme'
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  'A reserved <a href="https://jekyllrb.com" target="_blank">Jekyll</a> theme
+  that places the utmost gravity on content with a hidden drawer. Made by
+  <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://lanyon.getpoole.com" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: mdo
+github_username:  mdo
+paginate: 5
+permalink: pretty
+
+# About/contact
+author:
+  name: Mark Otto
+  url: https://twitter.com/mdo
+  email: markdotto@gmail.com
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-paginate
+
+# Custom vars
+version: 1.1.0
+google_analytics_id: # UA-XXXX-Y
 
 # Exclude from processing.
 # The following items will not be processed, by default.
