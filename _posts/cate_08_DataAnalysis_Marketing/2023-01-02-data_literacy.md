@@ -60,9 +60,9 @@ comments : true
 위처럼 데이터 요청의 목적과 배경을 인터뷰하여, 아래와 같이 크게 3가지로 정리할 수 있다.
 </center>
 
-  >  <strong>1) 해결하려는 문제 (문제정의)</strong>
-  >  <strong>2) 솔루션</strong>
-  >  <strong>3) 측정 지표</strong>
+  >  <strong>1) 해결하려는 문제 (문제정의)</strong>  
+  >  <strong>2) 솔루션</strong>  
+  >  <strong>3) 측정 지표</strong>  
 
 
 
@@ -74,8 +74,10 @@ comments : true
 : 데이터/실험 기반 사고방식이 만들어 지려면, 모든 업무들이 데이터와 실험 기반으로 이뤄지는 환경 구축이 필요했음. 따라서 실제 진행중인 업무들부터, 데이터 기반 사고방식으로 실행되도록 유도함. 이런 방식이 자연스러워지도록,<strong>`데이터 기반 실험 프로세스 프레임`</strong>을 도입. 해당 프로세스의 목적은 <strong>`1) 실험 횟수를 높여 성과 증대`</strong>의 목표와 함께 <strong>`2) 데이터 중심 문제 해결능력 배양`.</strong>
 
 <center>
-\**<실험 프로세스>**
+<strong> <실험 프로세스> </strong>  
+
 </center>
+
 
   - <strong> 1) 해결하려는 문제</strong> ➡️ 문제정의
   - <strong> 2) 관련 OKR</strong> ➡️ 전사 목표와 align 되어있는지
