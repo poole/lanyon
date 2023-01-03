@@ -68,23 +68,24 @@ comments : true
 
 ---
 ## 2. 데이터/실험 기반 사고 방식 $\star$
-#### * 실험 프로세스 / 실험보드
- : 데이터/실험 기반 사고방식이 만들어 지려면, 모든 업무들이 데이터와 실험 기반으로 이뤄지는 환경 구축이 필요했음. 따라서 실제 진행중인 업무들부터, 데이터 기반 사고방식으로 실행되도록 유도함. 이런 방식이 자연스러워지도록,<strong>`데이터 기반 실험 프로세스 프레임`</strong>을 도입. 해당 프로세스의 목적은 <strong>`1) 실험 횟수를 높여 성과 증대`</strong>의 목표와 함께 <strong>`2) 데이터 중심 문제 해결능력 배양`</strong>.
 
+#### * 실험 프로세스 / 실험보드
+
+: 데이터/실험 기반 사고방식이 만들어 지려면, 모든 업무들이 데이터와 실험 기반으로 이뤄지는 환경 구축이 필요했음. 따라서 실제 진행중인 업무들부터, 데이터 기반 사고방식으로 실행되도록 유도함. 이런 방식이 자연스러워지도록,<strong>`데이터 기반 실험 프로세스 프레임`</strong>을 도입. 해당 프로세스의 목적은 <strong>`1) 실험 횟수를 높여 성과 증대`</strong>의 목표와 함께 <strong>`2) 데이터 중심 문제 해결능력 배양`.</strong>
 
 <center><strong><실험 프로세스></strong></center>
 
-  <strong> 1) 해결하려는 문제</strong> ➡️ 문제정의
-  <strong> 2) 관련 OKR</strong> ➡️ 전사 목표와 align 되어있는지
-  <strong> 3) 측정 지표</strong> ➡️ 문제와 지표가 align 되어있으며, 측정 가능한 것인지
-  <strong> 4) 검증 기준</strong> ➡️ 성공 여부를 어떻게 판단할 것인지
-  <strong> 5) 검증 후 변화될 액션</strong> ➡️ 의미없는 액션을 하는게 아닌지
-  <strong> 6) 결과</strong> ➡️ 검증 기준으로 결과가 나왔는지
-  <strong> 7) 학습한 점</strong> ➡️  어떤 학습을 했고, 다음 실험에는 어떻게 반영될 것인지
+<strong> 1) 해결하려는 문제</strong> ➡️ 문제정의
+<strong> 2) 관련 OKR</strong> ➡️ 전사 목표와 align 되어있는지
+<strong> 3) 측정 지표</strong> ➡️ 문제와 지표가 align 되어있으며, 측정 가능한 것인지
+<strong> 4) 검증 기준</strong> ➡️ 성공 여부를 어떻게 판단할 것인지
+<strong> 5) 검증 후 변화될 액션</strong> ➡️ 의미없는 액션을 하는게 아닌지
+<strong> 6) 결과</strong> ➡️ 검증 기준으로 결과가 나왔는지
+<strong> 7) 학습한 점</strong> ➡️  어떤 학습을 했고, 다음 실험에는 어떻게 반영될 것인지
 
 
 <center><img src = '/assets/DataAnalysis_Marketing/data_literacy/data_literacy_1.png' width = '80%'></center>
-<center><img src = '/assets/DataAnalysis_Marketing/data_literacy/data_literacy_2.png' width = '80%'></center>
+<center><img src = '/assets/DataAnalysis_Marketing/data_literacy/data_literacy_2.png' width = '60%'></center>
 
 ---
 
