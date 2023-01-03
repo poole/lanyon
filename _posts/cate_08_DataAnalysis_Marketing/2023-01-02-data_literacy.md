@@ -60,9 +60,9 @@ comments : true
 위처럼 데이터 요청의 목적과 배경을 인터뷰하여, 아래와 같이 크게 3가지로 정리할 수 있다.
 </center>
 
->  <strong>1) 해결하려는 문제 (문제정의)</strong>
->  <strong>2) 솔루션</strong>
->  <strong>3) 측정 지표</strong>
+  >  <strong>1) 해결하려는 문제 (문제정의)</strong>
+  >  <strong>2) 솔루션</strong>
+  >  <strong>3) 측정 지표</strong>
 
 
 
