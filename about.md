@@ -3,27 +3,35 @@ layout: page
 title: About
 ---
 
+
+Χαίρετε! Είμαι ο root, ο ρίζας. Έτσι επέλεξα να με λεω, να με φωνάζω να με αποκαλείτε. Πάντα ψάχνω την αρχή, την πηγή και αυτό με χαρακτηρίζει.
+
+Η ρίζα έχει πολλές εκφάνσεις, μπορεί να είναι μαθηματική, μπορεί να είναι η ριζες ενός δέντρου βαθιά μέσα στη γη, μπορεί να είναι ενός λουλουδιού, μπορεί να είναι η ριζα του αιματος σου αυτό που σε χαρακτηρίζει. Είναι η αρχή και το τέλος.
+
+Το κοινό όμως με όλα είναι ότι η ρίζα δεν είναι εμφανής, δεν επιλέγει να βρίσκεται στην επιφάνεια, δύσκολα την φτάνεις, είναι χωμένη βαθιά και αναπνέει μόνη της. 
+
+Ρίζας λοιπον, γιατί όχι;\
+Δεν έχω κάπου κάτι να με \
+κρατάει, ας είναι στο όνομα τουλάχιστον.\
+Ρίζα, πολλαπλά νοήματα.\
+Ζωοδόχος πηγή,\
+μαθηματική έκφραση,\
+χρήστης με όλα τα δικαιώματα.\
+Ρίζας λοιπόν.\
+Στην αφάνεια αλλά αδιάκοπα\
+προσπαθεί.\
+Ρίζας που έμμεσα διέλυσε τους\
+πυθαγόρειους.\
+Ρίζας λοιπόν,\
+χωρίς κορμό\
+χωρίς κλαδιά\
+χωρίς φύλλα,\
+χωρίς λουλούδια,\
+χωρίς καρπούς.\
+Ρίζας λοιπόν..
+
+
 <p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
+  Να σε προσέχεις.
+
 </p>
-
-In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
-
-There are currently two themes built on Poole:
-
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
-
-Learn more and contribute on [GitHub](https://github.com/poole).
-
-## Setup
-
-Some fun facts about the setup of this project include:
-
-* Built for [Jekyll](https://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Atom](https://atom.io)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
-
-Thanks for reading!
