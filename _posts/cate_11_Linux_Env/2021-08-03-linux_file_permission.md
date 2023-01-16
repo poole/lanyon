@@ -2,7 +2,7 @@
 layout: post
 title: linux file permission (chmod & chown)
 date : 03 Aug 2021
-category : Linux
+category : Linux_Env
 comments : true
 ---
 
@@ -16,14 +16,14 @@ comments : true
 ## 2. linux 파일 권한 읽기
  : 우선 파일 및 폴더의 권한을 읽는 방법 부터 샅펴보자. `ls -all`명령어를 사용하면 아래와 같이 파일들의 권한과 정보를 확인 할 수 있다.
 <center>  
-<img src = '/assets/linux/file_permission.png' width = '80%'>
+<img src = '/assets/Linux_Env/file_permission.png' width = '80%'>
 </center>
 
 <center>
 
 "drwxr-xr-x 13 root tand 4096 4 3 0066" 이 정보를 하나씩 확인하면, 아래와 같다.
 
-<img src = '/assets/linux/linux_file_permission_2.png' width = '80%'>
+<img src = '/assets/Linux_Env/linux_file_permission_2.png' width = '80%'>
 </center>
 
 #### * file type

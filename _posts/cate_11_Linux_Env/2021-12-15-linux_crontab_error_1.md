@@ -2,7 +2,7 @@
 layout: post
 title: linux crontab bash setting error
 date : 15 Dec 2021
-category : Linux
+category : Linux_Env
 comments : true
 ---
 
