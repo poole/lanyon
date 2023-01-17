@@ -30,8 +30,6 @@ comments : true
 
 따라서, 동일한 이미지로 다수의 컨테이너를 생성할 수 있고 컨테이너에 변화가 생겨도 이미지에는 영향을 주지 않는다.<br>
 
-도커 이미지는 Dockerhub에서 업로드, 다운로드 할 수도 있다. 현재 공개된 이미지는 50만개가 넘고 누구나 쉽게 명령어를 이용하여 이미지를 만들고 배포하고(push) 다운로드(pull)받을 수 있다.
-
 <center>
 
 <img src = '/assets/Linux_Env/docker_setup/docker_setup_01.png' width = '80%'>
@@ -46,7 +44,8 @@ comments : true
 
 <center>
 
-<img src = '/assets/Linux_Env/docker_setup/docker_setup_02.png' width = '80%'>
+<img src = '/assets/Linux_Env/docker_setup/docker_setup_02.png' width = '80%' alt = "Docker : 이미지와 레이어(layer) 구조" 블로그>
+
 
 도커의 이미지는 압축파일과 유사한 구조를 갖지만,<br>레이어를 공유한다는 점에서는 차이점을 지닌다.
 
