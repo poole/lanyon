@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Docker_Settup
+title: Docker_Setup
 date : 16 Jan 2023
 category : Linux_Env
 comments : true
