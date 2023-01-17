@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Error - could not be resolved Pylance
-date : 10 Feb 2022
+title: Docker_cheat_sheet
+date : 20 Jan 2023
 category : Linux_Env
 comments : true
 ---
@@ -9,11 +9,8 @@ comments : true
 `
 
 
-
 ---
-### 1. 도커 컨테이너 접속하기
-
-
+### 1. 도커 컨테이너 접속 & 종료 & 삭제
 ```sh
 # 1) 컨테이너 리스트 출력
 docker ps -a #모든 컨테이너 출력(정지 컨테이너 포함)
