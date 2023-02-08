@@ -83,7 +83,11 @@ Git 작업시 주요 브랜치는 master(main)와 develop 이며, 이외에도 �
 2. [branch : master] `git merge "dev"` : dev branch를 merge
 3. [branch : master] `gut push` : 최종 배포할(merge된) 코드를 git에 업로드
 
-###### + branch 주요 commend
+
+
+<br>
+---
+## + branch 주요 commend
 
 ```sh
 ## 1) branch 생성 : master branch에서 develop 이라는 새로운 branch를 만들고 갈아탄다.
@@ -105,8 +109,25 @@ $ git merge "dev" # merge 하고자 하는 branch명을 써주면 master로 merg
 ```
 
 
+<br>
+---
+## Git Branch 이름 변경하기
+```sh
+## 1) [local] branch 이름 변경
+$ git branch -m old_branch_name new_branch_name
+
+## 2) [remote] branch 이름 변경
+git push origin :old_branch_name
+
+## 3) 변경한 새로운 브런치를 업로드
+git push --set-upstream origin new_branch
+```
+
+
+
 
 #### Reference
 [1] [git lab 프로젝트 생성하기](https://goldsony.tistory.com/138)  
 [2] [git branch & commend](https://www.holaxprogramming.com/2018/11/01/git-commands/)  
 [3] [branch Merge하기](https://backlog.com/git-tutorial/kr/stepup/stepup2_4.html)
+[4] [Git Branch 이름 변경하기](https://thdev.tech/git/2016/12/19/Git-Branch-Name-Change/)  
