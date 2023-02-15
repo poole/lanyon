@@ -18,10 +18,10 @@ local 디렉토리를 git remote repository로 push하기.
 
 <center>
 
-```
+`
 There isn't anything to compare
 main and mybranch are entirely different commit histories.
-```
+`
 
 </center> 
 
