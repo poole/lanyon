@@ -17,12 +17,8 @@ local 디렉토리를 git remote repository로 push하기.
 - 생성시, 자동으로 'main' 브랜치가 생성되며, 이후 local에서 업로드한 dev 브랜치와 remote main 브랜치간 연결이 되어있지 않아 pull request가 생성되지 않는 아래와 같은 상황이 발생.
 
 <center>
-
-```
 There isn't anything to compare
 main and mybranch are entirely different commit histories
-```
-
 </center> 
 
 
