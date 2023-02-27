@@ -1,7 +1,7 @@
 ---
 layout: post
 title: [python-class] class내 instance method 중복 호출시 에러
-date : 24 Feb 2023
+date : 27 Feb 2023
 category : Preprocess
 comments : true
 ---
