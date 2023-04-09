@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Nan vs None
+title: (Vars) Nan vs None
 date : 18 Mar 2021
 category : Preprocess
 comments : true

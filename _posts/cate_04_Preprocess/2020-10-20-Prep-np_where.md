@@ -1,6 +1,6 @@
 ---
 layout: post
-title: np.where()&np.Select()
+title: (Prep) np.where()&np.Select()
 date : 20 Oct 2020
 category : Preprocess
 comments : true

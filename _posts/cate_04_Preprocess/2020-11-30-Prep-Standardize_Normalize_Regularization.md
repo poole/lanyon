@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Standardize vs Normalize vs Regularize
+title: (Prep) Standardize vs Normalize vs Regularize
 date : 30 Nov 2020
 category : Preprocess
 comments : true

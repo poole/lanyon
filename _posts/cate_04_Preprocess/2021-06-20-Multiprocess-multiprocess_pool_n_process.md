@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Multiprocessing) Pool vs Process
+title: (Multiprocess) Pool vs Process
 date : 30 Jun 2021
 category : Preprocess
 comments : true

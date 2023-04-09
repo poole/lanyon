@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Adding values ​​in two lists
+title: (Utils) Adding values ​​in two lists
 date : 30 Oct 2020
 category : Preprocess
 comments : true

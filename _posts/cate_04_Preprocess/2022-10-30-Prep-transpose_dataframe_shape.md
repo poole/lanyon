@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Transpose DataFrame Shape (wide <-> long)
+title: (Prep) Transpose DataFrame Shape (wide <-> long)
 date : 30 Oct 2022
 category : Preprocess
 comments : true

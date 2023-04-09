@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Dynamically_create_variable
+title: (Vars) Dynamically_create_variable
 date : 19 Jan 2021
 category : Preprocess
 comments : true
