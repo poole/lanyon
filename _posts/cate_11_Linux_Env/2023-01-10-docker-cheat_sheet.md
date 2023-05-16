@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Docker_cheat_sheet
-date : 20 Jan 2023
+title: (Docker) cheat_sheet
+date : 10 Jan 2023
 category : Linux_Env
 comments : true
 ---

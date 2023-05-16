@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Docker_Setup
+title: (Docker) 02_Image Generate
 date : 16 Jan 2023
 category : Linux_Env
 comments : true

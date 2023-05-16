@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Nan vs None
+title: (venv) pyenv를 활용한 다양한 버전의 python 
 date : 24 Jun 2021
-category : env
+category : Linux_Env
 comments : true
 ---
 # 목표
-Python을 설치하고, 프로젝트를 진행할 수 있는 가상환경을 만들기.
+`pyenv`는 프로젝트별로, 서로 다른 Python 버전을 필요로하는 경우, 디렉토리별로 서로 다른 가상환경을 구축하여 각기다른 python 버전을 지정하여 사용할 수 있게 만들어준다.
 
 # 1. pyenv 설치하기
 ```sh

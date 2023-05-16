@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [python-utils] lambda / map / filter / reduce
+title: (python-utils) lambda / map / filter / reduce
 date : 07 Mar 2023
 category : Preprocess
 comments : true
