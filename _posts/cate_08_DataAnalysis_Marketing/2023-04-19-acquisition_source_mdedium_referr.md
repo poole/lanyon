@@ -32,8 +32,9 @@ comments : true
  - utm_campaign=fb_promotion : 캠페인(campagin)  
  - utm_term=promotionAE : 유입 키워드  
  - utm_content=202305_contents : 유입 컨텐츠  
----
+  
 
+---
 <br>
 
 ## 3. 주요 용어 구분
@@ -43,7 +44,7 @@ comments : true
 |  **구분**  |  **용어**  |  **정의**  | **예시**  |
 | **그룹** | **채널(channel)** | 각 매체에서 여러 소스를 포함하는 집합이나, 매체와 유사하게 구분됨  |  | 
 |:-: |:-----: |:-----: |:----- |
-| **범주** | **매체(medium)** | 소스의 상위 카테고리 or 사용자를 사이트로 보내는 시스템 <br>(별도의 추가 설정이 없을 경우 기본값은 none, referral, organic 3가지뿐) | - none(없음) : 직접(direct) url 입력을 통해 유입되거나, 소스 부재<br> - referral(추천) : referral url을 클릭하여 유입 <br> - organic(자연검색) : 구글/네이버 등 무료 검색 결과 유입<br> - cpc(유료검색) : 키워드 광고등 유료 검색을 통해 유입 <br> - banner/display(디스플레이) : 디스플레이/배너 광고 클릭<br> - social(소셜) : Instagram, Facebook, Kakao 등<br> | 
+| **범주** | **매체(medium)** | 소스의 상위 카테고리 or 사용자를 사이트로 보내는 시스템 <br>(별도의 추가 설정이 없을 경우 기본값은 none, referral, organic 3가지뿐) | - none(없음) <br> : 직접(direct) url 입력을 통해 유입되거나, 소스 부재<br><br> - referral(추천) <br> : referral url을 클릭하여 유입 <br><br> - organic(자연검색) <br> : 구글/네이버 등 무료 검색 결과 유입<br><br> - cpc(유료검색) <br> : 키워드 광고등 유료 검색을 통해 유입 <br><br> - banner/display(디스플레이) <br> : 디스플레이/배너 광고 클릭<br><br> - social(소셜) <br> : Instagram, Facebook, Kakao 등<br> | 
 | **출처** | **소스(source)** | 트레픽이 유입된 위치(검색엔진, 도메인 등)  | [google.com, naver.com, blog.naver.com] | 
 
 ※ 매체와 채널 <br>
