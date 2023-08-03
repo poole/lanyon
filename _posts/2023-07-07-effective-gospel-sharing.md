@@ -1,5 +1,5 @@
 ---
-tags: [bite, gospel, sharing, missionary work, the Holy Ghost]
+# tags: [bite, gospel, sharing, missionary work, the Holy Ghost]
 date: 2023-07-07 09:41
 ---
 

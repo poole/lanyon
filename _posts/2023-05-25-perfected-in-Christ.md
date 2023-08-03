@@ -1,10 +1,6 @@
 ---
-subtitle: What does it mean to be perfected in Christ?
-tags: [Jesus, Old Testament, Book of Mormon, scriptures, unity, virtue, your potential]
-image: perfected-in-Christ
-image_contributor: Riho Kitagawa
-contributor_link: https://unsplash.com/pt-br/@riho_k?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
-contributor_site_link_to_image: https://unsplash.com/photos/JuDPjcutors?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+# subtitle: What does it mean to be perfected in Christ?
+# tags: [Jesus, Old Testament, Book of Mormon, scriptures, unity, virtue, your potential]
 date: 2023-05-26 02:02
 ---
 

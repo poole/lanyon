@@ -1,8 +1,6 @@
 ---
-author: Riley
-subtitle: Even when you make mistakes, He still loves you.
-tags: [love, charity,  forgiveness]
-image: His-continued-love
+# subtitle: Even when you make mistakes, He still loves you.
+# tags: [love, charity,  forgiveness]
 date: 2023-06-16 10:52
 updated: 2023-06-16 23:51
 ---

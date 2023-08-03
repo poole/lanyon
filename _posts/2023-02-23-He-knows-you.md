@@ -1,13 +1,6 @@
 ---
-author: Riley
-title: He Knows You
-subtitle: The Savior knows your struggles in detail.
-tags: [love, charity, trials, your potential, prayer, gospel, relationships]
-image: He-knows-you
-image_contributor: Rosie Sun
-contributor_link: https://unsplash.com/@rosiesun?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
-contributor_site: Unsplash
-contributor_site_link_to_image: https://unsplash.com/photos/rTwhmFSoXC8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+# subtitle: The Savior knows your struggles in detail.
+# tags: [love, charity, trials, your potential, prayer, gospel, relationships]
 date: 2023-02-23 16:00
 ---
 

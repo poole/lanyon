@@ -1,5 +1,5 @@
 ---
-tags: [bite, love, Jesus Christ, temptation, strength, power, institute]
+# tags: [bite, love, Jesus Christ, temptation, strength, power, institute]
 date: 2023-07-01 00:18
 updated: 2023-07-01 00:25
 ---

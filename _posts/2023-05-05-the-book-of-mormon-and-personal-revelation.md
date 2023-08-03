@@ -1,13 +1,7 @@
 ---
-author: Riley
 title: The Book of Mormon and Personal Revelation
-subtitle: The Book of Mormon brings peace and personal revelation not just for me, but for you too.
-tags: [Book of Mormon, personal revelation, peace, decisions, testimony, invitation]
-image: the-book-of-mormon-and-personal-revelation
-image_contributor: The Church of Jesus Christ of Latter-day Saints
-contributor_link: https://comeuntochrist.org
-contributor_site: ComeUntoChrist.org
-contributor_site_link_to_image: https://www.churchofjesuschrist.org/comeuntochrist/believe/book-of-mormon/5-things-to-know-about-the-book-of-mormon
+# subtitle: The Book of Mormon brings peace and personal revelation not just for me, but for you too.
+# tags: [Book of Mormon, personal revelation, peace, decisions, testimony, invitation]
 date: 2023-05-05 15:51
 ---
 

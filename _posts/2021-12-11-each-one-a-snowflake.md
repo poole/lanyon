@@ -1,5 +1,5 @@
 ---
-subtitle: Each person is unique like a snowflake. Each person is loved by God individually.
+# subtitle: Each person is unique like a snowflake. Each person is loved by God individually.
 date: 2021-12-11 16:14
 ---
 
