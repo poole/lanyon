@@ -3,8 +3,8 @@
 date: 2023-06-14 01:00
 ---
 
-<img class="img-responsive" src="/assets/images/posts/They-are-aware-and-They-love-you.webp" alt="purple and blue-green gradient background with the below quote on top">
-<span class="caption text-muted"><a href="/assets/images/posts/They-are-aware-and-They-love-you.webp" download>
+<img class="img-responsive" src="/public/img/They-are-aware-and-They-love-you.webp" alt="purple and blue-green gradient background with the below quote on top">
+<span><a href="/assets/images/posts/They-are-aware-and-They-love-you.webp" download>
   Download Image
 </a></span>
 <br>
