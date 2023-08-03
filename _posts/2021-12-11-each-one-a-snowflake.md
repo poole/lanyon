@@ -1,12 +1,5 @@
 ---
-author: Riley
 subtitle: Each person is unique like a snowflake. Each person is loved by God individually.
-tags: [relationships, love, your potential, individual worth, identity, divine identity, nature]
-image: each-one-a-snowflake
-image_contributor: Aaron Burden
-contributor_link: https://unsplash.com/@aaronburden?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
-contributor_site: Unsplash
-contributor_site_link_to_image: https://unsplash.com/photos/5AiWn2U10cw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 date: 2021-12-11 16:14
 ---
 

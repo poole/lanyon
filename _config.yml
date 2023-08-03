@@ -1,7 +1,7 @@
 # Setup
 title:               Lanyon
 tagline:             "Doing my best to spread God's love to everyone"
-description:         'A blog sharing for sharing the things of the heart'
+description:         'A blog sharing for sharing the things of the heart.'
 url:                 https://rileylanyon.github.io
 baseurl:             ''
 paginate:            5
