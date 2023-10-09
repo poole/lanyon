@@ -4,26 +4,23 @@ title: About
 ---
 
 <p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
+# Hello, I'm Shaukat Ibrahim
+
+I specialize in **Technology Banking**, **Venture Capital**, and **Private Equity**. 
+
+- 🎓**Educational Background**: Davis UWC Scholar, alumni of UWC Mahindra College, Pune, India.
+- 🏫 **Current Status**: Senior at Furman University, Greenville, SC.
+- 📚 **Major**: Information Technology with a Finance cognate and Philosophy.
+
 </p>
 
-In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+-----
 
-There are currently two themes built on Poole:
+### My Journey
+Born and raised in Bangalore, India, I cultivated a deep appreciation for technology and business at an early age. This foundation set me on a career path that allows me to continuously explore my interests in business, particularly at the crossroads of technology and finance. I am driven by the potential for making the world more equitable and fair through these intersections.
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
+### Contact me
 
-Learn more and contribute on [GitHub](https://github.com/poole).
+Email: Shaukatibrahim@sibrahim.co
+LinkedIn: [Shaukat Ibrahim](https://www.linkedin.com/in/shaukatibrahim/)
 
-## Setup
-
-Some fun facts about the setup of this project include:
-
-* Built for [Jekyll](https://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Atom](https://atom.io)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
-
-Thanks for reading!

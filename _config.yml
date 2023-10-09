@@ -1,22 +1,22 @@
 # Setup
-title:               Lanyon
-tagline:             'A Jekyll theme'
-description:         'A reserved <a href="https://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:                 http://lanyon.getpoole.com
+title:               Shaukat Ibrahim
+tagline:             
+description:         
+url:                
 baseurl:             ''
 paginate:            5
 permalink:           pretty
 
 # About/contact
 author:
-  name:              Mark Otto
+  name:              Shaukat Ibrahim
   url:               https://twitter.com/mdo
-  email:             markdotto@gmail.com
+  email:             ibrash@furman.edu
 
 # Gems
 plugins:
   - jekyll-paginate
 
 # Custom vars
-version:             1.1.0
+version:             0.0.1
 google_analytics_id: #UA-XXXX-Y
