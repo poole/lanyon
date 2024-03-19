@@ -1,0 +1,10 @@
+version: "3"
+services:
+  lanyon:
+    build: .
+    container_name: lanyon-remyjkim
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./:/home/lanyon
+    restart: always
