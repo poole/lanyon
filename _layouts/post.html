@@ -5,7 +5,7 @@ layout: default
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
   <span class="post-date">{{ page.date | date: '%b %d, %Y' }}</span>
-  <h6>Last Modified at: {{ page.last_modified_at | date: '%b %d, %Y' }}</h6>
+  <h6 class="last-modified">Last modified at {{ page.last_modified_at | date: '%b %d, %Y' }}</h6>
 
   {{ content }}
 </div>
@@ -15,14 +15,16 @@ layout: default
   <h2>Related posts</h2>
   <ul class="related-posts">
     {% for post in site.related_posts limit:3 %}
-      <li>
-        <h3>
-          <a href="{{ site.baseurl }}{{ post.url }}">
-            {{ post.title }}
-            <small>{{ post.date | date_to_string }}</small>
-          </a>
-        </h3>
-      </li>
+      {% if post.status == "published" %}
+        <li>
+          <h3>
+            <a href="{{ site.baseurl }}{{ post.url }}">
+              {{ post.title }}
+              <small>{{ post.date | date_to_string }}</small>
+            </a>
+          </h3>
+        </li>
+        {% endif %}
     {% endfor %}
   </ul>
 </div>

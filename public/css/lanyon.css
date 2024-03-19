@@ -595,3 +595,7 @@ a.pagination-item:hover {
 .layout-reverse.sidebar-overlay #sidebar-checkbox:checked ~ .sidebar {
   box-shadow: -.25rem 0 .5rem rgba(0,0,0,.1);
 }
+
+.last-modified {
+  margin-bottom: 3rem; /* Adds space equivalent to roughly three lines of text */
+}
