@@ -3,23 +3,39 @@ layout: default
 title: Home
 ---
 
+<div class="pages">
+
+    {% assign pages_list = site.pages | sort:"url" %}
+    {% for node in pages_list %}
+      {% if node.title == "About" %}
+        {% if node.layout == "page" %}
+        <div class="page">
+          <!-- <h1 class="page-title">
+          <a href="{{ node.url }}"></a>
+          {{ node.title }}</h1> -->
+          {{ content }}
+        </div>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+</div>
+
 <div class="posts">
   {% for post in paginator.posts %}
+  {% if post.status == "published" %}
   <div class="post">
-    <h1 class="post-title">
+    <span class="post-date">{{ post.date | date_to_string }}</span>
+    <h3 class="post-title">
       <a href="{{ post.url | absolute_url }}">
         {{ post.title }}
       </a>
     </h1>
-
-    <span class="post-date">{{ post.date | date_to_string }}</span>
-
-    {{ post.content }}
   </div>
+  {% endif %}
   {% endfor %}
 </div>
 
-<div class="pagination">
+<!-- <div class="pagination">
   {% if paginator.next_page %}
     <a class="pagination-item older" href="{{ paginator.next_page_path | absolute_url }}">Older</a>
   {% else %}
@@ -34,4 +50,4 @@ title: Home
   {% else %}
     <span class="pagination-item newer">Newer</span>
   {% endif %}
-</div>
+</div> -->

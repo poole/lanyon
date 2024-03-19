@@ -4,7 +4,9 @@ layout: default
 
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
-  <span class="post-date">{{ page.date | date_to_string }}</span>
+  <span class="post-date">{{ page.date | date: '%b %d, %Y' }}</span>
+  <h6>Last Modified at: {{ page.last_modified_at | date: '%b %d, %Y' }}</h6>
+
   {{ content }}
 </div>
 
