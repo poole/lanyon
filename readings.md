@@ -7,7 +7,8 @@ title: Readings
 Here I direct you to some of the best writings or books I've read. I hope you find them as insightful as I did.
 
 ## Writings
-* [Compartmentlizing Risk]()
+* [Compartmentalizing Risk](https://0xali.beehiiv.com/p/jessewhatareyoutalkingabout)
+* [Paradigms for On-Chain Credit](https://jumpcrypto.com/writing/paradigms-for-on-chain-credit/)
 * Poszar's writings: [his past Writings at Credit Suisse](https://www.exunoplures.hu/a-decade-on-money/) and [newly added pieces](https://www.exunoplures.hu/money-banks-and-bases/)
 
 ## Books
