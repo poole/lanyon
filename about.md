@@ -4,26 +4,16 @@ title: About
 ---
 
 <p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
+  Hi, I'm Remy. You can each out to me at remyjkim8@gmail.com
 </p>
 
-In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+My interest lies in three areas:
+1. The non-linear dynamics between the **commodities market** and the **global macro economy**.
+2. Cryptographic primitives such as smart contracts and zkSNARKs/MPCs, and their application as a settlement layer for the wider financial system.
+3. Decision making under uncertainty and the application of market microstructure theory to the design of financial markets/products.
 
-There are currently two themes built on Poole:
+Here are some of my [*writings*](https://gqkim.notion.site/Remy-s-Writings-62a8e18b2d484b96a180dde4e9556afd?pvs=4) on my journey on the intersection of commodities markets and crypto and how Greekwaters seeks to bridge the two.
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
+I'm a [Seoul Nationl University](https://en.snu.ac.kr/) [ECE](http://ee.snu.ac.kr/en)/[CBA](https://cba.snu.ac.kr/en) alumni and currently on a leave from my graduate studies at UPenn [CIS](https://www.cis.upenn.edu/) to venture into [Greekwaters](greekwaters.io).
 
-Learn more and contribute on [GitHub](https://github.com/poole).
-
-## Setup
-
-Some fun facts about the setup of this project include:
-
-* Built for [Jekyll](https://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Atom](https://atom.io)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
-
-Thanks for reading!
+Feel free to message me and say hi if you got this far, I don’t bite unless angered.

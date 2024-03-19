@@ -8,20 +8,35 @@ Lanyon is an unassuming [Jekyll](http://jekyllrb.com) theme that places content 
 
 ## Contents
 
-- [Usage](#usage)
-- [Options](#options)
-  - [Sidebar menu](#sidebar-menu)
-  - [Themes](#themes)
-  - [Reverse layout](#reverse-layout)
-- [Development](#development)
-- [Author](#author)
-- [License](#license)
+- [Lanyon](#lanyon)
+  - [Contents](#contents)
+  - [Usage](#usage)
+    - [How to Run](#how-to-run)
+    - [Navigation](#navigation)
+  - [Options](#options)
+    - [Sidebar menu](#sidebar-menu)
+    - [Themes](#themes)
+    - [Reverse layout](#reverse-layout)
+    - [Sidebar overlay instead of push](#sidebar-overlay-instead-of-push)
+    - [Sidebar open on page load](#sidebar-open-on-page-load)
+  - [Development](#development)
+  - [Author](#author)
+  - [License](#license)
 
 
 ## Usage
 
 Lanyon is a theme built on top of [Poole](https://github.com/poole/poole), which provides a fully furnished Jekyll setup—just download and start the Jekyll server. See [the Poole usage guidelines](https://github.com/poole/poole#usage) for how to install and use Jekyll.
 
+
+### How to Run
+```bash
+jekyll serve
+```
+
+### Navigation
+1. for css: lanyon.css
+2. for landing: index.html
 
 ## Options
 
