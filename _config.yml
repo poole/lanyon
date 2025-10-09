@@ -1,17 +1,18 @@
 # Setup
-title:               Lanyon
-tagline:             'A Jekyll theme'
+title:               You&
+tagline:             'Data_Science & Life'
 description:         'A reserved <a href="https://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:                 http://lanyon.getpoole.com
+url:                 https://taehwanyoun.github.io
 baseurl:             ''
 paginate:            5
 permalink:           pretty
+# category_dir:        category/
 
 # About/contact
 author:
-  name:              Mark Otto
-  url:               https://twitter.com/mdo
-  email:             markdotto@gmail.com
+  name:              TaeHwan Youn
+  # url:               https://twitter.com/mdo
+  email:             youn4576@gmail.com
 
 # Gems
 plugins:
@@ -20,3 +21,26 @@ plugins:
 # Custom vars
 version:             1.1.0
 google_analytics_id: #UA-XXXX-Y
+
+
+# Math equation
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+
+
+# # comments
+# disqus_url : http://disqus.com/by/disqus_NqcV1O9wdy
+# disqus_id : 'taehwanyoun.github.io'
+disqus_shortname: taehwanyoun.github.io/
+discus-identifier: taehwanyoun.github.io/ # add your discus identifier
+
+
+# comments: true
+#   provider : "disqus" # 블로그 댓글 기능 false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
+#   disqus:
+#     shortname : 'taehwanyoun-github-io'
+#   # 블로그 댓글 기능 https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-	    shortname            : "devinlife-github-io" # 블로그 댓글 기능 https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-

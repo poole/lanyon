@@ -41,11 +41,21 @@ body {
 }
 
 html {
-  font-family: "PT Serif", Georgia, "Times New Roman", serif;
+  /*
+  font-family: "PT Serif", Georgia, "Times New Roman", serif; # 이전에 사용하던 폰트
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-family: 'Nanum Myeongjo', serif;
+  */
+  font-family: 'IBM Plex Sans KR', sans-serif;
+  font-weight: 300;
+  /* font-size: 80%; */
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  /* font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-family: 'Nanum Myeongjo', serif;
+  */
+  font-family: 'IBM Plex Sans KR', sans-serif;
   font-weight: 400;
   color: #313131;
   letter-spacing: -.025rem;
@@ -73,13 +83,13 @@ h1, h2, h3, h4, h5, h6 {
  */
 
 .container {
-  max-width: 28rem;
+  max-width: 48rem; /*38rem;*/
 }
-@media (min-width: 38em) {
+/* @media (min-width: 38em) {
   .container {
     max-width: 32rem;
   }
-}
+} */
 @media (min-width: 56em) {
   .container {
     max-width: 38rem;
@@ -148,7 +158,11 @@ h1, h2, h3, h4, h5, h6 {
   width: 14rem;
   visibility: hidden;
   overflow-y: auto;
+  /*
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-family: 'Nanum Myeongjo', serif;
+  */
+  font-family: 'IBM Plex Sans KR', sans-serif;
   font-size: .875rem; /* 15px */
   color: rgba(255,255,255,.6);
   background-color: #202020;
@@ -227,8 +241,8 @@ a.sidebar-nav-item:focus {
   display: inline-block;
   width: 32px;
   height: 32px;
-  content: "";
-  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='%23555' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M2.5 11.5A.5.5 0 013 11h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5zm0-4A.5.5 0 013 7h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5zm0-4A.5.5 0 013 3h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5z' clip-rule='evenodd'/%3E%3C/svg%3E") no-repeat;
+  content: "≡";
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='%23555' xmlns='https://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M2.5 11.5A.5.5 0 013 11h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5zm0-4A.5.5 0 013 7h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5zm0-4A.5.5 0 013 3h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5z' clip-rule='evenodd'/%3E%3C/svg%3E") no-repeat;
 }
 
 .sidebar-toggle:active,
@@ -241,7 +255,7 @@ a.sidebar-nav-item:focus {
 .sidebar-toggle:active:before,
 #sidebar-checkbox:focus ~ .sidebar-toggle::before,
 #sidebar-checkbox:checked ~ .sidebar-toggle::before {
-  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='%23fff' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M2.5 11.5A.5.5 0 013 11h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5zm0-4A.5.5 0 013 7h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5zm0-4A.5.5 0 013 3h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5z' clip-rule='evenodd'/%3E%3C/svg%3E") no-repeat;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='%23fff' xmlns='https://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M2.5 11.5A.5.5 0 013 11h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5zm0-4A.5.5 0 013 7h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5zm0-4A.5.5 0 013 3h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5z' clip-rule='evenodd'/%3E%3C/svg%3E") no-repeat;
 }
 
 @media (min-width: 30.1em) {
@@ -363,7 +377,11 @@ a.sidebar-nav-item:focus {
   overflow: hidden; /* clearfix */
   margin-left: -1rem;
   margin-right: -1rem;
+  /*
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-family: 'Nanum Myeongjo', serif;
+  */
+  font-family: 'IBM Plex Sans KR', sans-serif;
   color: #ccc;
   text-align: center;
 }
